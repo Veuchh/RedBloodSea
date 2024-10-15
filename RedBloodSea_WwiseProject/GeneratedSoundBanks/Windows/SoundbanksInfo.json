@@ -1,0 +1,173 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "RootPaths": {
+   "ProjectRoot": "../..",
+   "SourceFilesRoot": "../../.cache/Windows",
+   "SoundBanksRoot": ".",
+   "ExternalSourcesInputFile": "",
+   "ExternalSourcesOutputRoot": "."
+  },
+  "DialogueEvents": [],
+  "SoundBanks": [
+   {
+    "Id": "1355168291",
+    "Type": "User",
+    "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
+    "Language": "SFX",
+    "Hash": "{CC2CEA60-B56B-DF96-23C3-F221A89C5903}",
+    "ObjectPath": "Init",
+    "ShortName": "Init",
+    "Path": "Init.bnk",
+    "Plugins": {
+     "AudioDevices": [
+      {
+       "Id": "2317455096",
+       "Name": "No_Output",
+       "ObjectPath": "\\Audio Devices\\Default Work Unit\\No_Output",
+       "GUID": "{293D6686-62BF-47C8-88A0-6014C3BB2C54}",
+       "LibName": "No Output",
+       "LibId": "11862023"
+      },
+      {
+       "Id": "3859886410",
+       "Name": "System",
+       "ObjectPath": "\\Audio Devices\\Default Work Unit\\System",
+       "GUID": "{259B6225-7C71-42BD-9CFE-D2DA7C5C8030}",
+       "LibName": "System",
+       "LibId": "11403271"
+      }
+     ]
+    },
+    "Busses": [
+     {
+      "Id": "3803692087",
+      "Name": "Master Audio Bus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus",
+      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "1237428548",
+      "Name": "Builtin_Distance",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Builtin_Distance",
+      "GUID": "{6BA5296B-2167-4208-871F-9C93F01FC031}"
+     }
+    ]
+   },
+   {
+    "Id": "2890283282",
+    "Type": "User",
+    "GUID": "{1D2A39F0-30EC-4374-B60C-7E5FD97B8C24}",
+    "Language": "SFX",
+    "Hash": "{2FFD3EC3-183A-3463-27A1-9E7ED469108A}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\RBS_MAIN_SoundBank",
+    "ShortName": "RBS_MAIN_SoundBank",
+    "Path": "RBS_MAIN_SoundBank.bnk",
+    "Media": [
+     {
+      "Id": "322760696",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Soundly Voice Designer, Abbi 1.wav",
+      "CachePath": "SFX/Soundly Voice Designer, Abbi 1_818F3B66.wem"
+     },
+     {
+      "Id": "327704471",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Weapons, Sword, Swing Fast, Whoosh, Metal SND34535.wav",
+      "CachePath": "SFX/Weapons, Sword, Swing Fast, Whoosh, Metal SND34535_818F3B66.wem"
+     },
+     {
+      "Id": "526377678",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Soundly Voice Designer, Abbi 3.wav",
+      "CachePath": "SFX/Soundly Voice Designer, Abbi 3_FBC78EF0.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1990128658",
+       "Name": "Room_Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
+       "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "3435325068",
+      "Name": "Play_Test_Amb_Loc",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Test_Amb_Loc",
+      "GUID": "{996477E9-0350-479D-873E-517B7C054F15}",
+      "MaxAttenuation": "2500",
+      "DurationType": "OneShot",
+      "DurationMin": "17.016687",
+      "DurationMax": "17.016687",
+      "MediaRefs": [
+       {
+        "Id": "526377678"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1990128658"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "432743418",
+      "Name": "Play_Test_Event_Asset",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Test_Event_Asset",
+      "GUID": "{5D47BB90-E33B-4DEB-82CF-4027A0799326}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.1952083",
+      "DurationMax": "1.1952083",
+      "MediaRefs": [
+       {
+        "Id": "322760696"
+       }
+      ]
+     },
+     {
+      "Id": "1988958988",
+      "Name": "Play_Test_Slash",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Test_Slash",
+      "GUID": "{12124D21-963C-4F2B-AAB5-30919FF2DEE0}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.2504896",
+      "DurationMax": "0.2504896",
+      "MediaRefs": [
+       {
+        "Id": "327704471"
+       }
+      ]
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "1237428548",
+      "Name": "Builtin_Distance",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Builtin_Distance",
+      "GUID": "{6BA5296B-2167-4208-871F-9C93F01FC031}"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{AD883E41-259A-34B5-6646-9D655CF47C06}"
+ }
+}

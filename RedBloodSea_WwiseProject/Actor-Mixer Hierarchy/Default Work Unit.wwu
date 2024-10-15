@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}" SchemaVersion="119">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="Test_Event_Asset" ID="{08E2DABA-5C2E-4C33-B927-57B908055266}" ShortID="610933683">
+					<PropertyList>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>-10</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Soundly Voice Designer, Abbi 1" ID="{FDE51904-C443-48BD-80B8-F959BF931E05}">
+							<Language>SFX</Language>
+							<AudioFile>Soundly Voice Designer, Abbi 1.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="322760696"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Soundly Voice Designer, Abbi 1" ID="{FDE51904-C443-48BD-80B8-F959BF931E05}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Test_Slash" ID="{B72146BF-F3D9-4443-8247-FCA8DD142A8A}" ShortID="517870038">
+					<PropertyList>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>-10</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Soundly Voice Designer, Abbi 1" ID="{3155BC57-1776-431C-9066-798F832FE918}">
+							<Language>SFX</Language>
+							<AudioFile>Soundly Voice Designer, Abbi 1.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="322760696"/>
+							</MediaIDList>
+						</AudioFileSource>
+						<AudioFileSource Name="Weapons, Sword, Swing Fast, Whoosh, Metal SND34535" ID="{D8C0DA3F-8768-41E2-AEFE-BBFF0E233E10}">
+							<Language>SFX</Language>
+							<AudioFile>Weapons, Sword, Swing Fast, Whoosh, Metal SND34535.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="327704471"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Weapons, Sword, Swing Fast, Whoosh, Metal SND34535" ID="{D8C0DA3F-8768-41E2-AEFE-BBFF0E233E10}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Test_Amb_Loc" ID="{1A617F38-2486-47A5-8553-F85D5CE997D2}" ShortID="776604972">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="IsLoopingInfinite" Type="bool" Value="False"/>
+						<Property Name="LoopCount" Type="int32" Value="3"/>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>-22</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Amb_Loc_test_att" ID="{9D8CB771-6BA5-4D71-B0A3-1F850C5F1785}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Soundly Voice Designer, Abbi 3" ID="{78EADD49-6CC8-4A29-B89C-780D605C82CE}">
+							<Language>SFX</Language>
+							<AudioFile>Soundly Voice Designer, Abbi 3.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="526377678"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Effects">
+							<Reference>
+								<Local>
+									<EffectSlot Name="" ID="{875D95E9-F014-4002-829E-BB44E399E94D}" ShortID="461486381">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+												<ObjectRef Name="Room_Medium" ID="{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</Local>
+							</Reference>
+						</ObjectList>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{019D3693-3117-422A-AE95-95DC3E2C1014}" ShortID="907254589">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Pitch"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="Builtin_Distance" ID="{6BA5296B-2167-4208-871F-9C93F01FC031}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{A5441859-F747-4733-8AE1-6C77043238DD}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="65537"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>0</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>2500</XPos>
+																<YPos>-558</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+					<ActiveSourceList>
+						<ActiveSource Name="Soundly Voice Designer, Abbi 3" ID="{78EADD49-6CC8-4A29-B89C-780D605C82CE}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

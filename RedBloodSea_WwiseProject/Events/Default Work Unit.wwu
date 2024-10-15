@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" SchemaVersion="119">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Test_Event_Asset" ID="{5D47BB90-E33B-4DEB-82CF-4027A0799326}">
+					<ChildrenList>
+						<Action Name="" ID="{9E92FBAF-8F05-45E1-91AA-D6CF38DB6D25}" ShortID="61561028">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Test_Event_Asset" ID="{08E2DABA-5C2E-4C33-B927-57B908055266}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Test_Slash" ID="{12124D21-963C-4F2B-AAB5-30919FF2DEE0}">
+					<ChildrenList>
+						<Action Name="" ID="{E57BA34B-B536-478D-8974-5DBE61B9BDF5}" ShortID="626865983">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Test_Slash" ID="{B72146BF-F3D9-4443-8247-FCA8DD142A8A}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Test_Amb_Loc" ID="{996477E9-0350-479D-873E-517B7C054F15}">
+					<ChildrenList>
+						<Action Name="" ID="{275EE579-4148-4E3D-80F8-3F281D8AD143}" ShortID="381684477">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Test_Amb_Loc" ID="{1A617F38-2486-47A5-8553-F85D5CE997D2}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

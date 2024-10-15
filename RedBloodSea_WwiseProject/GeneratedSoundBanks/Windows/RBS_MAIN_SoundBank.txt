@@ -1,0 +1,16 @@
+Event	ID	Name			Wwise Object Path	Notes
+	432743418	Play_Test_Event_Asset			\Default Work Unit\Play_Test_Event_Asset	
+	1988958988	Play_Test_Slash			\Default Work Unit\Play_Test_Slash	
+	3435325068	Play_Test_Amb_Loc			\Default Work Unit\Play_Test_Amb_Loc	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1237428548	Builtin_Distance			\Default Work Unit\Builtin_Distance	
+
+Effect plug-ins	ID	Name	Type				Notes
+	1990128658	Room_Medium	Wwise RoomVerb			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	322760696	Test_Event_Asset	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\Soundly Voice Designer, Abbi 1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Test_Event_Asset		114836
+	327704471	Test_Slash	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\Weapons, Sword, Swing Fast, Whoosh, Metal SND34535_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Test_Slash		48188
+	526377678	Test_Amb_Loc	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\Soundly Voice Designer, Abbi 3_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Test_Amb_Loc		544630
+

@@ -46,6 +46,7 @@ void ARedBloodSeaCharacter::BeginPlay()
 	Super::BeginPlay();
 
 	SetNewPlayerSpeedAndAcceleration(defaultSpeed, defaultAcceleration);
+	SetNewPlayerGravity(defaultGravity);
 }
 
 void ARedBloodSeaCharacter::Tick(float deltaTime)
@@ -121,7 +122,7 @@ void ARedBloodSeaCharacter::Move(const FInputActionValue& Value)
 		AddMovementInput(GetActorForwardVector(), currentMovementInput.Y);
 		AddMovementInput(GetActorRightVector(), currentMovementInput.X);
 		cameraRollRotation = currentMovementInput.X;
-		//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::SanitizeFloat(MovementVector.X));
+		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::SanitizeFloat(currentMovementInput.X));
 	}
 }
 
@@ -140,10 +141,21 @@ void ARedBloodSeaCharacter::Look(const FInputActionValue& Value)
 
 void ARedBloodSeaCharacter::DashInput(const FInputActionValue& Value)
 {
+	//if dash is on cooldown
+	if (nextAllowedDash > UGameplayStatics::GetRealTimeSeconds(GetWorld()))
+	{
+		return;
+	}
+
+	//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::SanitizeFloat(dashEndTime));
 	dashEndTime = UGameplayStatics::GetRealTimeSeconds(GetWorld()) + dashDuration;
-	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::SanitizeFloat(dashEndTime));
+	nextAllowedDash = UGameplayStatics::GetRealTimeSeconds(GetWorld()) + dashCooldown;
 	isDashing = true;
 	SetNewPlayerSpeedAndAcceleration(dashSpeed, dashAcceleration);
+	//reset velocity
+	GetCharacterMovement()->Velocity = (FVector::Zero());
+	SetNewPlayerGravity(dashGravity);
+	currentMovementInput.Normalize();
 }
 
 void ARedBloodSeaCharacter::Dash()
@@ -163,7 +175,10 @@ void ARedBloodSeaCharacter::Dash()
 	if (UGameplayStatics::GetRealTimeSeconds(GetWorld()) >= dashEndTime)
 	{
 		SetNewPlayerSpeedAndAcceleration(defaultSpeed, defaultAcceleration);
+		SetNewPlayerGravity(defaultGravity);
 		isDashing = false;
+
+		GetCharacterMovement()->Velocity *= dashVelocityRemain;
 	}
 }
 
@@ -172,4 +187,10 @@ void ARedBloodSeaCharacter::SetNewPlayerSpeedAndAcceleration(float newSpeed, flo
 	GetCharacterMovement()->MaxWalkSpeed = newSpeed;
 	GetCharacterMovement()->MaxAcceleration = newAcceleration;
 	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Blue, "New speed : " + FString::SanitizeFloat(newSpeed) + " New acceleration : " + FString::SanitizeFloat(newAcceleration));
+}
+
+void ARedBloodSeaCharacter::SetNewPlayerGravity(float newGravity)
+{
+	GetCharacterMovement()->GravityScale = newGravity;
+	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, "New gravity : " + FString::SanitizeFloat(newGravity));
 }

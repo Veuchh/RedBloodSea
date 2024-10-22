@@ -61,8 +61,21 @@ class ARedBloodSeaCharacter : public ACharacter
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
 	float dashAcceleration = 5000;
 
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
+	float dashVelocityRemain = .3f;
+
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
+	float defaultGravity = 50;
+
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
+	float dashGravity = 0;
+
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
+	float dashCooldown = .5f;
+
 	bool isDashing = false;
 	float dashEndTime;
+	float nextAllowedDash = std::numeric_limits<float>::min();
 
 	FVector2D currentMovementInput;
 	
@@ -96,6 +109,8 @@ protected:
 	void Dash();
 
 	void SetNewPlayerSpeedAndAcceleration(float newSpeed, float newAcceleration);
+
+	void SetNewPlayerGravity(float newGravity);
 
 protected:
 	// APawn interface

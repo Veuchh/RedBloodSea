@@ -16,13 +16,13 @@ struct FInputActionValue;
 
 DECLARE_LOG_CATEGORY_EXTERN(LogTemplateCharacter, Log, All);
 
-UCLASS(config=Game)
+UCLASS(config = Game)
 class ARedBloodSeaCharacter : public ACharacter
 {
 	GENERATED_BODY()
 
 	/** Pawn mesh: 1st person view (arms; seen only by self) */
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Mesh, meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Mesh, meta = (AllowPrivateAccess = "true"))
 	USkeletalMeshComponent* Mesh1P;
 
 	/** Jump Input Action */
@@ -30,7 +30,7 @@ class ARedBloodSeaCharacter : public ACharacter
 	UInputAction* JumpAction;
 
 	/** Move Input Action */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* MoveAction;
 
 
@@ -38,47 +38,56 @@ class ARedBloodSeaCharacter : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* DashAction;
 
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
-	float cameraRollStrength;
-
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
-	float cameraRollSpeed;
-
-	float cameraRollRotation;
-
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
-	float dashDuration = .2f;
-
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
-	float dashSpeed = 5000;
-
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
+	/*The default speed of the player, applied when not dashing, for instance*/
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Default Movement")
 	float defaultSpeed = 1000;
 
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
+	/*The default acceleration of the player, applied when not dashing, for instance*/
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Default Movement")
 	float defaultAcceleration = 5000;
 
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
-	float dashAcceleration = 5000;
-
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
-	float dashVelocityRemain = .3f;
-
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
+	/*The default gravity applied to the player, applied when not dashing, for instance*/
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Default Movement")
 	float defaultGravity = 50;
 
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
+	/*The duration of a dash, in seconds*/
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Dash")
+	float dashDuration = .2f;
+
+	/*The target speed of the player during a dash*/
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Dash")
+	float dashSpeed = 5000;
+
+	/*The acceleration of the player during a dash (or how fast he'll reach his target speed)*/
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Dash")
+	float dashAcceleration = 5000;
+
+	/*How much of the velocity the player will keep after the dash (from 0 to 1) /!\ TEST DASHING BOTH ON GROUND AND IN THE AIR AFTER MODIFYING /!\*/
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Dash")
+	float dashVelocityRemain = .3f;
+
+	/*The gravity applied to the player during a dash*/
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Dash")
 	float dashGravity = 0;
 
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
+	/*The amount of time, in seconds, that the player has to wait to be able to perform another dash.
+	This countdown starts when pressing the dash button, not when the dash is over.*/
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Dash")
 	float dashCooldown = .5f;
 
+	/*How much (in degrees) the camera will roll to the left or right when moving to the side*/
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Camera")
+	float cameraRollStrength;
+
+	/*How fast the camera will roll to the left or right when moving to the side*/
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Camera")
+	float cameraRollSpeed;
+
+	FVector2D currentMovementInput;
 	bool isDashing = false;
 	float dashEndTime;
 	float nextAllowedDash = std::numeric_limits<float>::min();
 
-	FVector2D currentMovementInput;
-	
 public:
 	ARedBloodSeaCharacter();
 
@@ -92,18 +101,18 @@ protected:
 	UCameraComponent* FirstPersonCameraComponent;
 
 public:
-		
+
 	/** Look Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	class UInputAction* LookAction;
 
 protected:
 	/** Called for movement input */
-	void Move(const FInputActionValue& Value);
+	void MoveInput(const FInputActionValue& Value);
 
 	/** Called for looking input */
-	void Look(const FInputActionValue& Value);
-	
+	void LookInput(const FInputActionValue& Value);
+
 	void DashInput(const FInputActionValue& Value);
 
 	void Dash();

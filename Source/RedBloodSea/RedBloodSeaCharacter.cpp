@@ -55,6 +55,7 @@ void ARedBloodSeaCharacter::Tick(float deltaTime)
 	Super::Tick(deltaTime);
 
 	CameraRoll();
+	CameraFOV();
 
 	if (isDashing)
 		Dash();
@@ -62,6 +63,8 @@ void ARedBloodSeaCharacter::Tick(float deltaTime)
 
 void ARedBloodSeaCharacter::CameraRoll()
 {
+	//Roll
+
 	float targetRoll = cameraRollStrength * currentMovementInput.X;
 
 	// Get the current controller roll input
@@ -78,6 +81,23 @@ void ARedBloodSeaCharacter::CameraRoll()
 
 	// Set the controller roll input to the new roll value
 	AddControllerRollInput(newRoll - currentRoll);
+}
+
+void ARedBloodSeaCharacter::CameraFOV()
+{
+	//FOV
+	float targetFOV = isDashing ? dashFOV : defaultFOV;
+
+	// Get the current controller roll input
+	float currentFOV = FirstPersonCameraComponent->FieldOfView;
+
+	// Calculate the lerp alpha value based on the interpolation speed
+	float lerpAlpha = FMath::Clamp(fovChangeSpeed * GetWorld()->GetDeltaSeconds(), 0.0f, 1.0f);
+
+	// Interpolate between the current roll and the adjusted target roll
+	float newFOV = FMath::Lerp(currentFOV, targetFOV, lerpAlpha);
+
+	FirstPersonCameraComponent->SetFieldOfView(newFOV);
 }
 
 void ARedBloodSeaCharacter::Dash()
@@ -134,8 +154,15 @@ void ARedBloodSeaCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInp
 		// Looking
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &ARedBloodSeaCharacter::LookInput);
 
+		// Looking
+		EnhancedInputComponent->BindAction(GroundSlamAction, ETriggerEvent::Started, this, &ARedBloodSeaCharacter::GroundSlamInput);
+
 		//Dash
 		EnhancedInputComponent->BindAction(DashAction, ETriggerEvent::Started, this, &ARedBloodSeaCharacter::DashInput);
+
+		//Attacks
+		EnhancedInputComponent->BindAction(SlashAction, ETriggerEvent::Started, this, &ARedBloodSeaCharacter::SlashInput);
+		EnhancedInputComponent->BindAction(ThrustAction, ETriggerEvent::Started, this, &ARedBloodSeaCharacter::ThrustInput);
 	}
 	else
 	{
@@ -191,4 +218,24 @@ void ARedBloodSeaCharacter::DashInput(const FInputActionValue& Value)
 	GetCharacterMovement()->Velocity = (FVector::Zero());
 	SetNewPlayerGravity(dashGravity);
 	currentMovementInput.Normalize();
+}
+
+void ARedBloodSeaCharacter::GroundSlamInput(const FInputActionValue& Value)
+{
+	if (!GetCharacterMovement()->IsFalling())
+	{
+		return;
+	}
+	GetCharacterMovement()->Velocity *= groundSlamHorizontalVelocityRemain;
+	GetCharacterMovement()->Velocity.Z = -groundSlamVerticalStrength;
+}
+
+void ARedBloodSeaCharacter::SlashInput(const FInputActionValue& Value)
+{
+	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Blue, "SLASH");
+}
+
+void ARedBloodSeaCharacter::ThrustInput(const FInputActionValue& Value)
+{
+	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, "THRUST");
 }

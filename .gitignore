@@ -81,3 +81,5 @@ DerivedDataCache/*
 AkWwiseProjectData.asset    
 IncrementalSoundBankData.xml
 RedBloodSea_WwiseProject/Originals
+Plugins/Wwise/Source/WwiseSoundEngine/Public/Generated/AktvOSPlugins.h
+Plugins/Wwise/Source/WwiseSoundEngine/Public/Generated/AkiOSPlugins.h

@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "Logging/LogMacros.h"
+#include "PlayerInputHandler.h"
 #include "RedBloodSeaCharacter.generated.h"
 
 class UInputComponent;
@@ -25,78 +26,7 @@ class ARedBloodSeaCharacter : public ACharacter
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Mesh, meta = (AllowPrivateAccess = "true"))
 	USkeletalMeshComponent* Mesh1P;
 
-	/** Move Input Action */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
-	UInputAction* MoveAction;
-
-	/** Look Input Action */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
-	class UInputAction* LookAction;
-
-	/** Jump Input Action */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
-	UInputAction* JumpAction;
-
-	/** Dash Input Action */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
-	UInputAction* DashAction;
-
-	/** Slash Input Action */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
-	UInputAction* GroundSlamAction;
-
-	/** Slash Input Action */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
-	UInputAction* SlashAction;
-
-	/** Thrust Input Action */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
-	UInputAction* ThrustAction;
-
-	/*The default speed of the player, applied when not dashing, for instance*/
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Default Movement")
-	float defaultSpeed = 1000;
-
-	/*The default acceleration of the player, applied when not dashing, for instance*/
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Default Movement")
-	float defaultAcceleration = 5000;
-
-	/*The default gravity applied to the player, applied when not dashing, for instance*/
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Default Movement")
-	float defaultGravity = 50;
-
-	/*The duration of a dash, in seconds*/
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Dash")
-	float dashDuration = .2f;
-
-	/*The target speed of the player during a dash*/
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Dash")
-	float dashSpeed = 5000;
-
-	/*The acceleration of the player during a dash (or how fast he'll reach his target speed)*/
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Dash")
-	float dashAcceleration = 5000;
-
-	/*How much of the velocity the player will keep after the dash (from 0 to 1) /!\ TEST DASHING BOTH ON GROUND AND IN THE AIR AFTER MODIFYING /!\*/
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Dash")
-	float dashVelocityRemain = .3f;
-
-	/*The gravity applied to the player during a dash*/
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Dash")
-	float dashGravity = 0;
-
-	/*The amount of time, in seconds, that the player has to wait to be able to perform another dash.
-	This countdown starts when pressing the dash button, not when the dash is over.*/
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Dash")
-	float dashCooldown = .5f;
-
-	/*How much of the velocity the player will keep after the ground slam (from 0 to 1)*/
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Ground Slam")
-	float groundSlamHorizontalVelocityRemain = .3f;
-
-	/*How strong the player will slam downwards*/
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Ground Slam")
-	float groundSlamVerticalStrength = 50;
+	UPlayerInputHandler* PlayerInputHandler;
 
 	/*How much (in degrees) the camera will roll to the left or right when moving to the side*/
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Camera")
@@ -118,11 +48,6 @@ class ARedBloodSeaCharacter : public ACharacter
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Camera")
 	float fovChangeSpeed = 10;
 
-	FVector2D currentMovementInput;
-	bool isDashing = false;
-	float dashEndTime;
-	float nextAllowedDash = std::numeric_limits<float>::min();
-
 public:
 	ARedBloodSeaCharacter();
 
@@ -135,26 +60,6 @@ protected:
 	/** First person camera */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	UCameraComponent* FirstPersonCameraComponent;
-
-protected:
-	/** Called for movement input */
-	void MoveInput(const FInputActionValue& Value);
-
-	/** Called for looking input */
-	void LookInput(const FInputActionValue& Value);
-
-	void DashInput(const FInputActionValue& Value);
-
-	void GroundSlamInput(const FInputActionValue& Value);
-
-	void SlashInput(const FInputActionValue& Value);
-	void ThrustInput(const FInputActionValue& Value);
-
-	void Dash();
-
-	void SetNewPlayerSpeedAndAcceleration(float newSpeed, float newAcceleration);
-
-	void SetNewPlayerGravity(float newGravity);
 
 protected:
 	// APawn interface

@@ -20,6 +20,7 @@ public:
 	// Sets default values for this component's properties
 	UPlayerMovement();
 
+protected:
 	virtual void BeginPlay() override;
 
 private:
@@ -81,5 +82,6 @@ public:
 
 	void OnNewMoveInput(FVector2D newMoveInput);
 	void OnDashInput();
+	void OnJumpInput(bool isJumping);
 	void OnGroundSlamInput();
 };

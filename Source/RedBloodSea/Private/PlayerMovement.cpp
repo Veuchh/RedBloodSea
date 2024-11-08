@@ -75,6 +75,18 @@ void UPlayerMovement::SetNewPlayerGravity(float newGravity)
 
 void UPlayerMovement::OnNewMoveInput(FVector2D newMoveInput)
 {
+	if (!PlayerData::CanMove())
+		return;
+
+	// input is a Vector2D
+	PlayerData::CurrentMovementInput = newMoveInput;
+
+	if (playerCharacter->GetInstigatorController() != nullptr)
+	{
+		// add movement 
+		playerCharacter->AddMovementInput(playerCharacter->GetActorForwardVector(), PlayerData::CurrentMovementInput.Y);
+		playerCharacter->AddMovementInput(playerCharacter->GetActorRightVector(), PlayerData::CurrentMovementInput.X);
+	}
 }
 
 void UPlayerMovement::OnDashInput()
@@ -85,7 +97,6 @@ void UPlayerMovement::OnDashInput()
 		return;
 	}
 
-	//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::SanitizeFloat(dashEndTime));
 	PlayerData::DashEndTime = UGameplayStatics::GetRealTimeSeconds(GetWorld()) + dashDuration;
 	PlayerData::NextAllowedDash = UGameplayStatics::GetRealTimeSeconds(GetWorld()) + dashCooldown;
 	PlayerData::IsDashing = true;
@@ -94,6 +105,18 @@ void UPlayerMovement::OnDashInput()
 	playerCharacter->GetCharacterMovement()->Velocity = (FVector::Zero());
 	SetNewPlayerGravity(dashGravity);
 	PlayerData::CurrentMovementInput.Normalize();
+}
+
+void UPlayerMovement::OnJumpInput(const bool isJumping)
+{
+	if (isJumping)
+	{
+		playerCharacter->Jump();
+	}
+	else
+	{
+		playerCharacter->StopJumping();
+	}
 }
 
 void UPlayerMovement::OnGroundSlamInput()

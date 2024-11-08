@@ -4,8 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "EnhancedInputComponent.h"
-#include "Components/ActorComponent.h"    
-#include "PlayerData.h"                                  
+#include "PlayerMovement.h"
+#include "PlayerCameraHandler.h"
+#include "Components/ActorComponent.h"                    
 #include "PlayerInputHandler.generated.h"
 
 
@@ -15,6 +16,9 @@ class UPlayerInputHandler : public UActorComponent
 	GENERATED_BODY()
 
 private:
+	UPlayerMovement* playerMovement;
+	UPlayerCameraHandler* playerCameraHandler;
+	
 	/** Move Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* MoveAction;
@@ -65,6 +69,4 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 	void SetupPlayerInputComponent(UInputComponent* InputComponent);
-
-		
 };

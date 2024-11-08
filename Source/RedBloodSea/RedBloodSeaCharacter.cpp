@@ -47,55 +47,18 @@ void ARedBloodSeaCharacter::BeginPlay()
 
 	UPlayerMovement* playerMovement = this->GetComponentByClass<UPlayerMovement>();
 	playerMovement->SetupPlayerMovementComponent(this);
+
+	UPlayerCameraHandler* playerCameraHandler = this->GetComponentByClass<UPlayerCameraHandler>();
+	playerCameraHandler->SetupPlayerCameraComponent(this, FirstPersonCameraComponent);
 }
 
 void ARedBloodSeaCharacter::Tick(float deltaTime)
 {
 	// Call the base class  
 	Super::Tick(deltaTime);
-
-	CameraRoll();
-	CameraFOV();
-	}
-
-void ARedBloodSeaCharacter::CameraRoll()
-{
-	////Roll
-
-	//float targetRoll = cameraRollStrength * currentMovementInput.X;
-
-	//// Get the current controller roll input
-	//float currentRoll = GetControlRotation().Roll;
-
-	//// Calculate the lerp alpha value based on the interpolation speed
-	//float lerpAlpha = FMath::Clamp(cameraRollSpeed * GetWorld()->GetDeltaSeconds(), 0.0f, 1.0f);
-
-	//// Adjust the target roll to be within the range [-180, 180] for correct interpolation
-	//float adjustedTargetRoll = FRotator::NormalizeAxis(targetRoll - currentRoll) + currentRoll;
-
-	//// Interpolate between the current roll and the adjusted target roll
-	//float newRoll = FMath::Lerp(currentRoll, adjustedTargetRoll, lerpAlpha);
-
-	//// Set the controller roll input to the new roll value
-	//AddControllerRollInput(newRoll - currentRoll);
 }
 
-void ARedBloodSeaCharacter::CameraFOV()
-{
-	////FOV
-	//float targetFOV = isDashing ? dashFOV : defaultFOV;
 
-	//// Get the current controller roll input
-	//float currentFOV = FirstPersonCameraComponent->FieldOfView;
-
-	//// Calculate the lerp alpha value based on the interpolation speed
-	//float lerpAlpha = FMath::Clamp(fovChangeSpeed * GetWorld()->GetDeltaSeconds(), 0.0f, 1.0f);
-
-	//// Interpolate between the current roll and the adjusted target roll
-	//float newFOV = FMath::Lerp(currentFOV, targetFOV, lerpAlpha);
-
-	//FirstPersonCameraComponent->SetFieldOfView(newFOV);
-}
 
 
 //////////////////////////////////////////////////////////////////////////// Input
@@ -105,34 +68,3 @@ void ARedBloodSeaCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInp
 	PlayerInputHandler = this->GetComponentByClass<UPlayerInputHandler>();
 	PlayerInputHandler->SetupPlayerInputComponent(PlayerInputComponent);
 }
-
-//void ARedBloodSeaCharacter::MoveInput(const FInputActionValue& Value)
-//{
-//	if (isDashing)
-//	{
-//		return;
-//	}
-//
-//	// input is a Vector2D
-//	currentMovementInput = Value.Get<FVector2D>();
-//
-//	if (Controller != nullptr)
-//	{
-//		// add movement 
-//		AddMovementInput(GetActorForwardVector(), currentMovementInput.Y);
-//		AddMovementInput(GetActorRightVector(), currentMovementInput.X);
-//	}
-//}
-//
-//void ARedBloodSeaCharacter::LookInput(const FInputActionValue& Value)
-//{
-//	// input is a Vector2D
-//	FVector2D LookAxisVector = Value.Get<FVector2D>();
-//
-//	if (Controller != nullptr)
-//	{
-//		// add yaw and pitch input to controller
-//		AddControllerYawInput(LookAxisVector.X);
-//		AddControllerPitchInput(LookAxisVector.Y);
-//	}
-//}

@@ -28,34 +28,12 @@ class ARedBloodSeaCharacter : public ACharacter
 
 	UPlayerInputHandler* PlayerInputHandler;
 
-	/*How much (in degrees) the camera will roll to the left or right when moving to the side*/
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Camera")
-	float cameraRollStrength;
-
-	/*How fast the camera will roll to the left or right when moving to the side*/
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Camera")
-	float cameraRollSpeed;
-
-	/*The default FOV*/
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Camera")
-	float defaultFOV = 105;
-
-	/*The target FOV when the player is dashing*/
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Camera")
-	float dashFOV = 115;
-
-	/*How fast the FOV will change*/
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Camera")
-	float fovChangeSpeed = 10;
-
 public:
 	ARedBloodSeaCharacter();
 
 protected:
-	virtual void BeginPlay();
-	virtual void Tick(float deltaTime);
-	void CameraRoll();
-	void CameraFOV();
+	virtual void BeginPlay() override;
+	virtual void Tick(float deltaTime) override;
 
 	/** First person camera */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))

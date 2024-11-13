@@ -17,3 +17,18 @@ bool PlayerData::CanMove()
 {
 	return !IsDashing;
 }
+
+bool PlayerData::CanAttack()
+{
+	return !IsDashing;
+}
+
+bool PlayerData::CanDash()
+{
+	return !IsDashing;
+}
+
+bool PlayerData::CanGroundSlam()
+{
+	return !IsDashing;
+}

@@ -91,8 +91,7 @@ void UPlayerMovement::OnNewMoveInput(FVector2D newMoveInput)
 
 void UPlayerMovement::OnDashInput()
 {
-	//if dash is on cooldown
-	if (PlayerData::NextAllowedDash > UGameplayStatics::GetRealTimeSeconds(GetWorld()))
+	if (!PlayerData::CanDash() ||PlayerData::NextAllowedDash > UGameplayStatics::GetRealTimeSeconds(GetWorld()))
 	{
 		return;
 	}
@@ -121,7 +120,7 @@ void UPlayerMovement::OnJumpInput(const bool isJumping)
 
 void UPlayerMovement::OnGroundSlamInput()
 {
-	if (!playerCharacter->GetCharacterMovement()->IsFalling())
+	if (!playerCharacter->GetCharacterMovement()->IsFalling() || !PlayerData::CanGroundSlam())
 	{
 		return;
 	}

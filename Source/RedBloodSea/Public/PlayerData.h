@@ -1,6 +1,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "BufferableAttack.h"
 
 /**
  * 
@@ -15,6 +16,11 @@ public:
 	static bool IsDashing;
 	static float DashEndTime;
 	static float NextAllowedDash;
+	static TArray<BufferableAttack> AttackBuffer;
+	static float NextAllowedAttack;
 
 	static bool CanMove();
+	static bool CanAttack();
+	static bool CanDash();
+	static bool CanGroundSlam();
 };

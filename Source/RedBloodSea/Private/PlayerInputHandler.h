@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "EnhancedInputComponent.h"
 #include "PlayerMovement.h"
+#include "PlayerCombat.h"
 #include "PlayerCameraHandler.h"
 #include "Components/ActorComponent.h"                    
 #include "PlayerInputHandler.generated.h"
@@ -17,6 +18,7 @@ class UPlayerInputHandler : public UActorComponent
 
 private:
 	UPlayerMovement* playerMovement;
+	UPlayerCombat* playerCombat;
 	UPlayerCameraHandler* playerCameraHandler;
 	
 	/** Move Input Action */

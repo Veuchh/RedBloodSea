@@ -17,6 +17,7 @@ void UPlayerMovement::BeginPlay()
 {
 	// Call the base class  
 	Super::BeginPlay();
+	PlayerData::ResetData();
 }
 
 void UPlayerMovement::DashLogic()

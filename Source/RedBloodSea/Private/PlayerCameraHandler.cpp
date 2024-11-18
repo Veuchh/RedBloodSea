@@ -6,6 +6,7 @@
 #include "PlayerData.h"
 #include "Camera/CameraComponent.h"
 #include "GameFramework/Character.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values for this component's properties
 UPlayerCameraHandler::UPlayerCameraHandler()
@@ -56,9 +57,14 @@ void UPlayerCameraHandler::OnLookInput(const FVector2D newLookInput)
 void UPlayerCameraHandler::CameraRoll()
 {
 	//Roll
-
 	float targetRoll = cameraRollStrength *  PlayerData::CurrentMovementInput.X;
 
+	//Head bobbing stub
+	if (!PlayerData::CurrentMovementInput.IsZero())
+	{
+		targetRoll += cameraRollStrength * FMath::Sin(UGameplayStatics::GetTimeSeconds(GetWorld()) * 12) * .25f;
+	}
+	
 	// Get the current controller roll input
 	float currentRoll = playerCharacter->GetControlRotation().Roll;
 

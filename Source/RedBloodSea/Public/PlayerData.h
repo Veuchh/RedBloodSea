@@ -26,6 +26,7 @@ public:
 	static int MaxAttackBufferCapacity;
 	static PlayerAttackState CurrentAttackState;
 	static float AttackStartTime;
+	static float NextAllowedInputBufferTime;
 	
 	//----------------------------------------------------------Slash
 	static float SlashAttackStartupDelay;

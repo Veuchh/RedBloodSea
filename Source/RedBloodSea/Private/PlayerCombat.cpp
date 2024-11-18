@@ -83,6 +83,22 @@ TArray<UPrimitiveComponent*> UPlayerCombat::GetAttackColliders(BufferableAttack 
 	}
 }
 
+float UPlayerCombat::GetAttackBufferCooldown(const BufferableAttack attack) const
+{
+	float attackCooldown = UGameplayStatics::GetRealTimeSeconds(GetWorld());
+
+	switch (attack) {
+	case BufferableAttack::Slash:
+		attackCooldown += slashInputBufferCooldown;
+		break;
+	case BufferableAttack::Thrust:
+		attackCooldown += thrustInputBufferCooldown;
+		break;
+	}
+
+	return attackCooldown;
+}
+
 
 void UPlayerCombat::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
@@ -151,10 +167,12 @@ void UPlayerCombat::ToggleAttackCollider(BufferableAttack attack, bool isToggled
 
 void UPlayerCombat::TryAddAttackToBuffer(BufferableAttack attackToAdd)
 {
-	if (PlayerData::AttackBuffer.Num() >= PlayerData::MaxAttackBufferCapacity)
+	if (PlayerData::AttackBuffer.Num() >= PlayerData::MaxAttackBufferCapacity
+		|| PlayerData::NextAllowedInputBufferTime > UGameplayStatics::GetRealTimeSeconds(GetWorld()))
 		return;
 
 	PlayerData::AttackBuffer.Add(attackToAdd);
+	PlayerData::NextAllowedInputBufferTime = GetAttackBufferCooldown(attackToAdd);
 }
 
 //-----------------------------------------------------------------Inputs

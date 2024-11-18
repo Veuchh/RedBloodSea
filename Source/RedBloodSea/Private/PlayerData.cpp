@@ -9,6 +9,7 @@ BufferableAttack PlayerData::CurrentAttack = BufferableAttack::None;
 TArray<BufferableAttack> PlayerData::AttackBuffer = TArray<BufferableAttack>();
 PlayerAttackState PlayerData::CurrentAttackState = PlayerAttackState::None;
 float PlayerData::AttackStartTime = 0;
+float PlayerData::NextAllowedInputBufferTime = 0;
 
 float PlayerData::SlashAttackStartupDelay = 0; //Initialized in PlayerCombat.BeginPlay
 float PlayerData::SlashAttackDuration = 0; //Initialized in PlayerCombat.BeginPlay
@@ -35,6 +36,7 @@ void PlayerData::ResetData()
 	AttackBuffer = TArray<BufferableAttack>();
 	CurrentAttackState = PlayerAttackState::None;
 	AttackStartTime = 0;
+	NextAllowedInputBufferTime = 0;
 }
 
 

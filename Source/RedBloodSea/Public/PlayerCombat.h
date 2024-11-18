@@ -45,6 +45,10 @@ protected:
 	/*How long before next attack after slash. Starts when the slash starts*/
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
 	float slashAttackCooldown = .5f;
+	
+	/*How long before allowed to add to input buffer after slash.*/
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
+	float slashInputBufferCooldown = .05f;
 
 	//Thrust
 	UPROPERTY( EditAnywhere, meta = (UseComponentPicker))
@@ -62,10 +66,15 @@ protected:
 	/*How long before next attack after thrust. Starts when the slash starts*/
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
 	float thrustAttackCooldown = .5f;
+
+	/*How long before allowed to add to input buffer after thrust.*/
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
+	float thrustInputBufferCooldown = .05f;
 	
 	// Called when the game starts
 	virtual void BeginPlay() override;
 	TArray<UPrimitiveComponent*> GetAttackColliders(BufferableAttack attack);
+	 float GetAttackBufferCooldown(const BufferableAttack attack) const;
 public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;

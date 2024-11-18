@@ -3,6 +3,7 @@
 #include "PlayerInputHandler.h"
 
 #include "PlayerCameraHandler.h"
+#include "PlayerCombat.h"
 
 // Sets default values for this component's properties
 UPlayerInputHandler::UPlayerInputHandler()
@@ -21,6 +22,7 @@ void UPlayerInputHandler::BeginPlay()
 	Super::BeginPlay();
 
 	playerMovement = GetOwner()->GetComponentByClass<UPlayerMovement>();
+	playerCombat = GetOwner()->GetComponentByClass<UPlayerCombat>();
 	playerCameraHandler = GetOwner()->GetComponentByClass<UPlayerCameraHandler>();
 }
 
@@ -98,10 +100,10 @@ void UPlayerInputHandler::GroundSlamInput(const FInputActionValue& Value)
 
 void UPlayerInputHandler::SlashInput(const FInputActionValue& Value)
 {
-	GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Blue, "SLASH INPUT");
+	playerCombat->OnSlashInput();
 }
 
 void UPlayerInputHandler::ThrustInput(const FInputActionValue& Value)
 {
-	GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Red, "THRUST INPUT");
+	playerCombat->OnThrustInput();
 }

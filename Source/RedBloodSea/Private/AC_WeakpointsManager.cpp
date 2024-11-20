@@ -22,6 +22,7 @@ void UAC_WeakpointsManager::BeginPlay()
 	Super::BeginPlay();
 
 	owner = GetOwner();
+	skeleton = Cast<USkeletalMeshComponent>(owner->GetComponentByClass(USkeletalMeshComponent::StaticClass()));
 	CreateWeakPoints();
 }
 

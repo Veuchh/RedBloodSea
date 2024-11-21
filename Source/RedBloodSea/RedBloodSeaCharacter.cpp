@@ -36,8 +36,8 @@ ARedBloodSeaCharacter::ARedBloodSeaCharacter()
 	Mesh1P->SetupAttachment(FirstPersonCameraComponent);
 	Mesh1P->bCastDynamicShadow = false;
 	Mesh1P->CastShadow = false;
-	//Mesh1P->SetRelativeRotation(FRotator(0.9f, -19.19f, 5.2f));
-	Mesh1P->SetRelativeLocation(FVector(-30.f, 0.f, -150.f));
+	Mesh1P->SetRelativeRotation(FRotator(0,0,-90));
+	Mesh1P->SetRelativeLocation(FVector(0,0,0));
 }
 
 void ARedBloodSeaCharacter::BeginPlay()
@@ -58,11 +58,7 @@ void ARedBloodSeaCharacter::Tick(float deltaTime)
 	Super::Tick(deltaTime);
 }
 
-
-
-
 //////////////////////////////////////////////////////////////////////////// Input
-
 void ARedBloodSeaCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	PlayerInputHandler = this->GetComponentByClass<UPlayerInputHandler>();

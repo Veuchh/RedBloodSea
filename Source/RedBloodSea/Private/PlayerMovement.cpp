@@ -18,6 +18,17 @@ void UPlayerMovement::BeginPlay()
 	// Call the base class  
 	Super::BeginPlay();
 	PlayerData::ResetData();
+
+	OnStartFootsteps.Broadcast();
+}
+
+// Called every frame
+void UPlayerMovement::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
+{
+	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+
+	if (PlayerData::IsDashing)
+		DashLogic();
 }
 
 void UPlayerMovement::DashLogic()
@@ -52,15 +63,6 @@ void UPlayerMovement::SetupPlayerMovementComponent(ACharacter* p_playerCharacter
 	SetNewPlayerGravity(defaultGravity);
 }
 
-// Called every frame
-void UPlayerMovement::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
-{
-	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
-	if (PlayerData::IsDashing)
-		DashLogic();
-}
-
 void UPlayerMovement::SetNewPlayerSpeedAndAcceleration(float newSpeed, float newAcceleration)
 {
 	playerCharacter->GetCharacterMovement()->MaxWalkSpeed = newSpeed;
@@ -92,10 +94,12 @@ void UPlayerMovement::OnNewMoveInput(FVector2D newMoveInput)
 
 void UPlayerMovement::OnDashInput()
 {
-	if (!PlayerData::CanDash() ||PlayerData::NextAllowedDash > UGameplayStatics::GetRealTimeSeconds(GetWorld()))
+	if (!PlayerData::CanDash() || PlayerData::NextAllowedDash > UGameplayStatics::GetRealTimeSeconds(GetWorld()))
 	{
 		return;
 	}
+
+	OnDashStart.Broadcast();
 
 	PlayerData::DashEndTime = UGameplayStatics::GetRealTimeSeconds(GetWorld()) + dashDuration;
 	PlayerData::NextAllowedDash = UGameplayStatics::GetRealTimeSeconds(GetWorld()) + dashCooldown;
@@ -125,6 +129,8 @@ void UPlayerMovement::OnGroundSlamInput()
 	{
 		return;
 	}
+	OnGroundSlamStart.Broadcast();
+
 	playerCharacter->GetCharacterMovement()->Velocity *= groundSlamHorizontalVelocityRemain;
 	playerCharacter->GetCharacterMovement()->Velocity.Z = -groundSlamVerticalStrength;
 }

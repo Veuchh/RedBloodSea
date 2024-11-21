@@ -87,7 +87,8 @@ float UPlayerCombat::GetAttackBufferCooldown(const BufferableAttack attack) cons
 {
 	float attackCooldown = UGameplayStatics::GetRealTimeSeconds(GetWorld());
 
-	switch (attack) {
+	switch (attack)
+	{
 	case BufferableAttack::Slash:
 		attackCooldown += slashInputBufferCooldown;
 		break;
@@ -99,11 +100,24 @@ float UPlayerCombat::GetAttackBufferCooldown(const BufferableAttack attack) cons
 	return attackCooldown;
 }
 
+void UPlayerCombat::CallAttackBlueprintCallback(const BufferableAttack attack)
+{
+	switch (attack)
+	{
+	case BufferableAttack::Slash:
+		OnSlashStart.Broadcast();
+		break;
+	case BufferableAttack::Thrust:
+		OnThrustStart.Broadcast();
+		break;
+	}
+}
+
 
 void UPlayerCombat::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-	
+
 	if (PlayerData::CurrentAttack != BufferableAttack::None)
 	{
 		OngoingAttackLogic();
@@ -124,6 +138,8 @@ void UPlayerCombat::TryConsumeAttackBuffer()
 	PlayerData::CurrentAttack = PlayerData::AttackBuffer[0];
 	PlayerData::AttackBuffer.RemoveAt(0);
 	PlayerData::AttackStartTime = UGameplayStatics::GetRealTimeSeconds(GetWorld());
+
+	CallAttackBlueprintCallback(PlayerData::CurrentAttack );
 }
 
 void UPlayerCombat::OngoingAttackLogic()

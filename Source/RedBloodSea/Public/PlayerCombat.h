@@ -9,6 +9,14 @@
 #include "PlayerCombat.generated.h"
 
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnSlashStart);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnThrustStart);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnSlashHit);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnThrustHitWeakpoint);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnThrustHitNoWeakpoint);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnSlashHitEnviroMat1);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnSlashHitEnviroMat2);
+
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class REDBLOODSEA_API UPlayerCombat : public UActorComponent
 {
@@ -75,6 +83,7 @@ protected:
 	virtual void BeginPlay() override;
 	TArray<UPrimitiveComponent*> GetAttackColliders(BufferableAttack attack);
 	 float GetAttackBufferCooldown(const BufferableAttack attack) const;
+	void CallAttackBlueprintCallback(const BufferableAttack attack);
 public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
@@ -82,4 +91,19 @@ public:
 	void OnSlashInput();
 	void OnThrustInput();
 	void OnPossessInput();
+	
+	UPROPERTY(BlueprintAssignable, Category = "Combat")
+	FOnSlashStart OnSlashStart;
+	UPROPERTY(BlueprintAssignable, Category = "Combat")
+	FOnThrustStart OnThrustStart;
+	UPROPERTY(BlueprintAssignable, Category = "Combat")
+	FOnSlashHit OnSlashHit;
+	UPROPERTY(BlueprintAssignable, Category = "Combat")
+	FOnThrustHitWeakpoint OnThrustHitWeakpoint;
+	UPROPERTY(BlueprintAssignable, Category = "Combat")
+	FOnThrustHitNoWeakpoint OnThrustHitNoWeakpoint;
+	UPROPERTY(BlueprintAssignable, Category = "Combat")
+	FOnSlashHitEnviroMat1 OnSlashHitEnviroMat1;
+	UPROPERTY(BlueprintAssignable, Category = "Combat")
+	FOnSlashHitEnviroMat2 OnSlashHitEnviroMat2;
 };

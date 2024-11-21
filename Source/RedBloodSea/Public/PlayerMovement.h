@@ -10,13 +10,17 @@
 #include <Kismet/GameplayStatics.h>
 #include "PlayerMovement.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnDashStart);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnGroundSlamStart);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnFootstep);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnDashInterrupted);
 
-UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
+UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
 class REDBLOODSEA_API UPlayerMovement : public UActorComponent
 {
 	GENERATED_BODY()
 
-public:	
+public:
 	// Sets default values for this component's properties
 	UPlayerMovement();
 
@@ -27,7 +31,7 @@ private:
 	void SetNewPlayerSpeedAndAcceleration(float newSpeed, float newAcceleration);
 	void SetNewPlayerGravity(float newGravity);
 	void DashLogic();
-	
+
 	/*The default speed of the player, applied when not dashing, for instance*/
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Default Movement")
 	float defaultSpeed = 1000;
@@ -74,14 +78,26 @@ private:
 	float groundSlamVerticalStrength = 50;
 
 	ACharacter* playerCharacter;
+	float lastTickVerticalVelocity = 0;
+	bool wasPlayerGrounded = true;
 
-public:	
+public:
 	void SetupPlayerMovementComponent(ACharacter* playerPawn);
 	// Called every frame
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+	virtual void TickComponent(float DeltaTime, ELevelTick TickType,
+	                           FActorComponentTickFunction* ThisTickFunction) override;
 
 	void OnNewMoveInput(FVector2D newMoveInput);
 	void OnDashInput();
 	void OnJumpInput(bool isJumping);
 	void OnGroundSlamInput();
+
+	UPROPERTY(BlueprintAssignable, Category = "Movement")
+	FOnDashStart OnDashStart;
+	UPROPERTY(BlueprintAssignable, Category = "Movement")
+	FOnGroundSlamStart OnGroundSlamStart;
+	UPROPERTY(BlueprintAssignable, Category = "Movement")
+	FOnFootstep OnStartFootsteps;
+	UPROPERTY(BlueprintAssignable, Category = "Movement")
+	FOnDashInterrupted OnDashInterrupted;
 };

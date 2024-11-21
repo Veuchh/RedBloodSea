@@ -3,8 +3,9 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Weakpoint.h"
 #include "Components/ActorComponent.h"
-#include "AC_WeakpointsManager.generated.h"
+#include "ACWeakpointsManager.generated.h"
 
 UENUM(BlueprintType)
 enum class EWeakpointType : uint8 {
@@ -28,17 +29,15 @@ struct FWeakpointSlot
 }; UMETA(DisplayName="Weakpoint slot")
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class REDBLOODSEA_API UAC_WeakpointsManager : public UActorComponent
+class REDBLOODSEA_API UACWeakpointsManager : public UActorComponent
 {
 	GENERATED_BODY()
 
 public:	
 	// Sets default values for this component's properties
-	UAC_WeakpointsManager();
+	UACWeakpointsManager();
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Weakpoints Handler")
 	TObjectPtr<UClass> Weakpoint_BP;
-	UPROPERTY(BlueprintReadWrite,EditAnywhere,Category="Weakpoints Handler")
-	TObjectPtr<USkeletalMeshComponent> skeleton;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Weakpoints Handler")
 	int Nb_weakpoints;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Weakpoints Handler")
@@ -46,6 +45,9 @@ public:
 
 private:
 	AActor* owner;
+	TObjectPtr<USkeletalMeshComponent> skeleton;
+	TArray<TObjectPtr<UMaterialInstanceDynamic>> materialInstances;
+	TArray<TObjectPtr<AActor>> weakpoints;
 	
 	
 protected:
@@ -59,6 +61,7 @@ public:
 	void AttachWeakpoint(const FName& socketName,const UE::Math::TVector<double>& maxOffset);
 	UFUNCTION()
 	TArray<FName> GetAllWeakpointsSockets();
-	
+	void SetSkeleton(USkeletalMeshComponent* skeleton);
+	void SetMaterials(TArray<TObjectPtr<UMaterialInstanceDynamic>> newMaterialInstances);
 		
 };

@@ -1,13 +1,13 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "AC_WeakpointsManager.h"
+#include "ACWeakpointsManager.h"
 
 #include "ComponentUtils.h"
 #include "Engine/SimpleConstructionScript.h"
 
 // Sets default values for this component's properties
-UAC_WeakpointsManager::UAC_WeakpointsManager()
+UACWeakpointsManager::UACWeakpointsManager()
 {
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
@@ -17,7 +17,7 @@ UAC_WeakpointsManager::UAC_WeakpointsManager()
 }
 
 // Called when the game starts
-void UAC_WeakpointsManager::BeginPlay()
+void UACWeakpointsManager::BeginPlay()
 {
 	Super::BeginPlay();
 
@@ -28,14 +28,14 @@ void UAC_WeakpointsManager::BeginPlay()
 
 
 // Called every frame
-void UAC_WeakpointsManager::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
+void UACWeakpointsManager::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
 	// ...
 }
 
-TArray<FName> UAC_WeakpointsManager::GetAllWeakpointsSockets()
+TArray<FName> UACWeakpointsManager::GetAllWeakpointsSockets()
 {
 	TArray<FName> result;
 	if(skeleton == nullptr)
@@ -50,7 +50,17 @@ TArray<FName> UAC_WeakpointsManager::GetAllWeakpointsSockets()
 	return result;
 }
 
-void UAC_WeakpointsManager::CreateWeakPoints()
+void UACWeakpointsManager::SetSkeleton(USkeletalMeshComponent* newSkeleton)
+{
+	this->skeleton = newSkeleton;
+}
+
+void UACWeakpointsManager::SetMaterials(TArray<TObjectPtr<UMaterialInstanceDynamic>> newMaterialInstances)
+{
+	materialInstances = newMaterialInstances;
+}
+
+void UACWeakpointsManager::CreateWeakPoints()
 {
 	owner = GetOwner();
 	skeleton = Cast<USkeletalMeshComponent>(owner->GetComponentByClass(USkeletalMeshComponent::StaticClass()));
@@ -117,10 +127,16 @@ void UAC_WeakpointsManager::CreateWeakPoints()
 }
 
 
-void UAC_WeakpointsManager::AttachWeakpoint(const FName& socketName,const UE::Math::TVector<double>& maxOffset )
+void UACWeakpointsManager::AttachWeakpoint(const FName& socketName,const UE::Math::TVector<double>& maxOffset )
 {
 	AActor* newActor = GetWorld()->SpawnActor(Weakpoint_BP);
 	newActor->AttachToComponent(skeleton,FAttachmentTransformRules::SnapToTargetNotIncludingScale,socketName);
+	int index = 0;
+	for (auto material : materialInstances)
+	{
+		UE::Math::TVector<double> position = weakpoints[1]->GetTransform().GetLocation();
+		material->SetVectorParameterValue(TEXT("WeakPointPos1"),FLinearColor(position[0],position[1],position[2],0));
+	}
 	UE::Math::TVector<double> offset = {
 		FMath::FRandRange(-maxOffset.X,maxOffset.X),
 		FMath::FRandRange(-maxOffset.Y,maxOffset.Y),

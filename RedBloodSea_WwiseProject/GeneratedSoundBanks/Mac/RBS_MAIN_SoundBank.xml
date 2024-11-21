@@ -1,31 +1,1728 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="2890283282" Type="User" GUID="{1D2A39F0-30EC-4374-B60C-7E5FD97B8C24}" Language="SFX" Hash="{2FFD3EC3-183A-3463-27A1-9E7ED469108A}">
+		<SoundBank Id="2890283282" Type="User" GUID="{1D2A39F0-30EC-4374-B60C-7E5FD97B8C24}" Language="SFX" Hash="{6FF9A4D2-C3EB-AD98-0FD3-3706E0FF2EEE}">
 			<ObjectPath>\SoundBanks\Default Work Unit\RBS_MAIN_SoundBank</ObjectPath>
 			<ShortName>RBS_MAIN_SoundBank</ShortName>
 			<Path>RBS_MAIN_SoundBank.bnk</Path>
 			<Media>
+				<File Id="571399" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteGrittyRun 08R.wav</ShortName>
+					<Path>Media/571399.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteGrittyRun 08R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="3780620" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteGrittyRun 05L.wav</ShortName>
+					<Path>Media/3780620.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteGrittyRun 05L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="12926273" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS DirtRun 10R.wav</ShortName>
+					<Path>Media/12926273.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS DirtRun 10R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="13172389" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteWalk 10R.wav</ShortName>
+					<Path>Media/13172389.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteWalk 10R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="19314453" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GrassRun 06L.wav</ShortName>
+					<Path>Media/19314453.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GrassRun 06L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="29392868" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS DirtRun 04L.wav</ShortName>
+					<Path>Media/29392868.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS DirtRun 04L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="31544707" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_PlayerFS SkidConcrete 02.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_PlayerFS SkidConcrete 02_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="31812600" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_LandingSurface1LowVel 04.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_LandingSurface1LowVel 04_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="34882479" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS DirtRun 11R.wav</ShortName>
+					<Path>Media/34882479.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS DirtRun 11R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="46037698" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GrassWalk 12R.wav</ShortName>
+					<Path>Media/46037698.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GrassWalk 12R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="47986709" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GravelWalk 02L.wav</ShortName>
+					<Path>Media/47986709.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GravelWalk 02L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="50335836" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteWalk 07L.wav</ShortName>
+					<Path>Media/50335836.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteWalk 07L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="50557433" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>05 RBS_SFX_PlayerFS ConcreteGrittyWalk 05L.wav</ShortName>
+					<Path>Media/50557433.wem</Path>
+					<CachePath>SFX/05 RBS_SFX_PlayerFS ConcreteGrittyWalk 05L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="54054381" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_SlashHitEnviroMat1 02.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_SlashHitEnviroMat1 02_17FFCE05.wem</CachePath>
+				</File>
+				<File Id="54222117" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GrassWalk 01L.wav</ShortName>
+					<Path>Media/54222117.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GrassWalk 01L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="57744175" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteRun 08R.wav</ShortName>
+					<Path>Media/57744175.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteRun 08R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="60205598" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GravelWalk 09R.wav</ShortName>
+					<Path>Media/60205598.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GravelWalk 09R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="64418890" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GravelWalk 14R.wav</ShortName>
+					<Path>Media/64418890.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GravelWalk 14R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="69501670" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS RandLayerMetal 01.wav</ShortName>
+					<Path>Media/69501670.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS RandLayerMetal 01_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="71810780" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GravelWalk 11R.wav</ShortName>
+					<Path>Media/71810780.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GravelWalk 11R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="74652244" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_LandingSurface1LowVel 01.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_LandingSurface1LowVel 01_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="82394113" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteWalk 08R.wav</ShortName>
+					<Path>Media/82394113.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteWalk 08R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="83535660" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GravelRun 14R.wav</ShortName>
+					<Path>Media/83535660.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GravelRun 14R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="84152481" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_BasicThrustGeneric 03.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_BasicThrustGeneric 03_6F6702FD.wem</CachePath>
+				</File>
+				<File Id="87270009" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GrassWalk 02L.wav</ShortName>
+					<Path>Media/87270009.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GrassWalk 02L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="90980313" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GrassRun 12R.wav</ShortName>
+					<Path>Media/90980313.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GrassRun 12R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="93186479" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS RandLayerCloth 05.wav</ShortName>
+					<Path>Media/93186479.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS RandLayerCloth 05_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="95621672" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteWalk 09R.wav</ShortName>
+					<Path>Media/95621672.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteWalk 09R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="97178390" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteWalk 06L.wav</ShortName>
+					<Path>Media/97178390.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteWalk 06L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="99219889" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_FsSurface1 SurfacePebbleL1 03.wav</ShortName>
+					<Path>Media/99219889.wem</Path>
+					<CachePath>SFX/RBS_SFX_FsSurface1 SurfacePebbleL1 03_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="100487609" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GrassRun 02L.wav</ShortName>
+					<Path>Media/100487609.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GrassRun 02L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="100674439" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS DirtRun 10L.wav</ShortName>
+					<Path>Media/100674439.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS DirtRun 10L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="100938197" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteRun 05L.wav</ShortName>
+					<Path>Media/100938197.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteRun 05L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="108549160" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>09 RBS_SFX_PlayerFS ConcreteGrittyWalk 09R.wav</ShortName>
+					<Path>Media/108549160.wem</Path>
+					<CachePath>SFX/09 RBS_SFX_PlayerFS ConcreteGrittyWalk 09R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="109465018" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GrassWalk 03L.wav</ShortName>
+					<Path>Media/109465018.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GrassWalk 03L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="110976486" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>03 RBS_SFX_PlayerFS ConcreteGrittyWalk 03L.wav</ShortName>
+					<Path>Media/110976486.wem</Path>
+					<CachePath>SFX/03 RBS_SFX_PlayerFS ConcreteGrittyWalk 03L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="125901720" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_FsSurface1 SurfacePebbleL3 06.wav</ShortName>
+					<Path>Media/125901720.wem</Path>
+					<CachePath>SFX/RBS_SFX_FsSurface1 SurfacePebbleL3 06_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="127115196" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GrassWalk 13R.wav</ShortName>
+					<Path>Media/127115196.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GrassWalk 13R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="132075671" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Voice Designer, Bella 1.wav</ShortName>
+					<CachePath>SFX/Soundly Voice Designer, Bella 1_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="139588039" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS FootLiftConcrete 07.wav</ShortName>
+					<Path>Media/139588039.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS FootLiftConcrete 07_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="141235594" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GrassWalk 14R.wav</ShortName>
+					<Path>Media/141235594.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GrassWalk 14R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="148524242" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_FsSurface1 SurfacePebbleL1 06.wav</ShortName>
+					<Path>Media/148524242.wem</Path>
+					<CachePath>SFX/RBS_SFX_FsSurface1 SurfacePebbleL1 06_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="150911020" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteWalk 11R.wav</ShortName>
+					<Path>Media/150911020.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteWalk 11R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="161631131" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS RandLayerCloth 04.wav</ShortName>
+					<Path>Media/161631131.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS RandLayerCloth 04_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="167413559" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>13 RBS_SFX_PlayerFS ConcreteGrittyWalk 13R.wav</ShortName>
+					<Path>Media/167413559.wem</Path>
+					<CachePath>SFX/13 RBS_SFX_PlayerFS ConcreteGrittyWalk 13R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="175605479" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_FsSurface1 SurfacePebbleL2 06.wav</ShortName>
+					<Path>Media/175605479.wem</Path>
+					<CachePath>SFX/RBS_SFX_FsSurface1 SurfacePebbleL2 06_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="193249177" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GravelWalk 03L.wav</ShortName>
+					<Path>Media/193249177.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GravelWalk 03L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="197559037" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GravelRun 03L.wav</ShortName>
+					<Path>Media/197559037.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GravelRun 03L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="197965494" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteRun 02L.wav</ShortName>
+					<Path>Media/197965494.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteRun 02L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="202141324" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteRun 03L.wav</ShortName>
+					<Path>Media/202141324.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteRun 03L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="207404832" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GravelRun 01L.wav</ShortName>
+					<Path>Media/207404832.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GravelRun 01L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="214956916" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GrassRun 03L.wav</ShortName>
+					<Path>Media/214956916.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GrassRun 03L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="221817756" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_SlashHitGeneric 07.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_SlashHitGeneric 07_9111F4D8.wem</CachePath>
+				</File>
+				<File Id="242331088" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_PlayerFS SkidGravel 04.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_PlayerFS SkidGravel 04_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="242428240" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GravelRun 07L.wav</ShortName>
+					<Path>Media/242428240.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GravelRun 07L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="243593664" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteRun 04L.wav</ShortName>
+					<Path>Media/243593664.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteRun 04L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="246781445" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteWalk 04L.wav</ShortName>
+					<Path>Media/246781445.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteWalk 04L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="248248045" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_PlayerFS SkidConcrete 04.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_PlayerFS SkidConcrete 04_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="251170365" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteWalk 05L.wav</ShortName>
+					<Path>Media/251170365.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteWalk 05L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="255316402" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteWalk 01L.wav</ShortName>
+					<Path>Media/255316402.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteWalk 01L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="265382431" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_LandingHighVelocity 02.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_LandingHighVelocity 02_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="266991154" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS DirtRun 01R.wav</ShortName>
+					<Path>Media/266991154.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS DirtRun 01R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="270434604" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_FsSurface1 SurfacePebbleL3 03.wav</ShortName>
+					<Path>Media/270434604.wem</Path>
+					<CachePath>SFX/RBS_SFX_FsSurface1 SurfacePebbleL3 03_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="278434081" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_FsSurface1 SurfacePebbleL3 04.wav</ShortName>
+					<Path>Media/278434081.wem</Path>
+					<CachePath>SFX/RBS_SFX_FsSurface1 SurfacePebbleL3 04_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="284729061" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GrassWalk 09R.wav</ShortName>
+					<Path>Media/284729061.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GrassWalk 09R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="290864192" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_LandingLowVelocity 02.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_LandingLowVelocity 02_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="291763179" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_FsSurface1 SurfacePebbleL1 04.wav</ShortName>
+					<Path>Media/291763179.wem</Path>
+					<CachePath>SFX/RBS_SFX_FsSurface1 SurfacePebbleL1 04_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="294474954" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_DashGeneric 06.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_DashGeneric 06_058751D6.wem</CachePath>
+				</File>
+				<File Id="309736558" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_FsSurface1 SurfacePebbleL3 05.wav</ShortName>
+					<Path>Media/309736558.wem</Path>
+					<CachePath>SFX/RBS_SFX_FsSurface1 SurfacePebbleL3 05_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="314954263" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_SlashHitEnviroMat2 02.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_SlashHitEnviroMat2 02_248933A7.wem</CachePath>
+				</File>
+				<File Id="315003144" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteGrittyRun 02L.wav</ShortName>
+					<Path>Media/315003144.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteGrittyRun 02L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="318816451" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_SlashHitGeneric 01.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_SlashHitGeneric 01_29F1B313.wem</CachePath>
+				</File>
+				<File Id="320245737" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_FsSurface1 SurfacePebbleL1 07.wav</ShortName>
+					<Path>Media/320245737.wem</Path>
+					<CachePath>SFX/RBS_SFX_FsSurface1 SurfacePebbleL1 07_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="320719556" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_DashGeneric 04.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_DashGeneric 04_672A5A69.wem</CachePath>
+				</File>
 				<File Id="322760696" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Voice Designer, Abbi 1.wav</ShortName>
-					<CachePath>SFX/Soundly Voice Designer, Abbi 1_818F3B66.wem</CachePath>
+					<CachePath>SFX/Soundly Voice Designer, Abbi 1_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="325176974" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GrassWalk 15R.wav</ShortName>
+					<Path>Media/325176974.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GrassWalk 15R_EDCD4836.wem</CachePath>
 				</File>
 				<File Id="327704471" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Weapons, Sword, Swing Fast, Whoosh, Metal SND34535.wav</ShortName>
-					<CachePath>SFX/Weapons, Sword, Swing Fast, Whoosh, Metal SND34535_818F3B66.wem</CachePath>
+					<CachePath>SFX/Weapons, Sword, Swing Fast, Whoosh, Metal SND34535_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="328723579" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GravelWalk 06L.wav</ShortName>
+					<Path>Media/328723579.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GravelWalk 06L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="339180831" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GrassWalk 04L.wav</ShortName>
+					<Path>Media/339180831.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GrassWalk 04L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="343632063" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>06 RBS_SFX_PlayerFS ConcreteGrittyWalk 06L.wav</ShortName>
+					<Path>Media/343632063.wem</Path>
+					<CachePath>SFX/06 RBS_SFX_PlayerFS ConcreteGrittyWalk 06L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="349437653" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_BasicSlashGeneric 09.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_BasicSlashGeneric 09_9848F024.wem</CachePath>
+				</File>
+				<File Id="353005863" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>10 RBS_SFX_PlayerFS ConcreteGrittyWalk 10R.wav</ShortName>
+					<Path>Media/353005863.wem</Path>
+					<CachePath>SFX/10 RBS_SFX_PlayerFS ConcreteGrittyWalk 10R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="353083660" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GravelRun 09R.wav</ShortName>
+					<Path>Media/353083660.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GravelRun 09R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="358664690" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GrassRun 08R.wav</ShortName>
+					<Path>Media/358664690.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GrassRun 08R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="360120438" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS DirtRun 04R.wav</ShortName>
+					<Path>Media/360120438.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS DirtRun 04R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="364326350" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS DirtRun 06L.wav</ShortName>
+					<Path>Media/364326350.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS DirtRun 06L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="364573127" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS RandLayerCloth 02.wav</ShortName>
+					<Path>Media/364573127.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS RandLayerCloth 02_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="370731794" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GrassRun 09R.wav</ShortName>
+					<Path>Media/370731794.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GrassRun 09R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="388396511" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteWalk 15R.wav</ShortName>
+					<Path>Media/388396511.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteWalk 15R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="389147731" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GrassRun 01L.wav</ShortName>
+					<Path>Media/389147731.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GrassRun 01L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="391075114" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteWalk 02L.wav</ShortName>
+					<Path>Media/391075114.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteWalk 02L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="401499778" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS DirtRun 07R.wav</ShortName>
+					<Path>Media/401499778.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS DirtRun 07R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="403534321" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GravelWalk 08R.wav</ShortName>
+					<Path>Media/403534321.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GravelWalk 08R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="404358743" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteGrittyRun 01L.wav</ShortName>
+					<Path>Media/404358743.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteGrittyRun 01L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="409054535" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_BasicSlashGeneric 06.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_BasicSlashGeneric 06_17801CFC.wem</CachePath>
+				</File>
+				<File Id="409348956" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_FsSurface1 SurfacePebbleL1 01.wav</ShortName>
+					<Path>Media/409348956.wem</Path>
+					<CachePath>SFX/RBS_SFX_FsSurface1 SurfacePebbleL1 01_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="412617233" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteWalk 13R.wav</ShortName>
+					<Path>Media/412617233.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteWalk 13R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="414171289" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_PlayerFS SkidGravel 03.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_PlayerFS SkidGravel 03_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="416060861" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_SlashHitGeneric 08.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_SlashHitGeneric 08_16BFD1A8.wem</CachePath>
+				</File>
+				<File Id="418975690" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_LandingLowVelocity 01.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_LandingLowVelocity 01_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="423400115" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GrassWalk 10R.wav</ShortName>
+					<Path>Media/423400115.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GrassWalk 10R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="426639784" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_LandingSurface2LowVel 01.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_LandingSurface2LowVel 01_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="431999184" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Voice Designer, Bella.wav</ShortName>
+					<CachePath>SFX/Soundly Voice Designer, Bella_D8A0D580.wem</CachePath>
+				</File>
+				<File Id="444028624" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteGrittyRun 07L.wav</ShortName>
+					<Path>Media/444028624.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteGrittyRun 07L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="449377284" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_LandingLowVelocity 03.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_LandingLowVelocity 03_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="451439972" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GravelWalk 10R.wav</ShortName>
+					<Path>Media/451439972.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GravelWalk 10R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="457543258" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteGrittyRun 10R.wav</ShortName>
+					<Path>Media/457543258.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteGrittyRun 10R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="459603677" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS RandLayerCloth 06.wav</ShortName>
+					<Path>Media/459603677.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS RandLayerCloth 06_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="473270615" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS FootLiftGravel 07.wav</ShortName>
+					<Path>Media/473270615.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS FootLiftGravel 07_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="478843681" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_FsSurface1 SurfacePebbleL1 02.wav</ShortName>
+					<Path>Media/478843681.wem</Path>
+					<CachePath>SFX/RBS_SFX_FsSurface1 SurfacePebbleL1 02_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="479369182" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>11 RBS_SFX_PlayerFS ConcreteGrittyWalk 11R.wav</ShortName>
+					<Path>Media/479369182.wem</Path>
+					<CachePath>SFX/11 RBS_SFX_PlayerFS ConcreteGrittyWalk 11R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="482326559" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_SlashHitEnviroMat2 03.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_SlashHitEnviroMat2 03_4CBBAC03.wem</CachePath>
+				</File>
+				<File Id="482924415" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_LandingSurface2LowVel 04.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_LandingSurface2LowVel 04_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="483160427" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS FootLiftGravel 08.wav</ShortName>
+					<Path>Media/483160427.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS FootLiftGravel 08_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="485809865" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GravelRun 02L.wav</ShortName>
+					<Path>Media/485809865.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GravelRun 02L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="489638375" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteGrittyRun 03L.wav</ShortName>
+					<Path>Media/489638375.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteGrittyRun 03L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="496213299" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS DirtRun 07L.wav</ShortName>
+					<Path>Media/496213299.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS DirtRun 07L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="496704748" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GrassWalk 05L.wav</ShortName>
+					<Path>Media/496704748.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GrassWalk 05L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="504208396" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS FootLiftGrass 01.wav</ShortName>
+					<Path>Media/504208396.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS FootLiftGrass 01_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="511303387" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_SlashHitEnviroMat2 01.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_SlashHitEnviroMat2 01_C60A96A8.wem</CachePath>
+				</File>
+				<File Id="511693741" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>12 RBS_SFX_PlayerFS ConcreteGrittyWalk 12R.wav</ShortName>
+					<Path>Media/511693741.wem</Path>
+					<CachePath>SFX/12 RBS_SFX_PlayerFS ConcreteGrittyWalk 12R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="517384302" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_FsSurface1 SurfacePebbleL2 02.wav</ShortName>
+					<Path>Media/517384302.wem</Path>
+					<CachePath>SFX/RBS_SFX_FsSurface1 SurfacePebbleL2 02_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="523218377" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_BasicSlashGeneric 03.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_BasicSlashGeneric 03_9C6161F6.wem</CachePath>
 				</File>
 				<File Id="526377678" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Voice Designer, Abbi 3.wav</ShortName>
-					<CachePath>SFX/Soundly Voice Designer, Abbi 3_FBC78EF0.wem</CachePath>
+					<CachePath>SFX/Soundly Voice Designer, Abbi 3_D8A0D580.wem</CachePath>
+				</File>
+				<File Id="527403110" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteRun 11R.wav</ShortName>
+					<Path>Media/527403110.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteRun 11R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="529723257" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_LandingSurface2LowVel 02.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_LandingSurface2LowVel 02_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="531766639" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_GroundSlamGeneric.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_GroundSlamGeneric_CCEF1299.wem</CachePath>
+				</File>
+				<File Id="533353058" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GrassRun 07L.wav</ShortName>
+					<Path>Media/533353058.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GrassRun 07L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="538001789" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_BasicSlashGeneric 01.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_BasicSlashGeneric 01_A85ECA5C.wem</CachePath>
+				</File>
+				<File Id="538186047" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GravelRun 08R.wav</ShortName>
+					<Path>Media/538186047.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GravelRun 08R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="543293191" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>15 RBS_SFX_PlayerFS ConcreteGrittyWalk 15R.wav</ShortName>
+					<Path>Media/543293191.wem</Path>
+					<CachePath>SFX/15 RBS_SFX_PlayerFS ConcreteGrittyWalk 15R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="552424575" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_SlashHitGeneric 03.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_SlashHitGeneric 03_5718E4BF.wem</CachePath>
+				</File>
+				<File Id="557084528" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_PlayerFS SkidConcrete 01.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_PlayerFS SkidConcrete 01_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="565440753" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS DirtRun 03R.wav</ShortName>
+					<Path>Media/565440753.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS DirtRun 03R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="566018822" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GrassWalk 06L.wav</ShortName>
+					<Path>Media/566018822.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GrassWalk 06L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="570460551" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_LandingHighVelocity 01.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_LandingHighVelocity 01_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="572214998" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_FsSurface1 SurfacePebbleL3 07.wav</ShortName>
+					<Path>Media/572214998.wem</Path>
+					<CachePath>SFX/RBS_SFX_FsSurface1 SurfacePebbleL3 07_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="582124270" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteRun 13R.wav</ShortName>
+					<Path>Media/582124270.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteRun 13R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="582444320" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_LandingSurface1HighVel 01.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_LandingSurface1HighVel 01_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="588175789" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GravelWalk 13R.wav</ShortName>
+					<Path>Media/588175789.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GravelWalk 13R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="589832038" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS DirtRun 02R.wav</ShortName>
+					<Path>Media/589832038.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS DirtRun 02R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="594723091" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GravelWalk 01L.wav</ShortName>
+					<Path>Media/594723091.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GravelWalk 01L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="596906673" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GravelWalk 05L.wav</ShortName>
+					<Path>Media/596906673.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GravelWalk 05L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="611786585" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_LandingSurface2LowVel 03.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_LandingSurface2LowVel 03_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="612674604" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_LandingSurface1HighVel 02.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_LandingSurface1HighVel 02_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="615399648" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_BasicSlashGeneric 07.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_BasicSlashGeneric 07_F2DC1AEC.wem</CachePath>
+				</File>
+				<File Id="623379799" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GravelRun 13R.wav</ShortName>
+					<Path>Media/623379799.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GravelRun 13R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="630764368" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_DashGeneric 01.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_DashGeneric 01_31308022.wem</CachePath>
+				</File>
+				<File Id="632207899" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GrassRun 13R.wav</ShortName>
+					<Path>Media/632207899.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GrassRun 13R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="633602997" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS FootLiftConcrete 01.wav</ShortName>
+					<Path>Media/633602997.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS FootLiftConcrete 01_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="636840032" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GrassRun 11R.wav</ShortName>
+					<Path>Media/636840032.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GrassRun 11R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="637407711" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS RandLayerMetal 03.wav</ShortName>
+					<Path>Media/637407711.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS RandLayerMetal 03_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="637981581" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteGrittyRun 14R.wav</ShortName>
+					<Path>Media/637981581.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteGrittyRun 14R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="639300661" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_DashGeneric 05.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_DashGeneric 05_284013D9.wem</CachePath>
+				</File>
+				<File Id="642499826" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_PlayerFS SkidGravel 01.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_PlayerFS SkidGravel 01_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="645576815" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteRun 10R.wav</ShortName>
+					<Path>Media/645576815.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteRun 10R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="648384302" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_BasicThrustGeneric 02.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_BasicThrustGeneric 02_6B95F6D5.wem</CachePath>
+				</File>
+				<File Id="650681148" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_BasicSlashGeneric 05.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_BasicSlashGeneric 05_B5B52323.wem</CachePath>
+				</File>
+				<File Id="655272841" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteGrittyRun 13R.wav</ShortName>
+					<Path>Media/655272841.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteGrittyRun 13R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="663610515" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS FootLiftConcrete 06.wav</ShortName>
+					<Path>Media/663610515.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS FootLiftConcrete 06_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="663896894" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS FootLiftGravel 01.wav</ShortName>
+					<Path>Media/663896894.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS FootLiftGravel 01_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="666945806" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS FootLiftGrass 04.wav</ShortName>
+					<Path>Media/666945806.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS FootLiftGrass 04_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="671097419" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GravelWalk 12R.wav</ShortName>
+					<Path>Media/671097419.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GravelWalk 12R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="673988119" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>01 RBS_SFX_PlayerFS ConcreteGrittyWalk 01L.wav</ShortName>
+					<Path>Media/673988119.wem</Path>
+					<CachePath>SFX/01 RBS_SFX_PlayerFS ConcreteGrittyWalk 01L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="685973855" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS DirtRun 02L.wav</ShortName>
+					<Path>Media/685973855.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS DirtRun 02L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="687771905" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GrassRun 04L.wav</ShortName>
+					<Path>Media/687771905.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GrassRun 04L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="710770886" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS DirtRun 08L.wav</ShortName>
+					<Path>Media/710770886.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS DirtRun 08L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="712393791" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteGrittyRun 09R.wav</ShortName>
+					<Path>Media/712393791.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteGrittyRun 09R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="714637550" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_FsSurface1 SurfacePebbleL3 02.wav</ShortName>
+					<Path>Media/714637550.wem</Path>
+					<CachePath>SFX/RBS_SFX_FsSurface1 SurfacePebbleL3 02_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="714871672" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteGrittyRun 11R.wav</ShortName>
+					<Path>Media/714871672.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteGrittyRun 11R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="720879369" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_LandingSurface2HighVel 02.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_LandingSurface2HighVel 02_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="726504190" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GrassRun 15R.wav</ShortName>
+					<Path>Media/726504190.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GrassRun 15R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="733952893" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteRun 06L.wav</ShortName>
+					<Path>Media/733952893.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteRun 06L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="742187357" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_LandingSurface2HighVel 01.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_LandingSurface2HighVel 01_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="744432320" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS FootLiftConcrete 04.wav</ShortName>
+					<Path>Media/744432320.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS FootLiftConcrete 04_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="748172393" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS RandLayerMetal 05.wav</ShortName>
+					<Path>Media/748172393.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS RandLayerMetal 05_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="749015965" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_SlashHitGeneric 04.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_SlashHitGeneric 04_2EDF31B0.wem</CachePath>
+				</File>
+				<File Id="751988685" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_SlashHitGeneric 02.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_SlashHitGeneric 02_B0E56DBB.wem</CachePath>
+				</File>
+				<File Id="758623100" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>07 RBS_SFX_PlayerFS ConcreteGrittyWalk 07L.wav</ShortName>
+					<Path>Media/758623100.wem</Path>
+					<CachePath>SFX/07 RBS_SFX_PlayerFS ConcreteGrittyWalk 07L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="764701999" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteRun 09R.wav</ShortName>
+					<Path>Media/764701999.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteRun 09R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="787419388" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Voice Designer, Bella 2.wav</ShortName>
+					<CachePath>SFX/Soundly Voice Designer, Bella 2_D8A0D580.wem</CachePath>
+				</File>
+				<File Id="792625188" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_SlashHitEnviroMat1 01.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_SlashHitEnviroMat1 01_E9308305.wem</CachePath>
+				</File>
+				<File Id="794600738" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GravelRun 12R.wav</ShortName>
+					<Path>Media/794600738.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GravelRun 12R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="794839198" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GravelWalk 07L.wav</ShortName>
+					<Path>Media/794839198.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GravelWalk 07L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="797272326" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS FootLiftGravel 04.wav</ShortName>
+					<Path>Media/797272326.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS FootLiftGravel 04_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="807522328" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteRun 14R.wav</ShortName>
+					<Path>Media/807522328.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteRun 14R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="808448843" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteRun 12R.wav</ShortName>
+					<Path>Media/808448843.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteRun 12R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="810713067" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS RandLayerCloth 01.wav</ShortName>
+					<Path>Media/810713067.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS RandLayerCloth 01_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="813081067" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GravelRun 06L.wav</ShortName>
+					<Path>Media/813081067.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GravelRun 06L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="819764921" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_PlayerFS SkidConcrete 03.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_PlayerFS SkidConcrete 03_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="820405027" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_DashInterrupt 01.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_DashInterrupt 01_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="826641107" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS DirtRun 01L.wav</ShortName>
+					<Path>Media/826641107.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS DirtRun 01L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="828588564" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS FootLiftGravel 03.wav</ShortName>
+					<Path>Media/828588564.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS FootLiftGravel 03_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="837272602" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_FsSurface1 SurfacePebbleL2 01.wav</ShortName>
+					<Path>Media/837272602.wem</Path>
+					<CachePath>SFX/RBS_SFX_FsSurface1 SurfacePebbleL2 01_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="848463289" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteGrittyRun 06L.wav</ShortName>
+					<Path>Media/848463289.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteGrittyRun 06L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="849773336" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_LandingSurface1LowVel 03.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_LandingSurface1LowVel 03_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="862584422" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_FsSurface1 SurfacePebbleL2 03.wav</ShortName>
+					<Path>Media/862584422.wem</Path>
+					<CachePath>SFX/RBS_SFX_FsSurface1 SurfacePebbleL2 03_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="867705812" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_DashInterrupt 02.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_DashInterrupt 02_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="868896128" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS FootLiftGravel 05.wav</ShortName>
+					<Path>Media/868896128.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS FootLiftGravel 05_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="871348354" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS FootLiftConcrete 03.wav</ShortName>
+					<Path>Media/871348354.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS FootLiftConcrete 03_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="872467426" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS DirtRun 05L.wav</ShortName>
+					<Path>Media/872467426.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS DirtRun 05L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="874077571" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_BasicSlashGeneric 04.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_BasicSlashGeneric 04_A7D2F426.wem</CachePath>
+				</File>
+				<File Id="878705949" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteGrittyRun 04L.wav</ShortName>
+					<Path>Media/878705949.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteGrittyRun 04L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="879006845" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_DashGeneric 02.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_DashGeneric 02_FC87FB4D.wem</CachePath>
+				</File>
+				<File Id="883384986" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS DirtRun 08R.wav</ShortName>
+					<Path>Media/883384986.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS DirtRun 08R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="889886567" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_DashGeneric 03.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_DashGeneric 03_F4FC588F.wem</CachePath>
+				</File>
+				<File Id="893304462" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_LandingSurface1LowVel 02.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_LandingSurface1LowVel 02_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="898556984" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GravelRun 10R.wav</ShortName>
+					<Path>Media/898556984.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GravelRun 10R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="899709608" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS DirtRun 05R.wav</ShortName>
+					<Path>Media/899709608.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS DirtRun 05R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="903193414" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>02 RBS_SFX_PlayerFS ConcreteGrittyWalk 02L.wav</ShortName>
+					<Path>Media/903193414.wem</Path>
+					<CachePath>SFX/02 RBS_SFX_PlayerFS ConcreteGrittyWalk 02L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="906139145" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GravelRun 05L.wav</ShortName>
+					<Path>Media/906139145.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GravelRun 05L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="906365216" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GrassRun 05L.wav</ShortName>
+					<Path>Media/906365216.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GrassRun 05L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="907609657" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteRun 01L.wav</ShortName>
+					<Path>Media/907609657.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteRun 01L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="909626541" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_FsSurface1 SurfacePebbleL2 07.wav</ShortName>
+					<Path>Media/909626541.wem</Path>
+					<CachePath>SFX/RBS_SFX_FsSurface1 SurfacePebbleL2 07_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="912035078" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_FsSurface1 SurfacePebbleL2 05.wav</ShortName>
+					<Path>Media/912035078.wem</Path>
+					<CachePath>SFX/RBS_SFX_FsSurface1 SurfacePebbleL2 05_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="913412753" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS FootLiftGrass 02.wav</ShortName>
+					<Path>Media/913412753.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS FootLiftGrass 02_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="915549306" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GravelRun 11R.wav</ShortName>
+					<Path>Media/915549306.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GravelRun 11R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="916208983" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS FootLiftConcrete 05.wav</ShortName>
+					<Path>Media/916208983.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS FootLiftConcrete 05_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="916730515" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_FsSurface1 SurfacePebbleL3 01.wav</ShortName>
+					<Path>Media/916730515.wem</Path>
+					<CachePath>SFX/RBS_SFX_FsSurface1 SurfacePebbleL3 01_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="922598732" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GrassRun 14R.wav</ShortName>
+					<Path>Media/922598732.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GrassRun 14R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="927982555" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_FsSurface1 SurfacePebbleL2 04.wav</ShortName>
+					<Path>Media/927982555.wem</Path>
+					<CachePath>SFX/RBS_SFX_FsSurface1 SurfacePebbleL2 04_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="929733156" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS FootLiftConcrete 02.wav</ShortName>
+					<Path>Media/929733156.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS FootLiftConcrete 02_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="932447090" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GravelWalk 04L.wav</ShortName>
+					<Path>Media/932447090.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GravelWalk 04L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="932913252" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_SlashHitEnviroMat1 03.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_SlashHitEnviroMat1 03_7FD4869B.wem</CachePath>
+				</File>
+				<File Id="933938710" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_FsSurface1 SurfacePebbleL1 05.wav</ShortName>
+					<Path>Media/933938710.wem</Path>
+					<CachePath>SFX/RBS_SFX_FsSurface1 SurfacePebbleL1 05_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="935222772" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteWalk 12R.wav</ShortName>
+					<Path>Media/935222772.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteWalk 12R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="937320572" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GrassWalk 08R.wav</ShortName>
+					<Path>Media/937320572.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GrassWalk 08R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="938463386" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GrassRun 10R.wav</ShortName>
+					<Path>Media/938463386.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GrassRun 10R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="946514003" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS RandLayerCloth 03.wav</ShortName>
+					<Path>Media/946514003.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS RandLayerCloth 03_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="965886494" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GrassWalk 07L.wav</ShortName>
+					<Path>Media/965886494.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GrassWalk 07L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="973668817" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteGrittyRun 12R.wav</ShortName>
+					<Path>Media/973668817.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteGrittyRun 12R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="974177290" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS FootLiftGrass 03.wav</ShortName>
+					<Path>Media/974177290.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS FootLiftGrass 03_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="975802175" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS DirtRun 09L.wav</ShortName>
+					<Path>Media/975802175.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS DirtRun 09L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="981328292" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>04 RBS_SFX_PlayerFS ConcreteGrittyWalk 04L.wav</ShortName>
+					<Path>Media/981328292.wem</Path>
+					<CachePath>SFX/04 RBS_SFX_PlayerFS ConcreteGrittyWalk 04L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="981854182" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS DirtRun 03L.wav</ShortName>
+					<Path>Media/981854182.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS DirtRun 03L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="990288326" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS FootLiftGravel 06.wav</ShortName>
+					<Path>Media/990288326.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS FootLiftGravel 06_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="991677787" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>14 RBS_SFX_PlayerFS ConcreteGrittyWalk 14R.wav</ShortName>
+					<Path>Media/991677787.wem</Path>
+					<CachePath>SFX/14 RBS_SFX_PlayerFS ConcreteGrittyWalk 14R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="992962217" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS RandLayerMetal 02.wav</ShortName>
+					<Path>Media/992962217.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS RandLayerMetal 02_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="993436442" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GravelRun 04L.wav</ShortName>
+					<Path>Media/993436442.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GravelRun 04L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="993463309" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>08 RBS_SFX_PlayerFS ConcreteGrittyWalk 08R.wav</ShortName>
+					<Path>Media/993463309.wem</Path>
+					<CachePath>SFX/08 RBS_SFX_PlayerFS ConcreteGrittyWalk 08R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="995526660" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_PlayerFS SkidGravel 02.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_PlayerFS SkidGravel 02_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="998821165" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_LandingLowVelocity 04.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_LandingLowVelocity 04_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="1002316465" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_SlashHitGeneric 06.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_SlashHitGeneric 06_FD615042.wem</CachePath>
+				</File>
+				<File Id="1003446754" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteRun 15R.wav</ShortName>
+					<Path>Media/1003446754.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteRun 15R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="1006443224" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GravelWalk 15R.wav</ShortName>
+					<Path>Media/1006443224.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GravelWalk 15R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="1006556499" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_PlayerFS RandLayerMetal 04.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_PlayerFS RandLayerMetal 04_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="1010592874" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS FootLiftGravel 02.wav</ShortName>
+					<Path>Media/1010592874.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS FootLiftGravel 02_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="1022059957" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_BasicSlashGeneric 02.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_BasicSlashGeneric 02_46C65562.wem</CachePath>
+				</File>
+				<File Id="1026351029" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteWalk 14R.wav</ShortName>
+					<Path>Media/1026351029.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteWalk 14R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="1027526379" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS GrassWalk 11R.wav</ShortName>
+					<Path>Media/1027526379.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS GrassWalk 11R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="1044172823" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_BasicSlashGeneric 08.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_BasicSlashGeneric 08_BDE06880.wem</CachePath>
+				</File>
+				<File Id="1044399728" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_SlashHitGeneric 05.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_SlashHitGeneric 05_88496690.wem</CachePath>
+				</File>
+				<File Id="1047835075" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteWalk 03L.wav</ShortName>
+					<Path>Media/1047835075.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteWalk 03L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="1049522085" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS DirtRun 09R.wav</ShortName>
+					<Path>Media/1049522085.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS DirtRun 09R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="1051307385" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS RandLayerMetal 06.wav</ShortName>
+					<Path>Media/1051307385.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS RandLayerMetal 06_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="1055635076" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS ConcreteGrittyRun 15R.wav</ShortName>
+					<Path>Media/1055635076.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteGrittyRun 15R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="1061678860" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_BasicThrustGeneric 01.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_BasicThrustGeneric 01_5815B962.wem</CachePath>
+				</File>
+				<File Id="1071012065" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>RBS_SFX_PlayerFS DirtRun 06R.wav</ShortName>
+					<Path>Media/1071012065.wem</Path>
+					<CachePath>SFX/RBS_SFX_PlayerFS DirtRun 06R_EDCD4836.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
+				<Custom>
+					<Plugin Id="255961296" Name="Soundseed Air Wind" ObjectPath="\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Movement\PlayerFS\PlayerSpeed\PlayerSpeedPlugins\AIR WIND\AIR WINDL\Soundseed Air Wind" GUID="{E771676E-844A-4AEA-B54B-14CF9C780260}" LibName="SoundSeed Air Wind" LibId="7798786"/>
+					<Plugin Id="750533697" Name="Soundseed Air Wind" ObjectPath="\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Movement\PlayerFS\PlayerSpeed\PlayerSpeedPlugins\AIR WIND\AIR WINDR\Soundseed Air Wind" GUID="{DECB2267-B8FB-404E-8B91-BC6BFB1EADA6}" LibName="SoundSeed Air Wind" LibId="7798786"/>
+					<Plugin Id="900331516" Name="Delay (Custom)" ObjectPath="\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Movement\PlayerFS\PlayerSpeed\Walker\WALKER\[Effect Slot [1]: (Delay)]\Delay (Custom)" GUID="{9229BCC8-C268-4AD2-B010-AE39D8D74FB9}" LibName="Wwise Delay" LibId="6946819"/>
+				</Custom>
 				<ShareSets>
 					<Plugin Id="1990128658" Name="Room_Medium" ObjectPath="\Effects\Factory Effects\RoomVerb\Rooms\Room_Medium" GUID="{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}" LibName="Wwise RoomVerb" LibId="7733251"/>
 				</ShareSets>
 			</Plugins>
 			<Events>
-				<Event Id="3435325068" Name="Play_Test_Amb_Loc" ObjectPath="\Events\Default Work Unit\Play_Test_Amb_Loc" GUID="{996477E9-0350-479D-873E-517B7C054F15}" MaxAttenuation="2500" DurationType="OneShot" DurationMin="17.016687" DurationMax="17.016687">
+				<Event Id="626512180" Name="Play_AmbVSArena" ObjectPath="\Events\Default Work Unit\World Environments\Play_AmbVSArena" GUID="{5C124C78-CC34-46F4-9C11-1C65E3B16568}" DurationType="OneShot" DurationMin="1.370875" DurationMax="1.370875">
+					<MediaRefs>
+						<MediaRef Id="132075671"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2538869711" Name="Play_BasicSlash" ObjectPath="\Events\Default Work Unit\Player Abilities\Play_BasicSlash" GUID="{52DD29CE-EBFC-412E-A292-D4803063CBE4}" DurationType="OneShot" DurationMin="1.6799113" DurationMax="3.4076695">
+					<MediaRefs>
+						<MediaRef Id="349437653"/>
+						<MediaRef Id="409054535"/>
+						<MediaRef Id="523218377"/>
+						<MediaRef Id="538001789"/>
+						<MediaRef Id="615399648"/>
+						<MediaRef Id="650681148"/>
+						<MediaRef Id="874077571"/>
+						<MediaRef Id="1022059957"/>
+						<MediaRef Id="1044172823"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="43254018" Name="Play_BasicThrust" ObjectPath="\Events\Default Work Unit\Player Abilities\Play_BasicThrust" GUID="{C6181E4C-06EF-452C-B2F4-57517D591B79}" DurationType="OneShot" DurationMin="0.65696216" DurationMax="0.8169694">
+					<MediaRefs>
+						<MediaRef Id="84152481"/>
+						<MediaRef Id="648384302"/>
+						<MediaRef Id="1061678860"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1423098094" Name="Play_DamageTaken" ObjectPath="\Events\Default Work Unit\Player\Play_DamageTaken" GUID="{988E1E93-8AAF-4F8D-AC32-A444360C9006}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2211787386" Name="Play_Dash" ObjectPath="\Events\Default Work Unit\Player\Play_Dash" GUID="{CF6A631F-F642-4424-8ABD-EE3D53B63430}" DurationType="OneShot" DurationMin="0.91603553" DurationMax="1.6185523">
+					<MediaRefs>
+						<MediaRef Id="294474954"/>
+						<MediaRef Id="320719556"/>
+						<MediaRef Id="630764368"/>
+						<MediaRef Id="639300661"/>
+						<MediaRef Id="879006845"/>
+						<MediaRef Id="889886567"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1674740283" Name="Play_DashInterrupt" ObjectPath="\Events\Default Work Unit\Player\Play_DashInterrupt" GUID="{22B0C28B-0244-46E3-AA87-F1EEDA24088F}" DurationType="OneShot" DurationMin="1.0962292" DurationMax="1.1123959">
+					<MediaRefs>
+						<MediaRef Id="820405027"/>
+						<MediaRef Id="867705812"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2227850352" Name="Play_DeathScreen" ObjectPath="\Events\Default Work Unit\UI Menu\Play_DeathScreen" GUID="{0A56F524-75F8-40EB-BA79-B32424C9D923}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="910797723" Name="Play_DeathScreenContinue" ObjectPath="\Events\Default Work Unit\UI Menu\Play_DeathScreenContinue" GUID="{D7916C71-3A7D-495E-BD49-8BBDC127F1A2}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1824944578" Name="Play_EnemyAttack" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyAttack" GUID="{8757F626-2B77-4AFB-967C-73D10FBBB945}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3154146856" Name="Play_EnemyDeath" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyDeath" GUID="{CFA6D1F8-F109-42AC-8776-30618640504C}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="78855223" Name="Play_EnemyFs" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyFs" GUID="{AAB6E689-5C0A-48AB-9D5C-B38FB8EE6FB9}" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<SwitchContainers/>
+				</Event>
+				<Event Id="62206152" Name="Play_EnemySwitchInit" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemySwitchInit" GUID="{1F648AFD-D275-4CC8-A8FF-DF4301325368}" DurationType="Infinite">
+					<SwitchContainers/>
+				</Event>
+				<Event Id="1055240968" Name="Play_GroundSlam" ObjectPath="\Events\Default Work Unit\Player\Play_GroundSlam" GUID="{0EA8C7C8-E2B6-47E0-A1A0-5E0263BCD84B}" DurationType="OneShot" DurationMin="1.773114" DurationMax="1.773114">
+					<MediaRefs>
+						<MediaRef Id="531766639"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3649265915" Name="Play_HitNotOnWeakpoint" ObjectPath="\Events\Default Work Unit\Player Abilities\Play_HitNotOnWeakpoint" GUID="{2216BC91-69B5-4700-B255-8145143E83AC}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3856730636" Name="Play_HitOnWeakpoint" ObjectPath="\Events\Default Work Unit\Player Abilities\Play_HitOnWeakpoint" GUID="{C43D29F5-8E69-4666-A4F1-2883794CDC5B}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2159564533" Name="Play_IdleFPS" ObjectPath="\Events\Default Work Unit\Player\Play_IdleFPS" GUID="{AEB85C59-534C-4B60-9C60-04A94B157434}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2323405115" Name="Play_Landing" ObjectPath="\Events\Default Work Unit\Player\Play_Landing" GUID="{4F7153D6-B49C-4FA8-A349-FECDA0C44058}" DurationType="OneShot" DurationMin="0.5828958" DurationMax="0.91325">
+					<MediaRefs>
+						<MediaRef Id="265382431"/>
+						<MediaRef Id="290864192"/>
+						<MediaRef Id="418975690"/>
+						<MediaRef Id="449377284"/>
+						<MediaRef Id="570460551"/>
+						<MediaRef Id="998821165"/>
+					</MediaRefs>
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2115407397" Id="3472709650" GUID="{02BAE21A-2739-4F47-87F7-4B9246F7FB69}"/>
+							<MediaRefs>
+								<MediaRef Id="720879369"/>
+								<MediaRef Id="742187357"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2115407397" Id="1216965916" GUID="{F3CD2C36-B817-4A27-A1BC-96CFB220BA79}" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="582444320"/>
+								<MediaRef Id="612674604"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2115407397" Id="3472709650" GUID="{02BAE21A-2739-4F47-87F7-4B9246F7FB69}"/>
+							<MediaRefs>
+								<MediaRef Id="426639784"/>
+								<MediaRef Id="482924415"/>
+								<MediaRef Id="529723257"/>
+								<MediaRef Id="611786585"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2115407397" Id="1216965916" GUID="{F3CD2C36-B817-4A27-A1BC-96CFB220BA79}" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="31812600"/>
+								<MediaRef Id="74652244"/>
+								<MediaRef Id="849773336"/>
+								<MediaRef Id="893304462"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="149592781" Name="Play_LinkBroken" ObjectPath="\Events\Default Work Unit\Player Abilities\Play_LinkBroken" GUID="{4733C7A7-2EBB-4C9C-8450-F7E511F026B1}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1958179670" Name="Play_LinkRay" ObjectPath="\Events\Default Work Unit\Player Abilities\Play_LinkRay" GUID="{5E6E3C24-D513-40AD-A5C5-D80AD0D2BCDD}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2733059028" Name="Play_LinkSuccessful" ObjectPath="\Events\Default Work Unit\Player Abilities\Play_LinkSuccessful" GUID="{6D367373-2398-4C51-9F2C-F5C06824195D}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3553731426" Name="Play_MainMenuStartGame" ObjectPath="\Events\Default Work Unit\UI Menu\Play_MainMenuStartGame" GUID="{C1B5E1E9-DFE9-4A21-BF60-85363ED8A4DA}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1596777122" Name="Play_MusCore" ObjectPath="\Events\Default Work Unit\Adaptative Music\Play_MusCore" GUID="{602D3395-88F5-43D6-9CE1-0EB64BAD5F08}" DurationType="OneShot" DurationMin="1.2008125" DurationMax="1.2008125">
+					<MediaRefs>
+						<MediaRef Id="431999184"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="915393464" Name="Play_OnBack" ObjectPath="\Events\Default Work Unit\UI Menu\Play_OnBack" GUID="{192284CD-8B8F-451F-9325-6482F16F4C23}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3678551787" Name="Play_OnClick" ObjectPath="\Events\Default Work Unit\UI Menu\Play_OnClick" GUID="{379437AE-A3F6-4543-BB0F-FDF98F448D23}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2196757205" Name="Play_OnHover" ObjectPath="\Events\Default Work Unit\UI Menu\Play_OnHover" GUID="{FDD740D1-0984-4EA1-9FC5-4D17473BFC69}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="911575944" Name="Play_PlayerFs" ObjectPath="\Events\Default Work Unit\Player\Play_PlayerFs" GUID="{0881FF8E-C1F4-47BC-9E49-781365B87A34}" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="69501670"/>
+						<MediaRef Id="93186479"/>
+						<MediaRef Id="99219889"/>
+						<MediaRef Id="125901720"/>
+						<MediaRef Id="148524242"/>
+						<MediaRef Id="161631131"/>
+						<MediaRef Id="175605479"/>
+						<MediaRef Id="270434604"/>
+						<MediaRef Id="278434081"/>
+						<MediaRef Id="291763179"/>
+						<MediaRef Id="309736558"/>
+						<MediaRef Id="320245737"/>
+						<MediaRef Id="364573127"/>
+						<MediaRef Id="409348956"/>
+						<MediaRef Id="459603677"/>
+						<MediaRef Id="478843681"/>
+						<MediaRef Id="517384302"/>
+						<MediaRef Id="572214998"/>
+						<MediaRef Id="637407711"/>
+						<MediaRef Id="714637550"/>
+						<MediaRef Id="748172393"/>
+						<MediaRef Id="810713067"/>
+						<MediaRef Id="837272602"/>
+						<MediaRef Id="862584422"/>
+						<MediaRef Id="909626541"/>
+						<MediaRef Id="912035078"/>
+						<MediaRef Id="916730515"/>
+						<MediaRef Id="927982555"/>
+						<MediaRef Id="933938710"/>
+						<MediaRef Id="946514003"/>
+						<MediaRef Id="992962217"/>
+						<MediaRef Id="1006556499"/>
+						<MediaRef Id="1051307385"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="255961296"/>
+							<PluginRef Id="750533697"/>
+							<PluginRef Id="900331516"/>
+						</Custom>
+					</PluginRefs>
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2115407397" Id="3472709650" GUID="{02BAE21A-2739-4F47-87F7-4B9246F7FB69}"/>
+							<MediaRefs>
+								<MediaRef Id="19314453"/>
+								<MediaRef Id="29392868"/>
+								<MediaRef Id="47986709"/>
+								<MediaRef Id="54222117"/>
+								<MediaRef Id="87270009"/>
+								<MediaRef Id="100487609"/>
+								<MediaRef Id="100674439"/>
+								<MediaRef Id="109465018"/>
+								<MediaRef Id="193249177"/>
+								<MediaRef Id="197559037"/>
+								<MediaRef Id="207404832"/>
+								<MediaRef Id="214956916"/>
+								<MediaRef Id="242428240"/>
+								<MediaRef Id="328723579"/>
+								<MediaRef Id="339180831"/>
+								<MediaRef Id="364326350"/>
+								<MediaRef Id="389147731"/>
+								<MediaRef Id="485809865"/>
+								<MediaRef Id="496213299"/>
+								<MediaRef Id="496704748"/>
+								<MediaRef Id="533353058"/>
+								<MediaRef Id="566018822"/>
+								<MediaRef Id="594723091"/>
+								<MediaRef Id="596906673"/>
+								<MediaRef Id="685973855"/>
+								<MediaRef Id="687771905"/>
+								<MediaRef Id="710770886"/>
+								<MediaRef Id="794839198"/>
+								<MediaRef Id="813081067"/>
+								<MediaRef Id="826641107"/>
+								<MediaRef Id="872467426"/>
+								<MediaRef Id="906139145"/>
+								<MediaRef Id="906365216"/>
+								<MediaRef Id="932447090"/>
+								<MediaRef Id="965886494"/>
+								<MediaRef Id="975802175"/>
+								<MediaRef Id="981854182"/>
+								<MediaRef Id="993436442"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="900331516"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2115407397" Id="1216965916" GUID="{F3CD2C36-B817-4A27-A1BC-96CFB220BA79}" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="3780620"/>
+								<MediaRef Id="50335836"/>
+								<MediaRef Id="50557433"/>
+								<MediaRef Id="97178390"/>
+								<MediaRef Id="100938197"/>
+								<MediaRef Id="110976486"/>
+								<MediaRef Id="197965494"/>
+								<MediaRef Id="202141324"/>
+								<MediaRef Id="243593664"/>
+								<MediaRef Id="246781445"/>
+								<MediaRef Id="251170365"/>
+								<MediaRef Id="255316402"/>
+								<MediaRef Id="315003144"/>
+								<MediaRef Id="343632063"/>
+								<MediaRef Id="391075114"/>
+								<MediaRef Id="404358743"/>
+								<MediaRef Id="444028624"/>
+								<MediaRef Id="489638375"/>
+								<MediaRef Id="673988119"/>
+								<MediaRef Id="733952893"/>
+								<MediaRef Id="758623100"/>
+								<MediaRef Id="848463289"/>
+								<MediaRef Id="878705949"/>
+								<MediaRef Id="903193414"/>
+								<MediaRef Id="907609657"/>
+								<MediaRef Id="981328292"/>
+								<MediaRef Id="1047835075"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="900331516"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2115407397" Id="3472709650" GUID="{02BAE21A-2739-4F47-87F7-4B9246F7FB69}"/>
+							<MediaRefs>
+								<MediaRef Id="504208396"/>
+								<MediaRef Id="663896894"/>
+								<MediaRef Id="797272326"/>
+								<MediaRef Id="828588564"/>
+								<MediaRef Id="913412753"/>
+								<MediaRef Id="1010592874"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="900331516"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2115407397" Id="1216965916" GUID="{F3CD2C36-B817-4A27-A1BC-96CFB220BA79}" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="633602997"/>
+								<MediaRef Id="663896894"/>
+								<MediaRef Id="797272326"/>
+								<MediaRef Id="828588564"/>
+								<MediaRef Id="871348354"/>
+								<MediaRef Id="929733156"/>
+								<MediaRef Id="1010592874"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="900331516"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2115407397" Id="3472709650" GUID="{02BAE21A-2739-4F47-87F7-4B9246F7FB69}"/>
+							<MediaRefs>
+								<MediaRef Id="473270615"/>
+								<MediaRef Id="483160427"/>
+								<MediaRef Id="666945806"/>
+								<MediaRef Id="868896128"/>
+								<MediaRef Id="974177290"/>
+								<MediaRef Id="990288326"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="900331516"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2115407397" Id="1216965916" GUID="{F3CD2C36-B817-4A27-A1BC-96CFB220BA79}" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="139588039"/>
+								<MediaRef Id="473270615"/>
+								<MediaRef Id="483160427"/>
+								<MediaRef Id="663610515"/>
+								<MediaRef Id="744432320"/>
+								<MediaRef Id="868896128"/>
+								<MediaRef Id="916208983"/>
+								<MediaRef Id="990288326"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="900331516"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2115407397" Id="3472709650" GUID="{02BAE21A-2739-4F47-87F7-4B9246F7FB69}"/>
+							<MediaRefs>
+								<MediaRef Id="12926273"/>
+								<MediaRef Id="34882479"/>
+								<MediaRef Id="46037698"/>
+								<MediaRef Id="60205598"/>
+								<MediaRef Id="64418890"/>
+								<MediaRef Id="71810780"/>
+								<MediaRef Id="83535660"/>
+								<MediaRef Id="90980313"/>
+								<MediaRef Id="127115196"/>
+								<MediaRef Id="141235594"/>
+								<MediaRef Id="266991154"/>
+								<MediaRef Id="284729061"/>
+								<MediaRef Id="325176974"/>
+								<MediaRef Id="353083660"/>
+								<MediaRef Id="358664690"/>
+								<MediaRef Id="360120438"/>
+								<MediaRef Id="370731794"/>
+								<MediaRef Id="401499778"/>
+								<MediaRef Id="403534321"/>
+								<MediaRef Id="423400115"/>
+								<MediaRef Id="451439972"/>
+								<MediaRef Id="538186047"/>
+								<MediaRef Id="565440753"/>
+								<MediaRef Id="588175789"/>
+								<MediaRef Id="589832038"/>
+								<MediaRef Id="623379799"/>
+								<MediaRef Id="632207899"/>
+								<MediaRef Id="636840032"/>
+								<MediaRef Id="671097419"/>
+								<MediaRef Id="726504190"/>
+								<MediaRef Id="794600738"/>
+								<MediaRef Id="883384986"/>
+								<MediaRef Id="898556984"/>
+								<MediaRef Id="899709608"/>
+								<MediaRef Id="915549306"/>
+								<MediaRef Id="922598732"/>
+								<MediaRef Id="937320572"/>
+								<MediaRef Id="938463386"/>
+								<MediaRef Id="1006443224"/>
+								<MediaRef Id="1027526379"/>
+								<MediaRef Id="1049522085"/>
+								<MediaRef Id="1071012065"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="900331516"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2115407397" Id="1216965916" GUID="{F3CD2C36-B817-4A27-A1BC-96CFB220BA79}" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="571399"/>
+								<MediaRef Id="13172389"/>
+								<MediaRef Id="57744175"/>
+								<MediaRef Id="82394113"/>
+								<MediaRef Id="95621672"/>
+								<MediaRef Id="108549160"/>
+								<MediaRef Id="150911020"/>
+								<MediaRef Id="167413559"/>
+								<MediaRef Id="353005863"/>
+								<MediaRef Id="388396511"/>
+								<MediaRef Id="412617233"/>
+								<MediaRef Id="457543258"/>
+								<MediaRef Id="479369182"/>
+								<MediaRef Id="511693741"/>
+								<MediaRef Id="527403110"/>
+								<MediaRef Id="543293191"/>
+								<MediaRef Id="582124270"/>
+								<MediaRef Id="637981581"/>
+								<MediaRef Id="645576815"/>
+								<MediaRef Id="655272841"/>
+								<MediaRef Id="712393791"/>
+								<MediaRef Id="714871672"/>
+								<MediaRef Id="764701999"/>
+								<MediaRef Id="807522328"/>
+								<MediaRef Id="808448843"/>
+								<MediaRef Id="935222772"/>
+								<MediaRef Id="973668817"/>
+								<MediaRef Id="991677787"/>
+								<MediaRef Id="993463309"/>
+								<MediaRef Id="1003446754"/>
+								<MediaRef Id="1026351029"/>
+								<MediaRef Id="1055635076"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="900331516"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="928555489" Name="Play_PlayerFsSkid" ObjectPath="\Events\Default Work Unit\Player\Play_PlayerFsSkid" GUID="{DC315F02-F1AA-4B9C-9CD4-3E5B4465E20F}" DurationType="OneShot" DurationMin="0.5" DurationMax="0.8410576">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2115407397" Id="1216965916" GUID="{F3CD2C36-B817-4A27-A1BC-96CFB220BA79}" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="31544707"/>
+								<MediaRef Id="99219889"/>
+								<MediaRef Id="125901720"/>
+								<MediaRef Id="148524242"/>
+								<MediaRef Id="175605479"/>
+								<MediaRef Id="242331088"/>
+								<MediaRef Id="248248045"/>
+								<MediaRef Id="270434604"/>
+								<MediaRef Id="278434081"/>
+								<MediaRef Id="291763179"/>
+								<MediaRef Id="309736558"/>
+								<MediaRef Id="320245737"/>
+								<MediaRef Id="409348956"/>
+								<MediaRef Id="414171289"/>
+								<MediaRef Id="478843681"/>
+								<MediaRef Id="517384302"/>
+								<MediaRef Id="557084528"/>
+								<MediaRef Id="572214998"/>
+								<MediaRef Id="642499826"/>
+								<MediaRef Id="714637550"/>
+								<MediaRef Id="819764921"/>
+								<MediaRef Id="837272602"/>
+								<MediaRef Id="862584422"/>
+								<MediaRef Id="909626541"/>
+								<MediaRef Id="912035078"/>
+								<MediaRef Id="916730515"/>
+								<MediaRef Id="927982555"/>
+								<MediaRef Id="933938710"/>
+								<MediaRef Id="995526660"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="3768129960" Name="Play_Possession" ObjectPath="\Events\Default Work Unit\Player Abilities\Play_Possession" GUID="{5B1E0147-80ED-4EC9-BDB1-139702DD6306}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3069310083" Name="Play_SlashHitEnviro" ObjectPath="\Events\Default Work Unit\Player Abilities\Play_SlashHitEnviro" GUID="{6E8732AD-CC17-4320-B490-71E811880A65}" DurationType="OneShot" DurationMin="0.8034634" DurationMax="1.6844655">
+					<MediaRefs>
+						<MediaRef Id="221817756"/>
+						<MediaRef Id="318816451"/>
+						<MediaRef Id="416060861"/>
+						<MediaRef Id="552424575"/>
+						<MediaRef Id="749015965"/>
+						<MediaRef Id="751988685"/>
+						<MediaRef Id="1002316465"/>
+						<MediaRef Id="1044399728"/>
+					</MediaRefs>
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1991914396" Id="3472709650" GUID="{AEDDD02C-3F58-4349-BCD0-D7785A59152F}"/>
+							<MediaRefs>
+								<MediaRef Id="314954263"/>
+								<MediaRef Id="482326559"/>
+								<MediaRef Id="511303387"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1991914396" Id="1216965916" GUID="{8CD2D766-702D-4B5B-8D64-02CD0D130005}" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="54054381"/>
+								<MediaRef Id="792625188"/>
+								<MediaRef Id="932913252"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="4079291537" Name="Play_StingerNewWave" ObjectPath="\Events\Default Work Unit\Adaptative Music\Play_StingerNewWave" GUID="{711D0153-A876-4011-82EB-7AD9BCCC2B18}" DurationType="OneShot" DurationMin="1.3684584" DurationMax="1.3684584">
+					<MediaRefs>
+						<MediaRef Id="787419388"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3435325068" Name="Play_Test_Amb_Loc" ObjectPath="\Events\Default Work Unit\Z_DeprecatedEvents\Play_Test_Amb_Loc" GUID="{996477E9-0350-479D-873E-517B7C054F15}" MaxAttenuation="2500" DurationType="OneShot" DurationMin="17.016687" DurationMax="17.016687">
 					<MediaRefs>
 						<MediaRef Id="526377678"/>
 					</MediaRefs>
@@ -35,21 +1732,53 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="432743418" Name="Play_Test_Event_Asset" ObjectPath="\Events\Default Work Unit\Play_Test_Event_Asset" GUID="{5D47BB90-E33B-4DEB-82CF-4027A0799326}" DurationType="OneShot" DurationMin="1.1952083" DurationMax="1.1952083">
+				<Event Id="432743418" Name="Play_Test_Event_Asset" ObjectPath="\Events\Default Work Unit\Z_DeprecatedEvents\Play_Test_Event_Asset" GUID="{5D47BB90-E33B-4DEB-82CF-4027A0799326}" DurationType="OneShot" DurationMin="1.1952083" DurationMax="1.1952083">
 					<MediaRefs>
 						<MediaRef Id="322760696"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1988958988" Name="Play_Test_Slash" ObjectPath="\Events\Default Work Unit\Play_Test_Slash" GUID="{12124D21-963C-4F2B-AAB5-30919FF2DEE0}" DurationType="OneShot" DurationMin="0.2504896" DurationMax="0.2504896">
+				<Event Id="1988958988" Name="Play_Test_Slash" ObjectPath="\Events\Default Work Unit\Z_DeprecatedEvents\Play_Test_Slash" GUID="{12124D21-963C-4F2B-AAB5-30919FF2DEE0}" DurationType="OneShot" DurationMin="0.2504896" DurationMax="0.2504896">
 					<MediaRefs>
 						<MediaRef Id="327704471"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3575519807" Name="Play_WeakpointReveal" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_WeakpointReveal" GUID="{EB957F93-4066-48C3-A59E-1B00C3C1170A}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 			<GameParameters>
-				<GameParameter Id="1237428548" Name="Builtin_Distance" ObjectPath="\Game Parameters\Default Work Unit\Builtin_Distance" GUID="{6BA5296B-2167-4208-871F-9C93F01FC031}"/>
+				<GameParameter Id="765516766" Name="rtpc_player_airspeed" ObjectPath="\Game Parameters\Default Work Unit\rtpc_player_airspeed" GUID="{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}"/>
+				<GameParameter Id="2570586536" Name="rtpc_landing_force" ObjectPath="\Game Parameters\Default Work Unit\rtpc_landing_force" GUID="{07DB1610-4113-4F81-A7B4-0C953E645162}"/>
+				<GameParameter Id="2690476865" Name="rtpc_player_walkspeed" ObjectPath="\Game Parameters\Default Work Unit\rtpc_player_walkspeed" GUID="{6437691A-43C2-473B-A671-C59F1A9E957B}"/>
+				<GameParameter Id="3304859005" Name="rtpc_chaos_global" ObjectPath="\Game Parameters\Default Work Unit\rtpc_chaos_global" GUID="{912B7FBA-E859-424B-9664-D9B8B51FC1BA}"/>
 			</GameParameters>
+			<SwitchGroups>
+				<SwitchGroup Id="1560465246" Name="switch_enemy_state" ObjectPath="\Switches\Default Work Unit\switch_enemy_state" GUID="{7BCEC131-CFF7-4EC9-8FA1-01CA796C57CE}">
+					<Switches>
+						<Switch Id="302661891" Name="nostate" ObjectPath="\Switches\Default Work Unit\switch_enemy_state\nostate" GUID="{B1F2E22E-0DDC-4A1D-B499-D807E69F385B}"/>
+						<Switch Id="1838667140" Name="friendly" ObjectPath="\Switches\Default Work Unit\switch_enemy_state\friendly" GUID="{E2EF61B1-6143-4FB2-A6D7-A40F264431F4}"/>
+						<Switch Id="3343821028" Name="afraid" ObjectPath="\Switches\Default Work Unit\switch_enemy_state\afraid" GUID="{6B7928E2-235B-4F7D-91C3-339543D1FE93}"/>
+						<Switch Id="4251348366" Name="agressive" ObjectPath="\Switches\Default Work Unit\switch_enemy_state\agressive" GUID="{3C5FF830-8A92-4FEE-A31B-60D35FE55A2E}"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="1991914396" Name="switch_attack_material" ObjectPath="\Switches\Default Work Unit\switch_attack_material" GUID="{D11887A8-8E5A-4D3D-8FDC-BBC055C5425E}">
+					<Switches>
+						<Switch Id="1216965916" Name="stone" ObjectPath="\Switches\Default Work Unit\switch_attack_material\stone" GUID="{8CD2D766-702D-4B5B-8D64-02CD0D130005}"/>
+						<Switch Id="3472709650" Name="vege" ObjectPath="\Switches\Default Work Unit\switch_attack_material\vege" GUID="{AEDDD02C-3F58-4349-BCD0-D7785A59152F}"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="2115407397" Name="switch_player_fs_material" ObjectPath="\Switches\Default Work Unit\switch_player_fs_material" GUID="{75C355EA-C638-4083-9ACC-4ED15F60A31B}">
+					<Switches>
+						<Switch Id="1216965916" Name="stone" ObjectPath="\Switches\Default Work Unit\switch_player_fs_material\stone" GUID="{F3CD2C36-B817-4A27-A1BC-96CFB220BA79}"/>
+						<Switch Id="3472709650" Name="vege" ObjectPath="\Switches\Default Work Unit\switch_player_fs_material\vege" GUID="{02BAE21A-2739-4F47-87F7-4B9246F7FB69}"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="2288378946" Name="switch_enemy_fs_material" ObjectPath="\Switches\Default Work Unit\switch_enemy_fs_material" GUID="{1E8C4DC6-5355-49AB-BF90-D31B2677EAB2}">
+					<Switches>
+						<Switch Id="1216965916" Name="stone" ObjectPath="\Switches\Default Work Unit\switch_enemy_fs_material\stone" GUID="{2C6048E5-583B-4043-92D1-BB6A8329AE1C}"/>
+						<Switch Id="3472709650" Name="vege" ObjectPath="\Switches\Default Work Unit\switch_enemy_fs_material\vege" GUID="{612497D4-F850-447D-B521-6831C66C45BA}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{152359BD-447A-033A-895C-248E7F344DC3}</FileHash>
+	<FileHash>{7D530B37-D116-7EA0-B809-475B92DA6E84}</FileHash>
 </SoundBanksInfo>

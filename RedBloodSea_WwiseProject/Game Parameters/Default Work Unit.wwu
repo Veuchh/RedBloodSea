@@ -3,11 +3,93 @@
 	<GameParameters>
 		<WorkUnit Name="Default Work Unit" ID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}" PersistMode="Standalone">
 			<ChildrenList>
-				<GameParameter Name="Builtin_Distance" ID="{6BA5296B-2167-4208-871F-9C93F01FC031}">
+				<GameParameter Name="rtpc_chaos_enemy" ID="{8D8709D7-5017-47F2-988D-4EE3A088300B}">
 					<PropertyList>
-						<Property Name="BindToBuiltInParam" Type="int16" Value="1"/>
 						<Property Name="InitialValue" Type="Real64" Value="0"/>
-						<Property Name="Max" Type="Real64" Value="2500"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="rtpc_chaos_player" ID="{BFE4D672-50A0-4F84-B21E-4DC11EBCCF9B}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="rtpc_chaos_global" ID="{912B7FBA-E859-424B-9664-D9B8B51FC1BA}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="rtpc_player_life" ID="{1CC6F0C7-6126-4057-9B70-3C89F38C5F50}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="1"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="rtpc_player_airspeed" ID="{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="25"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="79"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="rtpc_landing_force" ID="{07DB1610-4113-4F81-A7B4-0C953E645162}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+				<Folder Name="Settings" ID="{02B4A0E6-53F2-420B-A806-057A2C6C4FC3}" ShortID="284631348">
+					<ChildrenList>
+						<Folder Name="BUS" ID="{EBE15C4E-82FC-4275-8B3D-5D8B45FD3A34}" ShortID="986138481">
+							<ChildrenList>
+								<GameParameter Name="rtpc_enemy_bus" ID="{7B1FB034-3E8E-48F8-B914-CB5786C31FF9}">
+									<PropertyList>
+										<Property Name="InitialValue" Type="Real64" Value="1"/>
+										<Property Name="Max" Type="Real64" Value="1"/>
+									</PropertyList>
+								</GameParameter>
+								<GameParameter Name="rtpc_music_bus" ID="{C084FC73-68C8-499E-96AC-E4DBE2F01DED}">
+									<PropertyList>
+										<Property Name="InitialValue" Type="Real64" Value="1"/>
+										<Property Name="Max" Type="Real64" Value="1"/>
+									</PropertyList>
+								</GameParameter>
+								<GameParameter Name="rtpc_master_bus" ID="{94154412-EE63-4EDD-B582-B922CD738ED6}">
+									<PropertyList>
+										<Property Name="InitialValue" Type="Real64" Value="1"/>
+										<Property Name="Max" Type="Real64" Value="1"/>
+									</PropertyList>
+								</GameParameter>
+								<GameParameter Name="rtpc_sfx_bus" ID="{1A0CC5AF-DF3D-4C7B-9E41-61A8E28F74EB}">
+									<PropertyList>
+										<Property Name="InitialValue" Type="Real64" Value="1"/>
+										<Property Name="Max" Type="Real64" Value="1"/>
+									</PropertyList>
+								</GameParameter>
+								<GameParameter Name="rtpc_amb_bus" ID="{A29E33E7-090C-4F92-B2A4-CF339B2E10FC}">
+									<PropertyList>
+										<Property Name="InitialValue" Type="Real64" Value="1"/>
+										<Property Name="Max" Type="Real64" Value="1"/>
+									</PropertyList>
+								</GameParameter>
+							</ChildrenList>
+						</Folder>
+						<GameParameter Name="rtpc_dominant_hand" ID="{54C0314F-1459-460E-B6E6-1CDAA6EDBE01}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="1"/>
+								<Property Name="Max" Type="Real64" Value="1"/>
+							</PropertyList>
+						</GameParameter>
+					</ChildrenList>
+				</Folder>
+				<GameParameter Name="rtpc_player_walkspeed" ID="{6437691A-43C2-473B-A671-C59F1A9E957B}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
 					</PropertyList>
 				</GameParameter>
 			</ChildrenList>

@@ -24,6 +24,8 @@ struct FWeakpointSlot
 	EWeakpointType Type;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FVector MaxOffset;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FVector MinOffset;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	bool bIsUsed;
 }; UMETA(DisplayName="Weakpoint slot")
@@ -47,7 +49,7 @@ private:
 	AActor* owner;
 	TObjectPtr<USkeletalMeshComponent> skeleton;
 	TArray<TObjectPtr<UMaterialInstanceDynamic>> materialInstances;
-	TArray<TObjectPtr<AActor>> weakpoints;
+	TArray<TObjectPtr<AWeakpoint>> weakpoints;
 	
 	
 protected:
@@ -59,6 +61,10 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 	void CreateWeakPoints();
 	void AttachWeakpoint(const FName& socketName,const UE::Math::TVector<double>& maxOffset);
+	UFUNCTION(BlueprintCallable)
+	void RevealWeakpoints();
+	UFUNCTION(BlueprintCallable)
+	void RemoveWeakpoint(const AWeakpoint* weakpoint);
 	UFUNCTION()
 	TArray<FName> GetAllWeakpointsSockets();
 	void SetSkeleton(USkeletalMeshComponent* skeleton);

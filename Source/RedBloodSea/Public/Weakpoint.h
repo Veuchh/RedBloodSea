@@ -23,9 +23,9 @@ public:
 	// Sets default values for this actor's properties
 	AWeakpoint();
 	UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Weakpoints Handler")
-	EWeakpointState state;
+	EWeakpointState State;
 private:
-	UMaterialInstance* material;
+	TObjectPtr<UMaterialInstance> Material;
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta=(AllowPrivateAccess = "true"))
 	TObjectPtr<UStaticMeshComponent> Mesh;
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta=(AllowPrivateAccess = "true"))
@@ -38,5 +38,7 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	TObjectPtr<UStaticMeshComponent> GetMesh();
+	virtual void NotifyActorBeginOverlap(AActor* OtherActor) override;
 
 };

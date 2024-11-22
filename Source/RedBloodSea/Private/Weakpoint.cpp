@@ -13,6 +13,8 @@ AWeakpoint::AWeakpoint()
 	Collider = CreateDefaultSubobject<USphereComponent>(TEXT("Collider"));
 	Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
 	Mesh->SetupAttachment(Collider);
+	State = EWeakpointState::Hidden;
+	Mesh->SetVisibility(false);
 	//Mesh->SetupAttachment(Collider);
 	//mesh->SetMaterial(0,)
 
@@ -31,5 +33,19 @@ void AWeakpoint::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+}
+
+TObjectPtr<UStaticMeshComponent> AWeakpoint::GetMesh()
+{
+	return Mesh;
+}
+
+void AWeakpoint::NotifyActorBeginOverlap(AActor* OtherActor)
+{
+	Super::NotifyActorBeginOverlap(OtherActor);
+	if(State == EWeakpointState::Revealed)
+		return;
+	Mesh->SetVisibility(false);
+	State = EWeakpointState::Damaged;
 }
 

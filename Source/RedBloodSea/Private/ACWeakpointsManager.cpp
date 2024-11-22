@@ -3,6 +3,8 @@
 
 #include "ACWeakpointsManager.h"
 
+#include <string>
+
 #include "ComponentUtils.h"
 #include "Engine/SimpleConstructionScript.h"
 
@@ -24,6 +26,7 @@ void UACWeakpointsManager::BeginPlay()
 	owner = GetOwner();
 	skeleton = Cast<USkeletalMeshComponent>(owner->GetComponentByClass(USkeletalMeshComponent::StaticClass()));
 	CreateWeakPoints();
+	//RevealWeakpoints();
 }
 
 
@@ -31,13 +34,17 @@ void UACWeakpointsManager::BeginPlay()
 void UACWeakpointsManager::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-	
-	for (auto material : materialInstances)
+
+	int index = 1;
+	for (auto weakpoint : weakpoints)
 	{
-		UE::Math::TVector<double> position = weakpoints[0]->GetTransform().GetLocation();
-		material->SetVectorParameterValue(TEXT("WeakPointPos1"),FLinearColor(position[0],position[1],position[2],0));
-		material->SetScalarParameterValue(TEXT("Size"),10);
-		material->SetScalarParameterValue(TEXT("TexSize"),2);
+		for (auto material : materialInstances)
+		{
+			UE::Math::TVector<double> position = weakpoint->GetTransform().GetLocation();
+			FName name = *FString("WeakPointPos").Append(FString::FromInt(index));
+			material->SetVectorParameterValue(name,FLinearColor(position[0],position[1],position[2],0));
+		}
+		index++;
 	}
 	// ...
 }
@@ -70,7 +77,7 @@ void UACWeakpointsManager::SetMaterials(TArray<TObjectPtr<UMaterialInstanceDynam
 void UACWeakpointsManager::CreateWeakPoints()
 {
 	owner = GetOwner();
-	skeleton = Cast<USkeletalMeshComponent>(owner->GetComponentByClass(USkeletalMeshComponent::StaticClass()));
+	//skeleton = Cast<USkeletalMeshComponent>(owner->GetComponentByClass(USkeletalMeshComponent::StaticClass()));
 	int count = 0;
 	for (auto const & WeakPoint : WeakpointsSockets)
 	{
@@ -144,16 +151,41 @@ void UACWeakpointsManager::AttachWeakpoint(const FName& socketName,const UE::Mat
 		FMath::FRandRange(-maxOffset.Y,maxOffset.Y),
 		FMath::FRandRange(-maxOffset.Z,maxOffset.Z)};
 	newActor->SetActorRelativeLocation(offset);
-	
-	weakpoints.Add(newActor);
 
+	TObjectPtr<AWeakpoint> weakpoint = Cast<AWeakpoint>(newActor);
+	weakpoints.Add(weakpoint);
+	int index = weakpoints.Num();
 	for (auto material : materialInstances)
 	{
 		UE::Math::TVector<double> position = newActor->GetTransform().GetLocation();
-		material->SetVectorParameterValue(TEXT("WeakPointPos1"),FLinearColor(position[0],position[1],position[2],0));
-		material->SetScalarParameterValue(TEXT("Size"),10);
-		material->SetScalarParameterValue(TEXT("TexSize"),2);
+		FName name = *FString("WeakPointPos").Append(FString::FromInt(index));
+		material->SetVectorParameterValue(name,FLinearColor(position[0],position[1],position[2],0));
+		material->SetScalarParameterValue(TEXT("Size"),5.5);
+		material->SetScalarParameterValue(TEXT("TexSize"),2.5);
 	}
+}
+
+void UACWeakpointsManager::RevealWeakpoints()
+{
+	int index = 1;
+	for (auto weakpoint : weakpoints)
+	{
+		weakpoint->GetMesh()->SetVisibility(true);
+		
+		for (auto material : materialInstances)
+		{
+			UE::Math::TVector<double> position = weakpoint->GetTransform().GetLocation();
+			FName name = *FString("Opacity").Append(FString::FromInt(index));
+			material->SetScalarParameterValue(name,1.0);
+		}
+		index++;
+	}
+}
+
+void UACWeakpointsManager::RemoveWeakpoint(const AWeakpoint* weakpoint)
+{
+	//TODO 
+	//weakpoints.RemoveSingle(weakpoint*);
 }
 
 

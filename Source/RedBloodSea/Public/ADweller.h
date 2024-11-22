@@ -23,7 +23,7 @@ private:
 	
 protected:
 	// Called when the game starts or when spawned
-	void OnConstruction(const FTransform &Transform) override;
+	//void OnConstruction(const FTransform &Transform) override;
 	virtual void BeginPlay() override;
 
 public:	

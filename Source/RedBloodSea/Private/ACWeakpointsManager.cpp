@@ -11,7 +11,7 @@ UACWeakpointsManager::UACWeakpointsManager()
 {
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
-	PrimaryComponentTick.bCanEverTick = false;
+	PrimaryComponentTick.bCanEverTick = true;
 
 	// ...
 }
@@ -31,7 +31,14 @@ void UACWeakpointsManager::BeginPlay()
 void UACWeakpointsManager::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
+	
+	for (auto material : materialInstances)
+	{
+		UE::Math::TVector<double> position = weakpoints[0]->GetTransform().GetLocation();
+		material->SetVectorParameterValue(TEXT("WeakPointPos1"),FLinearColor(position[0],position[1],position[2],0));
+		material->SetScalarParameterValue(TEXT("Size"),10);
+		material->SetScalarParameterValue(TEXT("TexSize"),2);
+	}
 	// ...
 }
 
@@ -131,17 +138,22 @@ void UACWeakpointsManager::AttachWeakpoint(const FName& socketName,const UE::Mat
 {
 	AActor* newActor = GetWorld()->SpawnActor(Weakpoint_BP);
 	newActor->AttachToComponent(skeleton,FAttachmentTransformRules::SnapToTargetNotIncludingScale,socketName);
-	int index = 0;
-	for (auto material : materialInstances)
-	{
-		UE::Math::TVector<double> position = weakpoints[1]->GetTransform().GetLocation();
-		material->SetVectorParameterValue(TEXT("WeakPointPos1"),FLinearColor(position[0],position[1],position[2],0));
-	}
+	
 	UE::Math::TVector<double> offset = {
 		FMath::FRandRange(-maxOffset.X,maxOffset.X),
 		FMath::FRandRange(-maxOffset.Y,maxOffset.Y),
 		FMath::FRandRange(-maxOffset.Z,maxOffset.Z)};
 	newActor->SetActorRelativeLocation(offset);
+	
+	weakpoints.Add(newActor);
+
+	for (auto material : materialInstances)
+	{
+		UE::Math::TVector<double> position = newActor->GetTransform().GetLocation();
+		material->SetVectorParameterValue(TEXT("WeakPointPos1"),FLinearColor(position[0],position[1],position[2],0));
+		material->SetScalarParameterValue(TEXT("Size"),10);
+		material->SetScalarParameterValue(TEXT("TexSize"),2);
+	}
 }
 
 

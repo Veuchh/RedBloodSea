@@ -13,7 +13,13 @@ AADweller::AADweller()
 	
 }
 
-void AADweller::OnConstruction(const FTransform &Transform)
+// void AADweller::OnConstruction(const FTransform &Transform)
+// {
+//
+// }
+
+// Called when the game starts or when spawned
+void AADweller::BeginPlay()
 {
 	for (auto material : GetMesh()->GetMaterials())
 	{
@@ -27,12 +33,9 @@ void AADweller::OnConstruction(const FTransform &Transform)
 		index++;
 	}
 	WeakpointsManager->SetMaterials(MaterialInstances);
-}
-
-// Called when the game starts or when spawned
-void AADweller::BeginPlay()
-{
+	
 	Super::BeginPlay();
+	
 	
 }
 

@@ -14,7 +14,6 @@ AWeakpoint::AWeakpoint()
 	Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
 	Mesh->SetupAttachment(Collider);
 	State = EWeakpointState::Hidden;
-	Mesh->SetVisibility(false);
 	//Mesh->SetupAttachment(Collider);
 	//mesh->SetMaterial(0,)
 
@@ -24,8 +23,8 @@ AWeakpoint::AWeakpoint()
 void AWeakpoint::BeginPlay()
 {
 	Super::BeginPlay();
-	///GetStaticMesh
-	
+	Mesh->SetVisibility(false);
+
 }
 
 // Called every frame
@@ -40,12 +39,9 @@ TObjectPtr<UStaticMeshComponent> AWeakpoint::GetMesh()
 	return Mesh;
 }
 
-void AWeakpoint::NotifyActorBeginOverlap(AActor* OtherActor)
+TObjectPtr<USphereComponent> AWeakpoint::GetCollider()
 {
-	Super::NotifyActorBeginOverlap(OtherActor);
-	if(State == EWeakpointState::Revealed)
-		return;
-	Mesh->SetVisibility(false);
-	State = EWeakpointState::Damaged;
+	return Collider;
 }
+
 

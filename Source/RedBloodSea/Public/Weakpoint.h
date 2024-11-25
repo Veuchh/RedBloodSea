@@ -35,10 +35,10 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
+public:
+	TObjectPtr<UStaticMeshComponent> GetMesh();
+	TObjectPtr<USphereComponent>   GetCollider();
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-	TObjectPtr<UStaticMeshComponent> GetMesh();
-	virtual void NotifyActorBeginOverlap(AActor* OtherActor) override;
 
 };

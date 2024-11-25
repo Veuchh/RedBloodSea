@@ -7,11 +7,28 @@
 #include "Components/ActorComponent.h"
 #include "ACWeakpointsManager.generated.h"
 
+
+
 UENUM(BlueprintType)
 enum class EWeakpointType : uint8 {
-	WPE_1		 UMETA(DisplayName="HIGH"),
-	WPE_2        UMETA(DisplayName="MID"),
-	WPE_3        UMETA(DisplayName="LOW"),
+	HEAD		UMETA(DisplayName="HEAD"),
+	TORSO		UMETA(DisplayName="TORSO"),
+	LEGS		UMETA(DisplayName="LEGS"),
+	ARMS		UMETA(DisplayName="ARMS"),
+};
+
+UENUM(BlueprintType)
+enum class EWeakpointWeight : uint8 {
+	HIGH		UMETA(DisplayName="HIGH"),
+	MID			UMETA(DisplayName="MID"),
+	LOW			UMETA(DisplayName="LOW"),
+};
+
+UENUM(BlueprintType)
+enum class EWeakpointSize : uint8 {
+	BIG				UMETA(DisplayName="BIG"),
+	MEDIUM			UMETA(DisplayName="MEDIUM"),
+	SMALL			UMETA(DisplayName="SMALL"),
 };
 
 USTRUCT(BlueprintType)
@@ -22,6 +39,8 @@ struct FWeakpointSlot
 	FName SocketName;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	EWeakpointType Type;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EWeakpointWeight Weight;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FVector MaxOffset;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -41,7 +60,13 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Weakpoints Handler")
 	TObjectPtr<UClass> Weakpoint_BP;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Weakpoints Handler")
-	int Nb_weakpoints;
+	TMap<EWeakpointWeight,int> WeightTable;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Weakpoints Handler")
+	TMap<EWeakpointType,bool> TypeFilter;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Weakpoints Handler")
+	TMap<EWeakpointSize,float> SizeChart;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Weakpoints Handler")
+	TMap<EWeakpointSize,int> SizeNumber;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Weakpoints Handler")
 	TArray<FWeakpointSlot> WeakpointsSockets;
 
@@ -60,14 +85,20 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 	void CreateWeakPoints();
-	void AttachWeakpoint(const FName& socketName,const UE::Math::TVector<double>& maxOffset);
+	void AttachWeakpoint(const FWeakpointSlot& WeakpointSlot,const float Size);
 	UFUNCTION(BlueprintCallable)
 	void RevealWeakpoints();
 	UFUNCTION(BlueprintCallable)
-	void RemoveWeakpoint(const AWeakpoint* weakpoint);
+	void RemoveWeakpoint(AWeakpoint* weakpoint);
+	//DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FWeakpointOverlapBegin, AActor*, Weakpoint, AActor*, OtherActor);
+	//UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="Weakpoints")
+	//FWeakpointOverlapBegin OnWeakpointOverlapBegin;
+	UFUNCTION()
+	void WeakpointOverlapBegin(AActor* OverlapedActor, AActor* OtherActor);
 	UFUNCTION()
 	TArray<FName> GetAllWeakpointsSockets();
 	void SetSkeleton(USkeletalMeshComponent* skeleton);
 	void SetMaterials(TArray<TObjectPtr<UMaterialInstanceDynamic>> newMaterialInstances);
+	
 		
 };

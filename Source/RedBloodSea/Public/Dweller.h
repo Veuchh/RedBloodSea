@@ -3,22 +3,22 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "ACWeakpointsManager.h"
+#include "WeakpointsManager.h"
 #include "GameFramework/Character.h"
-#include "ADweller.generated.h"
+#include "Dweller.generated.h"
 
 UCLASS()
-class REDBLOODSEA_API AADweller : public ACharacter
+class REDBLOODSEA_API ADweller : public ACharacter
 {
 	GENERATED_BODY()
 
 public:
 	// Sets default values for this character's properties
-	AADweller();
+	ADweller();
 
 private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta=(AllowPrivateAccess = "true"))
-	TObjectPtr<UACWeakpointsManager> WeakpointsManager;
+	TObjectPtr<UWeakpointsManager> WeakpointsManager;
 	TArray<TObjectPtr<UMaterialInstanceDynamic>> MaterialInstances;
 	
 protected:

@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "ACWeakpointsManager.h"
+#include "WeakpointsManager.h"
 
 #include <string>
 
@@ -10,7 +10,7 @@
 #include "Engine/SimpleConstructionScript.h"
 
 // Sets default values for this component's properties
-UACWeakpointsManager::UACWeakpointsManager()
+UWeakpointsManager::UWeakpointsManager()
 {
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
@@ -18,7 +18,7 @@ UACWeakpointsManager::UACWeakpointsManager()
 }
 
 // Called when the game starts
-void UACWeakpointsManager::BeginPlay()
+void UWeakpointsManager::BeginPlay()
 {
 	Super::BeginPlay();
 
@@ -30,7 +30,7 @@ void UACWeakpointsManager::BeginPlay()
 
 
 // Called every frame
-void UACWeakpointsManager::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
+void UWeakpointsManager::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
@@ -49,17 +49,17 @@ void UACWeakpointsManager::TickComponent(float DeltaTime, ELevelTick TickType, F
 }
 
 
-void UACWeakpointsManager::SetSkeleton(USkeletalMeshComponent* newSkeleton)
+void UWeakpointsManager::SetSkeleton(USkeletalMeshComponent* newSkeleton)
 {
 	this->skeleton = newSkeleton;
 }
 
-void UACWeakpointsManager::SetMaterials(TArray<TObjectPtr<UMaterialInstanceDynamic>> newMaterialInstances)
+void UWeakpointsManager::SetMaterials(TArray<TObjectPtr<UMaterialInstanceDynamic>> newMaterialInstances)
 {
 	materialInstances = newMaterialInstances;
 }
 
-void UACWeakpointsManager::CreateWeakPoints()
+void UWeakpointsManager::CreateWeakPoints()
 {
 	owner = GetOwner();
 	int count = 0;
@@ -97,7 +97,7 @@ void UACWeakpointsManager::CreateWeakPoints()
 }
 
 
-void UACWeakpointsManager::AttachWeakpoint(const FWeakpointSlot& WeakpointSlot,const float Size)
+void UWeakpointsManager::AttachWeakpoint(const FWeakpointSlot& WeakpointSlot,const float Size)
 {
 	AActor* newActor = GetWorld()->SpawnActor(Weakpoint_BP);
 	newActor->AttachToComponent(skeleton,FAttachmentTransformRules::SnapToTargetNotIncludingScale,WeakpointSlot.SocketName);
@@ -111,7 +111,7 @@ void UACWeakpointsManager::AttachWeakpoint(const FWeakpointSlot& WeakpointSlot,c
 	Weakpoint->SetActorScale3D(FVector(1,1,1)*Size);
 	Weakpoints.Add(Weakpoint);
 	UsedWeakpointsSocketsNames.Add(WeakpointSlot.SocketName);
-	Weakpoint->OnActorBeginOverlap.AddDynamic(this,&UACWeakpointsManager::WeakpointOverlapBegin);
+	Weakpoint->OnActorBeginOverlap.AddDynamic(this,&UWeakpointsManager::WeakpointOverlapBegin);
 	int index = Weakpoints.Num();
 	for (auto material : materialInstances)
 	{
@@ -123,7 +123,7 @@ void UACWeakpointsManager::AttachWeakpoint(const FWeakpointSlot& WeakpointSlot,c
 	}
 }
 
-void UACWeakpointsManager::RevealWeakpoints()
+void UWeakpointsManager::RevealWeakpoints()
 {
 	int index = 1;
 	for (auto weakpoint : Weakpoints)
@@ -142,7 +142,7 @@ void UACWeakpointsManager::RevealWeakpoints()
 	}
 }
 
-void UACWeakpointsManager::RemoveWeakpoint(AWeakpoint* weakpoint)
+void UWeakpointsManager::RemoveWeakpoint(AWeakpoint* weakpoint)
 {
 	if(weakpoint->State != EWeakpointState::Revealed)
 		return;
@@ -156,7 +156,7 @@ void UACWeakpointsManager::RemoveWeakpoint(AWeakpoint* weakpoint)
 	}
 }
 
-void UACWeakpointsManager::WeakpointOverlapBegin(AActor* OverlapedActor, AActor* OtherActor)
+void UWeakpointsManager::WeakpointOverlapBegin(AActor* OverlapedActor, AActor* OtherActor)
 {
 	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red,OverlapedActor->GetName());
 	if(Weakpoints.Contains(OverlapedActor))

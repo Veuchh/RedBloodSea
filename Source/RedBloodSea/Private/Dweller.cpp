@@ -1,14 +1,14 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "ADweller.h"
+#include "Dweller.h"
 
 // Sets default values
-AADweller::AADweller()
+ADweller::ADweller()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	WeakpointsManager = CreateDefaultSubobject<UACWeakpointsManager>(TEXT("StaticMesh"));
+	WeakpointsManager = CreateDefaultSubobject<UWeakpointsManager>(TEXT("StaticMesh"));
 	WeakpointsManager->SetSkeleton(GetMesh());
 	
 }
@@ -19,7 +19,7 @@ AADweller::AADweller()
 // }
 
 // Called when the game starts or when spawned
-void AADweller::BeginPlay()
+void ADweller::BeginPlay()
 {
 	for (auto material : GetMesh()->GetMaterials())
 	{
@@ -40,14 +40,14 @@ void AADweller::BeginPlay()
 }
 
 // Called every frame
-void AADweller::Tick(float DeltaTime)
+void ADweller::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
 }
 
 // Called to bind functionality to input
-void AADweller::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+void ADweller::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 

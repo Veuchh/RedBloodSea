@@ -6,17 +6,17 @@
 #include "Weakpoint.h"
 #include "WeakpointData.h"
 #include "Components/ActorComponent.h"
-#include "ACWeakpointsManager.generated.h"
+#include "WeakpointsManager.generated.h"
 
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class REDBLOODSEA_API UACWeakpointsManager : public UActorComponent
+class REDBLOODSEA_API UWeakpointsManager : public UActorComponent
 {
 	GENERATED_BODY()
 
 public:	
 	// Sets default values for this component's properties
-	UACWeakpointsManager();
+	UWeakpointsManager();
 	UPROPERTY(EditAnywhere, Category="Weakpoints Handler")
 	TObjectPtr<UClass> Weakpoint_BP;
 	UPROPERTY(EditAnywhere, Category="Weakpoints Handler")

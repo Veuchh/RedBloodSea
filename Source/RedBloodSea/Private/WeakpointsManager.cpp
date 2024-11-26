@@ -119,7 +119,7 @@ void UWeakpointsManager::AttachWeakpoint(const FWeakpointSlot& WeakpointSlot,con
 		FName name = *FString("WeakPointPos").Append(FString::FromInt(index));
 		FName size = *FString("Size").Append(FString::FromInt(index));
 		material->SetVectorParameterValue(name,FLinearColor(position[0],position[1],position[2],0));
-		material->SetScalarParameterValue(size,50*Size);
+		material->SetScalarParameterValue(size,60*Size);
 	}
 }
 
@@ -140,6 +140,7 @@ void UWeakpointsManager::RevealWeakpoints()
 		}
 		index++;
 	}
+	OnWeakpointReveal.Broadcast(owner);
 }
 
 void UWeakpointsManager::RemoveWeakpoint(AWeakpoint* weakpoint)
@@ -148,17 +149,19 @@ void UWeakpointsManager::RemoveWeakpoint(AWeakpoint* weakpoint)
 		return;
 	int index = Weakpoints.IndexOfByKey(weakpoint)+1;
 	weakpoint->GetMesh()->SetVisibility(false);
+	weakpoint->GetCollider()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	weakpoint->State = EWeakpointState::Damaged;
 	for (auto material : materialInstances)
 	{
 		FName name = *FString("Opacity").Append(FString::FromInt(index));
 		material->SetScalarParameterValue(name,0);
 	}
+	OnWeakpointHit.Broadcast(owner, weakpoint);
 }
 
 void UWeakpointsManager::WeakpointOverlapBegin(AActor* OverlapedActor, AActor* OtherActor)
 {
-	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red,OverlapedActor->GetName());
+	//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red,OverlapedActor->GetName());
 	if(Weakpoints.Contains(OverlapedActor))
 	{
 		RemoveWeakpoint(Cast<AWeakpoint>(OverlapedActor));

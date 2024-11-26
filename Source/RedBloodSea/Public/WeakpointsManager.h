@@ -48,13 +48,20 @@ public:
 	void RevealWeakpoints();
 	UFUNCTION(BlueprintCallable)
 	void RemoveWeakpoint(AWeakpoint* weakpoint);
-	//DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FWeakpointOverlapBegin, AActor*, Weakpoint, AActor*, OtherActor);
-	//UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="Weakpoints")
-	//FWeakpointOverlapBegin OnWeakpointOverlapBegin;
 	UFUNCTION()
 	void WeakpointOverlapBegin(AActor* OverlapedActor, AActor* OtherActor);
 	void SetSkeleton(USkeletalMeshComponent* skeleton);
 	void SetMaterials(TArray<TObjectPtr<UMaterialInstanceDynamic>> newMaterialInstances);
-	
+
+
+
+	DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FWeakpointReveal, AActor*, Character);
+	UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="Weakpoints Handler")
+	FWeakpointReveal OnWeakpointReveal;
+
+	DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FWeakpointHit,AActor*, Character, AActor*, Weakpoint);
+	UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="Weakpoints Handler")
+	FWeakpointHit OnWeakpointHit;
+		
 		
 };

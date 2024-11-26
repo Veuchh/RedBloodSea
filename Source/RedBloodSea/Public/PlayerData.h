@@ -14,6 +14,7 @@ public:
 	//-------------------------------------------Movement
 	static FVector2D CurrentMovementInput;
 	static bool IsDashing;
+	static int RemainingAirDashes;
 	static float DashEndTime;
 	static float NextAllowedDash;
 	

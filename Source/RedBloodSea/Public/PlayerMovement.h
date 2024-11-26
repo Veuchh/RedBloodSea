@@ -44,6 +44,10 @@ private:
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Default Movement")
 	float defaultGravity = 50;
 
+	/*The max amount of time an airborne player can dash before touching the ground*/
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Dash")
+	int  maxDashInAir = 1;
+
 	/*The duration of a dash, in seconds*/
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Dash")
 	float dashDuration = .2f;
@@ -91,6 +95,7 @@ public:
 	void OnDashInput();
 	void OnJumpInput(bool isJumping);
 	void OnGroundSlamInput();
+	void RefreshDash();
 
 	UPROPERTY(BlueprintAssignable, Category = "Movement")
 	FOnDashStart OnDashStart;

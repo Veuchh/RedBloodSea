@@ -15,18 +15,6 @@ UACWeakpointsManager::UACWeakpointsManager()
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
-	WeightTable.Add(EWeakpointWeight::HIGH,10);
-	WeightTable.Add(EWeakpointWeight::MID,5);
-	WeightTable.Add(EWeakpointWeight::LOW,2);
-
-	TypeFilter.Add(EWeakpointType::ARMS,true);
-	TypeFilter.Add(EWeakpointType::LEGS,true);
-	TypeFilter.Add(EWeakpointType::TORSO,true);
-	TypeFilter.Add(EWeakpointType::HEAD,true);
-
-	SizeChart.Add(EWeakpointSize::BIG,1);
-	SizeChart.Add(EWeakpointSize::MEDIUM,1);
-	SizeChart.Add(EWeakpointSize::SMALL,1);
 }
 
 // Called when the game starts
@@ -47,7 +35,7 @@ void UACWeakpointsManager::TickComponent(float DeltaTime, ELevelTick TickType, F
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
 	int index = 1;
-	for (auto weakpoint : weakpoints)
+	for (auto weakpoint : Weakpoints)
 	{
 		for (auto material : materialInstances)
 		{
@@ -60,20 +48,6 @@ void UACWeakpointsManager::TickComponent(float DeltaTime, ELevelTick TickType, F
 	// ...
 }
 
-TArray<FName> UACWeakpointsManager::GetAllWeakpointsSockets()
-{
-	TArray<FName> result;
-	if(skeleton == nullptr)
-		return result;
-	 for (auto name : skeleton->GetAllSocketNames())
-	 {
-	 	if(name.ToString().StartsWith("wp_"))
-	 	{
-	 		result.Add(name);
-	 	}
-	 }
-	return result;
-}
 
 void UACWeakpointsManager::SetSkeleton(USkeletalMeshComponent* newSkeleton)
 {
@@ -89,34 +63,35 @@ void UACWeakpointsManager::CreateWeakPoints()
 {
 	owner = GetOwner();
 	int count = 0;
-	for (auto const & WeakpointSlot : WeakpointsSockets)
+	for (auto const & WeakpointSlot : WeakpointData->WeakpointsSockets)
 	{
-		if(WeakpointSlot.bIsUsed || !TypeFilter[WeakpointSlot.Type])
+		if(UsedWeakpointsSocketsNames.Contains(WeakpointSlot.SocketName)  || !(TypeFilter & static_cast<uint8>(WeakpointSlot.Type)))
 			continue;
-		count += WeightTable[WeakpointSlot.Weight];
+		count += WeakpointData->WeightTable[static_cast<int>(WeakpointSlot.Weight)];
 	}
 
+	int Size = static_cast<int>(EWeakpointSize::BIG);
 	for (auto SizeCount : SizeNumber)
 	{
-		for (int i = 0; i < SizeCount.Value; i++)
+		for (int i = 0; i < SizeCount; i++)
 		{
 			int randomInt = FMath::RandRange(0, count - 1);
-			for (auto & WeakpointSlot : WeakpointsSockets)
+			for (auto & WeakpointSlot : WeakpointData->WeakpointsSockets)
 			{
-				if(WeakpointSlot.bIsUsed || !TypeFilter[WeakpointSlot.Type])
+				if(UsedWeakpointsSocketsNames.Contains(WeakpointSlot.SocketName) || !(TypeFilter & static_cast<uint8>(WeakpointSlot.Type)))
 					continue;
 			
-				randomInt -= WeightTable[WeakpointSlot.Weight];
+				randomInt -= WeakpointData->WeightTable[static_cast<int>(WeakpointSlot.Weight)];
 				
 				if(randomInt < 0)
 				{
-					AttachWeakpoint(WeakpointSlot,SizeChart[SizeCount.Key]);
-					WeakpointSlot.bIsUsed = true;
-					count -= WeightTable[WeakpointSlot.Weight];
+					AttachWeakpoint(WeakpointSlot,WeakpointData->SizeChart[Size]);
+					count -= WeakpointData->WeightTable[static_cast<int>(WeakpointSlot.Weight)];
 					break;
 				}
 			}
 		}
+		Size +=1;
 	}
 	
 }
@@ -132,11 +107,12 @@ void UACWeakpointsManager::AttachWeakpoint(const FWeakpointSlot& WeakpointSlot,c
 		FMath::FRandRange(-WeakpointSlot.MaxOffset.Y,WeakpointSlot.MaxOffset.Y),
 		FMath::FRandRange(-WeakpointSlot.MaxOffset.Z,WeakpointSlot.MaxOffset.Z)};
 	newActor->SetActorRelativeLocation(offset);
-	TObjectPtr<AWeakpoint> weakpoint = Cast<AWeakpoint>(newActor);
-	weakpoint->SetActorScale3D(FVector(1,1,1)*Size);
-	weakpoints.Add(weakpoint);
-	weakpoint->OnActorBeginOverlap.AddDynamic(this,&UACWeakpointsManager::WeakpointOverlapBegin);
-	int index = weakpoints.Num();
+	TObjectPtr<AWeakpoint> Weakpoint = Cast<AWeakpoint>(newActor);
+	Weakpoint->SetActorScale3D(FVector(1,1,1)*Size);
+	Weakpoints.Add(Weakpoint);
+	UsedWeakpointsSocketsNames.Add(WeakpointSlot.SocketName);
+	Weakpoint->OnActorBeginOverlap.AddDynamic(this,&UACWeakpointsManager::WeakpointOverlapBegin);
+	int index = Weakpoints.Num();
 	for (auto material : materialInstances)
 	{
 		UE::Math::TVector<double> position = newActor->GetTransform().GetLocation();
@@ -150,7 +126,7 @@ void UACWeakpointsManager::AttachWeakpoint(const FWeakpointSlot& WeakpointSlot,c
 void UACWeakpointsManager::RevealWeakpoints()
 {
 	int index = 1;
-	for (auto weakpoint : weakpoints)
+	for (auto weakpoint : Weakpoints)
 	{
 		if(weakpoint->State != EWeakpointState::Hidden)
 			continue;
@@ -170,7 +146,7 @@ void UACWeakpointsManager::RemoveWeakpoint(AWeakpoint* weakpoint)
 {
 	if(weakpoint->State != EWeakpointState::Revealed)
 		return;
-	int index = weakpoints.IndexOfByKey(weakpoint)+1;
+	int index = Weakpoints.IndexOfByKey(weakpoint)+1;
 	weakpoint->GetMesh()->SetVisibility(false);
 	weakpoint->State = EWeakpointState::Damaged;
 	for (auto material : materialInstances)
@@ -183,7 +159,7 @@ void UACWeakpointsManager::RemoveWeakpoint(AWeakpoint* weakpoint)
 void UACWeakpointsManager::WeakpointOverlapBegin(AActor* OverlapedActor, AActor* OtherActor)
 {
 	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red,OverlapedActor->GetName());
-	if(weakpoints.Contains(OverlapedActor))
+	if(Weakpoints.Contains(OverlapedActor))
 	{
 		RemoveWeakpoint(Cast<AWeakpoint>(OverlapedActor));
 	}

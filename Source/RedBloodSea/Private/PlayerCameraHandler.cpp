@@ -44,7 +44,6 @@ void UPlayerCameraHandler::SetupPlayerCameraComponent(ACharacter* PlayerCharacte
 	playerCharacter = PlayerCharacter;
 	playerCameraComponent = PlayerCameraComponent;
 	playerCameraComponent->AttachToComponent(playerCharacter->GetMesh(), FAttachmentTransformRules::KeepWorldTransform, TEXT("cameraSocket"));
-	playerCameraComponent->SetWorldScale3D(FVector3d::One());
 }
 
 void UPlayerCameraHandler::OnLookInput(const FVector2D newLookInput)

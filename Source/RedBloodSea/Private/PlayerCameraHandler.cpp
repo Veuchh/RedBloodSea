@@ -33,6 +33,8 @@ void UPlayerCameraHandler::TickComponent(float DeltaTime, ELevelTick TickType, F
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
+	playerCharacter->GetMesh()->SetRelativeRotation(FRotator(playerCharacter->GetControlRotation().Pitch, 0, 0));
+	
 	CameraRoll();
 	CameraFOV();
 }
@@ -41,6 +43,7 @@ void UPlayerCameraHandler::SetupPlayerCameraComponent(ACharacter* PlayerCharacte
 {
 	playerCharacter = PlayerCharacter;
 	playerCameraComponent = PlayerCameraComponent;
+	playerCameraComponent->AttachToComponent(playerCharacter->GetMesh(), FAttachmentTransformRules::KeepWorldTransform, TEXT("cameraSocket"));
 }
 
 void UPlayerCameraHandler::OnLookInput(const FVector2D newLookInput)

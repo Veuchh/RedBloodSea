@@ -22,10 +22,6 @@ class ARedBloodSeaCharacter : public ACharacter
 {
 	GENERATED_BODY()
 
-	/** Pawn mesh: 1st person view (arms; seen only by self) */
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Mesh, meta = (AllowPrivateAccess = "true"))
-	USkeletalMeshComponent* Mesh1P;
-
 	UPlayerInputHandler* PlayerInputHandler;
 
 public:
@@ -45,8 +41,6 @@ protected:
 	// End of APawn interface
 
 public:
-	/** Returns Mesh1P subobject **/
-	USkeletalMeshComponent* GetMesh1P() const { return Mesh1P; }
 	/** Returns FirstPersonCameraComponent subobject **/
 	UCameraComponent* GetFirstPersonCameraComponent() const { return FirstPersonCameraComponent; }
 

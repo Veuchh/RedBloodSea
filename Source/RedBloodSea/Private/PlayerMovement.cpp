@@ -26,7 +26,9 @@ void UPlayerMovement::BeginPlay()
 void UPlayerMovement::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
+	
+	RefreshDash();
+	
 	if (PlayerData::IsDashing)
 		DashLogic();
 }
@@ -94,9 +96,19 @@ void UPlayerMovement::OnNewMoveInput(FVector2D newMoveInput)
 
 void UPlayerMovement::OnDashInput()
 {
-	if (!PlayerData::CanDash() || PlayerData::NextAllowedDash > UGameplayStatics::GetRealTimeSeconds(GetWorld()))
+	//Data based dash check
+	if (!PlayerData::CanDash()
+		//Dash cooldown check
+		|| PlayerData::NextAllowedDash > UGameplayStatics::GetRealTimeSeconds(GetWorld())
+		//Airborne player check remaining dashes
+		|| (playerCharacter->GetCharacterMovement()->IsFalling() && PlayerData::RemainingAirDashes <= 0))
 	{
 		return;
+	}
+
+	if (playerCharacter->GetCharacterMovement()->IsFalling())
+	{
+		PlayerData::RemainingAirDashes--;
 	}
 
 	OnDashStart.Broadcast();
@@ -133,4 +145,12 @@ void UPlayerMovement::OnGroundSlamInput()
 
 	playerCharacter->GetCharacterMovement()->Velocity *= groundSlamHorizontalVelocityRemain;
 	playerCharacter->GetCharacterMovement()->Velocity.Z = -groundSlamVerticalStrength;
+}
+
+void UPlayerMovement::RefreshDash()
+{
+	if (!playerCharacter->GetCharacterMovement()->IsFalling())
+	{
+		PlayerData::RemainingAirDashes = maxDashInAir;
+	}
 }

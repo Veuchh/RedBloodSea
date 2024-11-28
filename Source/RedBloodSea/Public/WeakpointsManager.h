@@ -48,8 +48,6 @@ public:
 	void RevealWeakpoints();
 	UFUNCTION(BlueprintCallable)
 	void RemoveWeakpoint(AWeakpoint* weakpoint);
-	UFUNCTION()
-	void WeakpointOverlapBegin(AActor* OverlapedActor, AActor* OtherActor);
 	void SetSkeleton(USkeletalMeshComponent* skeleton);
 	void SetMaterials(TArray<TObjectPtr<UMaterialInstanceDynamic>> newMaterialInstances);
 

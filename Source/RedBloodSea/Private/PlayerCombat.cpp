@@ -3,6 +3,7 @@
 
 #include "PlayerCombat.h"
 
+#include "Dweller.h"
 #include "Kismet/GameplayStatics.h"
 
 // Sets default values for this component's properties
@@ -113,6 +114,70 @@ void UPlayerCombat::CallAttackBlueprintCallback(const BufferableAttack attack)
 	}
 }
 
+void UPlayerCombat::OnOverlapBegin(class UPrimitiveComponent* HitComp, class AActor* OtherActor,
+                                   class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep,
+                                   const FHitResult& SweepResult)
+{
+	//We don't want the same attack hitting the same enemy twice
+	// This is especially useful for attacks with multiple colliders
+	if (currentAttackHitActors.Contains(OtherActor))
+	{
+		return;
+	}
+
+	currentAttackHitActors.Add(OtherActor);
+
+	switch (PlayerData::CurrentAttack)
+	{
+	case BufferableAttack::Slash:
+		OnSlashOverlap(HitComp, OtherActor);
+		break;
+	case BufferableAttack::Thrust:
+		OnThrustOverlap(HitComp, OtherActor);
+		break;
+	}
+}
+
+void UPlayerCombat::OnSlashOverlap(UPrimitiveComponent* HitComp, AActor* OtherActor)
+{
+	UWeakpointsManager* weakPointsManager = OtherActor->GetComponentByClass<UWeakpointsManager>();
+
+	//An enemy was hit
+	if (weakPointsManager)
+	{
+		weakPointsManager->RevealWeakpoints();
+		OnSlashHitEnemy.Broadcast(OtherActor);
+	}
+	//The environment was hit
+	else
+	{
+		OnSlashHitEnviro.Broadcast(OtherActor);
+	}
+}
+
+void UPlayerCombat::OnThrustOverlap(UPrimitiveComponent* HitComp, AActor* OtherActor)
+{
+	AActor* AttachedParent = OtherActor->GetAttachParentActor();
+
+	//The environment was hit
+	if (!AttachedParent)
+	{
+		FOnThrustHitEnviro.Broadcast(OtherActor);
+		return;
+	}
+
+	UWeakpointsManager* weakPointsManager = AttachedParent->GetComponentByClass<UWeakpointsManager>();
+
+	if (!weakPointsManager)
+		return;
+
+	if (OtherActor->IsA(AWeakpoint::StaticClass()))
+	{
+		weakPointsManager->RemoveWeakpoint(Cast<AWeakpoint>(OtherActor));
+		OnThrustHitWeakpoint.Broadcast(Cast<AWeakpoint>(OtherActor));
+	}
+}
+
 
 void UPlayerCombat::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
@@ -139,7 +204,7 @@ void UPlayerCombat::TryConsumeAttackBuffer()
 	PlayerData::AttackBuffer.RemoveAt(0);
 	PlayerData::AttackStartTime = UGameplayStatics::GetRealTimeSeconds(GetWorld());
 
-	CallAttackBlueprintCallback(PlayerData::CurrentAttack );
+	CallAttackBlueprintCallback(PlayerData::CurrentAttack);
 }
 
 void UPlayerCombat::OngoingAttackLogic()
@@ -175,10 +240,19 @@ void UPlayerCombat::OngoingAttackLogic()
 
 void UPlayerCombat::ToggleAttackCollider(BufferableAttack attack, bool isToggled)
 {
+	currentAttackHitActors.Empty();
+
 	for (UPrimitiveComponent* collider : GetAttackColliders(attack))
 	{
 		collider->SetGenerateOverlapEvents(isToggled);
 		collider->SetVisibility(isToggled);
+
+		if (isToggled)
+			collider->OnComponentBeginOverlap.AddDynamic(this, &UPlayerCombat::OnOverlapBegin);
+
+		else
+			collider->OnComponentBeginOverlap.RemoveDynamic(this, &UPlayerCombat::OnOverlapBegin);
+
 		collider->UpdateOverlaps();
 	}
 }

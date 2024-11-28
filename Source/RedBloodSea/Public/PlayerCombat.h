@@ -5,17 +5,17 @@
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "PlayerData.h"
+#include "Weakpoint.h"
 #include "Components/BoxComponent.h"
 #include "PlayerCombat.generated.h"
 
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnSlashStart);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnThrustStart);
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnSlashHit);
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnThrustHitWeakpoint);
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnThrustHitNoWeakpoint);
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnSlashHitEnviroMat1);
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnSlashHitEnviroMat2);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnSlashHitEnemy, AActor*, HitEnemy);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnSlashHitEnviro, AActor*, HitActor);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnThrustHitWeakpoint, AWeakpoint*, HitWeakpoint);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnThrustHitEnviro, AActor*, HitActor);
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class REDBLOODSEA_API UPlayerCombat : public UActorComponent
@@ -84,6 +84,11 @@ protected:
 	TArray<UPrimitiveComponent*> GetAttackColliders(BufferableAttack attack);
 	 float GetAttackBufferCooldown(const BufferableAttack attack) const;
 	void CallAttackBlueprintCallback(const BufferableAttack attack);
+	UFUNCTION()
+	void OnOverlapBegin(class UPrimitiveComponent* HitComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult);
+	void OnSlashOverlap(UPrimitiveComponent* HitComp, AActor* OtherActor);
+	void OnThrustOverlap(UPrimitiveComponent* HitComp, AActor* OtherActor);
+	TArray<AActor*> currentAttackHitActors;
 public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
@@ -97,13 +102,11 @@ public:
 	UPROPERTY(BlueprintAssignable, Category = "Combat")
 	FOnThrustStart OnThrustStart;
 	UPROPERTY(BlueprintAssignable, Category = "Combat")
-	FOnSlashHit OnSlashHit;
+	FOnSlashHitEnemy OnSlashHitEnemy;
+	UPROPERTY(BlueprintAssignable, Category = "Combat")
+	FOnSlashHitEnviro OnSlashHitEnviro;
 	UPROPERTY(BlueprintAssignable, Category = "Combat")
 	FOnThrustHitWeakpoint OnThrustHitWeakpoint;
 	UPROPERTY(BlueprintAssignable, Category = "Combat")
-	FOnThrustHitNoWeakpoint OnThrustHitNoWeakpoint;
-	UPROPERTY(BlueprintAssignable, Category = "Combat")
-	FOnSlashHitEnviroMat1 OnSlashHitEnviroMat1;
-	UPROPERTY(BlueprintAssignable, Category = "Combat")
-	FOnSlashHitEnviroMat2 OnSlashHitEnviroMat2;
+	FOnThrustHitEnviro FOnThrustHitEnviro;
 };

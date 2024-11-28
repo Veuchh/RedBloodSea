@@ -118,6 +118,15 @@ void UPlayerCombat::OnOverlapBegin(class UPrimitiveComponent* HitComp, class AAc
                                    class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep,
                                    const FHitResult& SweepResult)
 {
+	//We don't want the same attack hitting the same enemy twice
+	// This is especially useful for attacks with multiple colliders
+	if (currentAttackHitActors.Contains(OtherActor))
+	{
+		return;
+	}
+
+	currentAttackHitActors.Add(OtherActor);
+
 	switch (PlayerData::CurrentAttack)
 	{
 	case BufferableAttack::Slash:
@@ -148,7 +157,6 @@ void UPlayerCombat::OnSlashOverlap(UPrimitiveComponent* HitComp, AActor* OtherAc
 
 void UPlayerCombat::OnThrustOverlap(UPrimitiveComponent* HitComp, AActor* OtherActor)
 {
-
 	AActor* AttachedParent = OtherActor->GetAttachParentActor();
 
 	//The environment was hit
@@ -232,6 +240,8 @@ void UPlayerCombat::OngoingAttackLogic()
 
 void UPlayerCombat::ToggleAttackCollider(BufferableAttack attack, bool isToggled)
 {
+	currentAttackHitActors.Empty();
+
 	for (UPrimitiveComponent* collider : GetAttackColliders(attack))
 	{
 		collider->SetGenerateOverlapEvents(isToggled);

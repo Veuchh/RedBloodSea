@@ -88,6 +88,7 @@ protected:
 	void OnOverlapBegin(class UPrimitiveComponent* HitComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult);
 	void OnSlashOverlap(UPrimitiveComponent* HitComp, AActor* OtherActor);
 	void OnThrustOverlap(UPrimitiveComponent* HitComp, AActor* OtherActor);
+	TArray<AActor*> currentAttackHitActors;
 public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;

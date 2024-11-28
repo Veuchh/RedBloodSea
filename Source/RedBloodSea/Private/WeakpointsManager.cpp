@@ -111,7 +111,6 @@ void UWeakpointsManager::AttachWeakpoint(const FWeakpointSlot& WeakpointSlot,con
 	Weakpoint->SetActorScale3D(FVector(1,1,1)*Size);
 	Weakpoints.Add(Weakpoint);
 	UsedWeakpointsSocketsNames.Add(WeakpointSlot.SocketName);
-	Weakpoint->OnActorBeginOverlap.AddDynamic(this,&UWeakpointsManager::WeakpointOverlapBegin);
 	int index = Weakpoints.Num();
 	for (auto material : materialInstances)
 	{
@@ -145,7 +144,7 @@ void UWeakpointsManager::RevealWeakpoints()
 
 void UWeakpointsManager::RemoveWeakpoint(AWeakpoint* weakpoint)
 {
-	if(weakpoint->State != EWeakpointState::Revealed)
+	if(!Weakpoints.Contains(weakpoint) || weakpoint->State != EWeakpointState::Revealed)
 		return;
 	int index = Weakpoints.IndexOfByKey(weakpoint)+1;
 	weakpoint->GetMesh()->SetVisibility(false);
@@ -157,15 +156,6 @@ void UWeakpointsManager::RemoveWeakpoint(AWeakpoint* weakpoint)
 		material->SetScalarParameterValue(name,0);
 	}
 	OnWeakpointHit.Broadcast(owner, weakpoint);
-}
-
-void UWeakpointsManager::WeakpointOverlapBegin(AActor* OverlapedActor, AActor* OtherActor)
-{
-	//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red,OverlapedActor->GetName());
-	if(Weakpoints.Contains(OverlapedActor))
-	{
-		RemoveWeakpoint(Cast<AWeakpoint>(OverlapedActor));
-	}
 }
 
 

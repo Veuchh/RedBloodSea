@@ -19,6 +19,8 @@ public:
 	static float NextAllowedDash;
 	
 	//-------------------------------------------Combat
+	static int MaxHPAmount;
+	static int CurrentHPAmount;
 	static float GetCurrentAttackStartupEndTime();
 	static float GetCurrentAttackCooldownEndTime();
 	static float GetCurrentAttackColliderEndTime();

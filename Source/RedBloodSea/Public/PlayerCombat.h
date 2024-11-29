@@ -35,6 +35,10 @@ private:
 protected:
 	/*The max amount of queued attacks*/
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
+	int maxHPAmount = 100;
+
+	/*The max amount of queued attacks*/
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
 	int maxAttackBufferCapacity = 1;
 
 	//SLASH
@@ -96,6 +100,9 @@ public:
 	void OnSlashInput();
 	void OnThrustInput();
 	void OnPossessInput();
+
+	UFUNCTION(BlueprintCallable)
+	void DamagePlayer(int damageAmount);
 	
 	UPROPERTY(BlueprintAssignable, Category = "Combat")
 	FOnSlashStart OnSlashStart;

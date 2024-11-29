@@ -12,6 +12,8 @@ PlayerAttackState PlayerData::CurrentAttackState = PlayerAttackState::None;
 float PlayerData::AttackStartTime = 0;
 float PlayerData::NextAllowedInputBufferTime = 0;
 
+int PlayerData::CurrentHPAmount = 0; //Initialized in PlayerCombat.BeginPlay
+int PlayerData::MaxHPAmount = 0; //Initialized in PlayerCombat.BeginPlay
 float PlayerData::SlashAttackStartupDelay = 0; //Initialized in PlayerCombat.BeginPlay
 float PlayerData::SlashAttackDuration = 0; //Initialized in PlayerCombat.BeginPlay
 float PlayerData::SlashAttackCooldown = 0; //Initialized in PlayerCombat.BeginPlay

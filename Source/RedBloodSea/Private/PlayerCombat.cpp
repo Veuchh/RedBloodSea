@@ -287,6 +287,6 @@ void UPlayerCombat::OnPossessInput()
 void UPlayerCombat::DamagePlayer(int damageAmount)
 {
 	PlayerData::CurrentHPAmount -= damageAmount;
-	FString debug = "Player hit. Current HP : " + FString::FromInt(PlayerData::CurrentHPAmount) + "/ " + FString::FromInt(PlayerData::MaxHPAmount);
-	GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Red, debug);
+
+	OnPlayerHit.Broadcast((float)PlayerData::CurrentHPAmount/PlayerData::MaxHPAmount);
 }

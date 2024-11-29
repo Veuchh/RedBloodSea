@@ -12,6 +12,7 @@
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnSlashStart);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnThrustStart);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnPlayerHit, float, remainingHealthRatio);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnSlashHitEnemy, AActor*, HitEnemy);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnSlashHitEnviro, AActor*, HitActor);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnThrustHitWeakpoint, AWeakpoint*, HitWeakpoint);
@@ -104,6 +105,8 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void DamagePlayer(int damageAmount);
 	
+	UPROPERTY(BlueprintAssignable, Category = "Combat")
+	FOnPlayerHit OnPlayerHit;
 	UPROPERTY(BlueprintAssignable, Category = "Combat")
 	FOnSlashStart OnSlashStart;
 	UPROPERTY(BlueprintAssignable, Category = "Combat")

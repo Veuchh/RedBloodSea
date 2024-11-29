@@ -280,10 +280,6 @@ void UPlayerCombat::OnThrustInput()
 	TryAddAttackToBuffer(BufferableAttack::Thrust);
 }
 
-void UPlayerCombat::OnPossessInput()
-{
-}
-
 void UPlayerCombat::DamagePlayer(int damageAmount)
 {
 	PlayerData::CurrentHPAmount -= damageAmount;

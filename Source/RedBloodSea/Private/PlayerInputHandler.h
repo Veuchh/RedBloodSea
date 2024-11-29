@@ -7,6 +7,7 @@
 #include "PlayerMovement.h"
 #include "PlayerCombat.h"
 #include "PlayerCameraHandler.h"
+#include "PlayerPossess.h"
 #include "Components/ActorComponent.h"                    
 #include "PlayerInputHandler.generated.h"
 
@@ -20,6 +21,7 @@ private:
 	UPlayerMovement* playerMovement;
 	UPlayerCombat* playerCombat;
 	UPlayerCameraHandler* playerCameraHandler;
+	UPlayerPossess* playerPossess;
 	
 	/** Move Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
@@ -45,9 +47,13 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* SlashAction;
 
-	/** Thrust Input Action */
+	/** Thrust & possess Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* ThrustAction;
+
+	/** Possess mode Input Action */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	UInputAction* PossessModeAction;
 
 	void MoveInput(const FInputActionValue& Value);
 	void LookInput(const FInputActionValue& Value);
@@ -57,6 +63,8 @@ private:
 	void GroundSlamInput(const FInputActionValue& Value);
 	void SlashInput(const FInputActionValue& Value);
 	void ThrustInput(const FInputActionValue& Value);
+	void PossessInput(const FInputActionValue& Value);
+	void PossessModeInput(const FInputActionValue& Value);
 
 public:	
 	// Sets default values for this component's properties

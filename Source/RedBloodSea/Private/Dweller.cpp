@@ -8,7 +8,7 @@ ADweller::ADweller()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	WeakpointsManager = CreateDefaultSubobject<UWeakpointsManager>(TEXT("StaticMesh"));
+	WeakpointsManager = CreateDefaultSubobject<UWeakpointsManager>(TEXT("WeakpointManager"));
 	WeakpointsManager->SetSkeleton(GetMesh());
 	
 }

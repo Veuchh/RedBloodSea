@@ -18,8 +18,6 @@ public:
 	// Sets default values for this component's properties
 	UWeakpointsManager();
 	UPROPERTY(EditAnywhere, Category="Weakpoints Handler")
-	TObjectPtr<UClass> Weakpoint_BP;
-	UPROPERTY(EditAnywhere, Category="Weakpoints Handler")
 	const TObjectPtr<UWeakpointData> WeakpointData;
 	UPROPERTY(EditAnywhere, Category="Weakpoints Handler",meta=(Bitmask,BitmaskEnum = EWeakpointType))
 	uint8 TypeFilter;

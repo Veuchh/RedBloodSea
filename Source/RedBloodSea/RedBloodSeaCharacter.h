@@ -1,11 +1,10 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
-
 #pragma once
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "Logging/LogMacros.h"
 #include "PlayerInputHandler.h"
+#include "PlayerPossess.h"
 #include "RedBloodSeaCharacter.generated.h"
 
 class UInputComponent;

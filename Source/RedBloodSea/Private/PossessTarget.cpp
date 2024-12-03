@@ -32,3 +32,8 @@ void UPossessTarget::TickComponent(float DeltaTime, ELevelTick TickType, FActorC
 	// ...
 }
 
+void UPossessTarget::OnPossessed()
+{
+	GetOwner()->Destroy();
+}
+

@@ -1,6 +1,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "PlayerPossessState.h"
 #include "BufferableAttack.h"
 #include "PlayerAttackState.h"
 
@@ -42,10 +43,14 @@ public:
 	static float ThrustAttackCooldown;
 
 	//-------------------------------------------Possession
-	static bool IsInPossessMode;
+	static PlayerPossessState CurrentPossessState;
+	
 	//-------------------------------------------Test methods for the player
 	static bool CanMove();
+	static bool CanAddAttackToBuffer();
 	static bool CanAttack();
 	static bool CanDash();
 	static bool CanGroundSlam();
+	static bool CanEnterPossessMode();
+	static bool CanUsePossess();
 };

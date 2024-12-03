@@ -99,7 +99,7 @@ void UWeakpointsManager::CreateWeakPoints()
 
 void UWeakpointsManager::AttachWeakpoint(const FWeakpointSlot& WeakpointSlot,const float Size)
 {
-	AActor* newActor = GetWorld()->SpawnActor(Weakpoint_BP);
+	AActor* newActor = GetWorld()->SpawnActor(WeakpointData->Weakpoint_BP);
 	newActor->AttachToComponent(skeleton,FAttachmentTransformRules::SnapToTargetNotIncludingScale,WeakpointSlot.SocketName);
 	
 	UE::Math::TVector<double> offset = {

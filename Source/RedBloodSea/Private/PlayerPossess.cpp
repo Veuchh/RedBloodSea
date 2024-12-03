@@ -5,6 +5,7 @@
 
 #include "PossessTarget.h"
 #include "GameFramework/Character.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values for this component's properties
 UPlayerPossess::UPlayerPossess()
@@ -22,11 +23,16 @@ void UPlayerPossess::SetupPlayerPossessComponent(ACharacter* Character,
 void UPlayerPossess::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+	
 	FString debug = "";
+	
 	switch (PlayerData::CurrentPossessState)
 	{
 	case PlayerPossessState::None:
 		debug = "None";
+		break;
+	case PlayerPossessState::TogglingAimMode:
+		debug = "TogglingPossessAim";
 		break;
 	case PlayerPossessState::PossessAim:
 		debug = "PossessAim";
@@ -42,15 +48,39 @@ void UPlayerPossess::TickComponent(float DeltaTime, ELevelTick TickType, FActorC
 		break;
 	}
 	GEngine->AddOnScreenDebugMessage(-1, 0, FColor::Green, debug);
+
+	// ReSharper disable once CppDefaultCaseNotHandledInSwitchStatement
+	// ReSharper disable once CppIncompleteSwitchStatement
+	//We only cover states that have "waiting" states
+	switch (PlayerData::CurrentPossessState)
+	{
+	case PlayerPossessState::TogglingAimMode:
+		if (UGameplayStatics::GetTimeSeconds(GetWorld()) >= nextAllowedAction)
+		{
+			PlayerData::CurrentPossessState = PlayerPossessState::PossessAim;
+		}
+		break;
+	case PlayerPossessState::ThrowFail:
+		if (UGameplayStatics::GetTimeSeconds(GetWorld()) >= nextAllowedAction)
+	{
+		PlayerData::CurrentPossessState = PlayerPossessState::None;
+	}
+		break;
+	case PlayerPossessState::ThrowTarget:
+		break;
+	case PlayerPossessState::ZoomingCamera:
+		break;
+	}
 }
 
 void UPlayerPossess::OnPossessModeInput(bool isToggled)
 {
 	if (isToggled && PlayerData::CanEnterPossessMode())
 	{
-		PlayerData::CurrentPossessState = PlayerPossessState::PossessAim;
+		PlayerData::CurrentPossessState = PlayerPossessState::TogglingAimMode;
+		nextAllowedAction = UGameplayStatics::GetTimeSeconds(GetWorld()) + holdDelayToEnterAimingMode;
 	}
-	else if (!isToggled && PlayerData::CurrentPossessState == PlayerPossessState::PossessAim)
+	else if (!isToggled && PlayerData::CurrentPossessState == PlayerPossessState::TogglingAimMode || PlayerData::CurrentPossessState == PlayerPossessState::PossessAim)
 	{
 		PlayerData::CurrentPossessState = PlayerPossessState::None;
 	}
@@ -99,6 +129,8 @@ void UPlayerPossess::OnPossessInput()
 	else
 	{
 		OnThrowRapierHitNothing.Broadcast();
+		PlayerData::CurrentPossessState = PlayerPossessState::ThrowFail;
+		nextAllowedAction = UGameplayStatics::GetTimeSeconds(GetWorld()) + throwFailDuration;
 	}
 
 	//If no, play rapier return anim

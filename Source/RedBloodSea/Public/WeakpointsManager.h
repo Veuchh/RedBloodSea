@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "CountLevelInstanceSubsystem.h"
 #include "Weakpoint.h"
 #include "WeakpointData.h"
 #include "Components/ActorComponent.h"
@@ -27,9 +28,10 @@ public:
 	TArray<FName> UsedWeakpointsSocketsNames;
 
 private:
-	AActor* owner;
-	TObjectPtr<USkeletalMeshComponent> skeleton;
-	TArray<TObjectPtr<UMaterialInstanceDynamic>> materialInstances;
+	AActor* Owner;
+	TObjectPtr<UCountLevelInstanceSubsystem> CountSubSys;
+	TObjectPtr<USkeletalMeshComponent> Skeleton;
+	TArray<TObjectPtr<UMaterialInstanceDynamic>> MaterialInstances;
 	TArray<TObjectPtr<AWeakpoint>> Weakpoints;
 	
 	
@@ -47,7 +49,7 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void RemoveWeakpoint(AWeakpoint* weakpoint);
 	void SetSkeleton(USkeletalMeshComponent* skeleton);
-	void SetMaterials(TArray<TObjectPtr<UMaterialInstanceDynamic>> newMaterialInstances);
+	void SetMaterials(const TArray<TObjectPtr<UMaterialInstanceDynamic>>& newMaterialInstances);
 	bool CheckIfDead();
 
 

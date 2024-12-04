@@ -26,10 +26,12 @@ void UCountLevelInstanceSubsystem::GetKillPercent()
 void UCountLevelInstanceSubsystem::AddKill()
 {
 	killCount++;
+	GetKillPercent();
 }
 
 void UCountLevelInstanceSubsystem::AddPossess()
 {
 	possessCount++;
+	GetKillPercent();
 }
 

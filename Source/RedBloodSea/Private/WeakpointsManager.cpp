@@ -59,6 +59,17 @@ void UWeakpointsManager::SetMaterials(TArray<TObjectPtr<UMaterialInstanceDynamic
 	materialInstances = newMaterialInstances;
 }
 
+bool UWeakpointsManager::CheckIfDead()
+{
+	bool isDead = true;
+	for (auto Weakpoint : Weakpoints)
+	{
+		isDead &= (Weakpoint->State == EWeakpointState::Damaged);
+	}
+
+	return isDead;
+}
+
 void UWeakpointsManager::CreateWeakPoints()
 {
 	owner = GetOwner();
@@ -139,7 +150,7 @@ void UWeakpointsManager::RevealWeakpoints()
 		}
 		index++;
 	}
-	OnWeakpointReveal.Broadcast(owner);
+	OnWeakpointReveal.Broadcast();
 }
 
 void UWeakpointsManager::RemoveWeakpoint(AWeakpoint* weakpoint)
@@ -155,7 +166,9 @@ void UWeakpointsManager::RemoveWeakpoint(AWeakpoint* weakpoint)
 		FName name = *FString("Opacity").Append(FString::FromInt(index));
 		material->SetScalarParameterValue(name,0);
 	}
-	OnWeakpointHit.Broadcast(owner, weakpoint);
+	OnWeakpointHit.Broadcast(weakpoint);
+	if(CheckIfDead())
+		OnDeath.Broadcast();
 }
 
 

@@ -48,16 +48,19 @@ public:
 	void RemoveWeakpoint(AWeakpoint* weakpoint);
 	void SetSkeleton(USkeletalMeshComponent* skeleton);
 	void SetMaterials(TArray<TObjectPtr<UMaterialInstanceDynamic>> newMaterialInstances);
+	bool CheckIfDead();
 
 
 
-	DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FWeakpointReveal, AActor*, Character);
+	DECLARE_DYNAMIC_MULTICAST_DELEGATE(FWeakpointReveal);
 	UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="Weakpoints Handler")
 	FWeakpointReveal OnWeakpointReveal;
 
-	DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FWeakpointHit,AActor*, Character, AActor*, Weakpoint);
+	DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FWeakpointHit, AActor*, Weakpoint);
 	UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="Weakpoints Handler")
 	FWeakpointHit OnWeakpointHit;
 		
-		
+	DECLARE_DYNAMIC_MULTICAST_DELEGATE(FDeath);
+	UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="Weakpoints Handler")
+	FDeath OnDeath;
 };

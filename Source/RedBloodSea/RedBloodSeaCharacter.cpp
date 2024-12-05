@@ -41,6 +41,9 @@ void ARedBloodSeaCharacter::BeginPlay()
 
 	UPlayerCameraHandler* playerCameraHandler = this->GetComponentByClass<UPlayerCameraHandler>();
 	playerCameraHandler->SetupPlayerCameraComponent(this, FirstPersonCameraComponent);
+	
+	UPlayerPossess* playerPossess = this->GetComponentByClass<UPlayerPossess>();
+	playerPossess->SetupPlayerPossessComponent(this, FirstPersonCameraComponent);
 }
 
 void ARedBloodSeaCharacter::Tick(float deltaTime)

@@ -11,6 +11,7 @@ TArray<BufferableAttack> PlayerData::AttackBuffer = TArray<BufferableAttack>();
 PlayerAttackState PlayerData::CurrentAttackState = PlayerAttackState::None;
 float PlayerData::AttackStartTime = 0;
 float PlayerData::NextAllowedInputBufferTime = 0;
+PlayerPossessState PlayerData::CurrentPossessState = PlayerPossessState::None;
 
 int PlayerData::CurrentHPAmount = 0; //Initialized in PlayerCombat.BeginPlay
 int PlayerData::MaxHPAmount = 0; //Initialized in PlayerCombat.BeginPlay
@@ -41,6 +42,7 @@ void PlayerData::ResetData()
 	CurrentAttackState = PlayerAttackState::None;
 	AttackStartTime = 0;
 	NextAllowedInputBufferTime = 0;
+	CurrentPossessState = PlayerPossessState::None;
 }
 
 
@@ -88,17 +90,37 @@ bool PlayerData::CanMove()
 	return !IsDashing;
 }
 
+bool PlayerData::CanAddAttackToBuffer()
+{
+	return CurrentPossessState == PlayerPossessState::None;
+}
+
 bool PlayerData::CanAttack()
 {
-	return CurrentAttackState == PlayerAttackState::None;
+	return CurrentAttackState == PlayerAttackState::None
+	&& CurrentPossessState == PlayerPossessState::None;
 }
 
 bool PlayerData::CanDash()
 {
-	return !IsDashing;
+	return !IsDashing
+	&& CurrentPossessState == PlayerPossessState::None;
 }
 
 bool PlayerData::CanGroundSlam()
 {
-	return !IsDashing;
+	return !IsDashing
+	&& CurrentPossessState == PlayerPossessState::None;
+}
+
+bool PlayerData::CanEnterPossessMode()
+{
+	return true;
+}
+
+bool PlayerData::CanUsePossess()
+{
+	return CurrentPossessState == PlayerPossessState::PossessAim
+	&& !IsDashing
+	&& CurrentAttackState == PlayerAttackState::None;
 }

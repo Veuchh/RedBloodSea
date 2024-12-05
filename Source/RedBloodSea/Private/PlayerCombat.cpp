@@ -261,7 +261,8 @@ void UPlayerCombat::ToggleAttackCollider(BufferableAttack attack, bool isToggled
 
 void UPlayerCombat::TryAddAttackToBuffer(BufferableAttack attackToAdd)
 {
-	if (PlayerData::AttackBuffer.Num() >= PlayerData::MaxAttackBufferCapacity
+	if (!PlayerData::CanAddAttackToBuffer()
+		|| PlayerData::AttackBuffer.Num() >= PlayerData::MaxAttackBufferCapacity
 		|| PlayerData::NextAllowedInputBufferTime > UGameplayStatics::GetRealTimeSeconds(GetWorld()))
 		return;
 
@@ -278,10 +279,6 @@ void UPlayerCombat::OnSlashInput()
 void UPlayerCombat::OnThrustInput()
 {
 	TryAddAttackToBuffer(BufferableAttack::Thrust);
-}
-
-void UPlayerCombat::OnPossessInput()
-{
 }
 
 void UPlayerCombat::DamagePlayer(int damageAmount)

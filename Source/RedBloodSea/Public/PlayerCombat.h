@@ -6,7 +6,6 @@
 #include "Components/ActorComponent.h"
 #include "PlayerData.h"
 #include "Weakpoint.h"
-#include "Components/BoxComponent.h"
 #include "PlayerCombat.generated.h"
 
 
@@ -100,7 +99,6 @@ public:
 
 	void OnSlashInput();
 	void OnThrustInput();
-	void OnPossessInput();
 
 	UFUNCTION(BlueprintCallable)
 	void DamagePlayer(int damageAmount);

@@ -40,6 +40,10 @@ private:
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Default Movement")
 	float defaultAcceleration = 5000;
 
+	/*The multiplier applied to the speed when in possess mode*/
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Default Movement")
+	float possessSpeedMultiplier = .3;
+
 	/*The default gravity applied to the player, applied when not dashing, for instance*/
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Default Movement")
 	float defaultGravity = 50;

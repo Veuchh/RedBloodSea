@@ -3,6 +3,7 @@
 #include "CoreMinimal.h"
 #include "PlayerPossessState.h"
 #include "BufferableAttack.h"
+#include "PossessTarget.h"
 #include "PlayerAttackState.h"
 
 static class REDBLOODSEA_API PlayerData
@@ -44,9 +45,13 @@ public:
 
 	//-------------------------------------------Possession
 	static PlayerPossessState CurrentPossessState;
+	static float StartCameraMovementTime;
+	static float EndCameraMovementTime;
+	static UPossessTarget* CurrentPossessTarget;
 	
 	//-------------------------------------------Test methods for the player
 	static bool CanMove();
+	static bool CanRotateCamera();
 	static bool CanAddAttackToBuffer();
 	static bool CanAttack();
 	static bool CanDash();

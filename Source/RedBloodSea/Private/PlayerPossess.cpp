@@ -74,7 +74,7 @@ void UPlayerPossess::CameraZoomTick()
 		
 		character->SetActorLocation(PlayerData::CurrentPossessTarget->GetOwner()->GetActorLocation());
 
-		PlayerData::CurrentPossessTarget->OnPossessed();
+		PlayerData::CurrentPossessTarget->Possess();
 
 		TogglePlayer(true);
 	}
@@ -91,6 +91,10 @@ void UPlayerPossess::ThrowTargetTick()
 		TogglePlayer(false);
 		startPossessPosition = GetOwner()->GetActorLocation();
 		endPossessPosition = PlayerData::CurrentPossessTarget->GetOwner()->GetActorLocation();
+		if (PlayerData::CurrentPossessTarget)
+		{
+			PlayerData::CurrentPossessTarget->Unpossess(GetOwner()->GetActorLocation());
+		}
 	}
 }
 

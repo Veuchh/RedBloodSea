@@ -32,8 +32,15 @@ void UPossessTarget::TickComponent(float DeltaTime, ELevelTick TickType, FActorC
 	// ...
 }
 
-void UPossessTarget::OnPossessed()
+void UPossessTarget::Possess()
 {
+	//TODO : add logic to remove enemy and remove the destroy
+	OnPossessed.Broadcast();
 	GetOwner()->Destroy();
+}
+
+void UPossessTarget::Unpossess(FVector3d repositionEnemyAtPosition)
+{
+	OnUnpossessed.Broadcast(repositionEnemyAtPosition);
 }
 

@@ -20,12 +20,10 @@ void UPlayerPossess::SetupPlayerPossessComponent(ACharacter* Character,
 	camera = CameraComponent;
 }
 
-void UPlayerPossess::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
+void DebugState()
 {
-	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-	
 	FString currentStateDebug = "";
-	
+
 	switch (PlayerData::CurrentPossessState)
 	{
 	case PlayerPossessState::None:
@@ -46,44 +44,132 @@ void UPlayerPossess::TickComponent(float DeltaTime, ELevelTick TickType, FActorC
 	case PlayerPossessState::ZoomingCamera:
 		currentStateDebug = "ZoomingCamera";
 		break;
+	case PlayerPossessState::PossessRecovery:
+		currentStateDebug = "PossessRecovery";
+		break;
 	}
 	GEngine->AddOnScreenDebugMessage(-1, 0, FColor::Green, currentStateDebug);
+}
 
-	// ReSharper disable once CppDefaultCaseNotHandledInSwitchStatement
-	// ReSharper disable once CppIncompleteSwitchStatement
-	//We only cover states that have "waiting" states
-	switch (PlayerData::CurrentPossessState)
+void UPlayerPossess::CameraZoomTick()
+{
+	if (UGameplayStatics::GetTimeSeconds(GetWorld()) <= nextAllowedAction)
 	{
-	case PlayerPossessState::TogglingAimMode:
-		if (UGameplayStatics::GetTimeSeconds(GetWorld()) >= nextAllowedAction)
-		{
-			PlayerData::CurrentPossessState = PlayerPossessState::PossessAim;
-		}
-		break;
-	case PlayerPossessState::ThrowFail:
-		if (UGameplayStatics::GetTimeSeconds(GetWorld()) >= nextAllowedAction)
+		//We progressively move the player towards its target
+		float alpha = FMath::GetRangePct(
+			PlayerData::StartCameraMovementTime,
+			PlayerData::EndCameraMovementTime,
+			UGameplayStatics::GetTimeSeconds(GetWorld()));
+
+
+		//We do alpha * alpha here to have an exponentially faster movement
+		FVector currentPosition = FMath::Lerp(startPossessPosition, endPossessPosition, alpha * alpha);
+		
+		character->SetActorLocation(currentPosition);
+	}
+	else
+	{
+		PlayerData::CurrentPossessState = PlayerPossessState::PossessRecovery;
+		nextAllowedAction = UGameplayStatics::GetTimeSeconds(GetWorld()) + playerControlDelay;
+		
+		character->SetActorLocation(PlayerData::CurrentPossessTarget->GetOwner()->GetActorLocation());
+
+		PlayerData::CurrentPossessTarget->OnPossessed();
+
+		TogglePlayer(true);
+	}
+}
+
+void UPlayerPossess::ThrowTargetTick()
+{
+	if (UGameplayStatics::GetTimeSeconds(GetWorld()) >= nextAllowedAction)
+	{
+		PlayerData::CurrentPossessState = PlayerPossessState::ZoomingCamera;
+		PlayerData::StartCameraMovementTime = UGameplayStatics::GetTimeSeconds(GetWorld());
+		PlayerData::EndCameraMovementTime = PlayerData::StartCameraMovementTime + possessTransitionDuration;
+		nextAllowedAction = PlayerData::EndCameraMovementTime;
+		TogglePlayer(false);
+		startPossessPosition = GetOwner()->GetActorLocation();
+		endPossessPosition = PlayerData::CurrentPossessTarget->GetOwner()->GetActorLocation();
+	}
+}
+
+void UPlayerPossess::ThrowFailTick()
+{
+	if (UGameplayStatics::GetTimeSeconds(GetWorld()) >= nextAllowedAction)
 	{
 		PlayerData::CurrentPossessState = PlayerPossessState::None;
 	}
+}
+
+void UPlayerPossess::AimModeTogglingTick()
+{
+	if (UGameplayStatics::GetTimeSeconds(GetWorld()) >= nextAllowedAction)
+	{
+		PlayerData::CurrentPossessState = PlayerPossessState::PossessAim;
+	}
+}
+
+void UPlayerPossess::PossessRecoveryTick()
+{
+	if (UGameplayStatics::GetTimeSeconds(GetWorld()) >= nextAllowedAction)
+	{
+		PlayerData::CurrentPossessState = PlayerPossessState::None;
+	}
+}
+
+void UPlayerPossess::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
+{
+	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+
+	DebugState();
+
+	AimModeToggling();
+
+	//We only cover states that have "waiting" logic
+	switch (PlayerData::CurrentPossessState)
+	{
+	case PlayerPossessState::TogglingAimMode:
+		AimModeTogglingTick();
+		break;
+	case PlayerPossessState::ThrowFail:
+		ThrowFailTick();
 		break;
 	case PlayerPossessState::ThrowTarget:
+		ThrowTargetTick();
 		break;
 	case PlayerPossessState::ZoomingCamera:
+		CameraZoomTick();
+		break;
+	case PlayerPossessState::PossessRecovery:
+		PossessRecoveryTick();
 		break;
 	}
 }
 
-void UPlayerPossess::OnPossessModeInput(bool isToggled)
+void UPlayerPossess::AimModeToggling()
 {
-	if (isToggled && PlayerData::CanEnterPossessMode())
+	if (isInputModeActionPressed && PlayerData::CanEnterPossessMode())
 	{
 		PlayerData::CurrentPossessState = PlayerPossessState::TogglingAimMode;
 		nextAllowedAction = UGameplayStatics::GetTimeSeconds(GetWorld()) + holdDelayToEnterAimingMode;
 	}
-	else if (!isToggled && PlayerData::CurrentPossessState == PlayerPossessState::TogglingAimMode || PlayerData::CurrentPossessState == PlayerPossessState::PossessAim)
+	else if (!isInputModeActionPressed && (PlayerData::CurrentPossessState == PlayerPossessState::TogglingAimMode ||
+		PlayerData::CurrentPossessState == PlayerPossessState::PossessAim))
 	{
 		PlayerData::CurrentPossessState = PlayerPossessState::None;
 	}
+}
+
+void UPlayerPossess::TogglePlayer(bool isToggled) const
+{
+	character->SetActorEnableCollision(isToggled);
+	character->GetMesh()->SetVisibility(isToggled);
+}
+
+void UPlayerPossess::OnPossessModeInput(bool isToggled)
+{
+	isInputModeActionPressed = isToggled;
 }
 
 void UPlayerPossess::OnPossessInput()
@@ -106,21 +192,20 @@ void UPlayerPossess::OnPossessInput()
 	GetWorld()->LineTraceSingleByChannel(Hit, TraceStart, TraceEnd, TraceChannelProperty, QueryParams);
 
 	// You can use DrawDebug helpers and the log to help visualize and debug your trace queries.
-	DrawDebugLine(GetWorld(), TraceStart, TraceEnd, Hit.bBlockingHit ? FColor::Blue : FColor::Red, false, 5.0f, 0,
-	              1.0f);
+	DrawDebugLine(GetWorld(), TraceStart, TraceEnd, Hit.bBlockingHit ? FColor::Blue : FColor::Red, false,
+	              5.0f, 0, 1.0f);
 
 	// If the trace hit something, bBlockingHit will be true,
 	// and its fields will be filled with detailed info about what was hit
 	if (Hit.bBlockingHit && IsValid(Hit.GetActor()))
 	{
-		AActor* hitActor = Hit.GetActor();
-		UPossessTarget* possessTarget = hitActor->GetComponentByClass<UPossessTarget>();
 		//If we hit a target we can possess, we do.
 		//Otherwise, we release the player possession
-		if (possessTarget)
+		if (UPossessTarget* possessTarget = Hit.GetActor()->GetComponentByClass<UPossessTarget>())
 		{
-			character->SetActorLocation(hitActor->GetActorLocation());
-			possessTarget->OnPossessed();
+			PlayerData::CurrentPossessTarget = possessTarget;
+			PlayerData::CurrentPossessState = PlayerPossessState::ThrowTarget;
+			nextAllowedAction = UGameplayStatics::GetTimeSeconds(GetWorld()) + possessDelay;
 		}
 	}
 
@@ -131,12 +216,4 @@ void UPlayerPossess::OnPossessInput()
 		PlayerData::CurrentPossessState = PlayerPossessState::ThrowFail;
 		nextAllowedAction = UGameplayStatics::GetTimeSeconds(GetWorld()) + throwFailDuration;
 	}
-
-	//If no, play rapier return anim
-	//if yes, do the following :
-	//remove player control
-	//Play camera movement
-	//Change player position
-	// play the pull out rapier animation
-	//restore player control
 }

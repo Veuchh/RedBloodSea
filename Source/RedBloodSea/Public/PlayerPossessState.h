@@ -8,4 +8,5 @@ enum class PlayerPossessState : uint8 {
 	ThrowFail = 3  UMETA(DisplayName = "ThrowFail"),
 	ThrowTarget = 4  UMETA(DisplayName = "ThrowTarget"),
 	ZoomingCamera = 5  UMETA(DisplayName = "ZoomingCamera"),
+	PossessRecovery = 6  UMETA(DisplayName = "PossessRecovery"),
 };

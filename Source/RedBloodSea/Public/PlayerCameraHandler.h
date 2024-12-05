@@ -53,4 +53,8 @@ private:
 	/*How fast the FOV will change*/
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Camera")
 	float fovChangeSpeed = 10;
+
+	bool isCameraAttachedToPlayer = false;
+
+	float ToggleCameraAttachToPlayer;
 };

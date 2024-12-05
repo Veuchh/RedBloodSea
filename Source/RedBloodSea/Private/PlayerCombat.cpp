@@ -285,5 +285,5 @@ void UPlayerCombat::DamagePlayer(int damageAmount)
 {
 	PlayerData::CurrentHPAmount -= damageAmount;
 
-	OnPlayerHit.Broadcast((float)PlayerData::CurrentHPAmount/PlayerData::MaxHPAmount);
+	OnPlayerHit.Broadcast(PlayerData::CurrentHPAmount);
 }

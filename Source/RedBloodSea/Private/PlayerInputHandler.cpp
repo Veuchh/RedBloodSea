@@ -2,9 +2,6 @@
 
 #include "PlayerInputHandler.h"
 
-#include "PlayerCameraHandler.h"
-#include "PlayerCombat.h"
-
 // Sets default values for this component's properties
 UPlayerInputHandler::UPlayerInputHandler()
 {
@@ -24,6 +21,7 @@ void UPlayerInputHandler::BeginPlay()
 	playerMovement = GetOwner()->GetComponentByClass<UPlayerMovement>();
 	playerCombat = GetOwner()->GetComponentByClass<UPlayerCombat>();
 	playerCameraHandler = GetOwner()->GetComponentByClass<UPlayerCameraHandler>();
+	playerPossess = GetOwner()->GetComponentByClass<UPlayerPossess>();
 }
 
 
@@ -59,8 +57,12 @@ void UPlayerInputHandler::SetupPlayerInputComponent(UInputComponent* InputCompon
 
 		//Attacks
 		EnhancedInputComponent->BindAction(SlashAction, ETriggerEvent::Started, this, &UPlayerInputHandler::SlashInput);
-		EnhancedInputComponent->BindAction(ThrustAction, ETriggerEvent::Started, this,
-		                                   &UPlayerInputHandler::ThrustInput);
+		EnhancedInputComponent->BindAction(ThrustAction, ETriggerEvent::Started, this, &UPlayerInputHandler::ThrustInput);
+
+		//MPossession
+		EnhancedInputComponent->BindAction(ThrustAction, ETriggerEvent::Started, this, &UPlayerInputHandler::PossessInput); 
+		EnhancedInputComponent->BindAction(PossessModeAction, ETriggerEvent::Started, this, &UPlayerInputHandler::PossessModeInput); 
+		EnhancedInputComponent->BindAction(PossessModeAction, ETriggerEvent::Completed, this, &UPlayerInputHandler::PossessModeInput); 
 	}
 	else
 	{
@@ -106,4 +108,13 @@ void UPlayerInputHandler::SlashInput(const FInputActionValue& Value)
 void UPlayerInputHandler::ThrustInput(const FInputActionValue& Value)
 {
 	playerCombat->OnThrustInput();
+}
+
+void UPlayerInputHandler::PossessModeInput(const FInputActionValue& Value)
+{
+	playerPossess->OnPossessModeInput(Value.Get<bool>());
+}
+void UPlayerInputHandler::PossessInput(const FInputActionValue& Value)
+{
+	playerPossess->OnPossessInput();
 }

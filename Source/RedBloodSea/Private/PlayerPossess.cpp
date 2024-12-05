@@ -24,30 +24,30 @@ void UPlayerPossess::TickComponent(float DeltaTime, ELevelTick TickType, FActorC
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 	
-	FString debug = "";
+	FString currentStateDebug = "";
 	
 	switch (PlayerData::CurrentPossessState)
 	{
 	case PlayerPossessState::None:
-		debug = "None";
+		currentStateDebug = "None";
 		break;
 	case PlayerPossessState::TogglingAimMode:
-		debug = "TogglingPossessAim";
+		currentStateDebug = "TogglingPossessAim";
 		break;
 	case PlayerPossessState::PossessAim:
-		debug = "PossessAim";
+		currentStateDebug = "PossessAim";
 		break;
 	case PlayerPossessState::ThrowFail:
-		debug = "ThrowFail";
+		currentStateDebug = "ThrowFail";
 		break;
 	case PlayerPossessState::ThrowTarget:
-		debug = "ThrowTarget";
+		currentStateDebug = "ThrowTarget";
 		break;
 	case PlayerPossessState::ZoomingCamera:
-		debug = "ZoomingCamera";
+		currentStateDebug = "ZoomingCamera";
 		break;
 	}
-	GEngine->AddOnScreenDebugMessage(-1, 0, FColor::Green, debug);
+	GEngine->AddOnScreenDebugMessage(-1, 0, FColor::Green, currentStateDebug);
 
 	// ReSharper disable once CppDefaultCaseNotHandledInSwitchStatement
 	// ReSharper disable once CppIncompleteSwitchStatement
@@ -115,7 +115,6 @@ void UPlayerPossess::OnPossessInput()
 	{
 		AActor* hitActor = Hit.GetActor();
 		UPossessTarget* possessTarget = hitActor->GetComponentByClass<UPossessTarget>();
-		GEngine->AddOnScreenDebugMessage(-1, 1, FColor::Red, "Here");
 		//If we hit a target we can possess, we do.
 		//Otherwise, we release the player possession
 		if (possessTarget)

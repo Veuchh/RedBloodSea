@@ -18,6 +18,8 @@ class REDBLOODSEA_API UWeakpointsManager : public UActorComponent
 public:	
 	// Sets default values for this component's properties
 	UWeakpointsManager();
+
+	// WEAKPOINTS VARIABLES
 	UPROPERTY(EditAnywhere, Category="Weakpoints Handler")
 	const TObjectPtr<UWeakpointData> WeakpointData;
 	UPROPERTY(EditAnywhere, Category="Weakpoints Handler",meta=(Bitmask,BitmaskEnum = EWeakpointType))
@@ -33,6 +35,7 @@ private:
 	TObjectPtr<USkeletalMeshComponent> Skeleton;
 	TArray<TObjectPtr<UMaterialInstanceDynamic>> MaterialInstances;
 	TArray<TObjectPtr<AWeakpoint>> Weakpoints;
+	int HealthPoint;
 	
 	
 protected:
@@ -42,18 +45,25 @@ protected:
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+	// WEAKPOINTS FUNCTIONS
 	void CreateWeakPoints();
 	void AttachWeakpoint(const FWeakpointSlot& WeakpointSlot,const float Size);
 	UFUNCTION(BlueprintCallable)
 	void RevealWeakpoints();
 	UFUNCTION(BlueprintCallable)
 	void RemoveWeakpoint(AWeakpoint* weakpoint);
+	void ClearAllWeakpoints();
+	AWeakpoint* GetFirstRevealWeakpoint();
+	
+	// COMPONENTS FUNCTIONS
 	void SetSkeleton(USkeletalMeshComponent* skeleton);
 	void SetMaterials(const TArray<TObjectPtr<UMaterialInstanceDynamic>>& newMaterialInstances);
+	
+	// GAMEPLAY FUNCTIONS
 	bool CheckIfDead();
+	int GetHealthPoint();
 
-
-
+	// EVENTS
 	DECLARE_DYNAMIC_MULTICAST_DELEGATE(FWeakpointReveal);
 	UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="Weakpoints Handler")
 	FWeakpointReveal OnWeakpointReveal;

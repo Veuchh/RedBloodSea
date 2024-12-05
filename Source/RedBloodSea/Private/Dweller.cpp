@@ -13,10 +13,17 @@ ADweller::ADweller()
 	
 }
 
-// void AADweller::OnConstruction(const FTransform &Transform)
-// {
-//
-// }
+void ADweller::EndPlay(const EEndPlayReason::Type EndPlayReason)
+{
+	TArray<AActor*> ChildActors;
+	GetAttachedActors(ChildActors,true);
+	for (auto ChildActor : ChildActors)
+	{
+		ChildActor->Destroy();
+	}
+	Super::EndPlay(EndPlayReason);
+}
+
 
 // Called when the game starts or when spawned
 void ADweller::BeginPlay()

@@ -63,13 +63,12 @@ void UWeakpointsManager::SetMaterials(const TArray<TObjectPtr<UMaterialInstanceD
 
 bool UWeakpointsManager::CheckIfDead()
 {
-	bool isDead = true;
-	for (auto Weakpoint : Weakpoints)
-	{
-		isDead &= (Weakpoint->State == EWeakpointState::Damaged);
-	}
+	return HealthPoint <= 0;
+}
 
-	return isDead;
+int UWeakpointsManager::GetHealthPoint()
+{
+	return HealthPoint;
 }
 
 void UWeakpointsManager::CreateWeakPoints()
@@ -112,6 +111,7 @@ void UWeakpointsManager::CreateWeakPoints()
 
 void UWeakpointsManager::AttachWeakpoint(const FWeakpointSlot& WeakpointSlot,const float Size)
 {
+	HealthPoint++;
 	AActor* newActor = GetWorld()->SpawnActor(WeakpointData->Weakpoint_BP);
 	newActor->AttachToComponent(Skeleton,FAttachmentTransformRules::SnapToTargetNotIncludingScale,WeakpointSlot.SocketName);
 	
@@ -159,6 +159,7 @@ void UWeakpointsManager::RemoveWeakpoint(AWeakpoint* weakpoint)
 {
 	if(!Weakpoints.Contains(weakpoint) || weakpoint->State != EWeakpointState::Revealed)
 		return;
+	HealthPoint--;
 	int index = Weakpoints.IndexOfByKey(weakpoint)+1;
 	weakpoint->GetMesh()->SetVisibility(false);
 	weakpoint->GetCollider()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
@@ -173,8 +174,29 @@ void UWeakpointsManager::RemoveWeakpoint(AWeakpoint* weakpoint)
 	{
 		OnDeath.Broadcast();
 		CountSubSys->OnKill.Broadcast();
+		Owner->Destroy();
 	}
 }
+
+void UWeakpointsManager::ClearAllWeakpoints()
+{
+	for (auto Weakpoint : Weakpoints)
+	{
+		Weakpoint->Destroy();
+	}
+	Weakpoints.Empty();
+}
+
+AWeakpoint* UWeakpointsManager::GetFirstRevealWeakpoint()
+{
+	for (auto Weakpoint : Weakpoints)
+	{
+		if(Weakpoint->State == EWeakpointState::Revealed)
+			return Weakpoint;
+	}
+	return nullptr;
+}
+
 
 
 	

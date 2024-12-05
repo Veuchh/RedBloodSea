@@ -656,9 +656,15 @@
 									<PropertyList>
 										<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
 										<Property Name="FilterTypeBand2" Type="int32" Value="3"/>
-										<Property Name="FilterTypeBand3" Type="int32" Value="0"/>
+										<Property Name="FilterTypeBand3" Type="int32" Value="3"/>
 										<Property Name="FrequencyBand1" Type="Real32" Value="500"/>
+										<Property Name="FrequencyBand2" Type="Real32" Value="6885"/>
+										<Property Name="FrequencyBand3" Type="Real32" Value="702"/>
+										<Property Name="OnOffBand1" Type="bool" Value="False"/>
 										<Property Name="OnOffBand2" Type="bool" Value="False"/>
+										<Property Name="OnOffBand3" Type="bool" Value="False"/>
+										<Property Name="QFactorBand2" Type="Real32" Value="44"/>
+										<Property Name="QFactorBand3" Type="Real32" Value="59.7"/>
 									</PropertyList>
 								</Effect>
 								<Effect Name="Dual_Filters_Radio_Comm" ID="{69479ACD-2C87-4007-B83E-55210A3B36B7}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
@@ -1271,80 +1277,6 @@
 										<Property Name="RoomSize" Type="Real32" Value="48"/>
 										<Property Name="StereoWidth" Type="Real32" Value="115"/>
 									</PropertyList>
-									<ObjectLists>
-										<ObjectList Name="RTPC">
-											<Reference>
-												<Local>
-													<RTPC Name="" ID="{80B808B7-ED19-494F-805F-4D3E3391C02E}" ShortID="190287035">
-														<PropertyList>
-															<Property Name="PropertyName" Type="string" Value="DryLevel"/>
-														</PropertyList>
-														<ReferenceList>
-															<Reference Name="ControlInput">
-																<ObjectRef Name="Builtin_Distance" ID="{6BA5296B-2167-4208-871F-9C93F01FC031}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
-															</Reference>
-															<Reference Name="Curve">
-																<Custom>
-																	<Curve Name="" ID="{D9608C76-C647-43A9-AA34-252D4DABB3AC}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="3"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>0</XPos>
-																				<YPos>-0.10535</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>2500</XPos>
-																				<YPos>-96.3</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</Custom>
-															</Reference>
-														</ReferenceList>
-													</RTPC>
-												</Local>
-											</Reference>
-											<Reference>
-												<Local>
-													<RTPC Name="" ID="{101E015B-0BE5-4E9A-9588-409F6089BC56}" ShortID="447967256">
-														<PropertyList>
-															<Property Name="PropertyName" Type="string" Value="ReverbLevel"/>
-														</PropertyList>
-														<ReferenceList>
-															<Reference Name="ControlInput">
-																<ObjectRef Name="Builtin_Distance" ID="{6BA5296B-2167-4208-871F-9C93F01FC031}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
-															</Reference>
-															<Reference Name="Curve">
-																<Custom>
-																	<Curve Name="" ID="{0CB8F2B5-656A-4684-8938-3B1012359A2D}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="3"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>0</XPos>
-																				<YPos>-9.86225</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>2500</XPos>
-																				<YPos>0</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</Custom>
-															</Reference>
-														</ReferenceList>
-													</RTPC>
-												</Local>
-											</Reference>
-										</ObjectList>
-									</ObjectLists>
 								</Effect>
 								<Effect Name="Room_Small" ID="{577F1466-A63B-47F7-98BD-C56E433F8B5D}" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
 									<PropertyList>

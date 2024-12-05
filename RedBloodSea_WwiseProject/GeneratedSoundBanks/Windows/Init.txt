@@ -1,5 +1,38 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	1203368309	state_game			\Default Work Unit\state_game	
+	4016824040	state_player			\Default Work Unit\state_player	
+	4122948419	state_combat			\Default Work Unit\state_combat	
+
+State	ID	Name	State Group			Notes
+	89505537	gameplay	state_game			
+	748895195	None	state_game			
+	2607556080	menu	state_game			
+	4158285989	gameover	state_game			
+	223416773	offground	state_player			
+	748895195	None	state_player			
+	1200033591	onground	state_player			
+	748895195	None	state_combat			
+	2392706382	combat_pause	state_combat			
+	2764240573	combat	state_combat			
+	2887812511	combat_end	state_combat			
+	2930212484	nocombat	state_combat			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	115866790	rtpc_amb_bus			\Default Work Unit\Settings\BUS\rtpc_amb_bus	
+	2332098030	rtpc_enemy_bus			\Default Work Unit\Settings\BUS\rtpc_enemy_bus	
+	3067876527	rtpc_sfx_bus			\Default Work Unit\Settings\BUS\rtpc_sfx_bus	
+	3432596327	rtpc_music_bus			\Default Work Unit\Settings\BUS\rtpc_music_bus	
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	661188923	EnemyBus			\Default Work Unit\Master Audio Bus\EnemyBus	
+	2886307548	MusicBus			\Default Work Unit\Master Audio Bus\MusicBus	
+	2894416467	AmbBus			\Default Work Unit\Master Audio Bus\AmbBus	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3966895392	PlayerBus			\Default Work Unit\Master Audio Bus\PlayerBus	
+	4150757691	PlayerFPS			\Default Work Unit\Master Audio Bus\PlayerBus\PlayerFPS	
+
+Effect plug-ins	ID	Name	Type				Notes
+	4239446561	Dual_Filters_Narrow_Bandwidth	Wwise Parametric EQ			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

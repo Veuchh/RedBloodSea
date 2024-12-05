@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{CAC3CED8-5AC9-4C4E-8486-D3A059718422}" SchemaVersion="119">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{CAC3CED8-5AC9-4C4E-8486-D3A059718422}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{CAC3CED8-5AC9-4C4E-8486-D3A059718422}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="switch_attack_material" ID="{D11887A8-8E5A-4D3D-8FDC-BBC055C5425E}">
+					<ChildrenList>
+						<Switch Name="stone" ID="{8CD2D766-702D-4B5B-8D64-02CD0D130005}"/>
+						<Switch Name="vege" ID="{AEDDD02C-3F58-4349-BCD0-D7785A59152F}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="switch_player_fs_material" ID="{75C355EA-C638-4083-9ACC-4ED15F60A31B}">
+					<ChildrenList>
+						<Switch Name="stone" ID="{F3CD2C36-B817-4A27-A1BC-96CFB220BA79}"/>
+						<Switch Name="vege" ID="{02BAE21A-2739-4F47-87F7-4B9246F7FB69}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="switch_enemy_fs_material" ID="{1E8C4DC6-5355-49AB-BF90-D31B2677EAB2}">
+					<ChildrenList>
+						<Switch Name="stone" ID="{2C6048E5-583B-4043-92D1-BB6A8329AE1C}"/>
+						<Switch Name="vege" ID="{612497D4-F850-447D-B521-6831C66C45BA}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="switch_enemy_state" ID="{7BCEC131-CFF7-4EC9-8FA1-01CA796C57CE}">
+					<ChildrenList>
+						<Switch Name="afraid" ID="{6B7928E2-235B-4F7D-91C3-339543D1FE93}"/>
+						<Switch Name="agressive" ID="{3C5FF830-8A92-4FEE-A31B-60D35FE55A2E}"/>
+						<Switch Name="friendly" ID="{E2EF61B1-6143-4FB2-A6D7-A40F264431F4}"/>
+						<Switch Name="nostate" ID="{B1F2E22E-0DDC-4A1D-B499-D807E69F385B}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="switch_combat_phase" ID="{00BFC575-DD53-4D59-B613-1CE2AE596AE9}">
+					<ChildrenList>
+						<Switch Name="phase1" ID="{6725F899-132D-4978-8B75-001417C3E736}"/>
+						<Switch Name="phase3" ID="{A17B5649-F5D5-4365-B5EB-FF000F23FF13}"/>
+						<Switch Name="phase2" ID="{0DD26233-048F-41A1-A6C7-12E5CAC1F7D1}"/>
+						<Switch Name="nostate" ID="{B604615E-D874-4E59-8E26-ED5FBA8218BD}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>

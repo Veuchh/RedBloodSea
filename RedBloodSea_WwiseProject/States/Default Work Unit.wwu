@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{C595D72B-1CEC-44D9-8102-4C94A354BC93}" SchemaVersion="119">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{C595D72B-1CEC-44D9-8102-4C94A354BC93}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{C595D72B-1CEC-44D9-8102-4C94A354BC93}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="state_game" ID="{AA8156C3-B24B-43FB-96AA-B599641EE3EC}">
+					<ChildrenList>
+						<State Name="None" ID="{F55C3BA2-B06E-4139-88C5-13C67AEA9EF2}"/>
+						<State Name="menu" ID="{DC0DD6DC-8DEC-4480-9824-FFFBADD0CE2C}"/>
+						<State Name="gameplay" ID="{C4E4E26E-F6DD-47FB-801A-F846446BBC84}"/>
+						<State Name="gameover" ID="{BC3D5537-5888-442A-A50A-D4C6109A43D8}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="state_combat" ID="{E2ED0219-9E42-4468-B342-0147362BCCBB}">
+					<ChildrenList>
+						<State Name="None" ID="{E50472C8-63C0-46CA-8249-305F3BF374E9}"/>
+						<State Name="combat" ID="{76879D96-6B91-483E-85DC-B7B10E438F7F}"/>
+						<State Name="nocombat" ID="{AAB602C5-F1F4-4844-B273-85D5A38E9869}"/>
+						<State Name="combat_pause" ID="{9BFC024D-B53E-4B56-9581-972C69A27B4F}"/>
+						<State Name="combat_end" ID="{20C46DC0-57AA-4780-A143-614081F377B0}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="state_player" ID="{D4DB4710-70CC-4DF7-A9D1-0E3F26193BCC}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0.1"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{295C2E06-7201-4536-9163-407EA6F5757E}"/>
+						<State Name="onground" ID="{5ADF1174-9E07-490C-82F9-C5039AEC4132}"/>
+						<State Name="offground" ID="{5BCDD2B7-0B9E-40FF-98EB-D2BA0BD6A7EB}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>

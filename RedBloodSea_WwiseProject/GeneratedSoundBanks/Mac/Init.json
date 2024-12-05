@@ -10,11 +10,21 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{CD9BC210-B13C-B906-4090-3DE98D2E268B}",
+    "Hash": "{EFA8A578-A13E-EFA8-C08E-EDAE15B32C14}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
     "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "4239446561",
+       "Name": "Dual_Filters_Narrow_Bandwidth",
+       "ObjectPath": "\\Effects\\Factory Effects\\Parametric EQ\\Band Pass Filters\\Dual_Filters_Narrow_Bandwidth",
+       "GUID": "{A24607C6-04E1-4D41-B513-28C0914D138D}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ],
      "AudioDevices": [
       {
        "Id": "2317455096",
@@ -36,22 +46,355 @@
     },
     "Busses": [
      {
+      "Id": "661188923",
+      "Name": "EnemyBus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\EnemyBus",
+      "GUID": "{BCC1ECC0-BA5A-45C2-A555-9454DB046120}"
+     },
+     {
+      "Id": "2886307548",
+      "Name": "MusicBus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\MusicBus",
+      "GUID": "{312533C2-F58C-4573-B394-B4A60FA6903B}"
+     },
+     {
+      "Id": "2894416467",
+      "Name": "AmbBus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\AmbBus",
+      "GUID": "{F6B3D58E-CD74-4442-9F92-CEC55E4B6060}"
+     },
+     {
       "Id": "3803692087",
       "Name": "Master Audio Bus",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus",
-      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "4239446561"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "3966895392",
+      "Name": "PlayerBus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\PlayerBus",
+      "GUID": "{EBF9A5C4-2EDC-44FD-B726-7EE704405AC2}"
+     },
+     {
+      "Id": "4150757691",
+      "Name": "PlayerFPS",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\PlayerBus\\PlayerFPS",
+      "GUID": "{7C1D7130-1612-4266-9222-83F5777F8F6A}"
      }
     ],
     "GameParameters": [
      {
-      "Id": "1237428548",
-      "Name": "Builtin_Distance",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Builtin_Distance",
-      "GUID": "{6BA5296B-2167-4208-871F-9C93F01FC031}"
+      "Id": "82424989",
+      "Name": "rtpc_player_life",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_player_life",
+      "GUID": "{1CC6F0C7-6126-4057-9B70-3C89F38C5F50}"
+     },
+     {
+      "Id": "88991926",
+      "Name": "rtpc_master_bus",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Settings\\BUS\\rtpc_master_bus",
+      "GUID": "{94154412-EE63-4EDD-B582-B922CD738ED6}"
+     },
+     {
+      "Id": "115866790",
+      "Name": "rtpc_amb_bus",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Settings\\BUS\\rtpc_amb_bus",
+      "GUID": "{A29E33E7-090C-4F92-B2A4-CF339B2E10FC}"
+     },
+     {
+      "Id": "765516766",
+      "Name": "rtpc_player_airspeed",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_player_airspeed",
+      "GUID": "{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}"
+     },
+     {
+      "Id": "2332098030",
+      "Name": "rtpc_enemy_bus",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Settings\\BUS\\rtpc_enemy_bus",
+      "GUID": "{7B1FB034-3E8E-48F8-B914-CB5786C31FF9}"
+     },
+     {
+      "Id": "2400834421",
+      "Name": "rtpc_dominant_hand",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Settings\\rtpc_dominant_hand",
+      "GUID": "{54C0314F-1459-460E-B6E6-1CDAA6EDBE01}"
+     },
+     {
+      "Id": "2570586536",
+      "Name": "rtpc_landing_force",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_landing_force",
+      "GUID": "{07DB1610-4113-4F81-A7B4-0C953E645162}"
+     },
+     {
+      "Id": "2690476865",
+      "Name": "rtpc_player_walkspeed",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_player_walkspeed",
+      "GUID": "{6437691A-43C2-473B-A671-C59F1A9E957B}"
+     },
+     {
+      "Id": "3067876527",
+      "Name": "rtpc_sfx_bus",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Settings\\BUS\\rtpc_sfx_bus",
+      "GUID": "{1A0CC5AF-DF3D-4C7B-9E41-61A8E28F74EB}"
+     },
+     {
+      "Id": "3304859005",
+      "Name": "rtpc_chaos_global",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_chaos_global",
+      "GUID": "{912B7FBA-E859-424B-9664-D9B8B51FC1BA}"
+     },
+     {
+      "Id": "3361666196",
+      "Name": "rtpc_chaos_enemy",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_chaos_enemy",
+      "GUID": "{8D8709D7-5017-47F2-988D-4EE3A088300B}"
+     },
+     {
+      "Id": "3432596327",
+      "Name": "rtpc_music_bus",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Settings\\BUS\\rtpc_music_bus",
+      "GUID": "{C084FC73-68C8-499E-96AC-E4DBE2F01DED}"
+     },
+     {
+      "Id": "3681822039",
+      "Name": "rtpc_chaos_player",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_chaos_player",
+      "GUID": "{BFE4D672-50A0-4F84-B21E-4DC11EBCCF9B}"
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "1203368309",
+      "Name": "state_game",
+      "ObjectPath": "\\States\\Default Work Unit\\state_game",
+      "GUID": "{AA8156C3-B24B-43FB-96AA-B599641EE3EC}",
+      "States": [
+       {
+        "Id": "89505537",
+        "Name": "gameplay",
+        "ObjectPath": "\\States\\Default Work Unit\\state_game\\gameplay",
+        "GUID": "{C4E4E26E-F6DD-47FB-801A-F846446BBC84}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\state_game\\None",
+        "GUID": "{F55C3BA2-B06E-4139-88C5-13C67AEA9EF2}"
+       },
+       {
+        "Id": "2607556080",
+        "Name": "menu",
+        "ObjectPath": "\\States\\Default Work Unit\\state_game\\menu",
+        "GUID": "{DC0DD6DC-8DEC-4480-9824-FFFBADD0CE2C}"
+       },
+       {
+        "Id": "4158285989",
+        "Name": "gameover",
+        "ObjectPath": "\\States\\Default Work Unit\\state_game\\gameover",
+        "GUID": "{BC3D5537-5888-442A-A50A-D4C6109A43D8}"
+       }
+      ]
+     },
+     {
+      "Id": "4016824040",
+      "Name": "state_player",
+      "ObjectPath": "\\States\\Default Work Unit\\state_player",
+      "GUID": "{D4DB4710-70CC-4DF7-A9D1-0E3F26193BCC}",
+      "States": [
+       {
+        "Id": "223416773",
+        "Name": "offground",
+        "ObjectPath": "\\States\\Default Work Unit\\state_player\\offground",
+        "GUID": "{5BCDD2B7-0B9E-40FF-98EB-D2BA0BD6A7EB}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\state_player\\None",
+        "GUID": "{295C2E06-7201-4536-9163-407EA6F5757E}"
+       },
+       {
+        "Id": "1200033591",
+        "Name": "onground",
+        "ObjectPath": "\\States\\Default Work Unit\\state_player\\onground",
+        "GUID": "{5ADF1174-9E07-490C-82F9-C5039AEC4132}"
+       }
+      ]
+     },
+     {
+      "Id": "4122948419",
+      "Name": "state_combat",
+      "ObjectPath": "\\States\\Default Work Unit\\state_combat",
+      "GUID": "{E2ED0219-9E42-4468-B342-0147362BCCBB}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\state_combat\\None",
+        "GUID": "{E50472C8-63C0-46CA-8249-305F3BF374E9}"
+       },
+       {
+        "Id": "2392706382",
+        "Name": "combat_pause",
+        "ObjectPath": "\\States\\Default Work Unit\\state_combat\\combat_pause",
+        "GUID": "{9BFC024D-B53E-4B56-9581-972C69A27B4F}"
+       },
+       {
+        "Id": "2764240573",
+        "Name": "combat",
+        "ObjectPath": "\\States\\Default Work Unit\\state_combat\\combat",
+        "GUID": "{76879D96-6B91-483E-85DC-B7B10E438F7F}"
+       },
+       {
+        "Id": "2887812511",
+        "Name": "combat_end",
+        "ObjectPath": "\\States\\Default Work Unit\\state_combat\\combat_end",
+        "GUID": "{20C46DC0-57AA-4780-A143-614081F377B0}"
+       },
+       {
+        "Id": "2930212484",
+        "Name": "nocombat",
+        "ObjectPath": "\\States\\Default Work Unit\\state_combat\\nocombat",
+        "GUID": "{AAB602C5-F1F4-4844-B273-85D5A38E9869}"
+       }
+      ]
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "1560465246",
+      "Name": "switch_enemy_state",
+      "ObjectPath": "\\Switches\\Default Work Unit\\switch_enemy_state",
+      "GUID": "{7BCEC131-CFF7-4EC9-8FA1-01CA796C57CE}",
+      "Switches": [
+       {
+        "Id": "302661891",
+        "Name": "nostate",
+        "ObjectPath": "\\Switches\\Default Work Unit\\switch_enemy_state\\nostate",
+        "GUID": "{B1F2E22E-0DDC-4A1D-B499-D807E69F385B}"
+       },
+       {
+        "Id": "1838667140",
+        "Name": "friendly",
+        "ObjectPath": "\\Switches\\Default Work Unit\\switch_enemy_state\\friendly",
+        "GUID": "{E2EF61B1-6143-4FB2-A6D7-A40F264431F4}"
+       },
+       {
+        "Id": "3343821028",
+        "Name": "afraid",
+        "ObjectPath": "\\Switches\\Default Work Unit\\switch_enemy_state\\afraid",
+        "GUID": "{6B7928E2-235B-4F7D-91C3-339543D1FE93}"
+       },
+       {
+        "Id": "4251348366",
+        "Name": "agressive",
+        "ObjectPath": "\\Switches\\Default Work Unit\\switch_enemy_state\\agressive",
+        "GUID": "{3C5FF830-8A92-4FEE-A31B-60D35FE55A2E}"
+       }
+      ]
+     },
+     {
+      "Id": "1991914396",
+      "Name": "switch_attack_material",
+      "ObjectPath": "\\Switches\\Default Work Unit\\switch_attack_material",
+      "GUID": "{D11887A8-8E5A-4D3D-8FDC-BBC055C5425E}",
+      "Switches": [
+       {
+        "Id": "1216965916",
+        "Name": "stone",
+        "ObjectPath": "\\Switches\\Default Work Unit\\switch_attack_material\\stone",
+        "GUID": "{8CD2D766-702D-4B5B-8D64-02CD0D130005}"
+       },
+       {
+        "Id": "3472709650",
+        "Name": "vege",
+        "ObjectPath": "\\Switches\\Default Work Unit\\switch_attack_material\\vege",
+        "GUID": "{AEDDD02C-3F58-4349-BCD0-D7785A59152F}"
+       }
+      ]
+     },
+     {
+      "Id": "2115407397",
+      "Name": "switch_player_fs_material",
+      "ObjectPath": "\\Switches\\Default Work Unit\\switch_player_fs_material",
+      "GUID": "{75C355EA-C638-4083-9ACC-4ED15F60A31B}",
+      "Switches": [
+       {
+        "Id": "1216965916",
+        "Name": "stone",
+        "ObjectPath": "\\Switches\\Default Work Unit\\switch_player_fs_material\\stone",
+        "GUID": "{F3CD2C36-B817-4A27-A1BC-96CFB220BA79}"
+       },
+       {
+        "Id": "3472709650",
+        "Name": "vege",
+        "ObjectPath": "\\Switches\\Default Work Unit\\switch_player_fs_material\\vege",
+        "GUID": "{02BAE21A-2739-4F47-87F7-4B9246F7FB69}"
+       }
+      ]
+     },
+     {
+      "Id": "2288378946",
+      "Name": "switch_enemy_fs_material",
+      "ObjectPath": "\\Switches\\Default Work Unit\\switch_enemy_fs_material",
+      "GUID": "{1E8C4DC6-5355-49AB-BF90-D31B2677EAB2}",
+      "Switches": [
+       {
+        "Id": "1216965916",
+        "Name": "stone",
+        "ObjectPath": "\\Switches\\Default Work Unit\\switch_enemy_fs_material\\stone",
+        "GUID": "{2C6048E5-583B-4043-92D1-BB6A8329AE1C}"
+       },
+       {
+        "Id": "3472709650",
+        "Name": "vege",
+        "ObjectPath": "\\Switches\\Default Work Unit\\switch_enemy_fs_material\\vege",
+        "GUID": "{612497D4-F850-447D-B521-6831C66C45BA}"
+       }
+      ]
+     },
+     {
+      "Id": "2660901680",
+      "Name": "switch_combat_phase",
+      "ObjectPath": "\\Switches\\Default Work Unit\\switch_combat_phase",
+      "GUID": "{00BFC575-DD53-4D59-B613-1CE2AE596AE9}",
+      "Switches": [
+       {
+        "Id": "302661891",
+        "Name": "nostate",
+        "ObjectPath": "\\Switches\\Default Work Unit\\switch_combat_phase\\nostate",
+        "GUID": "{B604615E-D874-4E59-8E26-ED5FBA8218BD}"
+       },
+       {
+        "Id": "3630028968",
+        "Name": "phase2",
+        "ObjectPath": "\\Switches\\Default Work Unit\\switch_combat_phase\\phase2",
+        "GUID": "{0DD26233-048F-41A1-A6C7-12E5CAC1F7D1}"
+       },
+       {
+        "Id": "3630028969",
+        "Name": "phase3",
+        "ObjectPath": "\\Switches\\Default Work Unit\\switch_combat_phase\\phase3",
+        "GUID": "{A17B5649-F5D5-4365-B5EB-FF000F23FF13}"
+       },
+       {
+        "Id": "3630028971",
+        "Name": "phase1",
+        "ObjectPath": "\\Switches\\Default Work Unit\\switch_combat_phase\\phase1",
+        "GUID": "{6725F899-132D-4978-8B75-001417C3E736}"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{5E2466CE-FDA9-6898-C386-4F5CCFE0206C}"
+  "FileHash": "{AC592D8E-8542-4B0A-1C09-1C1EC090D6C8}"
  }
 }

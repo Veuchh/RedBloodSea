@@ -30,9 +30,9 @@ public:
 	UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="Count")
 	FKill OnKill;
 
-	DECLARE_DYNAMIC_MULTICAST_DELEGATE(FPossess);
+	DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FLinked,int,count);
 	UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="Count")
-	FPossess OnPossess;
+	FLinked OnLinked;
 
 	DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FCountChange,float,killPercent);
 	UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="Count")
@@ -41,5 +41,5 @@ public:
 	UFUNCTION()
 	void AddKill();
 	UFUNCTION()
-	void AddPossess();
+	void AddLinked(int count);
 };

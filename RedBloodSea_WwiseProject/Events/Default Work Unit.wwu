@@ -73,7 +73,7 @@
 								<Action Name="" ID="{D3F7795F-068D-433C-9724-1F065A83E02E}" ShortID="1024742276">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="HitNotOnWeakpoint" ID="{D1E7D9AA-569A-46B3-B1C8-59382623DA99}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											<ObjectRef Name="HitNotOnWeakpoint" ID="{CAD87C67-AC49-4E5E-BD9D-18A0D25B24CF}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -84,7 +84,7 @@
 								<Action Name="" ID="{43006BD6-28C3-46CB-9339-C5333A0BFF40}" ShortID="688205250">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="HitOnWeakpoint" ID="{569E22A9-ECDD-4356-A365-8A45DEC47329}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											<ObjectRef Name="HitOnWeakpoint" ID="{D0FAD662-7CBC-47E6-94BD-7F3F63AE4861}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -101,34 +101,12 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Play_LinkRay" ID="{5E6E3C24-D513-40AD-A5C5-D80AD0D2BCDD}">
-							<ChildrenList>
-								<Action Name="" ID="{1FBCB663-13E6-433D-9ED8-FEA3266261CB}" ShortID="713880911">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="LinkRay" ID="{50A8C03E-AC15-463C-90FD-3E7B493759F5}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_LinkSuccessful" ID="{6D367373-2398-4C51-9F2C-F5C06824195D}">
+						<Event Name="Play_PossessionSuccessful" ID="{6D367373-2398-4C51-9F2C-F5C06824195D}">
 							<ChildrenList>
 								<Action Name="" ID="{3536087E-197E-48DA-A264-B8EFAC69999E}" ShortID="731757420">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="LinkSuccessful" ID="{07559C4F-62EF-42B8-878B-6445ED52AD43}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_Possession" ID="{5B1E0147-80ED-4EC9-BDB1-139702DD6306}">
-							<ChildrenList>
-								<Action Name="" ID="{4CA0CC0E-26EF-4496-B8B0-4CD00E386860}" ShortID="894614822">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Possession" ID="{D447E30C-E5C5-4443-AD08-8C797D6AD3F4}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											<ObjectRef Name="PossessionSuccessful" ID="{2514713A-C848-4FC1-B561-4A35E174AC6B}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -139,7 +117,8 @@
 								<Action Name="" ID="{A222D74F-2BD6-4BA4-8A6D-24E723AFB166}" ShortID="856099368">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="FadeTime" Type="Real64" Value="0.3"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -151,6 +130,94 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="SlashHitEnviro" ID="{47733A02-7B00-4799-9CEE-DE1C70402C1B}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_PlayerRespawn" ID="{7869A732-3A1F-4314-B872-8E58B1D9ABAC}">
+							<ChildrenList>
+								<Action Name="" ID="{5FEFF6B3-DDD5-460E-AEF7-3FECB4E7C38B}" ShortID="1071882003">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerRespawn" ID="{5D3C2980-2C8E-454C-ACE5-7E71E8090F0A}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_PlayerDeath" ID="{CD3CCEF3-241D-4F69-8512-A342342148B8}">
+							<ChildrenList>
+								<Action Name="" ID="{3E8AF2E9-BBFA-4B10-9AF6-8F36CAD73D09}" ShortID="149037528">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerDeath" ID="{9C0EF89E-A0B2-4E53-BCA1-64AF94CF9AC2}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_LinkRay5" ID="{194B4F2E-1322-4BD9-8C6C-D107F77E1425}">
+							<ChildrenList>
+								<Action Name="" ID="{C51CA190-8D9B-43F4-A418-D41140D21ECA}" ShortID="691654240">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LinkRay5" ID="{7921B8CB-8711-4BC6-8A20-717235D1F683}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_LinkRay6" ID="{61474507-C6B4-44B4-86A9-D8D2B1AF9328}">
+							<ChildrenList>
+								<Action Name="" ID="{798D0169-6401-43B9-A87B-33A0751E9A5D}" ShortID="41416734">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LinkRay6" ID="{7E1BAAB9-12EF-44AC-A237-957B6532840A}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_LinkRay1" ID="{45EA5D2F-C0C5-49BF-9CCF-B944FF1C3EF8}">
+							<ChildrenList>
+								<Action Name="" ID="{04CAF57D-3CAF-4177-B500-A584D7ECEFDB}" ShortID="58878411">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LinkRay1" ID="{3FE73E25-8AB1-4716-92E9-A06A498955D0}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_LinkRay2" ID="{295D72FD-50B8-40D0-88D1-20F79D3BC243}">
+							<ChildrenList>
+								<Action Name="" ID="{218C3A0D-D748-41A6-8C9E-3EA938E74551}" ShortID="578945523">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LinkRay2" ID="{559A57A1-FD67-4571-8239-75DC121880F4}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_LinkRay3" ID="{D153C254-2365-4339-A7A8-6EFAA363D385}">
+							<ChildrenList>
+								<Action Name="" ID="{E9FF9585-DB7A-41F5-B63B-F5666538F55F}" ShortID="415729851">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LinkRay3" ID="{38D81513-3C02-47A3-BCD7-6313E544341A}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_LinkRay4" ID="{79F68C39-B8F8-45EC-B7C7-C45750FAAF87}">
+							<ChildrenList>
+								<Action Name="" ID="{07E49AE5-F831-4CBA-9698-A91DCBB45DC0}" ShortID="1067700093">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LinkRay4" ID="{3966589A-F7D5-4173-9E93-2F773A0FA453}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -252,6 +319,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Jump" ID="{E9BD2A7D-A3FC-4367-900D-1C172D1086AE}">
+							<ChildrenList>
+								<Action Name="" ID="{7F31FEC0-2662-4463-B109-738FD4912461}" ShortID="940418803">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="JumpBlend" ID="{C7AADBEC-8EEA-40CF-9B5D-C8A003E5D73F}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Ai Behavior" ID="{40970CDB-819B-4582-8EA2-7271C32A6C94}" ShortID="752845341">
@@ -309,7 +387,51 @@
 								<Action Name="" ID="{C8C4C98F-886A-445D-BB1B-17EB85FCC893}" ShortID="517583125">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="WeakpointReveal" ID="{DB58B06D-034C-4E17-AE7F-D43D811D2A1C}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											<ObjectRef Name="WeakpointReveal" ID="{633785F0-9469-4B73-8B63-B49397CCC7F4}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_EnemyDamageTaken" ID="{D429FCF1-2B13-44F7-982A-97C15E351D1F}">
+							<ChildrenList>
+								<Action Name="" ID="{82A9CF15-4C4C-4E3C-8368-D677F6967B0B}" ShortID="382750842">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="EnemyDamageTaken" ID="{EB6330E4-68EF-4542-835A-F85E6BA343D4}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_EnemyProjectileCast" ID="{83E9AC1D-8C91-49FA-A01A-365107871AAC}">
+							<ChildrenList>
+								<Action Name="" ID="{08E7CD8F-0AD1-4062-8397-79CBD0704B0B}" ShortID="1024242662">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="EnemyProjectileCast" ID="{4A9A06BA-BB7D-4433-A266-4FDE7867C156}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_EnemyProjectileFlyby" ID="{4B060C13-B121-4F9D-929D-ECAB732B6779}">
+							<ChildrenList>
+								<Action Name="" ID="{4CBA5C5A-4535-4B24-99C3-D65CB930DE37}" ShortID="504633142">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="EnemyProjectileFlyby" ID="{C9F9547C-B0BC-496A-8F9A-56FF43C24371}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_EnemyProjectileTrail" ID="{C953855A-9CA6-48E1-8869-F6A38CCD7945}">
+							<ChildrenList>
+								<Action Name="" ID="{C46DDBF7-684F-4B7F-B60D-E26E163B2024}" ShortID="275804124">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="EnemyProjectileTrail" ID="{B89BF0AC-ADB4-48D8-82C1-472295208C84}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

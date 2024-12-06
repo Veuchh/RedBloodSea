@@ -33,7 +33,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="rtpc_player_walkspeed" ID="{6437691A-43C2-473B-A671-C59F1A9E957B}"/>
-							<Value>1</Value>
+							<Value>0.32</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="rtpc_chaos_enemy" ID="{8D8709D7-5017-47F2-988D-4EE3A088300B}"/>
@@ -57,7 +57,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="rtpc_landing_force" ID="{07DB1610-4113-4F81-A7B4-0C953E645162}"/>
-							<Value>0</Value>
+							<Value>1</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="rtpc_chaos_player" ID="{BFE4D672-50A0-4F84-B21E-4DC11EBCCF9B}"/>

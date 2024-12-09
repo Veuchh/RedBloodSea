@@ -7,14 +7,14 @@ void UCountLevelInstanceSubsystem::Initialize(FSubsystemCollectionBase& Collecti
 {
 	Super::Initialize(Collection);
 	OnKill.AddUniqueDynamic(this,&UCountLevelInstanceSubsystem::AddKill);
-	OnPossess.AddUniqueDynamic(this,&UCountLevelInstanceSubsystem::AddPossess);
+	OnLinked.AddUniqueDynamic(this,&UCountLevelInstanceSubsystem::AddLinked);
 }
 
 void UCountLevelInstanceSubsystem::Deinitialize()
 {
 	Super::Deinitialize();
 	OnKill.RemoveDynamic(this,&UCountLevelInstanceSubsystem::AddKill);
-	OnPossess.RemoveDynamic(this,&UCountLevelInstanceSubsystem::AddPossess);
+	OnLinked.RemoveDynamic(this,&UCountLevelInstanceSubsystem::AddLinked);
 }
 
 void UCountLevelInstanceSubsystem::GetKillPercent()
@@ -29,9 +29,9 @@ void UCountLevelInstanceSubsystem::AddKill()
 	GetKillPercent();
 }
 
-void UCountLevelInstanceSubsystem::AddPossess()
+void UCountLevelInstanceSubsystem::AddLinked(int count)
 {
-	possessCount++;
+	possessCount += count;
 	GetKillPercent();
 }
 

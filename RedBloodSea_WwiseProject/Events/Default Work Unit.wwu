@@ -70,6 +70,29 @@
 						</Event>
 						<Event Name="Play_HitNotOnWeakpoint" ID="{2216BC91-69B5-4700-B255-8145143E83AC}">
 							<ChildrenList>
+								<Action Name="" ID="{68A7A641-499C-4D06-8BE5-0C4F1E44F701}" ShortID="233610404">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="HitOnWeakpoint" ID="{D0FAD662-7CBC-47E6-94BD-7F3F63AE4861}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{7D946C91-06DE-4315-852E-156A2B34F8AF}" ShortID="367612068">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.3"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BasicThrustGeneric" ID="{4AF9D815-0B2B-4766-BED2-30232AE3BB76}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 								<Action Name="" ID="{D3F7795F-068D-433C-9724-1F065A83E02E}" ShortID="1024742276">
 									<ReferenceList>
 										<Reference Name="Target">
@@ -81,6 +104,17 @@
 						</Event>
 						<Event Name="Play_HitOnWeakpoint" ID="{C43D29F5-8E69-4666-A4F1-2883794CDC5B}">
 							<ChildrenList>
+								<Action Name="" ID="{0A03A6C8-EEB4-4CAC-97AD-960F3E92560A}" ShortID="434161326">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="HitNotOnWeakpoint" ID="{CAD87C67-AC49-4E5E-BD9D-18A0D25B24CF}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 								<Action Name="" ID="{43006BD6-28C3-46CB-9339-C5333A0BFF40}" ShortID="688205250">
 									<ReferenceList>
 										<Reference Name="Target">
@@ -117,12 +151,24 @@
 								<Action Name="" ID="{A222D74F-2BD6-4BA4-8A6D-24E723AFB166}" ShortID="856099368">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.3"/>
 										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="BasicSlash" ID="{CE1103A0-9B1B-40FD-BDCC-6F5990D34E46}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{C9AA267D-BCD3-4382-8FD2-096ABBB09675}" ShortID="29390660">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.3"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BasicThrust" ID="{258A3DC9-66EE-4B7F-9161-5FA6B0663D0B}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

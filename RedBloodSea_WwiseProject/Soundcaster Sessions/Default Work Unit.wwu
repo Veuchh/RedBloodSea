@@ -33,7 +33,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="rtpc_player_walkspeed" ID="{6437691A-43C2-473B-A671-C59F1A9E957B}"/>
-							<Value>0.32</Value>
+							<Value>0</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="rtpc_chaos_enemy" ID="{8D8709D7-5017-47F2-988D-4EE3A088300B}"/>
@@ -57,7 +57,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="rtpc_landing_force" ID="{07DB1610-4113-4F81-A7B4-0C953E645162}"/>
-							<Value>1</Value>
+							<Value>0</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="rtpc_chaos_player" ID="{BFE4D672-50A0-4F84-B21E-4DC11EBCCF9B}"/>
@@ -68,7 +68,11 @@
 							<Value>1</Value>
 						</RTPCValue>
 					</RTPCValueList>
-					<CurrentStateList ShowAll="true"/>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="None" ID="{F55C3BA2-B06E-4139-88C5-13C67AEA9EF2}"/>
+						<CurrentStateRef Name="None" ID="{E50472C8-63C0-46CA-8249-305F3BF374E9}"/>
+						<CurrentStateRef Name="onground" ID="{5ADF1174-9E07-490C-82F9-C5039AEC4132}"/>
+					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="stone" ID="{F3CD2C36-B817-4A27-A1BC-96CFB220BA79}"/>
 						<CurrentSwitchRef Name="stone" ID="{2C6048E5-583B-4043-92D1-BB6A8329AE1C}"/>

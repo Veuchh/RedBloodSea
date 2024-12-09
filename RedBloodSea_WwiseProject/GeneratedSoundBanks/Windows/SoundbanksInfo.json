@@ -407,7 +407,7 @@
     "Type": "User",
     "GUID": "{1D2A39F0-30EC-4374-B60C-7E5FD97B8C24}",
     "Language": "SFX",
-    "Hash": "{57ADBF95-B388-F773-F6F1-894F10BAAA97}",
+    "Hash": "{0333AFA0-387E-E48C-3542-F2B41B7370D7}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\RBS_MAIN_SoundBank",
     "ShortName": "RBS_MAIN_SoundBank",
     "Path": "RBS_MAIN_SoundBank.bnk",
@@ -427,7 +427,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_LinkRay_HighChaos 05.wav",
-      "CachePath": "SFX/RBS_SFX_LinkRay_HighChaos 05_04C28E9F.wem"
+      "CachePath": "SFX/RBS_SFX_LinkRay_HighChaos 05_00E1F1C3.wem"
      },
      {
       "Id": "3780620",
@@ -496,7 +496,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_Jump 04.wav",
-      "CachePath": "SFX/RBS_SFX_Jump 04_C2C258C7.wem"
+      "CachePath": "SFX/RBS_SFX_Jump 04_D4BDECDB.wem"
      },
      {
       "Id": "34882479",
@@ -566,7 +566,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_Jump 05.wav",
-      "CachePath": "SFX/RBS_SFX_Jump 05_D49DF189.wem"
+      "CachePath": "SFX/RBS_SFX_Jump 05_CC1628AB.wem"
      },
      {
       "Id": "57744175",
@@ -679,7 +679,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_LinkRay_HighChaos 01.wav",
-      "CachePath": "SFX/RBS_SFX_LinkRay_HighChaos 01_CA315B79.wem"
+      "CachePath": "SFX/RBS_SFX_LinkRay_HighChaos 01_B1752F9C.wem"
      },
      {
       "Id": "93186479",
@@ -705,7 +705,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_HitNotOnWeakpoint 01.wav",
-      "CachePath": "SFX/RBS_SFX_HitNotOnWeakpoint 01_99C64AAC.wem"
+      "CachePath": "SFX/RBS_SFX_HitNotOnWeakpoint 01_02C56852.wem"
      },
      {
       "Id": "97178390",
@@ -758,7 +758,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_LinkRay_HighChaos 03.wav",
-      "CachePath": "SFX/RBS_SFX_LinkRay_HighChaos 03_304D7D95.wem"
+      "CachePath": "SFX/RBS_SFX_LinkRay_HighChaos 03_F1781553.wem"
      },
      {
       "Id": "107126723",
@@ -766,7 +766,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_Jump 02.wav",
-      "CachePath": "SFX/RBS_SFX_Jump 02_F5BAB48F.wem"
+      "CachePath": "SFX/RBS_SFX_Jump 02_DFA18714.wem"
      },
      {
       "Id": "108549160",
@@ -801,7 +801,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_HitOnWeakpoint 04.wav",
-      "CachePath": "SFX/RBS_SFX_HitOnWeakpoint 04_A7D213BA.wem"
+      "CachePath": "SFX/RBS_SFX_HitOnWeakpoint 04_E2374699.wem"
      },
      {
       "Id": "125901720",
@@ -914,7 +914,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_LinkRay_LowChaos 02.wav",
-      "CachePath": "SFX/RBS_SFX_LinkRay_LowChaos 02_D2DC62FD.wem"
+      "CachePath": "SFX/RBS_SFX_LinkRay_LowChaos 02_E55AB2F4.wem"
      },
      {
       "Id": "193249177",
@@ -993,7 +993,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_HitOnWeakpoint 05.wav",
-      "CachePath": "SFX/RBS_SFX_HitOnWeakpoint 05_421879C0.wem"
+      "CachePath": "SFX/RBS_SFX_HitOnWeakpoint 05_67A20D4C.wem"
      },
      {
       "Id": "243593664",
@@ -1131,7 +1131,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_LinkRay_HighChaos 06.wav",
-      "CachePath": "SFX/RBS_SFX_LinkRay_HighChaos 06_6F656137.wem"
+      "CachePath": "SFX/RBS_SFX_LinkRay_HighChaos 06_5ADFCF7F.wem"
      },
      {
       "Id": "314954263",
@@ -1241,7 +1241,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_HitNotOnWeakpoint 03.wav",
-      "CachePath": "SFX/RBS_SFX_HitNotOnWeakpoint 03_2CF964BB.wem"
+      "CachePath": "SFX/RBS_SFX_HitNotOnWeakpoint 03_60EA610E.wem"
      },
      {
       "Id": "353005863",
@@ -1374,7 +1374,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_PossessionSuccessful 06.wav",
-      "CachePath": "SFX/RBS_SFX_PossessionSuccessful 06_F66B0AB9.wem"
+      "CachePath": "SFX/RBS_SFX_PossessionSuccessful 06_540C3CA0.wem"
      },
      {
       "Id": "409348956",
@@ -1416,7 +1416,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_Death.wav",
-      "CachePath": "SFX/RBS_SFX_Death_8498A14A.wem"
+      "CachePath": "SFX/RBS_SFX_Death_98BAE24A.wem"
      },
      {
       "Id": "423400115",
@@ -1466,7 +1466,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_HitNotOnWeakpoint 04.wav",
-      "CachePath": "SFX/RBS_SFX_HitNotOnWeakpoint 04_CBFB20EB.wem"
+      "CachePath": "SFX/RBS_SFX_HitNotOnWeakpoint 04_C277E97C.wem"
      },
      {
       "Id": "449377284",
@@ -1500,7 +1500,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_HitNotOnWeakpoint 02.wav",
-      "CachePath": "SFX/RBS_SFX_HitNotOnWeakpoint 02_F3573D92.wem"
+      "CachePath": "SFX/RBS_SFX_HitNotOnWeakpoint 02_9C52B622.wem"
      },
      {
       "Id": "459603677",
@@ -1614,7 +1614,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_PossessionSuccessful 01.wav",
-      "CachePath": "SFX/RBS_SFX_PossessionSuccessful 01_8B516B0B.wem"
+      "CachePath": "SFX/RBS_SFX_PossessionSuccessful 01_4B4D045E.wem"
      },
      {
       "Id": "511303387",
@@ -1748,7 +1748,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_LinkRay_LowChaos 04.wav",
-      "CachePath": "SFX/RBS_SFX_LinkRay_LowChaos 04_93C32B88.wem"
+      "CachePath": "SFX/RBS_SFX_LinkRay_LowChaos 04_AB8C575C.wem"
      },
      {
       "Id": "565440753",
@@ -1791,7 +1791,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_HitOnWeakpoint 03.wav",
-      "CachePath": "SFX/RBS_SFX_HitOnWeakpoint 03_4EA16B2B.wem"
+      "CachePath": "SFX/RBS_SFX_HitOnWeakpoint 03_A76DCDE1.wem"
      },
      {
       "Id": "582124270",
@@ -2033,7 +2033,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_LinkRay_HighChaos 04.wav",
-      "CachePath": "SFX/RBS_SFX_LinkRay_HighChaos 04_EA56B895.wem"
+      "CachePath": "SFX/RBS_SFX_LinkRay_HighChaos 04_B836D979.wem"
      },
      {
       "Id": "679143028",
@@ -2041,7 +2041,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_LinkRay_LowChaos 01.wav",
-      "CachePath": "SFX/RBS_SFX_LinkRay_LowChaos 01_9F2E2965.wem"
+      "CachePath": "SFX/RBS_SFX_LinkRay_LowChaos 01_1F0A8C38.wem"
      },
      {
       "Id": "685973855",
@@ -2067,7 +2067,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_PossessionSuccessful 03.wav",
-      "CachePath": "SFX/RBS_SFX_PossessionSuccessful 03_C4DB62C2.wem"
+      "CachePath": "SFX/RBS_SFX_PossessionSuccessful 03_4A167E5A.wem"
      },
      {
       "Id": "710770886",
@@ -2111,7 +2111,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_Jump 01.wav",
-      "CachePath": "SFX/RBS_SFX_Jump 01_7BC83941.wem"
+      "CachePath": "SFX/RBS_SFX_Jump 01_3B813005.wem"
      },
      {
       "Id": "720879369",
@@ -2136,7 +2136,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_LinkRay_HighChaos 02.wav",
-      "CachePath": "SFX/RBS_SFX_LinkRay_HighChaos 02_8FDFE091.wem"
+      "CachePath": "SFX/RBS_SFX_LinkRay_HighChaos 02_0D66FF35.wem"
      },
      {
       "Id": "733952893",
@@ -2204,7 +2204,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_HitOnWeakpoint 02.wav",
-      "CachePath": "SFX/RBS_SFX_HitOnWeakpoint 02_5DDCA1AB.wem"
+      "CachePath": "SFX/RBS_SFX_HitOnWeakpoint 02_E93F1ECC.wem"
      },
      {
       "Id": "764701999",
@@ -2221,7 +2221,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_PossessionSuccessful 02.wav",
-      "CachePath": "SFX/RBS_SFX_PossessionSuccessful 02_9C501A5B.wem"
+      "CachePath": "SFX/RBS_SFX_PossessionSuccessful 02_43C1105E.wem"
      },
      {
       "Id": "779505053",
@@ -2229,7 +2229,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_PossessionSuccessful 04.wav",
-      "CachePath": "SFX/RBS_SFX_PossessionSuccessful 04_A79380F8.wem"
+      "CachePath": "SFX/RBS_SFX_PossessionSuccessful 04_D35B3237.wem"
      },
      {
       "Id": "787419388",
@@ -2376,7 +2376,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_PossessionSuccessful 05.wav",
-      "CachePath": "SFX/RBS_SFX_PossessionSuccessful 05_0C96C9B0.wem"
+      "CachePath": "SFX/RBS_SFX_PossessionSuccessful 05_2411EC0D.wem"
      },
      {
       "Id": "862584422",
@@ -2461,7 +2461,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_Respawn.wav",
-      "CachePath": "SFX/RBS_SFX_Respawn_B7F9FC1E.wem"
+      "CachePath": "SFX/RBS_SFX_Respawn_C4EE0608.wem"
      },
      {
       "Id": "883384986",
@@ -2494,7 +2494,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_LinkRay_LowChaos 03.wav",
-      "CachePath": "SFX/RBS_SFX_LinkRay_LowChaos 03_E228C4FA.wem"
+      "CachePath": "SFX/RBS_SFX_LinkRay_LowChaos 03_4464FF3D.wem"
      },
      {
       "Id": "898556984",
@@ -2637,7 +2637,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_LinkRay_LowChaos 06.wav",
-      "CachePath": "SFX/RBS_SFX_LinkRay_LowChaos 06_18792A54.wem"
+      "CachePath": "SFX/RBS_SFX_LinkRay_LowChaos 06_DF565D97.wem"
      },
      {
       "Id": "932447090",
@@ -2899,7 +2899,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_LinkRay_LowChaos 05.wav",
-      "CachePath": "SFX/RBS_SFX_LinkRay_LowChaos 05_F2C4526A.wem"
+      "CachePath": "SFX/RBS_SFX_LinkRay_LowChaos 05_A555D5DD.wem"
      },
      {
       "Id": "1044172823",
@@ -3326,8 +3326,8 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Player Abilities\\Play_HitNotOnWeakpoint",
       "GUID": "{2216BC91-69B5-4700-B255-8145143E83AC}",
       "DurationType": "OneShot",
-      "DurationMin": "0.78141046",
-      "DurationMax": "1.1591228",
+      "DurationMin": "0.8924351",
+      "DurationMax": "1.3238137",
       "MediaRefs": [
        {
         "Id": "96360412"
@@ -3387,8 +3387,8 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_Jump",
       "GUID": "{E9BD2A7D-A3FC-4367-900D-1C172D1086AE}",
       "DurationType": "OneShot",
-      "DurationMin": "0.74779165",
-      "DurationMax": "1.3548542",
+      "DurationMin": "0.647241",
+      "DurationMax": "1.1726758",
       "MediaRefs": [
        {
         "Id": "32617726"
@@ -4850,7 +4850,7 @@
       "GUID": "{EB957F93-4066-48C3-A59E-1B00C3C1170A}",
       "DurationType": "OneShot",
       "DurationMin": "2.865729",
-      "DurationMax": "4.414375",
+      "DurationMax": "4.714375",
       "MediaRefs": [
        {
         "Id": "78466956"
@@ -4983,6 +4983,6 @@
     ]
    }
   ],
-  "FileHash": "{DD8F11BC-A50E-B6E4-BFA1-199ED3E51E92}"
+  "FileHash": "{23D75F59-7FD9-81D5-941E-69DBBD022164}"
  }
 }

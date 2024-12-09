@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="2890283282" Type="User" GUID="{1D2A39F0-30EC-4374-B60C-7E5FD97B8C24}" Language="SFX" Hash="{57ADBF95-B388-F773-F6F1-894F10BAAA97}">
+		<SoundBank Id="2890283282" Type="User" GUID="{1D2A39F0-30EC-4374-B60C-7E5FD97B8C24}" Language="SFX" Hash="{7BCD3D73-01B0-E037-FCD9-052606C9FD59}">
 			<ObjectPath>\SoundBanks\Default Work Unit\RBS_MAIN_SoundBank</ObjectPath>
 			<ShortName>RBS_MAIN_SoundBank</ShortName>
 			<Path>RBS_MAIN_SoundBank.bnk</Path>
@@ -13,7 +13,7 @@
 				</File>
 				<File Id="655081" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_LinkRay_HighChaos 05.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_LinkRay_HighChaos 05_04C28E9F.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_LinkRay_HighChaos 05_00E1F1C3.wem</CachePath>
 				</File>
 				<File Id="3780620" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS ConcreteGrittyRun 05L.wav</ShortName>
@@ -50,7 +50,7 @@
 				</File>
 				<File Id="32617726" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_Jump 04.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_Jump 04_C2C258C7.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_Jump 04_D4BDECDB.wem</CachePath>
 				</File>
 				<File Id="34882479" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS DirtRun 11R.wav</ShortName>
@@ -88,7 +88,7 @@
 				</File>
 				<File Id="57368660" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_Jump 05.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_Jump 05_D49DF189.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_Jump 05_CC1628AB.wem</CachePath>
 				</File>
 				<File Id="57744175" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS ConcreteRun 08R.wav</ShortName>
@@ -149,7 +149,7 @@
 				</File>
 				<File Id="92944635" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_LinkRay_HighChaos 01.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_LinkRay_HighChaos 01_CA315B79.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_LinkRay_HighChaos 01_B1752F9C.wem</CachePath>
 				</File>
 				<File Id="93186479" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS RandLayerCloth 05.wav</ShortName>
@@ -163,7 +163,7 @@
 				</File>
 				<File Id="96360412" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_HitNotOnWeakpoint 01.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_HitNotOnWeakpoint 01_99C64AAC.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_HitNotOnWeakpoint 01_02C56852.wem</CachePath>
 				</File>
 				<File Id="97178390" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS ConcreteWalk 06L.wav</ShortName>
@@ -192,11 +192,11 @@
 				</File>
 				<File Id="106894985" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_LinkRay_HighChaos 03.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_LinkRay_HighChaos 03_304D7D95.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_LinkRay_HighChaos 03_F1781553.wem</CachePath>
 				</File>
 				<File Id="107126723" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_Jump 02.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_Jump 02_F5BAB48F.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_Jump 02_DFA18714.wem</CachePath>
 				</File>
 				<File Id="108549160" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>09 RBS_SFX_PlayerFS ConcreteGrittyWalk 09R.wav</ShortName>
@@ -215,7 +215,7 @@
 				</File>
 				<File Id="114805436" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_HitOnWeakpoint 04.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_HitOnWeakpoint 04_A7D213BA.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_HitOnWeakpoint 04_E2374699.wem</CachePath>
 				</File>
 				<File Id="125901720" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_FsSurface1 SurfacePebbleL3 06.wav</ShortName>
@@ -276,7 +276,7 @@
 				</File>
 				<File Id="181696342" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_LinkRay_LowChaos 02.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_LinkRay_LowChaos 02_D2DC62FD.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_LinkRay_LowChaos 02_E55AB2F4.wem</CachePath>
 				</File>
 				<File Id="193249177" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS GravelWalk 03L.wav</ShortName>
@@ -319,7 +319,7 @@
 				</File>
 				<File Id="243266369" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_HitOnWeakpoint 05.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_HitOnWeakpoint 05_421879C0.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_HitOnWeakpoint 05_67A20D4C.wem</CachePath>
 				</File>
 				<File Id="243593664" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS ConcreteRun 04L.wav</ShortName>
@@ -393,7 +393,7 @@
 				</File>
 				<File Id="311192433" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_LinkRay_HighChaos 06.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_LinkRay_HighChaos 06_6F656137.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_LinkRay_HighChaos 06_5ADFCF7F.wem</CachePath>
 				</File>
 				<File Id="314954263" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_SlashHitEnviroMat2 02.wav</ShortName>
@@ -451,7 +451,7 @@
 				</File>
 				<File Id="352916239" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_HitNotOnWeakpoint 03.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_HitNotOnWeakpoint 03_2CF964BB.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_HitNotOnWeakpoint 03_60EA610E.wem</CachePath>
 				</File>
 				<File Id="353005863" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>10 RBS_SFX_PlayerFS ConcreteGrittyWalk 10R.wav</ShortName>
@@ -524,7 +524,7 @@
 				</File>
 				<File Id="409200531" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_PossessionSuccessful 06.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_PossessionSuccessful 06_F66B0AB9.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_PossessionSuccessful 06_540C3CA0.wem</CachePath>
 				</File>
 				<File Id="409348956" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_FsSurface1 SurfacePebbleL1 01.wav</ShortName>
@@ -546,7 +546,7 @@
 				</File>
 				<File Id="419973770" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_Death.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_Death_8498A14A.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_Death_98BAE24A.wem</CachePath>
 				</File>
 				<File Id="423400115" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS GrassWalk 10R.wav</ShortName>
@@ -572,7 +572,7 @@
 				</File>
 				<File Id="446990444" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_HitNotOnWeakpoint 04.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_HitNotOnWeakpoint 04_CBFB20EB.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_HitNotOnWeakpoint 04_C277E97C.wem</CachePath>
 				</File>
 				<File Id="449377284" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_LandingLowVelocity 03.wav</ShortName>
@@ -590,7 +590,7 @@
 				</File>
 				<File Id="457715245" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_HitNotOnWeakpoint 02.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_HitNotOnWeakpoint 02_F3573D92.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_HitNotOnWeakpoint 02_9C52B622.wem</CachePath>
 				</File>
 				<File Id="459603677" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS RandLayerCloth 06.wav</ShortName>
@@ -652,7 +652,7 @@
 				</File>
 				<File Id="507432298" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_PossessionSuccessful 01.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_PossessionSuccessful 01_8B516B0B.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_PossessionSuccessful 01_4B4D045E.wem</CachePath>
 				</File>
 				<File Id="511303387" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_SlashHitEnviroMat2 01.wav</ShortName>
@@ -722,7 +722,7 @@
 				</File>
 				<File Id="562041628" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_LinkRay_LowChaos 04.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_LinkRay_LowChaos 04_93C32B88.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_LinkRay_LowChaos 04_AB8C575C.wem</CachePath>
 				</File>
 				<File Id="565440753" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS DirtRun 03R.wav</ShortName>
@@ -745,7 +745,7 @@
 				</File>
 				<File Id="572556066" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_HitOnWeakpoint 03.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_HitOnWeakpoint 03_4EA16B2B.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_HitOnWeakpoint 03_A76DCDE1.wem</CachePath>
 				</File>
 				<File Id="582124270" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS ConcreteRun 13R.wav</ShortName>
@@ -875,11 +875,11 @@
 				</File>
 				<File Id="678096996" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_LinkRay_HighChaos 04.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_LinkRay_HighChaos 04_EA56B895.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_LinkRay_HighChaos 04_B836D979.wem</CachePath>
 				</File>
 				<File Id="679143028" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_LinkRay_LowChaos 01.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_LinkRay_LowChaos 01_9F2E2965.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_LinkRay_LowChaos 01_1F0A8C38.wem</CachePath>
 				</File>
 				<File Id="685973855" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS DirtRun 02L.wav</ShortName>
@@ -893,7 +893,7 @@
 				</File>
 				<File Id="710212975" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_PossessionSuccessful 03.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_PossessionSuccessful 03_C4DB62C2.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_PossessionSuccessful 03_4A167E5A.wem</CachePath>
 				</File>
 				<File Id="710770886" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS DirtRun 08L.wav</ShortName>
@@ -917,7 +917,7 @@
 				</File>
 				<File Id="716875391" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_Jump 01.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_Jump 01_7BC83941.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_Jump 01_3B813005.wem</CachePath>
 				</File>
 				<File Id="720879369" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_LandingSurface2HighVel 02.wav</ShortName>
@@ -930,7 +930,7 @@
 				</File>
 				<File Id="733526565" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_LinkRay_HighChaos 02.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_LinkRay_HighChaos 02_8FDFE091.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_LinkRay_HighChaos 02_0D66FF35.wem</CachePath>
 				</File>
 				<File Id="733952893" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS ConcreteRun 06L.wav</ShortName>
@@ -966,7 +966,7 @@
 				</File>
 				<File Id="760687386" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_HitOnWeakpoint 02.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_HitOnWeakpoint 02_5DDCA1AB.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_HitOnWeakpoint 02_E93F1ECC.wem</CachePath>
 				</File>
 				<File Id="764701999" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS ConcreteRun 09R.wav</ShortName>
@@ -975,11 +975,11 @@
 				</File>
 				<File Id="770219229" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_PossessionSuccessful 02.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_PossessionSuccessful 02_9C501A5B.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_PossessionSuccessful 02_43C1105E.wem</CachePath>
 				</File>
 				<File Id="779505053" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_PossessionSuccessful 04.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_PossessionSuccessful 04_A79380F8.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_PossessionSuccessful 04_D35B3237.wem</CachePath>
 				</File>
 				<File Id="787419388" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Voice Designer, Bella 2.wav</ShortName>
@@ -1058,7 +1058,7 @@
 				</File>
 				<File Id="854276192" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_PossessionSuccessful 05.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_PossessionSuccessful 05_0C96C9B0.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_PossessionSuccessful 05_2411EC0D.wem</CachePath>
 				</File>
 				<File Id="862584422" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_FsSurface1 SurfacePebbleL2 03.wav</ShortName>
@@ -1103,7 +1103,7 @@
 				</File>
 				<File Id="880866166" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_Respawn.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_Respawn_B7F9FC1E.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_Respawn_C4EE0608.wem</CachePath>
 				</File>
 				<File Id="883384986" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS DirtRun 08R.wav</ShortName>
@@ -1120,7 +1120,7 @@
 				</File>
 				<File Id="897258307" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_LinkRay_LowChaos 03.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_LinkRay_LowChaos 03_E228C4FA.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_LinkRay_LowChaos 03_4464FF3D.wem</CachePath>
 				</File>
 				<File Id="898556984" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS GravelRun 10R.wav</ShortName>
@@ -1199,7 +1199,7 @@
 				</File>
 				<File Id="932067387" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_LinkRay_LowChaos 06.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_LinkRay_LowChaos 06_18792A54.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_LinkRay_LowChaos 06_DF565D97.wem</CachePath>
 				</File>
 				<File Id="932447090" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS GravelWalk 04L.wav</ShortName>
@@ -1341,7 +1341,7 @@
 				</File>
 				<File Id="1036319810" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_LinkRay_LowChaos 05.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_LinkRay_LowChaos 05_F2C4526A.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_LinkRay_LowChaos 05_A555D5DD.wem</CachePath>
 				</File>
 				<File Id="1044172823" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_BasicSlashGeneric 08.wav</ShortName>
@@ -1490,7 +1490,7 @@
 						<MediaRef Id="531766639"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3649265915" Name="Play_HitNotOnWeakpoint" ObjectPath="\Events\Default Work Unit\Player Abilities\Play_HitNotOnWeakpoint" GUID="{2216BC91-69B5-4700-B255-8145143E83AC}" DurationType="OneShot" DurationMin="0.78141046" DurationMax="1.1591228">
+				<Event Id="3649265915" Name="Play_HitNotOnWeakpoint" ObjectPath="\Events\Default Work Unit\Player Abilities\Play_HitNotOnWeakpoint" GUID="{2216BC91-69B5-4700-B255-8145143E83AC}" DurationType="OneShot" DurationMin="0.8924351" DurationMax="1.3238137">
 					<MediaRefs>
 						<MediaRef Id="96360412"/>
 						<MediaRef Id="352916239"/>
@@ -1509,7 +1509,7 @@
 					</MediaRefs>
 				</Event>
 				<Event Id="2159564533" Name="Play_IdleFPS" ObjectPath="\Events\Default Work Unit\Player\Play_IdleFPS" GUID="{AEB85C59-534C-4B60-9C60-04A94B157434}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="3689126666" Name="Play_Jump" ObjectPath="\Events\Default Work Unit\Player\Play_Jump" GUID="{E9BD2A7D-A3FC-4367-900D-1C172D1086AE}" DurationType="OneShot" DurationMin="0.74779165" DurationMax="1.3548542">
+				<Event Id="3689126666" Name="Play_Jump" ObjectPath="\Events\Default Work Unit\Player\Play_Jump" GUID="{E9BD2A7D-A3FC-4367-900D-1C172D1086AE}" DurationType="OneShot" DurationMin="0.647241" DurationMax="1.1726758">
 					<MediaRefs>
 						<MediaRef Id="32617726"/>
 						<MediaRef Id="57368660"/>
@@ -2050,7 +2050,7 @@
 						<MediaRef Id="327704471"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3575519807" Name="Play_WeakpointReveal" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_WeakpointReveal" GUID="{EB957F93-4066-48C3-A59E-1B00C3C1170A}" DurationType="OneShot" DurationMin="2.865729" DurationMax="4.414375">
+				<Event Id="3575519807" Name="Play_WeakpointReveal" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_WeakpointReveal" GUID="{EB957F93-4066-48C3-A59E-1B00C3C1170A}" DurationType="OneShot" DurationMin="2.865729" DurationMax="4.714375">
 					<MediaRefs>
 						<MediaRef Id="78466956"/>
 						<MediaRef Id="282353159"/>
@@ -2093,5 +2093,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{869BB654-3C8E-22BA-C599-EC2FF891917C}</FileHash>
+	<FileHash>{8C5D2E39-BB08-D18F-0529-7A07B5BD787F}</FileHash>
 </SoundBanksInfo>

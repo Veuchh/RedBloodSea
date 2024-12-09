@@ -4,6 +4,7 @@
 #include "PlayerPossess.h"
 
 #include "PossessTarget.h"
+#include "WeakpointsManager.h"
 #include "GameFramework/Character.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Kismet/GameplayStatics.h"
@@ -83,9 +84,22 @@ void UPlayerPossess::CameraZoomTick()
 
 		character->SetActorLocation(PlayerData::CurrentPossessTarget->GetOwner()->GetActorLocation());
 
+		UWeakpointsManager* wpManager = PlayerData::CurrentPossessTarget->GetOwner()->GetComponentByClass<
+			UWeakpointsManager>();
+		if (wpManager)
+		{
+			PlayerData::PossessedBodyCurrentHPAmount = wpManager->GetHealthPoint();
+			PlayerData::PossessedBodyMaxHPAmount = wpManager->GetMaxHealthPoint();
+		}
 		PlayerData::CurrentPossessTarget->Possess();
 
+
 		TogglePlayer(true);
+
+		//Update UI for HP
+		OnUpdateHPDisplay.Broadcast(PlayerData::GetCurrentHP(), PlayerData::GetMaxHP());
+
+		OnPossessRecovery.Broadcast();
 	}
 }
 
@@ -162,7 +176,7 @@ void UPlayerPossess::TickComponent(float DeltaTime, ELevelTick TickType, FActorC
 
 	AimModeToggling();
 
-	//We only cover states that have "waiting" logic
+	//We only cover states that have "waiting for cooldown" logic (not those waiting for a player input)
 	switch (PlayerData::CurrentPossessState)
 	{
 	case PlayerPossessState::TogglingAimMode:
@@ -191,6 +205,7 @@ void UPlayerPossess::AimModeToggling()
 	if (isInputModeActionPressed && PlayerData::CanEnterPossessMode() && !character->GetCharacterMovement()->
 		IsFalling())
 	{
+		OnPossessAimStart.Broadcast();
 		PlayerData::CurrentPossessState = PlayerPossessState::TogglingAimMode;
 		nextAllowedAction = UGameplayStatics::GetTimeSeconds(GetWorld()) + holdDelayToEnterAimingMode;
 	}
@@ -198,6 +213,7 @@ void UPlayerPossess::AimModeToggling()
 		PlayerData::CurrentPossessState == PlayerPossessState::TogglingAimMode ||
 		PlayerData::CurrentPossessState == PlayerPossessState::PossessAim))
 	{
+		OnPossessAimStop.Broadcast();
 		PlayerData::CurrentPossessState = PlayerPossessState::None;
 	}
 }
@@ -261,9 +277,10 @@ void UPlayerPossess::OnPossessInput()
 		PlayerData::CurrentPossessTarget = possessTarget;
 		PlayerData::CurrentPossessState = PlayerPossessState::ThrowTarget;
 		nextAllowedAction = UGameplayStatics::GetTimeSeconds(GetWorld()) + possessDelay;
+		OnThrowRapierTarget.Broadcast(Hit.ImpactPoint);
 	}
 
-	//If we hit nothing but we are possessing an enemy, we go back into the bearer body
+	//If we hit nothing, but we are possessing an enemy, we go back into the bearer body
 	else if (PlayerData::IsPossessingBody)
 	{
 		targetToUnpossess = PlayerData::CurrentPossessTarget;
@@ -277,6 +294,15 @@ void UPlayerPossess::OnPossessInput()
 	{
 		PlayerData::CurrentPossessState = PlayerPossessState::ThrowFailNotPossessing;
 		nextAllowedAction = UGameplayStatics::GetTimeSeconds(GetWorld()) + throwFailDuration;
+	}
+
+	if (Hit.bBlockingHit)
+	{
+		OnThrowRapierEnviro.Broadcast(Hit.ImpactPoint);
+	}
+	else
+	{
+		OnThrowRapierNothing.Broadcast(camera->GetComponentLocation() + camera->GetForwardVector() * 1000);
 	}
 
 	DrawDebugLine(GetWorld(), TraceStart, TraceEnd, Hit.bBlockingHit ? FColor::Blue : FColor::Red, false,

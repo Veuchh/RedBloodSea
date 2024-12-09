@@ -15,6 +15,7 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnPlayerHit, int, remainingHealth);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnSlashHitEnemy, AActor*, HitEnemy);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnSlashHitEnviro, AActor*, HitActor);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnThrustHitWeakpoint, AWeakpoint*, HitWeakpoint);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnThrustHitNoWeakpoint, AActor*, HitEnemy);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnThrustHitEnviro, AActor*, HitActor);
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
@@ -115,6 +116,8 @@ public:
 	FOnSlashHitEnviro OnSlashHitEnviro;
 	UPROPERTY(BlueprintAssignable, Category = "Combat")
 	FOnThrustHitWeakpoint OnThrustHitWeakpoint;
+	UPROPERTY(BlueprintAssignable, Category = "Combat")
+	FOnThrustHitNoWeakpoint OnThrustHitNoWeakpoint;
 	UPROPERTY(BlueprintAssignable, Category = "Combat")
 	FOnThrustHitEnviro FOnThrustHitEnviro;
 };

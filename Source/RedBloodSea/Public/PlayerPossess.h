@@ -9,6 +9,12 @@
 #include "PlayerPossess.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnUpdateHPDisplay, int, newCurrentHP, int, newMaxHP);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPossessAimStart);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPossessAimStop);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPossessRecovery);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnThrowRapierNothing, FVector, rapierEndPosition);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnThrowRapierTarget, FVector, rapierEndPosition);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnThrowRapierEnviro, FVector, rapierEndPosition);
 
 UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
 class REDBLOODSEA_API UPlayerPossess : public UActorComponent
@@ -84,4 +90,22 @@ public:
 	
 	UPROPERTY(BlueprintAssignable, Category = "UI")
 	FOnUpdateHPDisplay OnUpdateHPDisplay;
+
+	UPROPERTY(BlueprintAssignable, Category = "Callbacks")
+	FOnPossessAimStart OnPossessAimStart;
+
+	UPROPERTY(BlueprintAssignable, Category = "Callbacks")
+	FOnPossessAimStop OnPossessAimStop;
+
+	UPROPERTY(BlueprintAssignable, Category = "Callbacks")
+	FOnPossessRecovery OnPossessRecovery;
+
+	UPROPERTY(BlueprintAssignable, Category = "Callbacks")
+	FOnThrowRapierNothing OnThrowRapierNothing;
+
+	UPROPERTY(BlueprintAssignable, Category = "Callbacks")
+	FOnThrowRapierTarget OnThrowRapierTarget;
+
+	UPROPERTY(BlueprintAssignable, Category = "Callbacks")
+	FOnThrowRapierEnviro OnThrowRapierEnviro;
 };

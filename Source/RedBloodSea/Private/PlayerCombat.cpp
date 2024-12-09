@@ -160,24 +160,27 @@ void UPlayerCombat::OnSlashOverlap(UPrimitiveComponent* HitComp, AActor* OtherAc
 void UPlayerCombat::OnThrustOverlap(UPrimitiveComponent* HitComp, AActor* OtherActor)
 {
 	AActor* AttachedParent = OtherActor->GetAttachParentActor();
+	UWeakpointsManager* weakPointsManager = nullptr;;
 
-	//The environment was hit
-	if (!AttachedParent)
+	if (AttachedParent)
 	{
-		FOnThrustHitEnviro.Broadcast(OtherActor);
-		return;
+		weakPointsManager = AttachedParent->GetComponentByClass<UWeakpointsManager>();
 	}
 
-	UWeakpointsManager* weakPointsManager = AttachedParent->GetComponentByClass<UWeakpointsManager>();
-
-	if (!weakPointsManager)
-		return;
-
-	if (OtherActor->IsA(AWeakpoint::StaticClass()))
+	if (weakPointsManager && OtherActor->IsA(AWeakpoint::StaticClass()))
 	{
 		weakPointsManager->RemoveWeakpoint(Cast<AWeakpoint>(OtherActor));
 		OnThrustHitWeakpoint.Broadcast(Cast<AWeakpoint>(OtherActor));
 	}
+	else if(OtherActor->IsA(ADweller::StaticClass()))
+	{
+		OnThrustHitNoWeakpoint.Broadcast(OtherActor);
+	}
+	else
+	{
+		FOnThrustHitEnviro.Broadcast(OtherActor);
+	}
+
 }
 
 

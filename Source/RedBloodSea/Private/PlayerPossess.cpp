@@ -4,6 +4,7 @@
 #include "PlayerPossess.h"
 
 #include "PossessTarget.h"
+#include "WeakpointsManager.h"
 #include "GameFramework/Character.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Kismet/GameplayStatics.h"
@@ -83,9 +84,20 @@ void UPlayerPossess::CameraZoomTick()
 
 		character->SetActorLocation(PlayerData::CurrentPossessTarget->GetOwner()->GetActorLocation());
 
+		UWeakpointsManager* wpManager = PlayerData::CurrentPossessTarget->GetOwner()->GetComponentByClass<
+			UWeakpointsManager>();
+		if (wpManager)
+		{
+			PlayerData::PossessedBodyCurrentHPAmount = wpManager->GetHealthPoint();
+			PlayerData::PossessedBodyMaxHPAmount = wpManager->GetMaxHealthPoint();
+		}
 		PlayerData::CurrentPossessTarget->Possess();
 
+
 		TogglePlayer(true);
+
+		//Update UI for HP
+		OnUpdateHPDisplay.Broadcast(PlayerData::GetCurrentHP(), PlayerData::GetMaxHP());
 	}
 }
 

@@ -17,6 +17,9 @@ float PlayerData::EndCameraMovementTime = 0;
 UPossessTarget* PlayerData::CurrentPossessTarget = nullptr;
 bool PlayerData::IsPossessingBody = false;
 
+int PlayerData::PossessedBodyCurrentHPAmount = 0;
+int PlayerData::PossessedBodyMaxHPAmount = 0;
+
 int PlayerData::BearerCurrentHPAmount = 0; //Initialized in PlayerCombat.BeginPlay
 int PlayerData::BearerMaxHPAmount = 0; //Initialized in PlayerCombat.BeginPlay
 float PlayerData::SlashAttackStartupDelay = 0; //Initialized in PlayerCombat.BeginPlay
@@ -91,6 +94,16 @@ float PlayerData::GetCurrentAttackColliderEndTime()
 	}
 
 	return 0;
+}
+
+int PlayerData::GetCurrentHP()
+{
+	return IsPossessingBody ? PossessedBodyCurrentHPAmount : BearerCurrentHPAmount;
+}
+
+int PlayerData::GetMaxHP()
+{
+	return IsPossessingBody ? PossessedBodyMaxHPAmount : BearerMaxHPAmount;
 }
 
 bool PlayerData::CanMove()

@@ -23,6 +23,8 @@ public:
 	//-------------------------------------------Combat
 	static int BearerMaxHPAmount;
 	static int BearerCurrentHPAmount;
+	static int PossessedBodyCurrentHPAmount;
+	static int PossessedBodyMaxHPAmount;
 	static float GetCurrentAttackStartupEndTime();
 	static float GetCurrentAttackCooldownEndTime();
 	static float GetCurrentAttackColliderEndTime();
@@ -32,6 +34,9 @@ public:
 	static PlayerAttackState CurrentAttackState;
 	static float AttackStartTime;
 	static float NextAllowedInputBufferTime;
+	
+	static int GetCurrentHP();
+	static int GetMaxHP();
 	
 	//-----------------------------------------------------------------------------------Slash
 	static float SlashAttackStartupDelay;

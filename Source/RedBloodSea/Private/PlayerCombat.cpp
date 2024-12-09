@@ -283,7 +283,16 @@ void UPlayerCombat::OnThrustInput()
 
 void UPlayerCombat::DamagePlayer(int damageAmount)
 {
-	PlayerData::BearerCurrentHPAmount -= damageAmount;
+	(PlayerData::IsPossessingBody ? PlayerData::PossessedBodyCurrentHPAmount :	PlayerData::BearerCurrentHPAmount) -= damageAmount;
 
-	OnPlayerHit.Broadcast(PlayerData::BearerCurrentHPAmount);
+	if (PlayerData::IsPossessingBody)
+	{
+		UWeakpointsManager* wpManager = PlayerData::CurrentPossessTarget->GetOwner()->GetComponentByClass<UWeakpointsManager>();
+		if (wpManager)
+		{
+			wpManager->RemoveWeakpoint(wpManager->GetRandomAliveWeakPoint());
+		}
+	}
+	
+	OnPlayerHit.Broadcast(PlayerData::GetCurrentHP());
 }

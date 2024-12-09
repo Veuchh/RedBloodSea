@@ -8,6 +8,8 @@
 #include "BearerBody.h"
 #include "PlayerPossess.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnUpdateHPDisplay, int, newCurrentHP, int, newMaxHP);
+
 UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
 class REDBLOODSEA_API UPlayerPossess : public UActorComponent
 {
@@ -63,7 +65,6 @@ private:
 	void TogglePlayer(bool isToggled) const;
 	void LeaveBearerBodyAtPosition();
 
-public:
 	void CameraZoomTick();
 	void SetupCameraMovement();
 	void ThrowTargetTick();
@@ -71,12 +72,16 @@ public:
 	void AimModeTogglingTick();
 	void ThrowFailWhilePossessingTick();
 	void PossessRecoveryTick();
+	void LineTrace(FVector TraceStart, FVector TraceEnd, FHitResult& Hit);
+public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType,
 	                           FActorComponentTickFunction* ThisTickFunction) override;
 	// Sets default values for this component's properties
 	UPlayerPossess();
 	void SetupPlayerPossessComponent(ACharacter* RedBloodSeaCharacter, UCameraComponent* CameraComponent);
 	void OnPossessModeInput(bool isToggled);
-	void LineTrace(FVector TraceStart, FVector TraceEnd, FHitResult& Hit);
 	void OnPossessInput();
+	
+	UPROPERTY(BlueprintAssignable, Category = "UI")
+	FOnUpdateHPDisplay OnUpdateHPDisplay;
 };

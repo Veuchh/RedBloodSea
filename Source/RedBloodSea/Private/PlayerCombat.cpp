@@ -60,8 +60,8 @@ void UPlayerCombat::BeginPlay()
 	ToggleAttackCollider(BufferableAttack::Slash, false);
 	ToggleAttackCollider(BufferableAttack::Thrust, false);
 
-	PlayerData::MaxHPAmount = maxHPAmount;
-	PlayerData::CurrentHPAmount = maxHPAmount;
+	PlayerData::BearerMaxHPAmount = maxHPAmount;
+	PlayerData::BearerCurrentHPAmount = maxHPAmount;
 	PlayerData::MaxAttackBufferCapacity = maxAttackBufferCapacity;
 	PlayerData::SlashAttackStartupDelay = slashAttackStartupDelay;
 	PlayerData::SlashAttackDuration = slashAttackDuration;
@@ -283,7 +283,7 @@ void UPlayerCombat::OnThrustInput()
 
 void UPlayerCombat::DamagePlayer(int damageAmount)
 {
-	PlayerData::CurrentHPAmount -= damageAmount;
+	PlayerData::BearerCurrentHPAmount -= damageAmount;
 
-	OnPlayerHit.Broadcast(PlayerData::CurrentHPAmount);
+	OnPlayerHit.Broadcast(PlayerData::BearerCurrentHPAmount);
 }

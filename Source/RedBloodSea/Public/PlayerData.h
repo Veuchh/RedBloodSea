@@ -21,8 +21,8 @@ public:
 	static float NextAllowedDash;
 	
 	//-------------------------------------------Combat
-	static int MaxHPAmount;
-	static int CurrentHPAmount;
+	static int BearerMaxHPAmount;
+	static int BearerCurrentHPAmount;
 	static float GetCurrentAttackStartupEndTime();
 	static float GetCurrentAttackCooldownEndTime();
 	static float GetCurrentAttackColliderEndTime();
@@ -44,6 +44,7 @@ public:
 	static float ThrustAttackCooldown;
 
 	//-------------------------------------------Possession
+	static bool IsPossessingBody;
 	static PlayerPossessState CurrentPossessState;
 	static float StartCameraMovementTime;
 	static float EndCameraMovementTime;

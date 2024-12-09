@@ -71,6 +71,11 @@ int UWeakpointsManager::GetHealthPoint()
 	return HealthPoint;
 }
 
+int UWeakpointsManager::GetMaxHealthPoint()
+{
+	return MaxHealthPoint;
+}
+
 void UWeakpointsManager::CreateWeakPoints()
 {
 	Owner = GetOwner();
@@ -111,6 +116,7 @@ void UWeakpointsManager::CreateWeakPoints()
 
 void UWeakpointsManager::AttachWeakpoint(const FWeakpointSlot& WeakpointSlot,const float Size)
 {
+	MaxHealthPoint++;
 	HealthPoint++;
 	AActor* newActor = GetWorld()->SpawnActor(WeakpointData->Weakpoint_BP);
 	newActor->AttachToComponent(Skeleton,FAttachmentTransformRules::SnapToTargetNotIncludingScale,WeakpointSlot.SocketName);
@@ -187,11 +193,11 @@ void UWeakpointsManager::ClearAllWeakpoints()
 	Weakpoints.Empty();
 }
 
-AWeakpoint* UWeakpointsManager::GetFirstRevealWeakpoint()
+AWeakpoint* UWeakpointsManager::GetRandomAliveWeakPoint()
 {
 	for (auto Weakpoint : Weakpoints)
 	{
-		if(Weakpoint->State == EWeakpointState::Revealed)
+		if(Weakpoint->State != EWeakpointState::Damaged)
 			return Weakpoint;
 	}
 	return nullptr;

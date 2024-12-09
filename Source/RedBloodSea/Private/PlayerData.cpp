@@ -15,9 +15,13 @@ PlayerPossessState PlayerData::CurrentPossessState = PlayerPossessState::None;
 float PlayerData::StartCameraMovementTime = 0;
 float PlayerData::EndCameraMovementTime = 0;
 UPossessTarget* PlayerData::CurrentPossessTarget = nullptr;
+bool PlayerData::IsPossessingBody = false;
 
-int PlayerData::CurrentHPAmount = 0; //Initialized in PlayerCombat.BeginPlay
-int PlayerData::MaxHPAmount = 0; //Initialized in PlayerCombat.BeginPlay
+int PlayerData::PossessedBodyCurrentHPAmount = 0;
+int PlayerData::PossessedBodyMaxHPAmount = 0;
+
+int PlayerData::BearerCurrentHPAmount = 0; //Initialized in PlayerCombat.BeginPlay
+int PlayerData::BearerMaxHPAmount = 0; //Initialized in PlayerCombat.BeginPlay
 float PlayerData::SlashAttackStartupDelay = 0; //Initialized in PlayerCombat.BeginPlay
 float PlayerData::SlashAttackDuration = 0; //Initialized in PlayerCombat.BeginPlay
 float PlayerData::SlashAttackCooldown = 0; //Initialized in PlayerCombat.BeginPlay
@@ -49,6 +53,7 @@ void PlayerData::ResetData()
 	StartCameraMovementTime = 0;
 	EndCameraMovementTime = 0;
 	CurrentPossessTarget = nullptr;
+	IsPossessingBody = false;
 }
 
 
@@ -91,6 +96,16 @@ float PlayerData::GetCurrentAttackColliderEndTime()
 	return 0;
 }
 
+int PlayerData::GetCurrentHP()
+{
+	return IsPossessingBody ? PossessedBodyCurrentHPAmount : BearerCurrentHPAmount;
+}
+
+int PlayerData::GetMaxHP()
+{
+	return IsPossessingBody ? PossessedBodyMaxHPAmount : BearerMaxHPAmount;
+}
+
 bool PlayerData::CanMove()
 {
 	return
@@ -98,9 +113,8 @@ bool PlayerData::CanMove()
 		&& (CurrentPossessState == PlayerPossessState::None
 			|| CurrentPossessState == PlayerPossessState::TogglingAimMode
 			|| CurrentPossessState == PlayerPossessState::PossessAim
-			|| CurrentPossessState == PlayerPossessState::ThrowFail
-			|| CurrentPossessState == PlayerPossessState::PossessRecovery)
-	;
+			|| CurrentPossessState == PlayerPossessState::ThrowFailNotPossessing
+			|| CurrentPossessState == PlayerPossessState::PossessRecovery);
 }
 
 bool PlayerData::CanRotateCamera()
@@ -109,9 +123,8 @@ bool PlayerData::CanRotateCamera()
 	(CurrentPossessState == PlayerPossessState::None
 		|| CurrentPossessState == PlayerPossessState::TogglingAimMode
 		|| CurrentPossessState == PlayerPossessState::PossessAim
-		|| CurrentPossessState == PlayerPossessState::ThrowFail
-		|| CurrentPossessState == PlayerPossessState::PossessRecovery)
-	;
+		|| CurrentPossessState == PlayerPossessState::ThrowFailNotPossessing
+		|| CurrentPossessState == PlayerPossessState::PossessRecovery);
 }
 
 bool PlayerData::CanAddAttackToBuffer()

@@ -6,7 +6,7 @@
 #include "Components/ActorComponent.h"
 #include "PossessTarget.generated.h"
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPossessed);
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnUnpossessed, FVector3d, RepositionEnemyAtPosition);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnUnpossessed, FVector, RepositionEnemyAtPosition);
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class REDBLOODSEA_API UPossessTarget : public UActorComponent
@@ -25,10 +25,14 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 	void Possess();
-	void Unpossess(FVector3d repositionEnemyAtPosition);
+	void Unpossess(FVector repositionEnemyAtPosition);
 	
 	UPROPERTY(BlueprintAssignable, Category = "Possess")
 	FOnPossessed OnPossessed;
 	UPROPERTY(BlueprintAssignable, Category = "Possess")
 	FOnUnpossessed OnUnpossessed;
+
+	/*The duration, in seconds, the player has to wait before having control of the character again after camera zoom. This corresponds to the sword pull out animation*/
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Ground Slam")
+	bool IsBearerBody = false;
 };

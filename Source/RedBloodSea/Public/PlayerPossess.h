@@ -1,12 +1,20 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "PossessTarget.h"
 #include "PlayerData.h"
 #include "Camera/CameraComponent.h"
 #include "Components/ActorComponent.h"
+#include "BearerBody.h"
 #include "PlayerPossess.generated.h"
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnThrowRapierHitNothing);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnUpdateHPDisplay, int, newCurrentHP, int, newMaxHP);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPossessAimStart);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPossessAimStop);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPossessRecovery);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnThrowRapierNothing, FVector, rapierEndPosition);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnThrowRapierTarget, FVector, rapierEndPosition);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnThrowRapierEnviro, FVector, rapierEndPosition);
 
 UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
 class REDBLOODSEA_API UPlayerPossess : public UActorComponent
@@ -43,21 +51,35 @@ private:
 	/*The duration, in seconds, the player has to wait before having control of the character again after camera zoom. This corresponds to the sword pull out animation*/
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Ground Slam")
 	float playerControlDelay = .4;
+
+	/*The duration, in seconds, the player waits before starting the camera transition when missing a throw while possessing a body*/
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Ground Slam")
+	float throwFailWhilePossessingDelay = .2;
+
+	/*Blueprint Reference of UsefulActor class*/
+	UPROPERTY(EditDefaultsOnly,Category="ActorSpawning")
+	TSubclassOf<ABearerBody> BearerBodyBP;
 	
 	float nextAllowedAction = 0;
 	bool isInputModeActionPressed = false;
 	FVector startPossessPosition;
 	FVector endPossessPosition;
+	ABearerBody* bearerBodyInstance;
+	UPossessTarget* targetToUnpossess;
 
 	void AimModeToggling();
 	void TogglePlayer(bool isToggled) const;
+	void LeaveBearerBodyAtPosition();
 
-public:
 	void CameraZoomTick();
+	void SetupCameraMovement();
 	void ThrowTargetTick();
 	void ThrowFailTick();
 	void AimModeTogglingTick();
+	void ThrowFailWhilePossessingTick();
 	void PossessRecoveryTick();
+	void LineTrace(FVector TraceStart, FVector TraceEnd, FHitResult& Hit);
+public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType,
 	                           FActorComponentTickFunction* ThisTickFunction) override;
 	// Sets default values for this component's properties
@@ -65,7 +87,25 @@ public:
 	void SetupPlayerPossessComponent(ACharacter* RedBloodSeaCharacter, UCameraComponent* CameraComponent);
 	void OnPossessModeInput(bool isToggled);
 	void OnPossessInput();
+	
+	UPROPERTY(BlueprintAssignable, Category = "UI")
+	FOnUpdateHPDisplay OnUpdateHPDisplay;
 
-	UPROPERTY(BlueprintAssignable, Category = "Possess")
-	FOnThrowRapierHitNothing OnThrowRapierHitNothing;
+	UPROPERTY(BlueprintAssignable, Category = "Callbacks")
+	FOnPossessAimStart OnPossessAimStart;
+
+	UPROPERTY(BlueprintAssignable, Category = "Callbacks")
+	FOnPossessAimStop OnPossessAimStop;
+
+	UPROPERTY(BlueprintAssignable, Category = "Callbacks")
+	FOnPossessRecovery OnPossessRecovery;
+
+	UPROPERTY(BlueprintAssignable, Category = "Callbacks")
+	FOnThrowRapierNothing OnThrowRapierNothing;
+
+	UPROPERTY(BlueprintAssignable, Category = "Callbacks")
+	FOnThrowRapierTarget OnThrowRapierTarget;
+
+	UPROPERTY(BlueprintAssignable, Category = "Callbacks")
+	FOnThrowRapierEnviro OnThrowRapierEnviro;
 };

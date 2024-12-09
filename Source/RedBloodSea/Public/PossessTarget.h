@@ -6,7 +6,7 @@
 #include "Components/ActorComponent.h"
 #include "PossessTarget.generated.h"
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPossessed);
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnUnpossessed, FVector3d, RepositionEnemyAtPosition);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnUnpossessed, FVector, RepositionEnemyAtPosition);
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class REDBLOODSEA_API UPossessTarget : public UActorComponent
@@ -25,7 +25,7 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 	void Possess();
-	void Unpossess(FVector3d repositionEnemyAtPosition);
+	void Unpossess(FVector repositionEnemyAtPosition);
 	
 	UPROPERTY(BlueprintAssignable, Category = "Possess")
 	FOnPossessed OnPossessed;

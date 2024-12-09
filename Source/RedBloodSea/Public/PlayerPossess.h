@@ -1,6 +1,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "PossessTarget.h"
 #include "PlayerData.h"
 #include "Camera/CameraComponent.h"
 #include "Components/ActorComponent.h"
@@ -56,6 +57,8 @@ private:
 	FVector startPossessPosition;
 	FVector endPossessPosition;
 	ABearerBody* bearerBodyInstance;
+	UPossessTarget* targetToUnpossess;
+
 	void AimModeToggling();
 	void TogglePlayer(bool isToggled) const;
 	void LeaveBearerBodyAtPosition();

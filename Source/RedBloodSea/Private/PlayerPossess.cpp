@@ -108,7 +108,7 @@ void UPlayerPossess::ThrowTargetTick()
 
 		if (PlayerData::IsPossessingBody)
 		{
-			PlayerData::CurrentPossessTarget->Unpossess(GetOwner()->GetActorLocation());
+			targetToUnpossess->Unpossess(GetOwner()->GetActorLocation());
 		}
 		else
 		{
@@ -139,6 +139,7 @@ void UPlayerPossess::ThrowFailWhilePossessingTick()
 {
 	if (UGameplayStatics::GetTimeSeconds(GetWorld()) >= nextAllowedAction)
 	{
+		targetToUnpossess->Unpossess(GetOwner()->GetActorLocation());
 		PlayerData::CurrentPossessState = PlayerPossessState::ZoomingCamera;
 		PlayerData::IsPossessingBody = false;
 		SetupCameraMovement();
@@ -253,6 +254,10 @@ void UPlayerPossess::OnPossessInput()
 	//If we hit a target we can possess, we do.
 	if (possessTarget)
 	{
+		if (PlayerData::IsPossessingBody)
+		{
+			targetToUnpossess = PlayerData::CurrentPossessTarget;
+		}
 		PlayerData::CurrentPossessTarget = possessTarget;
 		PlayerData::CurrentPossessState = PlayerPossessState::ThrowTarget;
 		nextAllowedAction = UGameplayStatics::GetTimeSeconds(GetWorld()) + possessDelay;
@@ -261,6 +266,7 @@ void UPlayerPossess::OnPossessInput()
 	//If we hit nothing but we are possessing an enemy, we go back into the bearer body
 	else if (PlayerData::IsPossessingBody)
 	{
+		targetToUnpossess = PlayerData::CurrentPossessTarget;
 		PlayerData::CurrentPossessState = PlayerPossessState::ThrowFailWhilePossessing;
 		nextAllowedAction = UGameplayStatics::GetTimeSeconds(GetWorld()) + throwFailWhilePossessingDelay;
 		PlayerData::CurrentPossessTarget = bearerBodyInstance->GetComponentByClass<UPossessTarget>();

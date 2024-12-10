@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="2890283282" Type="User" GUID="{1D2A39F0-30EC-4374-B60C-7E5FD97B8C24}" Language="SFX" Hash="{7BCD3D73-01B0-E037-FCD9-052606C9FD59}">
+		<SoundBank Id="2890283282" Type="User" GUID="{1D2A39F0-30EC-4374-B60C-7E5FD97B8C24}" Language="SFX" Hash="{82A3906E-E9BE-73BB-AE7D-29D423499705}">
 			<ObjectPath>\SoundBanks\Default Work Unit\RBS_MAIN_SoundBank</ObjectPath>
 			<ShortName>RBS_MAIN_SoundBank</ShortName>
 			<Path>RBS_MAIN_SoundBank.bnk</Path>
@@ -227,10 +227,6 @@
 					<Path>Media/127115196.wem</Path>
 					<CachePath>SFX/RBS_SFX_PlayerFS GrassWalk 13R_EDCD4836.wem</CachePath>
 				</File>
-				<File Id="132075671" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Soundly Voice Designer, Bella 1.wav</ShortName>
-					<CachePath>SFX/Soundly Voice Designer, Bella 1_EDCD4836.wem</CachePath>
-				</File>
 				<File Id="139588039" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS FootLiftConcrete 07.wav</ShortName>
 					<Path>Media/139588039.wem</Path>
@@ -268,6 +264,10 @@
 					<ShortName>13 RBS_SFX_PlayerFS ConcreteGrittyWalk 13R.wav</ShortName>
 					<Path>Media/167413559.wem</Path>
 					<CachePath>SFX/13 RBS_SFX_PlayerFS ConcreteGrittyWalk 13R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="167854473" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_BasicSlashGeneric 10.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_BasicSlashGeneric 10_59BC897F.wem</CachePath>
 				</File>
 				<File Id="175605479" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_FsSurface1 SurfacePebbleL2 06.wav</ShortName>
@@ -395,6 +395,10 @@
 					<ShortName>RBS_SFX_LinkRay_HighChaos 06.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_LinkRay_HighChaos 06_5ADFCF7F.wem</CachePath>
 				</File>
+				<File Id="312767996" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_PossessionAimStartBody.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_PossessionAimStartBody_EDCD4836.wem</CachePath>
+				</File>
 				<File Id="314954263" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_SlashHitEnviroMat2 02.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_SlashHitEnviroMat2 02_248933A7.wem</CachePath>
@@ -435,6 +439,10 @@
 					<Path>Media/328723579.wem</Path>
 					<CachePath>SFX/RBS_SFX_PlayerFS GravelWalk 06L_EDCD4836.wem</CachePath>
 				</File>
+				<File Id="330353897" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_PlayerFS SkidConcrete 03.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_PlayerFS SkidConcrete 03_9DAB34B7.wem</CachePath>
+				</File>
 				<File Id="339180831" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS GrassWalk 04L.wav</ShortName>
 					<Path>Media/339180831.wem</Path>
@@ -447,7 +455,7 @@
 				</File>
 				<File Id="349437653" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_BasicSlashGeneric 09.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_BasicSlashGeneric 09_9848F024.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_BasicSlashGeneric 09_EDCD4836.wem</CachePath>
 				</File>
 				<File Id="352916239" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_HitNotOnWeakpoint 03.wav</ShortName>
@@ -520,11 +528,7 @@
 				</File>
 				<File Id="409054535" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_BasicSlashGeneric 06.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_BasicSlashGeneric 06_17801CFC.wem</CachePath>
-				</File>
-				<File Id="409200531" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>RBS_SFX_PossessionSuccessful 06.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_PossessionSuccessful 06_540C3CA0.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_BasicSlashGeneric 06_BC7F329B.wem</CachePath>
 				</File>
 				<File Id="409348956" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_FsSurface1 SurfacePebbleL1 01.wav</ShortName>
@@ -652,7 +656,7 @@
 				</File>
 				<File Id="507432298" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_PossessionSuccessful 01.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_PossessionSuccessful 01_4B4D045E.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_PossessionSuccessful 01_EDCD4836.wem</CachePath>
 				</File>
 				<File Id="511303387" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_SlashHitEnviroMat2 01.wav</ShortName>
@@ -670,7 +674,7 @@
 				</File>
 				<File Id="523218377" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_BasicSlashGeneric 03.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_BasicSlashGeneric 03_9C6161F6.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_BasicSlashGeneric 03_E6CFBC06.wem</CachePath>
 				</File>
 				<File Id="526377678" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Voice Designer, Abbi 3.wav</ShortName>
@@ -693,10 +697,6 @@
 					<ShortName>RBS_SFX_PlayerFS GrassRun 07L.wav</ShortName>
 					<Path>Media/533353058.wem</Path>
 					<CachePath>SFX/RBS_SFX_PlayerFS GrassRun 07L_EDCD4836.wem</CachePath>
-				</File>
-				<File Id="538001789" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>RBS_SFX_BasicSlashGeneric 01.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_BasicSlashGeneric 01_A85ECA5C.wem</CachePath>
 				</File>
 				<File Id="538186047" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS GravelRun 08R.wav</ShortName>
@@ -776,6 +776,10 @@
 					<Path>Media/596906673.wem</Path>
 					<CachePath>SFX/RBS_SFX_PlayerFS GravelWalk 05L_EDCD4836.wem</CachePath>
 				</File>
+				<File Id="597647786" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_PlayerFS SkidConcrete 04.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_PlayerFS SkidConcrete 04_117687CA.wem</CachePath>
+				</File>
 				<File Id="611786585" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_LandingSurface2LowVel 03.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_LandingSurface2LowVel 03_EDCD4836.wem</CachePath>
@@ -786,7 +790,7 @@
 				</File>
 				<File Id="615399648" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_BasicSlashGeneric 07.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_BasicSlashGeneric 07_F2DC1AEC.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_BasicSlashGeneric 07_C94BA0A1.wem</CachePath>
 				</File>
 				<File Id="623379799" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS GravelRun 13R.wav</ShortName>
@@ -835,13 +839,17 @@
 					<ShortName>RBS_SFX_BasicThrustGeneric 02.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_BasicThrustGeneric 02_6B95F6D5.wem</CachePath>
 				</File>
+				<File Id="648759693" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ph amb.wav</ShortName>
+					<CachePath>SFX/ph amb_EDCD4836.wem</CachePath>
+				</File>
 				<File Id="649602623" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_TriggerStateFleeing.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_TriggerStateFleeing_EDCD4836.wem</CachePath>
 				</File>
 				<File Id="650681148" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_BasicSlashGeneric 05.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_BasicSlashGeneric 05_B5B52323.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_BasicSlashGeneric 05_0D9C7F30.wem</CachePath>
 				</File>
 				<File Id="655272841" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS ConcreteGrittyRun 13R.wav</ShortName>
@@ -893,7 +901,7 @@
 				</File>
 				<File Id="710212975" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_PossessionSuccessful 03.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_PossessionSuccessful 03_4A167E5A.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_PossessionSuccessful 03_EDCD4836.wem</CachePath>
 				</File>
 				<File Id="710770886" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS DirtRun 08L.wav</ShortName>
@@ -975,11 +983,11 @@
 				</File>
 				<File Id="770219229" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_PossessionSuccessful 02.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_PossessionSuccessful 02_43C1105E.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_PossessionSuccessful 02_EDCD4836.wem</CachePath>
 				</File>
 				<File Id="779505053" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_PossessionSuccessful 04.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_PossessionSuccessful 04_D35B3237.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_PossessionSuccessful 04_EDCD4836.wem</CachePath>
 				</File>
 				<File Id="787419388" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Voice Designer, Bella 2.wav</ShortName>
@@ -1056,9 +1064,17 @@
 					<ShortName>RBS_SFX_LandingSurface1LowVel 03.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_LandingSurface1LowVel 03_EDCD4836.wem</CachePath>
 				</File>
+				<File Id="850951978" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_PossessionAimConfirm.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_PossessionAimConfirm_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="851341206" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_PossessionAimStartTail.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_PossessionAimStartTail_EDCD4836.wem</CachePath>
+				</File>
 				<File Id="854276192" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_PossessionSuccessful 05.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_PossessionSuccessful 05_2411EC0D.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_PossessionSuccessful 05_EDCD4836.wem</CachePath>
 				</File>
 				<File Id="862584422" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_FsSurface1 SurfacePebbleL2 03.wav</ShortName>
@@ -1090,7 +1106,7 @@
 				</File>
 				<File Id="874077571" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_BasicSlashGeneric 04.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_BasicSlashGeneric 04_A7D2F426.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_BasicSlashGeneric 04_7BDC3B21.wem</CachePath>
 				</File>
 				<File Id="878705949" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS ConcreteGrittyRun 04L.wav</ShortName>
@@ -1103,7 +1119,7 @@
 				</File>
 				<File Id="880866166" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_Respawn.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_Respawn_C4EE0608.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_Respawn_B0E146BE.wem</CachePath>
 				</File>
 				<File Id="883384986" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS DirtRun 08R.wav</ShortName>
@@ -1259,6 +1275,10 @@
 					<Path>Media/975802175.wem</Path>
 					<CachePath>SFX/RBS_SFX_PlayerFS DirtRun 09L_EDCD4836.wem</CachePath>
 				</File>
+				<File Id="980423841" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RBS_SFX_PlayerFS SkidConcrete 01.wav</ShortName>
+					<CachePath>SFX/RBS_SFX_PlayerFS SkidConcrete 01_4112E4B5.wem</CachePath>
+				</File>
 				<File Id="981328292" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>04 RBS_SFX_PlayerFS ConcreteGrittyWalk 04L.wav</ShortName>
 					<Path>Media/981328292.wem</Path>
@@ -1327,7 +1347,7 @@
 				</File>
 				<File Id="1022059957" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_BasicSlashGeneric 02.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_BasicSlashGeneric 02_46C65562.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_BasicSlashGeneric 02_EDCD4836.wem</CachePath>
 				</File>
 				<File Id="1026351029" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS ConcreteWalk 14R.wav</ShortName>
@@ -1345,7 +1365,7 @@
 				</File>
 				<File Id="1044172823" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_BasicSlashGeneric 08.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_BasicSlashGeneric 08_BDE06880.wem</CachePath>
+					<CachePath>SFX/RBS_SFX_BasicSlashGeneric 08_06D35116.wem</CachePath>
 				</File>
 				<File Id="1044399728" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_SlashHitGeneric 05.wav</ShortName>
@@ -1385,24 +1405,25 @@
 				<Custom>
 					<Plugin Id="255961296" Name="Soundseed Air Wind" ObjectPath="\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Movement\PlayerFS\PlayerSpeed\PlayerSpeedPlugins\AIR WIND\AIR WINDL\Soundseed Air Wind" GUID="{E771676E-844A-4AEA-B54B-14CF9C780260}" LibName="SoundSeed Air Wind" LibId="7798786"/>
 					<Plugin Id="750533697" Name="Soundseed Air Wind" ObjectPath="\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Movement\PlayerFS\PlayerSpeed\PlayerSpeedPlugins\AIR WIND\AIR WINDR\Soundseed Air Wind" GUID="{DECB2267-B8FB-404E-8B91-BC6BFB1EADA6}" LibName="SoundSeed Air Wind" LibId="7798786"/>
-					<Plugin Id="900331516" Name="Delay (Custom)" ObjectPath="\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Movement\PlayerFS\PlayerSpeed\Walker\WALKER\[Effect Slot [1]: (Delay)]\Delay (Custom)" GUID="{9229BCC8-C268-4AD2-B010-AE39D8D74FB9}" LibName="Wwise Delay" LibId="6946819"/>
 				</Custom>
 				<ShareSets>
 					<Plugin Id="1990128658" Name="Room_Medium" ObjectPath="\Effects\Factory Effects\RoomVerb\Rooms\Room_Medium" GUID="{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="2849147824" Name="Medium" ObjectPath="\Effects\Factory Effects\RoomVerb\Cathedrals\Medium" GUID="{AEB3F175-958B-45F2-A4C2-3FBD4F456568}" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="3164629247" Name="Holy" ObjectPath="\Effects\Factory Effects\RoomVerb\Cathedrals\Holy" GUID="{CC7B8638-C670-4AD5-B3FB-331EA81037F6}" LibName="Wwise RoomVerb" LibId="7733251"/>
 				</ShareSets>
 			</Plugins>
 			<Events>
-				<Event Id="626512180" Name="Play_AmbVSArena" ObjectPath="\Events\Default Work Unit\World Environments\Play_AmbVSArena" GUID="{5C124C78-CC34-46F4-9C11-1C65E3B16568}" DurationType="OneShot" DurationMin="1.370875" DurationMax="1.370875">
+				<Event Id="626512180" Name="Play_AmbVSArena" ObjectPath="\Events\Default Work Unit\World Environments\Play_AmbVSArena" GUID="{5C124C78-CC34-46F4-9C11-1C65E3B16568}" DurationType="Infinite">
 					<MediaRefs>
-						<MediaRef Id="132075671"/>
+						<MediaRef Id="648759693"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2538869711" Name="Play_BasicSlash" ObjectPath="\Events\Default Work Unit\Player Abilities\Play_BasicSlash" GUID="{52DD29CE-EBFC-412E-A292-D4803063CBE4}" DurationType="OneShot" DurationMin="1.6799113" DurationMax="3.4076695">
+				<Event Id="2538869711" Name="Play_BasicSlash" ObjectPath="\Events\Default Work Unit\Player Abilities\Play_BasicSlash" GUID="{52DD29CE-EBFC-412E-A292-D4803063CBE4}" DurationType="OneShot" DurationMin="2.0216126" DurationMax="4.829297">
 					<MediaRefs>
+						<MediaRef Id="167854473"/>
 						<MediaRef Id="349437653"/>
 						<MediaRef Id="409054535"/>
 						<MediaRef Id="523218377"/>
-						<MediaRef Id="538001789"/>
 						<MediaRef Id="615399648"/>
 						<MediaRef Id="650681148"/>
 						<MediaRef Id="874077571"/>
@@ -1418,7 +1439,7 @@
 					</MediaRefs>
 				</Event>
 				<Event Id="1423098094" Name="Play_DamageTaken" ObjectPath="\Events\Default Work Unit\Player\Play_DamageTaken" GUID="{988E1E93-8AAF-4F8D-AC32-A444360C9006}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="2211787386" Name="Play_Dash" ObjectPath="\Events\Default Work Unit\Player\Play_Dash" GUID="{CF6A631F-F642-4424-8ABD-EE3D53B63430}" DurationType="OneShot" DurationMin="0.91603553" DurationMax="1.6185523">
+				<Event Id="2211787386" Name="Play_Dash" ObjectPath="\Events\Default Work Unit\Player\Play_Dash" GUID="{CF6A631F-F642-4424-8ABD-EE3D53B63430}" DurationType="OneShot" DurationMin="0.98747" DurationMax="1.7447705">
 					<MediaRefs>
 						<MediaRef Id="294474954"/>
 						<MediaRef Id="320719556"/>
@@ -1509,7 +1530,7 @@
 					</MediaRefs>
 				</Event>
 				<Event Id="2159564533" Name="Play_IdleFPS" ObjectPath="\Events\Default Work Unit\Player\Play_IdleFPS" GUID="{AEB85C59-534C-4B60-9C60-04A94B157434}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="3689126666" Name="Play_Jump" ObjectPath="\Events\Default Work Unit\Player\Play_Jump" GUID="{E9BD2A7D-A3FC-4367-900D-1C172D1086AE}" DurationType="OneShot" DurationMin="0.647241" DurationMax="1.1726758">
+				<Event Id="3689126666" Name="Play_Jump" ObjectPath="\Events\Default Work Unit\Player\Play_Jump" GUID="{E9BD2A7D-A3FC-4367-900D-1C172D1086AE}" DurationType="OneShot" DurationMin="0.67724097" DurationMax="1.2026758">
 					<MediaRefs>
 						<MediaRef Id="32617726"/>
 						<MediaRef Id="57368660"/>
@@ -1523,10 +1544,12 @@
 						<MediaRef Id="291763179"/>
 						<MediaRef Id="309736558"/>
 						<MediaRef Id="320245737"/>
+						<MediaRef Id="330353897"/>
 						<MediaRef Id="409348956"/>
 						<MediaRef Id="478843681"/>
 						<MediaRef Id="517384302"/>
 						<MediaRef Id="572214998"/>
+						<MediaRef Id="597647786"/>
 						<MediaRef Id="714637550"/>
 						<MediaRef Id="716875391"/>
 						<MediaRef Id="837272602"/>
@@ -1536,6 +1559,7 @@
 						<MediaRef Id="916730515"/>
 						<MediaRef Id="927982555"/>
 						<MediaRef Id="933938710"/>
+						<MediaRef Id="980423841"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2323405115" Name="Play_Landing" ObjectPath="\Events\Default Work Unit\Player\Play_Landing" GUID="{4F7153D6-B49C-4FA8-A349-FECDA0C44058}" DurationType="OneShot" DurationMin="0.63104165" DurationMax="0.95540947">
@@ -1694,8 +1718,10 @@
 						<Custom>
 							<PluginRef Id="255961296"/>
 							<PluginRef Id="750533697"/>
-							<PluginRef Id="900331516"/>
 						</Custom>
+						<ShareSets>
+							<PluginRef Id="2849147824"/>
+						</ShareSets>
 					</PluginRefs>
 					<SwitchContainers>
 						<SwitchContainer>
@@ -1741,9 +1767,9 @@
 								<MediaRef Id="993436442"/>
 							</MediaRefs>
 							<PluginRefs>
-								<Custom>
-									<PluginRef Id="900331516"/>
-								</Custom>
+								<ShareSets>
+									<PluginRef Id="3164629247"/>
+								</ShareSets>
 							</PluginRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -1778,9 +1804,9 @@
 								<MediaRef Id="1047835075"/>
 							</MediaRefs>
 							<PluginRefs>
-								<Custom>
-									<PluginRef Id="900331516"/>
-								</Custom>
+								<ShareSets>
+									<PluginRef Id="3164629247"/>
+								</ShareSets>
 							</PluginRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -1794,9 +1820,9 @@
 								<MediaRef Id="1010592874"/>
 							</MediaRefs>
 							<PluginRefs>
-								<Custom>
-									<PluginRef Id="900331516"/>
-								</Custom>
+								<ShareSets>
+									<PluginRef Id="3164629247"/>
+								</ShareSets>
 							</PluginRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -1811,9 +1837,9 @@
 								<MediaRef Id="1010592874"/>
 							</MediaRefs>
 							<PluginRefs>
-								<Custom>
-									<PluginRef Id="900331516"/>
-								</Custom>
+								<ShareSets>
+									<PluginRef Id="3164629247"/>
+								</ShareSets>
 							</PluginRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -1827,9 +1853,9 @@
 								<MediaRef Id="990288326"/>
 							</MediaRefs>
 							<PluginRefs>
-								<Custom>
-									<PluginRef Id="900331516"/>
-								</Custom>
+								<ShareSets>
+									<PluginRef Id="3164629247"/>
+								</ShareSets>
 							</PluginRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -1845,9 +1871,9 @@
 								<MediaRef Id="990288326"/>
 							</MediaRefs>
 							<PluginRefs>
-								<Custom>
-									<PluginRef Id="900331516"/>
-								</Custom>
+								<ShareSets>
+									<PluginRef Id="3164629247"/>
+								</ShareSets>
 							</PluginRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -1897,9 +1923,9 @@
 								<MediaRef Id="1071012065"/>
 							</MediaRefs>
 							<PluginRefs>
-								<Custom>
-									<PluginRef Id="900331516"/>
-								</Custom>
+								<ShareSets>
+									<PluginRef Id="3164629247"/>
+								</ShareSets>
 							</PluginRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -1939,9 +1965,9 @@
 								<MediaRef Id="1055635076"/>
 							</MediaRefs>
 							<PluginRefs>
-								<Custom>
-									<PluginRef Id="900331516"/>
-								</Custom>
+								<ShareSets>
+									<PluginRef Id="3164629247"/>
+								</ShareSets>
 							</PluginRefs>
 						</SwitchContainer>
 					</SwitchContainers>
@@ -1980,20 +2006,37 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="309249463" Name="Play_PlayerRespawn" ObjectPath="\Events\Default Work Unit\Player Abilities\Play_PlayerRespawn" GUID="{7869A732-3A1F-4314-B872-8E58B1D9ABAC}" DurationType="OneShot" DurationMin="5.4805417" DurationMax="5.4805417">
+				<Event Id="309249463" Name="Play_PlayerRespawn" ObjectPath="\Events\Default Work Unit\Player Abilities\Play_PlayerRespawn" GUID="{7869A732-3A1F-4314-B872-8E58B1D9ABAC}" DurationType="OneShot" DurationMin="5.4250894" DurationMax="5.4250894">
 					<MediaRefs>
 						<MediaRef Id="880866166"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2242832970" Name="Play_PossessionSuccessful" ObjectPath="\Events\Default Work Unit\Player Abilities\Play_PossessionSuccessful" GUID="{6D367373-2398-4C51-9F2C-F5C06824195D}" DurationType="OneShot" DurationMin="1.4615098" DurationMax="2.0225346">
+				<Event Id="2096286113" Name="Play_PossessionAimStart" ObjectPath="\Events\Default Work Unit\Player Abilities\Play_PossessionAimStart" GUID="{9997D973-6D46-4AB0-A526-2A1AFE118377}" DurationType="OneShot" DurationMin="11.437543" DurationMax="14.410401">
 					<MediaRefs>
-						<MediaRef Id="409200531"/>
+						<MediaRef Id="312767996"/>
+						<MediaRef Id="851341206"/>
+					</MediaRefs>
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="459395562" Id="1907628164" Name="aiming" ObjectPath="\States\Default Work Unit\state_aim\aiming" GUID="{4001CF9D-6974-45C4-A4E1-ADC83295A9E1}"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="1030277851" Name="Play_PossessionAimStop" ObjectPath="\Events\Default Work Unit\Player Abilities\Play_PossessionAimStop" GUID="{965ECC7B-F6E5-40CB-935F-61ACA3EF8ED1}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="459395562" Id="2165664365" Name="notaiming" ObjectPath="\States\Default Work Unit\state_aim\notaiming" GUID="{AD4DA154-B560-453D-8C38-7A73B45B33AF}"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="2242832970" Name="Play_PossessionSuccessful" ObjectPath="\Events\Default Work Unit\Player Abilities\Play_PossessionSuccessful" GUID="{6D367373-2398-4C51-9F2C-F5C06824195D}" DurationType="OneShot" DurationMin="1.9683958" DurationMax="3.3275416">
+					<MediaRefs>
 						<MediaRef Id="507432298"/>
 						<MediaRef Id="710212975"/>
 						<MediaRef Id="770219229"/>
 						<MediaRef Id="779505053"/>
+						<MediaRef Id="850951978"/>
 						<MediaRef Id="854276192"/>
 					</MediaRefs>
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="459395562" Id="2165664365" Name="notaiming" ObjectPath="\States\Default Work Unit\state_aim\notaiming" GUID="{AD4DA154-B560-453D-8C38-7A73B45B33AF}"/>
+					</ActionSetState>
 				</Event>
 				<Event Id="3069310083" Name="Play_SlashHitEnviro" ObjectPath="\Events\Default Work Unit\Player Abilities\Play_SlashHitEnviro" GUID="{6E8732AD-CC17-4320-B490-71E811880A65}" DurationType="OneShot" DurationMin="0.8034634" DurationMax="1.6844655">
 					<MediaRefs>
@@ -2059,10 +2102,20 @@
 			</Events>
 			<GameParameters>
 				<GameParameter Id="765516766" Name="rtpc_player_airspeed" ObjectPath="\Game Parameters\Default Work Unit\rtpc_player_airspeed" GUID="{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}"/>
+				<GameParameter Id="876333639" Name="rtpc_tapestop" ObjectPath="\Game Parameters\Default Work Unit\rtpc_tapestop" GUID="{34AB8051-BDEC-4FCF-A5A6-D129BA29D38F}"/>
 				<GameParameter Id="2570586536" Name="rtpc_landing_force" ObjectPath="\Game Parameters\Default Work Unit\rtpc_landing_force" GUID="{07DB1610-4113-4F81-A7B4-0C953E645162}"/>
 				<GameParameter Id="2690476865" Name="rtpc_player_walkspeed" ObjectPath="\Game Parameters\Default Work Unit\rtpc_player_walkspeed" GUID="{6437691A-43C2-473B-A671-C59F1A9E957B}"/>
 				<GameParameter Id="3304859005" Name="rtpc_chaos_global" ObjectPath="\Game Parameters\Default Work Unit\rtpc_chaos_global" GUID="{912B7FBA-E859-424B-9664-D9B8B51FC1BA}"/>
 			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="459395562" Name="state_aim" ObjectPath="\States\Default Work Unit\state_aim" GUID="{B36EB626-1B96-4D45-9487-0F8FDC6A68DD}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\state_aim\None" GUID="{5874B239-37B2-4C50-9175-951DEAE60EF8}"/>
+						<State Id="1907628164" Name="aiming" ObjectPath="\States\Default Work Unit\state_aim\aiming" GUID="{4001CF9D-6974-45C4-A4E1-ADC83295A9E1}"/>
+						<State Id="2165664365" Name="notaiming" ObjectPath="\States\Default Work Unit\state_aim\notaiming" GUID="{AD4DA154-B560-453D-8C38-7A73B45B33AF}"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 			<SwitchGroups>
 				<SwitchGroup Id="1560465246" Name="switch_enemy_state" ObjectPath="\Switches\Default Work Unit\switch_enemy_state" GUID="{7BCEC131-CFF7-4EC9-8FA1-01CA796C57CE}">
 					<Switches>
@@ -2093,5 +2146,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{8C5D2E39-BB08-D18F-0529-7A07B5BD787F}</FileHash>
+	<FileHash>{852814CF-0346-D800-2DD7-889AC607FB86}</FileHash>
 </SoundBanksInfo>

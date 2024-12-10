@@ -6,6 +6,7 @@
 				<SoundBank Name="RBS_MAIN_SoundBank" ID="{1D2A39F0-30EC-4374-B60C-7E5FD97B8C24}">
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_StingerNewWave" ID="{711D0153-A876-4011-82EB-7AD9BCCC2B18}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_PossessionAimStop" ID="{965ECC7B-F6E5-40CB-935F-61ACA3EF8ED1}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_LinkRay2" ID="{295D72FD-50B8-40D0-88D1-20F79D3BC243}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_DeathScreen" ID="{0A56F524-75F8-40EB-BA79-B32424C9D923}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_BasicSlash" ID="{52DD29CE-EBFC-412E-A292-D4803063CBE4}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
@@ -36,6 +37,7 @@
 						<ObjectRef Name="Play_LinkRay1" ID="{45EA5D2F-C0C5-49BF-9CCF-B944FF1C3EF8}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_EnemyProjectileCast" ID="{83E9AC1D-8C91-49FA-A01A-365107871AAC}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_MainMenuStartGame" ID="{C1B5E1E9-DFE9-4A21-BF60-85363ED8A4DA}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_PossessionAimStart" ID="{9997D973-6D46-4AB0-A526-2A1AFE118377}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_EnemyAttack" ID="{8757F626-2B77-4AFB-967C-73D10FBBB945}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_IdleFPS" ID="{AEB85C59-534C-4B60-9C60-04A94B157434}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_PlayerFsSkid" ID="{DC315F02-F1AA-4B9C-9CD4-3E5B4465E20F}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>

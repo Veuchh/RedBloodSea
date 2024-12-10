@@ -140,7 +140,41 @@
 								<Action Name="" ID="{3536087E-197E-48DA-A264-B8EFAC69999E}" ShortID="731757420">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="PossessionSuccessful" ID="{2514713A-C848-4FC1-B561-4A35E174AC6B}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											<ObjectRef Name="PossessionSuccessful" ID="{1D52C8CB-6AD6-43FF-BB86-495E45326F86}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{CF0021D3-B142-4D26-8D60-62582C8F8B95}" ShortID="855167657">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="rtpc_tapestop" ID="{34AB8051-BDEC-4FCF-A5A6-D129BA29D38F}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{AC29ACF1-0BDC-42C8-A24F-3FF3BE61484E}" ShortID="612670879">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PossessionAimStart" ID="{94067F68-0458-4D2F-9928-00C17C267C8A}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{70A46542-00C3-499D-B1B1-8BB3DCD20AEE}" ShortID="1038843414">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="notaiming" ID="{AD4DA154-B560-453D-8C38-7A73B45B33AF}" WorkUnitID="{C595D72B-1CEC-44D9-8102-4C94A354BC93}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -264,6 +298,77 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="LinkRay4" ID="{3966589A-F7D5-4173-9E93-2F773A0FA453}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_PossessionAimStart" ID="{9997D973-6D46-4AB0-A526-2A1AFE118377}">
+							<ChildrenList>
+								<Action Name="" ID="{7A0A46D4-672E-43C6-9A75-858606E46048}" ShortID="338008752">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="39"/>
+										<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="rtpc_tapestop" ID="{34AB8051-BDEC-4FCF-A5A6-D129BA29D38F}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{1F0885DD-E59C-4F49-B321-C7228900765B}" ShortID="574173472">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PossessionAimStart" ID="{94067F68-0458-4D2F-9928-00C17C267C8A}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{4A77145B-F977-4B62-BE3B-CC7FB6FCBA19}" ShortID="483740245">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="aiming" ID="{4001CF9D-6974-45C4-A4E1-ADC83295A9E1}" WorkUnitID="{C595D72B-1CEC-44D9-8102-4C94A354BC93}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_PossessionAimStop" ID="{965ECC7B-F6E5-40CB-935F-61ACA3EF8ED1}">
+							<ChildrenList>
+								<Action Name="" ID="{7A125FFF-6244-4423-BA2D-897E4E44836B}" ShortID="50694830">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="rtpc_tapestop" ID="{34AB8051-BDEC-4FCF-A5A6-D129BA29D38F}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B11919A1-9600-415A-85D5-98D27D5D3201}" ShortID="799865963">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Delay" Type="Real64" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PossessionAimStart" ID="{94067F68-0458-4D2F-9928-00C17C267C8A}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{5DFAF41F-10F5-4CBF-A1C1-FC66D5F955F5}" ShortID="388781991">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="notaiming" ID="{AD4DA154-B560-453D-8C38-7A73B45B33AF}" WorkUnitID="{C595D72B-1CEC-44D9-8102-4C94A354BC93}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -604,9 +709,12 @@
 						<Event Name="Play_AmbVSArena" ID="{5C124C78-CC34-46F4-9C11-1C65E3B16568}">
 							<ChildrenList>
 								<Action Name="" ID="{FE42AE93-6040-404A-97FA-80642AAC78B4}" ShortID="53453071">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="3"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="VsArenaNotInCombatChaosBlend" ID="{818FA01E-961E-4EE4-9DF7-58F1FE0F8780}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											<ObjectRef Name="ph amb seq" ID="{23E75BC9-BF2F-46BC-B342-7AC990668B49}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

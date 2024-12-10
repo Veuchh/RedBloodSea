@@ -11,13 +11,6 @@
     "StaticLib": "AkParametricEQFX"
    },
    {
-    "LibName": "Wwise Delay",
-    "LibId": "6946819",
-    "Type": "Effect",
-    "DLL": "AkDelay",
-    "StaticLib": "AkDelayFX"
-   },
-   {
     "LibName": "Wwise RoomVerb",
     "LibId": "7733251",
     "Type": "Effect",
@@ -42,6 +35,6 @@
     "Type": "AudioDevice"
    }
   ],
-  "FileHash": "{E9A462A3-E40C-9492-86EF-67AC19AE9CEE}"
+  "FileHash": "{11E1965C-C33B-44BD-17BF-46FF69EBFBB2}"
  }
 }

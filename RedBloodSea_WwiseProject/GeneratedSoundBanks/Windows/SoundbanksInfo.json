@@ -18,7 +18,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{F821EA4C-F96F-7C0A-1929-93A5337629CB}",
+    "Hash": "{344B75F7-BB4E-612C-AE7A-F29160F7BB60}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -123,6 +123,12 @@
       "GUID": "{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}"
      },
      {
+      "Id": "876333639",
+      "Name": "rtpc_tapestop",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_tapestop",
+      "GUID": "{34AB8051-BDEC-4FCF-A5A6-D129BA29D38F}"
+     },
+     {
       "Id": "2332098030",
       "Name": "rtpc_enemy_bus",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\Settings\\BUS\\rtpc_enemy_bus",
@@ -178,6 +184,32 @@
      }
     ],
     "StateGroups": [
+     {
+      "Id": "459395562",
+      "Name": "state_aim",
+      "ObjectPath": "\\States\\Default Work Unit\\state_aim",
+      "GUID": "{B36EB626-1B96-4D45-9487-0F8FDC6A68DD}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\state_aim\\None",
+        "GUID": "{5874B239-37B2-4C50-9175-951DEAE60EF8}"
+       },
+       {
+        "Id": "1907628164",
+        "Name": "aiming",
+        "ObjectPath": "\\States\\Default Work Unit\\state_aim\\aiming",
+        "GUID": "{4001CF9D-6974-45C4-A4E1-ADC83295A9E1}"
+       },
+       {
+        "Id": "2165664365",
+        "Name": "notaiming",
+        "ObjectPath": "\\States\\Default Work Unit\\state_aim\\notaiming",
+        "GUID": "{AD4DA154-B560-453D-8C38-7A73B45B33AF}"
+       }
+      ]
+     },
      {
       "Id": "1203368309",
       "Name": "state_game",
@@ -407,7 +439,7 @@
     "Type": "User",
     "GUID": "{1D2A39F0-30EC-4374-B60C-7E5FD97B8C24}",
     "Language": "SFX",
-    "Hash": "{0333AFA0-387E-E48C-3542-F2B41B7370D7}",
+    "Hash": "{82A3906E-E9BE-73BB-AE7D-29D423499705}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\RBS_MAIN_SoundBank",
     "ShortName": "RBS_MAIN_SoundBank",
     "Path": "RBS_MAIN_SoundBank.bnk",
@@ -822,14 +854,6 @@
       "CachePath": "SFX/RBS_SFX_PlayerFS GrassWalk 13R_EDCD4836.wem"
      },
      {
-      "Id": "132075671",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "Soundly Voice Designer, Bella 1.wav",
-      "CachePath": "SFX/Soundly Voice Designer, Bella 1_EDCD4836.wem"
-     },
-     {
       "Id": "139588039",
       "Language": "SFX",
       "Streaming": "true",
@@ -898,6 +922,14 @@
       "ShortName": "13 RBS_SFX_PlayerFS ConcreteGrittyWalk 13R.wav",
       "Path": "Media/167413559.wem",
       "CachePath": "SFX/13 RBS_SFX_PlayerFS ConcreteGrittyWalk 13R_EDCD4836.wem"
+     },
+     {
+      "Id": "167854473",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "RBS_SFX_BasicSlashGeneric 10.wav",
+      "CachePath": "SFX/RBS_SFX_BasicSlashGeneric 10_59BC897F.wem"
      },
      {
       "Id": "175605479",
@@ -1134,6 +1166,14 @@
       "CachePath": "SFX/RBS_SFX_LinkRay_HighChaos 06_5ADFCF7F.wem"
      },
      {
+      "Id": "312767996",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "RBS_SFX_PossessionAimStartBody.wav",
+      "CachePath": "SFX/RBS_SFX_PossessionAimStartBody_EDCD4836.wem"
+     },
+     {
       "Id": "314954263",
       "Language": "SFX",
       "Streaming": "false",
@@ -1210,6 +1250,14 @@
       "CachePath": "SFX/RBS_SFX_PlayerFS GravelWalk 06L_EDCD4836.wem"
      },
      {
+      "Id": "330353897",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "RBS_SFX_PlayerFS SkidConcrete 03.wav",
+      "CachePath": "SFX/RBS_SFX_PlayerFS SkidConcrete 03_9DAB34B7.wem"
+     },
+     {
       "Id": "339180831",
       "Language": "SFX",
       "Streaming": "true",
@@ -1233,7 +1281,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_BasicSlashGeneric 09.wav",
-      "CachePath": "SFX/RBS_SFX_BasicSlashGeneric 09_9848F024.wem"
+      "CachePath": "SFX/RBS_SFX_BasicSlashGeneric 09_EDCD4836.wem"
      },
      {
       "Id": "352916239",
@@ -1366,15 +1414,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_BasicSlashGeneric 06.wav",
-      "CachePath": "SFX/RBS_SFX_BasicSlashGeneric 06_17801CFC.wem"
-     },
-     {
-      "Id": "409200531",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "RBS_SFX_PossessionSuccessful 06.wav",
-      "CachePath": "SFX/RBS_SFX_PossessionSuccessful 06_540C3CA0.wem"
+      "CachePath": "SFX/RBS_SFX_BasicSlashGeneric 06_BC7F329B.wem"
      },
      {
       "Id": "409348956",
@@ -1614,7 +1654,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_PossessionSuccessful 01.wav",
-      "CachePath": "SFX/RBS_SFX_PossessionSuccessful 01_4B4D045E.wem"
+      "CachePath": "SFX/RBS_SFX_PossessionSuccessful 01_EDCD4836.wem"
      },
      {
       "Id": "511303387",
@@ -1648,7 +1688,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_BasicSlashGeneric 03.wav",
-      "CachePath": "SFX/RBS_SFX_BasicSlashGeneric 03_9C6161F6.wem"
+      "CachePath": "SFX/RBS_SFX_BasicSlashGeneric 03_E6CFBC06.wem"
      },
      {
       "Id": "526377678",
@@ -1691,14 +1731,6 @@
       "ShortName": "RBS_SFX_PlayerFS GrassRun 07L.wav",
       "Path": "Media/533353058.wem",
       "CachePath": "SFX/RBS_SFX_PlayerFS GrassRun 07L_EDCD4836.wem"
-     },
-     {
-      "Id": "538001789",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "RBS_SFX_BasicSlashGeneric 01.wav",
-      "CachePath": "SFX/RBS_SFX_BasicSlashGeneric 01_A85ECA5C.wem"
      },
      {
       "Id": "538186047",
@@ -1847,6 +1879,14 @@
       "CachePath": "SFX/RBS_SFX_PlayerFS GravelWalk 05L_EDCD4836.wem"
      },
      {
+      "Id": "597647786",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "RBS_SFX_PlayerFS SkidConcrete 04.wav",
+      "CachePath": "SFX/RBS_SFX_PlayerFS SkidConcrete 04_117687CA.wem"
+     },
+     {
       "Id": "611786585",
       "Language": "SFX",
       "Streaming": "false",
@@ -1868,7 +1908,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_BasicSlashGeneric 07.wav",
-      "CachePath": "SFX/RBS_SFX_BasicSlashGeneric 07_F2DC1AEC.wem"
+      "CachePath": "SFX/RBS_SFX_BasicSlashGeneric 07_C94BA0A1.wem"
      },
      {
       "Id": "623379799",
@@ -1958,6 +1998,14 @@
       "CachePath": "SFX/RBS_SFX_BasicThrustGeneric 02_6B95F6D5.wem"
      },
      {
+      "Id": "648759693",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ph amb.wav",
+      "CachePath": "SFX/ph amb_EDCD4836.wem"
+     },
+     {
       "Id": "649602623",
       "Language": "SFX",
       "Streaming": "false",
@@ -1971,7 +2019,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_BasicSlashGeneric 05.wav",
-      "CachePath": "SFX/RBS_SFX_BasicSlashGeneric 05_B5B52323.wem"
+      "CachePath": "SFX/RBS_SFX_BasicSlashGeneric 05_0D9C7F30.wem"
      },
      {
       "Id": "655272841",
@@ -2067,7 +2115,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_PossessionSuccessful 03.wav",
-      "CachePath": "SFX/RBS_SFX_PossessionSuccessful 03_4A167E5A.wem"
+      "CachePath": "SFX/RBS_SFX_PossessionSuccessful 03_EDCD4836.wem"
      },
      {
       "Id": "710770886",
@@ -2221,7 +2269,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_PossessionSuccessful 02.wav",
-      "CachePath": "SFX/RBS_SFX_PossessionSuccessful 02_43C1105E.wem"
+      "CachePath": "SFX/RBS_SFX_PossessionSuccessful 02_EDCD4836.wem"
      },
      {
       "Id": "779505053",
@@ -2229,7 +2277,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_PossessionSuccessful 04.wav",
-      "CachePath": "SFX/RBS_SFX_PossessionSuccessful 04_D35B3237.wem"
+      "CachePath": "SFX/RBS_SFX_PossessionSuccessful 04_EDCD4836.wem"
      },
      {
       "Id": "787419388",
@@ -2371,12 +2419,28 @@
       "CachePath": "SFX/RBS_SFX_LandingSurface1LowVel 03_EDCD4836.wem"
      },
      {
+      "Id": "850951978",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "RBS_SFX_PossessionAimConfirm.wav",
+      "CachePath": "SFX/RBS_SFX_PossessionAimConfirm_EDCD4836.wem"
+     },
+     {
+      "Id": "851341206",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "RBS_SFX_PossessionAimStartTail.wav",
+      "CachePath": "SFX/RBS_SFX_PossessionAimStartTail_EDCD4836.wem"
+     },
+     {
       "Id": "854276192",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_PossessionSuccessful 05.wav",
-      "CachePath": "SFX/RBS_SFX_PossessionSuccessful 05_2411EC0D.wem"
+      "CachePath": "SFX/RBS_SFX_PossessionSuccessful 05_EDCD4836.wem"
      },
      {
       "Id": "862584422",
@@ -2436,7 +2500,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_BasicSlashGeneric 04.wav",
-      "CachePath": "SFX/RBS_SFX_BasicSlashGeneric 04_A7D2F426.wem"
+      "CachePath": "SFX/RBS_SFX_BasicSlashGeneric 04_7BDC3B21.wem"
      },
      {
       "Id": "878705949",
@@ -2461,7 +2525,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_Respawn.wav",
-      "CachePath": "SFX/RBS_SFX_Respawn_C4EE0608.wem"
+      "CachePath": "SFX/RBS_SFX_Respawn_B0E146BE.wem"
      },
      {
       "Id": "883384986",
@@ -2746,6 +2810,14 @@
       "CachePath": "SFX/RBS_SFX_PlayerFS DirtRun 09L_EDCD4836.wem"
      },
      {
+      "Id": "980423841",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "RBS_SFX_PlayerFS SkidConcrete 01.wav",
+      "CachePath": "SFX/RBS_SFX_PlayerFS SkidConcrete 01_4112E4B5.wem"
+     },
+     {
       "Id": "981328292",
       "Language": "SFX",
       "Streaming": "true",
@@ -2873,7 +2945,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_BasicSlashGeneric 02.wav",
-      "CachePath": "SFX/RBS_SFX_BasicSlashGeneric 02_46C65562.wem"
+      "CachePath": "SFX/RBS_SFX_BasicSlashGeneric 02_EDCD4836.wem"
      },
      {
       "Id": "1026351029",
@@ -2907,7 +2979,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RBS_SFX_BasicSlashGeneric 08.wav",
-      "CachePath": "SFX/RBS_SFX_BasicSlashGeneric 08_BDE06880.wem"
+      "CachePath": "SFX/RBS_SFX_BasicSlashGeneric 08_06D35116.wem"
      },
      {
       "Id": "1044399728",
@@ -2988,14 +3060,6 @@
        "GUID": "{DECB2267-B8FB-404E-8B91-BC6BFB1EADA6}",
        "LibName": "SoundSeed Air Wind",
        "LibId": "7798786"
-      },
-      {
-       "Id": "900331516",
-       "Name": "Delay (Custom)",
-       "ObjectPath": "\\Actor-Mixer Hierarchy\\Default Work Unit\\RBS_SFX_Player Movement\\PlayerFS\\PlayerSpeed\\Walker\\WALKER\\[Effect Slot [1]: (Delay)]\\Delay (Custom)",
-       "GUID": "{9229BCC8-C268-4AD2-B010-AE39D8D74FB9}",
-       "LibName": "Wwise Delay",
-       "LibId": "6946819"
       }
      ],
      "ShareSets": [
@@ -3004,6 +3068,22 @@
        "Name": "Room_Medium",
        "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
        "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      },
+      {
+       "Id": "2849147824",
+       "Name": "Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Cathedrals\\Medium",
+       "GUID": "{AEB3F175-958B-45F2-A4C2-3FBD4F456568}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      },
+      {
+       "Id": "3164629247",
+       "Name": "Holy",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Cathedrals\\Holy",
+       "GUID": "{CC7B8638-C670-4AD5-B3FB-331EA81037F6}",
        "LibName": "Wwise RoomVerb",
        "LibId": "7733251"
       }
@@ -3015,12 +3095,10 @@
       "Name": "Play_AmbVSArena",
       "ObjectPath": "\\Events\\Default Work Unit\\World Environments\\Play_AmbVSArena",
       "GUID": "{5C124C78-CC34-46F4-9C11-1C65E3B16568}",
-      "DurationType": "OneShot",
-      "DurationMin": "1.370875",
-      "DurationMax": "1.370875",
+      "DurationType": "Infinite",
       "MediaRefs": [
        {
-        "Id": "132075671"
+        "Id": "648759693"
        }
       ]
      },
@@ -3030,9 +3108,12 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Player Abilities\\Play_BasicSlash",
       "GUID": "{52DD29CE-EBFC-412E-A292-D4803063CBE4}",
       "DurationType": "OneShot",
-      "DurationMin": "1.6799113",
-      "DurationMax": "3.4076695",
+      "DurationMin": "2.0216126",
+      "DurationMax": "4.829297",
       "MediaRefs": [
+       {
+        "Id": "167854473"
+       },
        {
         "Id": "349437653"
        },
@@ -3041,9 +3122,6 @@
        },
        {
         "Id": "523218377"
-       },
-       {
-        "Id": "538001789"
        },
        {
         "Id": "615399648"
@@ -3097,8 +3175,8 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_Dash",
       "GUID": "{CF6A631F-F642-4424-8ABD-EE3D53B63430}",
       "DurationType": "OneShot",
-      "DurationMin": "0.91603553",
-      "DurationMax": "1.6185523",
+      "DurationMin": "0.98747",
+      "DurationMax": "1.7447705",
       "MediaRefs": [
        {
         "Id": "294474954"
@@ -3387,8 +3465,8 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_Jump",
       "GUID": "{E9BD2A7D-A3FC-4367-900D-1C172D1086AE}",
       "DurationType": "OneShot",
-      "DurationMin": "0.647241",
-      "DurationMax": "1.1726758",
+      "DurationMin": "0.67724097",
+      "DurationMax": "1.2026758",
       "MediaRefs": [
        {
         "Id": "32617726"
@@ -3427,6 +3505,9 @@
         "Id": "320245737"
        },
        {
+        "Id": "330353897"
+       },
+       {
         "Id": "409348956"
        },
        {
@@ -3437,6 +3518,9 @@
        },
        {
         "Id": "572214998"
+       },
+       {
+        "Id": "597647786"
        },
        {
         "Id": "714637550"
@@ -3464,6 +3548,9 @@
        },
        {
         "Id": "933938710"
+       },
+       {
+        "Id": "980423841"
        }
       ]
      },
@@ -3916,9 +4003,11 @@
         },
         {
          "Id": "750533697"
-        },
+        }
+       ],
+       "ShareSets": [
         {
-         "Id": "900331516"
+         "Id": "2849147824"
         }
        ]
       },
@@ -4047,9 +4136,9 @@
          }
         ],
         "PluginRefs": {
-         "Custom": [
+         "ShareSets": [
           {
-           "Id": "900331516"
+           "Id": "3164629247"
           }
          ]
         }
@@ -4146,9 +4235,9 @@
          }
         ],
         "PluginRefs": {
-         "Custom": [
+         "ShareSets": [
           {
-           "Id": "900331516"
+           "Id": "3164629247"
           }
          ]
         }
@@ -4181,9 +4270,9 @@
          }
         ],
         "PluginRefs": {
-         "Custom": [
+         "ShareSets": [
           {
-           "Id": "900331516"
+           "Id": "3164629247"
           }
          ]
         }
@@ -4220,9 +4309,9 @@
          }
         ],
         "PluginRefs": {
-         "Custom": [
+         "ShareSets": [
           {
-           "Id": "900331516"
+           "Id": "3164629247"
           }
          ]
         }
@@ -4255,9 +4344,9 @@
          }
         ],
         "PluginRefs": {
-         "Custom": [
+         "ShareSets": [
           {
-           "Id": "900331516"
+           "Id": "3164629247"
           }
          ]
         }
@@ -4297,9 +4386,9 @@
          }
         ],
         "PluginRefs": {
-         "Custom": [
+         "ShareSets": [
           {
-           "Id": "900331516"
+           "Id": "3164629247"
           }
          ]
         }
@@ -4440,9 +4529,9 @@
          }
         ],
         "PluginRefs": {
-         "Custom": [
+         "ShareSets": [
           {
-           "Id": "900331516"
+           "Id": "3164629247"
           }
          ]
         }
@@ -4554,9 +4643,9 @@
          }
         ],
         "PluginRefs": {
-         "Custom": [
+         "ShareSets": [
           {
-           "Id": "900331516"
+           "Id": "3164629247"
           }
          ]
         }
@@ -4666,11 +4755,56 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Player Abilities\\Play_PlayerRespawn",
       "GUID": "{7869A732-3A1F-4314-B872-8E58B1D9ABAC}",
       "DurationType": "OneShot",
-      "DurationMin": "5.4805417",
-      "DurationMax": "5.4805417",
+      "DurationMin": "5.4250894",
+      "DurationMax": "5.4250894",
       "MediaRefs": [
        {
         "Id": "880866166"
+       }
+      ]
+     },
+     {
+      "Id": "2096286113",
+      "Name": "Play_PossessionAimStart",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player Abilities\\Play_PossessionAimStart",
+      "GUID": "{9997D973-6D46-4AB0-A526-2A1AFE118377}",
+      "DurationType": "OneShot",
+      "DurationMin": "11.437543",
+      "DurationMax": "14.410401",
+      "MediaRefs": [
+       {
+        "Id": "312767996"
+       },
+       {
+        "Id": "851341206"
+       }
+      ],
+      "ActionSetState": [
+       {
+        "GroupId": "459395562",
+        "Id": "1907628164",
+        "Name": "aiming",
+        "ObjectPath": "\\States\\Default Work Unit\\state_aim\\aiming",
+        "GUID": "{4001CF9D-6974-45C4-A4E1-ADC83295A9E1}"
+       }
+      ]
+     },
+     {
+      "Id": "1030277851",
+      "Name": "Play_PossessionAimStop",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player Abilities\\Play_PossessionAimStop",
+      "GUID": "{965ECC7B-F6E5-40CB-935F-61ACA3EF8ED1}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionSetState": [
+       {
+        "GroupId": "459395562",
+        "Id": "2165664365",
+        "Name": "notaiming",
+        "ObjectPath": "\\States\\Default Work Unit\\state_aim\\notaiming",
+        "GUID": "{AD4DA154-B560-453D-8C38-7A73B45B33AF}"
        }
       ]
      },
@@ -4680,12 +4814,9 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Player Abilities\\Play_PossessionSuccessful",
       "GUID": "{6D367373-2398-4C51-9F2C-F5C06824195D}",
       "DurationType": "OneShot",
-      "DurationMin": "1.4615098",
-      "DurationMax": "2.0225346",
+      "DurationMin": "1.9683958",
+      "DurationMax": "3.3275416",
       "MediaRefs": [
-       {
-        "Id": "409200531"
-       },
        {
         "Id": "507432298"
        },
@@ -4699,7 +4830,19 @@
         "Id": "779505053"
        },
        {
+        "Id": "850951978"
+       },
+       {
         "Id": "854276192"
+       }
+      ],
+      "ActionSetState": [
+       {
+        "GroupId": "459395562",
+        "Id": "2165664365",
+        "Name": "notaiming",
+        "ObjectPath": "\\States\\Default Work Unit\\state_aim\\notaiming",
+        "GUID": "{AD4DA154-B560-453D-8C38-7A73B45B33AF}"
        }
       ]
      },
@@ -4869,6 +5012,12 @@
       "GUID": "{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}"
      },
      {
+      "Id": "876333639",
+      "Name": "rtpc_tapestop",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_tapestop",
+      "GUID": "{34AB8051-BDEC-4FCF-A5A6-D129BA29D38F}"
+     },
+     {
       "Id": "2570586536",
       "Name": "rtpc_landing_force",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_landing_force",
@@ -4885,6 +5034,34 @@
       "Name": "rtpc_chaos_global",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_chaos_global",
       "GUID": "{912B7FBA-E859-424B-9664-D9B8B51FC1BA}"
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "459395562",
+      "Name": "state_aim",
+      "ObjectPath": "\\States\\Default Work Unit\\state_aim",
+      "GUID": "{B36EB626-1B96-4D45-9487-0F8FDC6A68DD}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\state_aim\\None",
+        "GUID": "{5874B239-37B2-4C50-9175-951DEAE60EF8}"
+       },
+       {
+        "Id": "1907628164",
+        "Name": "aiming",
+        "ObjectPath": "\\States\\Default Work Unit\\state_aim\\aiming",
+        "GUID": "{4001CF9D-6974-45C4-A4E1-ADC83295A9E1}"
+       },
+       {
+        "Id": "2165664365",
+        "Name": "notaiming",
+        "ObjectPath": "\\States\\Default Work Unit\\state_aim\\notaiming",
+        "GUID": "{AD4DA154-B560-453D-8C38-7A73B45B33AF}"
+       }
+      ]
      }
     ],
     "SwitchGroups": [
@@ -4983,6 +5160,6 @@
     ]
    }
   ],
-  "FileHash": "{23D75F59-7FD9-81D5-941E-69DBBD022164}"
+  "FileHash": "{6101B5DB-3250-253A-CDA3-1FEBAAFAC207}"
  }
 }

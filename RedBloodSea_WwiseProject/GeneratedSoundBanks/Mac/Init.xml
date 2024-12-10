@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{CAC58691-2B07-003B-62BD-0A4B4FC78F1B}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{051E3057-D217-9B47-63AF-0A24710E42B3}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -33,6 +33,7 @@
 				<GameParameter Id="88991926" Name="rtpc_master_bus" ObjectPath="\Game Parameters\Default Work Unit\Settings\BUS\rtpc_master_bus" GUID="{94154412-EE63-4EDD-B582-B922CD738ED6}"/>
 				<GameParameter Id="115866790" Name="rtpc_amb_bus" ObjectPath="\Game Parameters\Default Work Unit\Settings\BUS\rtpc_amb_bus" GUID="{A29E33E7-090C-4F92-B2A4-CF339B2E10FC}"/>
 				<GameParameter Id="765516766" Name="rtpc_player_airspeed" ObjectPath="\Game Parameters\Default Work Unit\rtpc_player_airspeed" GUID="{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}"/>
+				<GameParameter Id="876333639" Name="rtpc_tapestop" ObjectPath="\Game Parameters\Default Work Unit\rtpc_tapestop" GUID="{34AB8051-BDEC-4FCF-A5A6-D129BA29D38F}"/>
 				<GameParameter Id="2332098030" Name="rtpc_enemy_bus" ObjectPath="\Game Parameters\Default Work Unit\Settings\BUS\rtpc_enemy_bus" GUID="{7B1FB034-3E8E-48F8-B914-CB5786C31FF9}"/>
 				<GameParameter Id="2400834421" Name="rtpc_dominant_hand" ObjectPath="\Game Parameters\Default Work Unit\Settings\rtpc_dominant_hand" GUID="{54C0314F-1459-460E-B6E6-1CDAA6EDBE01}"/>
 				<GameParameter Id="2570586536" Name="rtpc_landing_force" ObjectPath="\Game Parameters\Default Work Unit\rtpc_landing_force" GUID="{07DB1610-4113-4F81-A7B4-0C953E645162}"/>
@@ -44,6 +45,13 @@
 				<GameParameter Id="3681822039" Name="rtpc_chaos_player" ObjectPath="\Game Parameters\Default Work Unit\rtpc_chaos_player" GUID="{BFE4D672-50A0-4F84-B21E-4DC11EBCCF9B}"/>
 			</GameParameters>
 			<StateGroups>
+				<StateGroup Id="459395562" Name="state_aim" ObjectPath="\States\Default Work Unit\state_aim" GUID="{B36EB626-1B96-4D45-9487-0F8FDC6A68DD}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\state_aim\None" GUID="{5874B239-37B2-4C50-9175-951DEAE60EF8}"/>
+						<State Id="1907628164" Name="aiming" ObjectPath="\States\Default Work Unit\state_aim\aiming" GUID="{4001CF9D-6974-45C4-A4E1-ADC83295A9E1}"/>
+						<State Id="2165664365" Name="notaiming" ObjectPath="\States\Default Work Unit\state_aim\notaiming" GUID="{AD4DA154-B560-453D-8C38-7A73B45B33AF}"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="1203368309" Name="state_game" ObjectPath="\States\Default Work Unit\state_game" GUID="{AA8156C3-B24B-43FB-96AA-B599641EE3EC}">
 					<States>
 						<State Id="89505537" Name="gameplay" ObjectPath="\States\Default Work Unit\state_game\gameplay" GUID="{C4E4E26E-F6DD-47FB-801A-F846446BBC84}"/>
@@ -107,5 +115,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{A2710FF2-35B0-C41D-6424-61E0C768D704}</FileHash>
+	<FileHash>{9A9EDFA0-FA2F-93E6-E93F-6165E4610407}</FileHash>
 </SoundBanksInfo>

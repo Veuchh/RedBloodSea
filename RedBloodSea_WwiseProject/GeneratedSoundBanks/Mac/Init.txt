@@ -1,9 +1,13 @@
 State Group	ID	Name			Wwise Object Path	Notes
+	459395562	state_aim			\Default Work Unit\state_aim	
 	1203368309	state_game			\Default Work Unit\state_game	
 	4016824040	state_player			\Default Work Unit\state_player	
 	4122948419	state_combat			\Default Work Unit\state_combat	
 
 State	ID	Name	State Group			Notes
+	748895195	None	state_aim			
+	1907628164	aiming	state_aim			
+	2165664365	notaiming	state_aim			
 	89505537	gameplay	state_game			
 	748895195	None	state_game			
 	2607556080	menu	state_game			

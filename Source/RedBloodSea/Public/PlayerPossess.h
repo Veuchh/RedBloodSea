@@ -5,7 +5,7 @@
 #include "PlayerData.h"
 #include "Camera/CameraComponent.h"
 #include "Components/ActorComponent.h"
-#include "BearerBody.h"
+#include "Dweller.h"
 #include "PlayerPossess.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnUpdateHPDisplay, int, newCurrentHP, int, newMaxHP);
@@ -56,21 +56,19 @@ private:
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Ground Slam")
 	float throwFailWhilePossessingDelay = .2;
 
-	/*Blueprint Reference of UsefulActor class*/
 	UPROPERTY(EditDefaultsOnly,Category="ActorSpawning")
-	TSubclassOf<ABearerBody> BearerBodyBP;
+	TSubclassOf<ADweller> dwellerBP;
 	
 	float nextAllowedAction = 0;
 	bool isInputModeActionPressed = false;
 	FVector startPossessPosition;
 	FVector endPossessPosition;
-	ABearerBody* bearerBodyInstance;
 	UPossessTarget* targetToUnpossess;
 
 	void AimModeToggling();
 	void TogglePlayer(bool isToggled) const;
-	void LeaveBearerBodyAtPosition();
 
+	void UpdatePlayerHealth();
 	void CameraZoomTick();
 	void SetupCameraMovement();
 	void ThrowTargetTick();

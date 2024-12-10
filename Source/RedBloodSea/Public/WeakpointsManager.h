@@ -52,7 +52,7 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void RevealWeakpoints();
 	UFUNCTION(BlueprintCallable)
-	void RemoveWeakpoint(AWeakpoint* weakpoint);
+	void RemoveWeakpoint(AWeakpoint* weakpoint, bool canDestroyHiddenWeakpoints = false);
 	void ClearAllWeakpoints();
 	AWeakpoint* GetRandomAliveWeakPoint();
 	

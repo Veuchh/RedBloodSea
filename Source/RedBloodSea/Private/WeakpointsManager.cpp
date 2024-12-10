@@ -161,9 +161,11 @@ void UWeakpointsManager::RevealWeakpoints()
 	OnWeakpointReveal.Broadcast();
 }
 
-void UWeakpointsManager::RemoveWeakpoint(AWeakpoint* weakpoint)
+void UWeakpointsManager::RemoveWeakpoint(AWeakpoint* weakpoint, bool canDestroyHiddenWeakpoints)
 {
-	if(!Weakpoints.Contains(weakpoint) || weakpoint->State != EWeakpointState::Revealed)
+	if(!Weakpoints.Contains(weakpoint)
+		|| (!canDestroyHiddenWeakpoints && weakpoint->State != EWeakpointState::Revealed)
+		|| (canDestroyHiddenWeakpoints &&  weakpoint->State == EWeakpointState::Damaged))
 		return;
 	HealthPoint--;
 	int index = Weakpoints.IndexOfByKey(weakpoint)+1;

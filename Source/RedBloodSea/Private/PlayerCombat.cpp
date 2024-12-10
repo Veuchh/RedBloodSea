@@ -59,9 +59,7 @@ void UPlayerCombat::BeginPlay()
 
 	ToggleAttackCollider(BufferableAttack::Slash, false);
 	ToggleAttackCollider(BufferableAttack::Thrust, false);
-
-	PlayerData::BearerMaxHPAmount = maxHPAmount;
-	PlayerData::BearerCurrentHPAmount = maxHPAmount;
+	
 	PlayerData::MaxAttackBufferCapacity = maxAttackBufferCapacity;
 	PlayerData::SlashAttackStartupDelay = slashAttackStartupDelay;
 	PlayerData::SlashAttackDuration = slashAttackDuration;
@@ -172,7 +170,7 @@ void UPlayerCombat::OnThrustOverlap(UPrimitiveComponent* HitComp, AActor* OtherA
 		weakPointsManager->RemoveWeakpoint(Cast<AWeakpoint>(OtherActor));
 		OnThrustHitWeakpoint.Broadcast(Cast<AWeakpoint>(OtherActor));
 	}
-	else if(OtherActor->IsA(ADweller::StaticClass()))
+	else if (OtherActor->IsA(ADweller::StaticClass()))
 	{
 		OnThrustHitNoWeakpoint.Broadcast(OtherActor);
 	}
@@ -180,7 +178,11 @@ void UPlayerCombat::OnThrustOverlap(UPrimitiveComponent* HitComp, AActor* OtherA
 	{
 		FOnThrustHitEnviro.Broadcast(OtherActor);
 	}
+}
 
+void UPlayerCombat::PlayerDeath()
+{
+	OnPlayerDeath.Broadcast();
 }
 
 
@@ -286,16 +288,21 @@ void UPlayerCombat::OnThrustInput()
 
 void UPlayerCombat::DamagePlayer(int damageAmount)
 {
-	(PlayerData::IsPossessingBody ? PlayerData::PossessedBodyCurrentHPAmount :	PlayerData::BearerCurrentHPAmount) -= damageAmount;
+	PlayerData::CurrentHPAmount -= damageAmount;
+	OnPlayerHit.Broadcast(PlayerData::CurrentHPAmount);
 
-	if (PlayerData::IsPossessingBody)
+	if (PlayerData::CurrentHPAmount > 0)
 	{
-		UWeakpointsManager* wpManager = PlayerData::CurrentPossessTarget->GetOwner()->GetComponentByClass<UWeakpointsManager>();
+		UWeakpointsManager* wpManager = PlayerData::CurrentPossessTarget->GetOwner()->GetComponentByClass<
+			UWeakpointsManager>();
+
 		if (wpManager)
 		{
 			wpManager->RemoveWeakpoint(wpManager->GetRandomAliveWeakPoint());
 		}
 	}
-	
-	OnPlayerHit.Broadcast(PlayerData::GetCurrentHP());
+	else
+	{
+		PlayerDeath();
+	}
 }

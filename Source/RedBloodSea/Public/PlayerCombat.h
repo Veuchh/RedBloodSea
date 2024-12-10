@@ -9,6 +9,7 @@
 #include "PlayerCombat.generated.h"
 
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnDeath);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnSlashStart);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnThrustStart);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnPlayerHit, int, remainingHealth);
@@ -34,10 +35,6 @@ private:
 	void ToggleAttackCollider(BufferableAttack attack, bool isToggled);
 	
 protected:
-	/*The max amount of queued attacks*/
-	UPROPERTY(EditAnywhere,BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
-	int maxHPAmount = 4;
-
 	/*The max amount of queued attacks*/
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
 	int maxAttackBufferCapacity = 1;
@@ -93,6 +90,9 @@ protected:
 	void OnOverlapBegin(class UPrimitiveComponent* HitComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult);
 	void OnSlashOverlap(UPrimitiveComponent* HitComp, AActor* OtherActor);
 	void OnThrustOverlap(UPrimitiveComponent* HitComp, AActor* OtherActor);
+
+void PlayerDeath();
+	
 	TArray<AActor*> currentAttackHitActors;
 public:
 	// Called every frame
@@ -104,6 +104,8 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void DamagePlayer(int damageAmount);
 	
+	UPROPERTY(BlueprintAssignable, Category = "Combat")
+	FOnDeath OnPlayerDeath;
 	UPROPERTY(BlueprintAssignable, Category = "Combat")
 	FOnPlayerHit OnPlayerHit;
 	UPROPERTY(BlueprintAssignable, Category = "Combat")

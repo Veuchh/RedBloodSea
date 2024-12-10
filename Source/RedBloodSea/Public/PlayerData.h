@@ -21,10 +21,8 @@ public:
 	static float NextAllowedDash;
 	
 	//-------------------------------------------Combat
-	static int BearerMaxHPAmount;
-	static int BearerCurrentHPAmount;
-	static int PossessedBodyCurrentHPAmount;
-	static int PossessedBodyMaxHPAmount;
+	static int MaxHPAmount;
+	static int CurrentHPAmount;
 	static float GetCurrentAttackStartupEndTime();
 	static float GetCurrentAttackCooldownEndTime();
 	static float GetCurrentAttackColliderEndTime();
@@ -34,9 +32,6 @@ public:
 	static PlayerAttackState CurrentAttackState;
 	static float AttackStartTime;
 	static float NextAllowedInputBufferTime;
-	
-	static int GetCurrentHP();
-	static int GetMaxHP();
 	
 	//-----------------------------------------------------------------------------------Slash
 	static float SlashAttackStartupDelay;
@@ -49,7 +44,6 @@ public:
 	static float ThrustAttackCooldown;
 
 	//-------------------------------------------Possession
-	static bool IsPossessingBody;
 	static PlayerPossessState CurrentPossessState;
 	static float StartCameraMovementTime;
 	static float EndCameraMovementTime;

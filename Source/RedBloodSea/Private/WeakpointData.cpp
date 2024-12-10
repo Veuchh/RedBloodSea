@@ -20,6 +20,7 @@ UWeakpointData::UWeakpointData()
 	}
 }
 
+#if WITH_EDITOR
 void UWeakpointData::PostEditChangeProperty(struct FPropertyChangedEvent& e)
 {
 	FName PropertyName = (e.Property != NULL) ? e.Property->GetFName() : NAME_None;
@@ -30,6 +31,7 @@ void UWeakpointData::PostEditChangeProperty(struct FPropertyChangedEvent& e)
 	}
 	Super::PostEditChangeProperty(e);
 }
+#endif
 
 TArray<FName> UWeakpointData::GetAllWeakpointsSockets() const
 {

@@ -3,6 +3,7 @@
 
 #include "PlayerPossess.h"
 
+#include "DwellerLinkSubsystem.h"
 #include "PossessTarget.h"
 #include "WeakpointsManager.h"
 #include "GameFramework/Character.h"
@@ -14,6 +15,7 @@ UPlayerPossess::UPlayerPossess()
 {
 	PrimaryComponentTick.bCanEverTick = true;
 }
+
 void UPlayerPossess::SetupPlayerPossessComponent(ACharacter* Character,
                                                  UCameraComponent* CameraComponent)
 {
@@ -28,7 +30,8 @@ void UPlayerPossess::SetupPlayerPossessComponent(ACharacter* Character,
 	ADweller* newDwellerInstance = GetWorld()->SpawnActor<ADweller>(dwellerBP, Location, Rotation, SpawnInfo);
 
 	PlayerData::CurrentPossessTarget = newDwellerInstance->GetComponentByClass<UPossessTarget>();
-	PlayerData::CurrentPossessTarget->Possess();
+	dwellerLinkSU = UGameplayStatics::GetGameInstance(GetWorld())->GetSubsystem<UDwellerLinkSubsystem>();
+	PossessDweller();
 	UpdatePlayerHealth();
 }
 
@@ -74,7 +77,8 @@ void UPlayerPossess::UpdatePlayerHealth()
 		PlayerData::CurrentHPAmount = wpManager->GetHealthPoint();
 		PlayerData::MaxHPAmount = wpManager->GetMaxHealthPoint();
 	}
-	PlayerData::CurrentPossessTarget->Possess();
+	
+	PossessDweller();
 
 	//Update UI for HP
 	OnUpdateHPDisplay.Broadcast(PlayerData::CurrentHPAmount, PlayerData::MaxHPAmount);
@@ -165,6 +169,13 @@ void UPlayerPossess::PossessRecoveryTick()
 	}
 }
 
+
+void UPlayerPossess::PossessDweller()
+{
+	PlayerData::CurrentPossessTarget->Possess();
+	dwellerLinkSU->AddDwellerToLink(PlayerData::CurrentPossessTarget);
+}
+
 void UPlayerPossess::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
@@ -172,7 +183,9 @@ void UPlayerPossess::TickComponent(float DeltaTime, ELevelTick TickType, FActorC
 	DebugState();
 
 	AimModeToggling();
-
+	
+	dwellerLinkSU->UpdateLinkGFX(GetOwner()->GetActorLocation());
+	
 	//We only cover states that have "waiting for cooldown" logic (not those waiting for a player input)
 	switch (PlayerData::CurrentPossessState)
 	{

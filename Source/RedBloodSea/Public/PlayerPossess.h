@@ -26,36 +26,31 @@ private:
 	UCameraComponent* camera;
 
 	/*The max distance of the possess mechanic*/
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Ground Slam")
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Possess Timings")
 	float maxPossessDistance = 1000;
 
 	/*The duration, in seconds, the player has to hold E to be able to throw the rapier*/
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Ground Slam")
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Possess Timings")
 	float holdDelayToEnterAimingMode = .2;
 
 	/*The duration, in seconds, the player has to wait before having control of the rapier again if it hits a wall or nothing*/
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Ground Slam")
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Possess Timings")
 	float throwFailDuration = 1;
 
 	UPROPERTY(EditAnywhere, Category="Collision")
 	TEnumAsByte<ECollisionChannel> TraceChannelProperty = ECC_Pawn;
 
 	/*The duration, in seconds, of the delay before the camera starts to zoom when possessing*/
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Ground Slam")
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Possess Timings")
 	float possessDelay = .2;
 
 	/*The duration, in seconds, the camera travels during a possession*/
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Ground Slam")
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Possess Timings")
 	float possessTransitionDuration = .2;
 
 	/*The duration, in seconds, the player has to wait before having control of the character again after camera zoom. This corresponds to the sword pull out animation*/
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Ground Slam")
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Possess Timings")
 	float playerControlDelay = .4;
-
-	/*The duration, in seconds, the player waits before starting the camera transition when missing a throw while possessing a body*/
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Ground Slam")
-	float throwFailWhilePossessingDelay = .2;
-
 	UPROPERTY(EditDefaultsOnly,Category="ActorSpawning")
 	TSubclassOf<ADweller> dwellerBP;
 	

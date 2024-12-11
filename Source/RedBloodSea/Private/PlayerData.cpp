@@ -102,6 +102,12 @@ bool PlayerData::CanMove()
 			|| CurrentPossessState == PlayerPossessState::PossessRecovery);
 }
 
+bool PlayerData::CanJump()
+{
+	return
+		CurrentPossessState == PlayerPossessState::None;
+}
+
 bool PlayerData::CanRotateCamera()
 {
 	return

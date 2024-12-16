@@ -57,7 +57,10 @@ class REDBLOODSEA_API UWeakpointData : public UDataAsset
 	GENERATED_BODY()
 public:
 	UWeakpointData();
+	
+#if WITH_EDITOR
 	void PostEditChangeProperty(struct FPropertyChangedEvent& e);
+#endif
 	
 	UPROPERTY(EditAnywhere, Category="Weakpoints Handler")
 	TObjectPtr<UClass> Weakpoint_BP;

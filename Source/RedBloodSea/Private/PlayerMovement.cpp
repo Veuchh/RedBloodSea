@@ -125,7 +125,7 @@ void UPlayerMovement::OnDashInput()
 
 void UPlayerMovement::OnJumpInput(const bool isJumping)
 {
-	if (isJumping)
+	if (isJumping && PlayerData::CanJump())
 	{
 		playerCharacter->Jump();
 	}

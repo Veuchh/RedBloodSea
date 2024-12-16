@@ -51,6 +51,7 @@ public:
 	
 	//-------------------------------------------Test methods for the player
 	static bool CanMove();
+	static bool CanJump();
 	static bool CanRotateCamera();
 	static bool CanAddAttackToBuffer();
 	static bool CanAttack();

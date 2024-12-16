@@ -36,6 +36,7 @@ private:
 	TArray<TObjectPtr<UMaterialInstanceDynamic>> MaterialInstances;
 	TArray<TObjectPtr<AWeakpoint>> Weakpoints;
 	int HealthPoint;
+	int MaxHealthPoint;
 	
 	
 protected:
@@ -51,9 +52,9 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void RevealWeakpoints();
 	UFUNCTION(BlueprintCallable)
-	void RemoveWeakpoint(AWeakpoint* weakpoint);
+	void RemoveWeakpoint(AWeakpoint* weakpoint, bool canDestroyHiddenWeakpoints = false);
 	void ClearAllWeakpoints();
-	AWeakpoint* GetFirstRevealWeakpoint();
+	AWeakpoint* GetRandomAliveWeakPoint();
 	
 	// COMPONENTS FUNCTIONS
 	void SetSkeleton(USkeletalMeshComponent* skeleton);
@@ -62,6 +63,7 @@ public:
 	// GAMEPLAY FUNCTIONS
 	bool CheckIfDead();
 	int GetHealthPoint();
+	int GetMaxHealthPoint();
 
 	// EVENTS
 	DECLARE_DYNAMIC_MULTICAST_DELEGATE(FWeakpointReveal);

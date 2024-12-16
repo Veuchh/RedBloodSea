@@ -6,16 +6,17 @@
 #include "Components/ActorComponent.h"
 #include "PlayerData.h"
 #include "Weakpoint.h"
-#include "Components/BoxComponent.h"
 #include "PlayerCombat.generated.h"
 
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnDeath);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnSlashStart);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnThrustStart);
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnPlayerHit, float, remainingHealthRatio);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnPlayerHit, int, remainingHealth);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnSlashHitEnemy, AActor*, HitEnemy);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnSlashHitEnviro, AActor*, HitActor);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnThrustHitWeakpoint, AWeakpoint*, HitWeakpoint);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnThrustHitNoWeakpoint, AActor*, HitEnemy);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnThrustHitEnviro, AActor*, HitActor);
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
@@ -34,10 +35,6 @@ private:
 	void ToggleAttackCollider(BufferableAttack attack, bool isToggled);
 	
 protected:
-	/*The max amount of queued attacks*/
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
-	int maxHPAmount = 100;
-
 	/*The max amount of queued attacks*/
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
 	int maxAttackBufferCapacity = 1;
@@ -93,6 +90,9 @@ protected:
 	void OnOverlapBegin(class UPrimitiveComponent* HitComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult);
 	void OnSlashOverlap(UPrimitiveComponent* HitComp, AActor* OtherActor);
 	void OnThrustOverlap(UPrimitiveComponent* HitComp, AActor* OtherActor);
+
+void PlayerDeath();
+	
 	TArray<AActor*> currentAttackHitActors;
 public:
 	// Called every frame
@@ -100,11 +100,12 @@ public:
 
 	void OnSlashInput();
 	void OnThrustInput();
-	void OnPossessInput();
 
 	UFUNCTION(BlueprintCallable)
 	void DamagePlayer(int damageAmount);
 	
+	UPROPERTY(BlueprintAssignable, Category = "Combat")
+	FOnDeath OnPlayerDeath;
 	UPROPERTY(BlueprintAssignable, Category = "Combat")
 	FOnPlayerHit OnPlayerHit;
 	UPROPERTY(BlueprintAssignable, Category = "Combat")
@@ -117,6 +118,8 @@ public:
 	FOnSlashHitEnviro OnSlashHitEnviro;
 	UPROPERTY(BlueprintAssignable, Category = "Combat")
 	FOnThrustHitWeakpoint OnThrustHitWeakpoint;
+	UPROPERTY(BlueprintAssignable, Category = "Combat")
+	FOnThrustHitNoWeakpoint OnThrustHitNoWeakpoint;
 	UPROPERTY(BlueprintAssignable, Category = "Combat")
 	FOnThrustHitEnviro FOnThrustHitEnviro;
 };

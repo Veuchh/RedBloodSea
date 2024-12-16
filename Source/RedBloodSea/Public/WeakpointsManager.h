@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "CountLevelInstanceSubsystem.h"
 #include "Weakpoint.h"
 #include "WeakpointData.h"
 #include "Components/ActorComponent.h"
@@ -17,8 +18,8 @@ class REDBLOODSEA_API UWeakpointsManager : public UActorComponent
 public:	
 	// Sets default values for this component's properties
 	UWeakpointsManager();
-	UPROPERTY(EditAnywhere, Category="Weakpoints Handler")
-	TObjectPtr<UClass> Weakpoint_BP;
+
+	// WEAKPOINTS VARIABLES
 	UPROPERTY(EditAnywhere, Category="Weakpoints Handler")
 	const TObjectPtr<UWeakpointData> WeakpointData;
 	UPROPERTY(EditAnywhere, Category="Weakpoints Handler",meta=(Bitmask,BitmaskEnum = EWeakpointType))
@@ -29,10 +30,13 @@ public:
 	TArray<FName> UsedWeakpointsSocketsNames;
 
 private:
-	AActor* owner;
-	TObjectPtr<USkeletalMeshComponent> skeleton;
-	TArray<TObjectPtr<UMaterialInstanceDynamic>> materialInstances;
+	AActor* Owner;
+	TObjectPtr<UCountLevelInstanceSubsystem> CountSubSys;
+	TObjectPtr<USkeletalMeshComponent> Skeleton;
+	TArray<TObjectPtr<UMaterialInstanceDynamic>> MaterialInstances;
 	TArray<TObjectPtr<AWeakpoint>> Weakpoints;
+	int HealthPoint;
+	int MaxHealthPoint;
 	
 	
 protected:
@@ -42,24 +46,35 @@ protected:
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+	// WEAKPOINTS FUNCTIONS
 	void CreateWeakPoints();
 	void AttachWeakpoint(const FWeakpointSlot& WeakpointSlot,const float Size);
 	UFUNCTION(BlueprintCallable)
 	void RevealWeakpoints();
 	UFUNCTION(BlueprintCallable)
-	void RemoveWeakpoint(AWeakpoint* weakpoint);
+	void RemoveWeakpoint(AWeakpoint* weakpoint, bool canDestroyHiddenWeakpoints = false);
+	void ClearAllWeakpoints();
+	AWeakpoint* GetRandomAliveWeakPoint();
+	
+	// COMPONENTS FUNCTIONS
 	void SetSkeleton(USkeletalMeshComponent* skeleton);
-	void SetMaterials(TArray<TObjectPtr<UMaterialInstanceDynamic>> newMaterialInstances);
+	void SetMaterials(const TArray<TObjectPtr<UMaterialInstanceDynamic>>& newMaterialInstances);
+	
+	// GAMEPLAY FUNCTIONS
+	bool CheckIfDead();
+	int GetHealthPoint();
+	int GetMaxHealthPoint();
 
-
-
-	DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FWeakpointReveal, AActor*, Character);
+	// EVENTS
+	DECLARE_DYNAMIC_MULTICAST_DELEGATE(FWeakpointReveal);
 	UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="Weakpoints Handler")
 	FWeakpointReveal OnWeakpointReveal;
 
-	DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FWeakpointHit,AActor*, Character, AActor*, Weakpoint);
+	DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FWeakpointHit, AActor*, Weakpoint);
 	UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="Weakpoints Handler")
 	FWeakpointHit OnWeakpointHit;
 		
-		
+	DECLARE_DYNAMIC_MULTICAST_DELEGATE(FDeath);
+	UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="Weakpoints Handler")
+	FDeath OnDeath;
 };

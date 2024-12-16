@@ -15,12 +15,24 @@ class REDBLOODSEA_API ADweller : public ACharacter
 public:
 	// Sets default values for this character's properties
 	ADweller();
+	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 
 private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta=(AllowPrivateAccess = "true"))
 	TObjectPtr<UWeakpointsManager> WeakpointsManager;
 	TArray<TObjectPtr<UMaterialInstanceDynamic>> MaterialInstances;
+
 	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess = "true"),Category="AI")
+	float FleetingDistanceFactor;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess = "true"),Category="AI")
+	float SafeDistance;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess = "true"),Category="AI")
+	float SightRadius;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess = "true"),Category="AI")
+	float PeripheralVisionAngle;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess = "true"),Category="Combat")
+	int EnemyDamage;
 protected:
 	// Called when the game starts or when spawned
 	//void OnConstruction(const FTransform &Transform) override;

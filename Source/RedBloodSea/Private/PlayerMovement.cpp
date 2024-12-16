@@ -84,7 +84,7 @@ void UPlayerMovement::OnNewMoveInput(FVector2D newMoveInput)
 		return;
 
 	// input is a Vector2D
-	PlayerData::CurrentMovementInput = newMoveInput;
+	PlayerData::CurrentMovementInput = newMoveInput * (PlayerData::CurrentPossessState != PlayerPossessState::None ? possessSpeedMultiplier : 1);
 
 	if (playerCharacter->GetInstigatorController() != nullptr)
 	{
@@ -125,7 +125,7 @@ void UPlayerMovement::OnDashInput()
 
 void UPlayerMovement::OnJumpInput(const bool isJumping)
 {
-	if (isJumping)
+	if (isJumping && PlayerData::CanJump())
 	{
 		playerCharacter->Jump();
 	}

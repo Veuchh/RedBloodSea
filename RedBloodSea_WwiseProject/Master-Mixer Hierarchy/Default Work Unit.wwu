@@ -11,6 +11,10 @@
 					</ReferenceList>
 					<ChildrenList>
 						<Bus Name="EnemyBus" ID="{BCC1ECC0-BA5A-45C2-A555-9454DB046120}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="23"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ObjectLists>
 								<ObjectList Name="RTPC">
 									<Reference>
@@ -52,6 +56,10 @@
 							</ObjectLists>
 						</Bus>
 						<Bus Name="PlayerBus" ID="{EBF9A5C4-2EDC-44FD-B726-7EE704405AC2}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="19"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Bus Name="PlayerFPS" ID="{7C1D7130-1612-4266-9222-83F5777F8F6A}">
 									<PropertyList>
@@ -103,6 +111,10 @@
 							</ObjectLists>
 						</Bus>
 						<Bus Name="AmbBus" ID="{F6B3D58E-CD74-4442-9F92-CEC55E4B6060}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ObjectLists>
 								<ObjectList Name="RTPC">
 									<Reference>
@@ -144,6 +156,10 @@
 							</ObjectLists>
 						</Bus>
 						<Bus Name="MusicBus" ID="{312533C2-F58C-4573-B394-B4A60FA6903B}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="1"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ObjectLists>
 								<ObjectList Name="RTPC">
 									<Reference>

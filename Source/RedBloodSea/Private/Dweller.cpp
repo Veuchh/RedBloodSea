@@ -8,15 +8,22 @@ ADweller::ADweller()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	WeakpointsManager = CreateDefaultSubobject<UWeakpointsManager>(TEXT("StaticMesh"));
+	WeakpointsManager = CreateDefaultSubobject<UWeakpointsManager>(TEXT("WeakpointManager"));
 	WeakpointsManager->SetSkeleton(GetMesh());
 	
 }
 
-// void AADweller::OnConstruction(const FTransform &Transform)
-// {
-//
-// }
+void ADweller::EndPlay(const EEndPlayReason::Type EndPlayReason)
+{
+	TArray<AActor*> ChildActors;
+	GetAttachedActors(ChildActors,true);
+	for (auto ChildActor : ChildActors)
+	{
+		ChildActor->Destroy();
+	}
+	Super::EndPlay(EndPlayReason);
+}
+
 
 // Called when the game starts or when spawned
 void ADweller::BeginPlay()

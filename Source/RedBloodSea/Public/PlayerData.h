@@ -1,7 +1,9 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "PlayerPossessState.h"
 #include "BufferableAttack.h"
+#include "PossessTarget.h"
 #include "PlayerAttackState.h"
 
 static class REDBLOODSEA_API PlayerData
@@ -31,19 +33,30 @@ public:
 	static float AttackStartTime;
 	static float NextAllowedInputBufferTime;
 	
-	//----------------------------------------------------------Slash
+	//-----------------------------------------------------------------------------------Slash
 	static float SlashAttackStartupDelay;
 	static float SlashAttackDuration;
 	static float SlashAttackCooldown;
 
-	//----------------------------------------------------------Thrust
+	//-----------------------------------------------------------------------------------Thrust
 	static float ThrustAttackStartupDelay;
 	static float ThrustAttackDuration;
 	static float ThrustAttackCooldown;
 
+	//-------------------------------------------Possession
+	static PlayerPossessState CurrentPossessState;
+	static float StartCameraMovementTime;
+	static float EndCameraMovementTime;
+	static UPossessTarget* CurrentPossessTarget;
+	
 	//-------------------------------------------Test methods for the player
 	static bool CanMove();
+	static bool CanJump();
+	static bool CanRotateCamera();
+	static bool CanAddAttackToBuffer();
 	static bool CanAttack();
 	static bool CanDash();
 	static bool CanGroundSlam();
+	static bool CanEnterPossessMode();
+	static bool CanUsePossess();
 };

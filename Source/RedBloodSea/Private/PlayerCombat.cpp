@@ -59,9 +59,7 @@ void UPlayerCombat::BeginPlay()
 
 	ToggleAttackCollider(BufferableAttack::Slash, false);
 	ToggleAttackCollider(BufferableAttack::Thrust, false);
-
-	PlayerData::MaxHPAmount = maxHPAmount;
-	PlayerData::CurrentHPAmount = maxHPAmount;
+	
 	PlayerData::MaxAttackBufferCapacity = maxAttackBufferCapacity;
 	PlayerData::SlashAttackStartupDelay = slashAttackStartupDelay;
 	PlayerData::SlashAttackDuration = slashAttackDuration;
@@ -160,24 +158,31 @@ void UPlayerCombat::OnSlashOverlap(UPrimitiveComponent* HitComp, AActor* OtherAc
 void UPlayerCombat::OnThrustOverlap(UPrimitiveComponent* HitComp, AActor* OtherActor)
 {
 	AActor* AttachedParent = OtherActor->GetAttachParentActor();
+	UWeakpointsManager* weakPointsManager = nullptr;;
 
-	//The environment was hit
-	if (!AttachedParent)
+	if (AttachedParent)
 	{
-		FOnThrustHitEnviro.Broadcast(OtherActor);
-		return;
+		weakPointsManager = AttachedParent->GetComponentByClass<UWeakpointsManager>();
 	}
 
-	UWeakpointsManager* weakPointsManager = AttachedParent->GetComponentByClass<UWeakpointsManager>();
-
-	if (!weakPointsManager)
-		return;
-
-	if (OtherActor->IsA(AWeakpoint::StaticClass()))
+	if (weakPointsManager && OtherActor->IsA(AWeakpoint::StaticClass()))
 	{
 		weakPointsManager->RemoveWeakpoint(Cast<AWeakpoint>(OtherActor));
 		OnThrustHitWeakpoint.Broadcast(Cast<AWeakpoint>(OtherActor));
 	}
+	else if (OtherActor->IsA(ADweller::StaticClass()))
+	{
+		OnThrustHitNoWeakpoint.Broadcast(OtherActor);
+	}
+	else
+	{
+		FOnThrustHitEnviro.Broadcast(OtherActor);
+	}
+}
+
+void UPlayerCombat::PlayerDeath()
+{
+	OnPlayerDeath.Broadcast();
 }
 
 
@@ -261,7 +266,8 @@ void UPlayerCombat::ToggleAttackCollider(BufferableAttack attack, bool isToggled
 
 void UPlayerCombat::TryAddAttackToBuffer(BufferableAttack attackToAdd)
 {
-	if (PlayerData::AttackBuffer.Num() >= PlayerData::MaxAttackBufferCapacity
+	if (!PlayerData::CanAddAttackToBuffer()
+		|| PlayerData::AttackBuffer.Num() >= PlayerData::MaxAttackBufferCapacity
 		|| PlayerData::NextAllowedInputBufferTime > UGameplayStatics::GetRealTimeSeconds(GetWorld()))
 		return;
 
@@ -280,13 +286,23 @@ void UPlayerCombat::OnThrustInput()
 	TryAddAttackToBuffer(BufferableAttack::Thrust);
 }
 
-void UPlayerCombat::OnPossessInput()
-{
-}
-
 void UPlayerCombat::DamagePlayer(int damageAmount)
 {
 	PlayerData::CurrentHPAmount -= damageAmount;
+	OnPlayerHit.Broadcast(PlayerData::CurrentHPAmount);
 
-	OnPlayerHit.Broadcast((float)PlayerData::CurrentHPAmount/PlayerData::MaxHPAmount);
+	if (PlayerData::CurrentHPAmount > 0)
+	{
+		UWeakpointsManager* wpManager = PlayerData::CurrentPossessTarget->GetOwner()->GetComponentByClass<
+			UWeakpointsManager>();
+
+		if (wpManager)
+		{
+			wpManager->RemoveWeakpoint(wpManager->GetRandomAliveWeakPoint());
+		}
+	}
+	else
+	{
+		PlayerDeath();
+	}
 }

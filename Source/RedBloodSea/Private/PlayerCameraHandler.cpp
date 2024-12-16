@@ -48,7 +48,7 @@ void UPlayerCameraHandler::SetupPlayerCameraComponent(ACharacter* PlayerCharacte
 
 void UPlayerCameraHandler::OnLookInput(const FVector2D newLookInput)
 {
-	if (playerCharacter->Controller != nullptr)
+	if (PlayerData::CanRotateCamera() && playerCharacter->Controller != nullptr)
 	{
 		// add yaw and pitch input to controller
 		playerCharacter->AddControllerYawInput(newLookInput.X);

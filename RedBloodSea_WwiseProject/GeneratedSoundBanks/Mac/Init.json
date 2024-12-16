@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{EFA8A578-A13E-EFA8-C08E-EDAE15B32C14}",
+    "Hash": "{051E3057-D217-9B47-63AF-0A24710E42B3}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -115,6 +115,12 @@
       "GUID": "{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}"
      },
      {
+      "Id": "876333639",
+      "Name": "rtpc_tapestop",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_tapestop",
+      "GUID": "{34AB8051-BDEC-4FCF-A5A6-D129BA29D38F}"
+     },
+     {
       "Id": "2332098030",
       "Name": "rtpc_enemy_bus",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\Settings\\BUS\\rtpc_enemy_bus",
@@ -170,6 +176,32 @@
      }
     ],
     "StateGroups": [
+     {
+      "Id": "459395562",
+      "Name": "state_aim",
+      "ObjectPath": "\\States\\Default Work Unit\\state_aim",
+      "GUID": "{B36EB626-1B96-4D45-9487-0F8FDC6A68DD}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\state_aim\\None",
+        "GUID": "{5874B239-37B2-4C50-9175-951DEAE60EF8}"
+       },
+       {
+        "Id": "1907628164",
+        "Name": "aiming",
+        "ObjectPath": "\\States\\Default Work Unit\\state_aim\\aiming",
+        "GUID": "{4001CF9D-6974-45C4-A4E1-ADC83295A9E1}"
+       },
+       {
+        "Id": "2165664365",
+        "Name": "notaiming",
+        "ObjectPath": "\\States\\Default Work Unit\\state_aim\\notaiming",
+        "GUID": "{AD4DA154-B560-453D-8C38-7A73B45B33AF}"
+       }
+      ]
+     },
      {
       "Id": "1203368309",
       "Name": "state_game",
@@ -395,6 +427,6 @@
     ]
    }
   ],
-  "FileHash": "{AC592D8E-8542-4B0A-1C09-1C1EC090D6C8}"
+  "FileHash": "{18CCDE8B-FDDB-5FEF-D766-55E500CF67AC}"
  }
 }

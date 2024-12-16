@@ -25,3 +25,11 @@ void AWaveSpawnManager::Tick(float DeltaTime)
 
 }
 
+void AWaveSpawnManager::StartSpawningWaves()
+{
+}
+
+void AWaveSpawnManager::SpawnWave(int WaveNumber)
+{
+}
+

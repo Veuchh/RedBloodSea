@@ -22,8 +22,8 @@ USTRUCT(BlueprintType)
 struct FDwellerWave
 {
 	GENERATED_BODY()
-	UPROPERTY(EditAnywhere)
-	TMap<FDwellerType,int> DwellerCount;
+	// UPROPERTY(EditAnywhere)
+	// TMap<FDwellerType,int> DwellerCount;
 }; UMETA(DisplayName="Wave")
 
 /**

@@ -21,16 +21,15 @@ void UPlayerPossess::SetupPlayerPossessComponent(ACharacter* Character,
 {
 	character = Character;
 	camera = CameraComponent;
+	dwellerLinkSU = UGameplayStatics::GetGameInstance(GetWorld())->GetSubsystem<UDwellerLinkSubsystem>();
 
 	//We spawn a default enemy for the player to possess
-
 	FVector Location = GetOwner()->GetActorLocation();
 	FRotator Rotation = GetOwner()->GetActorRotation();
 	FActorSpawnParameters SpawnInfo;
 	ADweller* newDwellerInstance = GetWorld()->SpawnActor<ADweller>(dwellerBP, Location, Rotation, SpawnInfo);
 
 	PlayerData::CurrentPossessTarget = newDwellerInstance->GetComponentByClass<UPossessTarget>();
-	dwellerLinkSU = UGameplayStatics::GetGameInstance(GetWorld())->GetSubsystem<UDwellerLinkSubsystem>();
 	PossessDweller();
 	UpdatePlayerHealth();
 }
@@ -71,14 +70,12 @@ void UPlayerPossess::UpdatePlayerHealth()
 {
 	UWeakpointsManager* wpManager = PlayerData::CurrentPossessTarget->GetOwner()->GetComponentByClass<
 		UWeakpointsManager>();
-		
+
 	if (wpManager)
 	{
 		PlayerData::CurrentHPAmount = wpManager->GetHealthPoint();
 		PlayerData::MaxHPAmount = wpManager->GetMaxHealthPoint();
 	}
-	
-	PossessDweller();
 
 	//Update UI for HP
 	OnUpdateHPDisplay.Broadcast(PlayerData::CurrentHPAmount, PlayerData::MaxHPAmount);
@@ -108,6 +105,8 @@ void UPlayerPossess::CameraZoomTick()
 		character->SetActorLocation(PlayerData::CurrentPossessTarget->GetOwner()->GetActorLocation());
 
 		UpdatePlayerHealth();
+
+		PossessDweller();
 
 		TogglePlayer(true);
 		OnPossessRecovery.Broadcast();
@@ -172,6 +171,7 @@ void UPlayerPossess::PossessRecoveryTick()
 
 void UPlayerPossess::PossessDweller()
 {
+	GEngine->AddOnScreenDebugMessage(-1, 5, FColor::Purple, "PossessDweller");
 	PlayerData::CurrentPossessTarget->Possess();
 	dwellerLinkSU->AddDwellerToLink(PlayerData::CurrentPossessTarget);
 }
@@ -183,9 +183,9 @@ void UPlayerPossess::TickComponent(float DeltaTime, ELevelTick TickType, FActorC
 	DebugState();
 
 	AimModeToggling();
-	
+
 	dwellerLinkSU->UpdateLinkGFX(GetOwner()->GetActorLocation());
-	
+
 	//We only cover states that have "waiting for cooldown" logic (not those waiting for a player input)
 	switch (PlayerData::CurrentPossessState)
 	{

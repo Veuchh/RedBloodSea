@@ -6,6 +6,7 @@
 #include "Camera/CameraComponent.h"
 #include "Components/ActorComponent.h"
 #include "Dweller.h"
+#include "DwellerLinkSubsystem.h"
 #include "PlayerPossess.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnUpdateHPDisplay, int, newCurrentHP, int, newMaxHP);
@@ -59,6 +60,7 @@ private:
 	FVector startPossessPosition;
 	FVector endPossessPosition;
 	UPossessTarget* targetToUnpossess;
+	UDwellerLinkSubsystem* dwellerLinkSU;
 
 	void AimModeToggling();
 	void TogglePlayer(bool isToggled) const;
@@ -77,6 +79,7 @@ public:
 	                           FActorComponentTickFunction* ThisTickFunction) override;
 	// Sets default values for this component's properties
 	UPlayerPossess();
+	void PossessDweller();
 	void SetupPlayerPossessComponent(ACharacter* RedBloodSeaCharacter, UCameraComponent* CameraComponent);
 	void OnPossessModeInput(bool isToggled);
 	void OnPossessInput();

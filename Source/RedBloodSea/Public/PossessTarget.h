@@ -6,6 +6,7 @@
 #include "Components/ActorComponent.h"
 #include "PossessTarget.generated.h"
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPossessed);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnLinked);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnUnpossessed, FVector, RepositionEnemyAtPosition);
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
@@ -26,11 +27,14 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 	void Possess();
 	void Unpossess(FVector repositionEnemyAtPosition);
-	
+	void Link();
+
 	UPROPERTY(BlueprintAssignable, Category = "Possess")
 	FOnPossessed OnPossessed;
 	UPROPERTY(BlueprintAssignable, Category = "Possess")
 	FOnUnpossessed OnUnpossessed;
+	UPROPERTY(BlueprintAssignable, Category = "Possess")
+	FOnLinked OnLinked;
 
 	/*The duration, in seconds, the player has to wait before having control of the character again after camera zoom. This corresponds to the sword pull out animation*/
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Ground Slam")

@@ -42,3 +42,8 @@ void UPossessTarget::Unpossess(FVector repositionEnemyAtPosition)
 	OnUnpossessed.Broadcast(repositionEnemyAtPosition);
 }
 
+void UPossessTarget::Link()
+{
+	OnLinked.Broadcast();
+}
+

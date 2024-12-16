@@ -23,6 +23,7 @@ public:
 	UPROPERTY(EditAnywhere,BlueprintReadWrite)
 	int possessCount;
 
+
 	UFUNCTION()
 	void GetKillPercent();
 

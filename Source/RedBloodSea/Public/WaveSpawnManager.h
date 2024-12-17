@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Dweller.h"
 #include "WavesData.h"
 #include "GameFramework/Actor.h"
 #include "WaveSpawnManager.generated.h"
@@ -17,9 +18,23 @@ public:
 	AWaveSpawnManager();
 
 private:
-	UPROPERTY(EditAnywhere,BlueprintReadWrite,meta=(AllowPrivateAccess = "true"))
+	UPROPERTY(EditAnywhere,BlueprintReadWrite,meta=(AllowPrivateAccess = "true"),Category="DwellerSpawners")
 	TObjectPtr<UWavesData> WavesData;
+	UPROPERTY(VisibleAnywhere,BlueprintReadOnly,meta=(AllowPrivateAccess = "true"),EditFixedSize,Category="DwellerSpawners")
+	TArray<AActor*> Spawners;
+	//UPROPERTY(VisibleAnywhere,BlueprintReadOnly,meta=(AllowPrivateAccess = "true"),EditFixedSize,Category="DwellerSpawners")
+	TQueue<FDwellerProfile,EQueueMode::Spsc> SpawnQueue;
+	UPROPERTY(VisibleAnywhere,BlueprintReadOnly,meta=(AllowPrivateAccess = "true"),EditFixedSize,Category="DwellerSpawners")
+	TArray<ADweller*> AliveDwellers;
+	UPROPERTY(EditAnywhere,BlueprintReadWrite,meta=(AllowPrivateAccess = "true",ClampMin=1),EditFixedSize,Category="DwellerSpawners")
+	int SpawnPerTick = 1;
+	UPROPERTY(EditAnywhere,BlueprintReadWrite,meta=(AllowPrivateAccess = "true",ClampMin=1),EditFixedSize,Category="DwellerSpawners")
+	int MaxAliveDweller = 10;
+	UPROPERTY(VisibleAnywhere,BlueprintReadOnly,meta=(AllowPrivateAccess = "true"),EditFixedSize,Category="DwellerSpawners")
+	int CurrentWave;
 
+	bool bIsActive = false;
+	
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -27,11 +42,30 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-	void StartSpawningWaves();
-	void SpawnWave(int WaveNumber);
+	UFUNCTION(BlueprintCallable)
+	void SpawnStart();
+	void SpawnStop();
+	void SpawnPause();
+	void SpawnResume();
+	void SpawnReset();
+	void QueueWave(int WaveNumber);
+	void SpawnDweller(FDwellerProfile Type);
 
+	UFUNCTION()
+	void OnDwellerDeath(AActor* DwellerActor);
 
+#if WITH_EDITOR
+	//Editor functions
+private:
+	UFUNCTION(CallInEditor,Category="DwellerSpawners")
+	void CreateSpawner();
+	UFUNCTION(CallInEditor,Category="DwellerSpawners")
+	void ClearSpawners();
+#endif
 
+	
+public:
+	//EVENTS
 	DECLARE_DYNAMIC_MULTICAST_DELEGATE(FLevelStart);
 	FLevelStart OnLevelStart;
 	DECLARE_DYNAMIC_MULTICAST_DELEGATE(FLevelEnd);

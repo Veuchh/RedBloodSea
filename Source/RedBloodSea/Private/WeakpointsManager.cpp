@@ -180,7 +180,7 @@ void UWeakpointsManager::RemoveWeakpoint(AWeakpoint* weakpoint, bool canDestroyH
 	OnWeakpointHit.Broadcast(weakpoint);
 	if(CheckIfDead())
 	{
-		OnDeath.Broadcast();
+		OnDeath.Broadcast(Owner);
 		CountSubSys->OnKill.Broadcast();
 		Owner->Destroy();
 	}

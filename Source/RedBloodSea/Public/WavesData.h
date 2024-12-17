@@ -9,21 +9,23 @@
 
 
 USTRUCT(BlueprintType)
-struct FDwellerType
+struct FDwellerProfile
 {
 	GENERATED_BODY()
-	UPROPERTY(EditAnywhere, Category="Weakpoints Handler",meta=(Bitmask,BitmaskEnum = EWeakpointType))
+	UPROPERTY(EditAnywhere,meta=(Bitmask,BitmaskEnum = EWeakpointType))
 	uint8 TypeFilter;
-	UPROPERTY(EditAnywhere, Category="Weakpoints Handler",meta=(ArraySizeEnum="EWeakpointSize"))
+	UPROPERTY(EditAnywhere,meta=(ArraySizeEnum="EWeakpointSize"))
 	int SizeNumber[static_cast<int>(EWeakpointSize::NUM)];
+	UPROPERTY(EditAnywhere)
+	bool bIsAntagonist = false;
 }; UMETA(DisplayName="Wave")
 
 USTRUCT(BlueprintType)
 struct FDwellerWave
 {
 	GENERATED_BODY()
-	// UPROPERTY(EditAnywhere)
-	// TMap<FDwellerType,int> DwellerCount;
+	UPROPERTY(EditAnywhere)
+	TArray<FDwellerProfile> DwellerProfiles;
 }; UMETA(DisplayName="Wave")
 
 /**
@@ -33,5 +35,12 @@ UCLASS()
 class REDBLOODSEA_API UWavesData : public UDataAsset
 {
 	GENERATED_BODY()
+public:
+	UPROPERTY(EditAnywhere)
+	const TObjectPtr<UClass> SpawnerBP;
+	UPROPERTY(EditAnywhere)
+	const TObjectPtr<UClass> DwellerBP;
+	UPROPERTY(EditAnywhere)
+	TArray<FDwellerWave> Waves;
 	
 };

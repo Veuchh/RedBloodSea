@@ -60,8 +60,3 @@ void ADweller::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 }
 
-TObjectPtr<UWeakpointsManager> ADweller::GetWeakpointManager()
-{
-	return WeakpointsManager;
-}
-

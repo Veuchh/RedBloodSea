@@ -13,7 +13,7 @@ struct FDwellerProfile
 {
 	GENERATED_BODY()
 	UPROPERTY(EditAnywhere,meta=(Bitmask,BitmaskEnum = EWeakpointType))
-	uint8 TypeFilter;
+	uint8 TypeFilter = static_cast<int>(EWeakpointType::HEAD) | static_cast<int>(EWeakpointType::ARMS) | static_cast<int>(EWeakpointType::LEGS) | static_cast<int>(EWeakpointType::TORSO);
 	UPROPERTY(EditAnywhere,meta=(ArraySizeEnum="EWeakpointSize"))
 	int SizeNumber[static_cast<int>(EWeakpointSize::NUM)];
 	UPROPERTY(EditAnywhere)

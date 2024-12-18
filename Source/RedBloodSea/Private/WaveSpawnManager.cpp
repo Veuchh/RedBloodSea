@@ -26,25 +26,32 @@ void AWaveSpawnManager::BeginPlay()
 void AWaveSpawnManager::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	if(SpawnQueue.IsEmpty() || AliveDwellers.Num()>=MaxAliveDweller || !bIsActive)
-		return;
-	for(int i = 0; i < SpawnPerTick; i++)
+	if(!SpawnQueue.IsEmpty())
 	{
-		if(SpawnQueue.IsEmpty() || AliveDwellers.Num()>=MaxAliveDweller)
-			break;
+		for(int i = 0; i < SpawnPerTick; i++)
+		{
+			if(SpawnQueue.IsEmpty() || AliveDwellers.Num()>=MaxAliveDweller)
+				break;
 		
-		FDwellerProfile Type;
-		SpawnQueue.Dequeue(Type);
-		SpawnDweller(Type);
+			FDwellerProfile Type;
+			SpawnQueue.Dequeue(Type);
+			SpawnDweller(Type);
+		}
 	}
 
 	if(SpawnQueue.IsEmpty())
 	{
-		if(CurrentWave < WavesData->Waves.Num()-1)
-			QueueWave(++CurrentWave);
-		else if(AliveDwellers.IsEmpty())
+		if(AliveDwellers.IsEmpty() && bIsActive)
 		{
+			if(CurrentWave < WavesData->Waves.Num()-1)
+			{
+				QueueWave(++CurrentWave);
+				return;
+			}
 			//TODO End level here
+			bIsActive = false;
+			if(GEngine)
+				GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Level End: All enemies are dead or linked"));
 		}
 	}
 }
@@ -52,27 +59,33 @@ void AWaveSpawnManager::Tick(float DeltaTime)
 void AWaveSpawnManager::SpawnStart()
 {
 	bIsActive = true;
+	SetActorTickEnabled(true);
 	QueueWave(0);
 }
 
 void AWaveSpawnManager::SpawnStop()
 {
 	bIsActive = false;
+	SetActorTickEnabled(false);
 	SpawnReset();
 }
 
 void AWaveSpawnManager::SpawnPause()
 {
 	bIsActive = false;
+	SetActorTickEnabled(false);
 }
 
 void AWaveSpawnManager::SpawnResume()
 {
 	bIsActive = true;
+	SetActorTickEnabled(true);
 }
 
 void AWaveSpawnManager::SpawnReset()
 {
+	bIsActive = false;
+	SetActorTickEnabled(false);
 	SpawnQueue.Empty();
 	CurrentWave = 0;
 	for (auto Dweller : AliveDwellers)
@@ -96,6 +109,7 @@ void AWaveSpawnManager::QueueWave(int WaveNumber)
 void AWaveSpawnManager::SpawnDweller(FDwellerProfile Type)
 {
 	FTransform Transform = GetActorTransform();
+	//TODO use EQS to get random valid position on the navmesh instead
 	if(Spawners.Num() > 0)
 	{
 		int randomInt = FMath::RandRange(0, Spawners.Num() - 1);

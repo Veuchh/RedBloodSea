@@ -74,7 +74,7 @@ public:
 	UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="Weakpoints Handler")
 	FWeakpointHit OnWeakpointHit;
 		
-	DECLARE_DYNAMIC_MULTICAST_DELEGATE(FDeath);
+	DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FDeath, AActor*, Dweller);
 	UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="Weakpoints Handler")
 	FDeath OnDeath;
 };

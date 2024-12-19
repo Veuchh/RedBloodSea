@@ -3,8 +3,6 @@
 
 #include "WaveSpawnManager.h"
 
-#include "K2Node_GetSubsystem.h"
-
 
 // Sets default values
 AWaveSpawnManager::AWaveSpawnManager()

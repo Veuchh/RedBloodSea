@@ -16,6 +16,7 @@ public:
 	// Sets default values for this character's properties
 	ADweller();
 	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
+	UWeakpointsManager* GetWeakpointManager();
 
 private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta=(AllowPrivateAccess = "true"))
@@ -44,7 +45,5 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
-	TObjectPtr<UWeakpointsManager> GetWeakpointManager();
 
 };

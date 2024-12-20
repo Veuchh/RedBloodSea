@@ -26,15 +26,16 @@ public:
 	uint8 TypeFilter;
 	UPROPERTY(EditAnywhere, Category="Weakpoints Handler",meta=(ArraySizeEnum="EWeakpointSize"))
 	int SizeNumber[static_cast<int>(EWeakpointSize::NUM)];
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Weakpoints Handler",EditFixedSize)
-	TArray<FName> UsedWeakpointsSocketsNames;
+	//UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Weakpoints Handler",EditFixedSize)
+	//TArray<FName> UsedWeakpointsSocketsNames;
 
 private:
 	AActor* Owner;
 	TObjectPtr<UCountLevelInstanceSubsystem> CountSubSys;
 	TObjectPtr<USkeletalMeshComponent> Skeleton;
 	TArray<TObjectPtr<UMaterialInstanceDynamic>> MaterialInstances;
-	TArray<TObjectPtr<AWeakpoint>> Weakpoints;
+	UPROPERTY(VisibleAnywhere, Category="Weakpoints Handler",EditFixedSize,meta = (AllowPrivateAccess = "true"))
+	TMap<FName,TObjectPtr<AWeakpoint>> Weakpoints;
 	int HealthPoint;
 	int MaxHealthPoint;
 	
@@ -74,7 +75,7 @@ public:
 	UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="Weakpoints Handler")
 	FWeakpointHit OnWeakpointHit;
 		
-	DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FDeath, AActor*, Dweller);
+	DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FDeath,AActor*,Dweller);
 	UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="Weakpoints Handler")
 	FDeath OnDeath;
 };

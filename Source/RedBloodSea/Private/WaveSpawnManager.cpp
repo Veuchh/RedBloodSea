@@ -59,6 +59,8 @@ void AWaveSpawnManager::SpawnStart()
 	bIsActive = true;
 	SetActorTickEnabled(true);
 	QueueWave(0);
+	if(GEngine)
+		GEngine->AddOnScreenDebugMessage(-1, 1.f, FColor::Yellow, TEXT("Start Spawning Dwellers"));
 }
 
 void AWaveSpawnManager::SpawnStop()
@@ -130,6 +132,8 @@ void AWaveSpawnManager::SpawnDweller(FDwellerProfile Type)
 		
 	}
 	newDweller->FinishSpawning(Transform);
+	if(GEngine)
+		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Spawning a Dweller"));
 }
 
 void AWaveSpawnManager::OnDwellerDeath(AActor* DwellerActor)

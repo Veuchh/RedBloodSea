@@ -24,6 +24,11 @@ void ADweller::EndPlay(const EEndPlayReason::Type EndPlayReason)
 	Super::EndPlay(EndPlayReason);
 }
 
+UWeakpointsManager* ADweller::GetWeakpointManager()
+{
+	return WeakpointsManager;
+}
+
 
 // Called when the game starts or when spawned
 void ADweller::BeginPlay()
@@ -58,10 +63,5 @@ void ADweller::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
-}
-
-TObjectPtr<UWeakpointsManager> ADweller::GetWeakpointManager()
-{
-	return WeakpointsManager;
 }
 

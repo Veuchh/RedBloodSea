@@ -44,9 +44,13 @@ public:
 	virtual void Tick(float DeltaTime) override;
 	UFUNCTION(BlueprintCallable)
 	void SpawnStart();
+	UFUNCTION(BlueprintCallable)
 	void SpawnStop();
+	UFUNCTION(BlueprintCallable)
 	void SpawnPause();
+	UFUNCTION(BlueprintCallable)
 	void SpawnResume();
+	UFUNCTION(BlueprintCallable)
 	void SpawnReset();
 	void QueueWave(int WaveNumber);
 	void SpawnDweller(FDwellerProfile Type);

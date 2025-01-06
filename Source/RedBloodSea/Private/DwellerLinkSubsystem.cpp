@@ -26,11 +26,6 @@ void UDwellerLinkSubsystem::UpdateLinkGFX(FVector currentPlayerPosition)
 {
 	for (int i = 0; i < dwellersInLink.Num() - 2; i++)
 	{
-		// if (dwellersInLink[i + 1] == nullptr)
-		// {
-		// 	dwellersInLink.RemoveAt(i + 1);
-		// 	continue;
-		// }
 		FVector startPos = dwellersInLink[i]->GetOwner()->GetActorLocation();
 		FVector endPos = dwellersInLink[i + 1]->GetOwner()->GetActorLocation();;
 		DrawDebugLine(GetWorld(), startPos, endPos, FColor::Yellow);

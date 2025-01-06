@@ -26,5 +26,5 @@ public:
 	void ResetLink();
 	void UpdateLinkGFX(FVector currentPlayerPosition);
 	void AddDwellerToLink(UPossessTarget* dweller);
-	void OnDwellerKilled(UPossessTarget* dweller);
+	void OnDwellerKilled(UPossessTarget* killedDweller);
 };

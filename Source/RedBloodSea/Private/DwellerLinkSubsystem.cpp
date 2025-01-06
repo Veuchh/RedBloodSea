@@ -83,7 +83,11 @@ void UDwellerLinkSubsystem::AddDwellerToLink(UPossessTarget* dweller)
 	}
 }
 
-void UDwellerLinkSubsystem::OnDwellerKilled(UPossessTarget* dweller)
+void UDwellerLinkSubsystem::OnDwellerKilled(UPossessTarget* killedDweller)
 {
 	//If dweller is in list, break link
+	if (dwellersInLink.Contains(killedDweller))
+	{
+		ResetLink();
+	}
 }

@@ -184,7 +184,7 @@ void UPlayerPossess::TickComponent(float DeltaTime, ELevelTick TickType, FActorC
 
 	AimModeToggling();
 
-	dwellerLinkSU->UpdateLinkGFX(GetOwner()->GetActorLocation());
+	//dwellerLinkSU->UpdateLinkGFX(GetOwner()->GetActorLocation());
 
 	//We only cover states that have "waiting for cooldown" logic (not those waiting for a player input)
 	switch (PlayerData::CurrentPossessState)

@@ -47,6 +47,7 @@ void UDwellerLinkSubsystem::AddDwellerToLink(UPossessTarget* dweller)
 	bool resetListAtTheEnd = false;
 	if (dwellersInLink.Contains(dweller))
 	{
+		//This is the case where we possess the last possessed ennemy
 		if (dwellersInLink.Num() > 1 && dwellersInLink[dwellersInLink.Num() - 2] == dweller)
 		{
 			GEngine->AddOnScreenDebugMessage(-1, 5, FColor::Red, "Should break link");
@@ -57,8 +58,10 @@ void UDwellerLinkSubsystem::AddDwellerToLink(UPossessTarget* dweller)
 		{
 			GEngine->AddOnScreenDebugMessage(-1, 5, FColor::Red, "Should initiate link");
 
+			//Linking all dwellers
 			for (int i = dwellersInLink.Num() - 1; i >= 0; i--)
 			{
+				//Except the one we are currently possessing
 				if (dwellersInLink[i] == dweller)
 				{
 					break;
@@ -73,6 +76,7 @@ void UDwellerLinkSubsystem::AddDwellerToLink(UPossessTarget* dweller)
 
 	GEngine->AddOnScreenDebugMessage(-1, 5, FColor::Red, "Adding dweller to link list");
 	dwellersInLink.Add(dweller);
+	
 	if (resetListAtTheEnd)
 	{
 		ResetLink();

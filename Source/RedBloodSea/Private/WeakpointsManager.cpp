@@ -188,7 +188,7 @@ if(possessTarget)
 }
 		OnDeath.Broadcast(Owner);
 		CountSubSys->OnKill.Broadcast();
-		Owner->Destroy();
+		//Owner->Destroy();
 	}
 }
 

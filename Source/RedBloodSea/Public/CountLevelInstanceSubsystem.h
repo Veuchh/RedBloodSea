@@ -10,7 +10,7 @@
  * 
  */
 UCLASS()
-class REDBLOODSEA_API UCountLevelInstanceSubsystem : public ULevelInstanceSubsystem
+class REDBLOODSEA_API UCountLevelInstanceSubsystem : public UGameInstanceSubsystem
 {
 	GENERATED_BODY()
 public:

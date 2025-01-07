@@ -33,6 +33,7 @@ private:
 	AActor* Owner;
 	TObjectPtr<UCountLevelInstanceSubsystem> CountSubSys;
 	TObjectPtr<USkeletalMeshComponent> Skeleton;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Weakpoints Handler", EditFixedSize, meta = (AllowPrivateAccess = "true"))
 	TArray<TObjectPtr<UMaterialInstanceDynamic>> MaterialInstances;
 	UPROPERTY(VisibleAnywhere, Category="Weakpoints Handler",EditFixedSize,meta = (AllowPrivateAccess = "true"))
 	TMap<FName,TObjectPtr<AWeakpoint>> Weakpoints;

@@ -10,7 +10,7 @@
  * 
  */
 UCLASS()
-class REDBLOODSEA_API UCountLevelInstanceSubsystem : public ULevelInstanceSubsystem
+class REDBLOODSEA_API UCountLevelInstanceSubsystem : public UGameInstanceSubsystem
 {
 	GENERATED_BODY()
 public:
@@ -39,8 +39,11 @@ public:
 	UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="Count")
 	FCountChange OnCountChange;
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	void AddKill();
 	UFUNCTION()
 	void AddLinked(int count);
+
+	UFUNCTION(BlueprintCallable)
+	void ResetAll();
 };

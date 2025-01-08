@@ -44,9 +44,13 @@ public:
 	virtual void Tick(float DeltaTime) override;
 	UFUNCTION(BlueprintCallable)
 	void SpawnStart();
+	UFUNCTION(BlueprintCallable)
 	void SpawnStop();
+	UFUNCTION(BlueprintCallable)
 	void SpawnPause();
+	UFUNCTION(BlueprintCallable)
 	void SpawnResume();
+	UFUNCTION(BlueprintCallable)
 	void SpawnReset();
 	void QueueWave(int WaveNumber);
 	void SpawnDweller(FDwellerProfile Type);
@@ -67,11 +71,15 @@ private:
 public:
 	//EVENTS
 	DECLARE_DYNAMIC_MULTICAST_DELEGATE(FLevelStart);
+	UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="SpawnerEvents")
 	FLevelStart OnLevelStart;
 	DECLARE_DYNAMIC_MULTICAST_DELEGATE(FLevelEnd);
+	UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="SpawnerEvents")
 	FLevelEnd OnLevelEnd;
 	DECLARE_DYNAMIC_MULTICAST_DELEGATE(FWaveStart);
+	UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="SpawnerEvents")
 	FWaveStart OnWaveStart;
 	DECLARE_DYNAMIC_MULTICAST_DELEGATE(FWaveEnd);
+	UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="SpawnerEvents")
 	FWaveEnd OnWaveEnd;
 };

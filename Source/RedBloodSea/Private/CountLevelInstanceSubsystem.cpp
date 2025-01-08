@@ -35,3 +35,9 @@ void UCountLevelInstanceSubsystem::AddLinked(int count)
 	GetKillPercent();
 }
 
+void UCountLevelInstanceSubsystem::ResetAll()
+{
+	possessCount = 0;
+	killCount = 0;
+}
+

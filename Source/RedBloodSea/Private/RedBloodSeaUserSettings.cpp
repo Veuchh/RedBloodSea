@@ -5,11 +5,11 @@
 
 URedBloodSeaUserSettings::URedBloodSeaUserSettings(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
 {
-	Fullscreen = false;
-	Resolution = 0;
+	Fullscreen = true;
+	Resolution = EScreenResolution::Option1;
 	Quality = 0;
-	Brightness = 0;
-	Contrast = 0;
+	Brightness = 2.2f;
+	Contrast = 1.0f;
 	HorizontalSensitivity = 1;
 	VerticalSensitivity = 1;
 	MotionBlur = 1;
@@ -44,9 +44,38 @@ bool URedBloodSeaUserSettings::GetDefaultFullscreen()
 	return true;
 }
 
-int URedBloodSeaUserSettings::GetDefaultRBSResolution()
+void URedBloodSeaUserSettings::SetFullscreen(bool value)
 {
-	return 0;
+	switch (value)
+	{
+		case true: SetFullscreenMode(EWindowMode::Fullscreen);
+		break;
+		case false: SetFullscreenMode(EWindowMode::Windowed); break;
+	}
+	Fullscreen = value;
+}
+
+EScreenResolution URedBloodSeaUserSettings::GetDefaultRBSResolution()
+{
+	return EScreenResolution::Option1;
+}
+
+void URedBloodSeaUserSettings::SetRBSResolution(EScreenResolution value)
+{
+	switch (value)
+	{
+		case EScreenResolution::Option1: SetScreenResolution(FIntPoint(1920, 1080));
+		case EScreenResolution::Option2: SetScreenResolution(FIntPoint(2560, 1440));
+		case EScreenResolution::Option3: SetScreenResolution(FIntPoint(1366, 768));
+		case EScreenResolution::Option4: SetScreenResolution(FIntPoint(1280, 720));
+		case EScreenResolution::Option5: SetScreenResolution(FIntPoint(1920, 1200));
+		case EScreenResolution::Option6: SetScreenResolution(FIntPoint(1680, 1050));
+		case EScreenResolution::Option7: SetScreenResolution(FIntPoint(1440, 900));
+		case EScreenResolution::Option8: SetScreenResolution(FIntPoint(1280, 800));
+		case EScreenResolution::Option9: SetScreenResolution(FIntPoint(1024, 768));
+		case EScreenResolution::Option10: SetScreenResolution(FIntPoint(800, 600));
+		case EScreenResolution::Option11: SetScreenResolution(FIntPoint(640, 480));
+	}
 }
 
 int URedBloodSeaUserSettings::GetDefaultQuality()
@@ -73,16 +102,8 @@ void URedBloodSeaUserSettings::SetGraphicsSettingsToDefaults()
 	Contrast = GetDefaultContrast();
 
 
-	if (Fullscreen) {
-		SetFullscreenMode(EWindowMode::Fullscreen);
-	}
-	else {
-		SetFullscreenMode(EWindowMode::WindowedFullscreen);
-	}
-	
-	switch (Resolution) {
-	case 0: SetScreenResolution(FIntPoint(1920, 1080));
-	}
+	SetFullscreen(Fullscreen);
+	SetRBSResolution(Resolution);
 
 	//Quality Setting Missing !!!
 

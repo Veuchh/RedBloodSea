@@ -21,6 +21,7 @@ public:
 private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta=(AllowPrivateAccess = "true"))
 	TObjectPtr<UWeakpointsManager> WeakpointsManager;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess = "true"),EditFixedSize)
 	TArray<TObjectPtr<UMaterialInstanceDynamic>> MaterialInstances;
 
 	

@@ -132,8 +132,8 @@ void AWaveSpawnManager::SpawnDweller(FDwellerProfile Type)
 		
 	}
 	newDweller->FinishSpawning(Transform);
-	if(GEngine)
-		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Spawning a Dweller"));
+	//if(GEngine)
+	//	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Spawning a Dweller"));
 }
 
 void AWaveSpawnManager::OnDwellerDeath(AActor* DwellerActor)

@@ -4,16 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameUserSettings.h"
+#include "ScreenResolutionEnum.h"
 #include "RedBloodSeaUserSettings.generated.h"
-
-UENUM(BlueprintType)
-namespace EResolutions
-{
-	enum Type : int 
-	{
-		Native
-	};
-}
 
 UENUM(BlueprintType)
 namespace EGraphicsQuality
@@ -43,11 +35,17 @@ class REDBLOODSEA_API URedBloodSeaUserSettings : public UGameUserSettings
 	UFUNCTION(BlueprintCallable)
 	bool GetDefaultFullscreen();
 
+	UFUNCTION(BlueprintCallable)
+	void SetFullscreen(bool value);
+	
 	UPROPERTY(Config, BlueprintReadWrite)
-	int Resolution;
+	EScreenResolution Resolution;
 
 	UFUNCTION(BlueprintCallable)
-	int GetDefaultRBSResolution();
+	EScreenResolution GetDefaultRBSResolution();
+
+	UFUNCTION(BlueprintCallable)
+	void SetRBSResolution(EScreenResolution value);
 
 	UPROPERTY(Config, BlueprintReadWrite)
 	int Quality;

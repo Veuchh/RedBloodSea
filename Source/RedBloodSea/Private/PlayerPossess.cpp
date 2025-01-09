@@ -16,13 +16,14 @@ UPlayerPossess::UPlayerPossess()
 	PrimaryComponentTick.bCanEverTick = true;
 }
 
+
 void UPlayerPossess::SetupPlayerPossessComponent(ACharacter* Character,
                                                  UCameraComponent* CameraComponent)
 {
 	character = Character;
 	camera = CameraComponent;
 	dwellerLinkSU = UGameplayStatics::GetGameInstance(GetWorld())->GetSubsystem<UDwellerLinkSubsystem>();
-
+	dwellerLinkSU->SetupSubsystem(GetOwner(), splineLinkVFXReference);
 	//We spawn a default enemy for the player to possess
 	FVector Location = GetOwner()->GetActorLocation();
 	FRotator Rotation = GetOwner()->GetActorRotation();
@@ -184,8 +185,6 @@ void UPlayerPossess::TickComponent(float DeltaTime, ELevelTick TickType, FActorC
 
 	AimModeToggling();
 
-	//dwellerLinkSU->UpdateLinkGFX(GetOwner()->GetActorLocation());
-
 	//We only cover states that have "waiting for cooldown" logic (not those waiting for a player input)
 	switch (PlayerData::CurrentPossessState)
 	{
@@ -289,7 +288,4 @@ void UPlayerPossess::OnPossessInput()
 	{
 		OnThrowRapierNothing.Broadcast(camera->GetComponentLocation() + camera->GetForwardVector() * 1000);
 	}
-
-	DrawDebugLine(GetWorld(), TraceStart, TraceEnd, Hit.bBlockingHit ? FColor::Blue : FColor::Red, false,
-	              5.0f, 0, 1.0f);
 }

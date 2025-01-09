@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "LinkSplineVFX.h"
 #include "Subsystems/GameInstanceSubsystem.h"
 #include "PossessTarget.h"
 #include "DwellerLinkSubsystem.generated.h"
@@ -19,12 +20,20 @@ class REDBLOODSEA_API UDwellerLinkSubsystem : public UGameInstanceSubsystem
 
 	virtual void Deinitialize() override;
 
+	UPROPERTY()
+	AActor* playerActor;
+	UPROPERTY()
 	TArray<UPossessTarget*> dwellersInLink;
+	
+	UPROPERTY()
+	TSubclassOf<ALinkSplineVFX> splineLinkVFXReference;
 
-
+	UPROPERTY()
+	TArray<ALinkSplineVFX*> instantiatedLinksVFX;
+	
 public:
 	void ResetLink();
-	void UpdateLinkGFX(FVector currentPlayerPosition);
 	void AddDwellerToLink(UPossessTarget* dweller);
-	void OnDwellerKilled(UPossessTarget* dweller);
+	void OnDwellerKilled(UPossessTarget* killedDweller);
+	void SetupSubsystem(AActor* playerActor, TSubclassOf<ALinkSplineVFX> splineLinkVFXReference);
 };

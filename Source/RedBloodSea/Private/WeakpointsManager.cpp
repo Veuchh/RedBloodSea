@@ -3,6 +3,7 @@
 
 #include "WeakpointsManager.h"
 #include "CountLevelInstanceSubsystem.h"
+#include "PossessTarget.h"
 
 
 // Sets default values for this component's properties
@@ -179,6 +180,12 @@ void UWeakpointsManager::RemoveWeakpoint(AWeakpoint* weakpoint, bool canDestroyH
 	OnWeakpointHit.Broadcast(weakpoint);
 	if(CheckIfDead())
 	{
+		UPossessTarget* possessTarget = GetOwner()->GetComponentByClass<UPossessTarget>();
+
+if(possessTarget)
+{
+	possessTarget->OnKilled();
+}
 		OnDeath.Broadcast(Owner);
 		CountSubSys->OnKill.Broadcast();
 		//Owner->Destroy();

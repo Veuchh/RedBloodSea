@@ -28,6 +28,7 @@ public:
 	void Possess();
 	void Unpossess(FVector repositionEnemyAtPosition);
 	void Link();
+	void OnKilled();
 
 	UPROPERTY(BlueprintAssignable, Category = "Possess")
 	FOnPossessed OnPossessed;

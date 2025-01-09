@@ -34,7 +34,8 @@ public:
 	virtual void Tick(float DeltaTime) override;
 	void SetTarget1(AActor* target);
 	void SetTarget2(AActor* target);
-	
+	static void ResetID();
+
 	UPROPERTY(BlueprintAssignable, Category = "Callbacks")
 	FUpdateTarget1 UpdateTarget1;
 	UPROPERTY(BlueprintAssignable, Category = "Callbacks")

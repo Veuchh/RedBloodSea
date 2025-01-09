@@ -37,3 +37,8 @@ void ALinkSplineVFX::SetTarget2(AActor* target)
 	UpdateTarget2.Broadcast(Target2);
 }
 
+void ALinkSplineVFX::ResetID()
+{
+	nextSplineID = 0;
+}
+

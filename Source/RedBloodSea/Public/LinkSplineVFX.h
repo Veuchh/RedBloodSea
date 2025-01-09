@@ -7,7 +7,6 @@
 #include "LinkSplineVFX.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FUpdateTarget1, AActor*, target1);
-
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FUpdateTarget2, AActor*, target2);
 
 UCLASS()

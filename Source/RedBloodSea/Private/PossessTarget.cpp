@@ -3,14 +3,15 @@
 
 #include "PossessTarget.h"
 
+#include "DwellerLinkSubsystem.h"
+#include "Kismet/GameplayStatics.h"
+
 // Sets default values for this component's properties
 UPossessTarget::UPossessTarget()
 {
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
-
-	// ...
 }
 
 
@@ -18,9 +19,6 @@ UPossessTarget::UPossessTarget()
 void UPossessTarget::BeginPlay()
 {
 	Super::BeginPlay();
-
-	// ...
-	
 }
 
 
@@ -45,5 +43,10 @@ void UPossessTarget::Unpossess(FVector repositionEnemyAtPosition)
 void UPossessTarget::Link()
 {
 	OnLinked.Broadcast();
+}
+
+void UPossessTarget::OnKilled()
+{
+	UGameplayStatics::GetGameInstance(GetWorld())->GetSubsystem<UDwellerLinkSubsystem>()->OnDwellerKilled(this);
 }
 

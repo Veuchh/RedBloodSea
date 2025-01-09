@@ -55,6 +55,9 @@ private:
 	UPROPERTY(EditDefaultsOnly,Category="ActorSpawning")
 	TSubclassOf<ADweller> dwellerBP;
 	
+	UPROPERTY(EditDefaultsOnly,Category="ActorSpawning")
+	TSubclassOf<ALinkSplineVFX> splineLinkVFXReference;
+	
 	float nextAllowedAction = 0;
 	bool isInputModeActionPressed = false;
 	FVector startPossessPosition;

@@ -48,6 +48,7 @@ void AWaveSpawnManager::Tick(float DeltaTime)
 			}
 			//TODO End level here
 			bIsActive = false;
+			OnLevelEnd.Broadcast();
 			if(GEngine)
 				GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Level End: All enemies are dead or linked"));
 		}
@@ -90,8 +91,12 @@ void AWaveSpawnManager::SpawnReset()
 	CurrentWave = 0;
 	for (auto Dweller : AliveDwellers)
 	{
-		Dweller->Destroy();
+		if(IsValid(Dweller))
+		{
+			Dweller->Destroy();
+		}
 	}
+	
 	AliveDwellers.Empty();
 }
 
@@ -132,8 +137,8 @@ void AWaveSpawnManager::SpawnDweller(FDwellerProfile Type)
 		
 	}
 	newDweller->FinishSpawning(Transform);
-	if(GEngine)
-		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Spawning a Dweller"));
+	//if(GEngine)
+	//	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Spawning a Dweller"));
 }
 
 void AWaveSpawnManager::OnDwellerDeath(AActor* DwellerActor)
@@ -142,6 +147,10 @@ void AWaveSpawnManager::OnDwellerDeath(AActor* DwellerActor)
 	if(Dweller)
 	{
 		AliveDwellers.Remove(Dweller);
+	}
+	if(AliveDwellers.Num() == 0 && CurrentWave >= WavesData->Waves.Num())
+	{
+		OnLevelEnd.Broadcast();
 	}
 }
 

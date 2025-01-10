@@ -13,7 +13,6 @@ UWeakpointsManager::UWeakpointsManager()
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
 	Weakpoints.Reserve(10);
-	//UsedWeakpointsSocketsNames.Reserve(10);
 }
 
 // Called when the game starts
@@ -25,7 +24,6 @@ void UWeakpointsManager::BeginPlay()
 	Skeleton = Cast<USkeletalMeshComponent>(Owner->GetComponentByClass(USkeletalMeshComponent::StaticClass()));
 	CreateWeakPoints();
 	CountSubSys = Cast<UCountLevelInstanceSubsystem>(GetWorld()->GetGameInstance()->GetSubsystem<UCountLevelInstanceSubsystem>());
-	//RevealWeakpoints();
 }
 
 
@@ -76,7 +74,9 @@ int UWeakpointsManager::GetMaxHealthPoint()
 
 void UWeakpointsManager::CreateWeakPoints()
 {
-	Owner = GetOwner();
+	if(!IsValid(WeakpointData))
+		return;
+	
 	int count = 0;
 	for (auto const & WeakpointSlot : WeakpointData->WeakpointsSockets)
 	{
@@ -157,6 +157,29 @@ void UWeakpointsManager::RevealWeakpoints()
 		index++;
 	}
 	OnWeakpointReveal.Broadcast();
+	GetWorld()->GetTimerManager().SetTimer(WeakpointsVisibilityWindowTimer, this, &UWeakpointsManager::HideWeakpoints, WeakpointData->WeakpointsVisibilityWindowLength, false);
+
+}
+
+void UWeakpointsManager::HideWeakpoints()
+{
+	if(GEngine)
+		GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Yellow, TEXT("Hiding Weakpoints"));
+	int index = 1;
+	for (auto weakpoint : Weakpoints)
+	{
+		if(weakpoint.Value->State != EWeakpointState::Revealed)
+			continue;
+		weakpoint.Value->GetMesh()->SetVisibility(false);
+		weakpoint.Value->State = EWeakpointState::Hidden;
+		for (auto material : MaterialInstances)
+		{
+			FName name = *FString("Opacity").Append(FString::FromInt(index));
+			material->SetScalarParameterValue(name,0.0);
+		}
+		index++;
+	}
+	OnWeakpointHide.Broadcast();
 }
 
 void UWeakpointsManager::RemoveWeakpoint(AWeakpoint* weakpoint, bool canDestroyHiddenWeakpoints)
@@ -182,10 +205,10 @@ void UWeakpointsManager::RemoveWeakpoint(AWeakpoint* weakpoint, bool canDestroyH
 	{
 		UPossessTarget* possessTarget = GetOwner()->GetComponentByClass<UPossessTarget>();
 
-if(possessTarget)
-{
-	possessTarget->OnKilled();
-}
+		if(possessTarget)
+		{
+			possessTarget->OnKilled();
+		}
 		OnDeath.Broadcast(Owner);
 		CountSubSys->OnKill.Broadcast();
 		//Owner->Destroy();

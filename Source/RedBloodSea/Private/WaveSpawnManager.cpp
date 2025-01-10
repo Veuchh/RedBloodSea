@@ -134,9 +134,9 @@ void AWaveSpawnManager::SpawnDweller(FDwellerProfile Type)
 		
 		if(Type.bIsAntagonist)
 			newDweller->Tags.Add("Antagonist");
-		
+
+		newDweller->FinishSpawning(Transform);
 	}
-	newDweller->FinishSpawning(Transform);
 	//if(GEngine)
 	//	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Spawning a Dweller"));
 }

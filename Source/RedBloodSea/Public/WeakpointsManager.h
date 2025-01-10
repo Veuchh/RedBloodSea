@@ -39,6 +39,7 @@ private:
 	TMap<FName,TObjectPtr<AWeakpoint>> Weakpoints;
 	int HealthPoint;
 	int MaxHealthPoint;
+	FTimerHandle WeakpointsVisibilityWindowTimer;
 	
 	
 protected:
@@ -53,6 +54,8 @@ public:
 	void AttachWeakpoint(const FWeakpointSlot& WeakpointSlot,const float Size);
 	UFUNCTION(BlueprintCallable)
 	void RevealWeakpoints();
+	UFUNCTION(BlueprintCallable)
+	void HideWeakpoints();
 	UFUNCTION(BlueprintCallable)
 	void RemoveWeakpoint(AWeakpoint* weakpoint, bool canDestroyHiddenWeakpoints = false);
 	void ClearAllWeakpoints();
@@ -71,6 +74,10 @@ public:
 	DECLARE_DYNAMIC_MULTICAST_DELEGATE(FWeakpointReveal);
 	UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="Weakpoints Handler")
 	FWeakpointReveal OnWeakpointReveal;
+	
+	DECLARE_DYNAMIC_MULTICAST_DELEGATE(FWeakpointHide);
+	UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="Weakpoints Handler")
+	FWeakpointReveal OnWeakpointHide;
 
 	DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FWeakpointHit, AActor*, Weakpoint);
 	UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="Weakpoints Handler")

@@ -141,11 +141,14 @@ void UWeakpointsManager::AttachWeakpoint(const FWeakpointSlot& WeakpointSlot,con
 
 void UWeakpointsManager::RevealWeakpoints()
 {
-	int index = 1;
+	int index = 0;
 	for (auto weakpoint : Weakpoints)
 	{
+		index++;
+		
 		if(weakpoint.Value->State != EWeakpointState::Hidden)
 			continue;
+		
 		weakpoint.Value->GetMesh()->SetVisibility(true);
 		weakpoint.Value->State = EWeakpointState::Revealed;
 		for (auto material : MaterialInstances)
@@ -154,7 +157,6 @@ void UWeakpointsManager::RevealWeakpoints()
 			FName name = *FString("Opacity").Append(FString::FromInt(index));
 			material->SetScalarParameterValue(name,1.0);
 		}
-		index++;
 	}
 	OnWeakpointReveal.Broadcast();
 	GetWorld()->GetTimerManager().SetTimer(WeakpointsVisibilityWindowTimer, this, &UWeakpointsManager::HideWeakpoints, WeakpointData->WeakpointsVisibilityWindowLength, false);
@@ -163,21 +165,25 @@ void UWeakpointsManager::RevealWeakpoints()
 
 void UWeakpointsManager::HideWeakpoints()
 {
-	if(GEngine)
-		GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Yellow, TEXT("Hiding Weakpoints"));
-	int index = 1;
+	// if(GEngine)
+	// 	GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Yellow, TEXT("Hiding Weakpoints"));
+	int index = 0;
 	for (auto weakpoint : Weakpoints)
 	{
-		if(weakpoint.Value->State != EWeakpointState::Revealed)
+		index++;
+		
+		if(weakpoint.Value->State == EWeakpointState::Revealed)
+			weakpoint.Value->State = EWeakpointState::Hidden;
+		else if(weakpoint.Value->State == EWeakpointState::Damaged)
 			continue;
+
 		weakpoint.Value->GetMesh()->SetVisibility(false);
-		weakpoint.Value->State = EWeakpointState::Hidden;
+
 		for (auto material : MaterialInstances)
 		{
 			FName name = *FString("Opacity").Append(FString::FromInt(index));
 			material->SetScalarParameterValue(name,0.0);
 		}
-		index++;
 	}
 	OnWeakpointHide.Broadcast();
 }
@@ -198,7 +204,7 @@ void UWeakpointsManager::RemoveWeakpoint(AWeakpoint* weakpoint, bool canDestroyH
 	for (auto material : MaterialInstances)
 	{
 		FName name = *FString("Opacity").Append(FString::FromInt(index));
-		material->SetScalarParameterValue(name,0);
+		material->SetScalarParameterValue(name,0.0);
 	}
 	OnWeakpointHit.Broadcast(weakpoint);
 	if(CheckIfDead())

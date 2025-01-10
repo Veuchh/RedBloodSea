@@ -243,6 +243,13 @@ void UPlayerPossess::LineTrace(FVector TraceStart, FVector TraceEnd, FHitResult&
 	GetWorld()->LineTraceSingleByChannel(Hit, TraceStart, TraceEnd, TraceChannelProperty, QueryParams);
 }
 
+void UPlayerPossess::EndPlay(const EEndPlayReason::Type EndPlayReason)
+{
+PlayerData::CurrentPossessTarget->GetOwner()->Destroy();
+	
+	Super::EndPlay(EndPlayReason);
+}
+
 void UPlayerPossess::OnPossessInput()
 {
 	if (!PlayerData::CanUsePossess())
@@ -278,14 +285,14 @@ void UPlayerPossess::OnPossessInput()
 	{
 		PlayerData::CurrentPossessState = PlayerPossessState::ThrowFail;
 		nextAllowedAction = UGameplayStatics::GetTimeSeconds(GetWorld()) + throwFailDuration;
-	}
 
-	if (Hit.bBlockingHit)
-	{
-		OnThrowRapierEnviro.Broadcast(Hit.ImpactPoint);
-	}
-	else
-	{
-		OnThrowRapierNothing.Broadcast(camera->GetComponentLocation() + camera->GetForwardVector() * 1000);
+		if (Hit.bBlockingHit)
+		{
+			OnThrowRapierEnviro.Broadcast(Hit.ImpactPoint);
+		}
+		else
+		{
+			OnThrowRapierNothing.Broadcast(camera->GetComponentLocation() + camera->GetForwardVector() * 1000);
+		}
 	}
 }

@@ -78,6 +78,7 @@ private:
 	void PossessRecoveryTick();
 	void LineTrace(FVector TraceStart, FVector TraceEnd, FHitResult& Hit);
 public:
+	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType,
 	                           FActorComponentTickFunction* ThisTickFunction) override;
 	// Sets default values for this component's properties

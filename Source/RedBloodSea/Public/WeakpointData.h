@@ -72,6 +72,8 @@ public:
 	float SizeChart[static_cast<int>(EWeakpointSize::NUM)];
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Weakpoints Data",EditFixedSize)
 	TArray<FWeakpointSlot> WeakpointsSockets;
+	UPROPERTY(EditAnywhere,Category="Weakpoints Data")
+	float WeakpointsVisibilityWindowLength = 4.0;
 
 	UFUNCTION()
 	TArray<FName> GetAllWeakpointsSockets() const;

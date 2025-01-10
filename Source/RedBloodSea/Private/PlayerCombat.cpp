@@ -252,7 +252,7 @@ void UPlayerCombat::ToggleAttackCollider(BufferableAttack attack, bool isToggled
 	for (UPrimitiveComponent* collider : GetAttackColliders(attack))
 	{
 		collider->SetGenerateOverlapEvents(isToggled);
-		collider->SetVisibility(isToggled);
+		//collider->SetVisibility(isToggled);
 
 		if (isToggled)
 			collider->OnComponentBeginOverlap.AddDynamic(this, &UPlayerCombat::OnOverlapBegin);

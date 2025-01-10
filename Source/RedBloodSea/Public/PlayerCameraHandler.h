@@ -50,6 +50,10 @@ private:
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Camera")
 	float dashFOV = 115;
 
+	/*The target FOV when the player camera is moving to possess an ennemy*/
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Camera")
+	float possessFOV = 80;
+
 	/*How fast the FOV will change*/
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Camera")
 	float fovChangeSpeed = 10;

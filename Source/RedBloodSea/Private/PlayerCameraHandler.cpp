@@ -81,7 +81,7 @@ void UPlayerCameraHandler::CameraRoll()
 void UPlayerCameraHandler::CameraFOV()
 {
 	 //FOV
-	 float targetFOV = PlayerData::IsDashing ? dashFOV : defaultFOV;
+	 float targetFOV = PlayerData::CurrentPossessState ==  PlayerPossessState::ZoomingCamera ? possessFOV : PlayerData::IsDashing ? dashFOV : defaultFOV;
 
 	 // Get the current controller roll input
 	 float currentFOV = playerCameraComponent->FieldOfView;

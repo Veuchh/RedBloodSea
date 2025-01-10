@@ -17,22 +17,22 @@ void UCountLevelInstanceSubsystem::Deinitialize()
 	OnLinked.RemoveDynamic(this,&UCountLevelInstanceSubsystem::AddLinked);
 }
 
-void UCountLevelInstanceSubsystem::GetKillPercent()
+float UCountLevelInstanceSubsystem::GetKillPercent()
 {
 	float killPercent = static_cast<float>(killCount) / static_cast<float>(killCount+possessCount);
-	OnCountChange.Broadcast(killPercent);
+	return killPercent;
 }
 
 void UCountLevelInstanceSubsystem::AddKill()
 {
 	killCount++;
-	GetKillPercent();
+	OnCountChange.Broadcast(GetKillPercent());
 }
 
 void UCountLevelInstanceSubsystem::AddLinked(int count)
 {
 	possessCount += count;
-	GetKillPercent();
+	OnCountChange.Broadcast(GetKillPercent());
 }
 
 void UCountLevelInstanceSubsystem::ResetAll()

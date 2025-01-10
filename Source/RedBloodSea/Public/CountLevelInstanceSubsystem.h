@@ -24,8 +24,8 @@ public:
 	int possessCount;
 
 
-	UFUNCTION()
-	void GetKillPercent();
+	UFUNCTION(BlueprintCallable)
+	float GetKillPercent();
 
 	DECLARE_DYNAMIC_MULTICAST_DELEGATE(FKill);
 	UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="Count")
@@ -41,7 +41,7 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void AddKill();
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	void AddLinked(int count);
 
 	UFUNCTION(BlueprintCallable)

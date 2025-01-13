@@ -148,7 +148,10 @@ bool PlayerData::CanGroundSlam()
 bool PlayerData::CanEnterPossessMode()
 {
 	return
-		CurrentPossessState == PlayerPossessState::None;
+		CurrentPossessState == PlayerPossessState::None
+	|| CurrentPossessState == PlayerPossessState::PossessAim
+	|| CurrentPossessState == PlayerPossessState::TogglingAimMode
+	|| CurrentPossessState == PlayerPossessState::PossessRecovery;
 }
 
 bool PlayerData::CanUsePossess()

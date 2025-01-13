@@ -208,8 +208,9 @@ void UPlayerPossess::TickComponent(float DeltaTime, ELevelTick TickType, FActorC
 
 void UPlayerPossess::AimModeToggling()
 {
-	if (isInputModeActionPressed && PlayerData::CanEnterPossessMode() && !character->GetCharacterMovement()->
-		IsFalling())
+	if (isInputModeActionPressed
+		&& !character->GetCharacterMovement()->IsFalling()
+		&& PlayerData::CurrentPossessState == PlayerPossessState::None)
 	{
 		OnPossessAimStart.Broadcast();
 		PlayerData::CurrentPossessState = PlayerPossessState::TogglingAimMode;
@@ -221,6 +222,7 @@ void UPlayerPossess::AimModeToggling()
 	{
 		OnPossessAimStop.Broadcast();
 		PlayerData::CurrentPossessState = PlayerPossessState::None;
+		isInputModeActionPressed = false;
 	}
 }
 
@@ -232,7 +234,10 @@ void UPlayerPossess::TogglePlayer(bool isToggled) const
 
 void UPlayerPossess::OnPossessModeInput(bool isToggled)
 {
-	isInputModeActionPressed = isToggled;
+	if (PlayerData::CanEnterPossessMode() && !character->GetCharacterMovement()->IsFalling())
+	{
+		isInputModeActionPressed = !isInputModeActionPressed;
+	}
 }
 
 void UPlayerPossess::LineTrace(FVector TraceStart, FVector TraceEnd, FHitResult& Hit)
@@ -245,8 +250,8 @@ void UPlayerPossess::LineTrace(FVector TraceStart, FVector TraceEnd, FHitResult&
 
 void UPlayerPossess::EndPlay(const EEndPlayReason::Type EndPlayReason)
 {
-PlayerData::CurrentPossessTarget->GetOwner()->Destroy();
-	
+	PlayerData::CurrentPossessTarget->GetOwner()->Destroy();
+
 	Super::EndPlay(EndPlayReason);
 }
 
@@ -279,6 +284,8 @@ void UPlayerPossess::OnPossessInput()
 		PlayerData::CurrentPossessState = PlayerPossessState::ThrowTarget;
 		nextAllowedAction = UGameplayStatics::GetTimeSeconds(GetWorld()) + possessDelay;
 		OnThrowRapierTarget.Broadcast(Hit.ImpactPoint);
+		isInputModeActionPressed = false;
+		OnPossessAimStop.Broadcast();
 	}
 	//otherwise, we just play the throw fail animation
 	else

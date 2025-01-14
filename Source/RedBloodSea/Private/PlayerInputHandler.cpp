@@ -62,7 +62,7 @@ void UPlayerInputHandler::SetupPlayerInputComponent(UInputComponent* InputCompon
 		//MPossession
 		EnhancedInputComponent->BindAction(ThrustAction, ETriggerEvent::Started, this, &UPlayerInputHandler::PossessInput); 
 		EnhancedInputComponent->BindAction(PossessModeAction, ETriggerEvent::Started, this, &UPlayerInputHandler::PossessModeInput); 
-		EnhancedInputComponent->BindAction(PossessModeAction, ETriggerEvent::Completed, this, &UPlayerInputHandler::PossessModeInput); 
+		//EnhancedInputComponent->BindAction(PossessModeAction, ETriggerEvent::Completed, this, &UPlayerInputHandler::PossessModeInput); 
 	}
 	else
 	{

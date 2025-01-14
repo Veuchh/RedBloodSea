@@ -13,6 +13,7 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnUpdateHPDisplay, int, newCurrent
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPossessAimStart);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPossessAimStop);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPossessRecovery);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnLinkInitiated);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnThrowRapierNothing, FVector, rapierEndPosition);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnThrowRapierTarget, FVector, rapierEndPosition);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnThrowRapierEnviro, FVector, rapierEndPosition);
@@ -108,4 +109,7 @@ public:
 
 	UPROPERTY(BlueprintAssignable, Category = "Callbacks")
 	FOnThrowRapierEnviro OnThrowRapierEnviro;
+
+	UPROPERTY(BlueprintAssignable, Category = "Callbacks")
+	FOnLinkInitiated OnLinkInitiated;
 };

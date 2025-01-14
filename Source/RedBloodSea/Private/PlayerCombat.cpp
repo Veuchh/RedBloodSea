@@ -190,6 +190,11 @@ void UPlayerCombat::TickComponent(float DeltaTime, ELevelTick TickType, FActorCo
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
+	if (PlayerData::IsGodModeEnabled)
+	{
+		GEngine->AddOnScreenDebugMessage(-1,0,FColor::Red, "GOD MODE ON");
+	}
+	
 	if (PlayerData::CurrentAttack != BufferableAttack::None)
 	{
 		OngoingAttackLogic();
@@ -286,8 +291,18 @@ void UPlayerCombat::OnThrustInput()
 	TryAddAttackToBuffer(BufferableAttack::Thrust);
 }
 
+void UPlayerCombat::OnGodModeToggle()
+{
+	PlayerData::IsGodModeEnabled = !PlayerData::IsGodModeEnabled;
+}
+
 void UPlayerCombat::DamagePlayer(int damageAmount)
 {
+	if (PlayerData::IsGodModeEnabled)
+	{
+		return;
+	}
+	
 	PlayerData::CurrentHPAmount -= damageAmount;
 	OnPlayerHit.Broadcast(PlayerData::CurrentHPAmount);
 

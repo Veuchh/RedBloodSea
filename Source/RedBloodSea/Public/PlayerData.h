@@ -21,6 +21,7 @@ public:
 	static float NextAllowedDash;
 	
 	//-------------------------------------------Combat
+	static bool IsGodModeEnabled;
 	static int MaxHPAmount;
 	static int CurrentHPAmount;
 	static float GetCurrentAttackStartupEndTime();

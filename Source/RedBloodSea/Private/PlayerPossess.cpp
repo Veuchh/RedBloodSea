@@ -174,7 +174,12 @@ void UPlayerPossess::PossessDweller()
 {
 	GEngine->AddOnScreenDebugMessage(-1, 5, FColor::Purple, "PossessDweller");
 	PlayerData::CurrentPossessTarget->Possess();
-	dwellerLinkSU->AddDwellerToLink(PlayerData::CurrentPossessTarget);
+	bool resultsInLink = dwellerLinkSU->AddDwellerToLink(PlayerData::CurrentPossessTarget);
+	
+	if(resultsInLink)
+	{
+		OnLinkInitiated.Broadcast();
+	}
 }
 
 void UPlayerPossess::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)

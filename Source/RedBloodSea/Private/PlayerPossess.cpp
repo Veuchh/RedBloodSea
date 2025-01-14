@@ -166,6 +166,7 @@ void UPlayerPossess::PossessRecoveryTick()
 	if (UGameplayStatics::GetTimeSeconds(GetWorld()) >= nextAllowedAction)
 	{
 		PlayerData::CurrentPossessState = PlayerPossessState::None;
+		OnPossessAimStop.Broadcast();
 	}
 }
 
@@ -290,11 +291,14 @@ void UPlayerPossess::OnPossessInput()
 		nextAllowedAction = UGameplayStatics::GetTimeSeconds(GetWorld()) + possessDelay;
 		OnThrowRapierTarget.Broadcast(Hit.ImpactPoint);
 		isInputModeActionPressed = false;
-		OnPossessAimStop.Broadcast();
 	}
 	//otherwise, we just play the throw fail animation
 	else
 	{
+		if (PlayerData::CurrentPossessState == PlayerPossessState::PossessRecovery)
+		{
+			OnPossessAimStop.Broadcast();
+		}
 		PlayerData::CurrentPossessState = PlayerPossessState::ThrowFail;
 		nextAllowedAction = UGameplayStatics::GetTimeSeconds(GetWorld()) + throwFailDuration;
 

@@ -157,7 +157,7 @@ bool PlayerData::CanEnterPossessMode()
 bool PlayerData::CanUsePossess()
 {
 	return
-		CurrentPossessState == PlayerPossessState::PossessAim
+		(CurrentPossessState == PlayerPossessState::PossessAim  || CurrentPossessState == PlayerPossessState::PossessRecovery)
 		&& !IsDashing
 		&& CurrentAttackState == PlayerAttackState::None;
 }

@@ -10,21 +10,29 @@
 
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnDeath);
+
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnSlashStart);
+
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnThrustStart);
+
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnPlayerHit, int, remainingHealth);
+
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnSlashHitEnemy, AActor*, HitEnemy);
+
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnSlashHitEnviro, AActor*, HitActor);
+
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnThrustHitWeakpoint, AWeakpoint*, HitWeakpoint);
+
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnThrustHitNoWeakpoint, AActor*, HitEnemy);
+
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnThrustHitEnviro, AActor*, HitActor);
 
-UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
+UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
 class REDBLOODSEA_API UPlayerCombat : public UActorComponent
 {
 	GENERATED_BODY()
 
-public:	
+public:
 	// Sets default values for this component's properties
 	UPlayerCombat();
 
@@ -33,17 +41,17 @@ private:
 	void TryConsumeAttackBuffer();
 	void OngoingAttackLogic();
 	void ToggleAttackCollider(BufferableAttack attack, bool isToggled);
-	
+
 protected:
 	/*The max amount of queued attacks*/
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
 	int maxAttackBufferCapacity = 1;
 
 	//SLASH
-	UPROPERTY( EditAnywhere, meta = (UseComponentPicker))
+	UPROPERTY(EditAnywhere, meta = (UseComponentPicker))
 	FComponentReference slashCollidersParentReference;
 	TArray<UPrimitiveComponent*> slashColliders;
-	
+
 	/*How long before the slash collider become active*/
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
 	float slashAttackStartupDelay = .05f;
@@ -55,16 +63,16 @@ protected:
 	/*How long before next attack after slash. Starts when the slash starts*/
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
 	float slashAttackCooldown = .5f;
-	
+
 	/*How long before allowed to add to input buffer after slash.*/
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
 	float slashInputBufferCooldown = .05f;
 
 	//Thrust
-	UPROPERTY( EditAnywhere, meta = (UseComponentPicker))
+	UPROPERTY(EditAnywhere, meta = (UseComponentPicker))
 	FComponentReference thrustCollidersParentReference;
 	TArray<UPrimitiveComponent*> thrustColliders;
-	
+
 	/*How long before the thrust collider become active*/
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
 	float thrustAttackStartupDelay = .05f;
@@ -80,30 +88,34 @@ protected:
 	/*How long before allowed to add to input buffer after thrust.*/
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
 	float thrustInputBufferCooldown = .05f;
-	
+
 	// Called when the game starts
 	virtual void BeginPlay() override;
 	TArray<UPrimitiveComponent*> GetAttackColliders(BufferableAttack attack);
-	 float GetAttackBufferCooldown(const BufferableAttack attack) const;
+	float GetAttackBufferCooldown(const BufferableAttack attack) const;
 	void CallAttackBlueprintCallback(const BufferableAttack attack);
 	UFUNCTION()
-	void OnOverlapBegin(class UPrimitiveComponent* HitComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult);
+	void OnOverlapBegin(class UPrimitiveComponent* HitComp, class AActor* OtherActor,
+	                    class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep,
+	                    const FHitResult& SweepResult);
 	void OnSlashOverlap(UPrimitiveComponent* HitComp, AActor* OtherActor);
 	void OnThrustOverlap(UPrimitiveComponent* HitComp, AActor* OtherActor);
+	void PlayerDeath();
 
-void PlayerDeath();
-	
 	TArray<AActor*> currentAttackHitActors;
+
 public:
 	// Called every frame
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+	virtual void TickComponent(float DeltaTime, ELevelTick TickType,
+	                           FActorComponentTickFunction* ThisTickFunction) override;
 
 	void OnSlashInput();
 	void OnThrustInput();
+	void OnGodModeToggle();
 
 	UFUNCTION(BlueprintCallable)
 	void DamagePlayer(int damageAmount);
-	
+
 	UPROPERTY(BlueprintAssignable, Category = "Combat")
 	FOnDeath OnPlayerDeath;
 	UPROPERTY(BlueprintAssignable, Category = "Combat")

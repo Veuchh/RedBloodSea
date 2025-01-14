@@ -58,6 +58,7 @@ void UPlayerInputHandler::SetupPlayerInputComponent(UInputComponent* InputCompon
 		//Attacks
 		EnhancedInputComponent->BindAction(SlashAction, ETriggerEvent::Started, this, &UPlayerInputHandler::SlashInput);
 		EnhancedInputComponent->BindAction(ThrustAction, ETriggerEvent::Started, this, &UPlayerInputHandler::ThrustInput);
+		EnhancedInputComponent->BindAction(GodModeAction, ETriggerEvent::Started, this, &UPlayerInputHandler::GodModeInput);
 
 		//MPossession
 		EnhancedInputComponent->BindAction(ThrustAction, ETriggerEvent::Started, this, &UPlayerInputHandler::PossessInput); 
@@ -108,6 +109,11 @@ void UPlayerInputHandler::SlashInput(const FInputActionValue& Value)
 void UPlayerInputHandler::ThrustInput(const FInputActionValue& Value)
 {
 	playerCombat->OnThrustInput();
+}
+
+void UPlayerInputHandler::GodModeInput(const FInputActionValue& Value)
+{
+	playerCombat->OnGodModeToggle();
 }
 
 void UPlayerInputHandler::PossessModeInput(const FInputActionValue& Value)

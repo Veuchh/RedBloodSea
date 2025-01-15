@@ -10,7 +10,7 @@
 #include <Kismet/GameplayStatics.h>
 #include "PlayerMovement.generated.h"
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnDashStart);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnDashStart, FVector2D, dashDirection);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnGroundSlamStart);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnFootstep);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnDashInterrupted);

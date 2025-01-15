@@ -111,8 +111,7 @@ void UPlayerMovement::OnDashInput()
 		PlayerData::RemainingAirDashes--;
 	}
 
-	OnDashStart.Broadcast();
-
+	OnDashStart.Broadcast(PlayerData::CurrentMovementInput);
 	PlayerData::DashEndTime = UGameplayStatics::GetRealTimeSeconds(GetWorld()) + dashDuration;
 	PlayerData::NextAllowedDash = UGameplayStatics::GetRealTimeSeconds(GetWorld()) + dashCooldown;
 	PlayerData::IsDashing = true;
@@ -121,6 +120,7 @@ void UPlayerMovement::OnDashInput()
 	playerCharacter->GetCharacterMovement()->Velocity = (FVector::Zero());
 	SetNewPlayerGravity(dashGravity);
 	PlayerData::CurrentMovementInput.Normalize();
+	
 }
 
 void UPlayerMovement::OnJumpInput(const bool isJumping)

@@ -51,6 +51,10 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* ThrustAction;
 
+	/** God Mode Input Action */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	UInputAction* GodModeAction;
+
 	/** Possess mode Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* PossessModeAction;
@@ -63,6 +67,7 @@ private:
 	void GroundSlamInput(const FInputActionValue& Value);
 	void SlashInput(const FInputActionValue& Value);
 	void ThrustInput(const FInputActionValue& Value);
+	void GodModeInput(const FInputActionValue& Value);
 	void PossessInput(const FInputActionValue& Value);
 	void PossessModeInput(const FInputActionValue& Value);
 

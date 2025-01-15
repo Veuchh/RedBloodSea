@@ -15,6 +15,7 @@ PlayerPossessState PlayerData::CurrentPossessState = PlayerPossessState::None;
 float PlayerData::StartCameraMovementTime = 0;
 float PlayerData::EndCameraMovementTime = 0;
 UPossessTarget* PlayerData::CurrentPossessTarget = nullptr;
+bool PlayerData::IsGodModeEnabled = false;
 
 int PlayerData::CurrentHPAmount = 0; //Initialized in PlayerCombat.BeginPlay
 int PlayerData::MaxHPAmount = 0; //Initialized in PlayerCombat.BeginPlay
@@ -35,6 +36,7 @@ PlayerData::~PlayerData()
 
 void PlayerData::ResetData()
 {
+	IsGodModeEnabled = false;
 	CurrentMovementInput = FVector2D::Zero();
 	IsDashing = false;
 	DashEndTime = 0;
@@ -157,7 +159,7 @@ bool PlayerData::CanEnterPossessMode()
 bool PlayerData::CanUsePossess()
 {
 	return
-		CurrentPossessState == PlayerPossessState::PossessAim
+		(CurrentPossessState == PlayerPossessState::PossessAim  || CurrentPossessState == PlayerPossessState::PossessRecovery)
 		&& !IsDashing
 		&& CurrentAttackState == PlayerAttackState::None;
 }

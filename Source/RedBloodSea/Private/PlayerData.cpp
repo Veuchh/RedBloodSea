@@ -5,6 +5,7 @@ bool PlayerData::IsDashing = false;
 float PlayerData::DashEndTime = 0;
 int PlayerData::RemainingAirDashes = 0;
 float PlayerData::NextAllowedDash = 0;
+float PlayerData::NextAllowedGroundSlam = 0;
 int PlayerData::MaxAttackBufferCapacity = 0; //Initialized in PlayerCombat.BeginPlay
 BufferableAttack PlayerData::CurrentAttack = BufferableAttack::None;
 TArray<BufferableAttack> PlayerData::AttackBuffer = TArray<BufferableAttack>();
@@ -15,6 +16,7 @@ PlayerPossessState PlayerData::CurrentPossessState = PlayerPossessState::None;
 float PlayerData::StartCameraMovementTime = 0;
 float PlayerData::EndCameraMovementTime = 0;
 UPossessTarget* PlayerData::CurrentPossessTarget = nullptr;
+bool PlayerData::IsGodModeEnabled = false;
 
 int PlayerData::CurrentHPAmount = 0; //Initialized in PlayerCombat.BeginPlay
 int PlayerData::MaxHPAmount = 0; //Initialized in PlayerCombat.BeginPlay
@@ -35,11 +37,13 @@ PlayerData::~PlayerData()
 
 void PlayerData::ResetData()
 {
+	IsGodModeEnabled = false;
 	CurrentMovementInput = FVector2D::Zero();
 	IsDashing = false;
 	DashEndTime = 0;
 	RemainingAirDashes = 0;
 	NextAllowedDash = 0;
+	NextAllowedGroundSlam = 0;
 	CurrentAttack = BufferableAttack::None;
 	AttackBuffer = TArray<BufferableAttack>();
 	CurrentAttackState = PlayerAttackState::None;
@@ -157,7 +161,7 @@ bool PlayerData::CanEnterPossessMode()
 bool PlayerData::CanUsePossess()
 {
 	return
-		CurrentPossessState == PlayerPossessState::PossessAim
+		(CurrentPossessState == PlayerPossessState::PossessAim  || CurrentPossessState == PlayerPossessState::PossessRecovery)
 		&& !IsDashing
 		&& CurrentAttackState == PlayerAttackState::None;
 }

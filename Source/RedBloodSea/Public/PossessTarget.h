@@ -7,6 +7,7 @@
 #include "PossessTarget.generated.h"
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPossessed);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnLinked);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPrepareForPossess);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnUnpossessed, FVector, RepositionEnemyAtPosition);
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
@@ -29,11 +30,14 @@ public:
 	void Unpossess(FVector repositionEnemyAtPosition);
 	void Link();
 	void OnKilled();
+	void PrepareForPossess();
 
 	UPROPERTY(BlueprintAssignable, Category = "Possess")
 	FOnPossessed OnPossessed;
 	UPROPERTY(BlueprintAssignable, Category = "Possess")
 	FOnUnpossessed OnUnpossessed;
+	UPROPERTY(BlueprintAssignable, Category = "Possess")
+	FOnPrepareForPossess OnPrepareForPossess;
 	UPROPERTY(BlueprintAssignable, Category = "Possess")
 	FOnLinked OnLinked;
 

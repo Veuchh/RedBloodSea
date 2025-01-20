@@ -10,7 +10,7 @@
 #include <Kismet/GameplayStatics.h>
 #include "PlayerMovement.generated.h"
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnDashStart);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnDashStart, FVector2D, dashDirection);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnGroundSlamStart);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnFootstep);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnDashInterrupted);
@@ -84,6 +84,10 @@ private:
 	/*How strong the player will slam downwards*/
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Ground Slam")
 	float groundSlamVerticalStrength = 50;
+
+	/*The default speed of the player, applied when not dashing, for instance*/
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Ground Slam")
+	float groundSlamCooldownAfterJump = .12f;
 
 	ACharacter* playerCharacter;
 	float lastTickVerticalVelocity = 0;

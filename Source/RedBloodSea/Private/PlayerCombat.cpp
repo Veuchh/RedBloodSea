@@ -165,8 +165,9 @@ void UPlayerCombat::OnThrustOverlap(UPrimitiveComponent* HitComp, AActor* OtherA
 		weakPointsManager = AttachedParent->GetComponentByClass<UWeakpointsManager>();
 	}
 
-	if (weakPointsManager && OtherActor->IsA(AWeakpoint::StaticClass()))
+	if (weakPointsManager && OtherActor->IsA(AWeakpoint::StaticClass()) && !wasWeakpointHitThisAttack)
 	{
+		wasWeakpointHitThisAttack = true;
 		weakPointsManager->RemoveWeakpoint(Cast<AWeakpoint>(OtherActor));
 		OnThrustHitWeakpoint.Broadcast(Cast<AWeakpoint>(OtherActor));
 	}
@@ -190,6 +191,11 @@ void UPlayerCombat::TickComponent(float DeltaTime, ELevelTick TickType, FActorCo
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
+	if (PlayerData::IsGodModeEnabled)
+	{
+		GEngine->AddOnScreenDebugMessage(-1,0,FColor::Red, "GOD MODE ON");
+	}
+	
 	if (PlayerData::CurrentAttack != BufferableAttack::None)
 	{
 		OngoingAttackLogic();
@@ -223,6 +229,7 @@ void UPlayerCombat::OngoingAttackLogic()
 		{
 			PlayerData::CurrentAttackState = PlayerAttackState::Attacking;
 			ToggleAttackCollider(PlayerData::CurrentAttack, true);
+			wasWeakpointHitThisAttack = false;
 			return;
 		}
 		break;
@@ -267,11 +274,17 @@ void UPlayerCombat::ToggleAttackCollider(BufferableAttack attack, bool isToggled
 void UPlayerCombat::TryAddAttackToBuffer(BufferableAttack attackToAdd)
 {
 	if (!PlayerData::CanAddAttackToBuffer()
-		|| PlayerData::AttackBuffer.Num() >= PlayerData::MaxAttackBufferCapacity
 		|| PlayerData::NextAllowedInputBufferTime > UGameplayStatics::GetRealTimeSeconds(GetWorld()))
 		return;
 
+	if (PlayerData::AttackBuffer.Num() == 0)
+	{	
 	PlayerData::AttackBuffer.Add(attackToAdd);
+	}
+	else
+	{
+		PlayerData::AttackBuffer[0] = attackToAdd;
+	}
 	PlayerData::NextAllowedInputBufferTime = GetAttackBufferCooldown(attackToAdd);
 }
 
@@ -286,8 +299,18 @@ void UPlayerCombat::OnThrustInput()
 	TryAddAttackToBuffer(BufferableAttack::Thrust);
 }
 
+void UPlayerCombat::OnGodModeToggle()
+{
+	PlayerData::IsGodModeEnabled = !PlayerData::IsGodModeEnabled;
+}
+
 void UPlayerCombat::DamagePlayer(int damageAmount)
 {
+	if (PlayerData::IsGodModeEnabled)
+	{
+		return;
+	}
+	
 	PlayerData::CurrentHPAmount -= damageAmount;
 	OnPlayerHit.Broadcast(PlayerData::CurrentHPAmount);
 

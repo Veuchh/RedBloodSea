@@ -291,6 +291,7 @@ void UPlayerPossess::OnPossessInput()
 		nextAllowedAction = UGameplayStatics::GetTimeSeconds(GetWorld()) + possessDelay;
 		OnThrowRapierTarget.Broadcast(Hit.ImpactPoint);
 		isInputModeActionPressed = false;
+		possessTarget->PrepareForPossess();
 	}
 	//otherwise, we just play the throw fail animation
 	else

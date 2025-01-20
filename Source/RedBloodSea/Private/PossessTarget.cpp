@@ -50,3 +50,8 @@ void UPossessTarget::OnKilled()
 	UGameplayStatics::GetGameInstance(GetWorld())->GetSubsystem<UDwellerLinkSubsystem>()->OnDwellerKilled(this);
 }
 
+void UPossessTarget::PrepareForPossess()
+{
+	OnPrepareForPossess.Broadcast();
+}
+

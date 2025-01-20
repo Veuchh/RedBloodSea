@@ -42,6 +42,8 @@ private:
 	void OngoingAttackLogic();
 	void ToggleAttackCollider(BufferableAttack attack, bool isToggled);
 
+	bool wasWeakpointHitThisAttack = false;
+
 protected:
 	/*The max amount of queued attacks*/
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))

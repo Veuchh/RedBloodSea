@@ -165,8 +165,9 @@ void UPlayerCombat::OnThrustOverlap(UPrimitiveComponent* HitComp, AActor* OtherA
 		weakPointsManager = AttachedParent->GetComponentByClass<UWeakpointsManager>();
 	}
 
-	if (weakPointsManager && OtherActor->IsA(AWeakpoint::StaticClass()))
+	if (weakPointsManager && OtherActor->IsA(AWeakpoint::StaticClass()) && !wasWeakpointHitThisAttack)
 	{
+		wasWeakpointHitThisAttack = true;
 		weakPointsManager->RemoveWeakpoint(Cast<AWeakpoint>(OtherActor));
 		OnThrustHitWeakpoint.Broadcast(Cast<AWeakpoint>(OtherActor));
 	}
@@ -228,6 +229,7 @@ void UPlayerCombat::OngoingAttackLogic()
 		{
 			PlayerData::CurrentAttackState = PlayerAttackState::Attacking;
 			ToggleAttackCollider(PlayerData::CurrentAttack, true);
+			wasWeakpointHitThisAttack = false;
 			return;
 		}
 		break;

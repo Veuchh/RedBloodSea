@@ -40,7 +40,7 @@ void ARedBloodSeaCharacter::BeginPlay()
 	playerMovement->SetupPlayerMovementComponent(this);
 
 	UPlayerCameraHandler* playerCameraHandler = this->GetComponentByClass<UPlayerCameraHandler>();
-	playerCameraHandler->SetupPlayerCameraComponent(this, FirstPersonCameraComponent);
+	playerCameraHandler->SetupPlayerCameraComponent(this, FirstPersonCameraComponent, GetMesh());
 	
 	UPlayerPossess* playerPossess = this->GetComponentByClass<UPlayerPossess>();
 	playerPossess->SetupPlayerPossessComponent(this, FirstPersonCameraComponent);

@@ -5,6 +5,7 @@ bool PlayerData::IsDashing = false;
 float PlayerData::DashEndTime = 0;
 int PlayerData::RemainingAirDashes = 0;
 float PlayerData::NextAllowedDash = 0;
+float PlayerData::NextAllowedGroundSlam = 0;
 int PlayerData::MaxAttackBufferCapacity = 0; //Initialized in PlayerCombat.BeginPlay
 BufferableAttack PlayerData::CurrentAttack = BufferableAttack::None;
 TArray<BufferableAttack> PlayerData::AttackBuffer = TArray<BufferableAttack>();
@@ -42,6 +43,7 @@ void PlayerData::ResetData()
 	DashEndTime = 0;
 	RemainingAirDashes = 0;
 	NextAllowedDash = 0;
+	NextAllowedGroundSlam = 0;
 	CurrentAttack = BufferableAttack::None;
 	AttackBuffer = TArray<BufferableAttack>();
 	CurrentAttackState = PlayerAttackState::None;

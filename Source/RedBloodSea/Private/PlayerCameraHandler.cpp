@@ -78,7 +78,7 @@ void UPlayerCameraHandler::CameraRoll()
 	// Set the controller roll input to the new roll value
 	playerCharacter->AddControllerRollInput(newRoll - currentRoll);
 
-	FRotator newCameraRotation = FRotator(0,0,playerCharacter->GetControlRotation().Roll);
+	FRotator newCameraRotation = FRotator(cameraRollTarget->GetRelativeRotation().Pitch,cameraRollTarget->GetRelativeRotation().Yaw ,playerCharacter->GetControlRotation().Roll);
 	cameraRollTarget->SetRelativeRotation(newCameraRotation);
 }
 

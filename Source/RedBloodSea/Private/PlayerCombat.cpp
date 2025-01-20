@@ -274,11 +274,17 @@ void UPlayerCombat::ToggleAttackCollider(BufferableAttack attack, bool isToggled
 void UPlayerCombat::TryAddAttackToBuffer(BufferableAttack attackToAdd)
 {
 	if (!PlayerData::CanAddAttackToBuffer()
-		|| PlayerData::AttackBuffer.Num() >= PlayerData::MaxAttackBufferCapacity
 		|| PlayerData::NextAllowedInputBufferTime > UGameplayStatics::GetRealTimeSeconds(GetWorld()))
 		return;
 
+	if (PlayerData::AttackBuffer.Num() == 0)
+	{	
 	PlayerData::AttackBuffer.Add(attackToAdd);
+	}
+	else
+	{
+		PlayerData::AttackBuffer[0] = attackToAdd;
+	}
 	PlayerData::NextAllowedInputBufferTime = GetAttackBufferCooldown(attackToAdd);
 }
 

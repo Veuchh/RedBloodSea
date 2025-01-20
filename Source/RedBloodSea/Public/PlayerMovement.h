@@ -85,6 +85,10 @@ private:
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Ground Slam")
 	float groundSlamVerticalStrength = 50;
 
+	/*The default speed of the player, applied when not dashing, for instance*/
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Ground Slam")
+	float groundSlamCooldownAfterJump = .12f;
+
 	ACharacter* playerCharacter;
 	float lastTickVerticalVelocity = 0;
 	bool wasPlayerGrounded = true;

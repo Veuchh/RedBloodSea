@@ -39,11 +39,12 @@ void UPlayerCameraHandler::TickComponent(float DeltaTime, ELevelTick TickType, F
 	CameraFOV();
 }
 
-void UPlayerCameraHandler::SetupPlayerCameraComponent(ACharacter* PlayerCharacter, UCameraComponent* PlayerCameraComponent)
+void UPlayerCameraHandler::SetupPlayerCameraComponent(ACharacter* PlayerCharacter, UCameraComponent* PlayerCameraComponent, USceneComponent* newCameraRollTarget)
 {
 	playerCharacter = PlayerCharacter;
 	playerCameraComponent = PlayerCameraComponent;
 	playerCameraComponent->AttachToComponent(playerCharacter->GetMesh(), FAttachmentTransformRules::KeepWorldTransform, TEXT("cameraSocket"));
+	cameraRollTarget = newCameraRollTarget;
 }
 
 void UPlayerCameraHandler::OnLookInput(const FVector2D newLookInput)
@@ -76,6 +77,9 @@ void UPlayerCameraHandler::CameraRoll()
 
 	// Set the controller roll input to the new roll value
 	playerCharacter->AddControllerRollInput(newRoll - currentRoll);
+
+	FRotator newCameraRotation = FRotator(cameraRollTarget->GetRelativeRotation().Pitch,cameraRollTarget->GetRelativeRotation().Yaw ,playerCharacter->GetControlRotation().Roll);
+	cameraRollTarget->SetRelativeRotation(newCameraRotation);
 }
 
 void UPlayerCameraHandler::CameraFOV()

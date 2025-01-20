@@ -125,9 +125,10 @@ void UPlayerMovement::OnDashInput()
 
 void UPlayerMovement::OnJumpInput(const bool isJumping)
 {
-	if (isJumping && PlayerData::CanJump())
+	if (isJumping && PlayerData::CanJump() && playerCharacter->GetMovementComponent()->IsMovingOnGround())
 	{
 		playerCharacter->Jump();
+		PlayerData::NextAllowedGroundSlam = UGameplayStatics::GetRealTimeSeconds(GetWorld()) + groundSlamCooldownAfterJump;
 	}
 	else
 	{
@@ -137,7 +138,9 @@ void UPlayerMovement::OnJumpInput(const bool isJumping)
 
 void UPlayerMovement::OnGroundSlamInput()
 {
-	if (!playerCharacter->GetCharacterMovement()->IsFalling() || !PlayerData::CanGroundSlam())
+	if (!playerCharacter->GetCharacterMovement()->IsFalling()
+		|| !PlayerData::CanGroundSlam()
+		|| UGameplayStatics::GetRealTimeSeconds(GetWorld()) < PlayerData::NextAllowedGroundSlam)
 	{
 		return;
 	}

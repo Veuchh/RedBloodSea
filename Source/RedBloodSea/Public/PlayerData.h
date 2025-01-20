@@ -19,6 +19,7 @@ public:
 	static int RemainingAirDashes;
 	static float DashEndTime;
 	static float NextAllowedDash;
+	static float NextAllowedGroundSlam;
 	
 	//-------------------------------------------Combat
 	static bool IsGodModeEnabled;

@@ -2,7 +2,7 @@
 
 
 #include "WeakpointsManager.h"
-#include "CountLevelInstanceSubsystem.h"
+#include "UDataSubsystem.h"
 #include "PossessTarget.h"
 
 
@@ -23,7 +23,7 @@ void UWeakpointsManager::BeginPlay()
 	Owner = GetOwner();
 	Skeleton = Cast<USkeletalMeshComponent>(Owner->GetComponentByClass(USkeletalMeshComponent::StaticClass()));
 	CreateWeakPoints();
-	CountSubSys = Cast<UCountLevelInstanceSubsystem>(GetWorld()->GetGameInstance()->GetSubsystem<UCountLevelInstanceSubsystem>());
+	CountSubSys = Cast<UUDataSubsystem>(GetWorld()->GetGameInstance()->GetSubsystem<UUDataSubsystem>());
 }
 
 

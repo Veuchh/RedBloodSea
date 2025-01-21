@@ -166,6 +166,7 @@ void UPlayerPossess::PossessRecoveryTick()
 	if (UGameplayStatics::GetTimeSeconds(GetWorld()) >= nextAllowedAction)
 	{
 		PlayerData::CurrentPossessState = PlayerPossessState::None;
+		OnPossessAimStop.Broadcast();
 	}
 }
 
@@ -174,7 +175,12 @@ void UPlayerPossess::PossessDweller()
 {
 	GEngine->AddOnScreenDebugMessage(-1, 5, FColor::Purple, "PossessDweller");
 	PlayerData::CurrentPossessTarget->Possess();
-	dwellerLinkSU->AddDwellerToLink(PlayerData::CurrentPossessTarget);
+	bool resultsInLink = dwellerLinkSU->AddDwellerToLink(PlayerData::CurrentPossessTarget);
+	
+	if(resultsInLink)
+	{
+		OnLinkInitiated.Broadcast();
+	}
 }
 
 void UPlayerPossess::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
@@ -285,11 +291,14 @@ void UPlayerPossess::OnPossessInput()
 		nextAllowedAction = UGameplayStatics::GetTimeSeconds(GetWorld()) + possessDelay;
 		OnThrowRapierTarget.Broadcast(Hit.ImpactPoint);
 		isInputModeActionPressed = false;
-		OnPossessAimStop.Broadcast();
 	}
 	//otherwise, we just play the throw fail animation
 	else
 	{
+		if (PlayerData::CurrentPossessState == PlayerPossessState::PossessRecovery)
+		{
+			OnPossessAimStop.Broadcast();
+		}
 		PlayerData::CurrentPossessState = PlayerPossessState::ThrowFail;
 		nextAllowedAction = UGameplayStatics::GetTimeSeconds(GetWorld()) + throwFailDuration;
 

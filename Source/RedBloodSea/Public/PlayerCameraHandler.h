@@ -33,9 +33,10 @@ public:
 private:
 	void CameraRoll();
 	void CameraFOV();
-	void AimAssist();
+	void AimAssist(float deltaTime);
 	AWeakpoint* GetAimAssistTarget();
 
+	APlayerController* playerController;
 	ACharacter* playerCharacter;
 	UCameraComponent* playerCameraComponent;
 	USceneComponent* cameraRollTarget;
@@ -66,15 +67,15 @@ private:
 
 	/*The max distance a weakpoint has to be from the camera in order for the aim assist to kick in*/
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "AimAssist")
-	float aimAssistMaxDistanceFromWeakpoint = 1;
+	float aimAssistMaxDistanceFromWeakpoint = 250;
 
 	/*The aim assist strength, or speed at wich it goes toward the target*/
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "AimAssist")
-	float aimAssistStrength = 1;
+	float aimAssistStrength = 60;
 
 	/*The max distance of the weakpoint on the screen center before the aim assist kicks in*/
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "AimAssist")
-	float aimAssistMaxDistanceFromScreenCenter = 1;
+	float aimAssistMaxDistanceFromScreenCenter = .2f;
 
 	bool isCameraAttachedToPlayer = false;
 

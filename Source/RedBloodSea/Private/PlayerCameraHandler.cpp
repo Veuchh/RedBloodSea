@@ -34,15 +34,11 @@ void UPlayerCameraHandler::TickComponent(float DeltaTime, ELevelTick TickType,
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-	GEngine->AddOnScreenDebugMessage(-1, 0, FColor::Red,
-	                                 "CurrentWeakpointsInGlobalList : " + FString::FromInt(
-		                                 UWeakpointsManager::GlobalWeakpointList.Num()));
-
 	playerCharacter->GetMesh()->SetRelativeRotation(FRotator(playerCharacter->GetControlRotation().Pitch, 0, 0));
 
 	CameraRoll();
 	CameraFOV();
-	AimAssist();
+	AimAssist(DeltaTime);
 }
 
 void UPlayerCameraHandler::SetupPlayerCameraComponent(ACharacter* PlayerCharacter,
@@ -54,6 +50,8 @@ void UPlayerCameraHandler::SetupPlayerCameraComponent(ACharacter* PlayerCharacte
 	playerCameraComponent->AttachToComponent(playerCharacter->GetMesh(), FAttachmentTransformRules::KeepWorldTransform,
 	                                         TEXT("cameraSocket"));
 	cameraRollTarget = newCameraRollTarget;
+
+	playerController = playerCharacter->GetLocalViewingPlayerController();
 }
 
 void UPlayerCameraHandler::OnLookInput(const FVector2D newLookInput)
@@ -114,9 +112,27 @@ void UPlayerCameraHandler::CameraFOV()
 	playerCameraComponent->SetFieldOfView(newFOV);
 }
 
-void UPlayerCameraHandler::AimAssist()
+void UPlayerCameraHandler::AimAssist(float deltaTime)
 {
-	GetAimAssistTarget();
+	if (PlayerData::CanRotateCamera() && playerCharacter->Controller != nullptr)
+	{
+		AWeakpoint* aimAssistTarget = GetAimAssistTarget();
+
+		if (aimAssistTarget != nullptr)
+		{
+
+			FVector2d screenPosition = FVector2d::ZeroVector;
+			playerController->ProjectWorldLocationToScreen(aimAssistTarget->GetActorLocation(), screenPosition, false);
+			FVector2D ViewportSize = FVector2D(GEngine->GameViewport->Viewport->GetSizeXY());
+			screenPosition = (screenPosition / ViewportSize)- (FVector2d::One() / 2);
+			
+			GEngine->AddOnScreenDebugMessage(-1, 0, FColor::Red, FString::SanitizeFloat(screenPosition.X));
+			
+			// add yaw and pitch input to controller
+			playerCharacter->AddControllerYawInput(screenPosition.X * aimAssistStrength * deltaTime);
+			playerCharacter->AddControllerPitchInput(screenPosition.Y * aimAssistStrength * deltaTime);
+		}
+	}
 }
 
 //This returns nullptr if no suitable weakpoint is found
@@ -124,26 +140,29 @@ AWeakpoint* UPlayerCameraHandler::GetAimAssistTarget()
 {
 	AWeakpoint* bestWeakpoint = nullptr;
 	float bestDistanceFromScreenCenter = std::numeric_limits<float>::max();
-
-	GEngine->AddOnScreenDebugMessage(-1, 0, FColor::Red,
-	                                 "Interating through " + FString::FromInt(
-		                                 UWeakpointsManager::GlobalWeakpointList.Num()) + " Items");
+	FVector2D ViewportSize = FVector2D(GEngine->GameViewport->Viewport->GetSizeXY());
 
 	for (AWeakpoint* Weakpoint : UWeakpointsManager::GlobalWeakpointList)
 	{
 		double distanceFromCamera = (Weakpoint->GetActorLocation() - playerCameraComponent->GetComponentLocation()).
 			Length();
-		
-		if (Weakpoint->State == EWeakpointState::Revealed)
-			GEngine->AddOnScreenDebugMessage(-1, 0, FColor::Red, FString::SanitizeFloat(distanceFromCamera) + " < " + FString::SanitizeFloat(aimAssistMaxDistanceFromWeakpoint)  + FString((distanceFromCamera < aimAssistMaxDistanceFromWeakpoint) ? " = true" : " = false"));
-		
+
 		if (Weakpoint->State == EWeakpointState::Revealed
 			&& distanceFromCamera < aimAssistMaxDistanceFromWeakpoint)
 		{
-			FVector2D d = FVector2d::ZeroVector;
-			playerCharacter->GetLocalViewingPlayerController()->ProjectWorldLocationToScreen(
-				Weakpoint->GetActorLocation(), d, true);
-			GEngine->AddOnScreenDebugMessage(-1, 0, FColor::Red, *d.ToString());
+			FVector2D screenPosition = FVector2d::ZeroVector;
+			if (playerController->ProjectWorldLocationToScreen(Weakpoint->GetActorLocation(), screenPosition, true))
+			{
+				screenPosition = screenPosition / ViewportSize;
+				float distanceToCenter = (screenPosition - (FVector2d::One() / 2)).Length();
+
+				if (distanceToCenter < aimAssistMaxDistanceFromScreenCenter && distanceToCenter <
+					bestDistanceFromScreenCenter)
+				{
+					bestWeakpoint = Weakpoint;
+					bestDistanceFromScreenCenter = distanceToCenter;
+				}
+			}
 		}
 	}
 

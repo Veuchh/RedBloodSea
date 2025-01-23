@@ -14,6 +14,7 @@ AWeakpoint::AWeakpoint()
 	Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
 	Mesh->SetupAttachment(Collider);
 	State = EWeakpointState::Hidden;
+	
 	//Mesh->SetupAttachment(Collider);
 	//mesh->SetMaterial(0,)
 
@@ -24,6 +25,8 @@ void AWeakpoint::BeginPlay()
 {
 	Super::BeginPlay();
 	Mesh->SetVisibility(false);
+	if(!WeakpointsMeshes.IsEmpty())
+		Mesh->SetStaticMesh(WeakpointsMeshes[FMath::RandRange(0,WeakpointsMeshes.Num()-1)]);
 
 }
 

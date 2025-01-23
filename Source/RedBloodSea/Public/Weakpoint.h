@@ -24,6 +24,8 @@ public:
 	AWeakpoint();
 	UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Weakpoints Handler")
 	EWeakpointState State;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Weakpoints Handler")
+	TArray<TObjectPtr<UStaticMesh>> WeakpointsMeshes;
 private:
 	TObjectPtr<UMaterialInstance> Material;
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta=(AllowPrivateAccess = "true"))

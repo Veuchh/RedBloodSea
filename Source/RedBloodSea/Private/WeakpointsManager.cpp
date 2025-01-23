@@ -131,7 +131,7 @@ void UWeakpointsManager::AttachWeakpoint(const FWeakpointSlot& WeakpointSlot, co
 {
 	MaxHealthPoint++;
 	HealthPoint++;
-	AActor* newActor = GetWorld()->SpawnActor(WeakpointData->Weakpoint_BP);
+	AActor* newActor = GetWorld()->SpawnActor(WeakpointData->Weakpoints_BP);
 	newActor->AttachToComponent(Skeleton, FAttachmentTransformRules::SnapToTargetNotIncludingScale,
 	                            WeakpointSlot.SocketName);
 
@@ -141,6 +141,14 @@ void UWeakpointsManager::AttachWeakpoint(const FWeakpointSlot& WeakpointSlot, co
 		FMath::FRandRange(-WeakpointSlot.MaxOffset.Z, WeakpointSlot.MaxOffset.Z)
 	};
 	newActor->SetActorRelativeLocation(offset);
+
+	const FRotator rot = {
+		FMath::FRand()*360.f,
+		FMath::FRand()*360.f,
+		FMath::FRand()*360.f
+	};
+	newActor->SetActorRotation(rot);
+	
 	TObjectPtr<AWeakpoint> Weakpoint = Cast<AWeakpoint>(newActor);
 	Weakpoint->SetActorScale3D(FVector(1, 1, 1) * Size);
 	Weakpoints.Add(WeakpointSlot.SocketName, Weakpoint);

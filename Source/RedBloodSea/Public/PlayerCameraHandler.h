@@ -25,7 +25,7 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType,
 	                           FActorComponentTickFunction* ThisTickFunction) override;
-	void SetupPlayerCameraComponent(ACharacter* PlayerCharacter, UCameraComponent* PlayerCameraComponent);
+	void SetupPlayerCameraComponent(ACharacter* PlayerCharacter, UCameraComponent* PlayerCameraComponent, USceneComponent* newCameraRollTarget);
 	void OnLookInput(FVector2D newLookInput);
 
 private:
@@ -33,6 +33,7 @@ private:
 	void CameraFOV();
 	ACharacter* playerCharacter;
 	UCameraComponent* playerCameraComponent;
+	USceneComponent* cameraRollTarget;
 
 	/*How much (in degrees) the camera will roll to the left or right when moving to the side*/
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Camera")

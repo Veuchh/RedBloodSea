@@ -212,6 +212,7 @@ void UPlayerCombat::TryConsumeAttackBuffer()
 	if (PlayerData::AttackBuffer.Num() <= 0)
 		return;
 
+	wasWeakpointHitThisAttack = false;
 	PlayerData::CurrentAttackState = PlayerAttackState::Startup;
 	PlayerData::CurrentAttack = PlayerData::AttackBuffer[0];
 	PlayerData::AttackBuffer.RemoveAt(0);
@@ -229,7 +230,6 @@ void UPlayerCombat::OngoingAttackLogic()
 		{
 			PlayerData::CurrentAttackState = PlayerAttackState::Attacking;
 			ToggleAttackCollider(PlayerData::CurrentAttack, true);
-			wasWeakpointHitThisAttack = false;
 			return;
 		}
 		break;

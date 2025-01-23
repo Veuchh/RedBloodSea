@@ -29,6 +29,8 @@ public:
 	//UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Weakpoints Handler",EditFixedSize)
 	//TArray<FName> UsedWeakpointsSocketsNames;
 
+	static TArray<AWeakpoint*> GlobalWeakpointList;
+
 private:
 	AActor* Owner;
 	TObjectPtr<UUDataSubsystem> CountSubSys;
@@ -49,6 +51,7 @@ protected:
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+	virtual void OnComponentDestroyed(bool bDestroyingHierarchy) override;
 	// WEAKPOINTS FUNCTIONS
 	void CreateWeakPoints();
 	void AttachWeakpoint(const FWeakpointSlot& WeakpointSlot,const float Size);

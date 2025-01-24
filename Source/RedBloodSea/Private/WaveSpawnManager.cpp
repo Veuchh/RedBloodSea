@@ -3,6 +3,9 @@
 
 #include "WaveSpawnManager.h"
 
+#include "PlayerData.h"
+#include "Subsystems/UnrealEditorSubsystem.h"
+
 
 // Sets default values
 AWaveSpawnManager::AWaveSpawnManager()
@@ -16,8 +19,9 @@ AWaveSpawnManager::AWaveSpawnManager()
 void AWaveSpawnManager::BeginPlay()
 {
 	Super::BeginPlay();
-	if(GEngine)
-		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("WaveSpawnManagerBegin"));
+
+	Waves[CurrentWave].BeginWaveTriggerZone->OnActorBeginOverlap.AddUniqueDynamic(this,&AWaveSpawnManager::OnBeginTriggerOverlap);
+	CurrentWave = 0;
 }
 
 // Called every frame
@@ -29,11 +33,11 @@ void AWaveSpawnManager::Tick(float DeltaTime)
 		for(int i = 0; i < SpawnPerTick; i++)
 		{
 			if(SpawnQueue.IsEmpty() || AliveDwellers.Num()>=MaxAliveDweller)
-				break;
+				return;
 		
-			FDwellerProfile Type;
-			SpawnQueue.Dequeue(Type);
-			SpawnDweller(Type);
+			TTuple<TObjectPtr<AActor>,FDwellerProfile> Info;
+			SpawnQueue.Dequeue(Info);
+			SpawnDweller(Info.Key->GetTransform(),Info.Value);
 		}
 	}
 
@@ -41,104 +45,144 @@ void AWaveSpawnManager::Tick(float DeltaTime)
 	{
 		if(AliveDwellers.IsEmpty() && bIsActive)
 		{
-			if(CurrentWave < WavesData->Waves.Num()-1)
-			{
-				QueueWave(++CurrentWave);
-				return;
-			}
-			//TODO End level here
 			bIsActive = false;
-			OnLevelEnd.Broadcast();
-			if(GEngine)
-				GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Level End: All enemies are dead or linked"));
+			WaveEnd();
 		}
 	}
 }
 
-void AWaveSpawnManager::SpawnStart()
+
+
+void AWaveSpawnManager::WaveStart()
 {
 	bIsActive = true;
 	SetActorTickEnabled(true);
-	QueueWave(0);
-	if(GEngine)
-		GEngine->AddOnScreenDebugMessage(-1, 1.f, FColor::Yellow, TEXT("Start Spawning Dwellers"));
+	ClearAliveDwellers(false);
+	QueueWave(CurrentWave);
+	if(Waves[CurrentWave].bTimeLimit)
+	{
+		if(Waves[CurrentWave].Type != EWaveType::SURVIVE)
+		{
+			GetWorld()->GetTimerManager().SetTimer(CurrentWaveTimer, this, &AWaveSpawnManager::WaveFail,
+											  Waves[CurrentWave].Duration, false);
+		} else
+		{
+			GetWorld()->GetTimerManager().SetTimer(CurrentWaveTimer, this, &AWaveSpawnManager::WaveEnd,
+										   Waves[CurrentWave].Duration, false);
+		}
+	}
+
+	if(Waves[CurrentWave].Type ==  EWaveType::CHECKPOINT)
+	{
+		Waves[CurrentWave].CheckpointTriggerZone->OnActorBeginOverlap.AddUniqueDynamic(this,&AWaveSpawnManager::OnCheckpointBeginOverlap);
+	}
 }
 
-void AWaveSpawnManager::SpawnStop()
-{
-	bIsActive = false;
-	SetActorTickEnabled(false);
-	SpawnReset();
-}
 
-void AWaveSpawnManager::SpawnPause()
+void AWaveSpawnManager::WaveEnd()
 {
-	bIsActive = false;
-	SetActorTickEnabled(false);
-}
-
-void AWaveSpawnManager::SpawnResume()
-{
-	bIsActive = true;
+ 	bIsActive = false;
+	SpawnQueue.Empty();
 	SetActorTickEnabled(true);
+	ClearAliveDwellers(false);
+	if(Waves[CurrentWave].bTimeLimit)
+	{
+		GetWorld()->GetTimerManager().ClearTimer(CurrentWaveTimer);
+	}
+	CurrentWave++;
+	if(Waves.Num() > CurrentWave)
+	{
+		Waves[CurrentWave].BeginWaveTriggerZone->OnActorBeginOverlap.AddUniqueDynamic(this,&AWaveSpawnManager::OnBeginTriggerOverlap);
+		OnWaveSuccess.Broadcast();
+	} else
+	{
+		OnLevelEnd.Broadcast();
+	}
 }
 
-void AWaveSpawnManager::SpawnReset()
+void AWaveSpawnManager::WaveFail()
+{
+	WaveReset();
+	OnWaveFail.Broadcast();
+}
+
+void AWaveSpawnManager::WaveReset()
 {
 	bIsActive = false;
 	SetActorTickEnabled(false);
 	SpawnQueue.Empty();
-	CurrentWave = 0;
-	for (auto Dweller : AliveDwellers)
+	if(Waves[CurrentWave].bTimeLimit)
 	{
-		if(IsValid(Dweller))
-		{
-			Dweller->Destroy();
-		}
+		GetWorld()->GetTimerManager().ClearTimer(CurrentWaveTimer);
 	}
-	
-	AliveDwellers.Empty();
+	CurrentWave = 0;
+	ClearAliveDwellers(true);
 }
 
 void AWaveSpawnManager::QueueWave(int WaveNumber)
 {
-	for (auto Wave : WavesData->Waves)
+
+	for (auto Profile : Waves[CurrentWave].DwellerProfiles)
 	{
-		for (auto Profile : Wave.DwellerProfiles)
-		{
-			SpawnQueue.Enqueue(Profile);
-		}
+		SpawnQueue.Enqueue(Profile);
 	}
 }
 
-void AWaveSpawnManager::SpawnDweller(FDwellerProfile Type)
+void AWaveSpawnManager::SpawnDweller(FTransform Transform, FDwellerProfile Type)
 {
-	FTransform Transform = GetActorTransform();
-	//TODO use EQS to get random valid position on the navmesh instead
-	if(Spawners.Num() > 0)
-	{
-		int randomInt = FMath::RandRange(0, Spawners.Num() - 1);
-		Transform = Spawners[randomInt]->GetActorTransform();
-	}
-	ADweller* newDweller = GetWorld()->SpawnActorDeferred<ADweller>(WavesData->DwellerBP,Transform);
+	ADweller* newDweller = GetWorld()->SpawnActorDeferred<ADweller>(DwellerBP,Transform);
 	if(newDweller)
 	{
 		AliveDwellers.Add(newDweller);
-		UWeakpointsManager* weakpointsManager = newDweller->GetWeakpointManager();
-		weakpointsManager->OnDeath.AddUniqueDynamic(this,&AWaveSpawnManager::OnDwellerDeath);
+		UWeakpointsManager* WeakpointsManager = newDweller->GetWeakpointManager();
+		WeakpointsManager->OnDeath.AddUniqueDynamic(this,&AWaveSpawnManager::OnDwellerDeath);
+
 		for(int i = 0; i <= static_cast<int>(EWeakpointSize::NUM); i++)
 		{
-			weakpointsManager->SizeNumber[i] = Type.SizeNumber[i];
+			WeakpointsManager->SizeNumber[i] = Type.SizeNumber[i];
 		}
-		weakpointsManager->TypeFilter = Type.TypeFilter;
+		WeakpointsManager->TypeFilter = Type.TypeFilter;
 		
 		if(Type.bIsAntagonist)
 			newDweller->Tags.Add("Antagonist");
 
 		newDweller->FinishSpawning(Transform);
+
+		UPossessTarget* PossessTarget = newDweller->GetComponentByClass<UPossessTarget>();
+		PossessTarget->OnLinked.AddUniqueDynamic(this,&AWaveSpawnManager::OnDwellerLinked);
 	}
-	//if(GEngine)
-	//	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Spawning a Dweller"));
+}
+
+void AWaveSpawnManager::ClearAliveDwellers(bool RemovePlayerDweller)
+{
+	ADweller* PlayerDweller = Cast<ADweller>(PlayerData::CurrentPossessTarget->GetOwner());
+	for (auto Dweller : AliveDwellers)
+	{
+		if(IsValid(Dweller) && (RemovePlayerDweller || Dweller != PlayerDweller))
+		{
+			RemoveDweller(Dweller,false);
+			Dweller->Destroy();
+		}
+	}
+
+	if(!RemovePlayerDweller)
+	{
+		AliveDwellers.RemoveAll([PlayerDweller](ADweller* Dweller) {
+		   return Dweller != PlayerDweller;
+	   });
+	} else
+	{
+		AliveDwellers.Empty();
+	}
+}
+
+bool AWaveSpawnManager::CheckObjectives()
+{
+	if(Waves[CurrentWave].Type == EWaveType::CLEAR_ALL)
+	{
+		return AliveDwellers.Num() == 0;
+	}
+	return false;
 }
 
 void AWaveSpawnManager::OnDwellerDeath(AActor* DwellerActor)
@@ -147,62 +191,103 @@ void AWaveSpawnManager::OnDwellerDeath(AActor* DwellerActor)
 	if(Dweller)
 	{
 		AliveDwellers.Remove(Dweller);
+		Waves[CurrentWave].DwellerKilled++;
 	}
-	if(AliveDwellers.Num() <= 1 && CurrentWave >= WavesData->Waves.Num())
+	if((Waves[CurrentWave].Type == EWaveType::CLEAR_SOME && Waves[CurrentWave].DwellerKilled >= Waves[CurrentWave].DwellerToKill)
+		||	AliveDwellers.Num())
 	{
-		OnLevelEnd.Broadcast();
+		WaveEnd();
+		OnWaveSuccess.Broadcast();
 	}
+}
+
+void AWaveSpawnManager::OnDwellerLinked(AActor* Actor)
+{
+	ADweller* Dweller = Cast<ADweller>(Actor);
+	if(Dweller)
+	{
+		AliveDwellers.Remove(Dweller);
+		Waves[CurrentWave].DwellerLinked++;
+	}
+	if((Waves[CurrentWave].Type == EWaveType::CLEAR_SOME && Waves[CurrentWave].DwellerLinked >= Waves[CurrentWave].DwellerToLink)
+		|| (AliveDwellers.Num() <= 1))
+	{
+		WaveEnd();
+		OnWaveSuccess.Broadcast();
+	}
+
 }
 
 void AWaveSpawnManager::AddDweller(ADweller* Dweller)
 {
 	AliveDwellers.Add(Dweller);
-	UWeakpointsManager* weakpointsManager = Dweller->GetWeakpointManager();
-	weakpointsManager->OnDeath.AddUniqueDynamic(this,&AWaveSpawnManager::OnDwellerDeath);
+	UWeakpointsManager* WeakpointsManager = Dweller->GetWeakpointManager();
+	UPossessTarget* PossessTarget = Dweller->GetComponentByClass<UPossessTarget>();
+	WeakpointsManager->OnDeath.AddUniqueDynamic(this,&AWaveSpawnManager::OnDwellerDeath);
+	PossessTarget->OnLinked.AddUniqueDynamic(this,&AWaveSpawnManager::OnDwellerLinked);
 }
 
-void AWaveSpawnManager::RemoveDweller(ADweller* Dweller)
+void AWaveSpawnManager::RemoveDweller(ADweller* Dweller,bool bRemoveFromArray)
 {
-	AliveDwellers.Remove(Dweller);
-	UWeakpointsManager* weakpointsManager = Dweller->GetWeakpointManager();
-	weakpointsManager->OnDeath.RemoveDynamic(this,&AWaveSpawnManager::OnDwellerDeath);
+	if(bRemoveFromArray)
+		AliveDwellers.Remove(Dweller);
+	UWeakpointsManager* WeakpointsManager = Dweller->GetWeakpointManager();
+	UPossessTarget* PossessTarget = Dweller->GetComponentByClass<UPossessTarget>();
+	WeakpointsManager->OnDeath.RemoveDynamic(this,&AWaveSpawnManager::OnDwellerDeath);
+	PossessTarget->OnLinked.RemoveDynamic(this,&AWaveSpawnManager::OnDwellerLinked);
+}
+
+void AWaveSpawnManager::OnBeginTriggerOverlap(AActor* OverlapedActor, AActor* OtherActor)
+{
+	Waves[CurrentWave].BeginWaveTriggerZone->OnActorBeginOverlap.RemoveDynamic(this,&AWaveSpawnManager::OnBeginTriggerOverlap);
+	WaveStart();
+}
+
+void AWaveSpawnManager::OnCheckpointBeginOverlap(AActor* OverlapedActor, AActor* OtherActor)
+{
+	Waves[CurrentWave].CheckpointTriggerZone->OnActorBeginOverlap.RemoveDynamic(this,&AWaveSpawnManager::OnCheckpointBeginOverlap);
+	WaveEnd();
 }
 
 #if WITH_EDITOR
 void AWaveSpawnManager::CreateSpawner()
 {
-	AActor* newActor = GetWorld()->SpawnActor(WavesData->SpawnerBP);
+	AActor* newActor = GetWorld()->SpawnActor(SpawnerBP);
 	newActor->AttachToActor(this, FAttachmentTransformRules::SnapToTargetNotIncludingScale);
-	Spawners.Add(newActor);
-
-
-	//This should work but doesn't fml
-	//FEditorViewportClient* client = (FEditorViewportClient*)GEditor->GetActiveViewport()->GetClient();
-	// if(client != NULL)
-	// {
-	// 	FVector CamForward = client->GetViewRotation().Vector();
-	// 	FVector CamLocation = client->GetViewLocation();	
-	// 	FHitResult Hit;
-	// 	if(GetWorld()->LineTraceSingleByChannel(Hit,CamLocation,CamLocation + CamForward*10000,ECC_WorldStatic,FCollisionQueryParams(),FCollisionResponseParams()))
-	// 	{
-	// 		newActor->SetActorLocation(Hit.Location);
-	// 		return;
-	// 	}
-	// }
+	while(Waves.Num()-1 < CurrentWave)
+	{
+		Waves.Add(FWave());
+	}
+	Waves[CurrentWave].DwellerProfiles.Add(newActor);
+		
 	newActor->SetActorLocation(this->GetActorLocation());
 }
 
 void AWaveSpawnManager::ClearSpawners()
 {
-	for (auto Spawner : Spawners)
+	for (auto Wave : Waves)
 	{
-		if(IsValid(Spawner))
+		for (auto Spawner : Wave.DwellerProfiles)
 		{
-			Spawner->Destroy();
+			if(IsValid(Spawner.Key))
+			{
+				Spawner.Key->Destroy();
+			}
 		}
-		
+		Wave.DwellerProfiles.Empty();
 	}
-	Spawners.Empty();
+}
+
+void AWaveSpawnManager::PostEditChangeProperty(struct FPropertyChangedEvent& e)
+{
+	
+	Super::PostEditChangeProperty(e);
+	FName PropertyName = (e.Property != NULL) ? e.Property->GetFName() : NAME_None;
+	// if (PropertyName == GET_MEMBER_NAME_CHECKED(TArray<FWave>, Waves))
+	// {
+	// 	WeakpointsSockets.Empty();
+	// 	UpdateSockets();
+	// }
 }
 #endif
 

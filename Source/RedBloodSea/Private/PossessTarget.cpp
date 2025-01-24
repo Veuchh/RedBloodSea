@@ -42,7 +42,7 @@ void UPossessTarget::Unpossess(FVector repositionEnemyAtPosition)
 
 void UPossessTarget::Link()
 {
-	OnLinked.Broadcast();
+	OnLinked.Broadcast(GetOwner());
 }
 
 void UPossessTarget::OnKilled()

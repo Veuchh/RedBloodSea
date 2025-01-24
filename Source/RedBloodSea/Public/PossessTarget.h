@@ -6,7 +6,7 @@
 #include "Components/ActorComponent.h"
 #include "PossessTarget.generated.h"
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPossessed);
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnLinked);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnLinked, AActor*, Actor);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPrepareForPossess);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnUnpossessed, FVector, RepositionEnemyAtPosition);
 

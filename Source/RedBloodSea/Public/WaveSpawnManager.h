@@ -4,9 +4,49 @@
 
 #include "CoreMinimal.h"
 #include "Dweller.h"
-#include "WavesData.h"
 #include "GameFramework/Actor.h"
 #include "WaveSpawnManager.generated.h"
+
+
+UENUM()
+enum class EWaveType
+{
+	SURVIVE,
+	CLEAR_ALL,
+	RUN
+};
+
+USTRUCT(BlueprintType)
+struct FDwellerProfile
+{
+	GENERATED_BODY()
+	UPROPERTY(EditAnywhere,meta=(Bitmask,BitmaskEnum = EWeakpointType))
+	uint8 TypeFilter = static_cast<int>(EWeakpointType::HEAD) | static_cast<int>(EWeakpointType::ARMS) | static_cast<int>(EWeakpointType::LEGS) | static_cast<int>(EWeakpointType::TORSO);
+	UPROPERTY(EditAnywhere,meta=(ArraySizeEnum="EWeakpointSize"))
+	int SizeNumber[static_cast<int>(EWeakpointSize::NUM)] = {1};
+	UPROPERTY(EditAnywhere)
+	bool bIsAntagonist = false;
+}; UMETA(DisplayName="Wave")
+
+USTRUCT(BlueprintType)
+struct FWave
+{
+	GENERATED_BODY()
+	
+public:
+	UPROPERTY(EditAnywhere)
+	bool bHasTimer;
+	UPROPERTY(EditAnywhere)
+	FTimespan Duration;
+	UPROPERTY(EditAnywhere)
+	TMap<TObjectPtr<AActor>,FDwellerProfile> DwellerProfiles;
+
+private:
+	FDateTime StartTime;
+	FDateTime EndTime;
+	
+}; UMETA(DisplayName="Wave")
+
 
 UCLASS()
 class REDBLOODSEA_API AWaveSpawnManager : public AActor
@@ -18,24 +58,27 @@ public:
 	AWaveSpawnManager();
 
 private:
-	UPROPERTY(EditAnywhere,BlueprintReadWrite,meta=(AllowPrivateAccess = "true"),Category="DwellerSpawners")
-	TObjectPtr<UWavesData> WavesData;
-	UPROPERTY(VisibleAnywhere,BlueprintReadOnly,meta=(AllowPrivateAccess = "true"),EditFixedSize,Category="DwellerSpawners")
-	TArray<AActor*> Spawners;
-	//UPROPERTY(VisibleAnywhere,BlueprintReadOnly,meta=(AllowPrivateAccess = "true"),EditFixedSize,Category="DwellerSpawners")
-	TQueue<FDwellerProfile,EQueueMode::Spsc> SpawnQueue;
-	UPROPERTY(VisibleAnywhere,BlueprintReadOnly,meta=(AllowPrivateAccess = "true"),EditFixedSize,Category="DwellerSpawners")
+	UPROPERTY(VisibleAnywhere,BlueprintReadOnly,meta=(AllowPrivateAccess = "true"),EditFixedSize,Category="WavesParams")
 	TArray<ADweller*> AliveDwellers;
-	UPROPERTY(EditAnywhere,BlueprintReadWrite,meta=(AllowPrivateAccess = "true",ClampMin=1),EditFixedSize,Category="DwellerSpawners")
+	UPROPERTY(EditAnywhere,BlueprintReadWrite,meta=(AllowPrivateAccess = "true",ClampMin=1),EditFixedSize,Category="WavesParams")
 	int SpawnPerTick = 1;
-	UPROPERTY(EditAnywhere,BlueprintReadWrite,meta=(AllowPrivateAccess = "true",ClampMin=1),EditFixedSize,Category="DwellerSpawners")
+	UPROPERTY(EditAnywhere,BlueprintReadWrite,meta=(AllowPrivateAccess = "true",ClampMin=1),EditFixedSize,Category="WavesParams")
 	int MaxAliveDweller = 10;
-	UPROPERTY(VisibleAnywhere,BlueprintReadOnly,meta=(AllowPrivateAccess = "true"),EditFixedSize,Category="DwellerSpawners")
+	UPROPERTY(EditAnywhere,BlueprintReadWrite,meta=(AllowPrivateAccess = "true",ClampMin=1),EditFixedSize,Category="WavesParams")
+	const TObjectPtr<UClass> SpawnerBP;
+	UPROPERTY(EditAnywhere,BlueprintReadWrite,meta=(AllowPrivateAccess = "true",ClampMin=1),EditFixedSize,Category="WavesParams")
+	const TObjectPtr<UClass> DwellerBP;
+
+	
+	UPROPERTY(EditAnywhere,BlueprintReadWrite,meta=(AllowPrivateAccess = "true"),Category="Waves")
+	TArray<FWave> Waves;
+	UPROPERTY(EditAnywhere,BlueprintReadOnly,meta=(AllowPrivateAccess = "true"),EditFixedSize,Category="Waves")
 	int CurrentWave;
 
 	bool bIsActive = false;
 	
 protected:
+	TQueue<TTuple<TObjectPtr<AActor>,FDwellerProfile>,EQueueMode::Spsc> SpawnQueue;
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
@@ -52,8 +95,12 @@ public:
 	void SpawnResume();
 	UFUNCTION(BlueprintCallable)
 	void SpawnReset();
+	UFUNCTION()
+	void StartWave(int WaveNumber);
+	void EndCurrentWave();
 	void QueueWave(int WaveNumber);
-	void SpawnDweller(FDwellerProfile Type);
+	void SpawnDweller(FTransform Transform, FDwellerProfile Type);
+	void ClearAliveDwellers();
 
 	UFUNCTION()
 	void OnDwellerDeath(AActor* DwellerActor);

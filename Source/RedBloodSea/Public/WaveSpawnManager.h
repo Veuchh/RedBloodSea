@@ -11,9 +11,10 @@
 UENUM()
 enum class EWaveType
 {
-	SURVIVE,
-	CLEAR_ALL,
-	RUN
+	SURVIVE			UMETA(DisplayName="SURVIVE"),
+	CLEAR_ALL		UMETA(DisplayName="CLEAR_ALL"),
+	CHECKPOINT		UMETA(DisplayName="CHECKPOINT"),
+	CLEAR_SOME		UMETA(DisplayName="CLEAR_SOME")
 };
 
 USTRUCT(BlueprintType)
@@ -23,7 +24,7 @@ struct FDwellerProfile
 	UPROPERTY(EditAnywhere,meta=(Bitmask,BitmaskEnum = EWeakpointType))
 	uint8 TypeFilter = static_cast<int>(EWeakpointType::HEAD) | static_cast<int>(EWeakpointType::ARMS) | static_cast<int>(EWeakpointType::LEGS) | static_cast<int>(EWeakpointType::TORSO);
 	UPROPERTY(EditAnywhere,meta=(ArraySizeEnum="EWeakpointSize"))
-	int SizeNumber[static_cast<int>(EWeakpointSize::NUM)] = {1};
+	int SizeNumber[static_cast<int>(EWeakpointSize::NUM)] = {1,1,1};
 	UPROPERTY(EditAnywhere)
 	bool bIsAntagonist = false;
 }; UMETA(DisplayName="Wave")
@@ -32,14 +33,35 @@ USTRUCT(BlueprintType)
 struct FWave
 {
 	GENERATED_BODY()
+
+
+	UPROPERTY(EditAnywhere)
+	EWaveType Type;
+	UPROPERTY(EditAnywhere)
+	bool bTimeLimit;
+	UPROPERTY(EditAnywhere)
+	float Duration;
+
+	UPROPERTY(EditAnywhere)
+	TObjectPtr<AActor> BeginWaveTriggerZone;
+	UPROPERTY(EditAnywhere)
+	TObjectPtr<AActor> CheckpointTriggerZone;
+
+	UPROPERTY(EditAnywhere)
+	int DwellerToKill;
+	UPROPERTY(EditAnywhere)
+	int DwellerToLink;
+	UPROPERTY(VisibleAnywhere)
+	int DwellerKilled;
+	UPROPERTY(VisibleAnywhere)
+	int DwellerLinked;
 	
-public:
-	UPROPERTY(EditAnywhere)
-	bool bHasTimer;
-	UPROPERTY(EditAnywhere)
-	FTimespan Duration;
+	UPROPERTY(VisibleAnywhere)
+	bool bWaveCleared = false;
+	
 	UPROPERTY(EditAnywhere)
 	TMap<TObjectPtr<AActor>,FDwellerProfile> DwellerProfiles;
+
 
 private:
 	FDateTime StartTime;
@@ -75,6 +97,8 @@ private:
 	UPROPERTY(EditAnywhere,BlueprintReadOnly,meta=(AllowPrivateAccess = "true"),EditFixedSize,Category="Waves")
 	int CurrentWave;
 
+	FTimerHandle CurrentWaveTimer;
+
 	bool bIsActive = false;
 	
 protected:
@@ -82,30 +106,36 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
+public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	
 	UFUNCTION(BlueprintCallable)
-	void SpawnStart();
+	void WaveStart();
 	UFUNCTION(BlueprintCallable)
-	void SpawnStop();
+	void WaveEnd();
 	UFUNCTION(BlueprintCallable)
-	void SpawnPause();
+	void WaveReset();
 	UFUNCTION(BlueprintCallable)
-	void SpawnResume();
-	UFUNCTION(BlueprintCallable)
-	void SpawnReset();
-	UFUNCTION()
-	void StartWave(int WaveNumber);
-	void EndCurrentWave();
+	void WaveFail();
+
+	
 	void QueueWave(int WaveNumber);
 	void SpawnDweller(FTransform Transform, FDwellerProfile Type);
-	void ClearAliveDwellers();
+	void ClearAliveDwellers(bool RemovePlayerDweller = true);
+	bool CheckObjectives();
 
 	UFUNCTION()
 	void OnDwellerDeath(AActor* DwellerActor);
+	UFUNCTION()
+	void OnDwellerLinked(AActor* Actor);
 	void AddDweller(ADweller* Dweller);
-	void RemoveDweller(ADweller* Dweller);
+	void RemoveDweller(ADweller* Dweller,bool bRemoveFromArray = true);
+
+	UFUNCTION()
+	void OnBeginTriggerOverlap(AActor* OverlapedActor, AActor* OtherActor);
+	UFUNCTION()
+	void OnCheckpointBeginOverlap(AActor* OverlapedActor, AActor* OtherActor);
 
 #if WITH_EDITOR
 	//Editor functions
@@ -114,6 +144,7 @@ private:
 	void CreateSpawner();
 	UFUNCTION(CallInEditor,Category="DwellerSpawners")
 	void ClearSpawners();
+	void PostEditChangeProperty(struct FPropertyChangedEvent& e);
 #endif
 
 	
@@ -130,5 +161,8 @@ public:
 	FWaveStart OnWaveStart;
 	DECLARE_DYNAMIC_MULTICAST_DELEGATE(FWaveEnd);
 	UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="SpawnerEvents")
-	FWaveEnd OnWaveEnd;
+	FWaveEnd OnWaveFail;
+	UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="SpawnerEvents")
+	FWaveEnd OnWaveSuccess;
+	
 };

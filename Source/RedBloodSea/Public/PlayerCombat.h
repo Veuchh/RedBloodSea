@@ -45,6 +45,10 @@ private:
 	bool wasWeakpointHitThisAttack = false;
 
 protected:
+	/*How long before next attack after slash. Starts when the slash starts*/
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
+	float recoveryTimeDuration = 1.0f;
+	
 	/*The max amount of queued attacks*/
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
 	int maxAttackBufferCapacity = 1;

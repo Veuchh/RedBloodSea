@@ -306,14 +306,16 @@ void UPlayerCombat::OnGodModeToggle()
 
 void UPlayerCombat::DamagePlayer(int damageAmount)
 {
-	if (PlayerData::IsGodModeEnabled)
+	if (PlayerData::IsGodModeEnabled
+		||PlayerData::LastHitTime + recoveryTimeDuration >= UGameplayStatics::GetRealTimeSeconds(GetWorld()))
 	{
 		return;
 	}
 	
 	PlayerData::CurrentHPAmount -= damageAmount;
 	OnPlayerHit.Broadcast(PlayerData::CurrentHPAmount);
-
+	recoveryTimeDuration = UGameplayStatics::GetRealTimeSeconds(GetWorld());
+	
 	if (PlayerData::CurrentHPAmount > 0)
 	{
 		UWeakpointsManager* wpManager = PlayerData::CurrentPossessTarget->GetOwner()->GetComponentByClass<

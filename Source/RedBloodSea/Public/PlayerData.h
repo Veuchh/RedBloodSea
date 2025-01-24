@@ -33,6 +33,7 @@ public:
 	static int MaxAttackBufferCapacity;
 	static PlayerAttackState CurrentAttackState;
 	static float AttackStartTime;
+	static float LastHitTime;
 	static float NextAllowedInputBufferTime;
 	
 	//-----------------------------------------------------------------------------------Slash

@@ -3,6 +3,8 @@
 
 #include "WaveSpawnManager.h"
 
+#include "Subsystems/UnrealEditorSubsystem.h"
+
 
 // Sets default values
 AWaveSpawnManager::AWaveSpawnManager()
@@ -17,7 +19,7 @@ void AWaveSpawnManager::BeginPlay()
 {
 	Super::BeginPlay();
 	if(GEngine)
-		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("WaveSpawnManagerBegin"));
+		GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Yellow, TEXT("WaveSpawnManagerBegin"));
 }
 
 // Called every frame
@@ -31,9 +33,9 @@ void AWaveSpawnManager::Tick(float DeltaTime)
 			if(SpawnQueue.IsEmpty() || AliveDwellers.Num()>=MaxAliveDweller)
 				break;
 		
-			FDwellerProfile Type;
-			SpawnQueue.Dequeue(Type);
-			SpawnDweller(Type);
+			TTuple<TObjectPtr<AActor>,FDwellerProfile> Info;
+			SpawnQueue.Dequeue(Info);
+			SpawnDweller(Info.Key->GetTransform(),Info.Value);
 		}
 	}
 
@@ -41,7 +43,7 @@ void AWaveSpawnManager::Tick(float DeltaTime)
 	{
 		if(AliveDwellers.IsEmpty() && bIsActive)
 		{
-			if(CurrentWave < WavesData->Waves.Num()-1)
+			if(CurrentWave < Waves.Num()-1)
 			{
 				QueueWave(++CurrentWave);
 				return;
@@ -50,7 +52,7 @@ void AWaveSpawnManager::Tick(float DeltaTime)
 			bIsActive = false;
 			OnLevelEnd.Broadcast();
 			if(GEngine)
-				GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Level End: All enemies are dead or linked"));
+				GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Yellow, TEXT("Level End: All enemies are dead or linked"));
 		}
 	}
 }
@@ -60,7 +62,12 @@ void AWaveSpawnManager::SpawnStart()
 	bIsActive = true;
 	SetActorTickEnabled(true);
 	QueueWave(0);
-	if(GEngine)
+	if(Waves[CurrentWave].bHasTimer)
+	{
+		
+	}
+	
+ 	if(GEngine)
 		GEngine->AddOnScreenDebugMessage(-1, 1.f, FColor::Yellow, TEXT("Start Spawning Dwellers"));
 }
 
@@ -89,20 +96,22 @@ void AWaveSpawnManager::SpawnReset()
 	SetActorTickEnabled(false);
 	SpawnQueue.Empty();
 	CurrentWave = 0;
-	for (auto Dweller : AliveDwellers)
-	{
-		if(IsValid(Dweller))
-		{
-			Dweller->Destroy();
-		}
-	}
-	
-	AliveDwellers.Empty();
+	ClearAliveDwellers();
+}
+
+void AWaveSpawnManager::StartWave(int WaveNumber)
+{
+	QueueWave(WaveNumber);
+}
+
+void AWaveSpawnManager::EndCurrentWave()
+{
+	SpawnQueue.Empty();
 }
 
 void AWaveSpawnManager::QueueWave(int WaveNumber)
 {
-	for (auto Wave : WavesData->Waves)
+	for (auto Wave : Waves)
 	{
 		for (auto Profile : Wave.DwellerProfiles)
 		{
@@ -111,16 +120,9 @@ void AWaveSpawnManager::QueueWave(int WaveNumber)
 	}
 }
 
-void AWaveSpawnManager::SpawnDweller(FDwellerProfile Type)
+void AWaveSpawnManager::SpawnDweller(FTransform Transform, FDwellerProfile Type)
 {
-	FTransform Transform = GetActorTransform();
-	//TODO use EQS to get random valid position on the navmesh instead
-	if(Spawners.Num() > 0)
-	{
-		int randomInt = FMath::RandRange(0, Spawners.Num() - 1);
-		Transform = Spawners[randomInt]->GetActorTransform();
-	}
-	ADweller* newDweller = GetWorld()->SpawnActorDeferred<ADweller>(WavesData->DwellerBP,Transform);
+	ADweller* newDweller = GetWorld()->SpawnActorDeferred<ADweller>(DwellerBP,Transform);
 	if(newDweller)
 	{
 		AliveDwellers.Add(newDweller);
@@ -141,6 +143,19 @@ void AWaveSpawnManager::SpawnDweller(FDwellerProfile Type)
 	//	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Spawning a Dweller"));
 }
 
+void AWaveSpawnManager::ClearAliveDwellers()
+{
+	for (auto Dweller : AliveDwellers)
+	{
+		if(IsValid(Dweller))
+		{
+			Dweller->Destroy();
+		}
+	}
+	
+	AliveDwellers.Empty();
+}
+
 void AWaveSpawnManager::OnDwellerDeath(AActor* DwellerActor)
 {
 	ADweller* Dweller = Cast<ADweller>(DwellerActor);
@@ -148,7 +163,7 @@ void AWaveSpawnManager::OnDwellerDeath(AActor* DwellerActor)
 	{
 		AliveDwellers.Remove(Dweller);
 	}
-	if(AliveDwellers.Num() <= 1 && CurrentWave >= WavesData->Waves.Num())
+	if(AliveDwellers.Num() <= 1 && CurrentWave >= Waves.Num())
 	{
 		OnLevelEnd.Broadcast();
 	}
@@ -171,38 +186,49 @@ void AWaveSpawnManager::RemoveDweller(ADweller* Dweller)
 #if WITH_EDITOR
 void AWaveSpawnManager::CreateSpawner()
 {
-	AActor* newActor = GetWorld()->SpawnActor(WavesData->SpawnerBP);
+	AActor* newActor = GetWorld()->SpawnActor(SpawnerBP);
 	newActor->AttachToActor(this, FAttachmentTransformRules::SnapToTargetNotIncludingScale);
-	Spawners.Add(newActor);
-
-
+	while(Waves.Num()-1 < CurrentWave)
+	{
+		Waves.Add(FWave());
+	}
+	Waves[CurrentWave].DwellerProfiles.Add(newActor);
+	
 	//This should work but doesn't fml
-	//FEditorViewportClient* client = (FEditorViewportClient*)GEditor->GetActiveViewport()->GetClient();
-	// if(client != NULL)
+	// if(GEditor)
 	// {
-	// 	FVector CamForward = client->GetViewRotation().Vector();
-	// 	FVector CamLocation = client->GetViewLocation();	
-	// 	FHitResult Hit;
-	// 	if(GetWorld()->LineTraceSingleByChannel(Hit,CamLocation,CamLocation + CamForward*10000,ECC_WorldStatic,FCollisionQueryParams(),FCollisionResponseParams()))
+	// 	UUnrealEditorSubsystem* Subsys = GEditor->GetEditorSubsystem<UUnrealEditorSubsystem>();
+	// 	if(Subsys != NULL)
 	// 	{
-	// 		newActor->SetActorLocation(Hit.Location);
-	// 		return;
+	// 		FVector Pos;
+	// 		FRotator Rot;
+	// 		Subsys->GetLevelViewportCameraInfo(Pos,Rot);
+	// 		FHitResult Hit;
+	//  	
+	// 		if(GetWorld()->LineTraceSingleByChannel(Hit,Pos,Pos + Rot.Vector() * 10000,ECC_WorldStatic,FCollisionQueryParams(),FCollisionResponseParams()))
+	// 		{
+	// 			newActor->SetActorLocation(Hit.Location);
+	// 			return;
+	// 		}
 	// 	}
 	// }
+	
 	newActor->SetActorLocation(this->GetActorLocation());
 }
 
 void AWaveSpawnManager::ClearSpawners()
 {
-	for (auto Spawner : Spawners)
+	for (auto Wave : Waves)
 	{
-		if(IsValid(Spawner))
+		for (auto Spawner : Wave.DwellerProfiles)
 		{
-			Spawner->Destroy();
+			if(IsValid(Spawner.Key))
+			{
+				Spawner.Key->Destroy();
+			}
 		}
-		
+		Wave.DwellerProfiles.Empty();
 	}
-	Spawners.Empty();
 }
 #endif
 

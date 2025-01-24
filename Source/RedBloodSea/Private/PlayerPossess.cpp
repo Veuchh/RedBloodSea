@@ -264,8 +264,6 @@ void UPlayerPossess::LineTrace(FVector TraceStart, FVector TraceEnd, FHitResult&
 
 void UPlayerPossess::EndPlay(const EEndPlayReason::Type EndPlayReason)
 {
-	PlayerData::CurrentPossessTarget->GetOwner()->Destroy();
-
 	Super::EndPlay(EndPlayReason);
 }
 

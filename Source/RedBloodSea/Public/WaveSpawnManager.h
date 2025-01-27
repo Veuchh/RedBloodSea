@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "AIStatesC.h"
 #include "Dweller.h"
 #include "GameFramework/Actor.h"
 #include "WaveSpawnManager.generated.h"
@@ -27,6 +28,8 @@ struct FDwellerProfile
 	int SizeNumber[static_cast<int>(EWeakpointSize::NUM)] = {1,1,1};
 	UPROPERTY(EditAnywhere)
 	bool bIsAntagonist = false;
+	UPROPERTY(EditAnywhere)
+	EAIStatesC State = EAIStatesC::Melee;
 }; UMETA(DisplayName="Wave")
 
 USTRUCT(BlueprintType)

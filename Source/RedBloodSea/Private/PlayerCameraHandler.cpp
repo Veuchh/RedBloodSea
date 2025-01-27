@@ -51,7 +51,10 @@ void UPlayerCameraHandler::SetupPlayerCameraComponent(ACharacter* PlayerCharacte
 	                                         TEXT("cameraSocket"));
 	cameraRollTarget = newCameraRollTarget;
 
-	playerController = playerCharacter->GetLocalViewingPlayerController();
+	if (playerController == nullptr)
+	{
+		playerController = playerCharacter->GetLocalViewingPlayerController();
+	}
 }
 
 void UPlayerCameraHandler::OnLookInput(const FVector2D newLookInput)
@@ -116,18 +119,22 @@ void UPlayerCameraHandler::AimAssist(float deltaTime)
 {
 	if (PlayerData::CanRotateCamera() && playerCharacter->Controller != nullptr)
 	{
+		if (playerController == nullptr)
+		{
+			playerController = playerCharacter->GetLocalViewingPlayerController();
+		}
+		
 		AWeakpoint* aimAssistTarget = GetAimAssistTarget();
 
 		if (aimAssistTarget != nullptr)
 		{
-
 			FVector2d screenPosition = FVector2d::ZeroVector;
 			playerController->ProjectWorldLocationToScreen(aimAssistTarget->GetActorLocation(), screenPosition, false);
 			FVector2D ViewportSize = FVector2D(GEngine->GameViewport->Viewport->GetSizeXY());
-			screenPosition = (screenPosition / ViewportSize)- (FVector2d::One() / 2);
-			
+			screenPosition = (screenPosition / ViewportSize) - (FVector2d::One() / 2);
+
 			GEngine->AddOnScreenDebugMessage(-1, 0, FColor::Red, FString::SanitizeFloat(screenPosition.X));
-			
+
 			// add yaw and pitch input to controller
 			playerCharacter->AddControllerYawInput(screenPosition.X * aimAssistStrength * deltaTime);
 			playerCharacter->AddControllerPitchInput(screenPosition.Y * aimAssistStrength * deltaTime);
@@ -151,7 +158,7 @@ AWeakpoint* UPlayerCameraHandler::GetAimAssistTarget()
 			&& distanceFromCamera < aimAssistMaxDistanceFromWeakpoint)
 		{
 			FVector2D screenPosition = FVector2d::ZeroVector;
-			if (playerController->ProjectWorldLocationToScreen(Weakpoint->GetActorLocation(), screenPosition, true))
+			if (playerController->ProjectWorldLocationToScreen(Weakpoint->GetActorLocation(), screenPosition, false))
 			{
 				screenPosition = screenPosition / ViewportSize;
 				float distanceToCenter = (screenPosition - (FVector2d::One() / 2)).Length();

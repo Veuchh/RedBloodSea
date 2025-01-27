@@ -21,7 +21,7 @@ void AWaveSpawnManager::BeginPlay()
 	Super::BeginPlay();
 	
 	CurrentWave = 0;
-	Waves[CurrentWave].BeginWaveTriggerZone->OnActorBeginOverlap.AddUniqueDynamic(this,&AWaveSpawnManager::OnBeginTriggerOverlap);
+	WavePrepare();
 }
 
 // Called every frame
@@ -37,7 +37,14 @@ void AWaveSpawnManager::Tick(float DeltaTime)
 		
 			TTuple<TObjectPtr<AActor>,FDwellerProfile> Info;
 			SpawnQueue.Dequeue(Info);
-			SpawnDweller(Info.Key->GetTransform(),Info.Value);
+			if(IsValid(Info.Key))
+			{
+				SpawnDweller(Info.Key->GetTransform(),Info.Value);
+			}
+			else
+			{
+				SpawnDweller(this->GetTransform(),Info.Value);
+			}
 		}
 	}
 
@@ -51,6 +58,13 @@ void AWaveSpawnManager::Tick(float DeltaTime)
 	}
 }
 
+void AWaveSpawnManager::WavePrepare()
+{
+	if(Waves.Num() > CurrentWave && IsValid(Waves[CurrentWave].BeginWaveTriggerZone))
+	{
+		Waves[CurrentWave].BeginWaveTriggerZone->OnActorBeginOverlap.AddUniqueDynamic(this,&AWaveSpawnManager::OnBeginTriggerOverlap);
+	}
+}
 
 
 void AWaveSpawnManager::WaveStart()
@@ -72,7 +86,7 @@ void AWaveSpawnManager::WaveStart()
 		}
 	}
 
-	if(Waves[CurrentWave].Type ==  EWaveType::CHECKPOINT)
+	if(Waves[CurrentWave].Type ==  EWaveType::CHECKPOINT && IsValid(Waves[CurrentWave].CheckpointTriggerZone))
 	{
 		Waves[CurrentWave].CheckpointTriggerZone->OnActorBeginOverlap.AddUniqueDynamic(this,&AWaveSpawnManager::OnCheckpointBeginOverlap);
 	}
@@ -92,7 +106,7 @@ void AWaveSpawnManager::WaveEnd()
 	CurrentWave++;
 	if(Waves.Num() > CurrentWave)
 	{
-		Waves[CurrentWave].BeginWaveTriggerZone->OnActorBeginOverlap.AddUniqueDynamic(this,&AWaveSpawnManager::OnBeginTriggerOverlap);
+		WavePrepare();
 		OnWaveSuccess.Broadcast();
 	} else
 	{
@@ -114,7 +128,7 @@ void AWaveSpawnManager::WaveReset()
 	GetWorld()->GetTimerManager().ClearAllTimersForObject(this);
 	CurrentWave = 0;
 	ClearAliveDwellers(true);
-	Waves[CurrentWave].BeginWaveTriggerZone->OnActorBeginOverlap.AddUniqueDynamic(this,&AWaveSpawnManager::OnBeginTriggerOverlap);
+	WavePrepare();
 }
 
 void AWaveSpawnManager::QueueWave(int WaveNumber)

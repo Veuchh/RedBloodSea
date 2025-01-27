@@ -29,15 +29,14 @@ void UDwellerLinkSubsystem::ResetLink()
 }
 
 
-bool UDwellerLinkSubsystem::AddDwellerToLink(UPossessTarget* dweller)
+int UDwellerLinkSubsystem::AddDwellerToLink(UPossessTarget* dweller)
 {
-	bool wasLinked = false;
+	int linkedEnemies = 0;
 	if (dwellersInLink.Contains(dweller))
 	{
 		//This is the case where we possess the last possessed ennemy
 		if (dwellersInLink.Num() <= 1 || dwellersInLink[dwellersInLink.Num() - 2] != dweller)
 		{
-			wasLinked = true;
 			GEngine->AddOnScreenDebugMessage(-1, 5, FColor::Red, "Should initiate link");
 
 			//Linking all dwellers
@@ -48,7 +47,7 @@ bool UDwellerLinkSubsystem::AddDwellerToLink(UPossessTarget* dweller)
 				{
 					break;
 				}
-				
+				linkedEnemies++;
 				dwellersInLink[i]->Link();
 			}
 		}
@@ -75,7 +74,7 @@ bool UDwellerLinkSubsystem::AddDwellerToLink(UPossessTarget* dweller)
 
 	GEngine->AddOnScreenDebugMessage(-1, 5, FColor::Red, "Adding dweller to link list");
 	dwellersInLink.Add(dweller);
-	return wasLinked;
+	return linkedEnemies;
 }
 
 void UDwellerLinkSubsystem::OnDwellerKilled(UPossessTarget* killedDweller)

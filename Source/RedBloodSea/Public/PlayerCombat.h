@@ -15,7 +15,7 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnSlashStart);
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnThrustStart);
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnPlayerHit, int, remainingHealth);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnPlayerHit, int, remainingHealth, AActor*, damageSource);
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnSlashHitEnemy, AActor*, HitEnemy);
 
@@ -120,7 +120,7 @@ public:
 	void OnGodModeToggle();
 
 	UFUNCTION(BlueprintCallable)
-	void DamagePlayer(int damageAmount);
+	void DamagePlayer(int damageAmount, AActor* damageSource);
 
 	UPROPERTY(BlueprintAssignable, Category = "Combat")
 	FOnDeath OnPlayerDeath;

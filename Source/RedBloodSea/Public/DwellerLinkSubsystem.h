@@ -34,7 +34,7 @@ class REDBLOODSEA_API UDwellerLinkSubsystem : public UGameInstanceSubsystem
 public:
 	UFUNCTION(BlueprintCallable)
 	void ResetLink();
-	bool AddDwellerToLink(UPossessTarget* dweller);
+	int AddDwellerToLink(UPossessTarget* dweller);
 	void OnDwellerKilled(UPossessTarget* killedDweller);
 	void SetupSubsystem(AActor* playerActor, TSubclassOf<ALinkSplineVFX> splineLinkVFXReference);
 };

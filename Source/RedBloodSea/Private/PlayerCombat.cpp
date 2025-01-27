@@ -304,7 +304,7 @@ void UPlayerCombat::OnGodModeToggle()
 	PlayerData::IsGodModeEnabled = !PlayerData::IsGodModeEnabled;
 }
 
-void UPlayerCombat::DamagePlayer(int damageAmount)
+void UPlayerCombat::DamagePlayer(int damageAmount, AActor* damageSource)
 {
 	if (PlayerData::IsGodModeEnabled
 		||PlayerData::LastHitTime + recoveryTimeDuration >= UGameplayStatics::GetRealTimeSeconds(GetWorld()))
@@ -313,7 +313,7 @@ void UPlayerCombat::DamagePlayer(int damageAmount)
 	}
 	
 	PlayerData::CurrentHPAmount -= damageAmount;
-	OnPlayerHit.Broadcast(PlayerData::CurrentHPAmount);
+	OnPlayerHit.Broadcast(PlayerData::CurrentHPAmount, damageSource);
 	recoveryTimeDuration = UGameplayStatics::GetRealTimeSeconds(GetWorld());
 	
 	if (PlayerData::CurrentHPAmount > 0)

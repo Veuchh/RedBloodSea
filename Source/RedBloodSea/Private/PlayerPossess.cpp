@@ -183,11 +183,11 @@ void UPlayerPossess::PossessDweller()
 {
 	GEngine->AddOnScreenDebugMessage(-1, 5, FColor::Purple, "PossessDweller");
 	PlayerData::CurrentPossessTarget->Possess();
-	bool resultsInLink = dwellerLinkSU->AddDwellerToLink(PlayerData::CurrentPossessTarget);
+	int linkedAmount= dwellerLinkSU->AddDwellerToLink(PlayerData::CurrentPossessTarget);
 	
-	if(resultsInLink)
+	if(linkedAmount>0)
 	{
-		OnLinkInitiated.Broadcast();
+		OnLinkInitiated.Broadcast(linkedAmount);
 	}
 }
 

@@ -8,25 +8,6 @@
 #include "WavesData.generated.h"
 
 
-USTRUCT(BlueprintType)
-struct FDwellerProfile
-{
-	GENERATED_BODY()
-	UPROPERTY(EditAnywhere,meta=(Bitmask,BitmaskEnum = EWeakpointType))
-	uint8 TypeFilter = static_cast<int>(EWeakpointType::HEAD) | static_cast<int>(EWeakpointType::ARMS) | static_cast<int>(EWeakpointType::LEGS) | static_cast<int>(EWeakpointType::TORSO);
-	UPROPERTY(EditAnywhere,meta=(ArraySizeEnum="EWeakpointSize"))
-	int SizeNumber[static_cast<int>(EWeakpointSize::NUM)];
-	UPROPERTY(EditAnywhere)
-	bool bIsAntagonist = false;
-}; UMETA(DisplayName="Wave")
-
-USTRUCT(BlueprintType)
-struct FDwellerWave
-{
-	GENERATED_BODY()
-	UPROPERTY(EditAnywhere)
-	TArray<FDwellerProfile> DwellerProfiles;
-}; UMETA(DisplayName="Wave")
 
 /**
  * 
@@ -40,7 +21,7 @@ public:
 	const TObjectPtr<UClass> SpawnerBP;
 	UPROPERTY(EditAnywhere)
 	const TObjectPtr<UClass> DwellerBP;
-	UPROPERTY(EditAnywhere)
-	TArray<FDwellerWave> Waves;
+	//UPROPERTY(EditAnywhere)
+	//TArray<FWave> Waves;
 	
 };

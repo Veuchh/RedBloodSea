@@ -51,9 +51,7 @@ struct FWave
 	TObjectPtr<AActor> CheckpointTriggerZone;
 
 	UPROPERTY(EditAnywhere)
-	int DwellerToKill;
-	UPROPERTY(EditAnywhere)
-	int DwellerToLink;
+	int DwellerToRemove;
 	UPROPERTY(VisibleAnywhere)
 	int DwellerKilled;
 	UPROPERTY(VisibleAnywhere)
@@ -85,6 +83,14 @@ public:
 private:
 	UPROPERTY(VisibleAnywhere,BlueprintReadOnly,meta=(AllowPrivateAccess = "true"),EditFixedSize,Category="WavesParams")
 	TArray<ADweller*> AliveDwellers;
+
+public:
+	TArray<ADweller*> GetAliveDwellers() const
+	{
+		return AliveDwellers;
+	}
+
+private:
 	UPROPERTY(EditAnywhere,BlueprintReadWrite,meta=(AllowPrivateAccess = "true",ClampMin=1),EditFixedSize,Category="WavesParams")
 	int SpawnPerTick = 1;
 	UPROPERTY(EditAnywhere,BlueprintReadWrite,meta=(AllowPrivateAccess = "true",ClampMin=1),EditFixedSize,Category="WavesParams")
@@ -112,7 +118,9 @@ protected:
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-	
+
+	UFUNCTION(BlueprintCallable)
+	void WavePrepare();
 	UFUNCTION(BlueprintCallable)
 	void WaveStart();
 	UFUNCTION(BlueprintCallable)

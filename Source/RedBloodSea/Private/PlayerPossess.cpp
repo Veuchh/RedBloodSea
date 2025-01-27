@@ -183,11 +183,11 @@ void UPlayerPossess::PossessDweller()
 {
 	GEngine->AddOnScreenDebugMessage(-1, 5, FColor::Purple, "PossessDweller");
 	PlayerData::CurrentPossessTarget->Possess();
-	bool resultsInLink = dwellerLinkSU->AddDwellerToLink(PlayerData::CurrentPossessTarget);
+	int linkedAmount= dwellerLinkSU->AddDwellerToLink(PlayerData::CurrentPossessTarget);
 	
-	if(resultsInLink)
+	if(linkedAmount>0)
 	{
-		OnLinkInitiated.Broadcast();
+		OnLinkInitiated.Broadcast(linkedAmount);
 	}
 }
 
@@ -198,6 +198,26 @@ void UPlayerPossess::TickComponent(float DeltaTime, ELevelTick TickType, FActorC
 	DebugState();
 
 	AimModeToggling();
+
+	//Check for crosshair
+	FVector TraceStart = camera->GetComponentLocation();
+	FVector TraceEnd = camera->GetComponentLocation() + camera->GetForwardVector() * maxPossessDistance;
+
+	FHitResult Hit;
+
+	LineTrace(TraceStart, TraceEnd, Hit);
+	bool isAimingAtTarget = false;
+	if (Hit.bBlockingHit && IsValid(Hit.GetActor()))
+	{
+		isAimingAtTarget= Hit.GetActor()->GetComponentByClass<UPossessTarget>() != nullptr;
+	}
+
+	if (wasAimingAtTarget!= isAimingAtTarget)
+	{
+		OnAimingAtTargetStatusChanged.Broadcast(isAimingAtTarget);
+		wasAimingAtTarget= isAimingAtTarget;
+	}
+
 
 	//We only cover states that have "waiting for cooldown" logic (not those waiting for a player input)
 	switch (PlayerData::CurrentPossessState)

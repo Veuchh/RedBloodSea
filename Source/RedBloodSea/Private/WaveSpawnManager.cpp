@@ -21,7 +21,7 @@ void AWaveSpawnManager::BeginPlay()
 	Super::BeginPlay();
 	
 	CurrentWave = 0;
-	Waves[CurrentWave].BeginWaveTriggerZone->OnActorBeginOverlap.AddUniqueDynamic(this,&AWaveSpawnManager::OnBeginTriggerOverlap);
+	WavePrepare();
 }
 
 // Called every frame
@@ -37,7 +37,14 @@ void AWaveSpawnManager::Tick(float DeltaTime)
 		
 			TTuple<TObjectPtr<AActor>,FDwellerProfile> Info;
 			SpawnQueue.Dequeue(Info);
-			SpawnDweller(Info.Key->GetTransform(),Info.Value);
+			if(IsValid(Info.Key))
+			{
+				SpawnDweller(Info.Key->GetTransform(),Info.Value);
+			}
+			else
+			{
+				SpawnDweller(this->GetTransform(),Info.Value);
+			}
 		}
 	}
 
@@ -51,6 +58,16 @@ void AWaveSpawnManager::Tick(float DeltaTime)
 	}
 }
 
+void AWaveSpawnManager::WavePrepare()
+{
+	if(Waves.Num() > CurrentWave)
+	{
+		if(IsValid(Waves[CurrentWave].BeginWaveTriggerZone))
+			Waves[CurrentWave].BeginWaveTriggerZone->OnActorBeginOverlap.AddUniqueDynamic(this,&AWaveSpawnManager::OnBeginTriggerOverlap);
+		else
+			WaveStart();
+	}
+}
 
 
 void AWaveSpawnManager::WaveStart()
@@ -72,9 +89,12 @@ void AWaveSpawnManager::WaveStart()
 		}
 	}
 
-	if(Waves[CurrentWave].Type ==  EWaveType::CHECKPOINT)
+	if(Waves[CurrentWave].Type ==  EWaveType::CHECKPOINT && IsValid(Waves[CurrentWave].CheckpointTriggerZone))
 	{
-		Waves[CurrentWave].CheckpointTriggerZone->OnActorBeginOverlap.AddUniqueDynamic(this,&AWaveSpawnManager::OnCheckpointBeginOverlap);
+		if(IsValid(Waves[CurrentWave].CheckpointTriggerZone))
+			Waves[CurrentWave].CheckpointTriggerZone->OnActorBeginOverlap.AddUniqueDynamic(this,&AWaveSpawnManager::OnCheckpointBeginOverlap);
+		else
+			WaveEnd();
 	}
 }
 
@@ -92,7 +112,7 @@ void AWaveSpawnManager::WaveEnd()
 	CurrentWave++;
 	if(Waves.Num() > CurrentWave)
 	{
-		Waves[CurrentWave].BeginWaveTriggerZone->OnActorBeginOverlap.AddUniqueDynamic(this,&AWaveSpawnManager::OnBeginTriggerOverlap);
+		WavePrepare();
 		OnWaveSuccess.Broadcast();
 	} else
 	{
@@ -114,7 +134,7 @@ void AWaveSpawnManager::WaveReset()
 	GetWorld()->GetTimerManager().ClearAllTimersForObject(this);
 	CurrentWave = 0;
 	ClearAliveDwellers(true);
-	Waves[CurrentWave].BeginWaveTriggerZone->OnActorBeginOverlap.AddUniqueDynamic(this,&AWaveSpawnManager::OnBeginTriggerOverlap);
+	WavePrepare();
 }
 
 void AWaveSpawnManager::QueueWave(int WaveNumber)
@@ -180,7 +200,10 @@ bool AWaveSpawnManager::CheckObjectives()
 {
 	if(Waves[CurrentWave].Type == EWaveType::CLEAR_ALL)
 	{
-		return AliveDwellers.Num() == 0;
+		return AliveDwellers.Num()-1 == 0;
+	} else if(Waves[CurrentWave].Type == EWaveType::CLEAR_SOME)
+	{
+		return Waves[CurrentWave].DwellerLinked + Waves[CurrentWave].DwellerKilled >= Waves[CurrentWave].DwellerToRemove;
 	}
 	return false;
 }
@@ -193,8 +216,7 @@ void AWaveSpawnManager::OnDwellerDeath(AActor* DwellerActor)
 		AliveDwellers.Remove(Dweller);
 		Waves[CurrentWave].DwellerKilled++;
 	}
-	if((Waves[CurrentWave].Type == EWaveType::CLEAR_SOME && Waves[CurrentWave].DwellerKilled >= Waves[CurrentWave].DwellerToKill)
-		||	AliveDwellers.Num())
+	if(CheckObjectives())
 	{
 		WaveEnd();
 		OnWaveSuccess.Broadcast();
@@ -209,8 +231,7 @@ void AWaveSpawnManager::OnDwellerLinked(AActor* Actor)
 		AliveDwellers.Remove(Dweller);
 		Waves[CurrentWave].DwellerLinked++;
 	}
-	if((Waves[CurrentWave].Type == EWaveType::CLEAR_SOME && Waves[CurrentWave].DwellerLinked >= Waves[CurrentWave].DwellerToLink)
-		|| (AliveDwellers.Num() <= 1))
+	if(CheckObjectives())
 	{
 		WaveEnd();
 		OnWaveSuccess.Broadcast();

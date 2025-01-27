@@ -4,8 +4,9 @@
 		<PluginLib LibName="Wwise Parametric EQ" LibId="6881283" Type="Effect" DLL="AkParametricEQ" StaticLib="AkParametricEQFX"/>
 		<PluginLib LibName="Wwise RoomVerb" LibId="7733251" Type="Effect" DLL="AkRoomVerb" StaticLib="AkRoomVerbFX"/>
 		<PluginLib LibName="SoundSeed Air Wind" LibId="7798786" Type="Source" DLL="AkSoundSeedAir" StaticLib="AkSoundSeedWindSource"/>
+		<PluginLib LibName="Wwise Gain" LibId="9109507" Type="Effect" DLL="AkGain" StaticLib="AkGainFX"/>
 		<PluginLib LibName="System" LibId="11403271" Type="AudioDevice"/>
 		<PluginLib LibName="No Output" LibId="11862023" Type="AudioDevice"/>
 	</PluginLibs>
-	<FileHash>{5A90F583-7B60-2CF5-57A5-947FAE30B32E}</FileHash>
+	<FileHash>{81CEA08D-F3B3-3D8F-9AF9-5995BC26BB27}</FileHash>
 </PluginInfo>

@@ -669,7 +669,6 @@
 										<Property Name="FrequencyBand3" Type="Real32" Value="702"/>
 										<Property Name="OnOffBand1" Type="bool" Value="False"/>
 										<Property Name="OnOffBand2" Type="bool" Value="False"/>
-										<Property Name="OnOffBand3" Type="bool" Value="False"/>
 										<Property Name="QFactorBand2" Type="Real32" Value="44"/>
 										<Property Name="QFactorBand3" Type="Real32" Value="59.7"/>
 									</PropertyList>
@@ -1346,24 +1345,100 @@
 							<ChildrenList>
 								<Effect Name="Holy" ID="{CC7B8638-C670-4AD5-B3FB-331EA81037F6}" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
 									<PropertyList>
-										<Property Name="DecayTime" Type="Real32" Value="8"/>
-										<Property Name="Density" Type="Real32" Value="46"/>
+										<Property Name="DecayTime" Type="Real32" Value="8.9"/>
+										<Property Name="Density" Type="Real32" Value="50"/>
+										<Property Name="Diffusion" Type="Real32" Value="51"/>
 										<Property Name="DryLevel" Type="Real32" Value="-0.3"/>
 										<Property Name="ERLevel" Type="Real32" Value="-3"/>
 										<Property Name="ERPattern" Type="int32" Value="22"/>
+										<Property Name="EnableEarlyReflections" Type="bool" Value="False"/>
+										<Property Name="EnableToneControls" Type="bool" Value="True"/>
 										<Property Name="Filter1Freq" Type="Real32" Value="490"/>
-										<Property Name="Filter1Gain" Type="Real32" Value="-0.5"/>
+										<Property Name="Filter1Gain" Type="Real32" Value="-5.5"/>
 										<Property Name="Filter1InsertPos" Type="int32" Value="2"/>
 										<Property Name="Filter2InsertPos" Type="int32" Value="0"/>
 										<Property Name="Filter3Freq" Type="Real32" Value="11000"/>
-										<Property Name="Filter3Gain" Type="Real32" Value="-4.5"/>
-										<Property Name="HFDamping" Type="Real32" Value="5.7"/>
+										<Property Name="Filter3Gain" Type="Real32" Value="-2"/>
+										<Property Name="HFDamping" Type="Real32" Value="10"/>
 										<Property Name="PreDelay" Type="Real32" Value="0"/>
-										<Property Name="Quality" Type="int32" Value="14"/>
-										<Property Name="ReverbLevel" Type="Real32" Value="-22"/>
+										<Property Name="Quality" Type="int32" Value="16"/>
+										<Property Name="ReverbLevel" Type="Real32" Value="-3"/>
 										<Property Name="RoomSize" Type="Real32" Value="100"/>
-										<Property Name="StereoWidth" Type="Real32" Value="172"/>
 									</PropertyList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{A829CC8C-46E5-47DD-A582-1B6814AC2635}" ShortID="149366565">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="DryLevel"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="rtpc_mainmenumusicpitch" ID="{ED4A7616-4338-46E2-9ED1-5758709ACDDE}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{A6B0D316-0061-4EDB-8083-04656D94140F}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>1.03835</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>-9.97646</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{36A05E30-000A-4015-80DD-844ECAAA6399}" ShortID="681151546">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="ReverbLevel"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="rtpc_mainmenumusicpitch" ID="{ED4A7616-4338-46E2-9ED1-5758709ACDDE}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{D6B7D7BD-53D9-4637-AB34-23F3FE0D1896}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-96.3000030517578</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>-11.14314</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
 								</Effect>
 								<Effect Name="Medium" ID="{AEB3F175-958B-45F2-A4C2-3FBD4F456568}" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
 									<PropertyList>

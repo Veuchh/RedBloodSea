@@ -29,12 +29,30 @@
 						<Switch Name="nostate" ID="{B1F2E22E-0DDC-4A1D-B499-D807E69F385B}"/>
 					</ChildrenList>
 				</SwitchGroup>
-				<SwitchGroup Name="switch_combat_phase" ID="{00BFC575-DD53-4D59-B613-1CE2AE596AE9}">
+				<SwitchGroup Name="switch_combat_status" ID="{00BFC575-DD53-4D59-B613-1CE2AE596AE9}">
 					<ChildrenList>
-						<Switch Name="phase1" ID="{6725F899-132D-4978-8B75-001417C3E736}"/>
-						<Switch Name="phase3" ID="{A17B5649-F5D5-4365-B5EB-FF000F23FF13}"/>
-						<Switch Name="phase2" ID="{0DD26233-048F-41A1-A6C7-12E5CAC1F7D1}"/>
-						<Switch Name="nostate" ID="{B604615E-D874-4E59-8E26-ED5FBA8218BD}"/>
+						<Switch Name="combat" ID="{6725F899-132D-4978-8B75-001417C3E736}"/>
+						<Switch Name="between_wave" ID="{0DD26233-048F-41A1-A6C7-12E5CAC1F7D1}"/>
+						<Switch Name="intro" ID="{B604615E-D874-4E59-8E26-ED5FBA8218BD}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="switch_link_index" ID="{CA6F1763-1C63-4DC9-A2BA-5E916F6F1EC2}">
+					<ChildrenList>
+						<Switch Name="link0" ID="{21730554-9A26-480E-BF82-5403DD91DA7F}"/>
+						<Switch Name="link1" ID="{67175D70-7201-4E06-AD2B-B4AFE78D5A34}"/>
+						<Switch Name="link2" ID="{C5B26C9B-9695-4352-8EC1-A35560EB5AD0}"/>
+						<Switch Name="link3" ID="{D4A4F266-2E92-4285-85C9-31EDF0B60ED6}"/>
+						<Switch Name="link4" ID="{204B5880-D638-43C3-8757-F3CF4D414429}"/>
+						<Switch Name="link5" ID="{42700C4E-265F-46C6-84CA-AC6DCD37F297}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="switch_combat_wave_index" ID="{0F59E01D-E03B-49A8-A0FA-FDE40D3F5F44}">
+					<ChildrenList>
+						<Switch Name="combat_wave_index_1" ID="{89F6AF0C-EEC7-47B3-B013-F708FF217ADC}"/>
+						<Switch Name="combat_wave_index_2" ID="{40EB69D3-D5A0-490D-AC13-B1DD99123A8C}"/>
+						<Switch Name="combat_wave_index_3" ID="{66F509B1-916E-4601-96AF-0BE1E7F0F51E}"/>
+						<Switch Name="combat_wave_index_4" ID="{F2E75342-E07C-442C-ACA8-064A4CF110F8}"/>
+						<Switch Name="combat_wave_index_5" ID="{9D73A899-2271-49EC-9A38-0E97454C25EA}"/>
 					</ChildrenList>
 				</SwitchGroup>
 			</ChildrenList>

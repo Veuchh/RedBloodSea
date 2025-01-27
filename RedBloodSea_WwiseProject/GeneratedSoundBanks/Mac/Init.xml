@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{051E3057-D217-9B47-63AF-0A24710E42B3}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{B57FA1A8-E505-7CF0-FD9D-11E79B2C8B71}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
 				<ShareSets>
-					<Plugin Id="4239446561" Name="Dual_Filters_Narrow_Bandwidth" ObjectPath="\Effects\Factory Effects\Parametric EQ\Band Pass Filters\Dual_Filters_Narrow_Bandwidth" GUID="{A24607C6-04E1-4D41-B513-28C0914D138D}" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="2224135639" Name="Level_Verb" ObjectPath="\Effects\Default Work Unit\Level_Verb" GUID="{C10E6266-7F54-414E-B6C1-16F6802E7ADB}" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="3626272192" Name="HIGH_FREQUENCY_CUT_FILTER" ObjectPath="\Effects\Default Work Unit\HIGH_FREQUENCY_CUT_FILTER" GUID="{10C5B825-780E-4846-B96A-6B4E3FA7DC4C}" LibName="Wwise Parametric EQ" LibId="6881283"/>
 				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="2317455096" Name="No_Output" ObjectPath="\Audio Devices\Default Work Unit\No_Output" GUID="{293D6686-62BF-47C8-88A0-6014C3BB2C54}" LibName="No Output" LibId="11862023"/>
@@ -15,29 +16,47 @@
 				</AudioDevices>
 			</Plugins>
 			<Busses>
-				<Bus Id="661188923" Name="EnemyBus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\EnemyBus" GUID="{BCC1ECC0-BA5A-45C2-A555-9454DB046120}"/>
-				<Bus Id="2886307548" Name="MusicBus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MusicBus" GUID="{312533C2-F58C-4573-B394-B4A60FA6903B}"/>
-				<Bus Id="2894416467" Name="AmbBus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AmbBus" GUID="{F6B3D58E-CD74-4442-9F92-CEC55E4B6060}"/>
+				<Bus Id="393239870" Name="SFX" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus\SFX" GUID="{39250B52-8C88-4C54-B7D3-2C12760A0A9F}"/>
+				<Bus Id="466672200" Name="PlayerAbilities" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus\SFX\PlayerAbilities" GUID="{23D327A8-D57F-4DDE-8DF2-8200B9DA4037}"/>
+				<Bus Id="661188923" Name="EnemyBus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus\SFX\EnemyBus" GUID="{BCC1ECC0-BA5A-45C2-A555-9454DB046120}"/>
+				<Bus Id="1991350473" Name="StereoBus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus" GUID="{01DB4D2A-3A6E-4B6E-AD86-A91E1CD57BEB}"/>
+				<Bus Id="2886307548" Name="MusicBus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus\MusicBus" GUID="{312533C2-F58C-4573-B394-B4A60FA6903B}"/>
+				<Bus Id="2894416467" Name="AmbBus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus\AmbBus" GUID="{F6B3D58E-CD74-4442-9F92-CEC55E4B6060}"/>
 				<Bus Id="3803692087" Name="Master Audio Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus" GUID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
 					<PluginRefs>
 						<ShareSets>
-							<PluginRef Id="4239446561"/>
+							<PluginRef Id="3626272192"/>
 						</ShareSets>
 					</PluginRefs>
 				</Bus>
-				<Bus Id="3966895392" Name="PlayerBus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PlayerBus" GUID="{EBF9A5C4-2EDC-44FD-B726-7EE704405AC2}"/>
-				<Bus Id="4150757691" Name="PlayerFPS" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PlayerBus\PlayerFPS" GUID="{7C1D7130-1612-4266-9222-83F5777F8F6A}"/>
+				<Bus Id="3966895392" Name="PlayerBus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus\SFX\PlayerBus" GUID="{EBF9A5C4-2EDC-44FD-B726-7EE704405AC2}"/>
+				<Bus Id="4150757691" Name="PlayerFPS" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus\SFX\PlayerBus\PlayerFPS" GUID="{7C1D7130-1612-4266-9222-83F5777F8F6A}"/>
 			</Busses>
+			<AuxBusses>
+				<AuxBus Id="253666666" Name="LevelVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus\LevelVerb" GUID="{4A93D61F-1EC6-4468-809B-AE533F8EC173}">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2224135639"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+			</AuxBusses>
 			<GameParameters>
 				<GameParameter Id="82424989" Name="rtpc_player_life" ObjectPath="\Game Parameters\Default Work Unit\rtpc_player_life" GUID="{1CC6F0C7-6126-4057-9B70-3C89F38C5F50}"/>
 				<GameParameter Id="88991926" Name="rtpc_master_bus" ObjectPath="\Game Parameters\Default Work Unit\Settings\BUS\rtpc_master_bus" GUID="{94154412-EE63-4EDD-B582-B922CD738ED6}"/>
 				<GameParameter Id="115866790" Name="rtpc_amb_bus" ObjectPath="\Game Parameters\Default Work Unit\Settings\BUS\rtpc_amb_bus" GUID="{A29E33E7-090C-4F92-B2A4-CF339B2E10FC}"/>
+				<GameParameter Id="600133661" Name="rtpc_high_freq_filter" ObjectPath="\Game Parameters\Default Work Unit\rtpc_high_freq_filter" GUID="{63F62A41-A536-4987-9F56-EDAB260398B7}"/>
 				<GameParameter Id="765516766" Name="rtpc_player_airspeed" ObjectPath="\Game Parameters\Default Work Unit\rtpc_player_airspeed" GUID="{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}"/>
+				<GameParameter Id="848976592" Name="rtpc_mainmenumusicpitch" ObjectPath="\Game Parameters\Default Work Unit\rtpc_mainmenumusicpitch" GUID="{ED4A7616-4338-46E2-9ED1-5758709ACDDE}"/>
 				<GameParameter Id="876333639" Name="rtpc_tapestop" ObjectPath="\Game Parameters\Default Work Unit\rtpc_tapestop" GUID="{34AB8051-BDEC-4FCF-A5A6-D129BA29D38F}"/>
+				<GameParameter Id="1410332996" Name="rtpc_settings_slider" ObjectPath="\Game Parameters\Default Work Unit\rtpc_settings_slider" GUID="{CF91B134-4D3D-4381-A066-5A720C4CB494}"/>
 				<GameParameter Id="2332098030" Name="rtpc_enemy_bus" ObjectPath="\Game Parameters\Default Work Unit\Settings\BUS\rtpc_enemy_bus" GUID="{7B1FB034-3E8E-48F8-B914-CB5786C31FF9}"/>
 				<GameParameter Id="2400834421" Name="rtpc_dominant_hand" ObjectPath="\Game Parameters\Default Work Unit\Settings\rtpc_dominant_hand" GUID="{54C0314F-1459-460E-B6E6-1CDAA6EDBE01}"/>
 				<GameParameter Id="2570586536" Name="rtpc_landing_force" ObjectPath="\Game Parameters\Default Work Unit\rtpc_landing_force" GUID="{07DB1610-4113-4F81-A7B4-0C953E645162}"/>
 				<GameParameter Id="2690476865" Name="rtpc_player_walkspeed" ObjectPath="\Game Parameters\Default Work Unit\rtpc_player_walkspeed" GUID="{6437691A-43C2-473B-A671-C59F1A9E957B}"/>
+				<GameParameter Id="2696648837" Name="rtpc_dash_leftright" ObjectPath="\Game Parameters\Default Work Unit\rtpc_dash_leftright" GUID="{7894A474-E5D3-4187-925F-19042540CC04}"/>
+				<GameParameter Id="2737403824" Name="rtpc_positioning_leftright" ObjectPath="\Game Parameters\Default Work Unit\rtpc_positioning_leftright" GUID="{C0867B0F-00CC-44F1-95F4-1370870636CA}"/>
+				<GameParameter Id="2860606227" Name="rtpc_highfreqfilter_off_on" ObjectPath="\Game Parameters\Default Work Unit\rtpc_highfreqfilter_off_on" GUID="{9D67A80A-4B5B-4616-A716-FC5EFCF47D77}"/>
 				<GameParameter Id="3067876527" Name="rtpc_sfx_bus" ObjectPath="\Game Parameters\Default Work Unit\Settings\BUS\rtpc_sfx_bus" GUID="{1A0CC5AF-DF3D-4C7B-9E41-61A8E28F74EB}"/>
 				<GameParameter Id="3304859005" Name="rtpc_chaos_global" ObjectPath="\Game Parameters\Default Work Unit\rtpc_chaos_global" GUID="{912B7FBA-E859-424B-9664-D9B8B51FC1BA}"/>
 				<GameParameter Id="3361666196" Name="rtpc_chaos_enemy" ObjectPath="\Game Parameters\Default Work Unit\rtpc_chaos_enemy" GUID="{8D8709D7-5017-47F2-988D-4EE3A088300B}"/>
@@ -70,20 +89,36 @@
 				<StateGroup Id="4122948419" Name="state_combat" ObjectPath="\States\Default Work Unit\state_combat" GUID="{E2ED0219-9E42-4468-B342-0147362BCCBB}">
 					<States>
 						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\state_combat\None" GUID="{E50472C8-63C0-46CA-8249-305F3BF374E9}"/>
-						<State Id="2392706382" Name="combat_pause" ObjectPath="\States\Default Work Unit\state_combat\combat_pause" GUID="{9BFC024D-B53E-4B56-9581-972C69A27B4F}"/>
+						<State Id="1125500713" Name="intro" ObjectPath="\States\Default Work Unit\state_combat\intro" GUID="{AAB602C5-F1F4-4844-B273-85D5A38E9869}"/>
+						<State Id="2373432776" Name="betweenwave" ObjectPath="\States\Default Work Unit\state_combat\betweenwave" GUID="{FF2C5CA1-53C4-423E-AF83-8785851A7F1B}"/>
 						<State Id="2764240573" Name="combat" ObjectPath="\States\Default Work Unit\state_combat\combat" GUID="{76879D96-6B91-483E-85DC-B7B10E438F7F}"/>
-						<State Id="2887812511" Name="combat_end" ObjectPath="\States\Default Work Unit\state_combat\combat_end" GUID="{20C46DC0-57AA-4780-A143-614081F377B0}"/>
-						<State Id="2930212484" Name="nocombat" ObjectPath="\States\Default Work Unit\state_combat\nocombat" GUID="{AAB602C5-F1F4-4844-B273-85D5A38E9869}"/>
 					</States>
 				</StateGroup>
 			</StateGroups>
 			<SwitchGroups>
+				<SwitchGroup Id="226573501" Name="switch_combat_status" ObjectPath="\Switches\Default Work Unit\switch_combat_status" GUID="{00BFC575-DD53-4D59-B613-1CE2AE596AE9}">
+					<Switches>
+						<Switch Id="598085321" Name="between_wave" ObjectPath="\Switches\Default Work Unit\switch_combat_status\between_wave" GUID="{0DD26233-048F-41A1-A6C7-12E5CAC1F7D1}"/>
+						<Switch Id="1125500713" Name="intro" ObjectPath="\Switches\Default Work Unit\switch_combat_status\intro" GUID="{B604615E-D874-4E59-8E26-ED5FBA8218BD}"/>
+						<Switch Id="2764240573" Name="combat" ObjectPath="\Switches\Default Work Unit\switch_combat_status\combat" GUID="{6725F899-132D-4978-8B75-001417C3E736}"/>
+					</Switches>
+				</SwitchGroup>
 				<SwitchGroup Id="1560465246" Name="switch_enemy_state" ObjectPath="\Switches\Default Work Unit\switch_enemy_state" GUID="{7BCEC131-CFF7-4EC9-8FA1-01CA796C57CE}">
 					<Switches>
 						<Switch Id="302661891" Name="nostate" ObjectPath="\Switches\Default Work Unit\switch_enemy_state\nostate" GUID="{B1F2E22E-0DDC-4A1D-B499-D807E69F385B}"/>
 						<Switch Id="1838667140" Name="friendly" ObjectPath="\Switches\Default Work Unit\switch_enemy_state\friendly" GUID="{E2EF61B1-6143-4FB2-A6D7-A40F264431F4}"/>
 						<Switch Id="3343821028" Name="afraid" ObjectPath="\Switches\Default Work Unit\switch_enemy_state\afraid" GUID="{6B7928E2-235B-4F7D-91C3-339543D1FE93}"/>
 						<Switch Id="4251348366" Name="agressive" ObjectPath="\Switches\Default Work Unit\switch_enemy_state\agressive" GUID="{3C5FF830-8A92-4FEE-A31B-60D35FE55A2E}"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="1592216945" Name="switch_link_index" ObjectPath="\Switches\Default Work Unit\switch_link_index" GUID="{CA6F1763-1C63-4DC9-A2BA-5E916F6F1EC2}">
+					<Switches>
+						<Switch Id="1819160128" Name="link3" ObjectPath="\Switches\Default Work Unit\switch_link_index\link3" GUID="{D4A4F266-2E92-4285-85C9-31EDF0B60ED6}"/>
+						<Switch Id="1819160129" Name="link2" ObjectPath="\Switches\Default Work Unit\switch_link_index\link2" GUID="{C5B26C9B-9695-4352-8EC1-A35560EB5AD0}"/>
+						<Switch Id="1819160130" Name="link1" ObjectPath="\Switches\Default Work Unit\switch_link_index\link1" GUID="{67175D70-7201-4E06-AD2B-B4AFE78D5A34}"/>
+						<Switch Id="1819160131" Name="link0" ObjectPath="\Switches\Default Work Unit\switch_link_index\link0" GUID="{21730554-9A26-480E-BF82-5403DD91DA7F}"/>
+						<Switch Id="1819160134" Name="link5" ObjectPath="\Switches\Default Work Unit\switch_link_index\link5" GUID="{42700C4E-265F-46C6-84CA-AC6DCD37F297}"/>
+						<Switch Id="1819160135" Name="link4" ObjectPath="\Switches\Default Work Unit\switch_link_index\link4" GUID="{204B5880-D638-43C3-8757-F3CF4D414429}"/>
 					</Switches>
 				</SwitchGroup>
 				<SwitchGroup Id="1991914396" Name="switch_attack_material" ObjectPath="\Switches\Default Work Unit\switch_attack_material" GUID="{D11887A8-8E5A-4D3D-8FDC-BBC055C5425E}">
@@ -104,16 +139,17 @@
 						<Switch Id="3472709650" Name="vege" ObjectPath="\Switches\Default Work Unit\switch_enemy_fs_material\vege" GUID="{612497D4-F850-447D-B521-6831C66C45BA}"/>
 					</Switches>
 				</SwitchGroup>
-				<SwitchGroup Id="2660901680" Name="switch_combat_phase" ObjectPath="\Switches\Default Work Unit\switch_combat_phase" GUID="{00BFC575-DD53-4D59-B613-1CE2AE596AE9}">
+				<SwitchGroup Id="3204630533" Name="switch_combat_wave_index" ObjectPath="\Switches\Default Work Unit\switch_combat_wave_index" GUID="{0F59E01D-E03B-49A8-A0FA-FDE40D3F5F44}">
 					<Switches>
-						<Switch Id="302661891" Name="nostate" ObjectPath="\Switches\Default Work Unit\switch_combat_phase\nostate" GUID="{B604615E-D874-4E59-8E26-ED5FBA8218BD}"/>
-						<Switch Id="3630028968" Name="phase2" ObjectPath="\Switches\Default Work Unit\switch_combat_phase\phase2" GUID="{0DD26233-048F-41A1-A6C7-12E5CAC1F7D1}"/>
-						<Switch Id="3630028969" Name="phase3" ObjectPath="\Switches\Default Work Unit\switch_combat_phase\phase3" GUID="{A17B5649-F5D5-4365-B5EB-FF000F23FF13}"/>
-						<Switch Id="3630028971" Name="phase1" ObjectPath="\Switches\Default Work Unit\switch_combat_phase\phase1" GUID="{6725F899-132D-4978-8B75-001417C3E736}"/>
+						<Switch Id="1879783288" Name="combat_wave_index_3" ObjectPath="\Switches\Default Work Unit\switch_combat_wave_index\combat_wave_index_3" GUID="{66F509B1-916E-4601-96AF-0BE1E7F0F51E}"/>
+						<Switch Id="1879783289" Name="combat_wave_index_2" ObjectPath="\Switches\Default Work Unit\switch_combat_wave_index\combat_wave_index_2" GUID="{40EB69D3-D5A0-490D-AC13-B1DD99123A8C}"/>
+						<Switch Id="1879783290" Name="combat_wave_index_1" ObjectPath="\Switches\Default Work Unit\switch_combat_wave_index\combat_wave_index_1" GUID="{89F6AF0C-EEC7-47B3-B013-F708FF217ADC}"/>
+						<Switch Id="1879783294" Name="combat_wave_index_5" ObjectPath="\Switches\Default Work Unit\switch_combat_wave_index\combat_wave_index_5" GUID="{9D73A899-2271-49EC-9A38-0E97454C25EA}"/>
+						<Switch Id="1879783295" Name="combat_wave_index_4" ObjectPath="\Switches\Default Work Unit\switch_combat_wave_index\combat_wave_index_4" GUID="{F2E75342-E07C-442C-ACA8-064A4CF110F8}"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{9A9EDFA0-FA2F-93E6-E93F-6165E4610407}</FileHash>
+	<FileHash>{64343587-DAE7-8847-62DE-E76F2E644AF7}</FileHash>
 </SoundBanksInfo>

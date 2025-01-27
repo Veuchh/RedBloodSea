@@ -17,8 +17,10 @@
 				</GameParameter>
 				<GameParameter Name="rtpc_chaos_global" ID="{912B7FBA-E859-424B-9664-D9B8B51FC1BA}">
 					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="InitialValue" Type="Real64" Value="0.5"/>
 						<Property Name="Max" Type="Real64" Value="1"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="14"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="60"/>
 					</PropertyList>
 				</GameParameter>
 				<GameParameter Name="rtpc_player_life" ID="{1CC6F0C7-6126-4057-9B70-3C89F38C5F50}">
@@ -32,8 +34,8 @@
 						<Property Name="InitialValue" Type="Real64" Value="0"/>
 						<Property Name="Max" Type="Real64" Value="1"/>
 						<Property Name="RTPCRamping" Type="int16" Value="1"/>
-						<Property Name="SlewRateDown" Type="Real64" Value="66"/>
-						<Property Name="SlewRateUp" Type="Real64" Value="79"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="33"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="81"/>
 					</PropertyList>
 				</GameParameter>
 				<GameParameter Name="rtpc_landing_force" ID="{07DB1610-4113-4F81-A7B4-0C953E645162}">
@@ -95,6 +97,29 @@
 				<GameParameter Name="rtpc_tapestop" ID="{34AB8051-BDEC-4FCF-A5A6-D129BA29D38F}">
 					<PropertyList>
 						<Property Name="InitialValue" Type="Real64" Value="100"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="rtpc_dash_leftright" ID="{7894A474-E5D3-4187-925F-19042540CC04}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0.5"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="rtpc_settings_slider" ID="{CF91B134-4D3D-4381-A066-5A720C4CB494}"/>
+				<GameParameter Name="rtpc_mainmenumusicpitch" ID="{ED4A7616-4338-46E2-9ED1-5758709ACDDE}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="rtpc_positioning_leftright" ID="{C0867B0F-00CC-44F1-95F4-1370870636CA}"/>
+				<GameParameter Name="rtpc_high_freq_filter" ID="{63F62A41-A536-4987-9F56-EDAB260398B7}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="rtpc_highfreqfilter_off_on" ID="{9D67A80A-4B5B-4616-A716-FC5EFCF47D77}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
 					</PropertyList>
 				</GameParameter>
 			</ChildrenList>

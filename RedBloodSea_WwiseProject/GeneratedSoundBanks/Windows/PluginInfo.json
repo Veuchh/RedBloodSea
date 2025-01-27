@@ -25,6 +25,13 @@
     "StaticLib": "AkSoundSeedWindSource"
    },
    {
+    "LibName": "Wwise Gain",
+    "LibId": "9109507",
+    "Type": "Effect",
+    "DLL": "AkGain",
+    "StaticLib": "AkGainFX"
+   },
+   {
     "LibName": "System",
     "LibId": "11403271",
     "Type": "AudioDevice"
@@ -35,6 +42,6 @@
     "Type": "AudioDevice"
    }
   ],
-  "FileHash": "{768A558E-BFB9-B1C2-7553-07EB1AA16280}"
+  "FileHash": "{5AD83CBC-A4BC-BDFC-00FD-A619A65FA3C1}"
  }
 }

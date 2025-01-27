@@ -110,7 +110,9 @@ protected:
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-	
+
+	UFUNCTION(BlueprintCallable)
+	void WavePrepare();
 	UFUNCTION(BlueprintCallable)
 	void WaveStart();
 	UFUNCTION(BlueprintCallable)

@@ -60,9 +60,12 @@ void AWaveSpawnManager::Tick(float DeltaTime)
 
 void AWaveSpawnManager::WavePrepare()
 {
-	if(Waves.Num() > CurrentWave && IsValid(Waves[CurrentWave].BeginWaveTriggerZone))
+	if(Waves.Num() > CurrentWave)
 	{
-		Waves[CurrentWave].BeginWaveTriggerZone->OnActorBeginOverlap.AddUniqueDynamic(this,&AWaveSpawnManager::OnBeginTriggerOverlap);
+		if(IsValid(Waves[CurrentWave].BeginWaveTriggerZone))
+			Waves[CurrentWave].BeginWaveTriggerZone->OnActorBeginOverlap.AddUniqueDynamic(this,&AWaveSpawnManager::OnBeginTriggerOverlap);
+		else
+			WaveStart();
 	}
 }
 
@@ -88,7 +91,10 @@ void AWaveSpawnManager::WaveStart()
 
 	if(Waves[CurrentWave].Type ==  EWaveType::CHECKPOINT && IsValid(Waves[CurrentWave].CheckpointTriggerZone))
 	{
-		Waves[CurrentWave].CheckpointTriggerZone->OnActorBeginOverlap.AddUniqueDynamic(this,&AWaveSpawnManager::OnCheckpointBeginOverlap);
+		if(IsValid(Waves[CurrentWave].CheckpointTriggerZone))
+			Waves[CurrentWave].CheckpointTriggerZone->OnActorBeginOverlap.AddUniqueDynamic(this,&AWaveSpawnManager::OnCheckpointBeginOverlap);
+		else
+			WaveEnd();
 	}
 }
 
@@ -194,7 +200,10 @@ bool AWaveSpawnManager::CheckObjectives()
 {
 	if(Waves[CurrentWave].Type == EWaveType::CLEAR_ALL)
 	{
-		return AliveDwellers.Num() == 0;
+		return AliveDwellers.Num()-1 == 0;
+	} else if(Waves[CurrentWave].Type == EWaveType::CLEAR_SOME)
+	{
+		return Waves[CurrentWave].DwellerLinked + Waves[CurrentWave].DwellerKilled >= Waves[CurrentWave].DwellerToRemove;
 	}
 	return false;
 }
@@ -207,8 +216,7 @@ void AWaveSpawnManager::OnDwellerDeath(AActor* DwellerActor)
 		AliveDwellers.Remove(Dweller);
 		Waves[CurrentWave].DwellerKilled++;
 	}
-	if((Waves[CurrentWave].Type == EWaveType::CLEAR_SOME && Waves[CurrentWave].DwellerLinked + Waves[CurrentWave].DwellerKilled >= Waves[CurrentWave].DwellerToRemove)
-		||	AliveDwellers.Num())
+	if(CheckObjectives())
 	{
 		WaveEnd();
 		OnWaveSuccess.Broadcast();
@@ -223,8 +231,7 @@ void AWaveSpawnManager::OnDwellerLinked(AActor* Actor)
 		AliveDwellers.Remove(Dweller);
 		Waves[CurrentWave].DwellerLinked++;
 	}
-	if((Waves[CurrentWave].Type == EWaveType::CLEAR_SOME && Waves[CurrentWave].DwellerLinked + Waves[CurrentWave].DwellerKilled >= Waves[CurrentWave].DwellerToRemove)
-		|| (AliveDwellers.Num() <= 1))
+	if(CheckObjectives())
 	{
 		WaveEnd();
 		OnWaveSuccess.Broadcast();

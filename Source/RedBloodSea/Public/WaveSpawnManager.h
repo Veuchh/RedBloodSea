@@ -57,6 +57,8 @@ public:
 
 	UFUNCTION()
 	void OnDwellerDeath(AActor* DwellerActor);
+	void AddDweller(ADweller* Dweller);
+	void RemoveDweller(ADweller* Dweller);
 
 #if WITH_EDITOR
 	//Editor functions

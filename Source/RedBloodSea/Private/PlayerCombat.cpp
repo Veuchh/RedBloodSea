@@ -212,6 +212,7 @@ void UPlayerCombat::TryConsumeAttackBuffer()
 	if (PlayerData::AttackBuffer.Num() <= 0)
 		return;
 
+	wasWeakpointHitThisAttack = false;
 	PlayerData::CurrentAttackState = PlayerAttackState::Startup;
 	PlayerData::CurrentAttack = PlayerData::AttackBuffer[0];
 	PlayerData::AttackBuffer.RemoveAt(0);
@@ -229,7 +230,6 @@ void UPlayerCombat::OngoingAttackLogic()
 		{
 			PlayerData::CurrentAttackState = PlayerAttackState::Attacking;
 			ToggleAttackCollider(PlayerData::CurrentAttack, true);
-			wasWeakpointHitThisAttack = false;
 			return;
 		}
 		break;
@@ -306,14 +306,16 @@ void UPlayerCombat::OnGodModeToggle()
 
 void UPlayerCombat::DamagePlayer(int damageAmount)
 {
-	if (PlayerData::IsGodModeEnabled)
+	if (PlayerData::IsGodModeEnabled
+		||PlayerData::LastHitTime + recoveryTimeDuration >= UGameplayStatics::GetRealTimeSeconds(GetWorld()))
 	{
 		return;
 	}
 	
 	PlayerData::CurrentHPAmount -= damageAmount;
 	OnPlayerHit.Broadcast(PlayerData::CurrentHPAmount);
-
+	recoveryTimeDuration = UGameplayStatics::GetRealTimeSeconds(GetWorld());
+	
 	if (PlayerData::CurrentHPAmount > 0)
 	{
 		UWeakpointsManager* wpManager = PlayerData::CurrentPossessTarget->GetOwner()->GetComponentByClass<

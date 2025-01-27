@@ -6,6 +6,7 @@
 #include "PlayerData.h"
 #include "Camera/CameraComponent.h"
 #include "GameFramework/Character.h"
+#include "WeakpointsManager.h"
 
 // Sets default values for this component's properties
 UPlayerCameraHandler::UPlayerCameraHandler()
@@ -24,27 +25,33 @@ void UPlayerCameraHandler::BeginPlay()
 	Super::BeginPlay();
 
 	// ...
-	
 }
 
 
 // Called every frame
-void UPlayerCameraHandler::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
+void UPlayerCameraHandler::TickComponent(float DeltaTime, ELevelTick TickType,
+                                         FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
 	playerCharacter->GetMesh()->SetRelativeRotation(FRotator(playerCharacter->GetControlRotation().Pitch, 0, 0));
-	
+
 	CameraRoll();
 	CameraFOV();
+	AimAssist(DeltaTime);
 }
 
-void UPlayerCameraHandler::SetupPlayerCameraComponent(ACharacter* PlayerCharacter, UCameraComponent* PlayerCameraComponent, USceneComponent* newCameraRollTarget)
+void UPlayerCameraHandler::SetupPlayerCameraComponent(ACharacter* PlayerCharacter,
+                                                      UCameraComponent* PlayerCameraComponent,
+                                                      USceneComponent* newCameraRollTarget)
 {
 	playerCharacter = PlayerCharacter;
 	playerCameraComponent = PlayerCameraComponent;
-	playerCameraComponent->AttachToComponent(playerCharacter->GetMesh(), FAttachmentTransformRules::KeepWorldTransform, TEXT("cameraSocket"));
+	playerCameraComponent->AttachToComponent(playerCharacter->GetMesh(), FAttachmentTransformRules::KeepWorldTransform,
+	                                         TEXT("cameraSocket"));
 	cameraRollTarget = newCameraRollTarget;
+
+	playerController = playerCharacter->GetLocalViewingPlayerController();
 }
 
 void UPlayerCameraHandler::OnLookInput(const FVector2D newLookInput)
@@ -61,7 +68,7 @@ void UPlayerCameraHandler::CameraRoll()
 {
 	//Roll
 
-	float targetRoll = cameraRollStrength *  PlayerData::CurrentMovementInput.X;
+	float targetRoll = cameraRollStrength * PlayerData::CurrentMovementInput.X;
 
 	// Get the current controller roll input
 	float currentRoll = playerCharacter->GetControlRotation().Roll;
@@ -78,23 +85,86 @@ void UPlayerCameraHandler::CameraRoll()
 	// Set the controller roll input to the new roll value
 	playerCharacter->AddControllerRollInput(newRoll - currentRoll);
 
-	FRotator newCameraRotation = FRotator(cameraRollTarget->GetRelativeRotation().Pitch,cameraRollTarget->GetRelativeRotation().Yaw ,playerCharacter->GetControlRotation().Roll);
+	FRotator newCameraRotation = FRotator(cameraRollTarget->GetRelativeRotation().Pitch,
+	                                      cameraRollTarget->GetRelativeRotation().Yaw,
+	                                      playerCharacter->GetControlRotation().Roll);
 	cameraRollTarget->SetRelativeRotation(newCameraRotation);
 }
 
 void UPlayerCameraHandler::CameraFOV()
 {
-	 //FOV
-	 float targetFOV = PlayerData::CurrentPossessState ==  PlayerPossessState::ZoomingCamera ? possessFOV : PlayerData::IsDashing ? dashFOV : defaultFOV;
+	//FOV
+	float targetFOV = PlayerData::CurrentPossessState == PlayerPossessState::ZoomingCamera
+		                  ? possessFOV
+		                  : PlayerData::IsDashing
+		                  ? dashFOV
+		                  : defaultFOV;
 
-	 // Get the current controller roll input
-	 float currentFOV = playerCameraComponent->FieldOfView;
+	// Get the current controller roll input
+	float currentFOV = playerCameraComponent->FieldOfView;
 
-	 // Calculate the lerp alpha value based on the interpolation speed
-	 float lerpAlpha = FMath::Clamp(fovChangeSpeed * GetWorld()->GetDeltaSeconds(), 0.0f, 1.0f);
+	// Calculate the lerp alpha value based on the interpolation speed
+	float lerpAlpha = FMath::Clamp(fovChangeSpeed * GetWorld()->GetDeltaSeconds(), 0.0f, 1.0f);
 
-	 // Interpolate between the current roll and the adjusted target roll
-	 float newFOV = FMath::Lerp(currentFOV, targetFOV, lerpAlpha);
+	// Interpolate between the current roll and the adjusted target roll
+	float newFOV = FMath::Lerp(currentFOV, targetFOV, lerpAlpha);
 
-	 playerCameraComponent->SetFieldOfView(newFOV);
+	playerCameraComponent->SetFieldOfView(newFOV);
+}
+
+void UPlayerCameraHandler::AimAssist(float deltaTime)
+{
+	if (PlayerData::CanRotateCamera() && playerCharacter->Controller != nullptr)
+	{
+		AWeakpoint* aimAssistTarget = GetAimAssistTarget();
+
+		if (aimAssistTarget != nullptr)
+		{
+
+			FVector2d screenPosition = FVector2d::ZeroVector;
+			playerController->ProjectWorldLocationToScreen(aimAssistTarget->GetActorLocation(), screenPosition, false);
+			FVector2D ViewportSize = FVector2D(GEngine->GameViewport->Viewport->GetSizeXY());
+			screenPosition = (screenPosition / ViewportSize)- (FVector2d::One() / 2);
+			
+			GEngine->AddOnScreenDebugMessage(-1, 0, FColor::Red, FString::SanitizeFloat(screenPosition.X));
+			
+			// add yaw and pitch input to controller
+			playerCharacter->AddControllerYawInput(screenPosition.X * aimAssistStrength * deltaTime);
+			playerCharacter->AddControllerPitchInput(screenPosition.Y * aimAssistStrength * deltaTime);
+		}
+	}
+}
+
+//This returns nullptr if no suitable weakpoint is found
+AWeakpoint* UPlayerCameraHandler::GetAimAssistTarget()
+{
+	AWeakpoint* bestWeakpoint = nullptr;
+	float bestDistanceFromScreenCenter = std::numeric_limits<float>::max();
+	FVector2D ViewportSize = FVector2D(GEngine->GameViewport->Viewport->GetSizeXY());
+
+	for (AWeakpoint* Weakpoint : UWeakpointsManager::GlobalWeakpointList)
+	{
+		double distanceFromCamera = (Weakpoint->GetActorLocation() - playerCameraComponent->GetComponentLocation()).
+			Length();
+
+		if (Weakpoint->State == EWeakpointState::Revealed
+			&& distanceFromCamera < aimAssistMaxDistanceFromWeakpoint)
+		{
+			FVector2D screenPosition = FVector2d::ZeroVector;
+			if (playerController->ProjectWorldLocationToScreen(Weakpoint->GetActorLocation(), screenPosition, true))
+			{
+				screenPosition = screenPosition / ViewportSize;
+				float distanceToCenter = (screenPosition - (FVector2d::One() / 2)).Length();
+
+				if (distanceToCenter < aimAssistMaxDistanceFromScreenCenter && distanceToCenter <
+					bestDistanceFromScreenCenter)
+				{
+					bestWeakpoint = Weakpoint;
+					bestDistanceFromScreenCenter = distanceToCenter;
+				}
+			}
+		}
+	}
+
+	return bestWeakpoint;
 }

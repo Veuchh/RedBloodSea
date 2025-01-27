@@ -5,6 +5,7 @@
 
 #include "DwellerLinkSubsystem.h"
 #include "PossessTarget.h"
+#include "WaveSpawnManager.h"
 #include "WeakpointsManager.h"
 #include "GameFramework/Character.h"
 #include "GameFramework/CharacterMovementComponent.h"
@@ -30,6 +31,13 @@ void UPlayerPossess::SetupPlayerPossessComponent(ACharacter* Character,
 	FActorSpawnParameters SpawnInfo;
 	ADweller* newDwellerInstance = GetWorld()->SpawnActor<ADweller>(dwellerBP, Location, Rotation, SpawnInfo);
 
+	AWaveSpawnManager* waveSpawnManager = (AWaveSpawnManager*)UGameplayStatics::GetActorOfClass(GetWorld(), AWaveSpawnManager::StaticClass());
+
+	if (waveSpawnManager != nullptr)
+	{
+		waveSpawnManager->AddDweller(newDwellerInstance);
+	}
+	
 	PlayerData::CurrentPossessTarget = newDwellerInstance->GetComponentByClass<UPossessTarget>();
 	PossessDweller();
 	UpdatePlayerHealth();
@@ -256,8 +264,6 @@ void UPlayerPossess::LineTrace(FVector TraceStart, FVector TraceEnd, FHitResult&
 
 void UPlayerPossess::EndPlay(const EEndPlayReason::Type EndPlayReason)
 {
-	PlayerData::CurrentPossessTarget->GetOwner()->Destroy();
-
 	Super::EndPlay(EndPlayReason);
 }
 

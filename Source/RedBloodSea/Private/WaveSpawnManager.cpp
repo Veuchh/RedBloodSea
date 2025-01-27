@@ -148,10 +148,24 @@ void AWaveSpawnManager::OnDwellerDeath(AActor* DwellerActor)
 	{
 		AliveDwellers.Remove(Dweller);
 	}
-	if(AliveDwellers.Num() == 0 && CurrentWave >= WavesData->Waves.Num())
+	if(AliveDwellers.Num() <= 1 && CurrentWave >= WavesData->Waves.Num())
 	{
 		OnLevelEnd.Broadcast();
 	}
+}
+
+void AWaveSpawnManager::AddDweller(ADweller* Dweller)
+{
+	AliveDwellers.Add(Dweller);
+	UWeakpointsManager* weakpointsManager = Dweller->GetWeakpointManager();
+	weakpointsManager->OnDeath.AddUniqueDynamic(this,&AWaveSpawnManager::OnDwellerDeath);
+}
+
+void AWaveSpawnManager::RemoveDweller(ADweller* Dweller)
+{
+	AliveDwellers.Remove(Dweller);
+	UWeakpointsManager* weakpointsManager = Dweller->GetWeakpointManager();
+	weakpointsManager->OnDeath.RemoveDynamic(this,&AWaveSpawnManager::OnDwellerDeath);
 }
 
 #if WITH_EDITOR

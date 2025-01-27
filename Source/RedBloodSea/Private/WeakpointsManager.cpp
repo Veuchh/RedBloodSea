@@ -2,9 +2,10 @@
 
 
 #include "WeakpointsManager.h"
-#include "CountLevelInstanceSubsystem.h"
+#include "UDataSubsystem.h"
 #include "PossessTarget.h"
 
+TArray<AWeakpoint*> UWeakpointsManager::GlobalWeakpointList = TArray<AWeakpoint*>();
 
 // Sets default values for this component's properties
 UWeakpointsManager::UWeakpointsManager()
@@ -23,12 +24,13 @@ void UWeakpointsManager::BeginPlay()
 	Owner = GetOwner();
 	Skeleton = Cast<USkeletalMeshComponent>(Owner->GetComponentByClass(USkeletalMeshComponent::StaticClass()));
 	CreateWeakPoints();
-	CountSubSys = Cast<UCountLevelInstanceSubsystem>(GetWorld()->GetGameInstance()->GetSubsystem<UCountLevelInstanceSubsystem>());
+	CountSubSys = Cast<UUDataSubsystem>(GetWorld()->GetGameInstance()->GetSubsystem<UUDataSubsystem>());
 }
 
 
 // Called every frame
-void UWeakpointsManager::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
+void UWeakpointsManager::TickComponent(float DeltaTime, ELevelTick TickType,
+                                       FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
@@ -39,11 +41,24 @@ void UWeakpointsManager::TickComponent(float DeltaTime, ELevelTick TickType, FAc
 		{
 			UE::Math::TVector<double> position = weakpoint.Value->GetTransform().GetLocation();
 			FName name = *FString("WeakPointPos").Append(FString::FromInt(index));
-			material->SetVectorParameterValue(name,FLinearColor(position[0],position[1],position[2],0));
+			material->SetVectorParameterValue(name, FLinearColor(position[0], position[1], position[2], 0));
 		}
 		index++;
 	}
 	// ...
+}
+
+void UWeakpointsManager::OnComponentDestroyed(bool bDestroyingHierarchy)
+{
+	for (auto Element : Weakpoints)
+	{
+		if (GlobalWeakpointList.Contains(Element.Value))
+		{
+			GlobalWeakpointList.Remove(Element.Value);
+		}
+	}
+	
+	Super::OnComponentDestroyed(bDestroyingHierarchy);
 }
 
 
@@ -74,13 +89,13 @@ int UWeakpointsManager::GetMaxHealthPoint()
 
 void UWeakpointsManager::CreateWeakPoints()
 {
-	if(!IsValid(WeakpointData))
+	if (!IsValid(WeakpointData))
 		return;
-	
+
 	int count = 0;
-	for (auto const & WeakpointSlot : WeakpointData->WeakpointsSockets)
+	for (auto const& WeakpointSlot : WeakpointData->WeakpointsSockets)
 	{
-		if(Weakpoints.Contains(WeakpointSlot.SocketName)  || !(TypeFilter & static_cast<uint8>(WeakpointSlot.Type)))
+		if (Weakpoints.Contains(WeakpointSlot.SocketName) || !(TypeFilter & static_cast<uint8>(WeakpointSlot.Type)))
 			continue;
 		count += WeakpointData->WeightTable[static_cast<int>(WeakpointSlot.Weight)];
 	}
@@ -91,42 +106,52 @@ void UWeakpointsManager::CreateWeakPoints()
 		for (int i = 0; i < SizeCount; i++)
 		{
 			int randomInt = FMath::RandRange(0, count - 1);
-			for (auto & WeakpointSlot : WeakpointData->WeakpointsSockets)
+			for (auto& WeakpointSlot : WeakpointData->WeakpointsSockets)
 			{
-				if(Weakpoints.Contains(WeakpointSlot.SocketName) || !(TypeFilter & static_cast<uint8>(WeakpointSlot.Type)))
+				if (Weakpoints.Contains(WeakpointSlot.SocketName) || !(TypeFilter & static_cast<uint8>(WeakpointSlot.
+					Type)))
 					continue;
-			
+
 				randomInt -= WeakpointData->WeightTable[static_cast<int>(WeakpointSlot.Weight)];
-				
-				if(randomInt < 0)
+
+				if (randomInt < 0)
 				{
-					AttachWeakpoint(WeakpointSlot,WeakpointData->SizeChart[Size]);
+					AttachWeakpoint(WeakpointSlot, WeakpointData->SizeChart[Size]);
 					count -= WeakpointData->WeightTable[static_cast<int>(WeakpointSlot.Weight)];
 					break;
 				}
 			}
 		}
-		Size +=1;
+		Size += 1;
 	}
-	
 }
 
 
-void UWeakpointsManager::AttachWeakpoint(const FWeakpointSlot& WeakpointSlot,const float Size)
+void UWeakpointsManager::AttachWeakpoint(const FWeakpointSlot& WeakpointSlot, const float Size)
 {
 	MaxHealthPoint++;
 	HealthPoint++;
-	AActor* newActor = GetWorld()->SpawnActor(WeakpointData->Weakpoint_BP);
-	newActor->AttachToComponent(Skeleton,FAttachmentTransformRules::SnapToTargetNotIncludingScale,WeakpointSlot.SocketName);
-	
+	AActor* newActor = GetWorld()->SpawnActor(WeakpointData->Weakpoints_BP);
+	newActor->AttachToComponent(Skeleton, FAttachmentTransformRules::SnapToTargetNotIncludingScale,
+	                            WeakpointSlot.SocketName);
+
 	UE::Math::TVector<double> offset = {
-		FMath::FRandRange(-WeakpointSlot.MaxOffset.X,WeakpointSlot.MaxOffset.X),
-		FMath::FRandRange(-WeakpointSlot.MaxOffset.Y,WeakpointSlot.MaxOffset.Y),
-		FMath::FRandRange(-WeakpointSlot.MaxOffset.Z,WeakpointSlot.MaxOffset.Z)};
+		FMath::FRandRange(-WeakpointSlot.MaxOffset.X, WeakpointSlot.MaxOffset.X),
+		FMath::FRandRange(-WeakpointSlot.MaxOffset.Y, WeakpointSlot.MaxOffset.Y),
+		FMath::FRandRange(-WeakpointSlot.MaxOffset.Z, WeakpointSlot.MaxOffset.Z)
+	};
 	newActor->SetActorRelativeLocation(offset);
+
+	const FRotator rot = {
+		FMath::FRand()*360.f,
+		FMath::FRand()*360.f,
+		FMath::FRand()*360.f
+	};
+	newActor->SetActorRotation(rot);
+	
 	TObjectPtr<AWeakpoint> Weakpoint = Cast<AWeakpoint>(newActor);
-	Weakpoint->SetActorScale3D(FVector(1,1,1)*Size);
-	Weakpoints.Add(WeakpointSlot.SocketName,Weakpoint);
+	Weakpoint->SetActorScale3D(FVector(1, 1, 1) * Size);
+	Weakpoints.Add(WeakpointSlot.SocketName, Weakpoint);
 	//UsedWeakpointsSocketsNames.AddUnique(WeakpointSlot.SocketName); //TODO Find why this make the game crash in build and not in editor
 	int index = Weakpoints.Num();
 	for (auto material : MaterialInstances)
@@ -134,9 +159,11 @@ void UWeakpointsManager::AttachWeakpoint(const FWeakpointSlot& WeakpointSlot,con
 		UE::Math::TVector<double> position = newActor->GetTransform().GetLocation();
 		FName name = *FString("WeakPointPos").Append(FString::FromInt(index));
 		FName size = *FString("Size").Append(FString::FromInt(index));
-		material->SetVectorParameterValue(name,FLinearColor(position[0],position[1],position[2],0));
-		material->SetScalarParameterValue(size,60*Size);
+		material->SetVectorParameterValue(name, FLinearColor(position[0], position[1], position[2], 0));
+		material->SetScalarParameterValue(size, 60 * Size);
 	}
+
+	GlobalWeakpointList.Add(Weakpoint);
 }
 
 void UWeakpointsManager::RevealWeakpoints()
@@ -145,22 +172,22 @@ void UWeakpointsManager::RevealWeakpoints()
 	for (auto weakpoint : Weakpoints)
 	{
 		index++;
-		
-		if(weakpoint.Value->State != EWeakpointState::Hidden)
+
+		if (weakpoint.Value->State != EWeakpointState::Hidden)
 			continue;
-		
+
 		weakpoint.Value->GetMesh()->SetVisibility(true);
 		weakpoint.Value->State = EWeakpointState::Revealed;
 		for (auto material : MaterialInstances)
 		{
 			UE::Math::TVector<double> position = weakpoint.Value->GetTransform().GetLocation();
 			FName name = *FString("Opacity").Append(FString::FromInt(index));
-			material->SetScalarParameterValue(name,1.0);
+			material->SetScalarParameterValue(name, 1.0);
 		}
 	}
 	OnWeakpointReveal.Broadcast();
-	GetWorld()->GetTimerManager().SetTimer(WeakpointsVisibilityWindowTimer, this, &UWeakpointsManager::HideWeakpoints, WeakpointData->WeakpointsVisibilityWindowLength, false);
-
+	GetWorld()->GetTimerManager().SetTimer(WeakpointsVisibilityWindowTimer, this, &UWeakpointsManager::HideWeakpoints,
+	                                       WeakpointData->WeakpointsVisibilityWindowLength, false);
 }
 
 void UWeakpointsManager::HideWeakpoints()
@@ -171,10 +198,10 @@ void UWeakpointsManager::HideWeakpoints()
 	for (auto weakpoint : Weakpoints)
 	{
 		index++;
-		
-		if(weakpoint.Value->State == EWeakpointState::Revealed)
+
+		if (weakpoint.Value->State == EWeakpointState::Revealed)
 			weakpoint.Value->State = EWeakpointState::Hidden;
-		else if(weakpoint.Value->State == EWeakpointState::Damaged)
+		else if (weakpoint.Value->State == EWeakpointState::Damaged)
 			continue;
 
 		weakpoint.Value->GetMesh()->SetVisibility(false);
@@ -182,7 +209,7 @@ void UWeakpointsManager::HideWeakpoints()
 		for (auto material : MaterialInstances)
 		{
 			FName name = *FString("Opacity").Append(FString::FromInt(index));
-			material->SetScalarParameterValue(name,0.0);
+			material->SetScalarParameterValue(name, 0.0);
 		}
 	}
 	OnWeakpointHide.Broadcast();
@@ -192,26 +219,32 @@ void UWeakpointsManager::RemoveWeakpoint(AWeakpoint* weakpoint, bool canDestroyH
 {
 	TArray<TObjectPtr<AWeakpoint>> WeakpointsActors;
 	Weakpoints.GenerateValueArray(WeakpointsActors);
-	if(!WeakpointsActors.Contains(weakpoint)
+	if (!WeakpointsActors.Contains(weakpoint)
 		|| (!canDestroyHiddenWeakpoints && weakpoint->State != EWeakpointState::Revealed)
-		|| (canDestroyHiddenWeakpoints &&  weakpoint->State == EWeakpointState::Damaged))
+		|| (canDestroyHiddenWeakpoints && weakpoint->State == EWeakpointState::Damaged))
 		return;
 	HealthPoint--;
-	int index = WeakpointsActors.IndexOfByKey(weakpoint)+1;
+	int index = WeakpointsActors.IndexOfByKey(weakpoint) + 1;
 	weakpoint->GetMesh()->SetVisibility(false);
 	weakpoint->GetCollider()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	weakpoint->State = EWeakpointState::Damaged;
+	
+	if (GlobalWeakpointList.Contains(weakpoint))
+	{
+		GlobalWeakpointList.Remove(weakpoint);
+	}
+	
 	for (auto material : MaterialInstances)
 	{
 		FName name = *FString("Opacity").Append(FString::FromInt(index));
-		material->SetScalarParameterValue(name,0.0);
+		material->SetScalarParameterValue(name, 0.0);
 	}
 	OnWeakpointHit.Broadcast(weakpoint);
-	if(CheckIfDead())
+	if (CheckIfDead())
 	{
 		UPossessTarget* possessTarget = GetOwner()->GetComponentByClass<UPossessTarget>();
 
-		if(possessTarget)
+		if (possessTarget)
 		{
 			possessTarget->OnKilled();
 		}
@@ -225,6 +258,11 @@ void UWeakpointsManager::ClearAllWeakpoints()
 {
 	for (auto Weakpoint : Weakpoints)
 	{
+		if (GlobalWeakpointList.Contains(Weakpoint.Value))
+		{
+			GlobalWeakpointList.Remove(Weakpoint.Value);
+		}
+		
 		Weakpoint.Value->Destroy();
 	}
 	Weakpoints.Empty();
@@ -234,14 +272,8 @@ AWeakpoint* UWeakpointsManager::GetRandomAliveWeakPoint()
 {
 	for (auto Weakpoint : Weakpoints)
 	{
-		if(Weakpoint.Value->State != EWeakpointState::Damaged)
+		if (Weakpoint.Value->State != EWeakpointState::Damaged)
 			return Weakpoint.Value;
 	}
 	return nullptr;
 }
-
-
-
-	
-
-

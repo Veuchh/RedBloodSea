@@ -51,9 +51,7 @@ struct FWave
 	TObjectPtr<AActor> CheckpointTriggerZone;
 
 	UPROPERTY(EditAnywhere)
-	int DwellerToKill;
-	UPROPERTY(EditAnywhere)
-	int DwellerToLink;
+	int DwellerToRemove;
 	UPROPERTY(VisibleAnywhere)
 	int DwellerKilled;
 	UPROPERTY(VisibleAnywhere)

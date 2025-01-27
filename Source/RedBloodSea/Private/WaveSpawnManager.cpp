@@ -193,7 +193,7 @@ void AWaveSpawnManager::OnDwellerDeath(AActor* DwellerActor)
 		AliveDwellers.Remove(Dweller);
 		Waves[CurrentWave].DwellerKilled++;
 	}
-	if((Waves[CurrentWave].Type == EWaveType::CLEAR_SOME && Waves[CurrentWave].DwellerKilled >= Waves[CurrentWave].DwellerToKill)
+	if((Waves[CurrentWave].Type == EWaveType::CLEAR_SOME && Waves[CurrentWave].DwellerLinked + Waves[CurrentWave].DwellerKilled >= Waves[CurrentWave].DwellerToRemove)
 		||	AliveDwellers.Num())
 	{
 		WaveEnd();
@@ -209,7 +209,7 @@ void AWaveSpawnManager::OnDwellerLinked(AActor* Actor)
 		AliveDwellers.Remove(Dweller);
 		Waves[CurrentWave].DwellerLinked++;
 	}
-	if((Waves[CurrentWave].Type == EWaveType::CLEAR_SOME && Waves[CurrentWave].DwellerLinked >= Waves[CurrentWave].DwellerToLink)
+	if((Waves[CurrentWave].Type == EWaveType::CLEAR_SOME && Waves[CurrentWave].DwellerLinked + Waves[CurrentWave].DwellerKilled >= Waves[CurrentWave].DwellerToRemove)
 		|| (AliveDwellers.Num() <= 1))
 	{
 		WaveEnd();

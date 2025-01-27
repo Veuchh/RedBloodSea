@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "AIStatesC.h"
 #include "WeakpointsManager.h"
 #include "GameFramework/Character.h"
 #include "Dweller.generated.h"
@@ -18,12 +19,14 @@ public:
 	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 	UWeakpointsManager* GetWeakpointManager();
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="AI")
+	EAIStatesC InitState;
+
 private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta=(AllowPrivateAccess = "true"))
 	TObjectPtr<UWeakpointsManager> WeakpointsManager;
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess = "true"),EditFixedSize)
 	TArray<TObjectPtr<UMaterialInstanceDynamic>> MaterialInstances;
-
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess = "true"),Category="AI")
 	float FleetingDistanceFactor;

@@ -117,7 +117,9 @@ void UPlayerCameraHandler::CameraFOV()
 
 void UPlayerCameraHandler::AimAssist(float deltaTime)
 {
-	if (PlayerData::CanRotateCamera() && playerCharacter->Controller != nullptr)
+	if (PlayerData::CanRotateCamera()
+		&& playerCharacter->Controller != nullptr
+		&& PlayerData::CurrentPossessState == PlayerPossessState::None)
 	{
 		if (playerController == nullptr)
 		{

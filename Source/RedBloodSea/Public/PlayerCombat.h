@@ -6,6 +6,7 @@
 #include "Components/ActorComponent.h"
 #include "PlayerData.h"
 #include "Weakpoint.h"
+#include "Camera/CameraComponent.h"
 #include "PlayerCombat.generated.h"
 
 
@@ -27,6 +28,8 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnThrustHitNoWeakpoint, AActor*, Hi
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnThrustHitEnviro, AActor*, HitActor);
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnNewWeakPointAimStatus, bool, isAimingWeakpoint);
+
 UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
 class REDBLOODSEA_API UPlayerCombat : public UActorComponent
 {
@@ -43,6 +46,9 @@ private:
 	void ToggleAttackCollider(BufferableAttack attack, bool isToggled);
 
 	bool wasWeakpointHitThisAttack = false;
+	bool isAimingWeakpoint = false;
+
+	UCameraComponent* camera = nullptr;
 
 protected:
 	/*How long before next attack after slash. Starts when the slash starts*/
@@ -94,6 +100,13 @@ protected:
 	/*How long before allowed to add to input buffer after thrust.*/
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
 	float thrustInputBufferCooldown = .05f;
+	
+	/*The max distance for the crosshair to change when aiming at a weakpoint*/
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
+	float maxCrosshairAimDistance = 230;
+
+	UPROPERTY(EditAnywhere)
+	TEnumAsByte<ECollisionChannel> TraceChannelProperty;
 
 	// Called when the game starts
 	virtual void BeginPlay() override;
@@ -108,6 +121,8 @@ protected:
 	void OnThrustOverlap(UPrimitiveComponent* HitComp, AActor* OtherActor);
 	void PlayerDeath();
 
+	void CheckWeakpointAim();
+
 	TArray<AActor*> currentAttackHitActors;
 
 public:
@@ -121,6 +136,7 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void DamagePlayer(int damageAmount, AActor* damageSource);
+	void SetupPlayerCombatComponent(UCameraComponent* CameraComponent);
 
 	UPROPERTY(BlueprintAssignable, Category = "Combat")
 	FOnDeath OnPlayerDeath;
@@ -140,4 +156,6 @@ public:
 	FOnThrustHitNoWeakpoint OnThrustHitNoWeakpoint;
 	UPROPERTY(BlueprintAssignable, Category = "Combat")
 	FOnThrustHitEnviro FOnThrustHitEnviro;
+	UPROPERTY(BlueprintAssignable, Category = "Combat")
+	FOnNewWeakPointAimStatus OnNewWeakPointAimStatus;
 };

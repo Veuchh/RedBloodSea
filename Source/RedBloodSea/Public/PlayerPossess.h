@@ -17,6 +17,7 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnLinkInitiated, int, LinkedEnemies
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnThrowRapierNothing, FVector, rapierEndPosition);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnThrowRapierTarget, FVector, rapierEndPosition);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnThrowRapierEnviro, FVector, rapierEndPosition);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnAimingAtTargetStatusChanged, bool, isAimingAtPossessTarget);
 
 UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
 class REDBLOODSEA_API UPlayerPossess : public UActorComponent
@@ -65,6 +66,7 @@ private:
 	FVector endPossessPosition;
 	UPossessTarget* targetToUnpossess;
 	UDwellerLinkSubsystem* dwellerLinkSU;
+	bool wasAimingAtTarget = false;
 
 	void AimModeToggling();
 	void TogglePlayer(bool isToggled) const;
@@ -112,4 +114,7 @@ public:
 
 	UPROPERTY(BlueprintAssignable, Category = "Callbacks")
 	FOnLinkInitiated OnLinkInitiated;
+
+	UPROPERTY(BlueprintAssignable, Category = "Callbacks")
+	FOnAimingAtTargetStatusChanged OnAimingAtTargetStatusChanged;
 };

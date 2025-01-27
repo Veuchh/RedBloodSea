@@ -199,6 +199,26 @@ void UPlayerPossess::TickComponent(float DeltaTime, ELevelTick TickType, FActorC
 
 	AimModeToggling();
 
+	//Check for crosshair
+	FVector TraceStart = camera->GetComponentLocation();
+	FVector TraceEnd = camera->GetComponentLocation() + camera->GetForwardVector() * maxPossessDistance;
+
+	FHitResult Hit;
+
+	LineTrace(TraceStart, TraceEnd, Hit);
+	bool isAimingAtTarget = false;
+	if (Hit.bBlockingHit && IsValid(Hit.GetActor()))
+	{
+		isAimingAtTarget= Hit.GetActor()->GetComponentByClass<UPossessTarget>() != nullptr;
+	}
+
+	if (wasAimingAtTarget!= isAimingAtTarget)
+	{
+		OnAimingAtTargetStatusChanged.Broadcast(isAimingAtTarget);
+		wasAimingAtTarget= isAimingAtTarget;
+	}
+
+
 	//We only cover states that have "waiting for cooldown" logic (not those waiting for a player input)
 	switch (PlayerData::CurrentPossessState)
 	{

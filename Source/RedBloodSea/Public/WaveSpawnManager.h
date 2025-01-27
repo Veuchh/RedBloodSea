@@ -83,6 +83,14 @@ public:
 private:
 	UPROPERTY(VisibleAnywhere,BlueprintReadOnly,meta=(AllowPrivateAccess = "true"),EditFixedSize,Category="WavesParams")
 	TArray<ADweller*> AliveDwellers;
+
+public:
+	TArray<ADweller*> GetAliveDwellers() const
+	{
+		return AliveDwellers;
+	}
+
+private:
 	UPROPERTY(EditAnywhere,BlueprintReadWrite,meta=(AllowPrivateAccess = "true",ClampMin=1),EditFixedSize,Category="WavesParams")
 	int SpawnPerTick = 1;
 	UPROPERTY(EditAnywhere,BlueprintReadWrite,meta=(AllowPrivateAccess = "true",ClampMin=1),EditFixedSize,Category="WavesParams")

@@ -19,9 +19,9 @@ AWaveSpawnManager::AWaveSpawnManager()
 void AWaveSpawnManager::BeginPlay()
 {
 	Super::BeginPlay();
-
-	Waves[CurrentWave].BeginWaveTriggerZone->OnActorBeginOverlap.AddUniqueDynamic(this,&AWaveSpawnManager::OnBeginTriggerOverlap);
+	
 	CurrentWave = 0;
+	Waves[CurrentWave].BeginWaveTriggerZone->OnActorBeginOverlap.AddUniqueDynamic(this,&AWaveSpawnManager::OnBeginTriggerOverlap);
 }
 
 // Called every frame
@@ -111,12 +111,10 @@ void AWaveSpawnManager::WaveReset()
 	bIsActive = false;
 	SetActorTickEnabled(false);
 	SpawnQueue.Empty();
-	if(Waves[CurrentWave].bTimeLimit)
-	{
-		GetWorld()->GetTimerManager().ClearTimer(CurrentWaveTimer);
-	}
+	GetWorld()->GetTimerManager().ClearAllTimersForObject(this);
 	CurrentWave = 0;
 	ClearAliveDwellers(true);
+	Waves[CurrentWave].BeginWaveTriggerZone->OnActorBeginOverlap.AddUniqueDynamic(this,&AWaveSpawnManager::OnBeginTriggerOverlap);
 }
 
 void AWaveSpawnManager::QueueWave(int WaveNumber)
@@ -145,6 +143,8 @@ void AWaveSpawnManager::SpawnDweller(FTransform Transform, FDwellerProfile Type)
 		
 		if(Type.bIsAntagonist)
 			newDweller->Tags.Add("Antagonist");
+
+		newDweller->InitState = Type.State;
 
 		newDweller->FinishSpawning(Transform);
 

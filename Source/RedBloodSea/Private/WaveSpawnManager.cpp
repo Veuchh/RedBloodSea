@@ -103,6 +103,8 @@ void AWaveSpawnManager::WaveStart()
 			WaveEnd();
 		}
 	}
+
+	OnWaveStart.Broadcast();
 }
 
 

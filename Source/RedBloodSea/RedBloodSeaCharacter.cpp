@@ -19,6 +19,12 @@ DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 //////////////////////////////////////////////////////////////////////////
 // ARedBloodSeaCharacter
 
+void ARedBloodSeaCharacter::K2_IsTearingDown(UObject* caller, bool& isTearingDown)
+{
+	isTearingDown = caller->GetWorld()->bIsTearingDown;
+}
+
+
 ARedBloodSeaCharacter::ARedBloodSeaCharacter()
 {
 	// Set size for collision capsule

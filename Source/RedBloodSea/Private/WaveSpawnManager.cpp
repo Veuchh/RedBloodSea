@@ -5,7 +5,6 @@
 
 #include "PlayerData.h"
 #include "Kismet/GameplayStatics.h"
-#include "Subsystems/UnrealEditorSubsystem.h"
 
 
 // Sets default values
@@ -95,9 +94,14 @@ void AWaveSpawnManager::WaveStart()
 	if(Waves[CurrentWave].Type ==  EWaveType::CHECKPOINT && IsValid(Waves[CurrentWave].CheckpointTriggerZone))
 	{
 		if(IsValid(Waves[CurrentWave].CheckpointTriggerZone))
+		{
 			Waves[CurrentWave].CheckpointTriggerZone->OnActorBeginOverlap.AddUniqueDynamic(this,&AWaveSpawnManager::OnCheckpointBeginOverlap);
+			Waves[CurrentWave].CheckpointTriggerZone->SetActorHiddenInGame(false);
+		}
 		else
+		{
 			WaveEnd();
+		}
 	}
 }
 
@@ -108,13 +112,14 @@ void AWaveSpawnManager::WaveEnd()
 	SpawnQueue.Empty();
 	SetActorTickEnabled(true);
 	ClearAliveDwellers(false);
+	dwellerLinkSU->ResetLink();
 	if(Waves[CurrentWave].bTimeLimit)
 	{
 		GetWorld()->GetTimerManager().ClearTimer(CurrentWaveTimer);
 	}
-	CurrentWave++;
-	if(Waves.Num() > CurrentWave)
+	if(Waves.Num() > CurrentWave+1)
 	{
+		CurrentWave++;
 		WavePrepare();
 		OnWaveSuccess.Broadcast();
 		dwellerLinkSU->ResetLink();
@@ -136,6 +141,15 @@ void AWaveSpawnManager::WaveReset()
 	SetActorTickEnabled(false);
 	SpawnQueue.Empty();
 	GetWorld()->GetTimerManager().ClearAllTimersForObject(this);
+	if(Waves[CurrentWave].Type == EWaveType::CHECKPOINT && IsValid(Waves[CurrentWave].CheckpointTriggerZone))
+	{
+		Waves[CurrentWave].CheckpointTriggerZone->OnActorBeginOverlap.RemoveDynamic(this,&AWaveSpawnManager::OnCheckpointBeginOverlap);
+		Waves[CurrentWave].CheckpointTriggerZone->SetActorHiddenInGame(true);	
+	}
+	if(IsValid(Waves[CurrentWave].BeginWaveTriggerZone))
+	{
+		Waves[CurrentWave].BeginWaveTriggerZone->OnActorBeginOverlap.RemoveDynamic(this,&AWaveSpawnManager::OnBeginTriggerOverlap);
+	}
 	CurrentWave = 0;
 	ClearAliveDwellers(true);
 	WavePrepare();
@@ -170,7 +184,7 @@ void AWaveSpawnManager::SpawnDweller(FTransform Transform, FDwellerProfile Type)
 
 		newDweller->InitState = Type.State;
 
-		newDweller->FinishSpawning(Transform);
+		//newDweller->FinishSpawning(Transform);
 
 		UPossessTarget* PossessTarget = newDweller->GetComponentByClass<UPossessTarget>();
 		PossessTarget->OnLinked.AddUniqueDynamic(this,&AWaveSpawnManager::OnDwellerLinked);
@@ -202,7 +216,7 @@ void AWaveSpawnManager::ClearAliveDwellers(bool RemovePlayerDweller)
 
 bool AWaveSpawnManager::CheckObjectives()
 {
-	if(Waves[CurrentWave].Type == EWaveType::CLEAR_ALL)
+	if(Waves[CurrentWave].Type == EWaveType::CLEAR_ALL || Waves[CurrentWave].Type == EWaveType::SURVIVE)
 	{
 		return AliveDwellers.Num()-1 == 0;
 	} else if(Waves[CurrentWave].Type == EWaveType::CLEAR_SOME)
@@ -220,11 +234,9 @@ void AWaveSpawnManager::OnDwellerDeath(AActor* DwellerActor)
 		AliveDwellers.Remove(Dweller);
 		Waves[CurrentWave].DwellerKilled++;
 	}
-	if(CheckObjectives())
+	if(CheckObjectives() && Waves[CurrentWave].Type != EWaveType::CHECKPOINT)
 	{
 		WaveEnd();
-		OnWaveSuccess.Broadcast();
-		dwellerLinkSU->ResetLink();
 	}
 }
 
@@ -236,11 +248,9 @@ void AWaveSpawnManager::OnDwellerLinked(AActor* Actor)
 		AliveDwellers.Remove(Dweller);
 		Waves[CurrentWave].DwellerLinked++;
 	}
-	if(CheckObjectives())
+	if(CheckObjectives() && Waves[CurrentWave].Type != EWaveType::CHECKPOINT)
 	{
 		WaveEnd();
-		OnWaveSuccess.Broadcast();
-		dwellerLinkSU->ResetLink();
 	}
 
 }
@@ -273,6 +283,7 @@ void AWaveSpawnManager::OnBeginTriggerOverlap(AActor* OverlapedActor, AActor* Ot
 void AWaveSpawnManager::OnCheckpointBeginOverlap(AActor* OverlapedActor, AActor* OtherActor)
 {
 	Waves[CurrentWave].CheckpointTriggerZone->OnActorBeginOverlap.RemoveDynamic(this,&AWaveSpawnManager::OnCheckpointBeginOverlap);
+	Waves[CurrentWave].CheckpointTriggerZone->SetActorHiddenInGame(true);
 	WaveEnd();
 }
 

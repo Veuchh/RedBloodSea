@@ -24,6 +24,7 @@ void UPlayerPossess::SetupPlayerPossessComponent(ACharacter* Character,
 	character = Character;
 	camera = CameraComponent;
 	dwellerLinkSU = UGameplayStatics::GetGameInstance(GetWorld())->GetSubsystem<UDwellerLinkSubsystem>();
+	dwellerLinkSU->ResetLink();
 	dwellerLinkSU->SetupSubsystem(GetOwner(), splineLinkVFXReference);
 	//We spawn a default enemy for the player to possess
 	FVector Location = GetOwner()->GetActorLocation();

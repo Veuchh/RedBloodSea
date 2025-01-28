@@ -4,7 +4,6 @@
 #include "WaveSpawnManager.h"
 
 #include "PlayerData.h"
-#include "Subsystems/UnrealEditorSubsystem.h"
 
 
 // Sets default values
@@ -92,9 +91,14 @@ void AWaveSpawnManager::WaveStart()
 	if(Waves[CurrentWave].Type ==  EWaveType::CHECKPOINT && IsValid(Waves[CurrentWave].CheckpointTriggerZone))
 	{
 		if(IsValid(Waves[CurrentWave].CheckpointTriggerZone))
+		{
 			Waves[CurrentWave].CheckpointTriggerZone->OnActorBeginOverlap.AddUniqueDynamic(this,&AWaveSpawnManager::OnCheckpointBeginOverlap);
+			Waves[CurrentWave].CheckpointTriggerZone->SetActorHiddenInGame(false);
+		}
 		else
+		{
 			WaveEnd();
+		}
 	}
 }
 
@@ -132,6 +136,15 @@ void AWaveSpawnManager::WaveReset()
 	SetActorTickEnabled(false);
 	SpawnQueue.Empty();
 	GetWorld()->GetTimerManager().ClearAllTimersForObject(this);
+	if(Waves[CurrentWave].Type == EWaveType::CHECKPOINT && IsValid(Waves[CurrentWave].CheckpointTriggerZone))
+	{
+		Waves[CurrentWave].CheckpointTriggerZone->OnActorBeginOverlap.RemoveDynamic(this,&AWaveSpawnManager::OnCheckpointBeginOverlap);
+		Waves[CurrentWave].CheckpointTriggerZone->SetActorHiddenInGame(true);	
+	}
+	if(IsValid(Waves[CurrentWave].BeginWaveTriggerZone))
+	{
+		Waves[CurrentWave].BeginWaveTriggerZone->OnActorBeginOverlap.RemoveDynamic(this,&AWaveSpawnManager::OnBeginTriggerOverlap);
+	}
 	CurrentWave = 0;
 	ClearAliveDwellers(true);
 	WavePrepare();
@@ -198,7 +211,7 @@ void AWaveSpawnManager::ClearAliveDwellers(bool RemovePlayerDweller)
 
 bool AWaveSpawnManager::CheckObjectives()
 {
-	if(Waves[CurrentWave].Type == EWaveType::CLEAR_ALL)
+	if(Waves[CurrentWave].Type == EWaveType::CLEAR_ALL || Waves[CurrentWave].Type == EWaveType::SURVIVE)
 	{
 		return AliveDwellers.Num()-1 == 0;
 	} else if(Waves[CurrentWave].Type == EWaveType::CLEAR_SOME)
@@ -267,6 +280,7 @@ void AWaveSpawnManager::OnBeginTriggerOverlap(AActor* OverlapedActor, AActor* Ot
 void AWaveSpawnManager::OnCheckpointBeginOverlap(AActor* OverlapedActor, AActor* OtherActor)
 {
 	Waves[CurrentWave].CheckpointTriggerZone->OnActorBeginOverlap.RemoveDynamic(this,&AWaveSpawnManager::OnCheckpointBeginOverlap);
+	Waves[CurrentWave].CheckpointTriggerZone->SetActorHiddenInGame(true);
 	WaveEnd();
 }
 

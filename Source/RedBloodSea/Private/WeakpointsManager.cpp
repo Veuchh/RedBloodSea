@@ -23,7 +23,7 @@ void UWeakpointsManager::BeginPlay()
 
 	Owner = GetOwner();
 	Skeleton = Cast<USkeletalMeshComponent>(Owner->GetComponentByClass(USkeletalMeshComponent::StaticClass()));
-	CreateWeakPoints();
+	//CreateWeakPoints();
 	CountSubSys = Cast<UUDataSubsystem>(GetWorld()->GetGameInstance()->GetSubsystem<UUDataSubsystem>());
 }
 

@@ -166,24 +166,25 @@ void AWaveSpawnManager::QueueWave(int WaveNumber)
 
 void AWaveSpawnManager::SpawnDweller(FTransform Transform, FDwellerProfile Type)
 {
-	ADweller* newDweller = GetWorld()->SpawnActorDeferred<ADweller>(DwellerBP,Transform);
+	Transform.SetLocation(Transform.GetLocation() + FVector(0.,0.,100));
+	ADweller* newDweller = GetWorld()->SpawnActorDeferred<ADweller>(DwellerBP,Transform,nullptr,nullptr,ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn);
 	if(newDweller)
 	{
 		AliveDwellers.Add(newDweller);
 		UWeakpointsManager* WeakpointsManager = newDweller->GetWeakpointManager();
-		WeakpointsManager->OnDeath.AddUniqueDynamic(this,&AWaveSpawnManager::OnDwellerDeath);
-
-		for(int i = 0; i <= static_cast<int>(EWeakpointSize::NUM); i++)
-		{
-			WeakpointsManager->SizeNumber[i] = Type.SizeNumber[i];
-		}
-		WeakpointsManager->TypeFilter = Type.TypeFilter;
+		 WeakpointsManager->OnDeath.AddUniqueDynamic(this,&AWaveSpawnManager::OnDwellerDeath);
+		 newDweller->OnDestroyed.AddUniqueDynamic(this,&AWaveSpawnManager::OnDwellerDeath);
+		 for(int i = 0; i <= static_cast<int>(EWeakpointSize::NUM); i++)
+		 {
+		 	WeakpointsManager->SizeNumber[i] = Type.SizeNumber[i];
+		 }
+		 WeakpointsManager->TypeFilter = Type.TypeFilter;
 		
-		if(Type.bIsAntagonist)
-			newDweller->Tags.Add("Antagonist");
-
-		newDweller->InitState = Type.State;
-
+		 if(Type.bIsAntagonist)
+		 	newDweller->Tags.Add("Antagonist");
+		
+		 newDweller->InitState = Type.State;
+		 WeakpointsManager->CreateWeakPoints();
 		newDweller->FinishSpawning(Transform);
 
 		UPossessTarget* PossessTarget = newDweller->GetComponentByClass<UPossessTarget>();
@@ -268,9 +269,12 @@ void AWaveSpawnManager::RemoveDweller(ADweller* Dweller,bool bRemoveFromArray)
 {
 	if(bRemoveFromArray)
 		AliveDwellers.Remove(Dweller);
+	if(!IsValid(Dweller))
+		return;
 	UWeakpointsManager* WeakpointsManager = Dweller->GetWeakpointManager();
 	UPossessTarget* PossessTarget = Dweller->GetComponentByClass<UPossessTarget>();
 	WeakpointsManager->OnDeath.RemoveDynamic(this,&AWaveSpawnManager::OnDwellerDeath);
+	Dweller->OnDestroyed.RemoveDynamic(this,&AWaveSpawnManager::OnDwellerDeath);
 	PossessTarget->OnLinked.RemoveDynamic(this,&AWaveSpawnManager::OnDwellerLinked);
 }
 

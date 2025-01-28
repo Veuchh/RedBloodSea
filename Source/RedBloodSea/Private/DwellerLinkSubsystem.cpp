@@ -17,7 +17,8 @@ void UDwellerLinkSubsystem::Deinitialize()
 
 void UDwellerLinkSubsystem::ResetLink()
 {
-	UPossessTarget* currentlyPossessedDweller = dwellersInLink[dwellersInLink.Num() - 1];
+	if(!dwellersInLink.IsEmpty())
+		UPossessTarget* currentlyPossessedDweller = dwellersInLink[dwellersInLink.Num() - 1];
 	dwellersInLink.Empty();
 
 	for (int i = instantiatedLinksVFX.Num() - 1; i >= 0; i--)

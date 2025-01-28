@@ -130,7 +130,7 @@ void AWaveSpawnManager::WaveEnd()
 {
  	bIsActive = false;
 	SpawnQueue.Empty();
-	SetActorTickEnabled(true);
+	SetActorTickEnabled(false);
 	ClearAliveDwellers(false);
 	dwellerLinkSU->ResetLink();
 	if(Waves[CurrentWave].bTimeLimit)

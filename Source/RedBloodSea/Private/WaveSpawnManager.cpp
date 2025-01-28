@@ -184,7 +184,7 @@ void AWaveSpawnManager::SpawnDweller(FTransform Transform, FDwellerProfile Type)
 
 		newDweller->InitState = Type.State;
 
-		//newDweller->FinishSpawning(Transform);
+		newDweller->FinishSpawning(Transform);
 
 		UPossessTarget* PossessTarget = newDweller->GetComponentByClass<UPossessTarget>();
 		PossessTarget->OnLinked.AddUniqueDynamic(this,&AWaveSpawnManager::OnDwellerLinked);

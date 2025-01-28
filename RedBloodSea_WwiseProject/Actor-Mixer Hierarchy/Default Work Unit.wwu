@@ -1052,7 +1052,7 @@
 											<ObjectRef Name="link0" ID="{21730554-9A26-480E-BF82-5403DD91DA7F}" WorkUnitID="{CAC3CED8-5AC9-4C4E-8486-D3A059718422}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+											<ObjectRef Name="PlayerAbilities" ID="{23D327A8-D57F-4DDE-8DF2-8200B9DA4037}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
 										</Reference>
 										<Reference Name="SwitchGroupOrStateGroup">
 											<ObjectRef Name="switch_link_index" ID="{CA6F1763-1C63-4DC9-A2BA-5E916F6F1EC2}" WorkUnitID="{CAC3CED8-5AC9-4C4E-8486-D3A059718422}"/>
@@ -2340,7 +2340,7 @@
 																		<PointList>
 																			<Point>
 																				<XPos>0</XPos>
-																				<YPos>-4800</YPos>
+																				<YPos>0</YPos>
 																				<Flags>5</Flags>
 																				<SegmentShape>Log2</SegmentShape>
 																			</Point>
@@ -2398,7 +2398,7 @@
 											<PropertyList>
 												<Property Name="MakeUpGain" Type="Real64">
 													<ValueList>
-														<Value>-2</Value>
+														<Value>3</Value>
 													</ValueList>
 												</Property>
 												<Property Name="Pitch" Type="int32">
@@ -3355,18 +3355,1607 @@
 						</RandomSequenceContainer>
 						<Folder Name="EnemyProjectile" ID="{FC36670C-A97A-49CC-B991-95815236FFDE}" ShortID="367041364">
 							<ChildrenList>
-								<RandomSequenceContainer Name="EnemyProjectileCast" ID="{4A9A06BA-BB7D-4433-A266-4FDE7867C156}" ShortID="130723254">
+								<ActorMixer Name="EnemyProjectile" ID="{CE6C993E-60E1-4314-A5B9-104D4E406466}" ShortID="1016475667">
+									<PropertyList>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+											<ObjectRef Name="EnemyBus" ID="{BCC1ECC0-BA5A-45C2-A555-9454DB046120}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
 										</Reference>
 									</ReferenceList>
-								</RandomSequenceContainer>
+									<ChildrenList>
+										<RandomSequenceContainer Name="EnemyProjectileBreak" ID="{4F9443BE-644E-4DF7-B4AA-109D65CD2A9A}" ShortID="929322784">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+												<Property Name="InitialDelay" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{441AACD4-F5C7-4C17-9523-6B893A6B50DF}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>-1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="OverridePositioning" Type="bool" Value="True"/>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>10</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{0DC9DD1A-7AA6-445F-9A1D-3AB4EF0D4776}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="200"/>
+																	<Property Name="Min" Type="Real64" Value="-200"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Projectile Cast" ID="{E985830E-5D23-44E6-BD20-EE9E867A297D}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="EnemyBus" ID="{BCC1ECC0-BA5A-45C2-A555-9454DB046120}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Break" ID="{6E22EC78-5920-47AC-A9CD-3A4944AD68E3}" ShortID="475804914">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Break" ID="{0282C7E9-7AE9-433C-B3AE-4F0AA8FEBEFB}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0262693098384728"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0251271659324523"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Break.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="365772768"/>
+															</MediaIDList>
+														</AudioFileSource>
+														<AudioFileSource Name="break2  projectile" ID="{F095A3D9-CFA4-479D-9D8C-F710637E35B4}">
+															<Language>SFX</Language>
+															<AudioFile>break2  projectile.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="813693602"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="break2  projectile" ID="{F095A3D9-CFA4-479D-9D8C-F710637E35B4}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="EnemyProjectileCast" ID="{4A9A06BA-BB7D-4433-A266-4FDE7867C156}" ShortID="130723254">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+												<Property Name="OverridePositioning" Type="bool" Value="True"/>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{81267601-B6FA-4CA9-B850-B76C3A95BE58}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-200"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Projectile Cast" ID="{E985830E-5D23-44E6-BD20-EE9E867A297D}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Cast" ID="{5B0C4306-FFA5-47D5-82EE-E74F20056F60}" ShortID="235774967">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Cast" ID="{6E27C933-45C1-4F82-975A-839E8FC0633D}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0586071953010279"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.150913527900147"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Cast.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="190568369"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Cast" ID="{6E27C933-45C1-4F82-975A-839E8FC0633D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="EnemyProjectileFire" ID="{B89BF0AC-ADB4-48D8-82C1-472295208C84}" ShortID="304139560">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+												<Property Name="InitialDelay" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{C59A5BCC-B756-46F2-B37C-6AF4B7D6B960}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="OverridePositioning" Type="bool" Value="True"/>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{DE0D926D-5704-44CB-884F-B0A044DECD6F}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="150"/>
+																	<Property Name="Min" Type="Real64" Value="-100"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Projectile Cast" ID="{E985830E-5D23-44E6-BD20-EE9E867A297D}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Fire" ID="{84C79248-2DAD-415E-8B79-303806216407}" ShortID="486201485">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Fire" ID="{062D244D-9098-424F-8B04-92EC77CB64BC}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.00371002202643173"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0284435022026432"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Fire.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="953102820"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Fire" ID="{062D244D-9098-424F-8B04-92EC77CB64BC}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<Sound Name="EnemyProjectileBeam" ID="{7F8EEE5E-9EBB-45E5-969E-33AF90805FED}" ShortID="553826041">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+												<Property Name="InitialDelay" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{D0544A61-7FB7-4D5B-9EAD-6361965220C6}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>-5</Value>
+													</ValueList>
+												</Property>
+												<Property Name="OverridePositioning" Type="bool" Value="True"/>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>770</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{F64E3121-A38E-4677-B18A-FF7950921CB7}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="200"/>
+																	<Property Name="Min" Type="Real64" Value="-200"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Projectile Beam" ID="{C471AAF9-3575-40DB-A65E-60A581EA8C53}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Beam" ID="{B8C42A80-0386-47C7-8F21-8B4C64F7FE35}">
+													<Language>SFX</Language>
+													<AudioFile>Beam.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="704646388"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{CFA61BB2-9412-4603-B26E-48018A2AA2E5}" ShortID="289311315">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Pitch"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="rtpc_builtin_distance" ID="{51E739EC-97B4-4E4C-A4B4-45C5A6AEF050}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{9E23A4A6-2F62-41F8-8754-02F0A6C482D3}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="65537"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>0</YPos>
+																						<Flags>5</Flags>
+																						<SegmentShape>Exp3</SegmentShape>
+																					</Point>
+																					<Point>
+																						<XPos>1000</XPos>
+																						<YPos>-47</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+											<ActiveSourceList>
+												<ActiveSource Name="Beam" ID="{B8C42A80-0386-47C7-8F21-8B4C64F7FE35}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<BlendContainer Name="ProjectileHitEnviro" ID="{79F21255-4984-4F4F-88A6-7F4CA4B7EF4D}" ShortID="824615288">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+												<Property Name="InitialDelay" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{559EB498-4604-459D-9CAC-E093903C836E}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+												<Property Name="OverridePositioning" Type="bool" Value="True"/>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>1010</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{E0F52507-9260-4680-968D-B18AEC503E0C}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="150"/>
+																	<Property Name="Min" Type="Real64" Value="-150"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Projectile Cast" ID="{E985830E-5D23-44E6-BD20-EE9E867A297D}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="SlashHitStone" ID="{96672AFE-2D08-49D0-8A29-D507D532FB02}" ShortID="98987453">
+													<PropertyList>
+														<Property Name="Highpass" Type="int16">
+															<ValueList>
+																<Value>23</Value>
+															</ValueList>
+														</Property>
+														<Property Name="InitialDelay" Type="Real64">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{F1A6AE0E-7B70-40E4-A235-C19BF43656FD}"/>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ValueList>
+																<Value>-13</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{5504B556-3A5C-416B-BCEB-D2A9821B2A85}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="5"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="RBS_SFX_SlashHitEnviroMat1 01" ID="{6CB4A3E6-618E-4CE5-A271-A70EF36827EA}" ShortID="77888965">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="RBS_SFX_SlashHitEnviroMat1 01" ID="{6A840862-5871-408C-B88C-38B51AB35D5E}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.013424358974359"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.587315705128205"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.013424358974359"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="1.23168493589744"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>RBS_SFX_SlashHitEnviroMat1 01.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="792625188"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="RBS_SFX_SlashHitEnviroMat1 01" ID="{6A840862-5871-408C-B88C-38B51AB35D5E}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="RBS_SFX_SlashHitEnviroMat1 02" ID="{6D7799E2-E5F6-471C-9B0E-BD0E5C728E77}" ShortID="844325498">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="RBS_SFX_SlashHitEnviroMat1 02" ID="{5B2ABCEB-CE4A-4ACA-8388-419D1D1B5F2D}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0225632478632479"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.609207692307692"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="1.37917852564103"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>RBS_SFX_SlashHitEnviroMat1 02.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="54054381"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="RBS_SFX_SlashHitEnviroMat1 02" ID="{5B2ABCEB-CE4A-4ACA-8388-419D1D1B5F2D}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="RBS_SFX_SlashHitEnviroMat1 03" ID="{63850AF2-E373-498E-9D74-25C6CBC4DFBB}" ShortID="994885521">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="RBS_SFX_SlashHitEnviroMat1 03" ID="{9D5B61BA-39D9-4BA3-BB0F-ABBC002AB2AB}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.020294764957265"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.0115970085470085"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>RBS_SFX_SlashHitEnviroMat1 03.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="932913252"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="RBS_SFX_SlashHitEnviroMat1 03" ID="{9D5B61BA-39D9-4BA3-BB0F-ABBC002AB2AB}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="Pebble" ID="{4B321F51-F5DD-4624-844C-D5DB30087A0E}" ShortID="43708867">
+													<PropertyList>
+														<Property Name="InitialDelay" Type="Real64">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{89834559-3C38-4858-A14A-A09016359F68}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="0.5"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ValueList>
+																<Value>15</Value>
+															</ValueList>
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{046D4A49-AD15-4C1D-9E03-42631ACEA2E6}"/>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>560</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+														<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+														<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+														<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.22">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{28A7F46B-738A-4EE8-B891-8F946A54EFDB}"/>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{6336471C-9A96-45A3-AF53-B2916B64F3BC}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="5"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<RandomSequenceContainer Name="SurfacePebble L3" ID="{58FDF873-BCD5-4AF3-BB0B-BBE111D8C191}" ShortID="545039357">
+															<PropertyList>
+																<Property Name="InitialDelay" Type="Real64">
+																	<ModifierList>
+																		<ModifierInfo>
+																			<Modifier Name="" ID="{E50E2EED-E1C9-48B0-8074-7CC31B98D501}">
+																				<PropertyList>
+																					<Property Name="Enabled" Type="bool" Value="True"/>
+																					<Property Name="Max" Type="Real64" Value="0.02"/>
+																				</PropertyList>
+																			</Modifier>
+																		</ModifierInfo>
+																	</ModifierList>
+																</Property>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ValueList>
+																		<Value>-2</Value>
+																	</ValueList>
+																	<ModifierList>
+																		<ModifierInfo>
+																			<Modifier Name="" ID="{366E49A5-7E26-427C-BD13-408093B19AB3}">
+																				<PropertyList>
+																					<Property Name="Enabled" Type="bool" Value="True"/>
+																					<Property Name="Max" Type="Real64" Value="5"/>
+																					<Property Name="Min" Type="Real64" Value="-5"/>
+																				</PropertyList>
+																			</Modifier>
+																		</ModifierInfo>
+																	</ModifierList>
+																</Property>
+																<Property Name="Pitch" Type="int32">
+																	<ModifierList>
+																		<ModifierInfo>
+																			<Modifier Name="" ID="{71570DDC-DFF1-4A93-9F75-6B523C8833CA}">
+																				<PropertyList>
+																					<Property Name="Enabled" Type="bool" Value="True"/>
+																					<Property Name="Max" Type="Real64" Value="200"/>
+																					<Property Name="Min" Type="Real64" Value="-200"/>
+																				</PropertyList>
+																			</Modifier>
+																		</ModifierInfo>
+																	</ModifierList>
+																</Property>
+																<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+																<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+																<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.1"/>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<Sound Name="RBS_SFX_FsSurface1 SurfacePebbleL3 04" ID="{034222BC-2D23-4178-A0BD-06CE8540C8D1}" ShortID="353458411">
+																	<PropertyList>
+																		<Property Name="IsStreamingEnabled" Type="bool">
+																			<ValueList>
+																				<Value>True</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="RBS_SFX_FsSurface1 SurfacePebbleL3 04" ID="{869B2B78-5583-49AC-9D65-7CFF2A458CC9}">
+																			<Language>SFX</Language>
+																			<AudioFile>RBS_SFX_FsSurface1 SurfacePebbleL3 04.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="278434081"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="RBS_SFX_FsSurface1 SurfacePebbleL3 04" ID="{869B2B78-5583-49AC-9D65-7CFF2A458CC9}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="RBS_SFX_FsSurface1 SurfacePebbleL3 03" ID="{A12E4C5B-5746-41D5-85F1-9B6D8F3657AF}" ShortID="831654882">
+																	<PropertyList>
+																		<Property Name="IsStreamingEnabled" Type="bool">
+																			<ValueList>
+																				<Value>True</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="RBS_SFX_FsSurface1 SurfacePebbleL3 03" ID="{9F18FE4C-B966-41B6-89C5-DA4772CE7205}">
+																			<Language>SFX</Language>
+																			<AudioFile>RBS_SFX_FsSurface1 SurfacePebbleL3 03.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="270434604"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="RBS_SFX_FsSurface1 SurfacePebbleL3 03" ID="{9F18FE4C-B966-41B6-89C5-DA4772CE7205}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="RBS_SFX_FsSurface1 SurfacePebbleL3 05" ID="{678BC013-2E51-46B1-ADF1-FE7457CE20B9}" ShortID="881331557">
+																	<PropertyList>
+																		<Property Name="IsStreamingEnabled" Type="bool">
+																			<ValueList>
+																				<Value>True</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="RBS_SFX_FsSurface1 SurfacePebbleL3 05" ID="{B610D8C2-3D50-4082-BC40-29F18A42A65F}">
+																			<Language>SFX</Language>
+																			<AudioFile>RBS_SFX_FsSurface1 SurfacePebbleL3 05.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="309736558"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="RBS_SFX_FsSurface1 SurfacePebbleL3 05" ID="{B610D8C2-3D50-4082-BC40-29F18A42A65F}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="RBS_SFX_FsSurface1 SurfacePebbleL3 06" ID="{260C9856-EA54-4E1D-8AFC-765D6D07A451}" ShortID="177318110">
+																	<PropertyList>
+																		<Property Name="IsStreamingEnabled" Type="bool">
+																			<ValueList>
+																				<Value>True</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="RBS_SFX_FsSurface1 SurfacePebbleL3 06" ID="{4D547454-708F-4A8C-97E6-CBEAFA628953}">
+																			<Language>SFX</Language>
+																			<AudioFile>RBS_SFX_FsSurface1 SurfacePebbleL3 06.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="125901720"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="RBS_SFX_FsSurface1 SurfacePebbleL3 06" ID="{4D547454-708F-4A8C-97E6-CBEAFA628953}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="RBS_SFX_FsSurface1 SurfacePebbleL3 07" ID="{E64D72D3-2C7F-4AD1-839B-FA238D3BEC03}" ShortID="790763094">
+																	<PropertyList>
+																		<Property Name="IsStreamingEnabled" Type="bool">
+																			<ValueList>
+																				<Value>True</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="RBS_SFX_FsSurface1 SurfacePebbleL3 07" ID="{CE4B52D9-0578-4ECB-AC38-43AB8DED3672}">
+																			<Language>SFX</Language>
+																			<AudioFile>RBS_SFX_FsSurface1 SurfacePebbleL3 07.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="572214998"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="RBS_SFX_FsSurface1 SurfacePebbleL3 07" ID="{CE4B52D9-0578-4ECB-AC38-43AB8DED3672}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="RBS_SFX_FsSurface1 SurfacePebbleL3 01" ID="{75F97210-725D-4D77-8153-B7FB7FCA4454}" ShortID="699873084">
+																	<PropertyList>
+																		<Property Name="IsStreamingEnabled" Type="bool">
+																			<ValueList>
+																				<Value>True</Value>
+																			</ValueList>
+																		</Property>
+																		<Property Name="MakeUpGain" Type="Real64">
+																			<ValueList>
+																				<Value>-13</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="RBS_SFX_FsSurface1 SurfacePebbleL3 01" ID="{9FA7D534-C123-4CD3-8F5A-B7392FA17ED2}">
+																			<Language>SFX</Language>
+																			<AudioFile>RBS_SFX_FsSurface1 SurfacePebbleL3 01.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="916730515"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="RBS_SFX_FsSurface1 SurfacePebbleL3 01" ID="{9FA7D534-C123-4CD3-8F5A-B7392FA17ED2}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="RBS_SFX_FsSurface1 SurfacePebbleL3 02" ID="{9BDB2C43-7B08-4CE4-BB52-51A78497E3E5}" ShortID="121802884">
+																	<PropertyList>
+																		<Property Name="IsStreamingEnabled" Type="bool">
+																			<ValueList>
+																				<Value>True</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="RBS_SFX_FsSurface1 SurfacePebbleL3 02" ID="{5C850D84-D9EB-4EE8-9901-9423BC8F344D}">
+																			<Language>SFX</Language>
+																			<AudioFile>RBS_SFX_FsSurface1 SurfacePebbleL3 02.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="714637550"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="RBS_SFX_FsSurface1 SurfacePebbleL3 02" ID="{5C850D84-D9EB-4EE8-9901-9423BC8F344D}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+															</ChildrenList>
+															<ObjectLists>
+																<ObjectList Name="Playlist">
+																	<Reference>
+																		<ObjectRef Name="RBS_SFX_FsSurface1 SurfacePebbleL3 01" ID="{75F97210-725D-4D77-8153-B7FB7FCA4454}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+																	</Reference>
+																	<Reference>
+																		<ObjectRef Name="RBS_SFX_FsSurface1 SurfacePebbleL3 02" ID="{9BDB2C43-7B08-4CE4-BB52-51A78497E3E5}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+																	</Reference>
+																	<Reference>
+																		<ObjectRef Name="RBS_SFX_FsSurface1 SurfacePebbleL3 03" ID="{A12E4C5B-5746-41D5-85F1-9B6D8F3657AF}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+																	</Reference>
+																	<Reference>
+																		<ObjectRef Name="RBS_SFX_FsSurface1 SurfacePebbleL3 04" ID="{034222BC-2D23-4178-A0BD-06CE8540C8D1}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+																	</Reference>
+																	<Reference>
+																		<ObjectRef Name="RBS_SFX_FsSurface1 SurfacePebbleL3 05" ID="{678BC013-2E51-46B1-ADF1-FE7457CE20B9}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+																	</Reference>
+																	<Reference>
+																		<ObjectRef Name="RBS_SFX_FsSurface1 SurfacePebbleL3 06" ID="{260C9856-EA54-4E1D-8AFC-765D6D07A451}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+																	</Reference>
+																	<Reference>
+																		<ObjectRef Name="RBS_SFX_FsSurface1 SurfacePebbleL3 07" ID="{E64D72D3-2C7F-4AD1-839B-FA238D3BEC03}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+																	</Reference>
+																</ObjectList>
+															</ObjectLists>
+														</RandomSequenceContainer>
+														<RandomSequenceContainer Name="SurfacePebble L2" ID="{722E9DC1-789D-49AA-88DA-009F3369769F}" ShortID="312861062">
+															<PropertyList>
+																<Property Name="InitialDelay" Type="Real64">
+																	<ModifierList>
+																		<ModifierInfo>
+																			<Modifier Name="" ID="{7BE0B4C0-FD6E-4453-9405-6AE0CF7EB57D}">
+																				<PropertyList>
+																					<Property Name="Enabled" Type="bool" Value="True"/>
+																					<Property Name="Max" Type="Real64" Value="0.02"/>
+																				</PropertyList>
+																			</Modifier>
+																		</ModifierInfo>
+																	</ModifierList>
+																</Property>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ValueList>
+																		<Value>-10</Value>
+																	</ValueList>
+																	<ModifierList>
+																		<ModifierInfo>
+																			<Modifier Name="" ID="{842FCD3C-8CD2-448C-898F-11F5532E34B4}">
+																				<PropertyList>
+																					<Property Name="Enabled" Type="bool" Value="True"/>
+																					<Property Name="Min" Type="Real64" Value="-5"/>
+																				</PropertyList>
+																			</Modifier>
+																		</ModifierInfo>
+																	</ModifierList>
+																</Property>
+																<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+																<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+																<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.1"/>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<Sound Name="RBS_SFX_FsSurface1 SurfacePebbleL2 06" ID="{95861426-BCE0-47D1-B75D-B94629CCBF4E}" ShortID="631108335">
+																	<PropertyList>
+																		<Property Name="IsStreamingEnabled" Type="bool">
+																			<ValueList>
+																				<Value>True</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="RBS_SFX_FsSurface1 SurfacePebbleL2 06" ID="{EE558882-B810-4064-A19D-5FD0016B0402}">
+																			<Language>SFX</Language>
+																			<AudioFile>RBS_SFX_FsSurface1 SurfacePebbleL2 06.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="175605479"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="RBS_SFX_FsSurface1 SurfacePebbleL2 06" ID="{EE558882-B810-4064-A19D-5FD0016B0402}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="RBS_SFX_FsSurface1 SurfacePebbleL2 07" ID="{BBB1EAD2-276A-4F73-ACD8-C130211C71EA}" ShortID="918703597">
+																	<PropertyList>
+																		<Property Name="IsStreamingEnabled" Type="bool">
+																			<ValueList>
+																				<Value>True</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="RBS_SFX_FsSurface1 SurfacePebbleL2 07" ID="{DF998D64-DE5F-4E7E-A482-F3878CA7B37E}">
+																			<Language>SFX</Language>
+																			<AudioFile>RBS_SFX_FsSurface1 SurfacePebbleL2 07.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="909626541"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="RBS_SFX_FsSurface1 SurfacePebbleL2 07" ID="{DF998D64-DE5F-4E7E-A482-F3878CA7B37E}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="RBS_SFX_FsSurface1 SurfacePebbleL2 01" ID="{CF08876A-98F4-4719-864F-D5CDF7A26B69}" ShortID="374907593">
+																	<PropertyList>
+																		<Property Name="IsStreamingEnabled" Type="bool">
+																			<ValueList>
+																				<Value>True</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="RBS_SFX_FsSurface1 SurfacePebbleL2 01" ID="{B47E405B-C6BA-4D66-AD87-F693EA4630D1}">
+																			<Language>SFX</Language>
+																			<AudioFile>RBS_SFX_FsSurface1 SurfacePebbleL2 01.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="837272602"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="RBS_SFX_FsSurface1 SurfacePebbleL2 01" ID="{B47E405B-C6BA-4D66-AD87-F693EA4630D1}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="RBS_SFX_FsSurface1 SurfacePebbleL2 03" ID="{4BC10149-230E-4597-A325-D58FF47A299D}" ShortID="793881852">
+																	<PropertyList>
+																		<Property Name="IsStreamingEnabled" Type="bool">
+																			<ValueList>
+																				<Value>True</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="RBS_SFX_FsSurface1 SurfacePebbleL2 03" ID="{C49E98AC-D971-419F-92B1-6A349CF85937}">
+																			<Language>SFX</Language>
+																			<AudioFile>RBS_SFX_FsSurface1 SurfacePebbleL2 03.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="862584422"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="RBS_SFX_FsSurface1 SurfacePebbleL2 03" ID="{C49E98AC-D971-419F-92B1-6A349CF85937}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="RBS_SFX_FsSurface1 SurfacePebbleL2 04" ID="{7218AD05-DC44-4BFD-8823-506CCC218675}" ShortID="508261761">
+																	<PropertyList>
+																		<Property Name="IsStreamingEnabled" Type="bool">
+																			<ValueList>
+																				<Value>True</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="RBS_SFX_FsSurface1 SurfacePebbleL2 04" ID="{5D061CA4-8799-4229-8F71-DED97A963B16}">
+																			<Language>SFX</Language>
+																			<AudioFile>RBS_SFX_FsSurface1 SurfacePebbleL2 04.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="927982555"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="RBS_SFX_FsSurface1 SurfacePebbleL2 04" ID="{5D061CA4-8799-4229-8F71-DED97A963B16}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="RBS_SFX_FsSurface1 SurfacePebbleL2 02" ID="{04A6EDDE-137C-446E-9EE8-66135AF1BDCB}" ShortID="223103000">
+																	<PropertyList>
+																		<Property Name="IsStreamingEnabled" Type="bool">
+																			<ValueList>
+																				<Value>True</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="RBS_SFX_FsSurface1 SurfacePebbleL2 02" ID="{10E8F8A5-E516-44EE-835C-DCFC6E86C119}">
+																			<Language>SFX</Language>
+																			<AudioFile>RBS_SFX_FsSurface1 SurfacePebbleL2 02.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="517384302"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="RBS_SFX_FsSurface1 SurfacePebbleL2 02" ID="{10E8F8A5-E516-44EE-835C-DCFC6E86C119}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="RBS_SFX_FsSurface1 SurfacePebbleL2 05" ID="{C0BDA0B4-278A-4A12-B6FC-82B6FECB2ADD}" ShortID="1067359130">
+																	<PropertyList>
+																		<Property Name="IsStreamingEnabled" Type="bool">
+																			<ValueList>
+																				<Value>True</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="RBS_SFX_FsSurface1 SurfacePebbleL2 05" ID="{DD2ACF11-DA2F-4C25-B556-90ED5D7999DF}">
+																			<Language>SFX</Language>
+																			<AudioFile>RBS_SFX_FsSurface1 SurfacePebbleL2 05.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="912035078"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="RBS_SFX_FsSurface1 SurfacePebbleL2 05" ID="{DD2ACF11-DA2F-4C25-B556-90ED5D7999DF}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+															</ChildrenList>
+														</RandomSequenceContainer>
+														<RandomSequenceContainer Name="SurfacePebble L1" ID="{C09360B7-9E42-44FC-BF94-17201484B6B1}" ShortID="510630300">
+															<PropertyList>
+																<Property Name="InitialDelay" Type="Real64">
+																	<ModifierList>
+																		<ModifierInfo>
+																			<Modifier Name="" ID="{AC6D1567-3AE1-4782-B53B-BEE757746F65}">
+																				<PropertyList>
+																					<Property Name="Enabled" Type="bool" Value="True"/>
+																					<Property Name="Max" Type="Real64" Value="0.02"/>
+																				</PropertyList>
+																			</Modifier>
+																		</ModifierInfo>
+																	</ModifierList>
+																</Property>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ModifierList>
+																		<ModifierInfo>
+																			<Modifier Name="" ID="{A817C191-C729-4A74-B881-DC1D30F655BA}">
+																				<PropertyList>
+																					<Property Name="Enabled" Type="bool" Value="True"/>
+																					<Property Name="Min" Type="Real64" Value="-5"/>
+																				</PropertyList>
+																			</Modifier>
+																		</ModifierInfo>
+																	</ModifierList>
+																</Property>
+																<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+																<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+																<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.15"/>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<Sound Name="RBS_SFX_FsSurface1 SurfacePebbleL1 01" ID="{B15DEA69-B4FA-404D-B480-7F7B69918456}" ShortID="1054096179">
+																	<PropertyList>
+																		<Property Name="IsStreamingEnabled" Type="bool">
+																			<ValueList>
+																				<Value>True</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="RBS_SFX_FsSurface1 SurfacePebbleL1 01" ID="{F3240EA6-8344-4B8A-B94E-60DE1E2F5BBB}">
+																			<Language>SFX</Language>
+																			<AudioFile>RBS_SFX_FsSurface1 SurfacePebbleL1 01.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="409348956"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="RBS_SFX_FsSurface1 SurfacePebbleL1 01" ID="{F3240EA6-8344-4B8A-B94E-60DE1E2F5BBB}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="RBS_SFX_FsSurface1 SurfacePebbleL1 02" ID="{7428B25A-D1F9-48CC-AF05-C96E663440B1}" ShortID="149035261">
+																	<PropertyList>
+																		<Property Name="IsStreamingEnabled" Type="bool">
+																			<ValueList>
+																				<Value>True</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="RBS_SFX_FsSurface1 SurfacePebbleL1 02" ID="{EC317679-B77A-4EF1-B246-374B29E37228}">
+																			<Language>SFX</Language>
+																			<AudioFile>RBS_SFX_FsSurface1 SurfacePebbleL1 02.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="478843681"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="RBS_SFX_FsSurface1 SurfacePebbleL1 02" ID="{EC317679-B77A-4EF1-B246-374B29E37228}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="RBS_SFX_FsSurface1 SurfacePebbleL1 03" ID="{46B2A4C5-7561-4789-856E-6DFA6FA6F2B2}" ShortID="740505933">
+																	<PropertyList>
+																		<Property Name="IsStreamingEnabled" Type="bool">
+																			<ValueList>
+																				<Value>True</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="RBS_SFX_FsSurface1 SurfacePebbleL1 03" ID="{8F72BB96-A75F-4A55-8F0F-3F143EF07B6C}">
+																			<Language>SFX</Language>
+																			<AudioFile>RBS_SFX_FsSurface1 SurfacePebbleL1 03.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="99219889"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="RBS_SFX_FsSurface1 SurfacePebbleL1 03" ID="{8F72BB96-A75F-4A55-8F0F-3F143EF07B6C}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="RBS_SFX_FsSurface1 SurfacePebbleL1 04" ID="{FF02A892-588D-4D7C-AF08-7A31133A561A}" ShortID="293544796">
+																	<PropertyList>
+																		<Property Name="IsStreamingEnabled" Type="bool">
+																			<ValueList>
+																				<Value>True</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="RBS_SFX_FsSurface1 SurfacePebbleL1 04" ID="{D6738331-46A5-4472-AA6C-CE39A6C51D96}">
+																			<Language>SFX</Language>
+																			<AudioFile>RBS_SFX_FsSurface1 SurfacePebbleL1 04.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="291763179"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="RBS_SFX_FsSurface1 SurfacePebbleL1 04" ID="{D6738331-46A5-4472-AA6C-CE39A6C51D96}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="RBS_SFX_FsSurface1 SurfacePebbleL1 05" ID="{357292E8-6B7C-4D4D-BD4C-03EE308B137B}" ShortID="361764228">
+																	<PropertyList>
+																		<Property Name="IsStreamingEnabled" Type="bool">
+																			<ValueList>
+																				<Value>True</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="RBS_SFX_FsSurface1 SurfacePebbleL1 05" ID="{555BABBA-7008-4BAD-984F-0F992DB6886C}">
+																			<Language>SFX</Language>
+																			<AudioFile>RBS_SFX_FsSurface1 SurfacePebbleL1 05.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="933938710"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="RBS_SFX_FsSurface1 SurfacePebbleL1 05" ID="{555BABBA-7008-4BAD-984F-0F992DB6886C}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="RBS_SFX_FsSurface1 SurfacePebbleL1 06" ID="{D63061A2-6971-4EBD-91A5-F2B3C451495A}" ShortID="539466475">
+																	<PropertyList>
+																		<Property Name="IsStreamingEnabled" Type="bool">
+																			<ValueList>
+																				<Value>True</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="RBS_SFX_FsSurface1 SurfacePebbleL1 06" ID="{B5BD711F-6F58-4E2C-A3E6-839C8CB7590C}">
+																			<Language>SFX</Language>
+																			<AudioFile>RBS_SFX_FsSurface1 SurfacePebbleL1 06.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="148524242"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="RBS_SFX_FsSurface1 SurfacePebbleL1 06" ID="{B5BD711F-6F58-4E2C-A3E6-839C8CB7590C}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="RBS_SFX_FsSurface1 SurfacePebbleL1 07" ID="{7B3970F3-0930-4EBB-897A-C6B1A0BC526D}" ShortID="194755101">
+																	<PropertyList>
+																		<Property Name="IsStreamingEnabled" Type="bool">
+																			<ValueList>
+																				<Value>True</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="RBS_SFX_FsSurface1 SurfacePebbleL1 07" ID="{385CA101-03A6-45BC-8664-F50911755212}">
+																			<Language>SFX</Language>
+																			<AudioFile>RBS_SFX_FsSurface1 SurfacePebbleL1 07.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="320245737"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="RBS_SFX_FsSurface1 SurfacePebbleL1 07" ID="{385CA101-03A6-45BC-8664-F50911755212}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+															</ChildrenList>
+														</RandomSequenceContainer>
+													</ChildrenList>
+													<ObjectLists>
+														<ObjectList Name="Playlist">
+															<Reference>
+																<ObjectRef Name="SurfacePebble L1" ID="{C09360B7-9E42-44FC-BF94-17201484B6B1}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+															</Reference>
+															<Reference>
+																<ObjectRef Name="SurfacePebble L2" ID="{722E9DC1-789D-49AA-88DA-009F3369769F}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+															</Reference>
+															<Reference>
+																<ObjectRef Name="SurfacePebble L3" ID="{58FDF873-BCD5-4AF3-BB0B-BBE111D8C191}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+															</Reference>
+														</ObjectList>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{E8CEAC09-43DB-4069-99B9-CF83D274AFCF}" ShortID="129857879">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Highpass"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_player_walkspeed" ID="{6437691A-43C2-473B-A671-C59F1A9E957B}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{7020FEC5-A7BB-4AFE-BA51-F61BA0FCF459}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="65537"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>22</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>0.20126</XPos>
+																								<YPos>-2</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>30</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{B3DD29F7-DE7F-474F-8120-50B812CFF530}" ShortID="707729785">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_player_walkspeed" ID="{6437691A-43C2-473B-A671-C59F1A9E957B}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{10E3C237-85C0-4C79-9C46-E68EE82E7C0D}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="65537"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{41E6AAC3-67AF-4628-B50D-C244FE210001}" ShortID="425347903">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Pitch"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_player_walkspeed" ID="{6437691A-43C2-473B-A671-C59F1A9E957B}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{3CCC87C2-2431-47B1-AB0B-87C1D07AF8AD}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="65537"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>0.719584569732938</XPos>
+																								<YPos>0</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>333</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{D5E65C0E-997A-4271-A3AB-672931737524}" ShortID="627968656">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Volume"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_player_walkspeed" ID="{6437691A-43C2-473B-A671-C59F1A9E957B}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{725FD218-57B6-480A-B91C-F83ACE6B07CF}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>-2.63583</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>-0.3921</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</RandomSequenceContainer>
+												<Sound Name="enviro ice hit projectile" ID="{1C9FCF84-D068-4467-AEFD-D347251F4838}" ShortID="1068760996">
+													<PropertyList>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ValueList>
+																<Value>4</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="enviro ice hit projectile" ID="{F63EAA44-6DA5-425D-B994-697480392899}">
+															<Language>SFX</Language>
+															<AudioFile>enviro ice hit projectile.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="834987026"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="enviro ice hit projectile" ID="{F63EAA44-6DA5-425D-B994-697480392899}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+										<Sound Name="player hit projectile projectile" ID="{74DDFDB6-A542-4DBE-A4F1-9D1DA41E27E0}" ShortID="402554640">
+											<PropertyList>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="player hit projectile projectile" ID="{558DE6B6-A143-4AF7-8B85-A0C19C5E7FBD}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0593374037536092"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.00237349615014437"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>player hit projectile projectile.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="70950327"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="player hit projectile projectile" ID="{558DE6B6-A143-4AF7-8B85-A0C19C5E7FBD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</ActorMixer>
 								<RandomSequenceContainer Name="EnemyProjectileFlyby" ID="{C9F9547C-B0BC-496A-8F9A-56FF43C24371}" ShortID="792833476">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>4</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{E81278C7-EBF9-4FF8-8E8A-1A510391F3F7}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="500"/>
+															<Property Name="Min" Type="Real64" Value="-500"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Projectile" ID="{52C44907-BB77-4C45-8DE6-77B256D0BC0F}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
 										</Reference>
@@ -3374,16 +4963,35 @@
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
 										</Reference>
 									</ReferenceList>
-								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="EnemyProjectileTrail" ID="{B89BF0AC-ADB4-48D8-82C1-472295208C84}" ShortID="304139560">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
-										</Reference>
-									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Flyby" ID="{0BA92762-7A6B-49A8-A1DE-24A720F444A1}" ShortID="346469523">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Flyby" ID="{76888021-B222-4488-B0B3-9A2985E549AB}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0400295154185022"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.045033204845815"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Flyby.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="973311698"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Flyby" ID="{76888021-B222-4488-B0B3-9A2985E549AB}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
 								</RandomSequenceContainer>
 							</ChildrenList>
 						</Folder>
@@ -4856,9 +6464,14 @@
 							<ChildrenList>
 								<BlendContainer Name="VsArenaNotInCombatChaosBlend" ID="{818FA01E-961E-4EE4-9DF7-58F1FE0F8780}" ShortID="184608150">
 									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>14</Value>
+											</ValueList>
+										</Property>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>-4</Value>
+												<Value>5</Value>
 											</ValueList>
 										</Property>
 										<Property Name="OverrideEffect" Type="bool" Value="True"/>
@@ -4904,7 +6517,7 @@
 														</Property>
 														<Property Name="MakeUpGain" Type="Real64">
 															<ValueList>
-																<Value>-2</Value>
+																<Value>-5</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -4925,6 +6538,50 @@
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{81BCCD32-D2AA-43D1-B2E9-4FA706323116}" ShortID="40848423">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Volume"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_chaos_global" ID="{912B7FBA-E859-424B-9664-D9B8B51FC1BA}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{142871C8-F72F-495E-9B26-DAE708292021}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>-200</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>0.54487</XPos>
+																								<YPos>-200</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
 													<ActiveSourceList>
 														<ActiveSource Name="amb HC CONTINUOUS EARTHQUAKE v1" ID="{0EF0ABEE-D9AF-44E8-8F33-418225F760AD}" Platform="Linked"/>
 													</ActiveSourceList>
@@ -4935,6 +6592,11 @@
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
 																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ValueList>
+																<Value>11</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -4965,7 +6627,7 @@
 																		</PropertyList>
 																		<ReferenceList>
 																			<Reference Name="ControlInput">
-																				<ObjectRef Name="rtpc_chaos_enemy" ID="{8D8709D7-5017-47F2-988D-4EE3A088300B}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																				<ObjectRef Name="rtpc_chaos_global" ID="{912B7FBA-E859-424B-9664-D9B8B51FC1BA}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
 																			</Reference>
 																			<Reference Name="Curve">
 																				<Custom>
@@ -4985,8 +6647,8 @@
 																								<Flags>0</Flags>
 																							</Point>
 																							<Point>
-																								<XPos>0.50052</XPos>
-																								<YPos>22.61866</YPos>
+																								<XPos>0.50141</XPos>
+																								<YPos>2.67496</YPos>
 																								<Flags>0</Flags>
 																							</Point>
 																							<Point>
@@ -5028,7 +6690,7 @@
 														</Property>
 														<Property Name="MakeUpGain" Type="Real64">
 															<ValueList>
-																<Value>5</Value>
+																<Value>-2</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -5103,6 +6765,11 @@
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
 																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ValueList>
+																<Value>3</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -5387,7 +7054,7 @@
 																		</PropertyList>
 																		<ReferenceList>
 																			<Reference Name="ControlInput">
-																				<ObjectRef Name="rtpc_chaos_enemy" ID="{8D8709D7-5017-47F2-988D-4EE3A088300B}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																				<ObjectRef Name="rtpc_chaos_global" ID="{912B7FBA-E859-424B-9664-D9B8B51FC1BA}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
 																			</Reference>
 																			<Reference Name="Curve">
 																				<Custom>
@@ -5483,16 +7150,60 @@
 										</Sound>
 									</ChildrenList>
 									<ObjectLists>
-										<ObjectList Name="Effects">
+										<ObjectList Name="RTPC">
 											<Reference>
 												<Local>
-													<EffectSlot Name="" ID="{E16C4092-53C9-45DC-ACC9-569E351218A0}" ShortID="620380487">
+													<RTPC Name="" ID="{A52CE952-CF24-4E26-99B4-92234DD2A52D}" ShortID="954754837">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
 														<ReferenceList>
-															<Reference Name="Effect" PluginName="Wwise Gain" CompanyID="0" PluginID="139" PluginType="3">
-																<ObjectRef Name="MUTEDDD" ID="{6E7E15D9-D881-4188-BE6A-B3FC66A4B237}" WorkUnitID="{4640899B-4071-49AD-BD7F-E96787417DC9}"/>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="rtpc_chaos_global" ID="{912B7FBA-E859-424B-9664-D9B8B51FC1BA}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{A8AFD8CD-7A59-4035-ABF7-26989B6CECE4}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-6.37936</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>0.27726</XPos>
+																				<YPos>-1.18139</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>0.3587</XPos>
+																				<YPos>1.35976</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>0.61683</XPos>
+																				<YPos>3.10521</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>0.77749</XPos>
+																				<YPos>4.67449</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>1</XPos>
+																				<YPos>1.77654</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
 															</Reference>
 														</ReferenceList>
-													</EffectSlot>
+													</RTPC>
 												</Local>
 											</Reference>
 										</ObjectList>
@@ -8681,6 +10392,11 @@
 													<ChildrenList>
 														<RandomSequenceContainer Name="WALK" ID="{08B12506-7197-45B9-A34E-7A9DC79C07FE}" ShortID="550467431">
 															<PropertyList>
+																<Property Name="Highpass" Type="int16">
+																	<ValueList>
+																		<Value>12</Value>
+																	</ValueList>
+																</Property>
 																<Property Name="InitialDelay" Type="Real64">
 																	<ModifierList>
 																		<ModifierInfo>
@@ -8690,7 +10406,7 @@
 																</Property>
 																<Property Name="MakeUpGain" Type="Real64">
 																	<ValueList>
-																		<Value>-16</Value>
+																		<Value>-25</Value>
 																	</ValueList>
 																	<ModifierList>
 																		<ModifierInfo>

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{B57FA1A8-E505-7CF0-FD9D-11E79B2C8B71}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{C4F12908-C67E-7600-9D48-C1B0505AFB41}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
 				<ShareSets>
 					<Plugin Id="2224135639" Name="Level_Verb" ObjectPath="\Effects\Default Work Unit\Level_Verb" GUID="{C10E6266-7F54-414E-B6C1-16F6802E7ADB}" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="2404745364" Name="SFX_METER" ObjectPath="\Effects\Default Work Unit\SFX_METER" GUID="{0927D708-8783-43A9-AD28-D97A0CD1DAAE}" LibName="Wwise Meter" LibId="8454147"/>
 					<Plugin Id="3626272192" Name="HIGH_FREQUENCY_CUT_FILTER" ObjectPath="\Effects\Default Work Unit\HIGH_FREQUENCY_CUT_FILTER" GUID="{10C5B825-780E-4846-B96A-6B4E3FA7DC4C}" LibName="Wwise Parametric EQ" LibId="6881283"/>
 				</ShareSets>
 				<AudioDevices>
@@ -16,7 +17,13 @@
 				</AudioDevices>
 			</Plugins>
 			<Busses>
-				<Bus Id="393239870" Name="SFX" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus\SFX" GUID="{39250B52-8C88-4C54-B7D3-2C12760A0A9F}"/>
+				<Bus Id="393239870" Name="SFX" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus\SFX" GUID="{39250B52-8C88-4C54-B7D3-2C12760A0A9F}">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2404745364"/>
+						</ShareSets>
+					</PluginRefs>
+				</Bus>
 				<Bus Id="466672200" Name="PlayerAbilities" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus\SFX\PlayerAbilities" GUID="{23D327A8-D57F-4DDE-8DF2-8200B9DA4037}"/>
 				<Bus Id="661188923" Name="EnemyBus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus\SFX\EnemyBus" GUID="{BCC1ECC0-BA5A-45C2-A555-9454DB046120}"/>
 				<Bus Id="1991350473" Name="StereoBus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus" GUID="{01DB4D2A-3A6E-4B6E-AD86-A91E1CD57BEB}"/>
@@ -49,6 +56,7 @@
 				<GameParameter Id="765516766" Name="rtpc_player_airspeed" ObjectPath="\Game Parameters\Default Work Unit\rtpc_player_airspeed" GUID="{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}"/>
 				<GameParameter Id="848976592" Name="rtpc_mainmenumusicpitch" ObjectPath="\Game Parameters\Default Work Unit\rtpc_mainmenumusicpitch" GUID="{ED4A7616-4338-46E2-9ED1-5758709ACDDE}"/>
 				<GameParameter Id="876333639" Name="rtpc_tapestop" ObjectPath="\Game Parameters\Default Work Unit\rtpc_tapestop" GUID="{34AB8051-BDEC-4FCF-A5A6-D129BA29D38F}"/>
+				<GameParameter Id="1010956302" Name="rtpc_builtin_distance" ObjectPath="\Game Parameters\Default Work Unit\rtpc_builtin_distance" GUID="{51E739EC-97B4-4E4C-A4B4-45C5A6AEF050}"/>
 				<GameParameter Id="1410332996" Name="rtpc_settings_slider" ObjectPath="\Game Parameters\Default Work Unit\rtpc_settings_slider" GUID="{CF91B134-4D3D-4381-A066-5A720C4CB494}"/>
 				<GameParameter Id="2332098030" Name="rtpc_enemy_bus" ObjectPath="\Game Parameters\Default Work Unit\Settings\BUS\rtpc_enemy_bus" GUID="{7B1FB034-3E8E-48F8-B914-CB5786C31FF9}"/>
 				<GameParameter Id="2400834421" Name="rtpc_dominant_hand" ObjectPath="\Game Parameters\Default Work Unit\Settings\rtpc_dominant_hand" GUID="{54C0314F-1459-460E-B6E6-1CDAA6EDBE01}"/>
@@ -57,6 +65,7 @@
 				<GameParameter Id="2696648837" Name="rtpc_dash_leftright" ObjectPath="\Game Parameters\Default Work Unit\rtpc_dash_leftright" GUID="{7894A474-E5D3-4187-925F-19042540CC04}"/>
 				<GameParameter Id="2737403824" Name="rtpc_positioning_leftright" ObjectPath="\Game Parameters\Default Work Unit\rtpc_positioning_leftright" GUID="{C0867B0F-00CC-44F1-95F4-1370870636CA}"/>
 				<GameParameter Id="2860606227" Name="rtpc_highfreqfilter_off_on" ObjectPath="\Game Parameters\Default Work Unit\rtpc_highfreqfilter_off_on" GUID="{9D67A80A-4B5B-4616-A716-FC5EFCF47D77}"/>
+				<GameParameter Id="2969259856" Name="meter_sfx" ObjectPath="\Game Parameters\Default Work Unit\meter_sfx" GUID="{612878B7-9133-405F-BC49-C2FDA83F7E32}"/>
 				<GameParameter Id="3067876527" Name="rtpc_sfx_bus" ObjectPath="\Game Parameters\Default Work Unit\Settings\BUS\rtpc_sfx_bus" GUID="{1A0CC5AF-DF3D-4C7B-9E41-61A8E28F74EB}"/>
 				<GameParameter Id="3304859005" Name="rtpc_chaos_global" ObjectPath="\Game Parameters\Default Work Unit\rtpc_chaos_global" GUID="{912B7FBA-E859-424B-9664-D9B8B51FC1BA}"/>
 				<GameParameter Id="3361666196" Name="rtpc_chaos_enemy" ObjectPath="\Game Parameters\Default Work Unit\rtpc_chaos_enemy" GUID="{8D8709D7-5017-47F2-988D-4EE3A088300B}"/>
@@ -96,6 +105,9 @@
 				</StateGroup>
 			</StateGroups>
 			<SwitchGroups>
+				<SwitchGroup Id="103781722" Name="switch_results_music" ObjectPath="\Switches\Default Work Unit\switch_results_music" GUID="{F9C3A9D3-A6F7-4890-B2FF-F8C4BF3D2B6B}">
+					<Switches/>
+				</SwitchGroup>
 				<SwitchGroup Id="226573501" Name="switch_combat_status" ObjectPath="\Switches\Default Work Unit\switch_combat_status" GUID="{00BFC575-DD53-4D59-B613-1CE2AE596AE9}">
 					<Switches>
 						<Switch Id="598085321" Name="between_wave" ObjectPath="\Switches\Default Work Unit\switch_combat_status\between_wave" GUID="{0DD26233-048F-41A1-A6C7-12E5CAC1F7D1}"/>
@@ -139,6 +151,9 @@
 						<Switch Id="3472709650" Name="vege" ObjectPath="\Switches\Default Work Unit\switch_enemy_fs_material\vege" GUID="{612497D4-F850-447D-B521-6831C66C45BA}"/>
 					</Switches>
 				</SwitchGroup>
+				<SwitchGroup Id="2346738020" Name="high_chaos" ObjectPath="\Switches\Default Work Unit\high_chaos" GUID="{D3363CD5-D143-4007-A982-81C212018783}">
+					<Switches/>
+				</SwitchGroup>
 				<SwitchGroup Id="3204630533" Name="switch_combat_wave_index" ObjectPath="\Switches\Default Work Unit\switch_combat_wave_index" GUID="{0F59E01D-E03B-49A8-A0FA-FDE40D3F5F44}">
 					<Switches>
 						<Switch Id="1879783288" Name="combat_wave_index_3" ObjectPath="\Switches\Default Work Unit\switch_combat_wave_index\combat_wave_index_3" GUID="{66F509B1-916E-4601-96AF-0BE1E7F0F51E}"/>
@@ -151,5 +166,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{64343587-DAE7-8847-62DE-E76F2E644AF7}</FileHash>
+	<FileHash>{A3D5D2AF-A4A6-1CDE-B403-3DC6E9D8BD5C}</FileHash>
 </SoundBanksInfo>

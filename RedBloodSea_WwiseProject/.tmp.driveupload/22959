@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{19265C02-4C10-498D-90A6-0D515B944FA9}" SchemaVersion="119">
+	<SoundcasterSessions>
+		<WorkUnit Name="Default Work Unit" ID="{19265C02-4C10-498D-90A6-0D515B944FA9}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="RBS_Movement" ID="{4F2B31BD-3912-43AF-9B1C-DCB71D5D093D}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_Jump" ID="{E9BD2A7D-A3FC-4367-900D-1C172D1086AE}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_BasicSlash" ID="{52DD29CE-EBFC-412E-A292-D4803063CBE4}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Dash" ID="{CF6A631F-F642-4424-8ABD-EE3D53B63430}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_BasicThrust" ID="{C6181E4C-06EF-452C-B2F4-57517D591B79}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_DashInterrupt" ID="{22B0C28B-0244-46E3-AA87-F1EEDA24088F}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_PossessionAimStart" ID="{9997D973-6D46-4AB0-A526-2A1AFE118377}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_DamageTaken" ID="{988E1E93-8AAF-4F8D-AC32-A444360C9006}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_PossessionAimStop" ID="{965ECC7B-F6E5-40CB-935F-61ACA3EF8ED1}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_PossessionSuccessful" ID="{6D367373-2398-4C51-9F2C-F5C06824195D}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}"/>
+							<Position X="3" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_EnemyProjectileBeam" ID="{FE351B22-CEDB-42DC-A8D7-D2B4A61DEBC2}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_EnemyProjectileBreak" ID="{6EEDA18E-B07A-4998-B8CD-01CC1C25ADB5}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}"/>
+							<Position X="4" Y="1"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_player_life" ID="{1CC6F0C7-6126-4057-9B70-3C89F38C5F50}"/>
+							<Value>1</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="meter_sfx" ID="{612878B7-9133-405F-BC49-C2FDA83F7E32}"/>
+							<Value>-48</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_dash_leftright" ID="{7894A474-E5D3-4187-925F-19042540CC04}"/>
+							<Value>0.5</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_chaos_global" ID="{912B7FBA-E859-424B-9664-D9B8B51FC1BA}"/>
+							<Value>0.530883103624298</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_settings_slider" ID="{CF91B134-4D3D-4381-A066-5A720C4CB494}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_positioning_leftright" ID="{C0867B0F-00CC-44F1-95F4-1370870636CA}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_dominant_hand" ID="{54C0314F-1459-460E-B6E6-1CDAA6EDBE01}"/>
+							<Value>1</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_highfreqfilter_off_on" ID="{9D67A80A-4B5B-4616-A716-FC5EFCF47D77}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_mainmenumusicpitch" ID="{ED4A7616-4338-46E2-9ED1-5758709ACDDE}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_player_airspeed" ID="{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_player_walkspeed" ID="{6437691A-43C2-473B-A671-C59F1A9E957B}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_chaos_enemy" ID="{8D8709D7-5017-47F2-988D-4EE3A088300B}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_enemy_bus" ID="{7B1FB034-3E8E-48F8-B914-CB5786C31FF9}"/>
+							<Value>1</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_high_freq_filter" ID="{63F62A41-A536-4987-9F56-EDAB260398B7}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_music_bus" ID="{C084FC73-68C8-499E-96AC-E4DBE2F01DED}"/>
+							<Value>1</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_sfx_bus" ID="{1A0CC5AF-DF3D-4C7B-9E41-61A8E28F74EB}"/>
+							<Value>1</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_builtin_distance" ID="{51E739EC-97B4-4E4C-A4B4-45C5A6AEF050}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_master_bus" ID="{94154412-EE63-4EDD-B582-B922CD738ED6}"/>
+							<Value>1</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_landing_force" ID="{07DB1610-4113-4F81-A7B4-0C953E645162}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_chaos_player" ID="{BFE4D672-50A0-4F84-B21E-4DC11EBCCF9B}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_amb_bus" ID="{A29E33E7-090C-4F92-B2A4-CF339B2E10FC}"/>
+							<Value>1</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_tapestop" ID="{34AB8051-BDEC-4FCF-A5A6-D129BA29D38F}"/>
+							<Value>0</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="None" ID="{F55C3BA2-B06E-4139-88C5-13C67AEA9EF2}"/>
+						<CurrentStateRef Name="None" ID="{E50472C8-63C0-46CA-8249-305F3BF374E9}"/>
+						<CurrentStateRef Name="None" ID="{5874B239-37B2-4C50-9175-951DEAE60EF8}"/>
+						<CurrentStateRef Name="onground" ID="{5ADF1174-9E07-490C-82F9-C5039AEC4132}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="stone" ID="{F3CD2C36-B817-4A27-A1BC-96CFB220BA79}"/>
+						<CurrentSwitchRef Name="high_chaos" ID="{B785744B-290E-494F-9AB9-D67CF93D6C32}"/>
+						<CurrentSwitchRef Name="combat_wave_index_5" ID="{9D73A899-2271-49EC-9A38-0E97454C25EA}"/>
+						<CurrentSwitchRef Name="stone" ID="{2C6048E5-583B-4043-92D1-BB6A8329AE1C}"/>
+						<CurrentSwitchRef Name="pause_low_chaos" ID="{C4E1EB21-98A8-4D5E-BEC8-D86DE3924ECA}"/>
+						<CurrentSwitchRef Name="stone" ID="{8CD2D766-702D-4B5B-8D64-02CD0D130005}"/>
+						<CurrentSwitchRef Name="between_wave" ID="{0DD26233-048F-41A1-A6C7-12E5CAC1F7D1}"/>
+						<CurrentSwitchRef Name="link0" ID="{21730554-9A26-480E-BF82-5403DD91DA7F}"/>
+						<CurrentSwitchRef Name="afraid" ID="{6B7928E2-235B-4F7D-91C3-339543D1FE93}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+				<SoundcasterSession Name="RBS_Music" ID="{670A4B6E-19F4-4936-9234-9A788F47CF4D}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_MusCore" ID="{602D3395-88F5-43D6-9CE1-0EB64BAD5F08}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_AmbVSArena" ID="{5C124C78-CC34-46F4-9C11-1C65E3B16568}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="SetCombatIntro" ID="{4E73F01D-32E8-4F9D-9415-05C34B86B3ED}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_MusCore" ID="{CD1985D2-1712-4E4A-B3E0-7D89ADB7F580}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_3D_AMB" ID="{C11A3D36-BA50-43C3-8A72-29187D20295C}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="SetCombatInWave" ID="{4DA437B0-D0CF-4D6F-84B6-3F134FD7EA1C}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Pause_MusCore" ID="{A22E48FC-7D13-4807-8C72-799D2693C61B}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="MainMenu" ID="{C75D181C-9591-4312-A3E8-77FC5D04CA13}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="SetCombatBetweenWave" ID="{F53F7ABE-2C88-4E70-A4DA-3F410D056ED9}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}"/>
+							<Position X="2" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Resume_MusCore" ID="{312DFE6E-D89E-4186-B947-9999017D7BF5}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="OnHover" ID="{0F579365-4488-4372-B764-1067DB3CE8A5}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_MusResults" ID="{94377A01-2A74-41E4-9FD0-F00C26A9984A}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}"/>
+							<Position X="3" Y="2"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_player_life" ID="{1CC6F0C7-6126-4057-9B70-3C89F38C5F50}"/>
+							<Value>1</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_dash_leftright" ID="{7894A474-E5D3-4187-925F-19042540CC04}"/>
+							<Value>0.5</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_chaos_global" ID="{912B7FBA-E859-424B-9664-D9B8B51FC1BA}"/>
+							<Value>0.530883103624298</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_settings_slider" ID="{CF91B134-4D3D-4381-A066-5A720C4CB494}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_positioning_leftright" ID="{C0867B0F-00CC-44F1-95F4-1370870636CA}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_dominant_hand" ID="{54C0314F-1459-460E-B6E6-1CDAA6EDBE01}"/>
+							<Value>1</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_highfreqfilter_off_on" ID="{9D67A80A-4B5B-4616-A716-FC5EFCF47D77}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_mainmenumusicpitch" ID="{ED4A7616-4338-46E2-9ED1-5758709ACDDE}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_player_airspeed" ID="{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_player_walkspeed" ID="{6437691A-43C2-473B-A671-C59F1A9E957B}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_chaos_enemy" ID="{8D8709D7-5017-47F2-988D-4EE3A088300B}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_enemy_bus" ID="{7B1FB034-3E8E-48F8-B914-CB5786C31FF9}"/>
+							<Value>1</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_high_freq_filter" ID="{63F62A41-A536-4987-9F56-EDAB260398B7}"/>
+							<Value>48</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_music_bus" ID="{C084FC73-68C8-499E-96AC-E4DBE2F01DED}"/>
+							<Value>1</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_sfx_bus" ID="{1A0CC5AF-DF3D-4C7B-9E41-61A8E28F74EB}"/>
+							<Value>1</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_master_bus" ID="{94154412-EE63-4EDD-B582-B922CD738ED6}"/>
+							<Value>1</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_landing_force" ID="{07DB1610-4113-4F81-A7B4-0C953E645162}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_chaos_player" ID="{BFE4D672-50A0-4F84-B21E-4DC11EBCCF9B}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_amb_bus" ID="{A29E33E7-090C-4F92-B2A4-CF339B2E10FC}"/>
+							<Value>1</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_tapestop" ID="{34AB8051-BDEC-4FCF-A5A6-D129BA29D38F}"/>
+							<Value>0</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="None" ID="{F55C3BA2-B06E-4139-88C5-13C67AEA9EF2}"/>
+						<CurrentStateRef Name="intro" ID="{AAB602C5-F1F4-4844-B273-85D5A38E9869}"/>
+						<CurrentStateRef Name="aiming" ID="{4001CF9D-6974-45C4-A4E1-ADC83295A9E1}"/>
+						<CurrentStateRef Name="None" ID="{295C2E06-7201-4536-9163-407EA6F5757E}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="stone" ID="{F3CD2C36-B817-4A27-A1BC-96CFB220BA79}"/>
+						<CurrentSwitchRef Name="high_chaos" ID="{B785744B-290E-494F-9AB9-D67CF93D6C32}"/>
+						<CurrentSwitchRef Name="combat_wave_index_1" ID="{89F6AF0C-EEC7-47B3-B013-F708FF217ADC}"/>
+						<CurrentSwitchRef Name="stone" ID="{2C6048E5-583B-4043-92D1-BB6A8329AE1C}"/>
+						<CurrentSwitchRef Name="pause_low_chaos" ID="{C4E1EB21-98A8-4D5E-BEC8-D86DE3924ECA}"/>
+						<CurrentSwitchRef Name="stone" ID="{8CD2D766-702D-4B5B-8D64-02CD0D130005}"/>
+						<CurrentSwitchRef Name="between_wave" ID="{0DD26233-048F-41A1-A6C7-12E5CAC1F7D1}"/>
+						<CurrentSwitchRef Name="link0" ID="{21730554-9A26-480E-BF82-5403DD91DA7F}"/>
+						<CurrentSwitchRef Name="afraid" ID="{6B7928E2-235B-4F7D-91C3-339543D1FE93}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundcasterSessions>
+</WwiseDocument>

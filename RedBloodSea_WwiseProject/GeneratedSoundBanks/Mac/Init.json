@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{C4F12908-C67E-7600-9D48-C1B0505AFB41}",
+    "Hash": "{47654A85-7370-2223-CBF6-373F49A662DF}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -403,7 +403,20 @@
       "Name": "switch_results_music",
       "ObjectPath": "\\Switches\\Default Work Unit\\switch_results_music",
       "GUID": "{F9C3A9D3-A6F7-4890-B2FF-F8C4BF3D2B6B}",
-      "Switches": []
+      "Switches": [
+       {
+        "Id": "2346738020",
+        "Name": "high_chaos",
+        "ObjectPath": "\\Switches\\Default Work Unit\\switch_results_music\\high_chaos",
+        "GUID": "{B785744B-290E-494F-9AB9-D67CF93D6C32}"
+       },
+       {
+        "Id": "3407899128",
+        "Name": "low_chaos",
+        "ObjectPath": "\\Switches\\Default Work Unit\\switch_results_music\\low_chaos",
+        "GUID": "{B5E5F26A-DB05-4475-8DC6-02CA8E5B49FE}"
+       }
+      ]
      },
      {
       "Id": "226573501",
@@ -611,10 +624,30 @@
         "GUID": "{F2E75342-E07C-442C-ACA8-064A4CF110F8}"
        }
       ]
+     },
+     {
+      "Id": "3898853262",
+      "Name": "switch_pause_music",
+      "ObjectPath": "\\Switches\\Default Work Unit\\switch_pause_music",
+      "GUID": "{A26C9464-58C4-4C7C-A3B1-A18AE110F6C9}",
+      "Switches": [
+       {
+        "Id": "1443861931",
+        "Name": "pause_low_chaos",
+        "ObjectPath": "\\Switches\\Default Work Unit\\switch_pause_music\\pause_low_chaos",
+        "GUID": "{C4E1EB21-98A8-4D5E-BEC8-D86DE3924ECA}"
+       },
+       {
+        "Id": "1854033137",
+        "Name": "pause_high_chaos",
+        "ObjectPath": "\\Switches\\Default Work Unit\\switch_pause_music\\pause_high_chaos",
+        "GUID": "{810D37BC-B114-4941-922B-2D544C1072DB}"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{C81712B5-E211-3E34-131A-9BF4DB68EFCA}"
+  "FileHash": "{52BBA8CA-D0E1-5D85-0755-DAEF61AC67C4}"
  }
 }

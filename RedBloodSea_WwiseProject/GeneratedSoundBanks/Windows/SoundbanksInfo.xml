@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{2C2549EA-7030-05F6-78B8-49AF066FD0D0}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{81AF1517-7D84-CDC2-78F9-15C19AA971AF}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -114,7 +114,10 @@
 			</StateGroups>
 			<SwitchGroups>
 				<SwitchGroup Id="103781722" Name="switch_results_music" ObjectPath="\Switches\Default Work Unit\switch_results_music" GUID="{F9C3A9D3-A6F7-4890-B2FF-F8C4BF3D2B6B}">
-					<Switches/>
+					<Switches>
+						<Switch Id="2346738020" Name="high_chaos" ObjectPath="\Switches\Default Work Unit\switch_results_music\high_chaos" GUID="{B785744B-290E-494F-9AB9-D67CF93D6C32}"/>
+						<Switch Id="3407899128" Name="low_chaos" ObjectPath="\Switches\Default Work Unit\switch_results_music\low_chaos" GUID="{B5E5F26A-DB05-4475-8DC6-02CA8E5B49FE}"/>
+					</Switches>
 				</SwitchGroup>
 				<SwitchGroup Id="226573501" Name="switch_combat_status" ObjectPath="\Switches\Default Work Unit\switch_combat_status" GUID="{00BFC575-DD53-4D59-B613-1CE2AE596AE9}">
 					<Switches>
@@ -171,9 +174,15 @@
 						<Switch Id="1879783295" Name="combat_wave_index_4" ObjectPath="\Switches\Default Work Unit\switch_combat_wave_index\combat_wave_index_4" GUID="{F2E75342-E07C-442C-ACA8-064A4CF110F8}"/>
 					</Switches>
 				</SwitchGroup>
+				<SwitchGroup Id="3898853262" Name="switch_pause_music" ObjectPath="\Switches\Default Work Unit\switch_pause_music" GUID="{A26C9464-58C4-4C7C-A3B1-A18AE110F6C9}">
+					<Switches>
+						<Switch Id="1443861931" Name="pause_low_chaos" ObjectPath="\Switches\Default Work Unit\switch_pause_music\pause_low_chaos" GUID="{C4E1EB21-98A8-4D5E-BEC8-D86DE3924ECA}"/>
+						<Switch Id="1854033137" Name="pause_high_chaos" ObjectPath="\Switches\Default Work Unit\switch_pause_music\pause_high_chaos" GUID="{810D37BC-B114-4941-922B-2D544C1072DB}"/>
+					</Switches>
+				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2890283282" Type="User" GUID="{1D2A39F0-30EC-4374-B60C-7E5FD97B8C24}" Language="SFX" Hash="{C5F02D11-70A1-62AA-DA79-C5C2A2FA90BD}">
+		<SoundBank Id="2890283282" Type="User" GUID="{1D2A39F0-30EC-4374-B60C-7E5FD97B8C24}" Language="SFX" Hash="{02687706-6363-008B-7080-7366EAB2CBCD}">
 			<ObjectPath>\SoundBanks\Default Work Unit\RBS_MAIN_SoundBank</ObjectPath>
 			<ShortName>RBS_MAIN_SoundBank</ShortName>
 			<Path>RBS_MAIN_SoundBank.bnk</Path>
@@ -424,6 +433,10 @@
 					<Path>Media/110976486.wem</Path>
 					<CachePath>SFX/03 RBS_SFX_PlayerFS ConcreteGrittyWalk 03L_EDCD4836.wem</CachePath>
 				</File>
+				<File Id="112661541" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>game paused - high chaos v1.wav</ShortName>
+					<CachePath>SFX/game paused - high chaos v1_D8A0D580.wem</CachePath>
+				</File>
 				<File Id="114805436" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_HitOnWeakpoint 04.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_HitOnWeakpoint 04_E2374699.wem</CachePath>
@@ -501,6 +514,10 @@
 				<File Id="182081802" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>UI hover SEQ v1.wav</ShortName>
 					<CachePath>SFX/UI hover SEQ v1_5B3A7F94.wem</CachePath>
+				</File>
+				<File Id="184794636" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>game paused - low chaos v1.wav</ShortName>
+					<CachePath>SFX/game paused - low chaos v1_D8A0D580.wem</CachePath>
 				</File>
 				<File Id="190568369" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Cast.wav</ShortName>
@@ -1832,6 +1849,7 @@
 			</Plugins>
 			<Events>
 				<Event Id="442966300" Name="Pause_MusCore" ObjectPath="\Events\Default Work Unit\Adaptative Music\Pause_MusCore" GUID="{A22E48FC-7D13-4807-8C72-799D2693C61B}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2980929675" Name="Pause_MusPaused" ObjectPath="\Events\Default Work Unit\Adaptative Music\Pause_MusPaused" GUID="{1B49BBFC-2152-46F9-A487-235414F48B78}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1485489414" Name="Play_3D_AMB" ObjectPath="\Events\Default Work Unit\World Environments\Play_3D_AMB" GUID="{C11A3D36-BA50-43C3-8A72-29187D20295C}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="626512180" Name="Play_AmbVSArena" ObjectPath="\Events\Default Work Unit\World Environments\Play_AmbVSArena" GUID="{5C124C78-CC34-46F4-9C11-1C65E3B16568}" DurationType="Infinite">
 					<MediaRefs>
@@ -2329,6 +2347,28 @@
 						<MediaRef Id="877801742"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2570150929" Name="Play_MusPaused" ObjectPath="\Events\Default Work Unit\Adaptative Music\Play_MusPaused" GUID="{AB68BF19-CB88-43B4-9DDC-E7CFA75DC02F}" DurationType="Infinite">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3898853262" Id="0" GUID="{A26C9464-58C4-4C7C-A3B1-A18AE110F6C9}"/>
+							<MediaRefs>
+								<MediaRef Id="184794636"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3898853262" Id="1854033137" GUID="{810D37BC-B114-4941-922B-2D544C1072DB}"/>
+							<MediaRefs>
+								<MediaRef Id="112661541"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3898853262" Id="1443861931" GUID="{C4E1EB21-98A8-4D5E-BEC8-D86DE3924ECA}"/>
+							<MediaRefs>
+								<MediaRef Id="184794636"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
 				<Event Id="905172127" Name="Play_MusResults" ObjectPath="\Events\Default Work Unit\Adaptative Music\Play_MusResults" GUID="{94377A01-2A74-41E4-9FD0-F00C26A9984A}" DurationType="Infinite">
 					<SwitchContainers>
 						<SwitchContainer>
@@ -2765,6 +2805,7 @@
 					</MediaRefs>
 				</Event>
 				<Event Id="580129893" Name="Resume_MusCore" ObjectPath="\Events\Default Work Unit\Adaptative Music\Resume_MusCore" GUID="{312DFE6E-D89E-4186-B947-9999017D7BF5}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3602533990" Name="Resume_MusPaused" ObjectPath="\Events\Default Work Unit\Adaptative Music\Resume_MusPaused" GUID="{528F54F3-B6C9-4C57-A3A9-6C072ECA34D2}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="434120470" Name="SetCombatBetweenWave" ObjectPath="\Events\Default Work Unit\Z_DeprecatedEvents\Debug\SetCombatBetweenWave" GUID="{F53F7ABE-2C88-4E70-A4DA-3F410D056ED9}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="4122948419" Id="2373432776" Name="betweenwave" ObjectPath="\States\Default Work Unit\state_combat\betweenwave" GUID="{FF2C5CA1-53C4-423E-AF83-8785851A7F1B}"/>
@@ -2824,7 +2865,10 @@
 			</StateGroups>
 			<SwitchGroups>
 				<SwitchGroup Id="103781722" Name="switch_results_music" ObjectPath="\Switches\Default Work Unit\switch_results_music" GUID="{F9C3A9D3-A6F7-4890-B2FF-F8C4BF3D2B6B}">
-					<Switches/>
+					<Switches>
+						<Switch Id="2346738020" Name="high_chaos" ObjectPath="\Switches\Default Work Unit\switch_results_music\high_chaos" GUID="{B785744B-290E-494F-9AB9-D67CF93D6C32}"/>
+						<Switch Id="3407899128" Name="low_chaos" ObjectPath="\Switches\Default Work Unit\switch_results_music\low_chaos" GUID="{B5E5F26A-DB05-4475-8DC6-02CA8E5B49FE}"/>
+					</Switches>
 				</SwitchGroup>
 				<SwitchGroup Id="226573501" Name="switch_combat_status" ObjectPath="\Switches\Default Work Unit\switch_combat_status" GUID="{00BFC575-DD53-4D59-B613-1CE2AE596AE9}">
 					<Switches>
@@ -2878,8 +2922,14 @@
 						<Switch Id="1879783295" Name="combat_wave_index_4" ObjectPath="\Switches\Default Work Unit\switch_combat_wave_index\combat_wave_index_4" GUID="{F2E75342-E07C-442C-ACA8-064A4CF110F8}"/>
 					</Switches>
 				</SwitchGroup>
+				<SwitchGroup Id="3898853262" Name="switch_pause_music" ObjectPath="\Switches\Default Work Unit\switch_pause_music" GUID="{A26C9464-58C4-4C7C-A3B1-A18AE110F6C9}">
+					<Switches>
+						<Switch Id="1443861931" Name="pause_low_chaos" ObjectPath="\Switches\Default Work Unit\switch_pause_music\pause_low_chaos" GUID="{C4E1EB21-98A8-4D5E-BEC8-D86DE3924ECA}"/>
+						<Switch Id="1854033137" Name="pause_high_chaos" ObjectPath="\Switches\Default Work Unit\switch_pause_music\pause_high_chaos" GUID="{810D37BC-B114-4941-922B-2D544C1072DB}"/>
+					</Switches>
+				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{80F486CA-3C81-8B59-390D-9D2B17A84135}</FileHash>
+	<FileHash>{DDF1F9A8-7D77-E844-1A07-5603DE8792A2}</FileHash>
 </SoundBanksInfo>

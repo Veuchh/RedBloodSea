@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{1D2A39F0-30EC-4374-B60C-7E5FD97B8C24}",
     "Language": "SFX",
-    "Hash": "{C5F02D11-70A1-62AA-DA79-C5C2A2FA90BD}",
+    "Hash": "{02687706-6363-008B-7080-7366EAB2CBCD}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\RBS_MAIN_SoundBank",
     "ShortName": "RBS_MAIN_SoundBank",
     "Path": "RBS_MAIN_SoundBank.bnk",
@@ -474,6 +474,14 @@
       "CachePath": "SFX/03 RBS_SFX_PlayerFS ConcreteGrittyWalk 03L_EDCD4836.wem"
      },
      {
+      "Id": "112661541",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "game paused - high chaos v1.wav",
+      "CachePath": "SFX/game paused - high chaos v1_D8A0D580.wem"
+     },
+     {
       "Id": "114805436",
       "Language": "SFX",
       "Streaming": "false",
@@ -618,6 +626,14 @@
       "Location": "Memory",
       "ShortName": "UI hover SEQ v1.wav",
       "CachePath": "SFX/UI hover SEQ v1_5B3A7F94.wem"
+     },
+     {
+      "Id": "184794636",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "game paused - low chaos v1.wav",
+      "CachePath": "SFX/game paused - low chaos v1_D8A0D580.wem"
      },
      {
       "Id": "190568369",
@@ -3143,6 +3159,16 @@
       "DurationMax": "0"
      },
      {
+      "Id": "2980929675",
+      "Name": "Pause_MusPaused",
+      "ObjectPath": "\\Events\\Default Work Unit\\Adaptative Music\\Pause_MusPaused",
+      "GUID": "{1B49BBFC-2152-46F9-A487-235414F48B78}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
       "Id": "1485489414",
       "Name": "Play_3D_AMB",
       "ObjectPath": "\\Events\\Default Work Unit\\World Environments\\Play_3D_AMB",
@@ -4500,6 +4526,54 @@
       ]
      },
      {
+      "Id": "2570150929",
+      "Name": "Play_MusPaused",
+      "ObjectPath": "\\Events\\Default Work Unit\\Adaptative Music\\Play_MusPaused",
+      "GUID": "{AB68BF19-CB88-43B4-9DDC-E7CFA75DC02F}",
+      "DurationType": "Infinite",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3898853262",
+         "Id": "0",
+         "GUID": "{A26C9464-58C4-4C7C-A3B1-A18AE110F6C9}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "184794636"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3898853262",
+         "Id": "1854033137",
+         "GUID": "{810D37BC-B114-4941-922B-2D544C1072DB}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "112661541"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3898853262",
+         "Id": "1443861931",
+         "GUID": "{C4E1EB21-98A8-4D5E-BEC8-D86DE3924ECA}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "184794636"
+         }
+        ]
+       }
+      ]
+     },
+     {
       "Id": "905172127",
       "Name": "Play_MusResults",
       "ObjectPath": "\\Events\\Default Work Unit\\Adaptative Music\\Play_MusResults",
@@ -5716,6 +5790,16 @@
       "DurationMax": "0"
      },
      {
+      "Id": "3602533990",
+      "Name": "Resume_MusPaused",
+      "ObjectPath": "\\Events\\Default Work Unit\\Adaptative Music\\Resume_MusPaused",
+      "GUID": "{528F54F3-B6C9-4C57-A3A9-6C072ECA34D2}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
       "Id": "434120470",
       "Name": "SetCombatBetweenWave",
       "ObjectPath": "\\Events\\Default Work Unit\\Z_DeprecatedEvents\\Debug\\SetCombatBetweenWave",
@@ -5958,7 +6042,20 @@
       "Name": "switch_results_music",
       "ObjectPath": "\\Switches\\Default Work Unit\\switch_results_music",
       "GUID": "{F9C3A9D3-A6F7-4890-B2FF-F8C4BF3D2B6B}",
-      "Switches": []
+      "Switches": [
+       {
+        "Id": "2346738020",
+        "Name": "high_chaos",
+        "ObjectPath": "\\Switches\\Default Work Unit\\switch_results_music\\high_chaos",
+        "GUID": "{B785744B-290E-494F-9AB9-D67CF93D6C32}"
+       },
+       {
+        "Id": "3407899128",
+        "Name": "low_chaos",
+        "ObjectPath": "\\Switches\\Default Work Unit\\switch_results_music\\low_chaos",
+        "GUID": "{B5E5F26A-DB05-4475-8DC6-02CA8E5B49FE}"
+       }
+      ]
      },
      {
       "Id": "226573501",
@@ -6159,10 +6256,30 @@
         "GUID": "{F2E75342-E07C-442C-ACA8-064A4CF110F8}"
        }
       ]
+     },
+     {
+      "Id": "3898853262",
+      "Name": "switch_pause_music",
+      "ObjectPath": "\\Switches\\Default Work Unit\\switch_pause_music",
+      "GUID": "{A26C9464-58C4-4C7C-A3B1-A18AE110F6C9}",
+      "Switches": [
+       {
+        "Id": "1443861931",
+        "Name": "pause_low_chaos",
+        "ObjectPath": "\\Switches\\Default Work Unit\\switch_pause_music\\pause_low_chaos",
+        "GUID": "{C4E1EB21-98A8-4D5E-BEC8-D86DE3924ECA}"
+       },
+       {
+        "Id": "1854033137",
+        "Name": "pause_high_chaos",
+        "ObjectPath": "\\Switches\\Default Work Unit\\switch_pause_music\\pause_high_chaos",
+        "GUID": "{810D37BC-B114-4941-922B-2D544C1072DB}"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{6962C030-1BE9-5439-E623-A9F075791EE3}"
+  "FileHash": "{93AA1FAB-D3E8-AC9B-22FE-8F1D18AC412D}"
  }
 }

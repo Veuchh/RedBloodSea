@@ -956,6 +956,45 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{D7C48246-44E9-4D2F-928D-6EE00DB1E52A}" ShortID="236498179">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="7"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="AmbMaster" ID="{B07995C9-2EA2-436D-9D7D-843D8CD906CE}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{BDAB6543-BEAB-4692-9222-3D17CDC46F73}" ShortID="844523371">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="7"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Local3D_HC" ID="{42CA50E2-565D-458F-B3DD-A753797929D3}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{17D27AF4-52C2-460E-8951-23C7DE1E1E90}" ShortID="998313898">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="7"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Local3D_LC" ID="{D2E200CA-4D53-4C0F-800A-1D4CC25CE3D0}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Resume_MusCore" ID="{312DFE6E-D89E-4186-B947-9999017D7BF5}">
@@ -970,6 +1009,45 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="core_music_switch_master" ID="{5C0FEB36-8DA2-4E6C-8ED3-134A1E78AB32}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{4E535BD8-E6C3-4A76-AA13-0284E01F06A4}" ShortID="274321953">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="9"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Local3D_LC" ID="{D2E200CA-4D53-4C0F-800A-1D4CC25CE3D0}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{A9C69A65-A240-44DD-84FD-F896F487DD6B}" ShortID="228014869">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="9"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Local3D_HC" ID="{42CA50E2-565D-458F-B3DD-A753797929D3}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{8F379530-B7C2-41FC-BDCA-DE83E10736C0}" ShortID="274027184">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="9"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="AmbMaster" ID="{B07995C9-2EA2-436D-9D7D-843D8CD906CE}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -1055,6 +1133,17 @@
 						</Event>
 						<Event Name="Play_MusResults" ID="{94377A01-2A74-41E4-9FD0-F00C26A9984A}">
 							<ChildrenList>
+								<Action Name="" ID="{8C62E2CC-04DE-4391-A90C-2C059C1AE140}" ShortID="663062492">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Local3D_HC" ID="{42CA50E2-565D-458F-B3DD-A753797929D3}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 								<Action Name="" ID="{97D0B26D-0617-4ED2-A600-7D38B1646E92}" ShortID="718772638">
 									<PropertyList>
 										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
@@ -1062,6 +1151,67 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="results" ID="{B8071DE9-7CE2-4CAD-BB81-E4351BDCBE5B}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{C0DD2130-52C7-4282-82D8-96F09E5BFBFC}" ShortID="953495012">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Local3D_LC" ID="{D2E200CA-4D53-4C0F-800A-1D4CC25CE3D0}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{122F60C6-5097-4162-81EB-A9AF67A43032}" ShortID="971085924">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VsArenaNotInCombatChaosBlend" ID="{818FA01E-961E-4EE4-9DF7-58F1FE0F8780}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_MusPaused" ID="{AB68BF19-CB88-43B4-9DDC-E7CFA75DC02F}">
+							<ChildrenList>
+								<Action Name="" ID="{9D1EB1BB-3C2A-44B8-99A6-C222ABCAD492}" ShortID="557414979">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="game paused" ID="{CE2D95E7-E3CC-44C3-BBFB-3568B6C48495}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Pause_MusPaused" ID="{1B49BBFC-2152-46F9-A487-235414F48B78}">
+							<ChildrenList>
+								<Action Name="" ID="{5642320F-AFDA-49F0-BCC8-922ECC2807B0}" ShortID="654979082">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="7"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="game paused" ID="{CE2D95E7-E3CC-44C3-BBFB-3568B6C48495}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Resume_MusPaused" ID="{528F54F3-B6C9-4C57-A3A9-6C072ECA34D2}">
+							<ChildrenList>
+								<Action Name="" ID="{F0A10F31-FF58-4C1F-A9BD-DC556841D3E1}" ShortID="1012938629">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="9"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="game paused" ID="{CE2D95E7-E3CC-44C3-BBFB-3568B6C48495}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -1095,6 +1245,16 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="AmbMaster" ID="{B07995C9-2EA2-436D-9D7D-843D8CD906CE}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{02EBEEEC-A477-421A-882A-60BCB0AF5A95}" ShortID="645902592">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="rtpc_tapestop" ID="{34AB8051-BDEC-4FCF-A5A6-D129BA29D38F}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

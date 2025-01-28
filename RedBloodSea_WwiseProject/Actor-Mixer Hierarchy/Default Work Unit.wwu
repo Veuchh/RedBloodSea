@@ -10368,9 +10368,6 @@
 															</ValueList>
 														</Property>
 														<Property Name="MakeUpGain" Type="Real64">
-															<ValueList>
-																<Value>-7</Value>
-															</ValueList>
 															<ModifierList>
 																<ModifierInfo>
 																	<Modifier Name="" ID="{87F0B8D7-C42C-4C4A-9E69-2F50403B5109}"/>

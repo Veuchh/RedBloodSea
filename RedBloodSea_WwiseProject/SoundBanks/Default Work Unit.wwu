@@ -18,6 +18,7 @@
 						<ObjectRef Name="Play_SlashHitEnviro" ID="{6E8732AD-CC17-4320-B490-71E811880A65}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_LinkRay2" ID="{D153C254-2365-4339-A7A8-6EFAA363D385}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Jump" ID="{E9BD2A7D-A3FC-4367-900D-1C172D1086AE}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_MusPaused" ID="{AB68BF19-CB88-43B4-9DDC-E7CFA75DC02F}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_3D_AMB" ID="{C11A3D36-BA50-43C3-8A72-29187D20295C}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_Music" ID="{0A07F4C6-9E79-43D1-B489-AECE51F9887E}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_MusCore" ID="{602D3395-88F5-43D6-9CE1-0EB64BAD5F08}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
@@ -33,6 +34,7 @@
 						<ObjectRef Name="Play_HitOnWeakpoint" ID="{C43D29F5-8E69-4666-A4F1-2883794CDC5B}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_DashInterrupt" ID="{22B0C28B-0244-46E3-AA87-F1EEDA24088F}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_AmbVSArena" ID="{5C124C78-CC34-46F4-9C11-1C65E3B16568}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Pause_MusPaused" ID="{1B49BBFC-2152-46F9-A487-235414F48B78}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_HitNotOnWeakpoint" ID="{2216BC91-69B5-4700-B255-8145143E83AC}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_SliderTick" ID="{6415A572-F743-4738-8EAF-CB006CA77ABC}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_PlaceholderAMB" ID="{5A95298C-BFC4-4769-BF79-0077A315CC42}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
@@ -54,6 +56,7 @@
 						<ObjectRef Name="Play_PlayerFsSkid" ID="{DC315F02-F1AA-4B9C-9CD4-3E5B4465E20F}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_LinkRay4" ID="{194B4F2E-1322-4BD9-8C6C-D107F77E1425}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_PossessionSuccessful" ID="{6D367373-2398-4C51-9F2C-F5C06824195D}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Resume_MusPaused" ID="{528F54F3-B6C9-4C57-A3A9-6C072ECA34D2}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_LinkBroken" ID="{4733C7A7-2EBB-4C9C-8450-F7E511F026B1}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_EnemySwitchInit" ID="{1F648AFD-D275-4CC8-A8FF-DF4301325368}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="SetCombatInWave" ID="{4DA437B0-D0CF-4D6F-84B6-3F134FD7EA1C}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>

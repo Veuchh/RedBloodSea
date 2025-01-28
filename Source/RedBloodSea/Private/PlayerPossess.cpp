@@ -28,6 +28,7 @@ void UPlayerPossess::SetupPlayerPossessComponent(ACharacter* Character,
 	dwellerLinkSU->SetupSubsystem(GetOwner(), splineLinkVFXReference);
 	//We spawn a default enemy for the player to possess
 	FVector Location = GetOwner()->GetActorLocation();
+	Location.Z += 100;
 	FRotator Rotation = GetOwner()->GetActorRotation();
 	FActorSpawnParameters SpawnInfo;
 	ADweller* newDwellerInstance = GetWorld()->SpawnActor<ADweller>(dwellerBP, Location, Rotation, SpawnInfo);

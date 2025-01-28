@@ -6,6 +6,7 @@
 #include "AIStatesC.h"
 #include "Dweller.h"
 #include "GameFramework/Actor.h"
+#include "DwellerLinkSubsystem.h"
 #include "WaveSpawnManager.generated.h"
 
 
@@ -108,6 +109,8 @@ private:
 
 	FTimerHandle CurrentWaveTimer;
 
+	UDwellerLinkSubsystem* dwellerLinkSU;
+	
 	bool bIsActive = false;
 	
 protected:

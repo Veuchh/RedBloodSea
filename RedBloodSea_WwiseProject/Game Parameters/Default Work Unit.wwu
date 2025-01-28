@@ -19,8 +19,8 @@
 					<PropertyList>
 						<Property Name="InitialValue" Type="Real64" Value="0.5"/>
 						<Property Name="Max" Type="Real64" Value="1"/>
-						<Property Name="SlewRateDown" Type="Real64" Value="14"/>
-						<Property Name="SlewRateUp" Type="Real64" Value="60"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="21"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="24"/>
 					</PropertyList>
 				</GameParameter>
 				<GameParameter Name="rtpc_player_life" ID="{1CC6F0C7-6126-4057-9B70-3C89F38C5F50}">
@@ -97,6 +97,9 @@
 				<GameParameter Name="rtpc_tapestop" ID="{34AB8051-BDEC-4FCF-A5A6-D129BA29D38F}">
 					<PropertyList>
 						<Property Name="InitialValue" Type="Real64" Value="100"/>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="0"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="0"/>
 					</PropertyList>
 				</GameParameter>
 				<GameParameter Name="rtpc_dash_leftright" ID="{7894A474-E5D3-4187-925F-19042540CC04}">
@@ -120,6 +123,20 @@
 				<GameParameter Name="rtpc_highfreqfilter_off_on" ID="{9D67A80A-4B5B-4616-A716-FC5EFCF47D77}">
 					<PropertyList>
 						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="rtpc_builtin_distance" ID="{51E739EC-97B4-4E4C-A4B4-45C5A6AEF050}">
+					<PropertyList>
+						<Property Name="BindToBuiltInParam" Type="int16" Value="1"/>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="1000"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="meter_sfx" ID="{612878B7-9133-405F-BC49-C2FDA83F7E32}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="-48"/>
+						<Property Name="Max" Type="Real64" Value="0"/>
+						<Property Name="Min" Type="Real64" Value="-48"/>
 					</PropertyList>
 				</GameParameter>
 			</ChildrenList>

@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{1D2A39F0-30EC-4374-B60C-7E5FD97B8C24}",
     "Language": "SFX",
-    "Hash": "{5078B74D-BA3E-DCEC-522C-AE66A5CE8DA0}",
+    "Hash": "{C5F02D11-70A1-62AA-DA79-C5C2A2FA90BD}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\RBS_MAIN_SoundBank",
     "ShortName": "RBS_MAIN_SoundBank",
     "Path": "RBS_MAIN_SoundBank.bnk",
@@ -273,6 +273,14 @@
       "ShortName": "RBS_SFX_PlayerFS RandLayerMetal 01.wav",
       "Path": "Media/69501670.wem",
       "CachePath": "SFX/RBS_SFX_PlayerFS RandLayerMetal 01_EDCD4836.wem"
+     },
+     {
+      "Id": "70950327",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "player hit projectile projectile.wav",
+      "CachePath": "SFX/player hit projectile projectile_FDDF17CE.wem"
      },
      {
       "Id": "71810780",
@@ -610,6 +618,14 @@
       "Location": "Memory",
       "ShortName": "UI hover SEQ v1.wav",
       "CachePath": "SFX/UI hover SEQ v1_5B3A7F94.wem"
+     },
+     {
+      "Id": "190568369",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Cast.wav",
+      "CachePath": "SFX/Cast_C5DB3FD5.wem"
      },
      {
       "Id": "192813109",
@@ -1913,6 +1929,14 @@
       "CachePath": "SFX/RBS_SFX_PlayerFS GrassRun 04L_EDCD4836.wem"
      },
      {
+      "Id": "704646388",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Beam.wav",
+      "CachePath": "SFX/Beam_D8A0D580.wem"
+     },
+     {
       "Id": "710212975",
       "Language": "SFX",
       "Streaming": "false",
@@ -2218,6 +2242,14 @@
       "CachePath": "SFX/RBS_SFX_PlayerFS GravelRun 06L_EDCD4836.wem"
      },
      {
+      "Id": "813693602",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "break2  projectile.wav",
+      "CachePath": "SFX/break2  projectile_EDCD4836.wem"
+     },
+     {
       "Id": "819764921",
       "Language": "SFX",
       "Streaming": "false",
@@ -2258,6 +2290,14 @@
       "ShortName": "RBS_SFX_PlayerFS FootLiftGravel 03.wav",
       "Path": "Media/828588564.wem",
       "CachePath": "SFX/RBS_SFX_PlayerFS FootLiftGravel 03_EDCD4836.wem"
+     },
+     {
+      "Id": "834987026",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "enviro ice hit projectile.wav",
+      "CachePath": "SFX/enviro ice hit projectile_EDCD4836.wem"
      },
      {
       "Id": "837272602",
@@ -2700,6 +2740,14 @@
       "CachePath": "SFX/UI hover SEQ v1_CA6CA4DA.wem"
      },
      {
+      "Id": "942552018",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "results - low chaos v1.wav",
+      "CachePath": "SFX/results - low chaos v1_D8A0D580.wem"
+     },
+     {
       "Id": "946514003",
       "Language": "SFX",
       "Streaming": "true",
@@ -2709,6 +2757,14 @@
       "CachePath": "SFX/RBS_SFX_PlayerFS RandLayerCloth 03_EDCD4836.wem"
      },
      {
+      "Id": "953102820",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Fire.wav",
+      "CachePath": "SFX/Fire_287C39E7.wem"
+     },
+     {
       "Id": "965886494",
       "Language": "SFX",
       "Streaming": "true",
@@ -2716,6 +2772,22 @@
       "ShortName": "RBS_SFX_PlayerFS GrassWalk 07L.wav",
       "Path": "Media/965886494.wem",
       "CachePath": "SFX/RBS_SFX_PlayerFS GrassWalk 07L_EDCD4836.wem"
+     },
+     {
+      "Id": "968957107",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "hub v1.wav",
+      "CachePath": "SFX/hub v1_D8A0D580.wem"
+     },
+     {
+      "Id": "973311698",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Flyby.wav",
+      "CachePath": "SFX/Flyby_2CA78533.wem"
      },
      {
       "Id": "973668817",
@@ -3050,14 +3122,6 @@
        "LibId": "7733251"
       },
       {
-       "Id": "2207374258",
-       "Name": "MUTEDDD",
-       "ObjectPath": "\\Effects\\Default Work Unit\\MUTEDDD",
-       "GUID": "{6E7E15D9-D881-4188-BE6A-B3FC66A4B237}",
-       "LibName": "Wwise Gain",
-       "LibId": "9109507"
-      },
-      {
        "Id": "2849147824",
        "Name": "Medium",
        "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Cathedrals\\Medium",
@@ -3116,14 +3180,7 @@
        {
         "Id": "1030014282"
        }
-      ],
-      "PluginRefs": {
-       "ShareSets": [
-        {
-         "Id": "2207374258"
-        }
-       ]
-      }
+      ]
      },
      {
       "Id": "2538869711",
@@ -3310,31 +3367,178 @@
       "SwitchContainers": []
      },
      {
+      "Id": "3990636594",
+      "Name": "Play_EnemyProjectileBeam",
+      "ObjectPath": "\\Events\\Default Work Unit\\Ai Behavior\\Play_EnemyProjectileBeam",
+      "GUID": "{FE351B22-CEDB-42DC-A8D7-D2B4A61DEBC2}",
+      "MaxAttenuation": "3000",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "704646388"
+       }
+      ]
+     },
+     {
+      "Id": "4012547228",
+      "Name": "Play_EnemyProjectileBreak",
+      "ObjectPath": "\\Events\\Default Work Unit\\Ai Behavior\\Play_EnemyProjectileBreak",
+      "GUID": "{6EEDA18E-B07A-4998-B8CD-01CC1C25ADB5}",
+      "MaxAttenuation": "3000",
+      "DurationType": "OneShot",
+      "DurationMin": "1.532304",
+      "DurationMax": "1.9305822",
+      "MediaRefs": [
+       {
+        "Id": "813693602"
+       }
+      ]
+     },
+     {
       "Id": "2475708390",
       "Name": "Play_EnemyProjectileCast",
       "ObjectPath": "\\Events\\Default Work Unit\\Ai Behavior\\Play_EnemyProjectileCast",
       "GUID": "{83E9AC1D-8C91-49FA-A01A-365107871AAC}",
+      "MaxAttenuation": "3000",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "1.5120656",
+      "DurationMax": "1.6972363",
+      "MediaRefs": [
+       {
+        "Id": "190568369"
+       }
+      ]
+     },
+     {
+      "Id": "3015606455",
+      "Name": "Play_EnemyProjectileFire",
+      "ObjectPath": "\\Events\\Default Work Unit\\Ai Behavior\\Play_EnemyProjectileFire",
+      "GUID": "{C953855A-9CA6-48E1-8869-F6A38CCD7945}",
+      "MaxAttenuation": "3000",
+      "DurationType": "OneShot",
+      "DurationMin": "1.261047",
+      "DurationMax": "1.4569541",
+      "MediaRefs": [
+       {
+        "Id": "953102820"
+       }
+      ]
      },
      {
       "Id": "1196584277",
       "Name": "Play_EnemyProjectileFlyby",
       "ObjectPath": "\\Events\\Default Work Unit\\Ai Behavior\\Play_EnemyProjectileFlyby",
       "GUID": "{4B060C13-B121-4F9D-929D-ECAB732B6779}",
+      "MaxAttenuation": "3000",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "1.3844577",
+      "DurationMax": "2.466823",
+      "MediaRefs": [
+       {
+        "Id": "973311698"
+       }
+      ]
      },
      {
-      "Id": "2629100189",
-      "Name": "Play_EnemyProjectileTrail",
-      "ObjectPath": "\\Events\\Default Work Unit\\Ai Behavior\\Play_EnemyProjectileTrail",
-      "GUID": "{C953855A-9CA6-48E1-8869-F6A38CCD7945}",
+      "Id": "3428801225",
+      "Name": "Play_EnemyProjectileHitEnviro",
+      "ObjectPath": "\\Events\\Default Work Unit\\Ai Behavior\\Play_EnemyProjectileHitEnviro",
+      "GUID": "{69D3EB20-2FA0-4067-834A-B617223CB932}",
+      "MaxAttenuation": "3000",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "0.78902125",
+      "DurationMax": "1.0250002",
+      "MediaRefs": [
+       {
+        "Id": "54054381"
+       },
+       {
+        "Id": "99219889"
+       },
+       {
+        "Id": "125901720"
+       },
+       {
+        "Id": "148524242"
+       },
+       {
+        "Id": "175605479"
+       },
+       {
+        "Id": "270434604"
+       },
+       {
+        "Id": "278434081"
+       },
+       {
+        "Id": "291763179"
+       },
+       {
+        "Id": "309736558"
+       },
+       {
+        "Id": "320245737"
+       },
+       {
+        "Id": "409348956"
+       },
+       {
+        "Id": "478843681"
+       },
+       {
+        "Id": "517384302"
+       },
+       {
+        "Id": "572214998"
+       },
+       {
+        "Id": "714637550"
+       },
+       {
+        "Id": "792625188"
+       },
+       {
+        "Id": "834987026"
+       },
+       {
+        "Id": "837272602"
+       },
+       {
+        "Id": "862584422"
+       },
+       {
+        "Id": "909626541"
+       },
+       {
+        "Id": "912035078"
+       },
+       {
+        "Id": "916730515"
+       },
+       {
+        "Id": "927982555"
+       },
+       {
+        "Id": "932913252"
+       },
+       {
+        "Id": "933938710"
+       }
+      ]
+     },
+     {
+      "Id": "620873077",
+      "Name": "Play_EnemyProjectileHitPlayer",
+      "ObjectPath": "\\Events\\Default Work Unit\\Ai Behavior\\Play_EnemyProjectileHitPlayer",
+      "GUID": "{76F409BB-41EF-4442-ACE9-324E11203313}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.142689",
+      "DurationMax": "0.142689",
+      "MediaRefs": [
+       {
+        "Id": "70950327"
+       }
+      ]
      },
      {
       "Id": "62206152",
@@ -4272,6 +4476,18 @@
       ]
      },
      {
+      "Id": "3935853100",
+      "Name": "Play_MusHub",
+      "ObjectPath": "\\Events\\Default Work Unit\\Adaptative Music\\Play_MusHub",
+      "GUID": "{90C8B7F9-266C-4DF5-BEC5-1D17E4A5FC1A}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "968957107"
+       }
+      ]
+     },
+     {
       "Id": "3138265869",
       "Name": "Play_MusMainMenu",
       "ObjectPath": "\\Events\\Default Work Unit\\Adaptative Music\\Play_MusMainMenu",
@@ -4280,6 +4496,28 @@
       "MediaRefs": [
        {
         "Id": "877801742"
+       }
+      ]
+     },
+     {
+      "Id": "905172127",
+      "Name": "Play_MusResults",
+      "ObjectPath": "\\Events\\Default Work Unit\\Adaptative Music\\Play_MusResults",
+      "GUID": "{94377A01-2A74-41E4-9FD0-F00C26A9984A}",
+      "DurationType": "Infinite",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "103781722",
+         "Id": "0",
+         "GUID": "{F9C3A9D3-A6F7-4890-B2FF-F8C4BF3D2B6B}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "942552018"
+         }
+        ]
        }
       ]
      },
@@ -5612,6 +5850,12 @@
       "GUID": "{34AB8051-BDEC-4FCF-A5A6-D129BA29D38F}"
      },
      {
+      "Id": "1010956302",
+      "Name": "rtpc_builtin_distance",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_builtin_distance",
+      "GUID": "{51E739EC-97B4-4E4C-A4B4-45C5A6AEF050}"
+     },
+     {
       "Id": "1410332996",
       "Name": "rtpc_settings_slider",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_settings_slider",
@@ -5646,12 +5890,6 @@
       "Name": "rtpc_chaos_global",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_chaos_global",
       "GUID": "{912B7FBA-E859-424B-9664-D9B8B51FC1BA}"
-     },
-     {
-      "Id": "3361666196",
-      "Name": "rtpc_chaos_enemy",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_chaos_enemy",
-      "GUID": "{8D8709D7-5017-47F2-988D-4EE3A088300B}"
      }
     ],
     "StateGroups": [
@@ -5715,6 +5953,13 @@
      }
     ],
     "SwitchGroups": [
+     {
+      "Id": "103781722",
+      "Name": "switch_results_music",
+      "ObjectPath": "\\Switches\\Default Work Unit\\switch_results_music",
+      "GUID": "{F9C3A9D3-A6F7-4890-B2FF-F8C4BF3D2B6B}",
+      "Switches": []
+     },
      {
       "Id": "226573501",
       "Name": "switch_combat_status",
@@ -5918,6 +6163,6 @@
     ]
    }
   ],
-  "FileHash": "{94082E10-2281-8FF8-CC0A-EEEDB0034128}"
+  "FileHash": "{6962C030-1BE9-5439-E623-A9F075791EE3}"
  }
 }

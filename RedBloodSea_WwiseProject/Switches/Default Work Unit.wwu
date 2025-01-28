@@ -55,6 +55,8 @@
 						<Switch Name="combat_wave_index_5" ID="{9D73A899-2271-49EC-9A38-0E97454C25EA}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="switch_results_music" ID="{F9C3A9D3-A6F7-4890-B2FF-F8C4BF3D2B6B}"/>
+				<SwitchGroup Name="high_chaos" ID="{D3363CD5-D143-4007-A982-81C212018783}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

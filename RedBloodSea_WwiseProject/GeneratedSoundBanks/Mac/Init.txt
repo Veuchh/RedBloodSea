@@ -24,7 +24,9 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	88991926	rtpc_master_bus			\Default Work Unit\Settings\BUS\rtpc_master_bus	
 	115866790	rtpc_amb_bus			\Default Work Unit\Settings\BUS\rtpc_amb_bus	
 	600133661	rtpc_high_freq_filter			\Default Work Unit\rtpc_high_freq_filter	
+	876333639	rtpc_tapestop			\Default Work Unit\rtpc_tapestop	
 	2860606227	rtpc_highfreqfilter_off_on			\Default Work Unit\rtpc_highfreqfilter_off_on	
+	2969259856	meter_sfx			\Default Work Unit\meter_sfx	
 	3067876527	rtpc_sfx_bus			\Default Work Unit\Settings\BUS\rtpc_sfx_bus	
 	3432596327	rtpc_music_bus			\Default Work Unit\Settings\BUS\rtpc_music_bus	
 
@@ -44,6 +46,7 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 
 Effect plug-ins	ID	Name	Type				Notes
 	2224135639	Level_Verb	Wwise RoomVerb			
+	2404745364	SFX_METER	Wwise Meter			
 	3626272192	HIGH_FREQUENCY_CUT_FILTER	Wwise Parametric EQ			
 
 Audio Devices	ID	Name	Type				Notes

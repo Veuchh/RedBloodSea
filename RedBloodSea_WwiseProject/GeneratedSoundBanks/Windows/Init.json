@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{31164A7E-CC1F-7260-49D7-E2E15BFA618E}",
+    "Hash": "{2C2549EA-7030-05F6-78B8-49AF066FD0D0}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -23,6 +23,14 @@
        "GUID": "{C10E6266-7F54-414E-B6C1-16F6802E7ADB}",
        "LibName": "Wwise RoomVerb",
        "LibId": "7733251"
+      },
+      {
+       "Id": "2404745364",
+       "Name": "SFX_METER",
+       "ObjectPath": "\\Effects\\Default Work Unit\\SFX_METER",
+       "GUID": "{0927D708-8783-43A9-AD28-D97A0CD1DAAE}",
+       "LibName": "Wwise Meter",
+       "LibId": "8454147"
       },
       {
        "Id": "3626272192",
@@ -57,7 +65,14 @@
       "Id": "393239870",
       "Name": "SFX",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\StereoBus\\SFX",
-      "GUID": "{39250B52-8C88-4C54-B7D3-2C12760A0A9F}"
+      "GUID": "{39250B52-8C88-4C54-B7D3-2C12760A0A9F}",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "2404745364"
+        }
+       ]
+      }
      },
      {
       "Id": "466672200",
@@ -174,6 +189,12 @@
       "GUID": "{34AB8051-BDEC-4FCF-A5A6-D129BA29D38F}"
      },
      {
+      "Id": "1010956302",
+      "Name": "rtpc_builtin_distance",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_builtin_distance",
+      "GUID": "{51E739EC-97B4-4E4C-A4B4-45C5A6AEF050}"
+     },
+     {
       "Id": "1410332996",
       "Name": "rtpc_settings_slider",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_settings_slider",
@@ -220,6 +241,12 @@
       "Name": "rtpc_highfreqfilter_off_on",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_highfreqfilter_off_on",
       "GUID": "{9D67A80A-4B5B-4616-A716-FC5EFCF47D77}"
+     },
+     {
+      "Id": "2969259856",
+      "Name": "meter_sfx",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\meter_sfx",
+      "GUID": "{612878B7-9133-405F-BC49-C2FDA83F7E32}"
      },
      {
       "Id": "3067876527",
@@ -371,6 +398,13 @@
      }
     ],
     "SwitchGroups": [
+     {
+      "Id": "103781722",
+      "Name": "switch_results_music",
+      "ObjectPath": "\\Switches\\Default Work Unit\\switch_results_music",
+      "GUID": "{F9C3A9D3-A6F7-4890-B2FF-F8C4BF3D2B6B}",
+      "Switches": []
+     },
      {
       "Id": "226573501",
       "Name": "switch_combat_status",
@@ -534,6 +568,13 @@
       ]
      },
      {
+      "Id": "2346738020",
+      "Name": "high_chaos",
+      "ObjectPath": "\\Switches\\Default Work Unit\\high_chaos",
+      "GUID": "{D3363CD5-D143-4007-A982-81C212018783}",
+      "Switches": []
+     },
+     {
       "Id": "3204630533",
       "Name": "switch_combat_wave_index",
       "ObjectPath": "\\Switches\\Default Work Unit\\switch_combat_wave_index",
@@ -574,6 +615,6 @@
     ]
    }
   ],
-  "FileHash": "{C8FBE8D5-9438-856D-1B30-1369F93371D7}"
+  "FileHash": "{F020DFB8-77E9-08E6-8514-9BDEFA4E450A}"
  }
 }

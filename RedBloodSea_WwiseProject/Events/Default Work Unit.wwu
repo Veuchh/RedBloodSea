@@ -673,14 +673,117 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{EDD29F8A-83BB-4717-A942-10D017A30071}" ShortID="940704268">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Delay" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="EnemyProjectileBeam" ID="{7F8EEE5E-9EBB-45E5-969E-33AF90805FED}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{22469CA2-90A1-4FE2-8F94-5D695A0D3828}" ShortID="299999856">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="13"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+										<Property Name="Pitch" Type="int32" Value="-1720"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="EnemyProjectileBeam" ID="{7F8EEE5E-9EBB-45E5-969E-33AF90805FED}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Play_EnemyProjectileTrail" ID="{C953855A-9CA6-48E1-8869-F6A38CCD7945}">
+						<Event Name="Play_EnemyProjectileFire" ID="{C953855A-9CA6-48E1-8869-F6A38CCD7945}">
 							<ChildrenList>
 								<Action Name="" ID="{C46DDBF7-684F-4B7F-B60D-E26E163B2024}" ShortID="275804124">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="EnemyProjectileTrail" ID="{B89BF0AC-ADB4-48D8-82C1-472295208C84}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											<ObjectRef Name="EnemyProjectileFire" ID="{B89BF0AC-ADB4-48D8-82C1-472295208C84}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_EnemyProjectileBreak" ID="{6EEDA18E-B07A-4998-B8CD-01CC1C25ADB5}">
+							<ChildrenList>
+								<Action Name="" ID="{3DBEC082-B248-48B1-94DF-F6077C8BBDDA}" ShortID="284712454">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="EnemyProjectileBreak" ID="{4F9443BE-644E-4DF7-B4AA-109D65CD2A9A}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{50CB8A8E-32ED-46A8-B4F0-5AD08AB29714}" ShortID="993273772">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="13"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.25"/>
+										<Property Name="Pitch" Type="int32" Value="-2400"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="EnemyProjectileBeam" ID="{7F8EEE5E-9EBB-45E5-969E-33AF90805FED}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{AB5F0C13-F24B-45BF-98DA-833932F08B36}" ShortID="892509122">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="EnemyProjectileBeam" ID="{7F8EEE5E-9EBB-45E5-969E-33AF90805FED}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_EnemyProjectileBeam" ID="{FE351B22-CEDB-42DC-A8D7-D2B4A61DEBC2}">
+							<ChildrenList>
+								<Action Name="" ID="{3B736CAA-D741-4614-8429-4ED8A6F5133C}" ShortID="503894398">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="18"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="EnemyProjectileBeam" ID="{7F8EEE5E-9EBB-45E5-969E-33AF90805FED}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{5E1E9420-F271-411E-8FA7-0E35A68842A1}" ShortID="289936373">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="EnemyProjectileBeam" ID="{7F8EEE5E-9EBB-45E5-969E-33AF90805FED}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_EnemyProjectileHitEnviro" ID="{69D3EB20-2FA0-4067-834A-B617223CB932}">
+							<ChildrenList>
+								<Action Name="" ID="{0BC53CEA-611E-4D24-BF53-C4F7D446BE9B}" ShortID="102223311">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ProjectileHitEnviro" ID="{79F21255-4984-4F4F-88A6-7F4CA4B7EF4D}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_EnemyProjectileHitPlayer" ID="{76F409BB-41EF-4442-ACE9-324E11203313}">
+							<ChildrenList>
+								<Action Name="" ID="{642BFBF2-A6F5-4801-97D5-D2B1F47097DC}" ShortID="529974629">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="player hit projectile projectile" ID="{74DDFDB6-A542-4DBE-A4F1-9D1DA41E27E0}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -910,6 +1013,58 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{FB6DABBA-6664-4B72-AEDF-67932128D17F}" ShortID="790377435">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="hub" ID="{4DFDDD50-2F7C-4B35-9CE7-DCB54EFBAA5A}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{7FCCEA8A-0405-4F0F-966C-3092F7E91B24}" ShortID="516249248">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="results" ID="{B8071DE9-7CE2-4CAD-BB81-E4351BDCBE5B}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_MusHub" ID="{90C8B7F9-266C-4DF5-BEC5-1D17E4A5FC1A}">
+							<ChildrenList>
+								<Action Name="" ID="{D50E1E29-8098-4572-BE21-D48EB2559B61}" ShortID="301393125">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="hub" ID="{4DFDDD50-2F7C-4B35-9CE7-DCB54EFBAA5A}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_MusResults" ID="{94377A01-2A74-41E4-9FD0-F00C26A9984A}">
+							<ChildrenList>
+								<Action Name="" ID="{97D0B26D-0617-4ED2-A600-7D38B1646E92}" ShortID="718772638">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="results" ID="{B8071DE9-7CE2-4CAD-BB81-E4351BDCBE5B}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 					</ChildrenList>
@@ -934,7 +1089,8 @@
 								</Action>
 								<Action Name="" ID="{FE42AE93-6040-404A-97FA-80642AAC78B4}" ShortID="53453071">
 									<PropertyList>
-										<Property Name="FadeTime" Type="Real64" Value="3"/>
+										<Property Name="FadeInCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="5"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">

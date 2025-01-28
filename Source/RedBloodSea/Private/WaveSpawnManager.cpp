@@ -112,13 +112,14 @@ void AWaveSpawnManager::WaveEnd()
 	SpawnQueue.Empty();
 	SetActorTickEnabled(true);
 	ClearAliveDwellers(false);
+	dwellerLinkSU->ResetLink();
 	if(Waves[CurrentWave].bTimeLimit)
 	{
 		GetWorld()->GetTimerManager().ClearTimer(CurrentWaveTimer);
 	}
-	CurrentWave++;
-	if(Waves.Num() > CurrentWave)
+	if(Waves.Num() > CurrentWave+1)
 	{
+		CurrentWave++;
 		WavePrepare();
 		OnWaveSuccess.Broadcast();
 		dwellerLinkSU->ResetLink();
@@ -183,7 +184,7 @@ void AWaveSpawnManager::SpawnDweller(FTransform Transform, FDwellerProfile Type)
 
 		newDweller->InitState = Type.State;
 
-		newDweller->FinishSpawning(Transform);
+		//newDweller->FinishSpawning(Transform);
 
 		UPossessTarget* PossessTarget = newDweller->GetComponentByClass<UPossessTarget>();
 		PossessTarget->OnLinked.AddUniqueDynamic(this,&AWaveSpawnManager::OnDwellerLinked);
@@ -233,11 +234,9 @@ void AWaveSpawnManager::OnDwellerDeath(AActor* DwellerActor)
 		AliveDwellers.Remove(Dweller);
 		Waves[CurrentWave].DwellerKilled++;
 	}
-	if(CheckObjectives())
+	if(CheckObjectives() && Waves[CurrentWave].Type != EWaveType::CHECKPOINT)
 	{
 		WaveEnd();
-		OnWaveSuccess.Broadcast();
-		dwellerLinkSU->ResetLink();
 	}
 }
 
@@ -249,11 +248,9 @@ void AWaveSpawnManager::OnDwellerLinked(AActor* Actor)
 		AliveDwellers.Remove(Dweller);
 		Waves[CurrentWave].DwellerLinked++;
 	}
-	if(CheckObjectives())
+	if(CheckObjectives() && Waves[CurrentWave].Type != EWaveType::CHECKPOINT)
 	{
 		WaveEnd();
-		OnWaveSuccess.Broadcast();
-		dwellerLinkSU->ResetLink();
 	}
 
 }

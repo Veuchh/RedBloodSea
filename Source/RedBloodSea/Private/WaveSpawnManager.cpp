@@ -4,6 +4,7 @@
 #include "WaveSpawnManager.h"
 
 #include "PlayerData.h"
+#include "Kismet/GameplayStatics.h"
 #include "Subsystems/UnrealEditorSubsystem.h"
 
 
@@ -19,6 +20,8 @@ AWaveSpawnManager::AWaveSpawnManager()
 void AWaveSpawnManager::BeginPlay()
 {
 	Super::BeginPlay();
+	
+	dwellerLinkSU = UGameplayStatics::GetGameInstance(GetWorld())->GetSubsystem<UDwellerLinkSubsystem>();
 	
 	CurrentWave = 0;
 	WavePrepare();
@@ -114,6 +117,7 @@ void AWaveSpawnManager::WaveEnd()
 	{
 		WavePrepare();
 		OnWaveSuccess.Broadcast();
+		dwellerLinkSU->ResetLink();
 	} else
 	{
 		OnLevelEnd.Broadcast();
@@ -220,6 +224,7 @@ void AWaveSpawnManager::OnDwellerDeath(AActor* DwellerActor)
 	{
 		WaveEnd();
 		OnWaveSuccess.Broadcast();
+		dwellerLinkSU->ResetLink();
 	}
 }
 
@@ -235,6 +240,7 @@ void AWaveSpawnManager::OnDwellerLinked(AActor* Actor)
 	{
 		WaveEnd();
 		OnWaveSuccess.Broadcast();
+		dwellerLinkSU->ResetLink();
 	}
 
 }

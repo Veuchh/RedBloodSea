@@ -57,6 +57,11 @@ struct FWave
 	int DwellerKilled;
 	UPROPERTY(VisibleAnywhere)
 	int DwellerLinked;
+
+	UPROPERTY(EditAnywhere)
+	TMap<TObjectPtr<AActor>,bool> GatingBefore;
+	UPROPERTY(EditAnywhere)
+	TMap<TObjectPtr<AActor>,bool> GatingDurring;
 	
 	UPROPERTY(VisibleAnywhere)
 	bool bWaveCleared = false;

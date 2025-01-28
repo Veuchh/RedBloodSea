@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{1D2A39F0-30EC-4374-B60C-7E5FD97B8C24}",
     "Language": "SFX",
-    "Hash": "{477C24F3-308E-4580-9C7D-705E119A7CB2}",
+    "Hash": "{C5F02D11-70A1-62AA-DA79-C5C2A2FA90BD}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\RBS_MAIN_SoundBank",
     "ShortName": "RBS_MAIN_SoundBank",
     "Path": "RBS_MAIN_SoundBank.bnk",
@@ -6163,6 +6163,6 @@
     ]
    }
   ],
-  "FileHash": "{451355BD-57B5-E28C-D0BB-B9EA9090F8B4}"
+  "FileHash": "{6962C030-1BE9-5439-E623-A9F075791EE3}"
  }
 }

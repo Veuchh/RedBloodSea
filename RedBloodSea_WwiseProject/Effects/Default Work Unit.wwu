@@ -1,6 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{4640899B-4071-49AD-BD7F-E96787417DC9}" SchemaVersion="119">
 	<Effects>
-		<WorkUnit Name="Default Work Unit" ID="{4640899B-4071-49AD-BD7F-E96787417DC9}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{4640899B-4071-49AD-BD7F-E96787417DC9}" PersistMode="Standalone">
+			<ChildrenList>
+				<Effect Name="FootStepConv" ID="{02505EBE-397D-4E53-9D76-BDC4C29BD8A2}" PluginName="Wwise Convolution Reverb" CompanyID="0" PluginID="127" PluginType="3">					<PluginData>
+	<ConvolutionData>
+		<CurveList Version="1">
+			<CurveInfo Name="IRGraphicEQ">
+				<Curve Name="">
+					<PropertyList>
+						<Property Name="Flags" Type="int32" Value="19"/>
+					</PropertyList>
+					<PointList>
+						<Point>
+							<XPos>20</XPos>
+							<YPos>0</YPos>
+							<Flags>5</Flags>
+						</Point>
+						<Point>
+							<XPos>20000</XPos>
+							<YPos>0</YPos>
+							<Flags>37</Flags>
+						</Point>
+					</PointList>
+				</Curve>
+			</CurveInfo>
+		</CurveList>
+	</ConvolutionData>
+</PluginData>
+				</Effect>
+				<Effect Name="LevelExteriorVerb" ID="{676E2584-A99F-4078-966E-9E899E6C80AA}" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+					<PropertyList>
+						<Property Name="ReverbTime" Type="Real32" Value="0.8"/>
+						<Property Name="WetLevel" Type="Real32" Value="0"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="Level_Verb" ID="{C10E6266-7F54-414E-B6C1-16F6802E7ADB}" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+					<PropertyList>
+						<Property Name="DecayTime" Type="Real32" Value="0.7"/>
+						<Property Name="ERLevel" Type="Real32" Value="-14"/>
+						<Property Name="HFDamping" Type="Real32" Value="0.8"/>
+						<Property Name="Quality" Type="int32" Value="10"/>
+						<Property Name="ReverbLevel" Type="Real32" Value="-28"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="MUTEDDD" ID="{6E7E15D9-D881-4188-BE6A-B3FC66A4B237}" PluginName="Wwise Gain" CompanyID="0" PluginID="139" PluginType="3">
+					<PropertyList>
+						<Property Name="FullBandGain" Type="Real32" Value="-96.3"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="HIGH_FREQUENCY_CUT_FILTER" ID="{10C5B825-780E-4846-B96A-6B4E3FA7DC4C}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+					<PropertyList>
+						<Property Name="FilterTypeBand3" Type="int32" Value="6"/>
+						<Property Name="FrequencyBand3" Type="Real32" Value="20000"/>
+						<Property Name="GainBand3" Type="Real32" Value="-15"/>
+						<Property Name="OnOffBand1" Type="bool" Value="False"/>
+						<Property Name="OnOffBand2" Type="bool" Value="False"/>
+						<Property Name="QFactorBand3" Type="Real32" Value="0.5"/>
+					</PropertyList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{F37A9316-D7C4-45D3-8728-685B14B7A222}" ShortID="285097766">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="FrequencyBand3"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="rtpc_high_freq_filter" ID="{63F62A41-A536-4987-9F56-EDAB260398B7}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{9753D7E1-4BB5-4F57-8A1B-CA9C32E9BC64}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="5"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>2000</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>12000</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+				</Effect>
+			</ChildrenList>
+		</WorkUnit>
 	</Effects>
 </WwiseDocument>

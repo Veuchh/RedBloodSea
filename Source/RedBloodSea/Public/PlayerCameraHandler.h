@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "Camera/CameraComponent.h"
 #include "Components/ActorComponent.h"
+#include "Weakpoint.h"
 #include "PlayerCameraHandler.generated.h"
 
 
@@ -25,12 +26,17 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType,
 	                           FActorComponentTickFunction* ThisTickFunction) override;
-	void SetupPlayerCameraComponent(ACharacter* PlayerCharacter, UCameraComponent* PlayerCameraComponent, USceneComponent* newCameraRollTarget);
+	void SetupPlayerCameraComponent(ACharacter* PlayerCharacter, UCameraComponent* PlayerCameraComponent,
+	                                USceneComponent* newCameraRollTarget);
 	void OnLookInput(FVector2D newLookInput);
 
 private:
 	void CameraRoll();
 	void CameraFOV();
+	void AimAssist(float deltaTime);
+	AWeakpoint* GetAimAssistTarget();
+
+	APlayerController* playerController;
 	ACharacter* playerCharacter;
 	UCameraComponent* playerCameraComponent;
 	USceneComponent* cameraRollTarget;
@@ -58,6 +64,18 @@ private:
 	/*How fast the FOV will change*/
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Camera")
 	float fovChangeSpeed = 10;
+
+	/*The max distance a weakpoint has to be from the camera in order for the aim assist to kick in*/
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "AimAssist")
+	float aimAssistMaxDistanceFromWeakpoint = 250;
+
+	/*The aim assist strength, or speed at wich it goes toward the target*/
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "AimAssist")
+	float aimAssistStrength = 60;
+
+	/*The max distance of the weakpoint on the screen center before the aim assist kicks in*/
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "AimAssist")
+	float aimAssistMaxDistanceFromScreenCenter = .2f;
 
 	bool isCameraAttachedToPlayer = false;
 

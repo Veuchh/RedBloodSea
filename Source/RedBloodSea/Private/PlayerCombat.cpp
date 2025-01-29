@@ -4,6 +4,7 @@
 #include "PlayerCombat.h"
 
 #include "Dweller.h"
+#include "WaveSpawnManager.h"
 #include "Kismet/GameplayStatics.h"
 
 // Sets default values for this component's properties
@@ -59,7 +60,7 @@ void UPlayerCombat::BeginPlay()
 
 	ToggleAttackCollider(BufferableAttack::Slash, false);
 	ToggleAttackCollider(BufferableAttack::Thrust, false);
-	
+
 	PlayerData::MaxAttackBufferCapacity = maxAttackBufferCapacity;
 	PlayerData::SlashAttackStartupDelay = slashAttackStartupDelay;
 	PlayerData::SlashAttackDuration = slashAttackDuration;
@@ -186,16 +187,44 @@ void UPlayerCombat::PlayerDeath()
 	OnPlayerDeath.Broadcast();
 }
 
+void UPlayerCombat::CheckWeakpointAim()
+{
+	FVector TraceStart = camera->GetComponentLocation();
+	FVector TraceEnd = camera->GetComponentLocation() + camera->GetForwardVector() * maxCrosshairAimDistance;
+
+	FHitResult Hit;
+
+	GetWorld()->LineTraceSingleByChannel(Hit, TraceStart, TraceEnd, TraceChannelProperty);
+
+	bool newWeakpointAimingStatus = false;
+
+	if (Hit.bBlockingHit)
+	{
+		if (AWeakpoint* weakpoint = Cast<AWeakpoint>(Hit.GetActor()))
+		{
+			newWeakpointAimingStatus = weakpoint->State == EWeakpointState::Revealed;
+		}
+	}
+
+	if (isAimingWeakpoint != newWeakpointAimingStatus)
+	{
+		OnNewWeakPointAimStatus.Broadcast(newWeakpointAimingStatus);
+		isAimingWeakpoint = newWeakpointAimingStatus;
+	}
+}
+
 
 void UPlayerCombat::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
+	CheckWeakpointAim();
+
 	if (PlayerData::IsGodModeEnabled)
 	{
-		GEngine->AddOnScreenDebugMessage(-1,0,FColor::Red, "GOD MODE ON");
+		GEngine->AddOnScreenDebugMessage(-1, 0, FColor::Red, "GOD MODE ON");
 	}
-	
+
 	if (PlayerData::CurrentAttack != BufferableAttack::None)
 	{
 		OngoingAttackLogic();
@@ -212,6 +241,7 @@ void UPlayerCombat::TryConsumeAttackBuffer()
 	if (PlayerData::AttackBuffer.Num() <= 0)
 		return;
 
+	wasWeakpointHitThisAttack = false;
 	PlayerData::CurrentAttackState = PlayerAttackState::Startup;
 	PlayerData::CurrentAttack = PlayerData::AttackBuffer[0];
 	PlayerData::AttackBuffer.RemoveAt(0);
@@ -229,7 +259,6 @@ void UPlayerCombat::OngoingAttackLogic()
 		{
 			PlayerData::CurrentAttackState = PlayerAttackState::Attacking;
 			ToggleAttackCollider(PlayerData::CurrentAttack, true);
-			wasWeakpointHitThisAttack = false;
 			return;
 		}
 		break;
@@ -278,8 +307,8 @@ void UPlayerCombat::TryAddAttackToBuffer(BufferableAttack attackToAdd)
 		return;
 
 	if (PlayerData::AttackBuffer.Num() == 0)
-	{	
-	PlayerData::AttackBuffer.Add(attackToAdd);
+	{
+		PlayerData::AttackBuffer.Add(attackToAdd);
 	}
 	else
 	{
@@ -304,15 +333,17 @@ void UPlayerCombat::OnGodModeToggle()
 	PlayerData::IsGodModeEnabled = !PlayerData::IsGodModeEnabled;
 }
 
-void UPlayerCombat::DamagePlayer(int damageAmount)
+void UPlayerCombat::DamagePlayer(int damageAmount, AActor* damageSource)
 {
-	if (PlayerData::IsGodModeEnabled)
+	if (PlayerData::IsGodModeEnabled
+		|| PlayerData::LastHitTime + recoveryTimeDuration >= UGameplayStatics::GetRealTimeSeconds(GetWorld()))
 	{
 		return;
 	}
-	
+
 	PlayerData::CurrentHPAmount -= damageAmount;
-	OnPlayerHit.Broadcast(PlayerData::CurrentHPAmount);
+	OnPlayerHit.Broadcast(PlayerData::CurrentHPAmount, damageSource);
+	recoveryTimeDuration = UGameplayStatics::GetRealTimeSeconds(GetWorld());
 
 	if (PlayerData::CurrentHPAmount > 0)
 	{
@@ -328,4 +359,9 @@ void UPlayerCombat::DamagePlayer(int damageAmount)
 	{
 		PlayerDeath();
 	}
+}
+
+void UPlayerCombat::SetupPlayerCombatComponent(UCameraComponent* CameraComponent)
+{
+	camera = CameraComponent;
 }

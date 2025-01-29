@@ -19,6 +19,12 @@ DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 //////////////////////////////////////////////////////////////////////////
 // ARedBloodSeaCharacter
 
+void ARedBloodSeaCharacter::K2_IsTearingDown(UObject* caller, bool& isTearingDown)
+{
+	isTearingDown = caller->GetWorld()->bIsTearingDown;
+}
+
+
 ARedBloodSeaCharacter::ARedBloodSeaCharacter()
 {
 	// Set size for collision capsule
@@ -44,6 +50,8 @@ void ARedBloodSeaCharacter::BeginPlay()
 	
 	UPlayerPossess* playerPossess = this->GetComponentByClass<UPlayerPossess>();
 	playerPossess->SetupPlayerPossessComponent(this, FirstPersonCameraComponent);
+
+	this->GetComponentByClass<UPlayerCombat>()->SetupPlayerCombatComponent(FirstPersonCameraComponent);
 }
 
 void ARedBloodSeaCharacter::Tick(float deltaTime)

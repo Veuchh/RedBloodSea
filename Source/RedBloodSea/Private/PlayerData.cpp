@@ -11,6 +11,7 @@ BufferableAttack PlayerData::CurrentAttack = BufferableAttack::None;
 TArray<BufferableAttack> PlayerData::AttackBuffer = TArray<BufferableAttack>();
 PlayerAttackState PlayerData::CurrentAttackState = PlayerAttackState::None;
 float PlayerData::AttackStartTime = 0;
+float PlayerData::LastHitTime = 0;
 float PlayerData::NextAllowedInputBufferTime = 0;
 PlayerPossessState PlayerData::CurrentPossessState = PlayerPossessState::None;
 float PlayerData::StartCameraMovementTime = 0;
@@ -48,6 +49,7 @@ void PlayerData::ResetData()
 	AttackBuffer = TArray<BufferableAttack>();
 	CurrentAttackState = PlayerAttackState::None;
 	AttackStartTime = 0;
+	LastHitTime = 0;
 	NextAllowedInputBufferTime = 0;
 	CurrentPossessState = PlayerPossessState::None;
 	StartCameraMovementTime = 0;

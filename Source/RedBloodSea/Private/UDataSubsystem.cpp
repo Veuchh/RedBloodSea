@@ -40,7 +40,7 @@ void UUDataSubsystem::StopLogs()
 {
 	FDateTime CurrentTime = FDateTime::Now();
 	FTimespan SessionLength = CurrentTime - LogStart;
-	FString FolderPath = TEXT("C:\\Users\\ELE64f86f441b141\\PlaytestLogs");
+	FString FolderPath = FString(*FPaths::ProjectDir());
 	FString FileName = LogStart.ToFormattedString(TEXT("%Y_%m_%d_%H_%M_%S"))+GetWorld()->GetMapName();
 	if(ExportLogs(FolderPath,FileName))
 	{

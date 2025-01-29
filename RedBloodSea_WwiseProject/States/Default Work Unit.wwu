@@ -12,12 +12,14 @@
 					</ChildrenList>
 				</StateGroup>
 				<StateGroup Name="state_combat" ID="{E2ED0219-9E42-4468-B342-0147362BCCBB}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="2.5"/>
+					</PropertyList>
 					<ChildrenList>
 						<State Name="None" ID="{E50472C8-63C0-46CA-8249-305F3BF374E9}"/>
 						<State Name="combat" ID="{76879D96-6B91-483E-85DC-B7B10E438F7F}"/>
-						<State Name="nocombat" ID="{AAB602C5-F1F4-4844-B273-85D5A38E9869}"/>
-						<State Name="combat_pause" ID="{9BFC024D-B53E-4B56-9581-972C69A27B4F}"/>
-						<State Name="combat_end" ID="{20C46DC0-57AA-4780-A143-614081F377B0}"/>
+						<State Name="intro" ID="{AAB602C5-F1F4-4844-B273-85D5A38E9869}"/>
+						<State Name="betweenwave" ID="{FF2C5CA1-53C4-423E-AF83-8785851A7F1B}"/>
 					</ChildrenList>
 				</StateGroup>
 				<StateGroup Name="state_player" ID="{D4DB4710-70CC-4DF7-A9D1-0E3F26193BCC}">

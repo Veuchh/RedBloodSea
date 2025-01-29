@@ -87,6 +87,8 @@ void AWaveSpawnManager::WaveStart()
 	SetActorTickEnabled(true);
 	ClearAliveDwellers(false);
 	QueueWave(CurrentWave);
+	Waves[CurrentWave].StartTime = FDateTime::Now();
+	OnUpdateObjective.Broadcast(Waves[CurrentWave]);
 	if(Waves[CurrentWave].bTimeLimit)
 	{
 		if(Waves[CurrentWave].Type != EWaveType::SURVIVE)
@@ -131,6 +133,7 @@ void AWaveSpawnManager::WaveEnd()
  	bIsActive = false;
 	SpawnQueue.Empty();
 	SetActorTickEnabled(false);
+	Waves[CurrentWave].EndTime = FDateTime::Now();
 	ClearAliveDwellers(false);
 	dwellerLinkSU->ResetLink();
 	if(Waves[CurrentWave].bTimeLimit)
@@ -187,7 +190,7 @@ void AWaveSpawnManager::QueueWave(int WaveNumber)
 void AWaveSpawnManager::SpawnDweller(FTransform Transform, FDwellerProfile Type)
 {
 	Transform.SetLocation(Transform.GetLocation() + FVector(0.,0.,100));
-	ADweller* newDweller = GetWorld()->SpawnActorDeferred<ADweller>(DwellerBP,Transform,nullptr,nullptr,ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn);
+	ADweller* newDweller = GetWorld()->SpawnActorDeferred<ADweller>(DwellerBP,Transform + this->GetTransform(),nullptr,nullptr,ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn);
 	if(newDweller)
 	{
 		AliveDwellers.Add(newDweller);
@@ -251,8 +254,8 @@ void AWaveSpawnManager::OnDwellerDeath(AActor* DwellerActor)
 	ADweller* Dweller = Cast<ADweller>(DwellerActor);
 	if(Dweller)
 	{
-		AliveDwellers.Remove(Dweller);
-		Waves[CurrentWave].DwellerKilled++;
+		if(AliveDwellers.Remove(Dweller) > 0)
+			Waves[CurrentWave].DwellerKilled++;
 	}
 	if(CheckObjectives() && Waves[CurrentWave].Type != EWaveType::CHECKPOINT)
 	{
@@ -265,8 +268,8 @@ void AWaveSpawnManager::OnDwellerLinked(AActor* Actor)
 	ADweller* Dweller = Cast<ADweller>(Actor);
 	if(Dweller)
 	{
-		AliveDwellers.Remove(Dweller);
-		Waves[CurrentWave].DwellerLinked++;
+		if(AliveDwellers.Remove(Dweller) > 0)
+			Waves[CurrentWave].DwellerLinked++;
 	}
 	if(CheckObjectives() && Waves[CurrentWave].Type != EWaveType::CHECKPOINT)
 	{

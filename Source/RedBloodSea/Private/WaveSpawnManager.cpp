@@ -69,6 +69,15 @@ void AWaveSpawnManager::WavePrepare()
 		else
 			WaveStart();
 	}
+	for (auto Gate : Waves[CurrentWave].GatingBefore)
+	{
+		if(IsValid(Gate.Key))
+		{
+			Gate.Key->SetActorHiddenInGame(!Gate.Value);
+
+			Gate.Key->SetActorEnableCollision(Gate.Value);
+		}
+	}
 }
 
 
@@ -103,6 +112,15 @@ void AWaveSpawnManager::WaveStart()
 			WaveEnd();
 		}
 	}
+	for (auto Gate : Waves[CurrentWave].GatingDurring)
+	{
+		if(IsValid(Gate.Key))
+		{
+			Gate.Key->SetActorHiddenInGame(!Gate.Value);
+
+			Gate.Key->SetActorEnableCollision(Gate.Value);
+		}
+	}
 
 	OnWaveStart.Broadcast();
 }
@@ -112,7 +130,7 @@ void AWaveSpawnManager::WaveEnd()
 {
  	bIsActive = false;
 	SpawnQueue.Empty();
-	SetActorTickEnabled(true);
+	SetActorTickEnabled(false);
 	ClearAliveDwellers(false);
 	dwellerLinkSU->ResetLink();
 	if(Waves[CurrentWave].bTimeLimit)
@@ -186,7 +204,6 @@ void AWaveSpawnManager::SpawnDweller(FTransform Transform, FDwellerProfile Type)
 		 	newDweller->Tags.Add("Antagonist");
 		
 		 newDweller->InitState = Type.State;
-		 WeakpointsManager->CreateWeakPoints();
 		newDweller->FinishSpawning(Transform);
 
 		UPossessTarget* PossessTarget = newDweller->GetComponentByClass<UPossessTarget>();

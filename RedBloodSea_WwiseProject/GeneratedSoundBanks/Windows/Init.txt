@@ -46,7 +46,6 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 
 Effect plug-ins	ID	Name	Type				Notes
 	2224135639	Level_Verb	Wwise RoomVerb			
-	2404745364	SFX_METER	Wwise Meter			
 	3626272192	HIGH_FREQUENCY_CUT_FILTER	Wwise Parametric EQ			
 
 Audio Devices	ID	Name	Type				Notes

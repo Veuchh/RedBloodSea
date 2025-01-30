@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="2890283282" Type="User" GUID="{1D2A39F0-30EC-4374-B60C-7E5FD97B8C24}" Language="SFX" Hash="{02687706-6363-008B-7080-7366EAB2CBCD}">
+		<SoundBank Id="2890283282" Type="User" GUID="{1D2A39F0-30EC-4374-B60C-7E5FD97B8C24}" Language="SFX" Hash="{D027CF8F-4CE9-5FA1-799A-89B9C498FF7F}">
 			<ObjectPath>\SoundBanks\Default Work Unit\RBS_MAIN_SoundBank</ObjectPath>
 			<ShortName>RBS_MAIN_SoundBank</ShortName>
 			<Path>RBS_MAIN_SoundBank.bnk</Path>
@@ -147,7 +147,7 @@
 				</File>
 				<File Id="70950327" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>player hit projectile projectile.wav</ShortName>
-					<CachePath>SFX/player hit projectile projectile_FDDF17CE.wem</CachePath>
+					<CachePath>SFX/player hit projectile projectile_E148D108.wem</CachePath>
 				</File>
 				<File Id="71810780" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS GravelWalk 11R.wav</ShortName>
@@ -252,6 +252,10 @@
 					<Path>Media/110976486.wem</Path>
 					<CachePath>SFX/03 RBS_SFX_PlayerFS ConcreteGrittyWalk 03L_EDCD4836.wem</CachePath>
 				</File>
+				<File Id="111965076" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>fleur 05 v2.wav</ShortName>
+					<CachePath>SFX/fleur 05 v2_32A47F31.wem</CachePath>
+				</File>
 				<File Id="112661541" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>game paused - high chaos v1.wav</ShortName>
 					<CachePath>SFX/game paused - high chaos v1_D8A0D580.wem</CachePath>
@@ -340,7 +344,7 @@
 				</File>
 				<File Id="190568369" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Cast.wav</ShortName>
-					<CachePath>SFX/Cast_C5DB3FD5.wem</CachePath>
+					<CachePath>SFX/Cast_705EEEA8.wem</CachePath>
 				</File>
 				<File Id="192813109" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>UI slider v1.wav</ShortName>
@@ -727,6 +731,10 @@
 					<Path>Media/479369182.wem</Path>
 					<CachePath>SFX/11 RBS_SFX_PlayerFS ConcreteGrittyWalk 11R_EDCD4836.wem</CachePath>
 				</File>
+				<File Id="479754115" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>fleur 01 v1 .wav</ShortName>
+					<CachePath>SFX/fleur 01 v1 _EDCD4836.wem</CachePath>
+				</File>
 				<File Id="482326559" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_SlashHitEnviroMat2 03.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_SlashHitEnviroMat2 03_4CBBAC03.wem</CachePath>
@@ -792,6 +800,10 @@
 					<ShortName>RBS_SFX_BasicSlashGeneric 03.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_BasicSlashGeneric 03_BA1B5501.wem</CachePath>
 				</File>
+				<File Id="523623228" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>fleur 03 v1 .wav</ShortName>
+					<CachePath>SFX/fleur 03 v1 _EDCD4836.wem</CachePath>
+				</File>
 				<File Id="526377678" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Voice Designer, Abbi 3.wav</ShortName>
 					<CachePath>SFX/Soundly Voice Designer, Abbi 3_D8A0D580.wem</CachePath>
@@ -827,6 +839,10 @@
 				<File Id="552424575" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_SlashHitGeneric 03.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_SlashHitGeneric 03_5718E4BF.wem</CachePath>
+				</File>
+				<File Id="552445204" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>fleur 04 v2.wav</ShortName>
+					<CachePath>SFX/fleur 04 v2_25CAA524.wem</CachePath>
 				</File>
 				<File Id="553816023" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_HitOnWeakpoint 06.wav</ShortName>
@@ -1037,7 +1053,7 @@
 				</File>
 				<File Id="704646388" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Beam.wav</ShortName>
-					<CachePath>SFX/Beam_D8A0D580.wem</CachePath>
+					<CachePath>SFX/Beam_18EBAE5C.wem</CachePath>
 				</File>
 				<File Id="710212975" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_PossessionSuccessful 03.wav</ShortName>
@@ -1070,6 +1086,10 @@
 				<File Id="716875391" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_Jump 01.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_Jump 01_3B813005.wem</CachePath>
+				</File>
+				<File Id="718695763" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>fleur 06 v2 .wav</ShortName>
+					<CachePath>SFX/fleur 06 v2 _725D82BC.wem</CachePath>
 				</File>
 				<File Id="720617851" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>killing drums between wave 1.wav</ShortName>
@@ -1255,11 +1275,6 @@
 				<File Id="854276192" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_PossessionSuccessful 05.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_PossessionSuccessful 05_EDCD4836.wem</CachePath>
-				</File>
-				<File Id="861514865" Language="SFX" Streaming="true" Location="Loose">
-					<ShortName>Amb LC CONTINUOUS WIND  v1.wav</ShortName>
-					<Path>Media/861514865.wem</Path>
-					<CachePath>SFX/Amb LC CONTINUOUS WIND  v1_D8A0D580.wem</CachePath>
 				</File>
 				<File Id="862584422" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_FsSurface1 SurfacePebbleL2 03.wav</ShortName>
@@ -1477,7 +1492,7 @@
 				</File>
 				<File Id="953102820" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Fire.wav</ShortName>
-					<CachePath>SFX/Fire_287C39E7.wem</CachePath>
+					<CachePath>SFX/Fire_E64C0CB3.wem</CachePath>
 				</File>
 				<File Id="965886494" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS GrassWalk 07L.wav</ShortName>
@@ -1490,7 +1505,7 @@
 				</File>
 				<File Id="973311698" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Flyby.wav</ShortName>
-					<CachePath>SFX/Flyby_2CA78533.wem</CachePath>
+					<CachePath>SFX/Flyby_D12676E8.wem</CachePath>
 				</File>
 				<File Id="973668817" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS ConcreteGrittyRun 12R.wav</ShortName>
@@ -1540,6 +1555,10 @@
 					<Path>Media/991677787.wem</Path>
 					<CachePath>SFX/14 RBS_SFX_PlayerFS ConcreteGrittyWalk 14R_EDCD4836.wem</CachePath>
 				</File>
+				<File Id="991965346" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>continuous wind lc v2-glued.wav</ShortName>
+					<CachePath>SFX/continuous wind lc v2-glued_EDCD4836.wem</CachePath>
+				</File>
 				<File Id="992962217" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS RandLayerMetal 02.wav</ShortName>
 					<Path>Media/992962217.wem</Path>
@@ -1581,6 +1600,10 @@
 					<ShortName>RBS_SFX_PlayerFS FootLiftGravel 02.wav</ShortName>
 					<Path>Media/1010592874.wem</Path>
 					<CachePath>SFX/RBS_SFX_PlayerFS FootLiftGravel 02_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="1016388721" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>fleur 02 v1 .wav</ShortName>
+					<CachePath>SFX/fleur 02 v1 _EDCD4836.wem</CachePath>
 				</File>
 				<File Id="1021372686" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>linking mel between wave 1.wav</ShortName>
@@ -1674,10 +1697,10 @@
 					<MediaRefs>
 						<MediaRef Id="38644957"/>
 						<MediaRef Id="118578734"/>
-						<MediaRef Id="861514865"/>
 						<MediaRef Id="867678358"/>
 						<MediaRef Id="887914440"/>
 						<MediaRef Id="912688267"/>
+						<MediaRef Id="991965346"/>
 						<MediaRef Id="1030014282"/>
 					</MediaRefs>
 				</Event>
@@ -1735,35 +1758,48 @@
 				<Event Id="1824944578" Name="Play_EnemyAttack" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyAttack" GUID="{8757F626-2B77-4AFB-967C-73D10FBBB945}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2396969962" Name="Play_EnemyDamageTaken" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyDamageTaken" GUID="{D429FCF1-2B13-44F7-982A-97C15E351D1F}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3154146856" Name="Play_EnemyDeath" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyDeath" GUID="{CFA6D1F8-F109-42AC-8776-30618640504C}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4196064164" Name="Play_EnemyFreed" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyFreed" GUID="{9BF54B9A-9795-4F59-B5B7-382DCECDEDA0}" MaxAttenuation="1500" DurationType="OneShot" DurationMin="3.7458298" DurationMax="5.0200624">
+					<MediaRefs>
+						<MediaRef Id="111965076"/>
+						<MediaRef Id="479754115"/>
+						<MediaRef Id="523623228"/>
+						<MediaRef Id="552445204"/>
+						<MediaRef Id="718695763"/>
+						<MediaRef Id="1016388721"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="253666666" Name="LevelVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus\LevelVerb" GUID="{4A93D61F-1EC6-4468-809B-AE533F8EC173}"/>
+					</AuxBusRefs>
+				</Event>
 				<Event Id="78855223" Name="Play_EnemyFs" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyFs" GUID="{AAB6E689-5C0A-48AB-9D5C-B38FB8EE6FB9}" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<SwitchContainers/>
 				</Event>
-				<Event Id="3990636594" Name="Play_EnemyProjectileBeam" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyProjectileBeam" GUID="{FE351B22-CEDB-42DC-A8D7-D2B4A61DEBC2}" MaxAttenuation="3000" DurationType="Infinite">
+				<Event Id="3990636594" Name="Play_EnemyProjectileBeam" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyProjectileBeam" GUID="{FE351B22-CEDB-42DC-A8D7-D2B4A61DEBC2}" DurationType="OneShot" DurationMin="2.2386456" DurationMax="2.8205168">
 					<MediaRefs>
 						<MediaRef Id="704646388"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="4012547228" Name="Play_EnemyProjectileBreak" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyProjectileBreak" GUID="{6EEDA18E-B07A-4998-B8CD-01CC1C25ADB5}" MaxAttenuation="3000" DurationType="OneShot" DurationMin="1.532304" DurationMax="1.9305822">
+				<Event Id="4012547228" Name="Play_EnemyProjectileBreak" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyProjectileBreak" GUID="{6EEDA18E-B07A-4998-B8CD-01CC1C25ADB5}" DurationType="OneShot" DurationMin="1.532304" DurationMax="1.9305822">
 					<MediaRefs>
 						<MediaRef Id="813693602"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2475708390" Name="Play_EnemyProjectileCast" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyProjectileCast" GUID="{83E9AC1D-8C91-49FA-A01A-365107871AAC}" MaxAttenuation="3000" DurationType="OneShot" DurationMin="1.5120656" DurationMax="1.6972363">
+				<Event Id="2475708390" Name="Play_EnemyProjectileCast" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyProjectileCast" GUID="{83E9AC1D-8C91-49FA-A01A-365107871AAC}" DurationType="OneShot" DurationMin="1.5120656" DurationMax="1.6972363">
 					<MediaRefs>
 						<MediaRef Id="190568369"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3015606455" Name="Play_EnemyProjectileFire" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyProjectileFire" GUID="{C953855A-9CA6-48E1-8869-F6A38CCD7945}" MaxAttenuation="3000" DurationType="OneShot" DurationMin="1.261047" DurationMax="1.4569541">
+				<Event Id="3015606455" Name="Play_EnemyProjectileFire" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyProjectileFire" GUID="{C953855A-9CA6-48E1-8869-F6A38CCD7945}" DurationType="OneShot" DurationMin="1.261047" DurationMax="1.4569541">
 					<MediaRefs>
 						<MediaRef Id="953102820"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1196584277" Name="Play_EnemyProjectileFlyby" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyProjectileFlyby" GUID="{4B060C13-B121-4F9D-929D-ECAB732B6779}" MaxAttenuation="3000" DurationType="OneShot" DurationMin="1.3844577" DurationMax="2.466823">
+				<Event Id="1196584277" Name="Play_EnemyProjectileFlyby" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyProjectileFlyby" GUID="{4B060C13-B121-4F9D-929D-ECAB732B6779}" DurationType="OneShot" DurationMin="1.3844577" DurationMax="2.466823">
 					<MediaRefs>
 						<MediaRef Id="973311698"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3428801225" Name="Play_EnemyProjectileHitEnviro" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyProjectileHitEnviro" GUID="{69D3EB20-2FA0-4067-834A-B617223CB932}" MaxAttenuation="3000" DurationType="OneShot" DurationMin="0.78902125" DurationMax="1.0250002">
+				<Event Id="3428801225" Name="Play_EnemyProjectileHitEnviro" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyProjectileHitEnviro" GUID="{69D3EB20-2FA0-4067-834A-B617223CB932}" DurationType="OneShot" DurationMin="0.78902125" DurationMax="1.0250002">
 					<MediaRefs>
 						<MediaRef Id="54054381"/>
 						<MediaRef Id="99219889"/>
@@ -2623,6 +2659,7 @@
 						<MediaRef Id="282353159"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3047770368" Name="Reset_EnemyFreedSEQ" ObjectPath="\Events\Default Work Unit\Ai Behavior\Reset_EnemyFreedSEQ" GUID="{E63533DE-0823-47D1-BEC9-A2C25FB28428}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="580129893" Name="Resume_MusCore" ObjectPath="\Events\Default Work Unit\Adaptative Music\Resume_MusCore" GUID="{312DFE6E-D89E-4186-B947-9999017D7BF5}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3602533990" Name="Resume_MusPaused" ObjectPath="\Events\Default Work Unit\Adaptative Music\Resume_MusPaused" GUID="{528F54F3-B6C9-4C57-A3A9-6C072ECA34D2}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="434120470" Name="SetCombatBetweenWave" ObjectPath="\Events\Default Work Unit\Z_DeprecatedEvents\Debug\SetCombatBetweenWave" GUID="{F53F7ABE-2C88-4E70-A4DA-3F410D056ED9}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
@@ -2657,7 +2694,6 @@
 				<GameParameter Id="765516766" Name="rtpc_player_airspeed" ObjectPath="\Game Parameters\Default Work Unit\rtpc_player_airspeed" GUID="{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}"/>
 				<GameParameter Id="848976592" Name="rtpc_mainmenumusicpitch" ObjectPath="\Game Parameters\Default Work Unit\rtpc_mainmenumusicpitch" GUID="{ED4A7616-4338-46E2-9ED1-5758709ACDDE}"/>
 				<GameParameter Id="876333639" Name="rtpc_tapestop" ObjectPath="\Game Parameters\Default Work Unit\rtpc_tapestop" GUID="{34AB8051-BDEC-4FCF-A5A6-D129BA29D38F}"/>
-				<GameParameter Id="1010956302" Name="rtpc_builtin_distance" ObjectPath="\Game Parameters\Default Work Unit\rtpc_builtin_distance" GUID="{51E739EC-97B4-4E4C-A4B4-45C5A6AEF050}"/>
 				<GameParameter Id="1410332996" Name="rtpc_settings_slider" ObjectPath="\Game Parameters\Default Work Unit\rtpc_settings_slider" GUID="{CF91B134-4D3D-4381-A066-5A720C4CB494}"/>
 				<GameParameter Id="2570586536" Name="rtpc_landing_force" ObjectPath="\Game Parameters\Default Work Unit\rtpc_landing_force" GUID="{07DB1610-4113-4F81-A7B4-0C953E645162}"/>
 				<GameParameter Id="2690476865" Name="rtpc_player_walkspeed" ObjectPath="\Game Parameters\Default Work Unit\rtpc_player_walkspeed" GUID="{6437691A-43C2-473B-A671-C59F1A9E957B}"/>
@@ -2750,5 +2786,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{398381E6-CBA0-0B47-ED8D-A9483B928F90}</FileHash>
+	<FileHash>{D2B45FFF-7219-EFFF-DD88-BCE50EABF67A}</FileHash>
 </SoundBanksInfo>

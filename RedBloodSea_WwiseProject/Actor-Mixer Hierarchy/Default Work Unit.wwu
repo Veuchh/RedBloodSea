@@ -3359,7 +3359,7 @@
 									<PropertyList>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>-3</Value>
+												<Value>-8</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -3406,9 +3406,6 @@
 												</Property>
 											</PropertyList>
 											<ReferenceList>
-												<Reference Name="Attenuation">
-													<ObjectRef Name="Projectile Cast" ID="{E985830E-5D23-44E6-BD20-EE9E867A297D}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
-												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
 												</Reference>
@@ -3471,9 +3468,6 @@
 												</Property>
 											</PropertyList>
 											<ReferenceList>
-												<Reference Name="Attenuation">
-													<ObjectRef Name="Projectile Cast" ID="{E985830E-5D23-44E6-BD20-EE9E867A297D}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
-												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
 												</Reference>
@@ -3537,9 +3531,6 @@
 												</Property>
 											</PropertyList>
 											<ReferenceList>
-												<Reference Name="Attenuation">
-													<ObjectRef Name="Projectile Cast" ID="{E985830E-5D23-44E6-BD20-EE9E867A297D}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
-												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
 												</Reference>
@@ -3587,7 +3578,6 @@
 														</ModifierInfo>
 													</ModifierList>
 												</Property>
-												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 												<Property Name="MakeUpGain" Type="Real64">
 													<ValueList>
 														<Value>-5</Value>
@@ -3612,9 +3602,6 @@
 												</Property>
 											</PropertyList>
 											<ReferenceList>
-												<Reference Name="Attenuation">
-													<ObjectRef Name="Projectile Beam" ID="{C471AAF9-3575-40DB-A65E-60A581EA8C53}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
-												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
 												</Reference>
@@ -3624,6 +3611,11 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Beam" ID="{B8C42A80-0386-47C7-8F21-8B4C64F7FE35}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="3.92028756168113"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="3.92028756168113"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Beam.wav</AudioFile>
 													<MediaIDList>
@@ -3631,46 +3623,6 @@
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
-											<ObjectLists>
-												<ObjectList Name="RTPC">
-													<Reference>
-														<Local>
-															<RTPC Name="" ID="{CFA61BB2-9412-4603-B26E-48018A2AA2E5}" ShortID="289311315">
-																<PropertyList>
-																	<Property Name="PropertyName" Type="string" Value="Pitch"/>
-																</PropertyList>
-																<ReferenceList>
-																	<Reference Name="ControlInput">
-																		<ObjectRef Name="rtpc_builtin_distance" ID="{51E739EC-97B4-4E4C-A4B4-45C5A6AEF050}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
-																	</Reference>
-																	<Reference Name="Curve">
-																		<Custom>
-																			<Curve Name="" ID="{9E23A4A6-2F62-41F8-8754-02F0A6C482D3}">
-																				<PropertyList>
-																					<Property Name="Flags" Type="int32" Value="65537"/>
-																				</PropertyList>
-																				<PointList>
-																					<Point>
-																						<XPos>0</XPos>
-																						<YPos>0</YPos>
-																						<Flags>5</Flags>
-																						<SegmentShape>Exp3</SegmentShape>
-																					</Point>
-																					<Point>
-																						<XPos>1000</XPos>
-																						<YPos>-47</YPos>
-																						<Flags>37</Flags>
-																					</Point>
-																				</PointList>
-																			</Curve>
-																		</Custom>
-																	</Reference>
-																</ReferenceList>
-															</RTPC>
-														</Local>
-													</Reference>
-												</ObjectList>
-											</ObjectLists>
 											<ActiveSourceList>
 												<ActiveSource Name="Beam" ID="{B8C42A80-0386-47C7-8F21-8B4C64F7FE35}" Platform="Linked"/>
 											</ActiveSourceList>
@@ -3709,9 +3661,6 @@
 												</Property>
 											</PropertyList>
 											<ReferenceList>
-												<Reference Name="Attenuation">
-													<ObjectRef Name="Projectile Cast" ID="{E985830E-5D23-44E6-BD20-EE9E867A297D}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
-												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
 												</Reference>
@@ -4953,9 +4902,6 @@
 										</Property>
 									</PropertyList>
 									<ReferenceList>
-										<Reference Name="Attenuation">
-											<ObjectRef Name="Projectile" ID="{52C44907-BB77-4C45-8DE6-77B256D0BC0F}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
-										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
 										</Reference>
@@ -5081,6 +5027,345 @@
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="EnemyFreed" ID="{06E36CE4-8214-4418-9056-9EC3A0FB7BAF}" ShortID="732561608">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Flower" ID="{0DC8020B-ACE4-4F06-B5E0-212E3017CEF5}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="EnemyBus" ID="{BCC1ECC0-BA5A-45C2-A555-9454DB046120}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="LevelVerb" ID="{4A93D61F-1EC6-4468-809B-AE533F8EC173}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="fleur 01 v1" ID="{4CBECE11-96B2-4899-B566-1D882D5CD73E}" ShortID="828620990">
+									<PropertyList>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="fleur 01 v1" ID="{D4F4C74D-5A1B-4EDB-8223-BCAE37B1DD93}">
+											<Language>SFX</Language>
+											<AudioFile>fleur 01 v1 .wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="479754115"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="fleur 01 v1" ID="{D4F4C74D-5A1B-4EDB-8223-BCAE37B1DD93}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="fleur 02 v1" ID="{7C2B8917-FBC6-4701-893F-082E311FF993}" ShortID="694149807">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="fleur 02 v1" ID="{D3C31DDF-9609-49E7-8FCF-F7CE8CC8D614}">
+											<Language>SFX</Language>
+											<AudioFile>fleur 02 v1 .wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1016388721"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="fleur 02 v1" ID="{D3C31DDF-9609-49E7-8FCF-F7CE8CC8D614}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="fleur 03 v1" ID="{F86FAED9-0234-4A62-BFE5-379DF0ACEC0C}" ShortID="164400104">
+									<PropertyList>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="fleur 03 v1" ID="{653B5E66-2FAD-4D1E-B5A8-DEDC1BF93C42}">
+											<Language>SFX</Language>
+											<AudioFile>fleur 03 v1 .wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="523623228"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="fleur 03 v1" ID="{653B5E66-2FAD-4D1E-B5A8-DEDC1BF93C42}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="fleur 04 v1" ID="{4724D7E4-E230-47F0-9DE4-43C54112A7AD}" ShortID="713251375">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="fleur 04 v1" ID="{935F52AF-B80F-40FE-AD4D-3CCD322A3A27}">
+											<Language>SFX</Language>
+											<AudioFile>fleur 04 v1 .wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="351942325"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="fleur 04 v1" ID="{935F52AF-B80F-40FE-AD4D-3CCD322A3A27}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="fleur 05 v1" ID="{2E436BEA-3118-4E03-82E2-6D0B4B75AFDB}" ShortID="167070451">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="fleur 05 v1" ID="{1F57DE80-0EE7-469B-B008-A2FAC614D52E}">
+											<Language>SFX</Language>
+											<AudioFile>fleur 05 v1 .wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="464482500"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="fleur 05 v1" ID="{1F57DE80-0EE7-469B-B008-A2FAC614D52E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="fleur 06 v1" ID="{FA50975B-9FC2-48EC-8FFB-1BBDAF92B9B1}" ShortID="120535147">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="fleur 06 v1" ID="{A1DB5CC9-1812-4F29-B3DA-11A305F98648}">
+											<Language>SFX</Language>
+											<AudioFile>fleur 06 v1 .wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="660138035"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="fleur 06 v1" ID="{A1DB5CC9-1812-4F29-B3DA-11A305F98648}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="fleur 04 v2" ID="{3AB85296-8517-4B79-AD80-74679E19AD70}" ShortID="678534457">
+									<PropertyList>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="fleur 04 v2" ID="{505D8281-1D8B-493E-BC54-98C9C89521C2}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="3.82861068168433"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="4.23364517078916"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>fleur 04 v2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="552445204"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="fleur 04 v2" ID="{505D8281-1D8B-493E-BC54-98C9C89521C2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="fleur 05 v2" ID="{89BC3CD1-DCA4-4575-AD16-3BBBC40EF38B}" ShortID="709327206">
+									<PropertyList>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="fleur 05 v2" ID="{78F890CB-0027-4224-A738-2FBE6BE53BFA}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="3.46201012220259"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="3.80791548881036"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>fleur 05 v2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="111965076"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="fleur 05 v2" ID="{78F890CB-0027-4224-A738-2FBE6BE53BFA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="fleur 06 v2" ID="{14D90704-4703-499A-9934-FDC3A7B2170F}" ShortID="294781682">
+									<PropertyList>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="fleur 06 v2" ID="{27219933-FA09-4281-9AFF-3B154195E3CB}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="3.74582991018846"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="3.74582991018846"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>fleur 06 v2 .wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="718695763"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="fleur 06 v2" ID="{27219933-FA09-4281-9AFF-3B154195E3CB}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Playlist">
+									<Reference>
+										<ObjectRef Name="fleur 01 v1" ID="{4CBECE11-96B2-4899-B566-1D882D5CD73E}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="fleur 02 v1" ID="{7C2B8917-FBC6-4701-893F-082E311FF993}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="fleur 03 v1" ID="{F86FAED9-0234-4A62-BFE5-379DF0ACEC0C}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="fleur 04 v2" ID="{3AB85296-8517-4B79-AD80-74679E19AD70}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="fleur 05 v2" ID="{89BC3CD1-DCA4-4575-AD16-3BBBC40EF38B}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="fleur 06 v2" ID="{14D90704-4703-499A-9934-FDC3A7B2170F}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
 						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
@@ -6442,7 +6727,7 @@
 								<Property Name="BlendBehavior" Type="int16" Value="1"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>1</Value>
+										<Value>-2</Value>
 									</ValueList>
 								</Property>
 								<Property Name="Pitch" Type="int32">
@@ -6863,6 +7148,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ValueList>
+																<Value>3</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
@@ -6935,11 +7225,6 @@
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
 																<Value>True</Value>
-															</ValueList>
-														</Property>
-														<Property Name="MakeUpGain" Type="Real64">
-															<ValueList>
-																<Value>-3</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -7015,6 +7300,11 @@
 												</Sound>
 												<Sound Name="Amb LC CONTINUOUS WIND  v1" ID="{45382CCB-CD6F-44C5-B536-D44D36931042}" ShortID="11356990">
 													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
 														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
@@ -7023,7 +7313,7 @@
 														</Property>
 														<Property Name="MakeUpGain" Type="Real64">
 															<ValueList>
-																<Value>6</Value>
+																<Value>9</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -7112,6 +7402,99 @@
 														<ActiveSource Name="Amb LC CONTINUOUS WIND  v1" ID="{5EC9C95B-FB11-4D80-937F-4CA49DAAAD68}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
+												<Sound Name="continuous wind lc v2-glued" ID="{B499A5D9-2676-49F8-BDCC-17C5A43B2DD9}" ShortID="709653138">
+													<PropertyList>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ValueList>
+																<Value>8</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="continuous wind lc v2-glued" ID="{2A86A2C9-7FBC-4E65-9B57-1A5ED4D21A69}">
+															<Language>SFX</Language>
+															<AudioFile>continuous wind lc v2-glued.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="991965346"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{EFC293BC-69C2-49C3-ACDB-6A1A90E6E104}" ShortID="739883601">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Volume"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_chaos_global" ID="{912B7FBA-E859-424B-9664-D9B8B51FC1BA}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{444330DC-4846-4B47-9402-E61D3BA5CF29}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>-1.29451</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>0.18968</XPos>
+																								<YPos>-0.989699999999999</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>0.35089</XPos>
+																								<YPos>-1.93819999999999</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>0.5005</XPos>
+																								<YPos>-200</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>0.65016</XPos>
+																								<YPos>-200</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>0.80612</XPos>
+																								<YPos>-200</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>-200</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+													<ActiveSourceList>
+														<ActiveSource Name="continuous wind lc v2-glued" ID="{2A86A2C9-7FBC-4E65-9B57-1A5ED4D21A69}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
 											</ChildrenList>
 										</BlendContainer>
 										<Sound Name="Soundly Voice Designer, Bella 1" ID="{62AF45D2-7144-4829-AE17-5C795FA25033}" ShortID="687994088">
@@ -7196,6 +7579,41 @@
 																			<Point>
 																				<XPos>1</XPos>
 																				<YPos>1.77654</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{5DE9A6D9-23BD-4684-BBF4-EC6445A3E577}" ShortID="473751336">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="rtpc_player_airspeed" ID="{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{844B3E1C-939A-4461-ACA2-E9B0D1CB7CE0}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-2.23101</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>1</XPos>
+																				<YPos>2.2896</YPos>
 																				<Flags>37</Flags>
 																			</Point>
 																		</PointList>

@@ -18,7 +18,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{81AF1517-7D84-CDC2-78F9-15C19AA971AF}",
+    "Hash": "{3F049BCA-02C8-6AF6-DB97-6ACA7A583B95}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -31,14 +31,6 @@
        "GUID": "{C10E6266-7F54-414E-B6C1-16F6802E7ADB}",
        "LibName": "Wwise RoomVerb",
        "LibId": "7733251"
-      },
-      {
-       "Id": "2404745364",
-       "Name": "SFX_METER",
-       "ObjectPath": "\\Effects\\Default Work Unit\\SFX_METER",
-       "GUID": "{0927D708-8783-43A9-AD28-D97A0CD1DAAE}",
-       "LibName": "Wwise Meter",
-       "LibId": "8454147"
       },
       {
        "Id": "3626272192",
@@ -73,14 +65,7 @@
       "Id": "393239870",
       "Name": "SFX",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\StereoBus\\SFX",
-      "GUID": "{39250B52-8C88-4C54-B7D3-2C12760A0A9F}",
-      "PluginRefs": {
-       "ShareSets": [
-        {
-         "Id": "2404745364"
-        }
-       ]
-      }
+      "GUID": "{39250B52-8C88-4C54-B7D3-2C12760A0A9F}"
      },
      {
       "Id": "466672200",
@@ -660,7 +645,7 @@
     "Type": "User",
     "GUID": "{1D2A39F0-30EC-4374-B60C-7E5FD97B8C24}",
     "Language": "SFX",
-    "Hash": "{02687706-6363-008B-7080-7366EAB2CBCD}",
+    "Hash": "{D027CF8F-4CE9-5FA1-799A-89B9C498FF7F}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\RBS_MAIN_SoundBank",
     "ShortName": "RBS_MAIN_SoundBank",
     "Path": "RBS_MAIN_SoundBank.bnk",
@@ -930,7 +915,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "player hit projectile projectile.wav",
-      "CachePath": "SFX/player hit projectile projectile_FDDF17CE.wem"
+      "CachePath": "SFX/player hit projectile projectile_E148D108.wem"
      },
      {
       "Id": "71810780",
@@ -1124,6 +1109,14 @@
       "CachePath": "SFX/03 RBS_SFX_PlayerFS ConcreteGrittyWalk 03L_EDCD4836.wem"
      },
      {
+      "Id": "111965076",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "fleur 05 v2.wav",
+      "CachePath": "SFX/fleur 05 v2_32A47F31.wem"
+     },
+     {
       "Id": "112661541",
       "Language": "SFX",
       "Streaming": "false",
@@ -1291,7 +1284,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Cast.wav",
-      "CachePath": "SFX/Cast_C5DB3FD5.wem"
+      "CachePath": "SFX/Cast_705EEEA8.wem"
      },
      {
       "Id": "192813109",
@@ -2015,6 +2008,14 @@
       "CachePath": "SFX/11 RBS_SFX_PlayerFS ConcreteGrittyWalk 11R_EDCD4836.wem"
      },
      {
+      "Id": "479754115",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "fleur 01 v1 .wav",
+      "CachePath": "SFX/fleur 01 v1 _EDCD4836.wem"
+     },
+     {
       "Id": "482326559",
       "Language": "SFX",
       "Streaming": "false",
@@ -2136,6 +2137,14 @@
       "CachePath": "SFX/RBS_SFX_BasicSlashGeneric 03_BA1B5501.wem"
      },
      {
+      "Id": "523623228",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "fleur 03 v1 .wav",
+      "CachePath": "SFX/fleur 03 v1 _EDCD4836.wem"
+     },
+     {
       "Id": "526377678",
       "Language": "SFX",
       "Streaming": "false",
@@ -2202,6 +2211,14 @@
       "Location": "Memory",
       "ShortName": "RBS_SFX_SlashHitGeneric 03.wav",
       "CachePath": "SFX/RBS_SFX_SlashHitGeneric 03_5718E4BF.wem"
+     },
+     {
+      "Id": "552445204",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "fleur 04 v2.wav",
+      "CachePath": "SFX/fleur 04 v2_25CAA524.wem"
      },
      {
       "Id": "553816023",
@@ -2600,7 +2617,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Beam.wav",
-      "CachePath": "SFX/Beam_D8A0D580.wem"
+      "CachePath": "SFX/Beam_18EBAE5C.wem"
      },
      {
       "Id": "710212975",
@@ -2661,6 +2678,14 @@
       "Location": "Memory",
       "ShortName": "RBS_SFX_Jump 01.wav",
       "CachePath": "SFX/RBS_SFX_Jump 01_3B813005.wem"
+     },
+     {
+      "Id": "718695763",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "fleur 06 v2 .wav",
+      "CachePath": "SFX/fleur 06 v2 _725D82BC.wem"
      },
      {
       "Id": "720617851",
@@ -3014,15 +3039,6 @@
       "Location": "Memory",
       "ShortName": "RBS_SFX_PossessionSuccessful 05.wav",
       "CachePath": "SFX/RBS_SFX_PossessionSuccessful 05_EDCD4836.wem"
-     },
-     {
-      "Id": "861514865",
-      "Language": "SFX",
-      "Streaming": "true",
-      "Location": "Loose",
-      "ShortName": "Amb LC CONTINUOUS WIND  v1.wav",
-      "Path": "Media/861514865.wem",
-      "CachePath": "SFX/Amb LC CONTINUOUS WIND  v1_D8A0D580.wem"
      },
      {
       "Id": "862584422",
@@ -3428,7 +3444,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Fire.wav",
-      "CachePath": "SFX/Fire_287C39E7.wem"
+      "CachePath": "SFX/Fire_E64C0CB3.wem"
      },
      {
       "Id": "965886494",
@@ -3453,7 +3469,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Flyby.wav",
-      "CachePath": "SFX/Flyby_2CA78533.wem"
+      "CachePath": "SFX/Flyby_D12676E8.wem"
      },
      {
       "Id": "973668817",
@@ -3544,6 +3560,14 @@
       "CachePath": "SFX/14 RBS_SFX_PlayerFS ConcreteGrittyWalk 14R_EDCD4836.wem"
      },
      {
+      "Id": "991965346",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "continuous wind lc v2-glued.wav",
+      "CachePath": "SFX/continuous wind lc v2-glued_EDCD4836.wem"
+     },
+     {
       "Id": "992962217",
       "Language": "SFX",
       "Streaming": "true",
@@ -3620,6 +3644,14 @@
       "ShortName": "RBS_SFX_PlayerFS FootLiftGravel 02.wav",
       "Path": "Media/1010592874.wem",
       "CachePath": "SFX/RBS_SFX_PlayerFS FootLiftGravel 02_EDCD4836.wem"
+     },
+     {
+      "Id": "1016388721",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "fleur 02 v1 .wav",
+      "CachePath": "SFX/fleur 02 v1 _EDCD4836.wem"
      },
      {
       "Id": "1021372686",
@@ -3842,9 +3874,6 @@
         "Id": "118578734"
        },
        {
-        "Id": "861514865"
-       },
-       {
         "Id": "867678358"
        },
        {
@@ -3852,6 +3881,9 @@
        },
        {
         "Id": "912688267"
+       },
+       {
+        "Id": "991965346"
        },
        {
         "Id": "1030014282"
@@ -4033,6 +4065,44 @@
       "DurationMax": "0"
      },
      {
+      "Id": "4196064164",
+      "Name": "Play_EnemyFreed",
+      "ObjectPath": "\\Events\\Default Work Unit\\Ai Behavior\\Play_EnemyFreed",
+      "GUID": "{9BF54B9A-9795-4F59-B5B7-382DCECDEDA0}",
+      "MaxAttenuation": "1500",
+      "DurationType": "OneShot",
+      "DurationMin": "3.7458298",
+      "DurationMax": "5.0200624",
+      "MediaRefs": [
+       {
+        "Id": "111965076"
+       },
+       {
+        "Id": "479754115"
+       },
+       {
+        "Id": "523623228"
+       },
+       {
+        "Id": "552445204"
+       },
+       {
+        "Id": "718695763"
+       },
+       {
+        "Id": "1016388721"
+       }
+      ],
+      "AuxBusRefs": [
+       {
+        "Id": "253666666",
+        "Name": "LevelVerb",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\StereoBus\\LevelVerb",
+        "GUID": "{4A93D61F-1EC6-4468-809B-AE533F8EC173}"
+       }
+      ]
+     },
+     {
       "Id": "78855223",
       "Name": "Play_EnemyFs",
       "ObjectPath": "\\Events\\Default Work Unit\\Ai Behavior\\Play_EnemyFs",
@@ -4047,8 +4117,9 @@
       "Name": "Play_EnemyProjectileBeam",
       "ObjectPath": "\\Events\\Default Work Unit\\Ai Behavior\\Play_EnemyProjectileBeam",
       "GUID": "{FE351B22-CEDB-42DC-A8D7-D2B4A61DEBC2}",
-      "MaxAttenuation": "3000",
-      "DurationType": "Infinite",
+      "DurationType": "OneShot",
+      "DurationMin": "2.2386456",
+      "DurationMax": "2.8205168",
       "MediaRefs": [
        {
         "Id": "704646388"
@@ -4060,7 +4131,6 @@
       "Name": "Play_EnemyProjectileBreak",
       "ObjectPath": "\\Events\\Default Work Unit\\Ai Behavior\\Play_EnemyProjectileBreak",
       "GUID": "{6EEDA18E-B07A-4998-B8CD-01CC1C25ADB5}",
-      "MaxAttenuation": "3000",
       "DurationType": "OneShot",
       "DurationMin": "1.532304",
       "DurationMax": "1.9305822",
@@ -4075,7 +4145,6 @@
       "Name": "Play_EnemyProjectileCast",
       "ObjectPath": "\\Events\\Default Work Unit\\Ai Behavior\\Play_EnemyProjectileCast",
       "GUID": "{83E9AC1D-8C91-49FA-A01A-365107871AAC}",
-      "MaxAttenuation": "3000",
       "DurationType": "OneShot",
       "DurationMin": "1.5120656",
       "DurationMax": "1.6972363",
@@ -4090,7 +4159,6 @@
       "Name": "Play_EnemyProjectileFire",
       "ObjectPath": "\\Events\\Default Work Unit\\Ai Behavior\\Play_EnemyProjectileFire",
       "GUID": "{C953855A-9CA6-48E1-8869-F6A38CCD7945}",
-      "MaxAttenuation": "3000",
       "DurationType": "OneShot",
       "DurationMin": "1.261047",
       "DurationMax": "1.4569541",
@@ -4105,7 +4173,6 @@
       "Name": "Play_EnemyProjectileFlyby",
       "ObjectPath": "\\Events\\Default Work Unit\\Ai Behavior\\Play_EnemyProjectileFlyby",
       "GUID": "{4B060C13-B121-4F9D-929D-ECAB732B6779}",
-      "MaxAttenuation": "3000",
       "DurationType": "OneShot",
       "DurationMin": "1.3844577",
       "DurationMax": "2.466823",
@@ -4120,7 +4187,6 @@
       "Name": "Play_EnemyProjectileHitEnviro",
       "ObjectPath": "\\Events\\Default Work Unit\\Ai Behavior\\Play_EnemyProjectileHitEnviro",
       "GUID": "{69D3EB20-2FA0-4067-834A-B617223CB932}",
-      "MaxAttenuation": "3000",
       "DurationType": "OneShot",
       "DurationMin": "0.78902125",
       "DurationMax": "1.0250002",
@@ -6430,6 +6496,16 @@
       ]
      },
      {
+      "Id": "3047770368",
+      "Name": "Reset_EnemyFreedSEQ",
+      "ObjectPath": "\\Events\\Default Work Unit\\Ai Behavior\\Reset_EnemyFreedSEQ",
+      "GUID": "{E63533DE-0823-47D1-BEC9-A2C25FB28428}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
       "Id": "580129893",
       "Name": "Resume_MusCore",
       "ObjectPath": "\\Events\\Default Work Unit\\Adaptative Music\\Resume_MusCore",
@@ -6582,12 +6658,6 @@
       "Name": "rtpc_tapestop",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_tapestop",
       "GUID": "{34AB8051-BDEC-4FCF-A5A6-D129BA29D38F}"
-     },
-     {
-      "Id": "1010956302",
-      "Name": "rtpc_builtin_distance",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_builtin_distance",
-      "GUID": "{51E739EC-97B4-4E4C-A4B4-45C5A6AEF050}"
      },
      {
       "Id": "1410332996",
@@ -6930,6 +7000,6 @@
     ]
    }
   ],
-  "FileHash": "{81CAF3A3-4A0E-ADCD-D60E-498514E25947}"
+  "FileHash": "{25ADE0CA-8F56-5FDA-35A6-79E28541C1A6}"
  }
 }

@@ -40,6 +40,7 @@
 						<ObjectRef Name="Play_PlaceholderAMB" ID="{5A95298C-BFC4-4769-BF79-0077A315CC42}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Test_Amb_Loc" ID="{996477E9-0350-479D-873E-517B7C054F15}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_PlayerFs" ID="{0881FF8E-C1F4-47BC-9E49-781365B87A34}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Reset_EnemyFreedSEQ" ID="{E63533DE-0823-47D1-BEC9-A2C25FB28428}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_GroundSlam" ID="{0EA8C7C8-E2B6-47E0-A1A0-5E0263BCD84B}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Pause_MusCore" ID="{A22E48FC-7D13-4807-8C72-799D2693C61B}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_EnemyFs" ID="{AAB6E689-5C0A-48AB-9D5C-B38FB8EE6FB9}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
@@ -66,6 +67,7 @@
 						<ObjectRef Name="SetCombatBetweenWave" ID="{F53F7ABE-2C88-4E70-A4DA-3F410D056ED9}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_OnHover" ID="{FDD740D1-0984-4EA1-9FC5-4D17473BFC69}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Test_Slash" ID="{12124D21-963C-4F2B-AAB5-30919FF2DEE0}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_EnemyFreed" ID="{9BF54B9A-9795-4F59-B5B7-382DCECDEDA0}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_PlayerDeath" ID="{CD3CCEF3-241D-4F69-8512-A342342148B8}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_Amb" ID="{EAB0E7E3-53C1-4F85-BD60-86AE3DF8252E}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_DamageTaken" ID="{988E1E93-8AAF-4F8D-AC32-A444360C9006}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>

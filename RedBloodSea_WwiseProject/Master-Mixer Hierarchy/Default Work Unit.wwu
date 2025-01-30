@@ -80,7 +80,7 @@
 																		<PointList>
 																			<Point>
 																				<XPos>-48</XPos>
-																				<YPos>-0</YPos>
+																				<YPos>0</YPos>
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
@@ -275,7 +275,7 @@
 																		<PointList>
 																			<Point>
 																				<XPos>-48</XPos>
-																				<YPos>-0</YPos>
+																				<YPos>0</YPos>
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
@@ -370,11 +370,7 @@
 											<Reference>
 												<Local>
 													<EffectSlot Name="" ID="{EFBC9C77-CC1D-4E58-811E-C53D56E29F63}" ShortID="187498963">
-														<ReferenceList>
-															<Reference Name="Effect" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
-																<ObjectRef Name="SFX_METER" ID="{0927D708-8783-43A9-AD28-D97A0CD1DAAE}" WorkUnitID="{4640899B-4071-49AD-BD7F-E96787417DC9}"/>
-															</Reference>
-														</ReferenceList>
+														<ReferenceList/>
 													</EffectSlot>
 												</Local>
 											</Reference>

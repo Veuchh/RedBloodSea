@@ -789,6 +789,32 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_EnemyFreed" ID="{9BF54B9A-9795-4F59-B5B7-382DCECDEDA0}">
+							<ChildrenList>
+								<Action Name="" ID="{3444E084-7EA5-4C25-951C-861549B0CD9E}" ShortID="533730208">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="EnemyFreed" ID="{06E36CE4-8214-4418-9056-9EC3A0FB7BAF}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Reset_EnemyFreedSEQ" ID="{E63533DE-0823-47D1-BEC9-A2C25FB28428}">
+							<ChildrenList>
+								<Action Name="" ID="{25184859-AD40-4AFE-9F1A-3A10EF8D33A4}" ShortID="332415061">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="42"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="EnemyFreed" ID="{06E36CE4-8214-4418-9056-9EC3A0FB7BAF}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI Menu" ID="{65AC5B09-4642-4838-A8D3-65AE483D29E7}" ShortID="120706000">

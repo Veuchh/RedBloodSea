@@ -56,17 +56,112 @@
 					</ChildrenList>
 				</SwitchGroup>
 				<SwitchGroup Name="switch_results_music" ID="{F9C3A9D3-A6F7-4890-B2FF-F8C4BF3D2B6B}">
+					<PropertyList>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Switch Name="high_chaos" ID="{B785744B-290E-494F-9AB9-D67CF93D6C32}"/>
 						<Switch Name="low_chaos" ID="{B5E5F26A-DB05-4475-8DC6-02CA8E5B49FE}"/>
 					</ChildrenList>
+					<SwitchOnRTPC>
+						<GameParameterRef Name="rtpc_chaos_no_interpolation" ID="{32A00591-7D0F-46D4-86CC-E57C780551F1}"/>
+						<Curve Name="" ID="{E702F0E3-3636-4B8A-B21D-2A624F79B345}">
+							<PropertyList>
+								<Property Name="Flags" Type="int32" Value="65537"/>
+							</PropertyList>
+							<PointList>
+								<Point>
+									<XPos>0</XPos>
+									<YPos>2</YPos>
+									<Flags>5</Flags>
+								</Point>
+								<Point>
+									<XPos>0.5</XPos>
+									<YPos>1</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>1</XPos>
+									<YPos>1</YPos>
+									<Flags>37</Flags>
+								</Point>
+							</PointList>
+						</Curve>
+					</SwitchOnRTPC>
 				</SwitchGroup>
 				<SwitchGroup Name="high_chaos" ID="{D3363CD5-D143-4007-A982-81C212018783}"/>
 				<SwitchGroup Name="switch_pause_music" ID="{A26C9464-58C4-4C7C-A3B1-A18AE110F6C9}">
+					<PropertyList>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Switch Name="pause_high_chaos" ID="{810D37BC-B114-4941-922B-2D544C1072DB}"/>
 						<Switch Name="pause_low_chaos" ID="{C4E1EB21-98A8-4D5E-BEC8-D86DE3924ECA}"/>
 					</ChildrenList>
+					<SwitchOnRTPC>
+						<GameParameterRef Name="rtpc_chaos_no_interpolation" ID="{32A00591-7D0F-46D4-86CC-E57C780551F1}"/>
+						<Curve Name="" ID="{505712C8-98BF-4F43-AC37-1C9F7CE401E8}">
+							<PropertyList>
+								<Property Name="Flags" Type="int32" Value="65537"/>
+							</PropertyList>
+							<PointList>
+								<Point>
+									<XPos>0</XPos>
+									<YPos>2</YPos>
+									<Flags>5</Flags>
+								</Point>
+								<Point>
+									<XPos>0.5</XPos>
+									<YPos>2</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>0.501</XPos>
+									<YPos>1</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>1</XPos>
+									<YPos>1</YPos>
+									<Flags>37</Flags>
+								</Point>
+							</PointList>
+						</Curve>
+					</SwitchOnRTPC>
+				</SwitchGroup>
+				<SwitchGroup Name="switch_results_screen_confirm" ID="{71AE5EB0-DF22-4877-8447-46CF9695E6C3}">
+					<PropertyList>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="lc" ID="{F6B472FD-C557-43E9-8F52-E8758202397B}"/>
+						<Switch Name="hc" ID="{83AFF7FC-72F4-49E3-B9D0-180763DC4B81}"/>
+					</ChildrenList>
+					<SwitchOnRTPC>
+						<GameParameterRef Name="rtpc_chaos_no_interpolation" ID="{32A00591-7D0F-46D4-86CC-E57C780551F1}"/>
+						<Curve Name="" ID="{91A3276C-EF9E-4ACA-AAE2-FEBB5155077F}">
+							<PropertyList>
+								<Property Name="Flags" Type="int32" Value="65537"/>
+							</PropertyList>
+							<PointList>
+								<Point>
+									<XPos>0</XPos>
+									<YPos>2</YPos>
+									<Flags>5</Flags>
+								</Point>
+								<Point>
+									<XPos>0.5</XPos>
+									<YPos>1</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>1</XPos>
+									<YPos>1</YPos>
+									<Flags>37</Flags>
+								</Point>
+							</PointList>
+						</Curve>
+					</SwitchOnRTPC>
 				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>

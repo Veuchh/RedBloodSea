@@ -2364,7 +2364,7 @@
 									<PropertyList>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>-1</Value>
+												<Value>3</Value>
 											</ValueList>
 										</Property>
 										<Property Name="Pitch" Type="int32">
@@ -2952,7 +2952,19 @@
 							</ChildrenList>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="EnemyDeath" ID="{125D6EAA-9218-4038-8420-F69B6BBAD79F}" ShortID="213811619">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>7</Value>
+									</ValueList>
+								</Property>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Dweller Killed" ID="{F2EDE66D-4BA9-450C-AD1B-43FE5E37A639}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
 								</Reference>
@@ -2961,14 +2973,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="Death" ID="{9BC4411E-56E0-4CCA-8F8C-B7A2CA7F900E}" ShortID="410251809">
-									<PropertyList>
-										<Property Name="Inclusion" Type="bool">
-											<ValueList>
-												<Value>False</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
+								<Sound Name="dweller killed" ID="{FEEC0F67-D255-4770-A744-8645C63DABF0}" ShortID="523655661">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
@@ -2978,19 +2983,95 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="RBS_SFX_AI_Death ph" ID="{2C71DC9B-1A29-43BF-B0AF-E14B3290846A}">
+										<AudioFileSource Name="dweller killed" ID="{E9C7ACBC-5422-4519-A18B-46D947FB52B3}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.520715510895171"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.308449315371025"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.3448781286808"/>
+											</PropertyList>
 											<Language>SFX</Language>
-											<AudioFile>RBS_SFX_AI_Death ph.wav</AudioFile>
+											<AudioFile>dweller killed.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="1061940695"/>
+												<MediaID ID="700689431"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="RBS_SFX_AI_Death ph" ID="{2C71DC9B-1A29-43BF-B0AF-E14B3290846A}" Platform="Linked"/>
+										<ActiveSource Name="dweller killed" ID="{E9C7ACBC-5422-4519-A18B-46D947FB52B3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="dweller killed_01" ID="{DF0D8311-837B-4679-870C-C74938B15108}" ShortID="389041408">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="dweller killed" ID="{1377D6D9-22E3-4E5E-BFA0-022F667CA180}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.172466283863368"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.520715510895171"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="2.29181157979976"/>
+												<Property Name="TrimEnd" Type="Real64" Value="4.18230738368669"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>dweller killed.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="165370641"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="dweller killed" ID="{1377D6D9-22E3-4E5E-BFA0-022F667CA180}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="dweller killed_02" ID="{16D23D38-D451-4B38-A952-747BF1AC8912}" ShortID="398119511">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="dweller killed" ID="{1963F2D4-2E86-4561-91F4-931F982E7C51}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.172466283863368"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.520715510895171"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="4.05627433009423"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>dweller killed.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="983662464"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="dweller killed" ID="{1963F2D4-2E86-4561-91F4-931F982E7C51}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Playlist">
+									<Reference>
+										<ObjectRef Name="dweller killed" ID="{FEEC0F67-D255-4770-A744-8645C63DABF0}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="dweller killed_01" ID="{DF0D8311-837B-4679-870C-C74938B15108}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="dweller killed_02" ID="{16D23D38-D451-4B38-A952-747BF1AC8912}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
 						</RandomSequenceContainer>
 						<BlendContainer Name="EnemySwitchInit" ID="{86C0786D-6BC2-4D3D-9F9B-D49105583B11}" ShortID="856126518">
 							<ReferenceList>
@@ -4941,93 +5022,6 @@
 								</RandomSequenceContainer>
 							</ChildrenList>
 						</Folder>
-						<RandomSequenceContainer Name="WeakpointReveal" ID="{633785F0-9469-4B73-8B63-B49397CCC7F4}" ShortID="421038852">
-							<PropertyList>
-								<Property Name="3DSpatialization" Type="int16" Value="1"/>
-								<Property Name="InitialDelay" Type="Real64">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{6A8F76B9-0F67-47C0-BBCF-F94F8341BE00}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="0.5"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
-								<Property Name="MakeUpGain" Type="Real64">
-									<ValueList>
-										<Value>-4</Value>
-									</ValueList>
-								</Property>
-								<Property Name="MaxSoundPerInstance" Type="int16">
-									<ValueList>
-										<Value>3</Value>
-									</ValueList>
-								</Property>
-								<Property Name="UseMaxSoundPerInstance" Type="bool">
-									<ValueList>
-										<Value>True</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="EnemyBus" ID="{BCC1ECC0-BA5A-45C2-A555-9454DB046120}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<Sound Name="RBS_SFX_WeakpointReveal 1" ID="{DC7B5F33-CA17-42AB-976B-A5850E3A0202}" ShortID="857011005">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="RBS_SFX_WeakpointReveal 1" ID="{2780C3ED-9EDD-434E-9CB9-18C5455E8366}">
-											<Language>SFX</Language>
-											<AudioFile>RBS_SFX_WeakpointReveal 1.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="282353159"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="RBS_SFX_WeakpointReveal 1" ID="{2780C3ED-9EDD-434E-9CB9-18C5455E8366}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="RBS_SFX_WeakpointReveal 2" ID="{7DAB34B6-35C2-494D-AAC2-D73B728DEC36}" ShortID="784992418">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="RBS_SFX_WeakpointReveal 2" ID="{6EBFB5AC-7623-4BEC-AC35-46EAACD07426}">
-											<Language>SFX</Language>
-											<AudioFile>RBS_SFX_WeakpointReveal 2.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="78466956"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="RBS_SFX_WeakpointReveal 2" ID="{6EBFB5AC-7623-4BEC-AC35-46EAACD07426}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-							</ChildrenList>
-						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="EnemyFreed" ID="{06E36CE4-8214-4418-9056-9EC3A0FB7BAF}" ShortID="732561608">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
@@ -5367,6 +5361,794 @@
 								</ObjectList>
 							</ObjectLists>
 						</RandomSequenceContainer>
+						<ActorMixer Name="WeakpointReveal" ID="{14565479-0337-48B3-BE5F-EDA96987585C}" ShortID="1054133034">
+							<PropertyList>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>9</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<BlendContainer Name="Weakpoint Reveal Blend" ID="{47955738-FD50-4C39-871F-C7294B233815}" ShortID="334592356">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="WeakpointReveal" ID="{633785F0-9469-4B73-8B63-B49397CCC7F4}" ShortID="421038852">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+												<Property Name="Highpass" Type="int16">
+													<ValueList>
+														<Value>12</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>0.14</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{6A8F76B9-0F67-47C0-BBCF-F94F8341BE00}">
+																<PropertyList>
+																	<Property Name="Max" Type="Real64" Value="0.3"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{7C578CBD-4214-429B-960D-C73271DAD5B5}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="1"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="OverridePositioning" Type="bool" Value="True"/>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{56356566-2F1F-4AAD-9A3C-EAFB1BA909A1}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="200"/>
+																	<Property Name="Min" Type="Real64" Value="-100"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Weakpoint Reveal" ID="{56BA3323-D178-4B05-8CBA-9194BE88AC6C}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="EnemyBus" ID="{BCC1ECC0-BA5A-45C2-A555-9454DB046120}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="RBS_SFX_WeakpointReveal 1" ID="{DC7B5F33-CA17-42AB-976B-A5850E3A0202}" ShortID="857011005">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="RBS_SFX_WeakpointReveal 1" ID="{2780C3ED-9EDD-434E-9CB9-18C5455E8366}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0943146348645465"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0868687426383981"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>RBS_SFX_WeakpointReveal 1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="282353159"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="RBS_SFX_WeakpointReveal 1" ID="{2780C3ED-9EDD-434E-9CB9-18C5455E8366}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="RBS_SFX_WeakpointReveal 2" ID="{7DAB34B6-35C2-494D-AAC2-D73B728DEC36}" ShortID="784992418">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="RBS_SFX_WeakpointReveal 2" ID="{6EBFB5AC-7623-4BEC-AC35-46EAACD07426}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0860731375147232"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0523189659403219"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>RBS_SFX_WeakpointReveal 2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="78466956"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="RBS_SFX_WeakpointReveal 2" ID="{6EBFB5AC-7623-4BEC-AC35-46EAACD07426}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="WeakpointReveal V2 - stem-glued_01" ID="{AD95B9EB-81D6-4007-B47B-5F1B474863FE}" ShortID="350585630">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="WeakpointReveal V2 - stem-glued" ID="{768A6804-14C5-41C2-92B3-29709A773AB9}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0861046329014527"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="1.6628957229093"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.365944689831174"/>
+																<Property Name="TrimEnd" Type="Real64" Value="3.51952686984688"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>WeakpointReveal V2 - stem-glued.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="937414046"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="WeakpointReveal V2 - stem-glued" ID="{768A6804-14C5-41C2-92B3-29709A773AB9}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="WeakpointReveal V2 - stem-glued_02" ID="{42597643-0A29-4B58-9C95-B30B4570CFF1}" ShortID="500500488">
+													<PropertyList>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ValueList>
+																<Value>2</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="WeakpointReveal V2 - stem-glued" ID="{97965FDB-E692-4AE8-B584-98631179C078}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0861046329014527"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="1.6628957229093"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="5.22547490920691"/>
+																<Property Name="TrimEnd" Type="Real64" Value="8.75038331861013"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>WeakpointReveal V2 - stem-glued.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="669893367"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="WeakpointReveal V2 - stem-glued" ID="{97965FDB-E692-4AE8-B584-98631179C078}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="UIReveal" ID="{3C33EBBB-1157-453D-AB0B-0BA9FA22739C}" ShortID="282507168">
+											<PropertyList>
+												<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
+												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>-9</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{20F068E6-ED15-486C-B017-760CB7EAED8F}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="2"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{2D406960-3A57-441C-988B-CF56794DC6E0}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="100"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="weakpoint ui 2d-glued" ID="{EF6E0A33-B910-4D6E-85E7-17D7D806DFC6}" ShortID="280433589">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="weakpoint ui 2d-glued" ID="{65306AE0-2B86-41C6-B281-D5B27F70EAAF}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0587579382606988"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.12060839958775"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0834981227915195"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.739113012858264"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>weakpoint ui 2d-glued.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="464843651"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="weakpoint ui 2d-glued" ID="{65306AE0-2B86-41C6-B281-D5B27F70EAAF}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="weakpoint ui 2d-glued_01" ID="{4C2A423F-8716-40CC-B355-918412AD927C}" ShortID="462203578">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="weakpoint ui 2d-glued" ID="{10BBCCF5-5C7B-4D6B-A7E8-90931F0F7B59}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0587579382606988"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.114423353455045"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="1.66686993276404"/>
+																<Property Name="TrimEnd" Type="Real64" Value="2.2297091308402"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>weakpoint ui 2d-glued.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="20263513"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="weakpoint ui 2d-glued" ID="{10BBCCF5-5C7B-4D6B-A7E8-90931F0F7B59}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="weakpoint ui 2d-glued_02" ID="{77A38342-07EF-4D2B-BFC1-D7450CA99426}" ShortID="1040045963">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="weakpoint ui 2d-glued" ID="{2438457E-ACCE-480C-B396-06AE3409ED6C}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0587579382606988"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.114423353455045"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="3.26261183500196"/>
+																<Property Name="TrimEnd" Type="Real64" Value="3.74504543335296"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>weakpoint ui 2d-glued.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="205120078"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="weakpoint ui 2d-glued" ID="{2438457E-ACCE-480C-B396-06AE3409ED6C}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Playlist">
+													<Reference>
+														<ObjectRef Name="weakpoint ui 2d-glued" ID="{EF6E0A33-B910-4D6E-85E7-17D7D806DFC6}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+													</Reference>
+													<Reference>
+														<ObjectRef Name="weakpoint ui 2d-glued_01" ID="{4C2A423F-8716-40CC-B355-918412AD927C}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+													</Reference>
+													<Reference>
+														<ObjectRef Name="weakpoint ui 2d-glued_02" ID="{77A38342-07EF-4D2B-BFC1-D7450CA99426}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</RandomSequenceContainer>
+									</ChildrenList>
+								</BlendContainer>
+								<RandomSequenceContainer Name="RevealSpam" ID="{989A8EE3-C3D0-4D67-8E7A-2A403CD0A76A}" ShortID="48754084">
+									<PropertyList>
+										<Property Name="3DPosition" Type="int16" Value="1"/>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>13</Value>
+											</ValueList>
+										</Property>
+										<Property Name="InitialDelay" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{4157984E-F35B-4E66-A2C6-75E2412AAB60}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="0.25"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>7</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="WeakpointRevealSpam" ID="{D7CA6456-B6F1-43CC-A91F-C9A3E6B6D67A}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="reveal spam layer-glued" ID="{D2AB540E-493D-4028-8123-063CC46CAA85}" ShortID="982469119">
+											<PropertyList>
+												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="reveal spam layer-glued" ID="{38AE6CEA-5E78-4612-9456-0ABCDDF66FBF}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.117216013937966"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.463146201413426"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>reveal spam layer-glued.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="556590588"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="reveal spam layer-glued" ID="{38AE6CEA-5E78-4612-9456-0ABCDDF66FBF}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="reveal spam layer-glued_01" ID="{27518D11-3E91-4815-A2E2-4A130C46EAFE}" ShortID="494081021">
+											<PropertyList>
+												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="reveal spam layer-glued" ID="{CF035743-0DB1-4419-AA56-051F9A6909E5}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0400249803690617"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.117216013937966"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.463146201413427"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.00634236356498"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>reveal spam layer-glued.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1037647236"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="reveal spam layer-glued" ID="{CF035743-0DB1-4419-AA56-051F9A6909E5}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="reveal spam layer-glued_02" ID="{512F8DB0-EA9D-4FBE-BB9E-C1C1BFC018F6}" ShortID="349678551">
+											<PropertyList>
+												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="reveal spam layer-glued" ID="{7F7EF870-B47E-44A0-8C16-3B835354D59C}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0400249803690617"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.117216013937966"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="1.05208519827248"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.75824020906949"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>reveal spam layer-glued.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="992398014"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="reveal spam layer-glued" ID="{7F7EF870-B47E-44A0-8C16-3B835354D59C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="reveal spam layer-glued_03" ID="{5029987E-D356-4072-8700-FAD4A45C4EFA}" ShortID="595560400">
+											<PropertyList>
+												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="reveal spam layer-glued" ID="{B533CF52-ED7B-4BE9-B63D-BDC4614020CE}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0400249803690617"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.117216013937966"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="1.69248488417746"/>
+														<Property Name="TrimEnd" Type="Real64" Value="2.45295951118963"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>reveal spam layer-glued.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="512401419"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="reveal spam layer-glued" ID="{B533CF52-ED7B-4BE9-B63D-BDC4614020CE}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="reveal spam layer-glued_04" ID="{4B7607AE-4F08-4766-9393-58A5CA747ED5}" ShortID="1006294488">
+											<PropertyList>
+												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="reveal spam layer-glued" ID="{3E19877A-F5BD-43B1-9D99-97966B5E0853}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0400249803690617"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.117216013937966"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="2.36147384177463"/>
+														<Property Name="TrimEnd" Type="Real64" Value="3.09621812426384"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>reveal spam layer-glued.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="827912412"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="reveal spam layer-glued" ID="{3E19877A-F5BD-43B1-9D99-97966B5E0853}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="reveal spam layer-glued_05" ID="{291DF6C3-2CF1-4E1E-91A0-4402F25D5C36}" ShortID="984211744">
+											<PropertyList>
+												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="reveal spam layer-glued" ID="{A98253E2-F9DE-42FF-83CF-7601948ED2E4}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0400249803690617"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.117216013937966"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="3.45644294758539"/>
+														<Property Name="TrimEnd" Type="Real64" Value="4.05681765312132"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>reveal spam layer-glued.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="300406748"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="reveal spam layer-glued" ID="{A98253E2-F9DE-42FF-83CF-7601948ED2E4}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="reveal spam layer-glued_06" ID="{D069D213-F40B-4BAC-A71A-75980E891A3D}" ShortID="21754329">
+											<PropertyList>
+												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="reveal spam layer-glued" ID="{9F6D0F16-AEA3-4831-BCE0-A2F93017E6C0}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0400249803690617"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.265880226737337"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="4.09398370632116"/>
+														<Property Name="TrimEnd" Type="Real64" Value="4.54855312622693"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>reveal spam layer-glued.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="155781885"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="reveal spam layer-glued" ID="{9F6D0F16-AEA3-4831-BCE0-A2F93017E6C0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<PositioningInfo>
+										<Position Name="" ID="{3231DED4-F674-475B-A121-4758267CA4BB}">
+											<ChildrenList>
+												<Path2D Name="RevealSpam_Path" ID="{A412A2D6-ADC5-4248-B5A8-B1AAEFC70B96}">
+													<PropertyList>
+														<Property Name="RandomX" Type="Real64" Value="12"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>-72.65416</XPos>
+															<YPos>-11.74142</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="RevealSpam_Path_01" ID="{C7C0D2F9-6B53-4918-A32B-A3C20890B0CC}">
+													<PropertyList>
+														<Property Name="RandomX" Type="Real64" Value="22"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>49.32976</XPos>
+															<YPos>-2.24275</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="RevealSpam_Path_02" ID="{1B1D9E72-4B6F-484D-AA69-92C21BB37C93}">
+													<PropertyList>
+														<Property Name="RandomX" Type="Real64" Value="29"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>-24.66488</XPos>
+															<YPos>45.77836</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+											</ChildrenList>
+										</Position>
+									</PositioningInfo>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</ActorMixer>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="RBS_SFX_UiMenu" ID="{A408DBD9-79DD-4B08-A9EC-1B1A8C0B2CFC}" ShortID="720219883">
@@ -5917,7 +6699,7 @@
 									<PropertyList>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>3</Value>
+												<Value>-5</Value>
 											</ValueList>
 										</Property>
 										<Property Name="Pitch" Type="int32">
@@ -6006,7 +6788,7 @@
 									<PropertyList>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>5</Value>
+												<Value>3</Value>
 											</ValueList>
 										</Property>
 										<Property Name="Pitch" Type="int32">
@@ -6580,6 +7362,445 @@
 										</ObjectList>
 									</ObjectLists>
 								</RandomSequenceContainer>
+								<SwitchContainer Name="ResultsScreenConfirm" ID="{4729F8FB-2462-47C9-920A-61216F35085B}" ShortID="644201345">
+									<PropertyList>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+										</Reference>
+										<Reference Name="DefaultSwitchOrState">
+											<ObjectRef Name="lc" ID="{F6B472FD-C557-43E9-8F52-E8758202397B}" WorkUnitID="{CAC3CED8-5AC9-4C4E-8486-D3A059718422}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="switch_results_screen_confirm" ID="{71AE5EB0-DF22-4877-8447-46CF9695E6C3}" WorkUnitID="{CAC3CED8-5AC9-4C4E-8486-D3A059718422}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="UI stinger endscreen hc v1" ID="{7DCBA45F-A176-4D1A-A44B-DE00E529534F}" ShortID="662256996">
+											<PropertyList>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>4</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="UI stinger endscreen hc v1" ID="{80CEF7F6-D0C3-4A43-9506-23472EBAB1D6}">
+													<Language>SFX</Language>
+													<AudioFile>UI stinger endscreen hc v1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="311620096"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="UI stinger endscreen hc v1" ID="{80CEF7F6-D0C3-4A43-9506-23472EBAB1D6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="UI stinger endscreen lc v1" ID="{F7932ADC-BD0B-492E-BBBE-85CAD9768413}" ShortID="1038632728">
+											<PropertyList>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="UI stinger endscreen lc v1" ID="{FCBA93A1-490D-42AA-9D92-F364811AD483}">
+													<Language>SFX</Language>
+													<AudioFile>UI stinger endscreen lc v1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="55809004"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="UI stinger endscreen lc v1" ID="{FCBA93A1-490D-42AA-9D92-F364811AD483}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<GroupingInfo>
+										<GroupingBehaviorList>
+											<GroupingBehavior>
+												<ItemRef Name="UI stinger endscreen hc v1" ID="{7DCBA45F-A176-4D1A-A44B-DE00E529534F}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="UI stinger endscreen lc v1" ID="{F7932ADC-BD0B-492E-BBBE-85CAD9768413}"/>
+											</GroupingBehavior>
+										</GroupingBehaviorList>
+										<GroupingList>
+											<Grouping>
+												<SwitchRef Name="hc" ID="{83AFF7FC-72F4-49E3-B9D0-180763DC4B81}"/>
+												<ItemList>
+													<ItemRef Name="UI stinger endscreen hc v1" ID="{7DCBA45F-A176-4D1A-A44B-DE00E529534F}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="lc" ID="{F6B472FD-C557-43E9-8F52-E8758202397B}"/>
+												<ItemList>
+													<ItemRef Name="UI stinger endscreen lc v1" ID="{F7932ADC-BD0B-492E-BBBE-85CAD9768413}"/>
+												</ItemList>
+											</Grouping>
+										</GroupingList>
+									</GroupingInfo>
+								</SwitchContainer>
+								<Sound Name="LevelTransition" ID="{70A1D236-2ABE-4DF6-8B38-4C8FD4AA9409}" ShortID="142664952">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI level transition v1" ID="{B81A48F7-531D-45C0-9EFE-D16CD94E7D51}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0782675206124853"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="4.36341427414605"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.48264971044366"/>
+												<Property Name="TrimEnd" Type="Real64" Value="7.12886666912053"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>UI level transition v1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="54403930"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="UI level transition v1" ID="{B81A48F7-531D-45C0-9EFE-D16CD94E7D51}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<RandomSequenceContainer Name="EndingCards (new persona" ID="{AA2F0BEE-A297-43E4-A86B-A22DCAFBE495}" ShortID="202809344">
+									<PropertyList>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>-7</Value>
+											</ValueList>
+										</Property>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>3</Value>
+											</ValueList>
+										</Property>
+										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="UI ending cards v1" ID="{E46A388A-97AB-4DD5-8C62-64829F8F3897}" ShortID="1007652713">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{39250B52-8C88-4C54-B7D3-2C12760A0A9F}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="UI ending cards v1" ID="{EC50ED71-304C-4C82-AE7B-91823DA0805C}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00329254705286508"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.620821310432948"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.822987339797965"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.99236085752992"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>UI ending cards v1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="770724338"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="UI ending cards v1" ID="{EC50ED71-304C-4C82-AE7B-91823DA0805C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="UI ending cards v1_01" ID="{B65D2C2A-C67A-4D83-949D-EFC3D2F53987}" ShortID="1339943">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{39250B52-8C88-4C54-B7D3-2C12760A0A9F}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="UI ending cards v1" ID="{DC61278B-3FF9-4096-9CFF-19DF44524F51}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00474283778572948"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.620821310432948"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="2.02670227009314"/>
+														<Property Name="TrimEnd" Type="Real64" Value="4.24431134668236"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>UI ending cards v1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="985104756"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="UI ending cards v1" ID="{DC61278B-3FF9-4096-9CFF-19DF44524F51}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="UI ending cards v1_02" ID="{989D5B16-0A00-47B2-982C-BB33B6EBF701}" ShortID="1016293966">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{39250B52-8C88-4C54-B7D3-2C12760A0A9F}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="UI ending cards v1" ID="{F5E02B1D-2CCC-4273-A3F3-85FE9BEE4485}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00272071960574394"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.620821310432948"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="4.32729267650325"/>
+														<Property Name="TrimEnd" Type="Real64" Value="6.32700544758539"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>UI ending cards v1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="295667460"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="UI ending cards v1" ID="{F5E02B1D-2CCC-4273-A3F3-85FE9BEE4485}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Playlist">
+											<Reference>
+												<ObjectRef Name="UI ending cards v1" ID="{E46A388A-97AB-4DD5-8C62-64829F8F3897}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="UI ending cards v1_01" ID="{B65D2C2A-C67A-4D83-949D-EFC3D2F53987}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="UI ending cards v1_02" ID="{989D5B16-0A00-47B2-982C-BB33B6EBF701}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+								<Sound Name="PauseDeathTransition" ID="{3A225949-621B-4C9D-AF06-146EFC7A00D1}" ShortID="303309478">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI level transition v1" ID="{15715DC3-EF98-4DB5-AAD1-C0D6D90AFF88}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0326114669218689"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="4.36341427414605"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="7.12886666912053"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>UI level transition v1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="797804231"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="UI level transition v1" ID="{15715DC3-EF98-4DB5-AAD1-C0D6D90AFF88}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<RandomSequenceContainer Name="GamePaused" ID="{D3A283B9-6E36-4F1B-8E5D-781DFB753A51}" ShortID="389794427">
+									<PropertyList>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>-7</Value>
+											</ValueList>
+										</Property>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>3</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="UI ending cards v1" ID="{F97C29E4-BA89-45F9-BF96-FED044ED598D}" ShortID="511656806">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{39250B52-8C88-4C54-B7D3-2C12760A0A9F}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="UI ending cards v1" ID="{1C1C0F54-1FC0-4398-B5DD-06C98C482CA9}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00329254705286508"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.620821310432948"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.822987339797965"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.99236085752992"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>UI ending cards v1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="770724338"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="UI ending cards v1" ID="{1C1C0F54-1FC0-4398-B5DD-06C98C482CA9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="UI ending cards v1_01" ID="{6314AEBC-452E-449D-9156-5F691381D8EE}" ShortID="984313296">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{39250B52-8C88-4C54-B7D3-2C12760A0A9F}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="UI ending cards v1" ID="{E732C36F-FF4F-4CFB-9E89-65A961E3CB18}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00474283778572948"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.620821310432948"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="2.02670227009314"/>
+														<Property Name="TrimEnd" Type="Real64" Value="4.24431134668236"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>UI ending cards v1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="985104756"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="UI ending cards v1" ID="{E732C36F-FF4F-4CFB-9E89-65A961E3CB18}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="UI ending cards v1_02" ID="{EE8C69E6-2457-4A6E-BE9E-09B3F41ACF3D}" ShortID="843041834">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{39250B52-8C88-4C54-B7D3-2C12760A0A9F}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="UI ending cards v1" ID="{B09596E7-901D-4D87-9CDF-8D3E20E94C2E}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00272071960574394"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.620821310432948"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="4.32729267650325"/>
+														<Property Name="TrimEnd" Type="Real64" Value="6.32700544758539"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>UI ending cards v1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="295667460"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="UI ending cards v1" ID="{B09596E7-901D-4D87-9CDF-8D3E20E94C2E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Playlist">
+											<Reference>
+												<ObjectRef Name="UI ending cards v1" ID="{F97C29E4-BA89-45F9-BF96-FED044ED598D}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="UI ending cards v1_01" ID="{6314AEBC-452E-449D-9156-5F691381D8EE}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="UI ending cards v1_02" ID="{EE8C69E6-2457-4A6E-BE9E-09B3F41ACF3D}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
 							</ChildrenList>
 						</ActorMixer>
 					</ChildrenList>
@@ -6727,7 +7948,7 @@
 								<Property Name="BlendBehavior" Type="int16" Value="1"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>-2</Value>
+										<Value>-6</Value>
 									</ValueList>
 								</Property>
 								<Property Name="Pitch" Type="int32">
@@ -10786,6 +12007,9 @@
 															</ValueList>
 														</Property>
 														<Property Name="MakeUpGain" Type="Real64">
+															<ValueList>
+																<Value>-2</Value>
+															</ValueList>
 															<ModifierList>
 																<ModifierInfo>
 																	<Modifier Name="" ID="{87F0B8D7-C42C-4C4A-9E69-2F50403B5109}"/>
@@ -19872,6 +21096,9 @@
 													<StateGroupInfo>
 														<StateGroupRef Name="state_player" ID="{D4DB4710-70CC-4DF7-A9D1-0E3F26193BCC}"/>
 													</StateGroupInfo>
+													<StateGroupInfo>
+														<StateGroupRef Name="state_death" ID="{425BAD64-2896-4468-AB99-79261A8FC569}"/>
+													</StateGroupInfo>
 												</StateGroupList>
 												<CustomStateList>
 													<CustomState>
@@ -19885,6 +21112,18 @@
 													<CustomState>
 														<StateRef Name="onground" ID="{5ADF1174-9E07-490C-82F9-C5039AEC4132}"/>
 														<CustomState Name="" ID="{6D8CD2A2-1187-4EED-8917-3A6DDB9DA0CC}" ShortID="433873914"/>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="dead" ID="{348DE88E-BEE6-49C0-AB27-105646664E5D}"/>
+														<CustomState Name="" ID="{474F0837-3C4E-4062-955E-93EBB519C62A}" ShortID="59272964">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64" Value="-108"/>
+															</PropertyList>
+														</CustomState>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="alive" ID="{807D8C35-2D07-4BB8-962F-C1AC99DA4FDC}"/>
+														<CustomState Name="" ID="{00C1BFEF-8F9E-4867-8469-B3F32DCCF51F}" ShortID="941128939"/>
 													</CustomState>
 												</CustomStateList>
 											</StateInfo>
@@ -24530,9 +25769,14 @@
 						</BlendContainer>
 						<RandomSequenceContainer Name="DamageTaken" ID="{EE70712C-FE70-4925-BBD1-3F3A0F72B0CF}" ShortID="361715146">
 							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>12</Value>
+									</ValueList>
+								</Property>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>-2</Value>
+										<Value>1</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>

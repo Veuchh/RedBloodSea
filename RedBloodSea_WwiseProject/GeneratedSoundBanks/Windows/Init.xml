@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{3F049BCA-02C8-6AF6-DB97-6ACA7A583B95}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{F2614083-27CD-FE1D-F080-BF1F97D9C570}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -53,12 +53,14 @@
 				<GameParameter Id="1410332996" Name="rtpc_settings_slider" ObjectPath="\Game Parameters\Default Work Unit\rtpc_settings_slider" GUID="{CF91B134-4D3D-4381-A066-5A720C4CB494}"/>
 				<GameParameter Id="2332098030" Name="rtpc_enemy_bus" ObjectPath="\Game Parameters\Default Work Unit\Settings\BUS\rtpc_enemy_bus" GUID="{7B1FB034-3E8E-48F8-B914-CB5786C31FF9}"/>
 				<GameParameter Id="2400834421" Name="rtpc_dominant_hand" ObjectPath="\Game Parameters\Default Work Unit\Settings\rtpc_dominant_hand" GUID="{54C0314F-1459-460E-B6E6-1CDAA6EDBE01}"/>
+				<GameParameter Id="2548911666" Name="rtpc_chaos_no_interpolation" ObjectPath="\Game Parameters\Default Work Unit\rtpc_chaos_no_interpolation" GUID="{32A00591-7D0F-46D4-86CC-E57C780551F1}"/>
 				<GameParameter Id="2570586536" Name="rtpc_landing_force" ObjectPath="\Game Parameters\Default Work Unit\rtpc_landing_force" GUID="{07DB1610-4113-4F81-A7B4-0C953E645162}"/>
 				<GameParameter Id="2690476865" Name="rtpc_player_walkspeed" ObjectPath="\Game Parameters\Default Work Unit\rtpc_player_walkspeed" GUID="{6437691A-43C2-473B-A671-C59F1A9E957B}"/>
 				<GameParameter Id="2696648837" Name="rtpc_dash_leftright" ObjectPath="\Game Parameters\Default Work Unit\rtpc_dash_leftright" GUID="{7894A474-E5D3-4187-925F-19042540CC04}"/>
 				<GameParameter Id="2737403824" Name="rtpc_positioning_leftright" ObjectPath="\Game Parameters\Default Work Unit\rtpc_positioning_leftright" GUID="{C0867B0F-00CC-44F1-95F4-1370870636CA}"/>
 				<GameParameter Id="2860606227" Name="rtpc_highfreqfilter_off_on" ObjectPath="\Game Parameters\Default Work Unit\rtpc_highfreqfilter_off_on" GUID="{9D67A80A-4B5B-4616-A716-FC5EFCF47D77}"/>
 				<GameParameter Id="2969259856" Name="meter_sfx" ObjectPath="\Game Parameters\Default Work Unit\meter_sfx" GUID="{612878B7-9133-405F-BC49-C2FDA83F7E32}"/>
+				<GameParameter Id="3014524554" Name="rtpc_IsPlayerDead" ObjectPath="\Game Parameters\Default Work Unit\rtpc_IsPlayerDead" GUID="{93082E49-E80A-4A47-AC4C-2D7F096EDF12}"/>
 				<GameParameter Id="3067876527" Name="rtpc_sfx_bus" ObjectPath="\Game Parameters\Default Work Unit\Settings\BUS\rtpc_sfx_bus" GUID="{1A0CC5AF-DF3D-4C7B-9E41-61A8E28F74EB}"/>
 				<GameParameter Id="3304859005" Name="rtpc_chaos_global" ObjectPath="\Game Parameters\Default Work Unit\rtpc_chaos_global" GUID="{912B7FBA-E859-424B-9664-D9B8B51FC1BA}"/>
 				<GameParameter Id="3361666196" Name="rtpc_chaos_enemy" ObjectPath="\Game Parameters\Default Work Unit\rtpc_chaos_enemy" GUID="{8D8709D7-5017-47F2-988D-4EE3A088300B}"/>
@@ -81,6 +83,13 @@
 						<State Id="4158285989" Name="gameover" ObjectPath="\States\Default Work Unit\state_game\gameover" GUID="{BC3D5537-5888-442A-A50A-D4C6109A43D8}"/>
 					</States>
 				</StateGroup>
+				<StateGroup Id="2837885159" Name="state_death" ObjectPath="\States\Default Work Unit\state_death" GUID="{425BAD64-2896-4468-AB99-79261A8FC569}">
+					<States>
+						<State Id="655265632" Name="alive" ObjectPath="\States\Default Work Unit\state_death\alive" GUID="{807D8C35-2D07-4BB8-962F-C1AC99DA4FDC}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\state_death\None" GUID="{35E2CE23-564D-4C36-B4CA-8C8E650E1F1B}"/>
+						<State Id="2044049779" Name="dead" ObjectPath="\States\Default Work Unit\state_death\dead" GUID="{348DE88E-BEE6-49C0-AB27-105646664E5D}"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="4016824040" Name="state_player" ObjectPath="\States\Default Work Unit\state_player" GUID="{D4DB4710-70CC-4DF7-A9D1-0E3F26193BCC}">
 					<States>
 						<State Id="223416773" Name="offground" ObjectPath="\States\Default Work Unit\state_player\offground" GUID="{5BCDD2B7-0B9E-40FF-98EB-D2BA0BD6A7EB}"/>
@@ -99,6 +108,7 @@
 			</StateGroups>
 			<SwitchGroups>
 				<SwitchGroup Id="103781722" Name="switch_results_music" ObjectPath="\Switches\Default Work Unit\switch_results_music" GUID="{F9C3A9D3-A6F7-4890-B2FF-F8C4BF3D2B6B}">
+					<GameParameterRef Id="2548911666"/>
 					<Switches>
 						<Switch Id="2346738020" Name="high_chaos" ObjectPath="\Switches\Default Work Unit\switch_results_music\high_chaos" GUID="{B785744B-290E-494F-9AB9-D67CF93D6C32}"/>
 						<Switch Id="3407899128" Name="low_chaos" ObjectPath="\Switches\Default Work Unit\switch_results_music\low_chaos" GUID="{B5E5F26A-DB05-4475-8DC6-02CA8E5B49FE}"/>
@@ -160,13 +170,21 @@
 					</Switches>
 				</SwitchGroup>
 				<SwitchGroup Id="3898853262" Name="switch_pause_music" ObjectPath="\Switches\Default Work Unit\switch_pause_music" GUID="{A26C9464-58C4-4C7C-A3B1-A18AE110F6C9}">
+					<GameParameterRef Id="2548911666"/>
 					<Switches>
 						<Switch Id="1443861931" Name="pause_low_chaos" ObjectPath="\Switches\Default Work Unit\switch_pause_music\pause_low_chaos" GUID="{C4E1EB21-98A8-4D5E-BEC8-D86DE3924ECA}"/>
 						<Switch Id="1854033137" Name="pause_high_chaos" ObjectPath="\Switches\Default Work Unit\switch_pause_music\pause_high_chaos" GUID="{810D37BC-B114-4941-922B-2D544C1072DB}"/>
 					</Switches>
 				</SwitchGroup>
+				<SwitchGroup Id="4102952160" Name="switch_results_screen_confirm" ObjectPath="\Switches\Default Work Unit\switch_results_screen_confirm" GUID="{71AE5EB0-DF22-4877-8447-46CF9695E6C3}">
+					<GameParameterRef Id="2548911666"/>
+					<Switches>
+						<Switch Id="1702304874" Name="lc" ObjectPath="\Switches\Default Work Unit\switch_results_screen_confirm\lc" GUID="{F6B472FD-C557-43E9-8F52-E8758202397B}"/>
+						<Switch Id="1769415222" Name="hc" ObjectPath="\Switches\Default Work Unit\switch_results_screen_confirm\hc" GUID="{83AFF7FC-72F4-49E3-B9D0-180763DC4B81}"/>
+					</Switches>
+				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F5F62D05-900E-853F-66E6-98D445FF8375}</FileHash>
+	<FileHash>{D74CA253-290F-753A-96E2-6FB11204D67B}</FileHash>
 </SoundBanksInfo>

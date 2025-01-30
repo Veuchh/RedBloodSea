@@ -13130,7 +13130,7 @@
 					<PropertyList>
 						<Property Name="MakeUpGain" Type="Real64">
 							<ValueList>
-								<Value>-14</Value>
+								<Value>-10</Value>
 							</ValueList>
 						</Property>
 						<Property Name="Volume" Type="Real64">
@@ -13435,10 +13435,46 @@
 						<ObjectList Name="Entries">
 							<Reference>
 								<Local>
-									<MultiSwitchEntry Name="" ID="{3905BDE1-DB75-4389-AACB-22FF5CF2F3D4}">
+									<MultiSwitchEntry Name="" ID="{38936C8B-24AE-4D81-A847-E40E8A9BD13F}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="results_high_chaos" ID="{2FD1BFE3-71A8-4582-9555-3818AC109C63}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
+											</Reference>
+										</ReferenceList>
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<Reference>
+													<ObjectRef Name="high_chaos" ID="{B785744B-290E-494F-9AB9-D67CF93D6C32}" WorkUnitID="{CAC3CED8-5AC9-4C4E-8486-D3A059718422}"/>
+												</Reference>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MultiSwitchEntry Name="" ID="{249D570A-28CA-4AE3-BB2F-B8A5D7B55346}">
 										<ReferenceList>
 											<Reference Name="AudioNode">
 												<ObjectRef Name="results_low_chaos" ID="{6B693AB4-7DB7-4BFB-90A7-AC470868F0CB}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
+											</Reference>
+										</ReferenceList>
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<Reference>
+													<ObjectRef Name="low_chaos" ID="{B5E5F26A-DB05-4475-8DC6-02CA8E5B49FE}" WorkUnitID="{CAC3CED8-5AC9-4C4E-8486-D3A059718422}"/>
+												</Reference>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MultiSwitchEntry Name="" ID="{2605B972-959C-4FD7-B094-DA94083899AD}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="results_high_chaos" ID="{2FD1BFE3-71A8-4582-9555-3818AC109C63}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
 											</Reference>
 										</ReferenceList>
 										<ObjectLists>
@@ -13622,11 +13658,11 @@
 																			<Local>
 																				<MusicClip Name="game paused - high chaos v1" ID="{6FDD47AD-A1BA-44EE-A50F-5023DE695FF8}">
 																					<PropertyList>
-																						<Property Name="BeginTrimOffset" Type="Real64" Value="680.680336487907"/>
+																						<Property Name="BeginTrimOffset" Type="Real64" Value="2765.26386698212"/>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="87953.4076092151"/>
-																						<Property Name="FadeInDuration" Type="Real64" Value="808.307899579391"/>
+																						<Property Name="FadeInDuration" Type="Real64" Value="1063.56302576236"/>
 																						<Property Name="FadeOutDuration" Type="Real64" Value="2595.09378286015"/>
-																						<Property Name="PlayAt" Type="Real64" Value="-680.680336487907"/>
+																						<Property Name="PlayAt" Type="Real64" Value="-2765.26386698212"/>
 																					</PropertyList>
 																					<AudioSourceRef Name="game paused - high chaos v1" ID="{9628637D-BD28-4F80-B170-40C84C1ACE97}"/>
 																					<PropertyCurveList>
@@ -13637,7 +13673,7 @@
 																								</PropertyList>
 																								<PointList>
 																									<Point>
-																										<XPos>0.68068</XPos>
+																										<XPos>2.76526</XPos>
 																										<YPos>0</YPos>
 																										<Flags>5</Flags>
 																									</Point>
@@ -13656,7 +13692,7 @@
 																								</PropertyList>
 																								<PointList>
 																									<Point>
-																										<XPos>0.68068</XPos>
+																										<XPos>2.76526</XPos>
 																										<YPos>0</YPos>
 																										<Flags>5</Flags>
 																									</Point>
@@ -13675,7 +13711,7 @@
 																								</PropertyList>
 																								<PointList>
 																									<Point>
-																										<XPos>0.68068</XPos>
+																										<XPos>2.76526</XPos>
 																										<YPos>0</YPos>
 																										<Flags>5</Flags>
 																									</Point>
@@ -13827,11 +13863,72 @@
 																			<Local>
 																				<MusicClip Name="game paused - low chaos v1" ID="{7DBE5081-2507-4CA7-8733-D1DF8BF045AC}">
 																					<PropertyList>
+																						<Property Name="BeginTrimOffset" Type="Real64" Value="4337.16385671362"/>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="161118.895833333"/>
-																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeInDuration" Type="Real64" Value="277.369526703846"/>
 																						<Property Name="FadeOutDuration" Type="Real64" Value="4358.56745875301"/>
+																						<Property Name="PlayAt" Type="Real64" Value="-4337.16385671362"/>
 																					</PropertyList>
 																					<AudioSourceRef Name="game paused - low chaos v1" ID="{CDD60691-DD50-4FFE-AF8F-A26D82F90D1B}"/>
+																					<PropertyCurveList>
+																						<PropertyCurve PropertyName="Highpass">
+																							<Curve Name="" ID="{4E8EA1EE-A885-48B7-8B61-857BEDAC4E1D}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>4.33716</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>161.118895833333</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Lowpass">
+																							<Curve Name="" ID="{68E811E8-1B6A-4DBA-A1D5-4D7425EABF65}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>4.33716</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>161.118895833333</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Volume">
+																							<Curve Name="" ID="{35E05C2E-197D-4B28-B2B4-A60C3B02631A}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="3"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>4.33716</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>161.118895833333</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																					</PropertyCurveList>
 																				</MusicClip>
 																			</Local>
 																		</Reference>

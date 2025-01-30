@@ -636,7 +636,14 @@
 								<Action Name="" ID="{C8C4C98F-886A-445D-BB1B-17EB85FCC893}" ShortID="517583125">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="WeakpointReveal" ID="{633785F0-9469-4B73-8B63-B49397CCC7F4}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											<ObjectRef Name="Weakpoint Reveal Blend" ID="{47955738-FD50-4C39-871F-C7294B233815}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{C85AED8E-A868-412C-883E-8238DE593A1F}" ShortID="503957831">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RevealSpam" ID="{989A8EE3-C3D0-4D67-8E7A-2A403CD0A76A}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -917,6 +924,62 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Leveltransition" ID="{80A5CE36-5386-4479-82B3-EB9D7C88AA76}">
+							<ChildrenList>
+								<Action Name="" ID="{B3E1AAEA-524F-4457-802C-44F22264CA12}" ShortID="55532494">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LevelTransition" ID="{70A1D236-2ABE-4DF6-8B38-4C8FD4AA9409}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_ResultsScreenConfirm" ID="{E9A8C5A1-C93F-4582-B340-D7C1FC70EBAF}">
+							<ChildrenList>
+								<Action Name="" ID="{68B7A374-AE0B-454B-9B76-1DB478C58879}" ShortID="379714077">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ResultsScreenConfirm" ID="{4729F8FB-2462-47C9-920A-61216F35085B}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{F023B5B3-3961-4E86-A46E-573D42B1A47B}" ShortID="442525252">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="results" ID="{B8071DE9-7CE2-4CAD-BB81-E4351BDCBE5B}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_EndingCards" ID="{CE039E54-25DF-4AB7-98FB-0DFAEC1F79C4}">
+							<ChildrenList>
+								<Action Name="" ID="{4CEF75FB-738D-43C1-B556-97AC6D264242}" ShortID="893004719">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="EndingCards (new persona" ID="{AA2F0BEE-A297-43E4-A86B-A22DCAFBE495}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_GamePaused" ID="{EC660AF3-3298-4CDA-8704-746289A88FA8}">
+							<ChildrenList>
+								<Action Name="" ID="{2BCA3A4B-4C3D-45A8-AAC2-272450FA5E0F}" ShortID="225526745">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="GamePaused" ID="{D3A283B9-6E36-4F1B-8E5D-781DFB753A51}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Cinematics" ID="{3AD8F8EB-D465-4424-AEE7-3FD15ECAA51F}" ShortID="789215796">
@@ -973,7 +1036,7 @@
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="7"/>
 										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
-										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
 										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
@@ -1029,7 +1092,7 @@
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="9"/>
 										<Property Name="FadeInCurve" Type="int16" Value="5"/>
-										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
 										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
@@ -1207,6 +1270,10 @@
 						<Event Name="Play_MusPaused" ID="{AB68BF19-CB88-43B4-9DDC-E7CFA75DC02F}">
 							<ChildrenList>
 								<Action Name="" ID="{9D1EB1BB-3C2A-44B8-99A6-C222ABCAD492}" ShortID="557414979">
+									<PropertyList>
+										<Property Name="FadeInCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="game paused" ID="{CE2D95E7-E3CC-44C3-BBFB-3568B6C48495}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
@@ -1220,6 +1287,9 @@
 								<Action Name="" ID="{5642320F-AFDA-49F0-BCC8-922ECC2807B0}" ShortID="654979082">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="7"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -1234,6 +1304,9 @@
 								<Action Name="" ID="{F0A10F31-FF58-4C1F-A9BD-DC556841D3E1}" ShortID="1012938629">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="9"/>
+										<Property Name="FadeInCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -1286,7 +1359,6 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Play_3D_AMB" ID="{C11A3D36-BA50-43C3-8A72-29187D20295C}"/>
 						<Event Name="Play_PlaceholderAMB" ID="{5A95298C-BFC4-4769-BF79-0077A315CC42}">
 							<ChildrenList>
 								<Action Name="" ID="{EEFE62F5-BE19-4296-8041-2EF4CADAF586}" ShortID="495343158">

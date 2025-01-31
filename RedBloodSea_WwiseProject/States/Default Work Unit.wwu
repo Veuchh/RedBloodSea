@@ -42,6 +42,16 @@
 						<State Name="notaiming" ID="{AD4DA154-B560-453D-8C38-7A73B45B33AF}"/>
 					</ChildrenList>
 				</StateGroup>
+				<StateGroup Name="state_death" ID="{425BAD64-2896-4468-AB99-79261A8FC569}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0.1"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{35E2CE23-564D-4C36-B4CA-8C8E650E1F1B}"/>
+						<State Name="alive" ID="{807D8C35-2D07-4BB8-962F-C1AC99DA4FDC}"/>
+						<State Name="dead" ID="{348DE88E-BEE6-49C0-AB27-105646664E5D}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

@@ -80,7 +80,7 @@
 																		<PointList>
 																			<Point>
 																				<XPos>-48</XPos>
-																				<YPos>-0</YPos>
+																				<YPos>0</YPos>
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
@@ -119,6 +119,11 @@
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
+																				<XPos>36.67118</XPos>
+																				<YPos>-11.40381</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
 																				<XPos>100</XPos>
 																				<YPos>-27.51389</YPos>
 																				<Flags>37</Flags>
@@ -154,8 +159,8 @@
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>46.6195</XPos>
-																				<YPos>-1595</YPos>
+																				<XPos>46.43908</XPos>
+																				<YPos>-2399</YPos>
 																				<Flags>0</Flags>
 																			</Point>
 																			<Point>
@@ -194,13 +199,13 @@
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>59.66981</XPos>
-																				<YPos>14</YPos>
+																				<XPos>48.39331</XPos>
+																				<YPos>36</YPos>
 																				<Flags>0</Flags>
 																			</Point>
 																			<Point>
 																				<XPos>100</XPos>
-																				<YPos>13</YPos>
+																				<YPos>-17</YPos>
 																				<Flags>37</Flags>
 																			</Point>
 																		</PointList>
@@ -275,7 +280,7 @@
 																		<PointList>
 																			<Point>
 																				<XPos>-48</XPos>
-																				<YPos>-0</YPos>
+																				<YPos>0</YPos>
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
@@ -341,6 +346,27 @@
 												<Property Name="Color" Type="int16" Value="23"/>
 												<Property Name="OverrideColor" Type="bool" Value="True"/>
 											</PropertyList>
+											<StateInfo>
+												<StateGroupList>
+													<StateGroupInfo>
+														<StateGroupRef Name="state_death" ID="{425BAD64-2896-4468-AB99-79261A8FC569}"/>
+													</StateGroupInfo>
+												</StateGroupList>
+												<CustomStateList>
+													<CustomState>
+														<StateRef Name="dead" ID="{348DE88E-BEE6-49C0-AB27-105646664E5D}"/>
+														<CustomState Name="" ID="{3BDCD02F-5898-4D4B-B295-C059D08D22A4}" ShortID="745588423">
+															<PropertyList>
+																<Property Name="BusVolume" Type="Real64" Value="-108"/>
+															</PropertyList>
+														</CustomState>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="alive" ID="{807D8C35-2D07-4BB8-962F-C1AC99DA4FDC}"/>
+														<CustomState Name="" ID="{90D9F599-2EDF-40A2-BCFD-34FDA4F60E0F}" ShortID="937046493"/>
+													</CustomState>
+												</CustomStateList>
+											</StateInfo>
 										</Bus>
 										<Bus Name="PlayerBus" ID="{EBF9A5C4-2EDC-44FD-B726-7EE704405AC2}">
 											<PropertyList>
@@ -357,12 +383,152 @@
 													</PositioningInfo>
 												</Bus>
 											</ChildrenList>
+											<StateInfo>
+												<StateGroupList>
+													<StateGroupInfo>
+														<StateGroupRef Name="state_death" ID="{425BAD64-2896-4468-AB99-79261A8FC569}"/>
+													</StateGroupInfo>
+												</StateGroupList>
+												<CustomStateList>
+													<CustomState>
+														<StateRef Name="dead" ID="{348DE88E-BEE6-49C0-AB27-105646664E5D}"/>
+														<CustomState Name="" ID="{16D13A46-3030-43D0-9091-6E159C6E3039}" ShortID="848201173">
+															<PropertyList>
+																<Property Name="BusVolume" Type="Real64" Value="-108"/>
+															</PropertyList>
+														</CustomState>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="alive" ID="{807D8C35-2D07-4BB8-962F-C1AC99DA4FDC}"/>
+														<CustomState Name="" ID="{31098BD3-892B-4BC5-A857-E786B6253D56}" ShortID="669722937"/>
+													</CustomState>
+												</CustomStateList>
+											</StateInfo>
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{6708A409-3421-46D3-A970-E8515EB20D0E}" ShortID="732095184">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Volume"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="rtpc_IsPlayerDead" ID="{93082E49-E80A-4A47-AC4C-2D7F096EDF12}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{3AAE1CD0-FABF-4E28-9A47-FCBFEFFE18C2}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="3"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>0</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>99</XPos>
+																						<YPos>0</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>99.001</XPos>
+																						<YPos>-200</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>100</XPos>
+																						<YPos>-200</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
 										</Bus>
 										<Bus Name="PlayerAbilities" ID="{23D327A8-D57F-4DDE-8DF2-8200B9DA4037}">
 											<PropertyList>
 												<Property Name="Color" Type="int16" Value="15"/>
 												<Property Name="OverrideColor" Type="bool" Value="True"/>
 											</PropertyList>
+											<StateInfo>
+												<StateGroupList>
+													<StateGroupInfo>
+														<StateGroupRef Name="state_death" ID="{425BAD64-2896-4468-AB99-79261A8FC569}"/>
+													</StateGroupInfo>
+												</StateGroupList>
+												<CustomStateList>
+													<CustomState>
+														<StateRef Name="dead" ID="{348DE88E-BEE6-49C0-AB27-105646664E5D}"/>
+														<CustomState Name="" ID="{396768D3-0985-43C0-8843-DAC79F57A56A}" ShortID="130850458">
+															<PropertyList>
+																<Property Name="BusVolume" Type="Real64" Value="-108"/>
+															</PropertyList>
+														</CustomState>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="alive" ID="{807D8C35-2D07-4BB8-962F-C1AC99DA4FDC}"/>
+														<CustomState Name="" ID="{555ED5C5-6452-4280-91C2-1364C59811B3}" ShortID="520562752"/>
+													</CustomState>
+												</CustomStateList>
+											</StateInfo>
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{D2913935-6F2F-47B3-8436-C28460A7C3D4}" ShortID="72020070">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Volume"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="rtpc_IsPlayerDead" ID="{93082E49-E80A-4A47-AC4C-2D7F096EDF12}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{A2B702CE-3E70-48A5-89D8-8CA9C98A5315}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="3"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>0</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>99</XPos>
+																						<YPos>0</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>99.001</XPos>
+																						<YPos>-200</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>100</XPos>
+																						<YPos>-200</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
 										</Bus>
 									</ChildrenList>
 									<ObjectLists>
@@ -370,11 +536,7 @@
 											<Reference>
 												<Local>
 													<EffectSlot Name="" ID="{EFBC9C77-CC1D-4E58-811E-C53D56E29F63}" ShortID="187498963">
-														<ReferenceList>
-															<Reference Name="Effect" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
-																<ObjectRef Name="SFX_METER" ID="{0927D708-8783-43A9-AD28-D97A0CD1DAAE}" WorkUnitID="{4640899B-4071-49AD-BD7F-E96787417DC9}"/>
-															</Reference>
-														</ReferenceList>
+														<ReferenceList/>
 													</EffectSlot>
 												</Local>
 											</Reference>

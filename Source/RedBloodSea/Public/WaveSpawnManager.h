@@ -10,8 +10,8 @@
 #include "WaveSpawnManager.generated.h"
 
 
-UENUM()
-enum class EWaveType
+UENUM(BlueprintType)
+enum class EWaveType : uint8
 {
 	SURVIVE			UMETA(DisplayName="SURVIVE"),
 	CLEAR_ALL		UMETA(DisplayName="CLEAR_ALL"),
@@ -19,10 +19,10 @@ enum class EWaveType
 	CLEAR_SOME		UMETA(DisplayName="CLEAR_SOME")
 };
 
-USTRUCT(BlueprintType)
+USTRUCT(Blueprintable)
 struct FDwellerProfile
 {
-	GENERATED_BODY()
+	GENERATED_USTRUCT_BODY()
 	UPROPERTY(EditAnywhere,meta=(Bitmask,BitmaskEnum = EWeakpointType))
 	uint8 TypeFilter = static_cast<int>(EWeakpointType::HEAD) | static_cast<int>(EWeakpointType::ARMS) | static_cast<int>(EWeakpointType::LEGS) | static_cast<int>(EWeakpointType::TORSO);
 	UPROPERTY(EditAnywhere,meta=(ArraySizeEnum="EWeakpointSize"))
@@ -33,45 +33,44 @@ struct FDwellerProfile
 	EAIStatesC State = EAIStatesC::Melee;
 }; UMETA(DisplayName="Wave")
 
-USTRUCT(BlueprintType)
+USTRUCT(Blueprintable)
 struct FWave
 {
-	GENERATED_BODY()
+	GENERATED_USTRUCT_BODY()
 
-
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere,BlueprintReadWrite)
 	EWaveType Type;
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere,BlueprintReadWrite)
 	bool bTimeLimit;
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere,BlueprintReadWrite)
 	float Duration;
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere,BlueprintReadWrite)
 	TObjectPtr<AActor> BeginWaveTriggerZone;
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere,BlueprintReadWrite)
 	TObjectPtr<AActor> CheckpointTriggerZone;
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere,BlueprintReadWrite)
 	int DwellerToRemove;
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(VisibleAnywhere,BlueprintReadOnly)
 	int DwellerKilled;
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(VisibleAnywhere,BlueprintReadOnly)
 	int DwellerLinked;
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere,BlueprintReadWrite)
 	TMap<TObjectPtr<AActor>,bool> GatingBefore;
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere,BlueprintReadWrite)
 	TMap<TObjectPtr<AActor>,bool> GatingDurring;
 	
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(VisibleAnywhere,BlueprintReadOnly)
 	bool bWaveCleared = false;
 	
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere,BlueprintReadWrite)
 	TMap<TObjectPtr<AActor>,FDwellerProfile> DwellerProfiles;
-
-
-private:
+	
+	UPROPERTY(VisibleAnywhere,BlueprintReadOnly,meta=(AllowPrivateAccess = "true"))
 	FDateTime StartTime;
+	UPROPERTY(VisibleAnywhere,BlueprintReadOnly,meta=(AllowPrivateAccess = "true"))
 	FDateTime EndTime;
 	
 }; UMETA(DisplayName="Wave")
@@ -183,5 +182,8 @@ public:
 	FWaveEnd OnWaveFail;
 	UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="SpawnerEvents")
 	FWaveEnd OnWaveSuccess;
+	DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FUpdateObjective,const FWave&, Wave);
+	UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="SpawnerEvents")
+	FUpdateObjective OnUpdateObjective;
 	
 };

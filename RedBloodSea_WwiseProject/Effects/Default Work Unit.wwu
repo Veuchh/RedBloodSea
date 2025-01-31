@@ -37,9 +37,9 @@
 				</Effect>
 				<Effect Name="Level_Verb" ID="{C10E6266-7F54-414E-B6C1-16F6802E7ADB}" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
 					<PropertyList>
-						<Property Name="DecayTime" Type="Real32" Value="0.7"/>
+						<Property Name="DecayTime" Type="Real32" Value="1.6"/>
 						<Property Name="ERLevel" Type="Real32" Value="-14"/>
-						<Property Name="HFDamping" Type="Real32" Value="0.8"/>
+						<Property Name="HFDamping" Type="Real32" Value="4.15"/>
 						<Property Name="Quality" Type="int32" Value="10"/>
 						<Property Name="ReverbLevel" Type="Real32" Value="-28"/>
 					</PropertyList>

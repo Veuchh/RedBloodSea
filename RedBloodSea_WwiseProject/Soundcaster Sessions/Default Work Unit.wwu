@@ -177,10 +177,6 @@
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Play_3D_AMB" ID="{C11A3D36-BA50-43C3-8A72-29187D20295C}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}"/>
-							<Position X="1" Y="1"/>
-						</Module>
-						<Module>
 							<ObjectRef Name="SetCombatInWave" ID="{4DA437B0-D0CF-4D6F-84B6-3F134FD7EA1C}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}"/>
 							<Position X="1" Y="2"/>
 						</Module>
@@ -215,20 +211,24 @@
 							<Value>1</Value>
 						</RTPCValue>
 						<RTPCValue>
+							<GameParameterRef Name="meter_sfx" ID="{612878B7-9133-405F-BC49-C2FDA83F7E32}"/>
+							<Value>-48</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="rtpc_dash_leftright" ID="{7894A474-E5D3-4187-925F-19042540CC04}"/>
 							<Value>0.5</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="rtpc_chaos_global" ID="{912B7FBA-E859-424B-9664-D9B8B51FC1BA}"/>
-							<Value>0.530883103624298</Value>
+							<Value>0.5</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="rtpc_settings_slider" ID="{CF91B134-4D3D-4381-A066-5A720C4CB494}"/>
-							<Value>0</Value>
+							<Value>50</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="rtpc_positioning_leftright" ID="{C0867B0F-00CC-44F1-95F4-1370870636CA}"/>
-							<Value>0</Value>
+							<Value>50</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="rtpc_dominant_hand" ID="{54C0314F-1459-460E-B6E6-1CDAA6EDBE01}"/>
@@ -239,8 +239,12 @@
 							<Value>0</Value>
 						</RTPCValue>
 						<RTPCValue>
+							<GameParameterRef Name="rtpc_chaos_no_interpolation" ID="{32A00591-7D0F-46D4-86CC-E57C780551F1}"/>
+							<Value>0.5</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="rtpc_mainmenumusicpitch" ID="{ED4A7616-4338-46E2-9ED1-5758709ACDDE}"/>
-							<Value>100</Value>
+							<Value>0</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="rtpc_player_airspeed" ID="{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}"/>
@@ -260,15 +264,23 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="rtpc_high_freq_filter" ID="{63F62A41-A536-4987-9F56-EDAB260398B7}"/>
-							<Value>48</Value>
+							<Value>0</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="rtpc_music_bus" ID="{C084FC73-68C8-499E-96AC-E4DBE2F01DED}"/>
 							<Value>1</Value>
 						</RTPCValue>
 						<RTPCValue>
+							<GameParameterRef Name="rtpc_IsPlayerDead" ID="{93082E49-E80A-4A47-AC4C-2D7F096EDF12}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="rtpc_sfx_bus" ID="{1A0CC5AF-DF3D-4C7B-9E41-61A8E28F74EB}"/>
 							<Value>1</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_builtin_distance" ID="{51E739EC-97B4-4E4C-A4B4-45C5A6AEF050}"/>
+							<Value>0</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="rtpc_master_bus" ID="{94154412-EE63-4EDD-B582-B922CD738ED6}"/>
@@ -293,12 +305,14 @@
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="None" ID="{F55C3BA2-B06E-4139-88C5-13C67AEA9EF2}"/>
-						<CurrentStateRef Name="intro" ID="{AAB602C5-F1F4-4844-B273-85D5A38E9869}"/>
-						<CurrentStateRef Name="aiming" ID="{4001CF9D-6974-45C4-A4E1-ADC83295A9E1}"/>
-						<CurrentStateRef Name="None" ID="{295C2E06-7201-4536-9163-407EA6F5757E}"/>
+						<CurrentStateRef Name="dead" ID="{348DE88E-BEE6-49C0-AB27-105646664E5D}"/>
+						<CurrentStateRef Name="None" ID="{E50472C8-63C0-46CA-8249-305F3BF374E9}"/>
+						<CurrentStateRef Name="None" ID="{5874B239-37B2-4C50-9175-951DEAE60EF8}"/>
+						<CurrentStateRef Name="onground" ID="{5ADF1174-9E07-490C-82F9-C5039AEC4132}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="stone" ID="{F3CD2C36-B817-4A27-A1BC-96CFB220BA79}"/>
+						<CurrentSwitchRef Name="lc" ID="{F6B472FD-C557-43E9-8F52-E8758202397B}"/>
 						<CurrentSwitchRef Name="high_chaos" ID="{B785744B-290E-494F-9AB9-D67CF93D6C32}"/>
 						<CurrentSwitchRef Name="combat_wave_index_1" ID="{89F6AF0C-EEC7-47B3-B013-F708FF217ADC}"/>
 						<CurrentSwitchRef Name="stone" ID="{2C6048E5-583B-4043-92D1-BB6A8329AE1C}"/>

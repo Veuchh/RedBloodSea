@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{47654A85-7370-2223-CBF6-373F49A662DF}",
+    "Hash": "{DAA7AE37-A6B1-4A4E-A432-BA5C6D382F83}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -23,14 +23,6 @@
        "GUID": "{C10E6266-7F54-414E-B6C1-16F6802E7ADB}",
        "LibName": "Wwise RoomVerb",
        "LibId": "7733251"
-      },
-      {
-       "Id": "2404745364",
-       "Name": "SFX_METER",
-       "ObjectPath": "\\Effects\\Default Work Unit\\SFX_METER",
-       "GUID": "{0927D708-8783-43A9-AD28-D97A0CD1DAAE}",
-       "LibName": "Wwise Meter",
-       "LibId": "8454147"
       },
       {
        "Id": "3626272192",
@@ -65,14 +57,7 @@
       "Id": "393239870",
       "Name": "SFX",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\StereoBus\\SFX",
-      "GUID": "{39250B52-8C88-4C54-B7D3-2C12760A0A9F}",
-      "PluginRefs": {
-       "ShareSets": [
-        {
-         "Id": "2404745364"
-        }
-       ]
-      }
+      "GUID": "{39250B52-8C88-4C54-B7D3-2C12760A0A9F}"
      },
      {
       "Id": "466672200",
@@ -213,6 +198,12 @@
       "GUID": "{54C0314F-1459-460E-B6E6-1CDAA6EDBE01}"
      },
      {
+      "Id": "2548911666",
+      "Name": "rtpc_chaos_no_interpolation",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_chaos_no_interpolation",
+      "GUID": "{32A00591-7D0F-46D4-86CC-E57C780551F1}"
+     },
+     {
       "Id": "2570586536",
       "Name": "rtpc_landing_force",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_landing_force",
@@ -247,6 +238,12 @@
       "Name": "meter_sfx",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\meter_sfx",
       "GUID": "{612878B7-9133-405F-BC49-C2FDA83F7E32}"
+     },
+     {
+      "Id": "3014524554",
+      "Name": "rtpc_IsPlayerDead",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_IsPlayerDead",
+      "GUID": "{93082E49-E80A-4A47-AC4C-2D7F096EDF12}"
      },
      {
       "Id": "3067876527",
@@ -339,6 +336,32 @@
       ]
      },
      {
+      "Id": "2837885159",
+      "Name": "state_death",
+      "ObjectPath": "\\States\\Default Work Unit\\state_death",
+      "GUID": "{425BAD64-2896-4468-AB99-79261A8FC569}",
+      "States": [
+       {
+        "Id": "655265632",
+        "Name": "alive",
+        "ObjectPath": "\\States\\Default Work Unit\\state_death\\alive",
+        "GUID": "{807D8C35-2D07-4BB8-962F-C1AC99DA4FDC}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\state_death\\None",
+        "GUID": "{35E2CE23-564D-4C36-B4CA-8C8E650E1F1B}"
+       },
+       {
+        "Id": "2044049779",
+        "Name": "dead",
+        "ObjectPath": "\\States\\Default Work Unit\\state_death\\dead",
+        "GUID": "{348DE88E-BEE6-49C0-AB27-105646664E5D}"
+       }
+      ]
+     },
+     {
       "Id": "4016824040",
       "Name": "state_player",
       "ObjectPath": "\\States\\Default Work Unit\\state_player",
@@ -403,6 +426,9 @@
       "Name": "switch_results_music",
       "ObjectPath": "\\Switches\\Default Work Unit\\switch_results_music",
       "GUID": "{F9C3A9D3-A6F7-4890-B2FF-F8C4BF3D2B6B}",
+      "GameParameterRef": {
+       "Id": "2548911666"
+      },
       "Switches": [
        {
         "Id": "2346738020",
@@ -630,6 +656,9 @@
       "Name": "switch_pause_music",
       "ObjectPath": "\\Switches\\Default Work Unit\\switch_pause_music",
       "GUID": "{A26C9464-58C4-4C7C-A3B1-A18AE110F6C9}",
+      "GameParameterRef": {
+       "Id": "2548911666"
+      },
       "Switches": [
        {
         "Id": "1443861931",
@@ -644,10 +673,33 @@
         "GUID": "{810D37BC-B114-4941-922B-2D544C1072DB}"
        }
       ]
+     },
+     {
+      "Id": "4102952160",
+      "Name": "switch_results_screen_confirm",
+      "ObjectPath": "\\Switches\\Default Work Unit\\switch_results_screen_confirm",
+      "GUID": "{71AE5EB0-DF22-4877-8447-46CF9695E6C3}",
+      "GameParameterRef": {
+       "Id": "2548911666"
+      },
+      "Switches": [
+       {
+        "Id": "1702304874",
+        "Name": "lc",
+        "ObjectPath": "\\Switches\\Default Work Unit\\switch_results_screen_confirm\\lc",
+        "GUID": "{F6B472FD-C557-43E9-8F52-E8758202397B}"
+       },
+       {
+        "Id": "1769415222",
+        "Name": "hc",
+        "ObjectPath": "\\Switches\\Default Work Unit\\switch_results_screen_confirm\\hc",
+        "GUID": "{83AFF7FC-72F4-49E3-B9D0-180763DC4B81}"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{52BBA8CA-D0E1-5D85-0755-DAEF61AC67C4}"
+  "FileHash": "{D9778DCE-CAB0-7A53-1773-4FC9E2560615}"
  }
 }

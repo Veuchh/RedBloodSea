@@ -42,7 +42,7 @@ int UDwellerLinkSubsystem::AddDwellerToLink(UPossessTarget* dweller)
 
 			//Linking all dwellers
 			int index = dwellersInLink.IndexOfByKey(dweller);
-			if(dwellersInLink.Num() >= index+1)
+			if(dwellersInLink.Num() > index+1 && dwellersInLink.Num() - index > 2)
 			{
 				GEngine->AddOnScreenDebugMessage(-1, 5, FColor::Red, "Should initiate link");
 				for (int i = index+1; i < dwellersInLink.Num(); i++)

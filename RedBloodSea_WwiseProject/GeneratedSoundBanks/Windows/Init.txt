@@ -1,6 +1,20 @@
+Switch Group	ID	Name			Wwise Object Path	Notes
+	103781722	switch_results_music			\Default Work Unit\switch_results_music	
+	3898853262	switch_pause_music			\Default Work Unit\switch_pause_music	
+	4102952160	switch_results_screen_confirm			\Default Work Unit\switch_results_screen_confirm	
+
+Switch	ID	Name	Switch Group			Notes
+	2346738020	high_chaos	switch_results_music			
+	3407899128	low_chaos	switch_results_music			
+	1443861931	pause_low_chaos	switch_pause_music			
+	1854033137	pause_high_chaos	switch_pause_music			
+	1702304874	lc	switch_results_screen_confirm			
+	1769415222	hc	switch_results_screen_confirm			
+
 State Group	ID	Name			Wwise Object Path	Notes
 	459395562	state_aim			\Default Work Unit\state_aim	
 	1203368309	state_game			\Default Work Unit\state_game	
+	2837885159	state_death			\Default Work Unit\state_death	
 	4016824040	state_player			\Default Work Unit\state_player	
 	4122948419	state_combat			\Default Work Unit\state_combat	
 
@@ -12,6 +26,9 @@ State	ID	Name	State Group			Notes
 	748895195	None	state_game			
 	2607556080	menu	state_game			
 	4158285989	gameover	state_game			
+	655265632	alive	state_death			
+	748895195	None	state_death			
+	2044049779	dead	state_death			
 	223416773	offground	state_player			
 	748895195	None	state_player			
 	1200033591	onground	state_player			
@@ -27,6 +44,7 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	876333639	rtpc_tapestop			\Default Work Unit\rtpc_tapestop	
 	2860606227	rtpc_highfreqfilter_off_on			\Default Work Unit\rtpc_highfreqfilter_off_on	
 	2969259856	meter_sfx			\Default Work Unit\meter_sfx	
+	3014524554	rtpc_IsPlayerDead			\Default Work Unit\rtpc_IsPlayerDead	
 	3067876527	rtpc_sfx_bus			\Default Work Unit\Settings\BUS\rtpc_sfx_bus	
 	3432596327	rtpc_music_bus			\Default Work Unit\Settings\BUS\rtpc_music_bus	
 

@@ -177,10 +177,6 @@
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Play_3D_AMB" ID="{C11A3D36-BA50-43C3-8A72-29187D20295C}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}"/>
-							<Position X="1" Y="1"/>
-						</Module>
-						<Module>
 							<ObjectRef Name="SetCombatInWave" ID="{4DA437B0-D0CF-4D6F-84B6-3F134FD7EA1C}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}"/>
 							<Position X="1" Y="2"/>
 						</Module>
@@ -224,7 +220,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="rtpc_chaos_global" ID="{912B7FBA-E859-424B-9664-D9B8B51FC1BA}"/>
-							<Value>0</Value>
+							<Value>0.5</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="rtpc_settings_slider" ID="{CF91B134-4D3D-4381-A066-5A720C4CB494}"/>
@@ -241,6 +237,10 @@
 						<RTPCValue>
 							<GameParameterRef Name="rtpc_highfreqfilter_off_on" ID="{9D67A80A-4B5B-4616-A716-FC5EFCF47D77}"/>
 							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_chaos_no_interpolation" ID="{32A00591-7D0F-46D4-86CC-E57C780551F1}"/>
+							<Value>0.5</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="rtpc_mainmenumusicpitch" ID="{ED4A7616-4338-46E2-9ED1-5758709ACDDE}"/>
@@ -269,6 +269,10 @@
 						<RTPCValue>
 							<GameParameterRef Name="rtpc_music_bus" ID="{C084FC73-68C8-499E-96AC-E4DBE2F01DED}"/>
 							<Value>1</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_IsPlayerDead" ID="{93082E49-E80A-4A47-AC4C-2D7F096EDF12}"/>
+							<Value>0</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="rtpc_sfx_bus" ID="{1A0CC5AF-DF3D-4C7B-9E41-61A8E28F74EB}"/>
@@ -301,16 +305,18 @@
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="None" ID="{F55C3BA2-B06E-4139-88C5-13C67AEA9EF2}"/>
+						<CurrentStateRef Name="dead" ID="{348DE88E-BEE6-49C0-AB27-105646664E5D}"/>
 						<CurrentStateRef Name="None" ID="{E50472C8-63C0-46CA-8249-305F3BF374E9}"/>
-						<CurrentStateRef Name="aiming" ID="{4001CF9D-6974-45C4-A4E1-ADC83295A9E1}"/>
+						<CurrentStateRef Name="None" ID="{5874B239-37B2-4C50-9175-951DEAE60EF8}"/>
 						<CurrentStateRef Name="onground" ID="{5ADF1174-9E07-490C-82F9-C5039AEC4132}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="stone" ID="{F3CD2C36-B817-4A27-A1BC-96CFB220BA79}"/>
+						<CurrentSwitchRef Name="lc" ID="{F6B472FD-C557-43E9-8F52-E8758202397B}"/>
 						<CurrentSwitchRef Name="high_chaos" ID="{B785744B-290E-494F-9AB9-D67CF93D6C32}"/>
 						<CurrentSwitchRef Name="combat_wave_index_1" ID="{89F6AF0C-EEC7-47B3-B013-F708FF217ADC}"/>
 						<CurrentSwitchRef Name="stone" ID="{2C6048E5-583B-4043-92D1-BB6A8329AE1C}"/>
-						<CurrentSwitchRef Name="pause_high_chaos" ID="{810D37BC-B114-4941-922B-2D544C1072DB}"/>
+						<CurrentSwitchRef Name="pause_low_chaos" ID="{C4E1EB21-98A8-4D5E-BEC8-D86DE3924ECA}"/>
 						<CurrentSwitchRef Name="stone" ID="{8CD2D766-702D-4B5B-8D64-02CD0D130005}"/>
 						<CurrentSwitchRef Name="between_wave" ID="{0DD26233-048F-41A1-A6C7-12E5CAC1F7D1}"/>
 						<CurrentSwitchRef Name="link0" ID="{21730554-9A26-480E-BF82-5403DD91DA7F}"/>

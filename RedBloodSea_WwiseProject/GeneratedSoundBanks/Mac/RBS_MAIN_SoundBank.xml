@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="2890283282" Type="User" GUID="{1D2A39F0-30EC-4374-B60C-7E5FD97B8C24}" Language="SFX" Hash="{43CEEC18-93FB-2FDF-6FE9-929301AAE5E0}">
+		<SoundBank Id="2890283282" Type="User" GUID="{1D2A39F0-30EC-4374-B60C-7E5FD97B8C24}" Language="SFX" Hash="{22041561-9E0E-08F0-5F76-54C809006D5F}">
 			<ObjectPath>\SoundBanks\Default Work Unit\RBS_MAIN_SoundBank</ObjectPath>
 			<ShortName>RBS_MAIN_SoundBank</ShortName>
 			<Path>RBS_MAIN_SoundBank.bnk</Path>
@@ -103,6 +103,14 @@
 					<Path>Media/54222117.wem</Path>
 					<CachePath>SFX/RBS_SFX_PlayerFS GrassWalk 01L_EDCD4836.wem</CachePath>
 				</File>
+				<File Id="54403930" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI level transition v1.wav</ShortName>
+					<CachePath>SFX/UI level transition v1_348B0A4C.wem</CachePath>
+				</File>
+				<File Id="55809004" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI stinger endscreen lc v1.wav</ShortName>
+					<CachePath>SFX/UI stinger endscreen lc v1_EDCD4836.wem</CachePath>
+				</File>
 				<File Id="57368660" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_Jump 05.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_Jump 05_CC1628AB.wem</CachePath>
@@ -157,10 +165,6 @@
 				<File Id="74652244" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_LandingSurface1LowVel 01.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_LandingSurface1LowVel 01_EDCD4836.wem</CachePath>
-				</File>
-				<File Id="78466956" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>RBS_SFX_WeakpointReveal 2.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_WeakpointReveal 2_EDCD4836.wem</CachePath>
 				</File>
 				<File Id="82394113" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS ConcreteWalk 08R.wav</ShortName>
@@ -252,6 +256,10 @@
 					<Path>Media/110976486.wem</Path>
 					<CachePath>SFX/03 RBS_SFX_PlayerFS ConcreteGrittyWalk 03L_EDCD4836.wem</CachePath>
 				</File>
+				<File Id="111965076" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>fleur 05 v2.wav</ShortName>
+					<CachePath>SFX/fleur 05 v2_32A47F31.wem</CachePath>
+				</File>
 				<File Id="112661541" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>game paused - high chaos v1.wav</ShortName>
 					<CachePath>SFX/game paused - high chaos v1_D8A0D580.wem</CachePath>
@@ -299,6 +307,10 @@
 					<ShortName>RBS_SFX_TriggerStateFriendly.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_TriggerStateFriendly_EDCD4836.wem</CachePath>
 				</File>
+				<File Id="155781885" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>reveal spam layer-glued.wav</ShortName>
+					<CachePath>SFX/reveal spam layer-glued_4B5DD407.wem</CachePath>
+				</File>
 				<File Id="161513458" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_IdleStateAgressive.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_IdleStateAgressive_EDCD4836.wem</CachePath>
@@ -311,6 +323,10 @@
 				<File Id="164442144" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>UI hover SEQ v1.wav</ShortName>
 					<CachePath>SFX/UI hover SEQ v1_389BBE88.wem</CachePath>
+				</File>
+				<File Id="165370641" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>dweller killed.wav</ShortName>
+					<CachePath>SFX/dweller killed_79401428.wem</CachePath>
 				</File>
 				<File Id="167413559" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>13 RBS_SFX_PlayerFS ConcreteGrittyWalk 13R.wav</ShortName>
@@ -365,6 +381,10 @@
 					<ShortName>RBS_SFX_PlayerFS ConcreteRun 03L.wav</ShortName>
 					<Path>Media/202141324.wem</Path>
 					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteRun 03L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="205120078" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>weakpoint ui 2d-glued.wav</ShortName>
+					<CachePath>SFX/weakpoint ui 2d-glued_124D6CC1.wem</CachePath>
 				</File>
 				<File Id="207404832" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS GravelRun 01L.wav</ShortName>
@@ -444,10 +464,6 @@
 					<Path>Media/278434081.wem</Path>
 					<CachePath>SFX/RBS_SFX_FsSurface1 SurfacePebbleL3 04_EDCD4836.wem</CachePath>
 				</File>
-				<File Id="282353159" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>RBS_SFX_WeakpointReveal 1.wav</ShortName>
-					<CachePath>SFX/RBS_SFX_WeakpointReveal 1_EDCD4836.wem</CachePath>
-				</File>
 				<File Id="284729061" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS GrassWalk 09R.wav</ShortName>
 					<Path>Media/284729061.wem</Path>
@@ -471,6 +487,14 @@
 					<ShortName>RBS_SFX_DashGeneric 06.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_DashGeneric 06_058751D6.wem</CachePath>
 				</File>
+				<File Id="295667460" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI ending cards v1.wav</ShortName>
+					<CachePath>SFX/UI ending cards v1_EC7B33DA.wem</CachePath>
+				</File>
+				<File Id="300406748" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>reveal spam layer-glued.wav</ShortName>
+					<CachePath>SFX/reveal spam layer-glued_E9EF71F7.wem</CachePath>
+				</File>
 				<File Id="308564017" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>UI start game v1.wav</ShortName>
 					<CachePath>SFX/UI start game v1_C0B2AFBB.wem</CachePath>
@@ -483,6 +507,10 @@
 				<File Id="311192433" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_LinkRay_HighChaos 06.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_LinkRay_HighChaos 06_5ADFCF7F.wem</CachePath>
+				</File>
+				<File Id="311620096" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI stinger endscreen hc v1.wav</ShortName>
+					<CachePath>SFX/UI stinger endscreen hc v1_EDCD4836.wem</CachePath>
 				</File>
 				<File Id="312767996" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_PossessionAimStartBody.wav</ShortName>
@@ -561,10 +589,6 @@
 				<File Id="349437653" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_BasicSlashGeneric 09.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_BasicSlashGeneric 09_EDCD4836.wem</CachePath>
-				</File>
-				<File Id="351942325" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>fleur 04 v1 .wav</ShortName>
-					<CachePath>SFX/fleur 04 v1 _EDCD4836.wem</CachePath>
 				</File>
 				<File Id="352916239" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_HitNotOnWeakpoint 03.wav</ShortName>
@@ -716,9 +740,9 @@
 					<Path>Media/459603677.wem</Path>
 					<CachePath>SFX/RBS_SFX_PlayerFS RandLayerCloth 06_EDCD4836.wem</CachePath>
 				</File>
-				<File Id="464482500" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>fleur 05 v1 .wav</ShortName>
-					<CachePath>SFX/fleur 05 v1 _EDCD4836.wem</CachePath>
+				<File Id="464843651" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>weakpoint ui 2d-glued.wav</ShortName>
+					<CachePath>SFX/weakpoint ui 2d-glued_CEDE1F13.wem</CachePath>
 				</File>
 				<File Id="473270615" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS FootLiftGravel 07.wav</ShortName>
@@ -795,6 +819,10 @@
 					<Path>Media/511693741.wem</Path>
 					<CachePath>SFX/12 RBS_SFX_PlayerFS ConcreteGrittyWalk 12R_EDCD4836.wem</CachePath>
 				</File>
+				<File Id="512401419" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>reveal spam layer-glued.wav</ShortName>
+					<CachePath>SFX/reveal spam layer-glued_6393386A.wem</CachePath>
+				</File>
 				<File Id="517384302" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_FsSurface1 SurfacePebbleL2 02.wav</ShortName>
 					<Path>Media/517384302.wem</Path>
@@ -844,9 +872,17 @@
 					<ShortName>RBS_SFX_SlashHitGeneric 03.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_SlashHitGeneric 03_5718E4BF.wem</CachePath>
 				</File>
+				<File Id="552445204" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>fleur 04 v2.wav</ShortName>
+					<CachePath>SFX/fleur 04 v2_25CAA524.wem</CachePath>
+				</File>
 				<File Id="553816023" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_HitOnWeakpoint 06.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_HitOnWeakpoint 06_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="556590588" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>reveal spam layer-glued.wav</ShortName>
+					<CachePath>SFX/reveal spam layer-glued_9A08D9DD.wem</CachePath>
 				</File>
 				<File Id="557084528" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_PlayerFS SkidConcrete 01.wav</ShortName>
@@ -996,10 +1032,6 @@
 					<Path>Media/655272841.wem</Path>
 					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteGrittyRun 13R_EDCD4836.wem</CachePath>
 				</File>
-				<File Id="660138035" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>fleur 06 v1 .wav</ShortName>
-					<CachePath>SFX/fleur 06 v1 _EDCD4836.wem</CachePath>
-				</File>
 				<File Id="663610515" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS FootLiftConcrete 06.wav</ShortName>
 					<Path>Media/663610515.wem</Path>
@@ -1014,6 +1046,10 @@
 					<ShortName>RBS_SFX_PlayerFS FootLiftGrass 04.wav</ShortName>
 					<Path>Media/666945806.wem</Path>
 					<CachePath>SFX/RBS_SFX_PlayerFS FootLiftGrass 04_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="669893367" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WeakpointReveal V2 - stem-glued.wav</ShortName>
+					<CachePath>SFX/WeakpointReveal V2 - stem-glued_059E73E0.wem</CachePath>
 				</File>
 				<File Id="671097419" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS GravelWalk 12R.wav</ShortName>
@@ -1055,6 +1091,10 @@
 					<Path>Media/687771905.wem</Path>
 					<CachePath>SFX/RBS_SFX_PlayerFS GrassRun 04L_EDCD4836.wem</CachePath>
 				</File>
+				<File Id="700689431" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>dweller killed.wav</ShortName>
+					<CachePath>SFX/dweller killed_26C0710A.wem</CachePath>
+				</File>
 				<File Id="704646388" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Beam.wav</ShortName>
 					<CachePath>SFX/Beam_18EBAE5C.wem</CachePath>
@@ -1077,6 +1117,10 @@
 					<Path>Media/712393791.wem</Path>
 					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteGrittyRun 09R_EDCD4836.wem</CachePath>
 				</File>
+				<File Id="712907423" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>results - high chaos v1.wav</ShortName>
+					<CachePath>SFX/results - high chaos v1_D8A0D580.wem</CachePath>
+				</File>
 				<File Id="714637550" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_FsSurface1 SurfacePebbleL3 02.wav</ShortName>
 					<Path>Media/714637550.wem</Path>
@@ -1090,6 +1134,10 @@
 				<File Id="716875391" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_Jump 01.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_Jump 01_3B813005.wem</CachePath>
+				</File>
+				<File Id="718695763" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>fleur 06 v2 .wav</ShortName>
+					<CachePath>SFX/fleur 06 v2 _725D82BC.wem</CachePath>
 				</File>
 				<File Id="720617851" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>killing drums between wave 1.wav</ShortName>
@@ -1169,6 +1217,10 @@
 					<ShortName>RBS_SFX_PossessionSuccessful 02.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_PossessionSuccessful 02_EDCD4836.wem</CachePath>
 				</File>
+				<File Id="770724338" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI ending cards v1.wav</ShortName>
+					<CachePath>SFX/UI ending cards v1_AA1EE305.wem</CachePath>
+				</File>
 				<File Id="779505053" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_PossessionSuccessful 04.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_PossessionSuccessful 04_EDCD4836.wem</CachePath>
@@ -1240,6 +1292,10 @@
 					<ShortName>RBS_SFX_PlayerFS DirtRun 01L.wav</ShortName>
 					<Path>Media/826641107.wem</Path>
 					<CachePath>SFX/RBS_SFX_PlayerFS DirtRun 01L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="827912412" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>reveal spam layer-glued.wav</ShortName>
+					<CachePath>SFX/reveal spam layer-glued_9FD7F708.wem</CachePath>
 				</File>
 				<File Id="828588564" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS FootLiftGravel 03.wav</ShortName>
@@ -1468,6 +1524,10 @@
 					<Path>Media/937320572.wem</Path>
 					<CachePath>SFX/RBS_SFX_PlayerFS GrassWalk 08R_EDCD4836.wem</CachePath>
 				</File>
+				<File Id="937414046" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WeakpointReveal V2 - stem-glued.wav</ShortName>
+					<CachePath>SFX/WeakpointReveal V2 - stem-glued_97810B01.wem</CachePath>
+				</File>
 				<File Id="938463386" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS GrassRun 10R.wav</ShortName>
 					<Path>Media/938463386.wem</Path>
@@ -1536,6 +1596,14 @@
 					<Path>Media/981854182.wem</Path>
 					<CachePath>SFX/RBS_SFX_PlayerFS DirtRun 03L_EDCD4836.wem</CachePath>
 				</File>
+				<File Id="983662464" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>dweller killed.wav</ShortName>
+					<CachePath>SFX/dweller killed_1B5DBDDE.wem</CachePath>
+				</File>
+				<File Id="985104756" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI ending cards v1.wav</ShortName>
+					<CachePath>SFX/UI ending cards v1_373247B5.wem</CachePath>
+				</File>
 				<File Id="987297418" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_IdleStateFleeing.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_IdleStateFleeing_EDCD4836.wem</CachePath>
@@ -1558,6 +1626,10 @@
 				<File Id="991965346" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>continuous wind lc v2-glued.wav</ShortName>
 					<CachePath>SFX/continuous wind lc v2-glued_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="992398014" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>reveal spam layer-glued.wav</ShortName>
+					<CachePath>SFX/reveal spam layer-glued_59B7C2AE.wem</CachePath>
 				</File>
 				<File Id="992962217" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS RandLayerMetal 02.wav</ShortName>
@@ -1632,6 +1704,10 @@
 					<ShortName>RBS_SFX_LinkRay_LowChaos 05.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_LinkRay_LowChaos 05_A555D5DD.wem</CachePath>
 				</File>
+				<File Id="1037647236" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>reveal spam layer-glued.wav</ShortName>
+					<CachePath>SFX/reveal spam layer-glued_D61CC50F.wem</CachePath>
+				</File>
 				<File Id="1040154978" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>UI dropdown select click v1.wav</ShortName>
 					<CachePath>SFX/UI dropdown select click v1_F7D6734C.wem</CachePath>
@@ -1692,7 +1768,6 @@
 			<Events>
 				<Event Id="442966300" Name="Pause_MusCore" ObjectPath="\Events\Default Work Unit\Adaptative Music\Pause_MusCore" GUID="{A22E48FC-7D13-4807-8C72-799D2693C61B}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2980929675" Name="Pause_MusPaused" ObjectPath="\Events\Default Work Unit\Adaptative Music\Pause_MusPaused" GUID="{1B49BBFC-2152-46F9-A487-235414F48B78}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1485489414" Name="Play_3D_AMB" ObjectPath="\Events\Default Work Unit\World Environments\Play_3D_AMB" GUID="{C11A3D36-BA50-43C3-8A72-29187D20295C}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="626512180" Name="Play_AmbVSArena" ObjectPath="\Events\Default Work Unit\World Environments\Play_AmbVSArena" GUID="{5C124C78-CC34-46F4-9C11-1C65E3B16568}" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="38644957"/>
@@ -1755,16 +1830,27 @@
 						<MediaRef Id="1040154978"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1436212620" Name="Play_EndingCards" ObjectPath="\Events\Default Work Unit\UI Menu\Play_EndingCards" GUID="{CE039E54-25DF-4AB7-98FB-0DFAEC1F79C4}" DurationType="OneShot" DurationMin="1.1693735" DurationMax="1.1693735">
+					<MediaRefs>
+						<MediaRef Id="770724338"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1824944578" Name="Play_EnemyAttack" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyAttack" GUID="{8757F626-2B77-4AFB-967C-73D10FBBB945}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2396969962" Name="Play_EnemyDamageTaken" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyDamageTaken" GUID="{D429FCF1-2B13-44F7-982A-97C15E351D1F}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="3154146856" Name="Play_EnemyDeath" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyDeath" GUID="{CFA6D1F8-F109-42AC-8776-30618640504C}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="4196064164" Name="Play_EnemyFreed" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyFreed" GUID="{9BF54B9A-9795-4F59-B5B7-382DCECDEDA0}" MaxAttenuation="1500" DurationType="OneShot" DurationMin="5.0200624" DurationMax="5.0200624">
+				<Event Id="3154146856" Name="Play_EnemyDeath" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyDeath" GUID="{CFA6D1F8-F109-42AC-8776-30618640504C}" MaxAttenuation="1000" DurationType="OneShot" DurationMin="1.5754132" DurationMax="2.036429">
 					<MediaRefs>
-						<MediaRef Id="351942325"/>
-						<MediaRef Id="464482500"/>
+						<MediaRef Id="165370641"/>
+						<MediaRef Id="700689431"/>
+						<MediaRef Id="983662464"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4196064164" Name="Play_EnemyFreed" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyFreed" GUID="{9BF54B9A-9795-4F59-B5B7-382DCECDEDA0}" MaxAttenuation="1500" DurationType="OneShot" DurationMin="3.7458298" DurationMax="5.0200624">
+					<MediaRefs>
+						<MediaRef Id="111965076"/>
 						<MediaRef Id="479754115"/>
 						<MediaRef Id="523623228"/>
-						<MediaRef Id="660138035"/>
+						<MediaRef Id="552445204"/>
+						<MediaRef Id="718695763"/>
 						<MediaRef Id="1016388721"/>
 					</MediaRefs>
 					<AuxBusRefs>
@@ -1872,6 +1958,13 @@
 							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
+				</Event>
+				<Event Id="997337746" Name="Play_GamePaused" ObjectPath="\Events\Default Work Unit\UI Menu\Play_GamePaused" GUID="{EC660AF3-3298-4CDA-8704-746289A88FA8}" DurationType="OneShot" DurationMin="1.1693735" DurationMax="2.2176092">
+					<MediaRefs>
+						<MediaRef Id="295667460"/>
+						<MediaRef Id="770724338"/>
+						<MediaRef Id="985104756"/>
+					</MediaRefs>
 				</Event>
 				<Event Id="1055240968" Name="Play_GroundSlam" ObjectPath="\Events\Default Work Unit\Player\Play_GroundSlam" GUID="{0EA8C7C8-E2B6-47E0-A1A0-5E0263BCD84B}" DurationType="OneShot" DurationMin="1.773114" DurationMax="1.773114">
 					<MediaRefs>
@@ -1993,6 +2086,11 @@
 							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
+				</Event>
+				<Event Id="1861765957" Name="Play_Leveltransition" ObjectPath="\Events\Default Work Unit\UI Menu\Play_Leveltransition" GUID="{80A5CE36-5386-4479-82B3-EB9D7C88AA76}" DurationType="OneShot" DurationMin="6.646217" DurationMax="6.646217">
+					<MediaRefs>
+						<MediaRef Id="54403930"/>
+					</MediaRefs>
 				</Event>
 				<Event Id="149592781" Name="Play_LinkBroken" ObjectPath="\Events\Default Work Unit\Player Abilities\Play_LinkBroken" GUID="{4733C7A7-2EBB-4C9C-8450-F7E511F026B1}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="315265106" Name="Play_LinkRay0" ObjectPath="\Events\Default Work Unit\Z_DeprecatedEvents\Play_LinkRay0" GUID="{45EA5D2F-C0C5-49BF-9CCF-B944FF1C3EF8}" MaxAttenuation="126" DurationType="Infinite">
@@ -2227,9 +2325,21 @@
 				<Event Id="905172127" Name="Play_MusResults" ObjectPath="\Events\Default Work Unit\Adaptative Music\Play_MusResults" GUID="{94377A01-2A74-41E4-9FD0-F00C26A9984A}" DurationType="Infinite">
 					<SwitchContainers>
 						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="103781722" Id="0" GUID="{F9C3A9D3-A6F7-4890-B2FF-F8C4BF3D2B6B}"/>
+							<SwitchValue GroupType="Switch" GroupId="103781722" Id="2346738020" GUID="{B785744B-290E-494F-9AB9-D67CF93D6C32}"/>
+							<MediaRefs>
+								<MediaRef Id="712907423"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="103781722" Id="3407899128" GUID="{B5E5F26A-DB05-4475-8DC6-02CA8E5B49FE}"/>
 							<MediaRefs>
 								<MediaRef Id="942552018"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="103781722" Id="0" GUID="{F9C3A9D3-A6F7-4890-B2FF-F8C4BF3D2B6B}"/>
+							<MediaRefs>
+								<MediaRef Id="712907423"/>
 							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
@@ -2592,6 +2702,22 @@
 						<ActionSetStateEntry GroupId="459395562" Id="2165664365" Name="notaiming" ObjectPath="\States\Default Work Unit\state_aim\notaiming" GUID="{AD4DA154-B560-453D-8C38-7A73B45B33AF}"/>
 					</ActionSetState>
 				</Event>
+				<Event Id="1541310560" Name="Play_ResultsScreenConfirm" ObjectPath="\Events\Default Work Unit\UI Menu\Play_ResultsScreenConfirm" GUID="{E9A8C5A1-C93F-4582-B340-D7C1FC70EBAF}" DurationType="OneShot" DurationMin="21.739145" DurationMax="35.454563">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="4102952160" Id="1769415222" GUID="{83AFF7FC-72F4-49E3-B9D0-180763DC4B81}"/>
+							<MediaRefs>
+								<MediaRef Id="311620096"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="4102952160" Id="1702304874" GUID="{F6B472FD-C557-43E9-8F52-E8758202397B}" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="55809004"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
 				<Event Id="3069310083" Name="Play_SlashHitEnviro" ObjectPath="\Events\Default Work Unit\Player Abilities\Play_SlashHitEnviro" GUID="{6E8732AD-CC17-4320-B490-71E811880A65}" DurationType="OneShot" DurationMin="0.8034634" DurationMax="1.6844655">
 					<MediaRefs>
 						<MediaRef Id="221817756"/>
@@ -2653,10 +2779,19 @@
 						<MediaRef Id="327704471"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3575519807" Name="Play_WeakpointReveal" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_WeakpointReveal" GUID="{EB957F93-4066-48C3-A59E-1B00C3C1170A}" DurationType="OneShot" DurationMin="2.865729" DurationMax="4.714375">
+				<Event Id="3575519807" Name="Play_WeakpointReveal" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_WeakpointReveal" GUID="{EB957F93-4066-48C3-A59E-1B00C3C1170A}" DurationType="OneShot" DurationMin="2.9495223" DurationMax="3.8745105">
 					<MediaRefs>
-						<MediaRef Id="78466956"/>
-						<MediaRef Id="282353159"/>
+						<MediaRef Id="155781885"/>
+						<MediaRef Id="205120078"/>
+						<MediaRef Id="300406748"/>
+						<MediaRef Id="464843651"/>
+						<MediaRef Id="512401419"/>
+						<MediaRef Id="556590588"/>
+						<MediaRef Id="669893367"/>
+						<MediaRef Id="827912412"/>
+						<MediaRef Id="937414046"/>
+						<MediaRef Id="992398014"/>
+						<MediaRef Id="1037647236"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3047770368" Name="Reset_EnemyFreedSEQ" ObjectPath="\Events\Default Work Unit\Ai Behavior\Reset_EnemyFreedSEQ" GUID="{E63533DE-0823-47D1-BEC9-A2C25FB28428}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
@@ -2695,6 +2830,7 @@
 				<GameParameter Id="848976592" Name="rtpc_mainmenumusicpitch" ObjectPath="\Game Parameters\Default Work Unit\rtpc_mainmenumusicpitch" GUID="{ED4A7616-4338-46E2-9ED1-5758709ACDDE}"/>
 				<GameParameter Id="876333639" Name="rtpc_tapestop" ObjectPath="\Game Parameters\Default Work Unit\rtpc_tapestop" GUID="{34AB8051-BDEC-4FCF-A5A6-D129BA29D38F}"/>
 				<GameParameter Id="1410332996" Name="rtpc_settings_slider" ObjectPath="\Game Parameters\Default Work Unit\rtpc_settings_slider" GUID="{CF91B134-4D3D-4381-A066-5A720C4CB494}"/>
+				<GameParameter Id="2548911666" Name="rtpc_chaos_no_interpolation" ObjectPath="\Game Parameters\Default Work Unit\rtpc_chaos_no_interpolation" GUID="{32A00591-7D0F-46D4-86CC-E57C780551F1}"/>
 				<GameParameter Id="2570586536" Name="rtpc_landing_force" ObjectPath="\Game Parameters\Default Work Unit\rtpc_landing_force" GUID="{07DB1610-4113-4F81-A7B4-0C953E645162}"/>
 				<GameParameter Id="2690476865" Name="rtpc_player_walkspeed" ObjectPath="\Game Parameters\Default Work Unit\rtpc_player_walkspeed" GUID="{6437691A-43C2-473B-A671-C59F1A9E957B}"/>
 				<GameParameter Id="2696648837" Name="rtpc_dash_leftright" ObjectPath="\Game Parameters\Default Work Unit\rtpc_dash_leftright" GUID="{7894A474-E5D3-4187-925F-19042540CC04}"/>
@@ -2720,6 +2856,7 @@
 			</StateGroups>
 			<SwitchGroups>
 				<SwitchGroup Id="103781722" Name="switch_results_music" ObjectPath="\Switches\Default Work Unit\switch_results_music" GUID="{F9C3A9D3-A6F7-4890-B2FF-F8C4BF3D2B6B}">
+					<GameParameterRef Id="2548911666"/>
 					<Switches>
 						<Switch Id="2346738020" Name="high_chaos" ObjectPath="\Switches\Default Work Unit\switch_results_music\high_chaos" GUID="{B785744B-290E-494F-9AB9-D67CF93D6C32}"/>
 						<Switch Id="3407899128" Name="low_chaos" ObjectPath="\Switches\Default Work Unit\switch_results_music\low_chaos" GUID="{B5E5F26A-DB05-4475-8DC6-02CA8E5B49FE}"/>
@@ -2778,13 +2915,21 @@
 					</Switches>
 				</SwitchGroup>
 				<SwitchGroup Id="3898853262" Name="switch_pause_music" ObjectPath="\Switches\Default Work Unit\switch_pause_music" GUID="{A26C9464-58C4-4C7C-A3B1-A18AE110F6C9}">
+					<GameParameterRef Id="2548911666"/>
 					<Switches>
 						<Switch Id="1443861931" Name="pause_low_chaos" ObjectPath="\Switches\Default Work Unit\switch_pause_music\pause_low_chaos" GUID="{C4E1EB21-98A8-4D5E-BEC8-D86DE3924ECA}"/>
 						<Switch Id="1854033137" Name="pause_high_chaos" ObjectPath="\Switches\Default Work Unit\switch_pause_music\pause_high_chaos" GUID="{810D37BC-B114-4941-922B-2D544C1072DB}"/>
 					</Switches>
 				</SwitchGroup>
+				<SwitchGroup Id="4102952160" Name="switch_results_screen_confirm" ObjectPath="\Switches\Default Work Unit\switch_results_screen_confirm" GUID="{71AE5EB0-DF22-4877-8447-46CF9695E6C3}">
+					<GameParameterRef Id="2548911666"/>
+					<Switches>
+						<Switch Id="1702304874" Name="lc" ObjectPath="\Switches\Default Work Unit\switch_results_screen_confirm\lc" GUID="{F6B472FD-C557-43E9-8F52-E8758202397B}"/>
+						<Switch Id="1769415222" Name="hc" ObjectPath="\Switches\Default Work Unit\switch_results_screen_confirm\hc" GUID="{83AFF7FC-72F4-49E3-B9D0-180763DC4B81}"/>
+					</Switches>
+				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3395AB30-3C77-DD2F-AF89-2B88A93B681D}</FileHash>
+	<FileHash>{6335035C-D4EE-BAC3-1578-6B42FD237A1E}</FileHash>
 </SoundBanksInfo>

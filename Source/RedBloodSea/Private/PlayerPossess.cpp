@@ -251,7 +251,7 @@ void UPlayerPossess::AimModeToggling()
 		PlayerData::CurrentPossessState = PlayerPossessState::TogglingAimMode;
 		nextAllowedAction = UGameplayStatics::GetTimeSeconds(GetWorld()) + holdDelayToEnterAimingMode;
 	}
-	else if ((!isInputModeActionPressed || character->GetCharacterMovement()->IsFalling())
+	else if ((!isInputModeActionPressed || character->GetCharacterMovement()->IsFalling() ||PlayerData::CurrentAttackState != PlayerAttackState::None)
 		&& (PlayerData::CurrentPossessState == PlayerPossessState::TogglingAimMode
 			|| PlayerData::CurrentPossessState == PlayerPossessState::PossessAim))
 	{

@@ -302,7 +302,7 @@ void UPlayerCombat::ToggleAttackCollider(BufferableAttack attack, bool isToggled
 
 void UPlayerCombat::TryAddAttackToBuffer(BufferableAttack attackToAdd)
 {
-	if (!PlayerData::CanAddAttackToBuffer()
+	if (!PlayerData::CanAddAttackToBuffer(attackToAdd)
 		|| PlayerData::NextAllowedInputBufferTime > UGameplayStatics::GetRealTimeSeconds(GetWorld()))
 		return;
 

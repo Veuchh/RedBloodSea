@@ -124,17 +124,20 @@ bool PlayerData::CanRotateCamera()
 		|| CurrentPossessState == PlayerPossessState::PossessRecovery);
 }
 
-bool PlayerData::CanAddAttackToBuffer()
+bool PlayerData::CanAddAttackToBuffer(BufferableAttack attackToAdd)
 {
 	return
-		CurrentPossessState == PlayerPossessState::None;
+		CurrentPossessState == PlayerPossessState::None
+		|| (attackToAdd != BufferableAttack::Thrust);
 }
 
 bool PlayerData::CanAttack()
 {
 	return
 		CurrentAttackState == PlayerAttackState::None
-		&& CurrentPossessState == PlayerPossessState::None;
+		&& (CurrentPossessState == PlayerPossessState::None
+			||CurrentPossessState == PlayerPossessState::TogglingAimMode
+			|| CurrentPossessState == PlayerPossessState::PossessAim);
 }
 
 bool PlayerData::CanDash()
@@ -154,16 +157,18 @@ bool PlayerData::CanGroundSlam()
 bool PlayerData::CanEnterPossessMode()
 {
 	return
-		CurrentPossessState == PlayerPossessState::None
-	|| CurrentPossessState == PlayerPossessState::PossessAim
-	|| CurrentPossessState == PlayerPossessState::TogglingAimMode
-	|| CurrentPossessState == PlayerPossessState::PossessRecovery;
+		CurrentAttackState == PlayerAttackState::None
+		&& (CurrentPossessState == PlayerPossessState::None
+			|| CurrentPossessState == PlayerPossessState::PossessAim
+			|| CurrentPossessState == PlayerPossessState::TogglingAimMode
+			|| CurrentPossessState == PlayerPossessState::PossessRecovery);
 }
 
 bool PlayerData::CanUsePossess()
 {
 	return
-		(CurrentPossessState == PlayerPossessState::PossessAim  || CurrentPossessState == PlayerPossessState::PossessRecovery)
+		(CurrentPossessState == PlayerPossessState::PossessAim || CurrentPossessState ==
+			PlayerPossessState::PossessRecovery)
 		&& !IsDashing
 		&& CurrentAttackState == PlayerAttackState::None;
 }

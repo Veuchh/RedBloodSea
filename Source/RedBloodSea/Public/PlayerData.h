@@ -56,7 +56,7 @@ public:
 	static bool CanMove();
 	static bool CanJump();
 	static bool CanRotateCamera();
-	static bool CanAddAttackToBuffer();
+	static bool CanAddAttackToBuffer(BufferableAttack attackToAdd);
 	static bool CanAttack();
 	static bool CanDash();
 	static bool CanGroundSlam();

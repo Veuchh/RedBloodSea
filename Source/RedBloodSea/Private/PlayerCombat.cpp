@@ -336,7 +336,9 @@ void UPlayerCombat::OnGodModeToggle()
 void UPlayerCombat::DamagePlayer(int damageAmount, AActor* damageSource)
 {
 	if (PlayerData::IsGodModeEnabled
-		|| PlayerData::LastHitTime + recoveryTimeDuration >= UGameplayStatics::GetRealTimeSeconds(GetWorld()))
+		|| PlayerData::LastHitTime + recoveryTimeDuration >= UGameplayStatics::GetRealTimeSeconds(GetWorld())
+		||PlayerData::CurrentPossessState == PlayerPossessState::ZoomingCamera
+		||PlayerData::CurrentPossessState == PlayerPossessState::PossessRecovery)
 	{
 		return;
 	}

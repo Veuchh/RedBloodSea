@@ -12,12 +12,14 @@
 					</ChildrenList>
 				</StateGroup>
 				<StateGroup Name="state_combat" ID="{E2ED0219-9E42-4468-B342-0147362BCCBB}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="2.5"/>
+					</PropertyList>
 					<ChildrenList>
 						<State Name="None" ID="{E50472C8-63C0-46CA-8249-305F3BF374E9}"/>
 						<State Name="combat" ID="{76879D96-6B91-483E-85DC-B7B10E438F7F}"/>
-						<State Name="nocombat" ID="{AAB602C5-F1F4-4844-B273-85D5A38E9869}"/>
-						<State Name="combat_pause" ID="{9BFC024D-B53E-4B56-9581-972C69A27B4F}"/>
-						<State Name="combat_end" ID="{20C46DC0-57AA-4780-A143-614081F377B0}"/>
+						<State Name="intro" ID="{AAB602C5-F1F4-4844-B273-85D5A38E9869}"/>
+						<State Name="betweenwave" ID="{FF2C5CA1-53C4-423E-AF83-8785851A7F1B}"/>
 					</ChildrenList>
 				</StateGroup>
 				<StateGroup Name="state_player" ID="{D4DB4710-70CC-4DF7-A9D1-0E3F26193BCC}">
@@ -38,6 +40,16 @@
 						<State Name="None" ID="{5874B239-37B2-4C50-9175-951DEAE60EF8}"/>
 						<State Name="aiming" ID="{4001CF9D-6974-45C4-A4E1-ADC83295A9E1}"/>
 						<State Name="notaiming" ID="{AD4DA154-B560-453D-8C38-7A73B45B33AF}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="state_death" ID="{425BAD64-2896-4468-AB99-79261A8FC569}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0.1"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{35E2CE23-564D-4C36-B4CA-8C8E650E1F1B}"/>
+						<State Name="alive" ID="{807D8C35-2D07-4BB8-962F-C1AC99DA4FDC}"/>
+						<State Name="dead" ID="{348DE88E-BEE6-49C0-AB27-105646664E5D}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>

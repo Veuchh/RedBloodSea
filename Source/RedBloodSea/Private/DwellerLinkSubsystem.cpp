@@ -17,7 +17,8 @@ void UDwellerLinkSubsystem::Deinitialize()
 
 void UDwellerLinkSubsystem::ResetLink()
 {
-	UPossessTarget* currentlyPossessedDweller = dwellersInLink[dwellersInLink.Num() - 1];
+	if(!dwellersInLink.IsEmpty())
+		UPossessTarget* currentlyPossessedDweller = dwellersInLink[dwellersInLink.Num() - 1];
 	dwellersInLink.Empty();
 
 	for (int i = instantiatedLinksVFX.Num() - 1; i >= 0; i--)
@@ -29,29 +30,33 @@ void UDwellerLinkSubsystem::ResetLink()
 }
 
 
-bool UDwellerLinkSubsystem::AddDwellerToLink(UPossessTarget* dweller)
+int UDwellerLinkSubsystem::AddDwellerToLink(UPossessTarget* dweller)
 {
-	bool wasLinked = false;
+	int linkedEnemies = 0;
 	if (dwellersInLink.Contains(dweller))
 	{
 		//This is the case where we possess the last possessed ennemy
-		if (dwellersInLink.Num() <= 1 || dwellersInLink[dwellersInLink.Num() - 2] != dweller)
-		{
-			wasLinked = true;
-			GEngine->AddOnScreenDebugMessage(-1, 5, FColor::Red, "Should initiate link");
+		// if (dwellersInLink.Num() <= 1 || dwellersInLink[dwellersInLink.Num() - 2] != dweller)
+		// {
+			//GEngine->AddOnScreenDebugMessage(-1, 5, FColor::Red, "Should initiate link");
 
 			//Linking all dwellers
-			for (int i = dwellersInLink.Num() - 1; i >= 0; i--)
+			int index = dwellersInLink.IndexOfByKey(dweller);
+			if(dwellersInLink.Num() > index+1 && dwellersInLink.Num() - index > 2)
 			{
-				//Except the one we are currently possessing
-				if (dwellersInLink[i] == dweller)
+				GEngine->AddOnScreenDebugMessage(-1, 5, FColor::Red, "Should initiate link");
+				for (int i = index+1; i < dwellersInLink.Num(); i++)
 				{
-					break;
+					//Except the one we are currently possessing
+					if (dwellersInLink[i] == dweller)
+					{
+						break;
+					}
+					linkedEnemies++;
+					dwellersInLink[i]->Link();
 				}
-				
-				dwellersInLink[i]->Link();
 			}
-		}
+		// }
 
 		ResetLink();
 	}
@@ -75,7 +80,7 @@ bool UDwellerLinkSubsystem::AddDwellerToLink(UPossessTarget* dweller)
 
 	GEngine->AddOnScreenDebugMessage(-1, 5, FColor::Red, "Adding dweller to link list");
 	dwellersInLink.Add(dweller);
-	return wasLinked;
+	return linkedEnemies;
 }
 
 void UDwellerLinkSubsystem::OnDwellerKilled(UPossessTarget* killedDweller)

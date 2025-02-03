@@ -21,12 +21,12 @@
 				</Property>
 				<Property Name="ExternalSourcesOutputPath" Type="string">
 					<ValueList>
-						<Value Platform="Mac">GeneratedSoundBanks\Mac\</Value>
-						<Value Platform="Windows">GeneratedSoundBanks\Windows\</Value>
+						<Value Platform="Mac">GeneratedSoundBanks\Mac</Value>
+						<Value Platform="Windows">GeneratedSoundBanks\Windows</Value>
 					</ValueList>
 				</Property>
 				<Property Name="LicenseKey" Type="string" Value="PHByb2plY3QgaWQ9IjYwODciIG1hc2s9IkRKU1A1OTM0IiBlbmM9IjAiPjxsaWNlbnNlIGlkPSIxIiBuYW1lPSJXd2lzZSIgdHlwZT0iMyIgcGxhdGZvcm1zPSIyLDMsNCwxMCwxMywxNCIgZXhwaXJlcz0iMjAyNS0xMC0yOCIgIC8+PGxpY2Vuc2UgaWQ9IjIyIiBuYW1lPSJMZXZlbCBBIExpY2Vuc2UiIHR5cGU9IjMiIHBsYXRmb3Jtcz0iMiwzLDQsMTAsMTMsMTQiIGV4cGlyZXM9IjIwMjUtMTAtMjgiICAvPjxsaWNlbnNlIGlkPSIyMSIgbmFtZT0iTWFpbnRlbmFuY2UiIHR5cGU9IjMiIHBsYXRmb3Jtcz0iMiwzLDQsMTAsMTMsMTQiIGV4cGlyZXM9IjIwMjUtMTAtMjgiICAvPjxsaWNlbnNlIGlkPSIyNSIgbmFtZT0iQWxsIFd3aXNlIFBsdWctSW5zIiB0eXBlPSIzIiAgZXhwaXJlcz0iMjAyNS0xMC0yOCIgIC8+PGxpY2Vuc2UgaWQ9IjYiIG5hbWU9Ild3aXNlIENvbnZvbHV0aW9uIFJldmVyYiIgdHlwZT0iMyIgcGxhdGZvcm1zPSIyLDMsNCwxMCwxNCIgZXhwaXJlcz0iMjAyMy0wNy0zMSIgIC8+PHBsdWdpbiBpZD0iODMyMzA3NSIgbmFtZT0iV3dpc2UgQ29udm9sdXRpb24gUmV2ZXJiIiBsaWNlbnNlPSI2IiAvPjwvcHJvamVjdD4=|vF0ZB+8Y+AK9IzpuzDAficlvkfPyrpi72epEkGC2ZPDsZd8S5+Gq6ugrPeGUcJ1Fv3CkvpHVNPJu2dqXilmX0qChp8OIGLscKoXcw3dlo2IBqoGDaalWRABgV6pCMIkYpaMjDEHYQYUf4oDAfyvAUGWOPLtBY+bYhC0UH2aZZ82JbL6OdWoFVC6zDjOwftr48nBCbE+ndMEtxTJoQ2Z0Ol0mgUiVL9LIPDjVlQaeFWihM2/fs6Dp+5zpmuA6jSY+s/KMJ6ziEDi4EhhZtAt+XAqVvar4jYQs4sq+t3FuSw6vGdGhzc3rRm941mxVkvSREVlKMKihyDkQTn06+TYhcw=="/>
-				<Property Name="SoundBankHeaderFilePath" Type="string" Value="GeneratedSoundBanks\"/>
+				<Property Name="SoundBankHeaderFilePath" Type="string" Value="GeneratedSoundBanks"/>
 				<Property Name="SoundBankPaths" Type="string">
 					<ValueList>
 						<Value Platform="Mac">GeneratedSoundBanks\Mac\</Value>
@@ -59,6 +59,10 @@
 				</Property>
 				<Property Name="WwiseVersionWhenCreated" Type="string" Value="Branch=wwise_v2023.1.7|Build=8574|VersionName=v2023.1.7|Config=Release"/>
 			</PropertyList>
+			<MiscSettings>
+				<MiscSettingEntry Name="Cache"><![CDATA[.cache]]></MiscSettingEntry>
+				<MiscSettingEntry Name="Originals"><![CDATA[Originals]]></MiscSettingEntry>
+			</MiscSettings>
 			<SharedValues>
 				<SharedPropertyList ClassName="AudioFileSource" PluginType="0" CompanyID="1" PluginID="0">
 					<PropertyList>
@@ -12587,7 +12591,7 @@
 				<ObsOccCurves>
 					<Comment></Comment>
 					<ObsOccCurve CurveXType="Obstruction" CurveYType="Volume">
-						<PlatformCurve Platform="Linked" EnableCurve="true">
+						<PlatformCurve Platform="Linked" EnableCurve="false">
 							<Curve Name="" ID="{00952F65-7B32-4D60-AED9-7AB353EC3ADD}">
 								<PropertyList>
 									<Property Name="Flags" Type="int32" Value="3"/>
@@ -12608,7 +12612,7 @@
 						</PlatformCurve>
 					</ObsOccCurve>
 					<ObsOccCurve CurveXType="Obstruction" CurveYType="LPF">
-						<PlatformCurve Platform="Linked" EnableCurve="true">
+						<PlatformCurve Platform="Linked" EnableCurve="false">
 							<Curve Name="" ID="{0499289A-0739-4CAE-AD3C-984120E8A604}">
 								<PropertyList>
 									<Property Name="Flags" Type="int32" Value="1"/>
@@ -12650,7 +12654,7 @@
 						</PlatformCurve>
 					</ObsOccCurve>
 					<ObsOccCurve CurveXType="Occlusion" CurveYType="Volume">
-						<PlatformCurve Platform="Linked" EnableCurve="true">
+						<PlatformCurve Platform="Linked" EnableCurve="false">
 							<Curve Name="" ID="{710B34FD-58D6-4B3B-B71E-032C35DEB679}">
 								<PropertyList>
 									<Property Name="Flags" Type="int32" Value="3"/>
@@ -12671,7 +12675,7 @@
 						</PlatformCurve>
 					</ObsOccCurve>
 					<ObsOccCurve CurveXType="Occlusion" CurveYType="LPF">
-						<PlatformCurve Platform="Linked" EnableCurve="true">
+						<PlatformCurve Platform="Linked" EnableCurve="false">
 							<Curve Name="" ID="{4A810D5A-DEBB-4B3B-B49C-B4AA69494EEC}">
 								<PropertyList>
 									<Property Name="Flags" Type="int32" Value="1"/>

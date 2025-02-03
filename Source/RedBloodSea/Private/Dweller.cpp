@@ -24,6 +24,11 @@ void ADweller::EndPlay(const EEndPlayReason::Type EndPlayReason)
 	Super::EndPlay(EndPlayReason);
 }
 
+void ADweller::Destroyed()
+{
+	Super::Destroyed();
+}
+
 UWeakpointsManager* ADweller::GetWeakpointManager()
 {
 	return WeakpointsManager;

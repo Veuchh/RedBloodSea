@@ -17,6 +17,7 @@ public:
 	// Sets default values for this character's properties
 	ADweller();
 	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
+	virtual void Destroyed() override;
 	UWeakpointsManager* GetWeakpointManager();
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="AI")

@@ -24,6 +24,8 @@ class ARedBloodSeaCharacter : public ACharacter
 	UPlayerInputHandler* PlayerInputHandler;
 
 public:
+	UFUNCTION(BluePrintCallable, BlueprintPure, Category = "WorldState", meta = (DisplayName = "IsTearingDown", DefaultToSelf = caller, HidePin = caller))
+	static void K2_IsTearingDown(UObject* caller, bool& isTearingDown);
 	ARedBloodSeaCharacter();
 
 protected:

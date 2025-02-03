@@ -1,6 +1,20 @@
+Switch Group	ID	Name			Wwise Object Path	Notes
+	103781722	switch_results_music			\Default Work Unit\switch_results_music	
+	3898853262	switch_pause_music			\Default Work Unit\switch_pause_music	
+	4102952160	switch_results_screen_confirm			\Default Work Unit\switch_results_screen_confirm	
+
+Switch	ID	Name	Switch Group			Notes
+	2346738020	high_chaos	switch_results_music			
+	3407899128	low_chaos	switch_results_music			
+	1443861931	pause_low_chaos	switch_pause_music			
+	1854033137	pause_high_chaos	switch_pause_music			
+	1702304874	lc	switch_results_screen_confirm			
+	1769415222	hc	switch_results_screen_confirm			
+
 State Group	ID	Name			Wwise Object Path	Notes
 	459395562	state_aim			\Default Work Unit\state_aim	
 	1203368309	state_game			\Default Work Unit\state_game	
+	2837885159	state_death			\Default Work Unit\state_death	
 	4016824040	state_player			\Default Work Unit\state_player	
 	4122948419	state_combat			\Default Work Unit\state_combat	
 
@@ -12,31 +26,45 @@ State	ID	Name	State Group			Notes
 	748895195	None	state_game			
 	2607556080	menu	state_game			
 	4158285989	gameover	state_game			
+	655265632	alive	state_death			
+	748895195	None	state_death			
+	2044049779	dead	state_death			
 	223416773	offground	state_player			
 	748895195	None	state_player			
 	1200033591	onground	state_player			
 	748895195	None	state_combat			
-	2392706382	combat_pause	state_combat			
+	1125500713	intro	state_combat			
+	2373432776	betweenwave	state_combat			
 	2764240573	combat	state_combat			
-	2887812511	combat_end	state_combat			
-	2930212484	nocombat	state_combat			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
+	88991926	rtpc_master_bus			\Default Work Unit\Settings\BUS\rtpc_master_bus	
 	115866790	rtpc_amb_bus			\Default Work Unit\Settings\BUS\rtpc_amb_bus	
-	2332098030	rtpc_enemy_bus			\Default Work Unit\Settings\BUS\rtpc_enemy_bus	
+	600133661	rtpc_high_freq_filter			\Default Work Unit\rtpc_high_freq_filter	
+	876333639	rtpc_tapestop			\Default Work Unit\rtpc_tapestop	
+	2860606227	rtpc_highfreqfilter_off_on			\Default Work Unit\rtpc_highfreqfilter_off_on	
+	2969259856	meter_sfx			\Default Work Unit\meter_sfx	
+	3014524554	rtpc_IsPlayerDead			\Default Work Unit\rtpc_IsPlayerDead	
 	3067876527	rtpc_sfx_bus			\Default Work Unit\Settings\BUS\rtpc_sfx_bus	
 	3432596327	rtpc_music_bus			\Default Work Unit\Settings\BUS\rtpc_music_bus	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
-	661188923	EnemyBus			\Default Work Unit\Master Audio Bus\EnemyBus	
-	2886307548	MusicBus			\Default Work Unit\Master Audio Bus\MusicBus	
-	2894416467	AmbBus			\Default Work Unit\Master Audio Bus\AmbBus	
+	393239870	SFX			\Default Work Unit\Master Audio Bus\StereoBus\SFX	
+	466672200	PlayerAbilities			\Default Work Unit\Master Audio Bus\StereoBus\SFX\PlayerAbilities	
+	661188923	EnemyBus			\Default Work Unit\Master Audio Bus\StereoBus\SFX\EnemyBus	
+	1991350473	StereoBus			\Default Work Unit\Master Audio Bus\StereoBus	
+	2886307548	MusicBus			\Default Work Unit\Master Audio Bus\StereoBus\MusicBus	
+	2894416467	AmbBus			\Default Work Unit\Master Audio Bus\StereoBus\AmbBus	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
-	3966895392	PlayerBus			\Default Work Unit\Master Audio Bus\PlayerBus	
-	4150757691	PlayerFPS			\Default Work Unit\Master Audio Bus\PlayerBus\PlayerFPS	
+	3966895392	PlayerBus			\Default Work Unit\Master Audio Bus\StereoBus\SFX\PlayerBus	
+	4150757691	PlayerFPS			\Default Work Unit\Master Audio Bus\StereoBus\SFX\PlayerBus\PlayerFPS	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	253666666	LevelVerb			\Default Work Unit\Master Audio Bus\StereoBus\LevelVerb	
 
 Effect plug-ins	ID	Name	Type				Notes
-	4239446561	Dual_Filters_Narrow_Bandwidth	Wwise Parametric EQ			
+	2224135639	Level_Verb	Wwise RoomVerb			
+	3626272192	HIGH_FREQUENCY_CUT_FILTER	Wwise Parametric EQ			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

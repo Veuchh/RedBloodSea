@@ -302,7 +302,7 @@ void UPlayerCombat::ToggleAttackCollider(BufferableAttack attack, bool isToggled
 
 void UPlayerCombat::TryAddAttackToBuffer(BufferableAttack attackToAdd)
 {
-	if (!PlayerData::CanAddAttackToBuffer()
+	if (!PlayerData::CanAddAttackToBuffer(attackToAdd)
 		|| PlayerData::NextAllowedInputBufferTime > UGameplayStatics::GetRealTimeSeconds(GetWorld()))
 		return;
 
@@ -336,7 +336,9 @@ void UPlayerCombat::OnGodModeToggle()
 void UPlayerCombat::DamagePlayer(int damageAmount, AActor* damageSource)
 {
 	if (PlayerData::IsGodModeEnabled
-		|| PlayerData::LastHitTime + recoveryTimeDuration >= UGameplayStatics::GetRealTimeSeconds(GetWorld()))
+		|| PlayerData::LastHitTime + recoveryTimeDuration >= UGameplayStatics::GetRealTimeSeconds(GetWorld())
+		||PlayerData::CurrentPossessState == PlayerPossessState::ZoomingCamera
+		||PlayerData::CurrentPossessState == PlayerPossessState::PossessRecovery)
 	{
 		return;
 	}

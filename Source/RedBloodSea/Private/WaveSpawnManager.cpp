@@ -24,6 +24,7 @@ void AWaveSpawnManager::BeginPlay()
 	
 	CurrentWave = 0;
 	WavePrepare();
+	StartTime = FDateTime::Now();
 }
 
 // Called every frame
@@ -55,7 +56,8 @@ void AWaveSpawnManager::Tick(float DeltaTime)
 		if(AliveDwellers.IsEmpty() && bIsActive)
 		{
 			bIsActive = false;
-			WaveEnd();
+			if(bWaveInProgress)
+				WaveEnd();
 		}
 	}
 }
@@ -84,6 +86,7 @@ void AWaveSpawnManager::WavePrepare()
 void AWaveSpawnManager::WaveStart()
 {
 	bIsActive = true;
+	bWaveInProgress = true;
 	SetActorTickEnabled(true);
 	ClearAliveDwellers(false);
 	QueueWave(CurrentWave);
@@ -101,6 +104,18 @@ void AWaveSpawnManager::WaveStart()
 										   Waves[CurrentWave].Duration, false);
 		}
 	}
+	
+	OnWaveStart.Broadcast();
+	
+	for (auto Gate : Waves[CurrentWave].GatingDurring)
+	{
+		if(IsValid(Gate.Key))
+		{
+			Gate.Key->SetActorHiddenInGame(!Gate.Value);
+
+			Gate.Key->SetActorEnableCollision(Gate.Value);
+		}
+	}
 
 	if(Waves[CurrentWave].Type ==  EWaveType::CHECKPOINT && IsValid(Waves[CurrentWave].CheckpointTriggerZone))
 	{
@@ -114,23 +129,14 @@ void AWaveSpawnManager::WaveStart()
 			WaveEnd();
 		}
 	}
-	for (auto Gate : Waves[CurrentWave].GatingDurring)
-	{
-		if(IsValid(Gate.Key))
-		{
-			Gate.Key->SetActorHiddenInGame(!Gate.Value);
 
-			Gate.Key->SetActorEnableCollision(Gate.Value);
-		}
-	}
-
-	OnWaveStart.Broadcast();
 }
 
 
 void AWaveSpawnManager::WaveEnd()
 {
  	bIsActive = false;
+	bWaveInProgress = false;
 	SpawnQueue.Empty();
 	SetActorTickEnabled(false);
 	Waves[CurrentWave].EndTime = FDateTime::Now();
@@ -148,6 +154,7 @@ void AWaveSpawnManager::WaveEnd()
 		dwellerLinkSU->ResetLink();
 	} else
 	{
+		EndTime = FDateTime::Now();
 		OnLevelEnd.Broadcast();
 	}
 }
@@ -161,7 +168,9 @@ void AWaveSpawnManager::WaveFail()
 void AWaveSpawnManager::WaveReset()
 {
 	bIsActive = false;
+	bWaveInProgress= false;
 	SetActorTickEnabled(false);
+	StartTime = FDateTime::Now();
 	SpawnQueue.Empty();
 	GetWorld()->GetTimerManager().ClearAllTimersForObject(this);
 	if(Waves[CurrentWave].Type == EWaveType::CHECKPOINT && IsValid(Waves[CurrentWave].CheckpointTriggerZone))
@@ -257,7 +266,7 @@ void AWaveSpawnManager::OnDwellerDeath(AActor* DwellerActor)
 		if(AliveDwellers.Remove(Dweller) > 0)
 			Waves[CurrentWave].DwellerKilled++;
 	}
-	if(CheckObjectives() && Waves[CurrentWave].Type != EWaveType::CHECKPOINT)
+	if(bWaveInProgress && CheckObjectives() && Waves[CurrentWave].Type != EWaveType::CHECKPOINT)
 	{
 		WaveEnd();
 	}
@@ -271,7 +280,7 @@ void AWaveSpawnManager::OnDwellerLinked(AActor* Actor)
 		if(AliveDwellers.Remove(Dweller) > 0)
 			Waves[CurrentWave].DwellerLinked++;
 	}
-	if(CheckObjectives() && Waves[CurrentWave].Type != EWaveType::CHECKPOINT)
+	if(bWaveInProgress && CheckObjectives() && Waves[CurrentWave].Type != EWaveType::CHECKPOINT)
 	{
 		WaveEnd();
 	}
@@ -310,7 +319,8 @@ void AWaveSpawnManager::OnCheckpointBeginOverlap(AActor* OverlapedActor, AActor*
 {
 	Waves[CurrentWave].CheckpointTriggerZone->OnActorBeginOverlap.RemoveDynamic(this,&AWaveSpawnManager::OnCheckpointBeginOverlap);
 	Waves[CurrentWave].CheckpointTriggerZone->SetActorHiddenInGame(true);
-	WaveEnd();
+	if(bWaveInProgress)
+		WaveEnd();
 }
 
 #if WITH_EDITOR

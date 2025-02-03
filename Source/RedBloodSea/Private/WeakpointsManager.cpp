@@ -24,7 +24,7 @@ void UWeakpointsManager::BeginPlay()
 	Owner = GetOwner();
 	Skeleton = Cast<USkeletalMeshComponent>(Owner->GetComponentByClass(USkeletalMeshComponent::StaticClass()));
 	CreateWeakPoints();
-	CountSubSys = Cast<UUDataSubsystem>(GetWorld()->GetGameInstance()->GetSubsystem<UUDataSubsystem>());
+	//CountSubSys = Cast<UUDataSubsystem>(GetWorld()->GetGameInstance()->GetSubsystem<UUDataSubsystem>());
 }
 
 
@@ -249,7 +249,7 @@ void UWeakpointsManager::RemoveWeakpoint(AWeakpoint* weakpoint, bool canDestroyH
 			possessTarget->OnKilled();
 		}
 		OnDeath.Broadcast(Owner);
-		CountSubSys->OnKill.Broadcast();
+		//CountSubSys->OnKill.Broadcast();
 		//Owner->Destroy();
 	}
 }

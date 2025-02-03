@@ -251,13 +251,13 @@ void UPlayerPossess::AimModeToggling()
 		PlayerData::CurrentPossessState = PlayerPossessState::TogglingAimMode;
 		nextAllowedAction = UGameplayStatics::GetTimeSeconds(GetWorld()) + holdDelayToEnterAimingMode;
 	}
-	else if ((!isInputModeActionPressed || character->GetCharacterMovement()->IsFalling() ||PlayerData::CurrentAttackState != PlayerAttackState::None)
+	else if ((!isInputModeActionPressed || character->GetCharacterMovement()->IsFalling() ||
+			PlayerData::CurrentAttackState != PlayerAttackState::None || PlayerData::IsDashing)
 		&& (PlayerData::CurrentPossessState == PlayerPossessState::TogglingAimMode
 			|| PlayerData::CurrentPossessState == PlayerPossessState::PossessAim))
 	{
 		OnPossessAimStop.Broadcast();
 		PlayerData::CurrentPossessState = PlayerPossessState::None;
-		GEngine->AddOnScreenDebugMessage(-1, 5, FColor::Purple, "Falling => Deactivating");
 		isInputModeActionPressed = false;
 	}
 }

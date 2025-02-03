@@ -111,7 +111,9 @@ bool PlayerData::CanMove()
 bool PlayerData::CanJump()
 {
 	return
-		CurrentPossessState == PlayerPossessState::None;
+	CurrentPossessState == PlayerPossessState::None
+		|| CurrentPossessState == PlayerPossessState::TogglingAimMode
+		|| CurrentPossessState == PlayerPossessState::PossessAim;
 }
 
 bool PlayerData::CanRotateCamera()
@@ -144,7 +146,9 @@ bool PlayerData::CanDash()
 {
 	return
 		!IsDashing
-		&& CurrentPossessState == PlayerPossessState::None;
+		&& (CurrentPossessState == PlayerPossessState::None
+			|| CurrentPossessState == PlayerPossessState::TogglingAimMode
+			|| CurrentPossessState == PlayerPossessState::PossessAim);
 }
 
 bool PlayerData::CanGroundSlam()

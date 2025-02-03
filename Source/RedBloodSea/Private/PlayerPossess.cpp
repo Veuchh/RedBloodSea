@@ -33,13 +33,14 @@ void UPlayerPossess::SetupPlayerPossessComponent(ACharacter* Character,
 	FActorSpawnParameters SpawnInfo;
 	ADweller* newDwellerInstance = GetWorld()->SpawnActor<ADweller>(dwellerBP, Location, Rotation, SpawnInfo);
 
-	AWaveSpawnManager* waveSpawnManager = (AWaveSpawnManager*)UGameplayStatics::GetActorOfClass(GetWorld(), AWaveSpawnManager::StaticClass());
+	AWaveSpawnManager* waveSpawnManager = (AWaveSpawnManager*)UGameplayStatics::GetActorOfClass(
+		GetWorld(), AWaveSpawnManager::StaticClass());
 
 	if (waveSpawnManager != nullptr)
 	{
 		waveSpawnManager->AddDweller(newDwellerInstance);
 	}
-	
+
 	PlayerData::CurrentPossessTarget = newDwellerInstance->GetComponentByClass<UPossessTarget>();
 	PossessDweller();
 	UpdatePlayerHealth();
@@ -175,19 +176,17 @@ void UPlayerPossess::PossessRecoveryTick()
 {
 	if (UGameplayStatics::GetTimeSeconds(GetWorld()) >= nextAllowedAction)
 	{
-		PlayerData::CurrentPossessState = PlayerPossessState::None;
-		OnPossessAimStop.Broadcast();
+		PlayerData::CurrentPossessState = PlayerPossessState::PossessAim;
 	}
 }
 
 
 void UPlayerPossess::PossessDweller()
 {
-	GEngine->AddOnScreenDebugMessage(-1, 5, FColor::Purple, "PossessDweller");
 	PlayerData::CurrentPossessTarget->Possess();
-	int linkedAmount= dwellerLinkSU->AddDwellerToLink(PlayerData::CurrentPossessTarget);
-	
-	if(linkedAmount>0)
+	int linkedAmount = dwellerLinkSU->AddDwellerToLink(PlayerData::CurrentPossessTarget);
+
+	if (linkedAmount > 0)
 	{
 		OnLinkInitiated.Broadcast(linkedAmount);
 	}
@@ -211,13 +210,13 @@ void UPlayerPossess::TickComponent(float DeltaTime, ELevelTick TickType, FActorC
 	bool isAimingAtTarget = false;
 	if (Hit.bBlockingHit && IsValid(Hit.GetActor()))
 	{
-		isAimingAtTarget= Hit.GetActor()->GetComponentByClass<UPossessTarget>() != nullptr;
+		isAimingAtTarget = Hit.GetActor()->GetComponentByClass<UPossessTarget>() != nullptr;
 	}
 
-	if (wasAimingAtTarget!= isAimingAtTarget)
+	if (wasAimingAtTarget != isAimingAtTarget)
 	{
 		OnAimingAtTargetStatusChanged.Broadcast(isAimingAtTarget);
-		wasAimingAtTarget= isAimingAtTarget;
+		wasAimingAtTarget = isAimingAtTarget;
 	}
 
 
@@ -252,12 +251,13 @@ void UPlayerPossess::AimModeToggling()
 		PlayerData::CurrentPossessState = PlayerPossessState::TogglingAimMode;
 		nextAllowedAction = UGameplayStatics::GetTimeSeconds(GetWorld()) + holdDelayToEnterAimingMode;
 	}
-	else if ((!isInputModeActionPressed || character->GetCharacterMovement()->IsFalling()) && (
-		PlayerData::CurrentPossessState == PlayerPossessState::TogglingAimMode ||
-		PlayerData::CurrentPossessState == PlayerPossessState::PossessAim))
+	else if ((!isInputModeActionPressed || character->GetCharacterMovement()->IsFalling())
+		&& (PlayerData::CurrentPossessState == PlayerPossessState::TogglingAimMode
+			|| PlayerData::CurrentPossessState == PlayerPossessState::PossessAim))
 	{
 		OnPossessAimStop.Broadcast();
 		PlayerData::CurrentPossessState = PlayerPossessState::None;
+		GEngine->AddOnScreenDebugMessage(-1, 5, FColor::Purple, "Falling => Deactivating");
 		isInputModeActionPressed = false;
 	}
 }
@@ -318,16 +318,11 @@ void UPlayerPossess::OnPossessInput()
 		PlayerData::CurrentPossessState = PlayerPossessState::ThrowTarget;
 		nextAllowedAction = UGameplayStatics::GetTimeSeconds(GetWorld()) + possessDelay;
 		OnThrowRapierTarget.Broadcast(Hit.ImpactPoint);
-		isInputModeActionPressed = false;
 		possessTarget->PrepareForPossess();
 	}
 	//otherwise, we just play the throw fail animation
 	else
 	{
-		if (PlayerData::CurrentPossessState == PlayerPossessState::PossessRecovery)
-		{
-			OnPossessAimStop.Broadcast();
-		}
 		PlayerData::CurrentPossessState = PlayerPossessState::ThrowFail;
 		nextAllowedAction = UGameplayStatics::GetTimeSeconds(GetWorld()) + throwFailDuration;
 

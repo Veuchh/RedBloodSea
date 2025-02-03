@@ -61,9 +61,13 @@ private:
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Camera")
 	float possessFOV = 80;
 
-	/*How fast the FOV will change*/
+	/*How fast the FOV will change during a dash*/
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Camera")
-	float fovChangeSpeed = 10;
+	float dashFovChangeSpeed = 3;
+
+	/*How fast the FOV will change during a possession*/
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Camera")
+	float possessFovChangeSpeed = 15;
 
 	/*The max distance a weakpoint has to be from the camera in order for the aim assist to kick in*/
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "AimAssist")
@@ -80,4 +84,5 @@ private:
 	bool isCameraAttachedToPlayer = false;
 
 	float ToggleCameraAttachToPlayer;
+	float usedLerpSpeed;
 };

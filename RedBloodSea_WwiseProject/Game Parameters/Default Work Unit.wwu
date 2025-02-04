@@ -150,6 +150,17 @@
 						<Property Name="InitialValue" Type="Real64" Value="0"/>
 					</PropertyList>
 				</GameParameter>
+				<GameParameter Name="rtpc_dash_volumefatigue" ID="{4F31ADED-304B-4D56-9826-0239D7A73C99}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="rtpc_thrust_volumefatigue" ID="{D1E2699C-7775-4081-B719-C34807CE526C}"/>
+				<GameParameter Name="rtpc_enemy_stunned" ID="{9F1682C7-5950-4A17-9A5B-1AFD2226616F}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

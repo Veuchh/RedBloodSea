@@ -28,6 +28,15 @@ class REDBLOODSEA_API URedBloodSeaUserSettings : public UGameUserSettings
 	//Get our game settings
 	UFUNCTION(BlueprintCallable)
 	static URedBloodSeaUserSettings* GetRedBloodSeaUserSettings();
+
+	UFUNCTION(BlueprintCallable)
+	void SetAccessibilitySettingsToDefaultValue();
+	UFUNCTION(BlueprintCallable)
+	void SetAudioSettingsToDefaultValue();
+	UFUNCTION(BlueprintCallable)
+	void SetGraphicsSettingsToDefaultValue();
+	UFUNCTION(BlueprintCallable)
+	void SetCameraSettingsToDefaultValue();
 	
 	UPROPERTY(Config, BlueprintReadWrite)
 	bool Fullscreen;
@@ -66,10 +75,7 @@ class REDBLOODSEA_API URedBloodSeaUserSettings : public UGameUserSettings
 	float GetDefaultContrast();
 
 	UPROPERTY(Config, BlueprintReadWrite)
-	float HorizontalSensitivity;
-
-	UPROPERTY(Config, BlueprintReadWrite)
-	float VerticalSensitivity;
+	float CameraSensitivity;
 
 	UPROPERTY(Config, BlueprintReadWrite)
 	float MotionBlur;
@@ -115,7 +121,10 @@ class REDBLOODSEA_API URedBloodSeaUserSettings : public UGameUserSettings
 
 	UPROPERTY(Config, BlueprintReadWrite)
 	bool HighContrastMode;
-
+	
+	UPROPERTY(Config, BlueprintReadWrite)
+	bool UseCustomBloodColor;
+	
 	UPROPERTY(Config, BlueprintReadWrite)
 	float BloodColorRed;
 

@@ -343,9 +343,9 @@ void UPlayerCombat::DamagePlayer(int damageAmount, AActor* damageSource)
 		return;
 	}
 
+	PlayerData::LastHitTime = UGameplayStatics::GetRealTimeSeconds(GetWorld());
 	PlayerData::CurrentHPAmount -= damageAmount;
 	OnPlayerHit.Broadcast(PlayerData::CurrentHPAmount, damageSource);
-	recoveryTimeDuration = UGameplayStatics::GetRealTimeSeconds(GetWorld());
 
 	if (PlayerData::CurrentHPAmount > 0)
 	{

@@ -161,7 +161,8 @@ void AWaveSpawnManager::WaveEnd()
 
 void AWaveSpawnManager::WaveFail()
 {
-	WaveReset();
+	//WaveReset();
+	bWaveInProgress = false;
 	OnWaveFail.Broadcast();
 }
 
@@ -184,6 +185,7 @@ void AWaveSpawnManager::WaveReset()
 	}
 	CurrentWave = 0;
 	ClearAliveDwellers(true);
+	OnWaveReset.Broadcast();
 	WavePrepare();
 }
 

@@ -189,6 +189,8 @@ public:
 	FWaveEnd OnWaveFail;
 	UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="SpawnerEvents")
 	FWaveEnd OnWaveSuccess;
+	UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="SpawnerEvents")
+	FWaveEnd OnWaveReset;
 	DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FUpdateObjective,const FWave&, Wave);
 	UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="SpawnerEvents")
 	FUpdateObjective OnUpdateObjective;

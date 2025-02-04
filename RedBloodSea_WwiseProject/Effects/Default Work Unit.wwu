@@ -98,6 +98,18 @@
 						</ObjectList>
 					</ObjectLists>
 				</Effect>
+				<Effect Name="New_Delay" ID="{6ACEEE1D-3975-4B86-B069-429155FF7B9F}" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
+					<PropertyList>
+						<Property Name="DelayTime" Type="Real32" Value="0.2"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="stun_eq" ID="{743A2CAC-6BD9-4E1E-9D59-7EA222CB89B0}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+					<PropertyList>
+						<Property Name="FrequencyBand3" Type="Real32" Value="989"/>
+						<Property Name="GainBand1" Type="Real32" Value="-4.5"/>
+						<Property Name="GainBand3" Type="Real32" Value="3"/>
+					</PropertyList>
+				</Effect>
 			</ChildrenList>
 		</WorkUnit>
 	</Effects>

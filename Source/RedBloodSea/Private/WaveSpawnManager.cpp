@@ -71,7 +71,7 @@ void AWaveSpawnManager::WavePrepare()
 		else
 			WaveStart();
 	}
-	for (auto Gate : Waves[CurrentWave].GatingBefore)
+	for (auto& Gate : Waves[CurrentWave].GatingBefore)
 	{
 		if(IsValid(Gate.Key))
 		{
@@ -107,7 +107,7 @@ void AWaveSpawnManager::WaveStart()
 	
 	OnWaveStart.Broadcast();
 	
-	for (auto Gate : Waves[CurrentWave].GatingDurring)
+	for (auto& Gate : Waves[CurrentWave].GatingDurring)
 	{
 		if(IsValid(Gate.Key))
 		{
@@ -182,6 +182,32 @@ void AWaveSpawnManager::WaveReset()
 	if(IsValid(Waves[CurrentWave].BeginWaveTriggerZone))
 	{
 		Waves[CurrentWave].BeginWaveTriggerZone->OnActorBeginOverlap.RemoveDynamic(this,&AWaveSpawnManager::OnBeginTriggerOverlap);
+	}
+
+	for (auto& Wave : Waves)
+	{
+		Wave.DwellerKilled = 0;
+		Wave.DwellerLinked = 0;
+		Wave.bWaveCleared = false;
+		for (auto& Gate : Wave.GatingBefore)
+		{
+			if(IsValid(Gate.Key))
+			{
+				Gate.Key->SetActorHiddenInGame(!false);
+
+				Gate.Key->SetActorEnableCollision(false);
+			}
+		}
+
+		for (auto& Gate : Wave.GatingDurring)
+		{
+			if(IsValid(Gate.Key))
+			{
+				Gate.Key->SetActorHiddenInGame(!false);
+
+				Gate.Key->SetActorEnableCollision(false);
+			}
+		}
 	}
 	CurrentWave = 0;
 	ClearAliveDwellers(true);

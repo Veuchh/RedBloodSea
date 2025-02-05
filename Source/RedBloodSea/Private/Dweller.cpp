@@ -37,6 +37,7 @@ UWeakpointsManager* ADweller::GetWeakpointManager()
 
 void ADweller::Remove()
 {
+	WeakpointsManager->HideWeakpoints();
 	OnRemove.Broadcast();
 }
 

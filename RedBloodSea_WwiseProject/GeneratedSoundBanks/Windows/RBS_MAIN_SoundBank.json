@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{1D2A39F0-30EC-4374-B60C-7E5FD97B8C24}",
     "Language": "SFX",
-    "Hash": "{959C8A89-A421-61D6-1528-C57EE87D365B}",
+    "Hash": "{DB404D74-A313-279C-D673-76AFA0B9A6E5}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\RBS_MAIN_SoundBank",
     "ShortName": "RBS_MAIN_SoundBank",
     "Path": "RBS_MAIN_SoundBank.bnk",
@@ -31,6 +31,14 @@
       "Location": "Memory",
       "ShortName": "RBS_SFX_LinkRay_HighChaos 05.wav",
       "CachePath": "SFX/RBS_SFX_LinkRay_HighChaos 05_00E1F1C3.wem"
+     },
+     {
+      "Id": "2101879",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Sword Recovery Hit Nothing V1.wav",
+      "CachePath": "SFX/Sword Recovery Hit Nothing V1_B45E3139.wem"
      },
      {
       "Id": "3780620",
@@ -720,6 +728,14 @@
       "CachePath": "SFX/RBS_SFX_FsSurface1 SurfacePebbleL2 06_EDCD4836.wem"
      },
      {
+      "Id": "177033337",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "BasaltGate close v1.wav",
+      "CachePath": "SFX/BasaltGate close v1_3A62DC35.wem"
+     },
+     {
       "Id": "181696342",
       "Language": "SFX",
       "Streaming": "false",
@@ -734,6 +750,14 @@
       "Location": "Memory",
       "ShortName": "UI hover SEQ v1.wav",
       "CachePath": "SFX/UI hover SEQ v1_5B3A7F94.wem"
+     },
+     {
+      "Id": "184313695",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Sword Recovery Hit Nothing V1.wav",
+      "CachePath": "SFX/Sword Recovery Hit Nothing V1_D509015D.wem"
      },
      {
       "Id": "184794636",
@@ -862,6 +886,14 @@
       "CachePath": "SFX/UI hover SEQ v1_65D8AB2F.wem"
      },
      {
+      "Id": "224215526",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "BasaltGate open v1.wav",
+      "CachePath": "SFX/BasaltGate open v1_3283614C.wem"
+     },
+     {
       "Id": "231278711",
       "Language": "SFX",
       "Streaming": "false",
@@ -927,7 +959,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "EnemyStun v2.wav",
-      "CachePath": "SFX/EnemyStun v2_29F3CDC4.wem"
+      "CachePath": "SFX/EnemyStun v2_3D06BCC1.wem"
      },
      {
       "Id": "255316402",
@@ -1111,7 +1143,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "EnemyStun v2.wav",
-      "CachePath": "SFX/EnemyStun v2_F102CE82.wem"
+      "CachePath": "SFX/EnemyStun v2_F7CE844C.wem"
      },
      {
       "Id": "314773036",
@@ -1516,6 +1548,14 @@
       "CachePath": "SFX/RBS_SFX_LandingSurface2LowVel 01_EDCD4836.wem"
      },
      {
+      "Id": "435137282",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "BasaltGate idle v1.wav",
+      "CachePath": "SFX/BasaltGate idle v1_EDCD4836.wem"
+     },
+     {
       "Id": "444028624",
       "Language": "SFX",
       "Streaming": "true",
@@ -1755,6 +1795,14 @@
       "CachePath": "SFX/RBS_SFX_PossessionSuccessful 01_EDCD4836.wem"
      },
      {
+      "Id": "510906830",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "IdleHC v1.wav",
+      "CachePath": "SFX/IdleHC v1_2E07B864.wem"
+     },
+     {
       "Id": "511303387",
       "Language": "SFX",
       "Streaming": "false",
@@ -1852,7 +1900,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "EnemyStun v2.wav",
-      "CachePath": "SFX/EnemyStun v2_B736C948.wem"
+      "CachePath": "SFX/EnemyStun v2_CA5A20A8.wem"
      },
      {
       "Id": "537841287",
@@ -2093,6 +2141,14 @@
       "CachePath": "SFX/11 RBS_SFX_PlayerFS ConcreteGrittyWalk 11R_96F68479.wem"
      },
      {
+      "Id": "599383923",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Sword Recover v1.wav",
+      "CachePath": "SFX/Sword Recover v1_60CAC09C.wem"
+     },
+     {
       "Id": "602677290",
       "Language": "SFX",
       "Streaming": "false",
@@ -2237,6 +2293,14 @@
       "CachePath": "SFX/RBS_SFX_PlayerFS ConcreteRun 10R_EDCD4836.wem"
      },
      {
+      "Id": "645665989",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Sword Recover v1.wav",
+      "CachePath": "SFX/Sword Recover v1_5BF643E1.wem"
+     },
+     {
       "Id": "648384302",
       "Language": "SFX",
       "Streaming": "false",
@@ -2276,6 +2340,14 @@
       "ShortName": "RBS_SFX_PlayerFS ConcreteGrittyRun 13R.wav",
       "Path": "Media/655272841.wem",
       "CachePath": "SFX/RBS_SFX_PlayerFS ConcreteGrittyRun 13R_EDCD4836.wem"
+     },
+     {
+      "Id": "656053836",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Sword Recover v1.wav",
+      "CachePath": "SFX/Sword Recover v1_0C051717.wem"
      },
      {
       "Id": "663610515",
@@ -2778,6 +2850,14 @@
       "Location": "Memory",
       "ShortName": "killing drums 1.wav",
       "CachePath": "SFX/killing drums 1_D8A0D580.wem"
+     },
+     {
+      "Id": "797804231",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "UI level transition v1.wav",
+      "CachePath": "SFX/UI level transition v1_D3985EA9.wem"
      },
      {
       "Id": "807522328",
@@ -3378,6 +3458,14 @@
       "CachePath": "SFX/LinkStartedLC V1_1BBEBEE4.wem"
      },
      {
+      "Id": "949197084",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Sword Recovery Hit Nothing V1.wav",
+      "CachePath": "SFX/Sword Recovery Hit Nothing V1_DF5483E7.wem"
+     },
+     {
       "Id": "953102820",
       "Language": "SFX",
       "Streaming": "false",
@@ -3927,6 +4015,51 @@
       ]
      },
      {
+      "Id": "974669297",
+      "Name": "Play_BasaltGate_Close",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_BasaltGate_Close",
+      "GUID": "{B0E60573-43B1-44EC-8B6D-74BE266FDCB9}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "2.1641512",
+      "DurationMax": "2.1641512",
+      "MediaRefs": [
+       {
+        "Id": "177033337"
+       }
+      ]
+     },
+     {
+      "Id": "329153985",
+      "Name": "Play_BasaltGate_Idle",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_BasaltGate_Idle",
+      "GUID": "{DD648981-8216-4BAF-BE24-7091F5CC0728}",
+      "MaxAttenuation": "2000",
+      "DurationType": "OneShot",
+      "DurationMin": "7.925083",
+      "DurationMax": "7.925083",
+      "MediaRefs": [
+       {
+        "Id": "435137282"
+       }
+      ]
+     },
+     {
+      "Id": "1165316467",
+      "Name": "Play_BasaltGate_Open",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_BasaltGate_Open",
+      "GUID": "{41F731B2-57F0-4FF6-B785-74B93865EDAC}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "3.1115",
+      "DurationMax": "3.1115",
+      "MediaRefs": [
+       {
+        "Id": "224215526"
+       }
+      ]
+     },
+     {
       "Id": "2538869711",
       "Name": "Play_BasicSlash",
       "ObjectPath": "\\Events\\Default Work Unit\\Player Abilities\\Play_BasicSlash",
@@ -4131,6 +4264,20 @@
        },
        {
         "Id": "867705812"
+       }
+      ]
+     },
+     {
+      "Id": "461788237",
+      "Name": "Play_DeathMenu_Transition",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI Menu\\Play_DeathMenu_Transition",
+      "GUID": "{CA3D410D-4E96-4217-AFA6-48AB3C8FA624}",
+      "DurationType": "OneShot",
+      "DurationMin": "7.1288667",
+      "DurationMax": "7.1288667",
+      "MediaRefs": [
+       {
+        "Id": "797804231"
        }
       ]
      },
@@ -4742,9 +4889,12 @@
       "Name": "Play_IdleFPS",
       "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_IdleFPS",
       "GUID": "{AEB85C59-534C-4B60-9C60-04A94B157434}",
-      "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "510906830"
+       }
+      ]
      },
      {
       "Id": "3689126666",
@@ -6830,6 +6980,46 @@
       ]
      },
      {
+      "Id": "1534840043",
+      "Name": "Play_SwordRecover",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player Abilities\\Play_SwordRecover",
+      "GUID": "{9F08EC40-0681-41B4-B765-2B212EB7A8BF}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.75980616",
+      "DurationMax": "1.0250214",
+      "MediaRefs": [
+       {
+        "Id": "599383923"
+       },
+       {
+        "Id": "645665989"
+       },
+       {
+        "Id": "656053836"
+       }
+      ]
+     },
+     {
+      "Id": "3470881157",
+      "Name": "Play_SwordRecoverHitNothing",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player Abilities\\Play_SwordRecoverHitNothing",
+      "GUID": "{A19F9F28-FC21-46E9-975A-50AA2E2BD672}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.80297273",
+      "DurationMax": "1.0085337",
+      "MediaRefs": [
+       {
+        "Id": "2101879"
+       },
+       {
+        "Id": "184313695"
+       },
+       {
+        "Id": "949197084"
+       }
+      ]
+     },
+     {
       "Id": "3435325068",
       "Name": "Play_Test_Amb_Loc",
       "ObjectPath": "\\Events\\Default Work Unit\\Z_DeprecatedEvents\\Play_Test_Amb_Loc",
@@ -7455,6 +7645,6 @@
     ]
    }
   ],
-  "FileHash": "{6AA8D3D9-554C-5D08-051E-4E381D32699D}"
+  "FileHash": "{731728E6-7484-5A2F-5A55-D3DA6F3A94CE}"
  }
 }

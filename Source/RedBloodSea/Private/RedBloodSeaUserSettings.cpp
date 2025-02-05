@@ -10,28 +10,30 @@ URedBloodSeaUserSettings::URedBloodSeaUserSettings(const FObjectInitializer& Obj
 	Quality = 0;
 	Brightness = 2.2f;
 	Contrast = 1.0f;
-	HorizontalSensitivity = 1;
-	VerticalSensitivity = 1;
-	MotionBlur = 1;
-	FieldOfView = 70;
+	HorizontalSensitivity = 1.0f;
+	VerticalSensitivity = 1.0f;
+	MotionBlur = 1.0f;
+	FieldOfView = 70.0f;
 	Screenshake = true;
 	ZoomEffect = true;
 	Reticle = true;
-	MasterVolume = 80;
-	Music = 50;
-	SoundEffects = 80;
-	Ambiences = 40;
+	MasterVolume = 80.0f;
+	Music = 50.0f;
+	SoundEffects = 80.0f;
+	Ambiences = 40.0f;
 	FrequencyFilterActivated = false;
-	FrequencyFilterTargetFrequency = 5000;
+	FrequencyFilterTargetFrequency = 5000.0f;
 	MonoMode = false;
-	GameSpeed = 100;
+	GameSpeed = 100.0f;
 	Haptics = true;
 	HighContrastMode = false;
-	BloodColorRed = 255;
-	BloodColorGreen = 0;
-	BloodColorBlue = 100;
+	BloodColorRed = 255.0f;
+	BloodColorGreen = 0.0f;
+	BloodColorBlue = 100.0f;
 	RespawnMode = 0;
 	RapierPosition = 0;
+	GodMode = false;
+	AimAssistStrength = 1.0f;
 }
 
 URedBloodSeaUserSettings* URedBloodSeaUserSettings::GetRedBloodSeaUserSettings()

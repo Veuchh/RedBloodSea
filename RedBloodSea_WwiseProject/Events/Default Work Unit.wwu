@@ -193,7 +193,7 @@
 								<Action Name="" ID="{232EF76C-3AEC-4091-AC38-63EE1FF5442A}" ShortID="557147446">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="BasicSlash" ID="{CE1103A0-9B1B-40FD-BDCC-6F5990D34E46}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											<ObjectRef Name="Slash" ID="{CE1103A0-9B1B-40FD-BDCC-6F5990D34E46}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -204,7 +204,36 @@
 								<Action Name="" ID="{B48C086E-8299-4C7E-924C-CF7FF7FEEF80}" ShortID="22431792">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="BasicThrust" ID="{258A3DC9-66EE-4B7F-9161-5FA6B0663D0B}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											<ObjectRef Name="Thrust" ID="{258A3DC9-66EE-4B7F-9161-5FA6B0663D0B}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{56197166-AF1F-45E0-90B9-67804B9EA31A}" ShortID="880958637">
+									<PropertyList>
+										<Property Name="AbsoluteOrRelative" Type="int16" Value="1"/>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="30"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="rtpc_thrust_volumefatigue" ID="{D1E2699C-7775-4081-B719-C34807CE526C}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{24ACE675-A882-4E8C-9986-3A8626CD48EC}" ShortID="328288066">
+									<PropertyList>
+										<Property Name="AbsoluteOrRelative" Type="int16" Value="1"/>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Delay" Type="Real64" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="-30"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="rtpc_thrust_volumefatigue" ID="{D1E2699C-7775-4081-B719-C34807CE526C}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -231,7 +260,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="BasicThrustGeneric" ID="{4AF9D815-0B2B-4766-BED2-30232AE3BB76}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											<ObjectRef Name="ThrustHC" ID="{4AF9D815-0B2B-4766-BED2-30232AE3BB76}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -332,7 +361,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="BasicSlash" ID="{CE1103A0-9B1B-40FD-BDCC-6F5990D34E46}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											<ObjectRef Name="Slash" ID="{CE1103A0-9B1B-40FD-BDCC-6F5990D34E46}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -344,7 +373,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="BasicThrust" ID="{258A3DC9-66EE-4B7F-9161-5FA6B0663D0B}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											<ObjectRef Name="Thrust" ID="{258A3DC9-66EE-4B7F-9161-5FA6B0663D0B}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -489,6 +518,35 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{EFE4D27A-4422-4A1A-906C-92FF449098BD}" ShortID="316271517">
+									<PropertyList>
+										<Property Name="AbsoluteOrRelative" Type="int16" Value="1"/>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="30"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="rtpc_dash_volumefatigue" ID="{4F31ADED-304B-4D56-9826-0239D7A73C99}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{95735C57-F957-48A8-9428-7FFCA7464DB4}" ShortID="240592621">
+									<PropertyList>
+										<Property Name="AbsoluteOrRelative" Type="int16" Value="1"/>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Delay" Type="Real64" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="-30"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="rtpc_dash_volumefatigue" ID="{4F31ADED-304B-4D56-9826-0239D7A73C99}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Play_DashInterrupt" ID="{22B0C28B-0244-46E3-AA87-F1EEDA24088F}">
@@ -592,7 +650,7 @@
 								<Action Name="" ID="{8A357EF2-C2BE-4279-A801-1208EC800AA5}" ShortID="769996529">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="EnemyAttack" ID="{7ECD2285-9FCD-4F73-B808-B39EAAEEE74F}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											<ObjectRef Name="EnemyAttack" ID="{06F5EE1A-EBB1-4097-93CB-D4F58ADD250B}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -604,17 +662,6 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="EnemyDeath" ID="{125D6EAA-9218-4038-8420-F69B6BBAD79F}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_EnemyFs" ID="{AAB6E689-5C0A-48AB-9D5C-B38FB8EE6FB9}">
-							<ChildrenList>
-								<Action Name="" ID="{C3047C35-2AA6-4364-89BF-889F6F75D814}" ShortID="738986605">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="EnemyFs" ID="{BDE4D0EB-B2B5-4B43-BC09-C3069C8E6F87}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -817,6 +864,57 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="EnemyFreed" ID="{06E36CE4-8214-4418-9056-9EC3A0FB7BAF}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_EnemyStunned" ID="{5C1AFCC2-8619-4008-BA74-3F5F4B17A66B}">
+							<ChildrenList>
+								<Action Name="" ID="{A3738949-F22F-490F-B59D-7115197135E9}" ShortID="140093051">
+									<PropertyList>
+										<Property Name="AbsoluteOrRelative" Type="int16" Value="1"/>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="rtpc_enemy_stunned" ID="{9F1682C7-5950-4A17-9A5B-1AFD2226616F}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{BA8557AA-F00D-4AC7-B0CF-01833B92AF7D}" ShortID="458875259">
+									<PropertyList>
+										<Property Name="AbsoluteOrRelative" Type="int16" Value="1"/>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Delay" Type="Real64" Value="3"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="-100"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="rtpc_enemy_stunned" ID="{9F1682C7-5950-4A17-9A5B-1AFD2226616F}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Enemy_FS" ID="{16FC151E-619A-422F-A0CE-05F48DD7D971}">
+							<ChildrenList>
+								<Action Name="" ID="{AAF778F6-FF37-4C8E-AA58-2064EDFE90D8}" ShortID="221339907">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enemy_Fs_Walk" ID="{4BB06DCF-D063-4C99-85A4-A8B8F81E5674}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Enemy_Stun" ID="{4CBE4516-6E61-401B-AE0C-7E1DD3D1646C}">
+							<ChildrenList>
+								<Action Name="" ID="{8411552C-867C-4A82-ACA0-CB8596614A31}" ShortID="656114888">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="EnemyStun" ID="{86CEB44C-5451-4ACC-B813-CF386F9953A3}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

@@ -107,10 +107,16 @@ void UPlayerCameraHandler::CameraFOV()
 	float currentFOV = playerCameraComponent->FieldOfView;
 
 	// Calculate the lerp alpha value based on the interpolation speed
-	float lerpAlpha = FMath::Clamp(fovChangeSpeed * GetWorld()->GetDeltaSeconds(), 0.0f, 1.0f);
+	float lerpAlpha = FMath::Clamp((PlayerData::CurrentPossessState == PlayerPossessState::ZoomingCamera
+		                                ? possessFovChangeSpeed
+		                                : dashFovChangeSpeed) * GetWorld()->GetDeltaSeconds(),
+		                           0.0f,
+		                           1.0f);
 
 	// Interpolate between the current roll and the adjusted target roll
-	float newFOV = FMath::Lerp(currentFOV, targetFOV, lerpAlpha);
+	float newFOV = FMath::Lerp(currentFOV,
+	                           targetFOV,
+	                           lerpAlpha);
 
 	playerCameraComponent->SetFieldOfView(newFOV);
 }
@@ -125,7 +131,7 @@ void UPlayerCameraHandler::AimAssist(float deltaTime)
 		{
 			playerController = playerCharacter->GetLocalViewingPlayerController();
 		}
-		
+
 		AWeakpoint* aimAssistTarget = GetAimAssistTarget();
 
 		if (aimAssistTarget != nullptr)

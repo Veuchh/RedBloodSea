@@ -131,6 +131,12 @@ class REDBLOODSEA_API URedBloodSeaUserSettings : public UGameUserSettings
 	UPROPERTY(Config, BlueprintReadWrite)
 	int RapierPosition;
 
+	UPROPERTY(Config, BlueprintReadWrite)
+	bool GodMode;
+
+	UPROPERTY(Config, BlueprintReadWrite)
+	float AimAssistStrength;
+
 	UFUNCTION(BlueprintCallable, Category = Settings)
 	void SetGraphicsSettingsToDefaults();
 };

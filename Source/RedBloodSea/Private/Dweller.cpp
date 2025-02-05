@@ -35,6 +35,11 @@ UWeakpointsManager* ADweller::GetWeakpointManager()
 }
 
 
+void ADweller::Remove()
+{
+	OnRemove.Broadcast();
+}
+
 // Called when the game starts or when spawned
 void ADweller::BeginPlay()
 {

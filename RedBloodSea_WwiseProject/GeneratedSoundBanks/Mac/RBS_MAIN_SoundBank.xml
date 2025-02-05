@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="2890283282" Type="User" GUID="{1D2A39F0-30EC-4374-B60C-7E5FD97B8C24}" Language="SFX" Hash="{959C8A89-A421-61D6-1528-C57EE87D365B}">
+		<SoundBank Id="2890283282" Type="User" GUID="{1D2A39F0-30EC-4374-B60C-7E5FD97B8C24}" Language="SFX" Hash="{E05A7C90-F0F5-12F3-009C-B9E100651105}">
 			<ObjectPath>\SoundBanks\Default Work Unit\RBS_MAIN_SoundBank</ObjectPath>
 			<ShortName>RBS_MAIN_SoundBank</ShortName>
 			<Path>RBS_MAIN_SoundBank.bnk</Path>
@@ -14,6 +14,10 @@
 				<File Id="655081" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_LinkRay_HighChaos 05.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_LinkRay_HighChaos 05_00E1F1C3.wem</CachePath>
+				</File>
+				<File Id="2101879" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Sword Recovery Hit Nothing V1.wav</ShortName>
+					<CachePath>SFX/Sword Recovery Hit Nothing V1_C250C2A8.wem</CachePath>
 				</File>
 				<File Id="3780620" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS ConcreteGrittyRun 05L.wav</ShortName>
@@ -382,6 +386,10 @@
 					<Path>Media/175605479.wem</Path>
 					<CachePath>SFX/RBS_SFX_FsSurface1 SurfacePebbleL2 06_EDCD4836.wem</CachePath>
 				</File>
+				<File Id="177033337" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BasaltGate close v1.wav</ShortName>
+					<CachePath>SFX/BasaltGate close v1_3A62DC35.wem</CachePath>
+				</File>
 				<File Id="181696342" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_LinkRay_LowChaos 02.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_LinkRay_LowChaos 02_E55AB2F4.wem</CachePath>
@@ -389,6 +397,10 @@
 				<File Id="182081802" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>UI hover SEQ v1.wav</ShortName>
 					<CachePath>SFX/UI hover SEQ v1_5B3A7F94.wem</CachePath>
+				</File>
+				<File Id="184313695" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Sword Recovery Hit Nothing V1.wav</ShortName>
+					<CachePath>SFX/Sword Recovery Hit Nothing V1_CB78CCC7.wem</CachePath>
 				</File>
 				<File Id="184794636" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>game paused - low chaos v1.wav</ShortName>
@@ -456,6 +468,10 @@
 					<ShortName>UI hover SEQ v1.wav</ShortName>
 					<CachePath>SFX/UI hover SEQ v1_65D8AB2F.wem</CachePath>
 				</File>
+				<File Id="224215526" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BasaltGate open v1.wav</ShortName>
+					<CachePath>SFX/BasaltGate open v1_3283614C.wem</CachePath>
+				</File>
 				<File Id="231278711" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>UI slider v1.wav</ShortName>
 					<CachePath>SFX/UI slider v1_4B47AC9B.wem</CachePath>
@@ -490,7 +506,7 @@
 				</File>
 				<File Id="253292768" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>EnemyStun v2.wav</ShortName>
-					<CachePath>SFX/EnemyStun v2_29F3CDC4.wem</CachePath>
+					<CachePath>SFX/EnemyStun v2_3D06BCC1.wem</CachePath>
 				</File>
 				<File Id="255316402" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS ConcreteWalk 01L.wav</ShortName>
@@ -586,7 +602,7 @@
 				</File>
 				<File Id="313310741" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>EnemyStun v2.wav</ShortName>
-					<CachePath>SFX/EnemyStun v2_F102CE82.wem</CachePath>
+					<CachePath>SFX/EnemyStun v2_F7CE844C.wem</CachePath>
 				</File>
 				<File Id="314773036" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>UI slider v1.wav</ShortName>
@@ -802,6 +818,10 @@
 					<ShortName>RBS_SFX_LandingSurface2LowVel 01.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_LandingSurface2LowVel 01_EDCD4836.wem</CachePath>
 				</File>
+				<File Id="435137282" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BasaltGate idle v1.wav</ShortName>
+					<CachePath>SFX/BasaltGate idle v1_EDCD4836.wem</CachePath>
+				</File>
 				<File Id="444028624" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS ConcreteGrittyRun 07L.wav</ShortName>
 					<Path>Media/444028624.wem</Path>
@@ -929,6 +949,10 @@
 					<ShortName>RBS_SFX_PossessionSuccessful 01.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_PossessionSuccessful 01_EDCD4836.wem</CachePath>
 				</File>
+				<File Id="510906830" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>IdleHC v1.wav</ShortName>
+					<CachePath>SFX/IdleHC v1_C07D1AA0.wem</CachePath>
+				</File>
 				<File Id="511303387" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_SlashHitEnviroMat2 01.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_SlashHitEnviroMat2 01_C60A96A8.wem</CachePath>
@@ -979,7 +1003,7 @@
 				</File>
 				<File Id="536343566" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>EnemyStun v2.wav</ShortName>
-					<CachePath>SFX/EnemyStun v2_B736C948.wem</CachePath>
+					<CachePath>SFX/EnemyStun v2_CA5A20A8.wem</CachePath>
 				</File>
 				<File Id="537841287" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>EnnemyAttack windup-004.wav</ShortName>
@@ -1107,6 +1131,10 @@
 					<Path>Media/599159182.wem</Path>
 					<CachePath>SFX/11 RBS_SFX_PlayerFS ConcreteGrittyWalk 11R_96F68479.wem</CachePath>
 				</File>
+				<File Id="599383923" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Sword Recover v1.wav</ShortName>
+					<CachePath>SFX/Sword Recover v1_431805B5.wem</CachePath>
+				</File>
 				<File Id="602677290" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SlashHC v1.wav</ShortName>
 					<CachePath>SFX/SlashHC v1_C7AC5E6B.wem</CachePath>
@@ -1183,6 +1211,10 @@
 					<Path>Media/645576815.wem</Path>
 					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteRun 10R_EDCD4836.wem</CachePath>
 				</File>
+				<File Id="645665989" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Sword Recover v1.wav</ShortName>
+					<CachePath>SFX/Sword Recover v1_6369C6A0.wem</CachePath>
+				</File>
 				<File Id="648384302" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_BasicThrustGeneric 02.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_BasicThrustGeneric 02_DB31E451.wem</CachePath>
@@ -1203,6 +1235,10 @@
 					<ShortName>RBS_SFX_PlayerFS ConcreteGrittyRun 13R.wav</ShortName>
 					<Path>Media/655272841.wem</Path>
 					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteGrittyRun 13R_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="656053836" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Sword Recover v1.wav</ShortName>
+					<CachePath>SFX/Sword Recover v1_C5122E72.wem</CachePath>
 				</File>
 				<File Id="663610515" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS FootLiftConcrete 06.wav</ShortName>
@@ -1369,6 +1405,10 @@
 					<Path>Media/748172393.wem</Path>
 					<CachePath>SFX/RBS_SFX_PlayerFS RandLayerMetal 05_EDCD4836.wem</CachePath>
 				</File>
+				<File Id="748335089" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>LowHPPulse.wav</ShortName>
+					<CachePath>SFX/LowHPPulse_D8A0D580.wem</CachePath>
+				</File>
 				<File Id="749015965" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_SlashHitGeneric 04.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_SlashHitGeneric 04_2EDF31B0.wem</CachePath>
@@ -1465,6 +1505,10 @@
 				<File Id="797503936" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>killing drums 1.wav</ShortName>
 					<CachePath>SFX/killing drums 1_D8A0D580.wem</CachePath>
+				</File>
+				<File Id="797804231" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI level transition v1.wav</ShortName>
+					<CachePath>SFX/UI level transition v1_D3985EA9.wem</CachePath>
 				</File>
 				<File Id="807522328" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS ConcreteRun 14R.wav</ShortName>
@@ -1784,6 +1828,10 @@
 					<ShortName>LinkStartedLC V1.wav</ShortName>
 					<CachePath>SFX/LinkStartedLC V1_1BBEBEE4.wem</CachePath>
 				</File>
+				<File Id="949197084" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Sword Recovery Hit Nothing V1.wav</ShortName>
+					<CachePath>SFX/Sword Recovery Hit Nothing V1_33A491B6.wem</CachePath>
+				</File>
 				<File Id="953102820" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Fire.wav</ShortName>
 					<CachePath>SFX/Fire_E64C0CB3.wem</CachePath>
@@ -2031,8 +2079,11 @@
 				</Custom>
 				<ShareSets>
 					<Plugin Id="54440786" Name="stun_eq" ObjectPath="\Effects\Default Work Unit\stun_eq" GUID="{743A2CAC-6BD9-4E1E-9D59-7EA222CB89B0}" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="802114085" Name="Hubverb" ObjectPath="\Effects\Default Work Unit\Hubverb" GUID="{4A0F1C05-AD06-4084-AE53-E98F5F89EBFC}" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="1763592331" Name="New_Meter" ObjectPath="\Effects\Default Work Unit\New_Meter" GUID="{27AB241B-FEEA-4A05-84C0-CADF27BC2C1D}" LibName="Wwise Meter" LibId="8454147"/>
 					<Plugin Id="1990128658" Name="Room_Medium" ObjectPath="\Effects\Factory Effects\RoomVerb\Rooms\Room_Medium" GUID="{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="2849147824" Name="Medium" ObjectPath="\Effects\Factory Effects\RoomVerb\Cathedrals\Medium" GUID="{AEB3F175-958B-45F2-A4C2-3FBD4F456568}" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="3377506079" Name="gamepaused_echo" ObjectPath="\Effects\Default Work Unit\gamepaused_echo" GUID="{BEA08A9F-B5FC-4CD3-9B57-79CB7169C12B}" LibName="Wwise Delay" LibId="6946819"/>
 				</ShareSets>
 			</Plugins>
 			<Events>
@@ -2047,6 +2098,21 @@
 						<MediaRef Id="912688267"/>
 						<MediaRef Id="991965346"/>
 						<MediaRef Id="1030014282"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="974669297" Name="Play_BasaltGate_Close" ObjectPath="\Events\Default Work Unit\World Environments\Play_BasaltGate_Close" GUID="{B0E60573-43B1-44EC-8B6D-74BE266FDCB9}" DurationType="OneShot" DurationMin="2.1641512" DurationMax="2.1641512">
+					<MediaRefs>
+						<MediaRef Id="177033337"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="329153985" Name="Play_BasaltGate_Idle" ObjectPath="\Events\Default Work Unit\World Environments\Play_BasaltGate_Idle" GUID="{DD648981-8216-4BAF-BE24-7091F5CC0728}" DurationType="OneShot" DurationMin="7.925083" DurationMax="7.925083">
+					<MediaRefs>
+						<MediaRef Id="435137282"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1165316467" Name="Play_BasaltGate_Open" ObjectPath="\Events\Default Work Unit\World Environments\Play_BasaltGate_Open" GUID="{41F731B2-57F0-4FF6-B785-74B93865EDAC}" DurationType="OneShot" DurationMin="3.1115" DurationMax="3.1115">
+					<MediaRefs>
+						<MediaRef Id="224215526"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2538869711" Name="Play_BasicSlash" ObjectPath="\Events\Default Work Unit\Player Abilities\Play_BasicSlash" GUID="{52DD29CE-EBFC-412E-A292-D4803063CBE4}" DurationType="OneShot" DurationMin="2.0216126" DurationMax="4.829297">
@@ -2118,6 +2184,11 @@
 					<MediaRefs>
 						<MediaRef Id="820405027"/>
 						<MediaRef Id="867705812"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="461788237" Name="Play_DeathMenu_Transition" ObjectPath="\Events\Default Work Unit\UI Menu\Play_DeathMenu_Transition" GUID="{CA3D410D-4E96-4217-AFA6-48AB3C8FA624}" DurationType="OneShot" DurationMin="7.1288667" DurationMax="7.1288667">
+					<MediaRefs>
+						<MediaRef Id="797804231"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="620116029" Name="Play_Dropdown" ObjectPath="\Events\Default Work Unit\UI Menu\Play_Dropdown" GUID="{348FD469-8D78-4401-929B-24630D81EA61}" DurationType="OneShot" DurationMin="0.10996003" DurationMax="0.11514682">
@@ -2312,6 +2383,11 @@
 						<MediaRef Id="770724338"/>
 						<MediaRef Id="985104756"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="3377506079"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="1055240968" Name="Play_GroundSlam" ObjectPath="\Events\Default Work Unit\Player\Play_GroundSlam" GUID="{0EA8C7C8-E2B6-47E0-A1A0-5E0263BCD84B}" DurationType="OneShot" DurationMin="1.773114" DurationMax="1.773114">
 					<MediaRefs>
@@ -2336,7 +2412,11 @@
 						<MediaRef Id="863699747"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2159564533" Name="Play_IdleFPS" ObjectPath="\Events\Default Work Unit\Player\Play_IdleFPS" GUID="{AEB85C59-534C-4B60-9C60-04A94B157434}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2159564533" Name="Play_IdleFPS" ObjectPath="\Events\Default Work Unit\Player\Play_IdleFPS" GUID="{AEB85C59-534C-4B60-9C60-04A94B157434}" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="510906830"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3689126666" Name="Play_Jump" ObjectPath="\Events\Default Work Unit\Player\Play_Jump" GUID="{E9BD2A7D-A3FC-4367-900D-1C172D1086AE}" DurationType="OneShot" DurationMin="0.67724097" DurationMax="1.2026758">
 					<MediaRefs>
 						<MediaRef Id="32617726"/>
@@ -2543,6 +2623,16 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
+				<Event Id="3920278039" Name="Play_LowHPPulse" ObjectPath="\Events\Default Work Unit\Player\Play_LowHPPulse" GUID="{7511B8E9-D279-4A4F-A0E2-E6F26AF77C80}" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="748335089"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1763592331"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
 				<Event Id="3553731426" Name="Play_MainMenuStartGame" ObjectPath="\Events\Default Work Unit\UI Menu\Play_MainMenuStartGame" GUID="{C1B5E1E9-DFE9-4A21-BF60-85363ED8A4DA}" DurationType="OneShot" DurationMin="5.332365" DurationMax="5.332365">
 					<MediaRefs>
 						<MediaRef Id="308564017"/>
@@ -2636,6 +2726,16 @@
 					<ActionSetSwitch>
 						<ActionSetSwitchEntry GroupId="226573501" Id="1125500713" Name="intro" ObjectPath="\Switches\Default Work Unit\switch_combat_status\intro" GUID="{B604615E-D874-4E59-8E26-ED5FBA8218BD}"/>
 					</ActionSetSwitch>
+				</Event>
+				<Event Id="4071224167" Name="Play_MusDeath" ObjectPath="\Events\Default Work Unit\Adaptative Music\Play_MusDeath" GUID="{AF39F9C6-5A5C-4AA9-ACD3-EF47727AB727}" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="968957107"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="802114085"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="3935853100" Name="Play_MusHub" ObjectPath="\Events\Default Work Unit\Adaptative Music\Play_MusHub" GUID="{90C8B7F9-266C-4DF5-BEC5-1D17E4A5FC1A}" DurationType="Infinite">
 					<MediaRefs>
@@ -3113,6 +3213,20 @@
 						<MediaRef Id="927100978"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1534840043" Name="Play_SwordRecover" ObjectPath="\Events\Default Work Unit\Player Abilities\Play_SwordRecover" GUID="{9F08EC40-0681-41B4-B765-2B212EB7A8BF}" DurationType="OneShot" DurationMin="0.75980616" DurationMax="1.0250214">
+					<MediaRefs>
+						<MediaRef Id="599383923"/>
+						<MediaRef Id="645665989"/>
+						<MediaRef Id="656053836"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3470881157" Name="Play_SwordRecoverHitNothing" ObjectPath="\Events\Default Work Unit\Player Abilities\Play_SwordRecoverHitNothing" GUID="{A19F9F28-FC21-46E9-975A-50AA2E2BD672}" DurationType="OneShot" DurationMin="0.80297273" DurationMax="1.0085337">
+					<MediaRefs>
+						<MediaRef Id="2101879"/>
+						<MediaRef Id="184313695"/>
+						<MediaRef Id="949197084"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3435325068" Name="Play_Test_Amb_Loc" ObjectPath="\Events\Default Work Unit\Z_DeprecatedEvents\Play_Test_Amb_Loc" GUID="{996477E9-0350-479D-873E-517B7C054F15}" MaxAttenuation="2500" DurationType="OneShot" DurationMin="17.016687" DurationMax="17.016687">
 					<MediaRefs>
 						<MediaRef Id="526377678"/>
@@ -3176,6 +3290,7 @@
 					</ActionSetSwitch>
 				</Event>
 				<Event Id="435770000" Name="Stop_Amb" ObjectPath="\Events\Default Work Unit\World Environments\Stop_Amb" GUID="{EAB0E7E3-53C1-4F85-BD60-86AE3DF8252E}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3806876465" Name="Stop_LowHPPulse" ObjectPath="\Events\Default Work Unit\Player\Stop_LowHPPulse" GUID="{7FCEA7E6-5FF5-48C9-A09F-17104E065EB7}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2177974148" Name="Stop_MusCore" ObjectPath="\Events\Default Work Unit\Adaptative Music\Stop_MusCore" GUID="{CD1985D2-1712-4E4A-B3E0-7D89ADB7F580}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2837384057" Name="Stop_Music" ObjectPath="\Events\Default Work Unit\Adaptative Music\Stop_Music" GUID="{0A07F4C6-9E79-43D1-B489-AECE51F9887E}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
@@ -3185,6 +3300,7 @@
 				<GameParameter Id="848976592" Name="rtpc_mainmenumusicpitch" ObjectPath="\Game Parameters\Default Work Unit\rtpc_mainmenumusicpitch" GUID="{ED4A7616-4338-46E2-9ED1-5758709ACDDE}"/>
 				<GameParameter Id="1003354755" Name="rtpc_dash_volumefatigue" ObjectPath="\Game Parameters\Default Work Unit\rtpc_dash_volumefatigue" GUID="{4F31ADED-304B-4D56-9826-0239D7A73C99}"/>
 				<GameParameter Id="1410332996" Name="rtpc_settings_slider" ObjectPath="\Game Parameters\Default Work Unit\rtpc_settings_slider" GUID="{CF91B134-4D3D-4381-A066-5A720C4CB494}"/>
+				<GameParameter Id="1580544546" Name="rtpc_ambiance_arena_attenuation" ObjectPath="\Game Parameters\Default Work Unit\rtpc_ambiance_arena_attenuation" GUID="{317D7F34-0FD2-4141-8088-6B66E709DE20}"/>
 				<GameParameter Id="2548911666" Name="rtpc_chaos_no_interpolation" ObjectPath="\Game Parameters\Default Work Unit\rtpc_chaos_no_interpolation" GUID="{32A00591-7D0F-46D4-86CC-E57C780551F1}"/>
 				<GameParameter Id="2570586536" Name="rtpc_landing_force" ObjectPath="\Game Parameters\Default Work Unit\rtpc_landing_force" GUID="{07DB1610-4113-4F81-A7B4-0C953E645162}"/>
 				<GameParameter Id="2690476865" Name="rtpc_player_walkspeed" ObjectPath="\Game Parameters\Default Work Unit\rtpc_player_walkspeed" GUID="{6437691A-43C2-473B-A671-C59F1A9E957B}"/>
@@ -3281,5 +3397,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{252697D4-191D-20D6-F419-F14C476B9287}</FileHash>
+	<FileHash>{2B2E9E35-A8BF-CF24-9030-8D3667FEBC22}</FileHash>
 </SoundBanksInfo>

@@ -110,6 +110,48 @@
 						<Property Name="GainBand3" Type="Real32" Value="3"/>
 					</PropertyList>
 				</Effect>
+				<Effect Name="gamepaused_echo" ID="{BEA08A9F-B5FC-4CD3-9B57-79CB7169C12B}" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
+					<PropertyList>
+						<Property Name="DelayTime" Type="Real32" Value="0.33"/>
+						<Property Name="WetDryMix" Type="Real32" Value="14.5"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="Hubverb" ID="{4A0F1C05-AD06-4084-AE53-E98F5F89EBFC}" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+					<PropertyList>
+						<Property Name="DryLevel" Type="Real32" Value="-0.3"/>
+						<Property Name="ERLevel" Type="Real32" Value="-17"/>
+						<Property Name="EnableToneControls" Type="bool" Value="True"/>
+						<Property Name="Filter1Freq" Type="Real32" Value="300"/>
+						<Property Name="Filter1Gain" Type="Real32" Value="-4.5"/>
+						<Property Name="ReverbLevel" Type="Real32" Value="-12"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="New_Meter" ID="{27AB241B-FEEA-4A05-84C0-CADF27BC2C1D}" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+					<PropertyList>
+						<Property Name="AttackTime" Type="Real32" Value="1.45"/>
+						<Property Name="Max" Type="Real32" Value="-42"/>
+						<Property Name="ReleaseTime" Type="Real32" Value="1"/>
+					</PropertyList>
+					<PluginData>
+	<GameParameter Name="rtpc_lowhppulse_meter" ID="{1BBA0A4A-0586-4101-979A-262C33FC36C7}"/>
+</PluginData>
+				</Effect>
+				<Effect Name="LowHPVerb" ID="{90093482-EA31-4A5B-A30B-483A19EC8012}" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+					<PropertyList>
+						<Property Name="DecayTime" Type="Real32" Value="10"/>
+						<Property Name="Density" Type="Real32" Value="100"/>
+						<Property Name="Diffusion" Type="Real32" Value="96"/>
+						<Property Name="ERLevel" Type="Real32" Value="-9"/>
+						<Property Name="ERPattern" Type="int32" Value="11"/>
+						<Property Name="EnableEarlyReflections" Type="bool" Value="False"/>
+						<Property Name="HFDamping" Type="Real32" Value="8.65"/>
+						<Property Name="PreDelay" Type="Real32" Value="0"/>
+						<Property Name="ReverbLevel" Type="Real32" Value="-3"/>
+						<Property Name="RoomShape" Type="Real32" Value="29"/>
+						<Property Name="RoomSize" Type="Real32" Value="32"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="lowhp_echo" ID="{8C0EAB1B-0FB2-4200-9F5B-A245CB341C46}" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Effects>

@@ -679,6 +679,34 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_LowHPPulse" ID="{7511B8E9-D279-4A4F-A0E2-E6F26AF77C80}">
+							<ChildrenList>
+								<Action Name="" ID="{E86A1191-CE3F-4836-989C-E9ED82D7A198}" ShortID="410787171">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LowHPPulse" ID="{2E9B3D88-CD9D-4441-A115-9E464EF3B4A9}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_LowHPPulse" ID="{7FCEA7E6-5FF5-48C9-A09F-17104E065EB7}">
+							<ChildrenList>
+								<Action Name="" ID="{FB6BEDA7-3589-418C-8C2D-F82093AC1704}" ShortID="927598168">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LowHPPulse" ID="{2E9B3D88-CD9D-4441-A115-9E464EF3B4A9}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Ai Behavior" ID="{40970CDB-819B-4582-8EA2-7271C32A6C94}" ShortID="752845341">
@@ -1336,6 +1364,7 @@
 										<Property Name="ActionType" Type="int16" Value="2"/>
 										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
 										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -1348,10 +1377,24 @@
 										<Property Name="ActionType" Type="int16" Value="2"/>
 										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
 										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="results" ID="{B8071DE9-7CE2-4CAD-BB81-E4351BDCBE5B}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B0448B7A-AABA-4DF0-8561-448ADFA5CA56}" ShortID="577264450">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="death" ID="{EB292F76-B8A2-4020-881C-871A1F2ED981}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -1467,6 +1510,20 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_MusDeath" ID="{AF39F9C6-5A5C-4AA9-ACD3-EF47727AB727}">
+							<ChildrenList>
+								<Action Name="" ID="{8523C869-782B-4970-812A-7A61D2CD9CEE}" ShortID="630831099">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="death" ID="{EB292F76-B8A2-4020-881C-871A1F2ED981}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="World Environments" ID="{38DFEA33-41CB-4316-B882-DA51A81DF737}" ShortID="387556171">
@@ -1484,6 +1541,17 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="AmbMaster" ID="{B07995C9-2EA2-436D-9D7D-843D8CD906CE}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{5CFE6CE4-ED31-4626-8DCF-231554B27845}" ShortID="494003067">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="39"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="rtpc_ambiance_arena_attenuation" ID="{317D7F34-0FD2-4141-8088-6B66E709DE20}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -1558,41 +1626,41 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_BasaltGate_Close" ID="{B0E60573-43B1-44EC-8B6D-74BE266FDCB9}">
+							<ChildrenList>
+								<Action Name="" ID="{682C623A-ABF7-4157-95D4-C205D00FF855}" ShortID="1020930303">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BasaltGate close v1" ID="{79AEBB70-EA25-43B5-ACEE-CC3889F5CBE7}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_BasaltGate_Open" ID="{41F731B2-57F0-4FF6-B785-74B93865EDAC}">
+							<ChildrenList>
+								<Action Name="" ID="{D75935F3-5D52-4346-AABE-C470BE3EA4BD}" ShortID="90658205">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BasaltGate open v1" ID="{68A44275-41E7-4D70-8D6C-5B6F8EEB8543}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_BasaltGate_Idle" ID="{DD648981-8216-4BAF-BE24-7091F5CC0728}">
+							<ChildrenList>
+								<Action Name="" ID="{DDF9F986-D4EB-452C-846A-D57B9A59617A}" ShortID="100768064">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BasaltGate idle v1" ID="{57BE5F14-D440-4DD1-A284-7304FC7F2ACB}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
-				<Event Name="Play_BasaltGate_Close" ID="{B0E60573-43B1-44EC-8B6D-74BE266FDCB9}">
-					<ChildrenList>
-						<Action Name="" ID="{682C623A-ABF7-4157-95D4-C205D00FF855}" ShortID="1020930303">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="BasaltGate close v1" ID="{79AEBB70-EA25-43B5-ACEE-CC3889F5CBE7}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_BasaltGate_Idle" ID="{DD648981-8216-4BAF-BE24-7091F5CC0728}">
-					<ChildrenList>
-						<Action Name="" ID="{DDF9F986-D4EB-452C-846A-D57B9A59617A}" ShortID="100768064">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="BasaltGate idle v1" ID="{57BE5F14-D440-4DD1-A284-7304FC7F2ACB}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_BasaltGate_Open" ID="{41F731B2-57F0-4FF6-B785-74B93865EDAC}">
-					<ChildrenList>
-						<Action Name="" ID="{D75935F3-5D52-4346-AABE-C470BE3EA4BD}" ShortID="90658205">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="BasaltGate open v1" ID="{68A44275-41E7-4D70-8D6C-5B6F8EEB8543}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{17E91869-2EC1-B55F-7A99-75796963819A}",
+    "Hash": "{D5C8444E-684C-635B-B4BE-66422331020B}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -21,6 +21,22 @@
        "Name": "Level_Verb (Custom)",
        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\StereoBus\\DistantLevelVerb\\[Effect Slot [1]: (RoomVerb)]\\Level_Verb (Custom)",
        "GUID": "{02317F71-4C7A-43EA-A123-9EAAEF803011}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      },
+      {
+       "Id": "937966394",
+       "Name": "lowhp_echo (Custom)",
+       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\StereoBus\\LowHP_Verb\\[Effect Slot [0]: (Delay)]\\lowhp_echo (Custom)",
+       "GUID": "{8AA378E9-108B-442F-9223-908C6BA6934B}",
+       "LibName": "Wwise Delay",
+       "LibId": "6946819"
+      },
+      {
+       "Id": "976335331",
+       "Name": "Plate_Large (Custom)",
+       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\StereoBus\\LowHP_Verb\\[Effect Slot [1]: (RoomVerb)]\\Plate_Large (Custom)",
+       "GUID": "{738287CD-BC29-4044-8CE2-9D4A70A9E46A}",
        "LibName": "Wwise RoomVerb",
        "LibId": "7733251"
       }
@@ -81,13 +97,35 @@
       "Id": "466672200",
       "Name": "PlayerAbilities",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\StereoBus\\SFX\\PlayerAbilities",
-      "GUID": "{23D327A8-D57F-4DDE-8DF2-8200B9DA4037}"
+      "GUID": "{23D327A8-D57F-4DDE-8DF2-8200B9DA4037}",
+      "AuxBusRefs": [
+       {
+        "Id": "158015895",
+        "Name": "LowHP_Verb",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\StereoBus\\LowHP_Verb",
+        "GUID": "{0DF16582-4E75-42E1-A88A-BE71844CFF61}"
+       }
+      ]
      },
      {
       "Id": "661188923",
       "Name": "EnemyBus",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\StereoBus\\SFX\\EnemyBus",
-      "GUID": "{BCC1ECC0-BA5A-45C2-A555-9454DB046120}"
+      "GUID": "{BCC1ECC0-BA5A-45C2-A555-9454DB046120}",
+      "AuxBusRefs": [
+       {
+        "Id": "158015895",
+        "Name": "LowHP_Verb",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\StereoBus\\LowHP_Verb",
+        "GUID": "{0DF16582-4E75-42E1-A88A-BE71844CFF61}"
+       }
+      ]
+     },
+     {
+      "Id": "1372881427",
+      "Name": "UiBus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\StereoBus\\UiBus",
+      "GUID": "{2CE1566D-92AD-4C86-A97B-02E069A97F77}"
      },
      {
       "Id": "1991350473",
@@ -124,7 +162,15 @@
       "Id": "3966895392",
       "Name": "PlayerBus",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\StereoBus\\SFX\\PlayerBus",
-      "GUID": "{EBF9A5C4-2EDC-44FD-B726-7EE704405AC2}"
+      "GUID": "{EBF9A5C4-2EDC-44FD-B726-7EE704405AC2}",
+      "AuxBusRefs": [
+       {
+        "Id": "158015895",
+        "Name": "LowHP_Verb",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\StereoBus\\LowHP_Verb",
+        "GUID": "{0DF16582-4E75-42E1-A88A-BE71844CFF61}"
+       }
+      ]
      },
      {
       "Id": "4150757691",
@@ -134,6 +180,22 @@
      }
     ],
     "AuxBusses": [
+     {
+      "Id": "158015895",
+      "Name": "LowHP_Verb",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\StereoBus\\LowHP_Verb",
+      "GUID": "{0DF16582-4E75-42E1-A88A-BE71844CFF61}",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "937966394"
+        },
+        {
+         "Id": "976335331"
+        }
+       ]
+      }
+     },
      {
       "Id": "253666666",
       "Name": "LevelVerb",
@@ -234,6 +296,12 @@
       "GUID": "{CF91B134-4D3D-4381-A066-5A720C4CB494}"
      },
      {
+      "Id": "1580544546",
+      "Name": "rtpc_ambiance_arena_attenuation",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_ambiance_arena_attenuation",
+      "GUID": "{317D7F34-0FD2-4141-8088-6B66E709DE20}"
+     },
+     {
       "Id": "2332098030",
       "Name": "rtpc_enemy_bus",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\Settings\\BUS\\rtpc_enemy_bus",
@@ -328,6 +396,12 @@
       "Name": "rtpc_chaos_player",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_chaos_player",
       "GUID": "{BFE4D672-50A0-4F84-B21E-4DC11EBCCF9B}"
+     },
+     {
+      "Id": "4219763636",
+      "Name": "rtpc_lowhppulse_meter",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_lowhppulse_meter",
+      "GUID": "{1BBA0A4A-0586-4101-979A-262C33FC36C7}"
      }
     ],
     "StateGroups": [
@@ -754,6 +828,6 @@
     ]
    }
   ],
-  "FileHash": "{ED66415A-58AB-A146-C7A9-EBCDB4FB4BCF}"
+  "FileHash": "{AC2A37ED-D5AB-1BBB-CD6A-A4F7857120D4}"
  }
 }

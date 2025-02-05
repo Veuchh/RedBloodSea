@@ -9,7 +9,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	315265107	Play_LinkRay1			\Default Work Unit\Z_DeprecatedEvents\Play_LinkRay1	
 	315265110	Play_LinkRay4			\Default Work Unit\Z_DeprecatedEvents\Play_LinkRay4	
 	315265111	Play_LinkRay5			\Default Work Unit\Z_DeprecatedEvents\Play_LinkRay5	
-	329153985	Play_BasaltGate_Idle			\Default Work Unit\Play_BasaltGate_Idle	
+	329153985	Play_BasaltGate_Idle			\Default Work Unit\World Environments\Play_BasaltGate_Idle	
 	432743418	Play_Test_Event_Asset			\Default Work Unit\Z_DeprecatedEvents\Play_Test_Event_Asset	
 	434120470	SetCombatBetweenWave			\Default Work Unit\Z_DeprecatedEvents\Debug\SetCombatBetweenWave	
 	435770000	Stop_Amb			\Default Work Unit\World Environments\Stop_Amb	
@@ -25,11 +25,11 @@ Event	ID	Name			Wwise Object Path	Notes
 	911575944	Play_PlayerFs			\Default Work Unit\Player\Play_PlayerFs	
 	915393464	Play_OnBack			\Default Work Unit\UI Menu\Play_OnBack	
 	928555489	Play_PlayerFsSkid			\Default Work Unit\Player\Play_PlayerFsSkid	
-	974669297	Play_BasaltGate_Close			\Default Work Unit\Play_BasaltGate_Close	
+	974669297	Play_BasaltGate_Close			\Default Work Unit\World Environments\Play_BasaltGate_Close	
 	997337746	Play_GamePaused			\Default Work Unit\UI Menu\Play_GamePaused	
 	1030277851	Play_PossessionAimStop			\Default Work Unit\Player Abilities\Play_PossessionAimStop	
 	1055240968	Play_GroundSlam			\Default Work Unit\Player\Play_GroundSlam	
-	1165316467	Play_BasaltGate_Open			\Default Work Unit\Play_BasaltGate_Open	
+	1165316467	Play_BasaltGate_Open			\Default Work Unit\World Environments\Play_BasaltGate_Open	
 	1196584277	Play_EnemyProjectileFlyby			\Default Work Unit\Ai Behavior\Play_EnemyProjectileFlyby	
 	1423098094	Play_DamageTaken			\Default Work Unit\Player\Play_DamageTaken	
 	1436212620	Play_EndingCards			\Default Work Unit\UI Menu\Play_EndingCards	
@@ -73,11 +73,14 @@ Event	ID	Name			Wwise Object Path	Notes
 	3602533990	Resume_MusPaused			\Default Work Unit\Adaptative Music\Resume_MusPaused	
 	3649265915	Play_HitNotOnWeakpoint			\Default Work Unit\Player Abilities\Play_HitNotOnWeakpoint	
 	3689126666	Play_Jump			\Default Work Unit\Player\Play_Jump	
+	3806876465	Stop_LowHPPulse			\Default Work Unit\Player\Stop_LowHPPulse	
 	3812796689	SetCombatInWave			\Default Work Unit\Z_DeprecatedEvents\Debug\SetCombatInWave	
 	3856730636	Play_HitOnWeakpoint			\Default Work Unit\Player Abilities\Play_HitOnWeakpoint	
+	3920278039	Play_LowHPPulse			\Default Work Unit\Player\Play_LowHPPulse	
 	3935853100	Play_MusHub			\Default Work Unit\Adaptative Music\Play_MusHub	
 	3990636594	Play_EnemyProjectileBeam			\Default Work Unit\Ai Behavior\Play_EnemyProjectileBeam	
 	4012547228	Play_EnemyProjectileBreak			\Default Work Unit\Ai Behavior\Play_EnemyProjectileBreak	
+	4071224167	Play_MusDeath			\Default Work Unit\Adaptative Music\Play_MusDeath	
 	4196064164	Play_EnemyFreed			\Default Work Unit\Ai Behavior\Play_EnemyFreed	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
@@ -148,6 +151,7 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	848976592	rtpc_mainmenumusicpitch			\Default Work Unit\rtpc_mainmenumusicpitch	
 	1003354755	rtpc_dash_volumefatigue			\Default Work Unit\rtpc_dash_volumefatigue	
 	1410332996	rtpc_settings_slider			\Default Work Unit\rtpc_settings_slider	
+	1580544546	rtpc_ambiance_arena_attenuation			\Default Work Unit\rtpc_ambiance_arena_attenuation	
 	2548911666	rtpc_chaos_no_interpolation			\Default Work Unit\rtpc_chaos_no_interpolation	
 	2570586536	rtpc_landing_force			\Default Work Unit\rtpc_landing_force	
 	2690476865	rtpc_player_walkspeed			\Default Work Unit\rtpc_player_walkspeed	
@@ -158,8 +162,11 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 
 Effect plug-ins	ID	Name	Type				Notes
 	54440786	stun_eq	Wwise Parametric EQ			
+	802114085	Hubverb	Wwise RoomVerb			
+	1763592331	New_Meter	Wwise Meter			
 	1990128658	Room_Medium	Wwise RoomVerb			
 	2849147824	Medium	Wwise RoomVerb			
+	3377506079	gamepaused_echo	Wwise Delay			
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	255961296	Soundseed Air Wind	SoundSeed Air Wind		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Movement\PlayerFS\PlayerSpeed\PlayerSpeedPlugins\AIR WIND\AIR WINDL\Soundseed Air Wind	
@@ -167,7 +174,7 @@ Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	655081	RBS_SFX_LinkRay_HighChaos 05	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\RBS_SFX_LinkRay_HighChaos 05_00E1F1C3.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Abilities\LinkRay\LinkRay\LinkRay4\RBS_SFX_LinkRay_HighChaos 05		483155
-	2101879	Sword Recovery Hit Nothing V1	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\Sword Recovery Hit Nothing V1_B45E3139.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Abilities\SwordRecoverHitNothing\Sword Recovery Hit Nothing V1		11884
+	2101879	Sword Recovery Hit Nothing V1	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\Sword Recovery Hit Nothing V1_C250C2A8.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Abilities\SwordRecoverHitNothing\Sword Recovery Hit Nothing V1		11884
 	12273993	SlashHC v1_01	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\SlashHC v1_36CE55E3.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Abilities\Slash\SlashHC\SlashHC v1_01		16869
 	18022526	killing stingers synths 2	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\killing stingers synths 2_D8A0D580.wem		\Interactive Music Hierarchy\Default Work Unit\core_music_switch_master\core_music_switch_combat_wave_index\combat_index_2\a1 23\killing stingers synths 2		1593020
 	18444585	linking mel 1	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\linking mel 1_D8A0D580.wem		\Interactive Music Hierarchy\Default Work Unit\core_music_switch_master\core_intro\a1 2\linking mel 1		1569893
@@ -204,7 +211,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	177033337	BasaltGate close v1	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\BasaltGate close v1_3A62DC35.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_AMB_WorldEnvironments\BasaltGate close v1		47636
 	181696342	RBS_SFX_LinkRay_LowChaos 02	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\RBS_SFX_LinkRay_LowChaos 02_E55AB2F4.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Abilities\LinkRay\LinkRay\LinkRay1\RBS_SFX_LinkRay_LowChaos 02		525347
 	182081802	UI hover SEQ v1_02	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\UI hover SEQ v1_5B3A7F94.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_UiMenu\Ui_Menu\OnHover\UI hover SEQ v1_02		3191
-	184313695	Sword Recovery Hit Nothing V1_01	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\Sword Recovery Hit Nothing V1_D509015D.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Abilities\SwordRecoverHitNothing\Sword Recovery Hit Nothing V1_01		12918
+	184313695	Sword Recovery Hit Nothing V1_01	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\Sword Recovery Hit Nothing V1_CB78CCC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Abilities\SwordRecoverHitNothing\Sword Recovery Hit Nothing V1_01		12918
 	184794636	game paused - low chaos v1	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\game paused - low chaos v1_D8A0D580.wem		\Interactive Music Hierarchy\Default Work Unit\game paused\paused_low_chaos\game paused - low chaos v1\game paused - low chaos v1		2907349
 	186485693	EnnemyAttack swing-001	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\EnnemyAttack swing-001_EDCD4836.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Ai Behavior\EnemyAttack\EnemyAttackSwing\EnnemyAttack swing-001		11566
 	190568369	Cast	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\Cast_705EEEA8.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Ai Behavior\EnemyProjectile\EnemyProjectile\EnemyProjectileCast\Cast		20068
@@ -268,7 +275,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	482326559	RBS_SFX_SlashHitEnviroMat2 03	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\RBS_SFX_SlashHitEnviroMat2 03_4CBBAC03.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Abilities\SlashHitEnviro\SlashHitEnviroMat\SlashHitDirt\RBS_SFX_SlashHitEnviroMat2 03		15926
 	482924415	RBS_SFX_LandingSurface2LowVel 04	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\RBS_SFX_LandingSurface2LowVel 04_EDCD4836.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Movement\LandingVelocityBlend\LandingLowVelocity\LandingLowVelocityMat\Vege\RBS_SFX_LandingSurface2LowVel 04		7517
 	507432298	RBS_SFX_PossessionSuccessful 01	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\RBS_SFX_PossessionSuccessful 01_EDCD4836.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Abilities\Possession\PossessionSuccessful\PossessionSuccessful\RBS_SFX_PossessionSuccessful 01		41321
-	510906830	IdleHC v1	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\IdleHC v1_2E07B864.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Movement\IdleHC v1		566557
+	510906830	IdleHC v1	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\IdleHC v1_C07D1AA0.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Movement\IdleHC v1		566557
 	511303387	RBS_SFX_SlashHitEnviroMat2 01	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\RBS_SFX_SlashHitEnviroMat2 01_C60A96A8.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Abilities\SlashHitEnviro\SlashHitEnviroMat\SlashHitDirt\RBS_SFX_SlashHitEnviroMat2 01		18496
 	512401419	reveal spam layer-glued_03	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\reveal spam layer-glued_7E7CBCF2.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Ai Behavior\WeakpointReveal\RevealSpam\reveal spam layer-glued_03		5482
 	523218377	RBS_SFX_BasicSlashGeneric 03	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\RBS_SFX_BasicSlashGeneric 03_BA1B5501.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Abilities\Slash\BasicSlashGeneric\RBS_SFX_BasicSlashGeneric 03		30587
@@ -291,7 +298,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	582444320	RBS_SFX_LandingSurface1HighVel 01	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\RBS_SFX_LandingSurface1HighVel 01_EDCD4836.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Movement\LandingVelocityBlend\LandingHighVelocity\LandingHighVelocityMat\Stone\RBS_SFX_LandingSurface1HighVel 01		10308
 	597647786	RBS_SFX_PlayerFS SkidConcrete 04	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\RBS_SFX_PlayerFS SkidConcrete 04_2972BAA4.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Movement\JumpBlend\SkidStone\SkidConcrete\RBS_SFX_PlayerFS SkidConcrete 04		7867
 	599138110	UI hover SEQ v1_03	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\UI hover SEQ v1_67E28DE5.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_UiMenu\Ui_Menu\OnHover\UI hover SEQ v1_03		3607
-	599383923	Sword Recover v1_02	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\Sword Recover v1_60CAC09C.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Abilities\SwordRecover\Sword Recover v1_02		15246
+	599383923	Sword Recover v1_02	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\Sword Recover v1_431805B5.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Abilities\SwordRecover\Sword Recover v1_02		15246
 	602677290	SlashHC v1_05	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\SlashHC v1_C7AC5E6B.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Abilities\Slash\SlashHC\SlashHC v1_05		19035
 	606565850	killing saw amb 1	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\killing saw amb 1_D8A0D580.wem		\Interactive Music Hierarchy\Default Work Unit\core_music_switch_master\core_intro\core_intro\killing saw amb 1		2183741
 	609513538	SlashHC v1_03	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\SlashHC v1_BB3FBE88.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Abilities\Slash\SlashHC\SlashHC v1_03		17365
@@ -301,12 +308,12 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	630354570	RBS_SFX_DamageTaken 05	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\RBS_SFX_DamageTaken 05_EDCD4836.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Movement\DamageTaken\RBS_SFX_DamageTaken 05		16339
 	630764368	RBS_SFX_DashGeneric 01	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\RBS_SFX_DashGeneric 01_31308022.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Movement\Dash\Dash\DashGeneric\RBS_SFX_DashGeneric 01		29158
 	639300661	RBS_SFX_DashGeneric 05	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\RBS_SFX_DashGeneric 05_284013D9.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Movement\Dash\Dash\DashGeneric\RBS_SFX_DashGeneric 05		26895
-	645665989	Sword Recover v1_01	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\Sword Recover v1_5BF643E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Abilities\SwordRecover\Sword Recover v1_01		18114
+	645665989	Sword Recover v1_01	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\Sword Recover v1_6369C6A0.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Abilities\SwordRecover\Sword Recover v1_01		18114
 	648384302	RBS_SFX_BasicThrustGeneric 02	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\RBS_SFX_BasicThrustGeneric 02_DB31E451.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Abilities\Thrust\ThrustHC\RBS_SFX_BasicThrustGeneric 02		15058
 	649602623	RBS_SFX_TriggerStateFleeing	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\RBS_SFX_TriggerStateFleeing_EDCD4836.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Ai Behavior\EnemySwitchInit\EnemyTriggerState\RBS_SFX_TriggerStateFleeing		11573
 	650645662	EnnemyAttack swing-002	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\EnnemyAttack swing-002_EDCD4836.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Ai Behavior\EnemyAttack\EnemyAttackSwing\EnnemyAttack swing-002		11638
 	650681148	RBS_SFX_BasicSlashGeneric 05	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\RBS_SFX_BasicSlashGeneric 05_6816EF21.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Abilities\Slash\BasicSlashGeneric\RBS_SFX_BasicSlashGeneric 05		30142
-	656053836	Sword Recover v1	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\Sword Recover v1_0C051717.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Abilities\SwordRecover\Sword Recover v1		19084
+	656053836	Sword Recover v1	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\Sword Recover v1_C5122E72.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Abilities\SwordRecover\Sword Recover v1		19084
 	669893367	WeakpointReveal V2 - stem-glued_02	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\WeakpointReveal V2 - stem-glued_E26A36FB.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Ai Behavior\WeakpointReveal\Weakpoint Reveal Blend\WeakpointReveal\WeakpointReveal V2 - stem-glued_02		51505
 	672756510	RBS_SFX_DamageTaken 01	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\RBS_SFX_DamageTaken 01_EDCD4836.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Movement\DamageTaken\RBS_SFX_DamageTaken 01		15531
 	678096996	RBS_SFX_LinkRay_HighChaos 04	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\RBS_SFX_LinkRay_HighChaos 04_B836D979.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Abilities\LinkRay\LinkRay\LinkRay3\RBS_SFX_LinkRay_HighChaos 04		529994
@@ -327,6 +334,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	733526565	RBS_SFX_LinkRay_HighChaos 02	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\RBS_SFX_LinkRay_HighChaos 02_0D66FF35.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Abilities\LinkRay\LinkRay\LinkRay1\RBS_SFX_LinkRay_HighChaos 02		553546
 	742187357	RBS_SFX_LandingSurface2HighVel 01	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\RBS_SFX_LandingSurface2HighVel 01_EDCD4836.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Movement\LandingVelocityBlend\LandingHighVelocity\LandingHighVelocityMat\Vege\RBS_SFX_LandingSurface2HighVel 01		11632
 	746352043	ThrustNeutral v1	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\ThrustNeutral v1_B5B04ADA.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Abilities\Thrust\ThrustNeutral\ThrustNeutral v1		5704
+	748335089	LowHPPulse	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\LowHPPulse_D8A0D580.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Movement\LowHPPulse		42897
 	749015965	RBS_SFX_SlashHitGeneric 04	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\RBS_SFX_SlashHitGeneric 04_2EDF31B0.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Abilities\SlashHitEnviro\SlashHitGeneric\RBS_SFX_SlashHitGeneric 04		7875
 	751988685	RBS_SFX_SlashHitGeneric 02	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\RBS_SFX_SlashHitGeneric 02_B0E56DBB.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Abilities\SlashHitEnviro\SlashHitGeneric\RBS_SFX_SlashHitGeneric 02		10315
 	755688688	linking between wave drums 1	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\linking between wave drums 1_D8A0D580.wem		\Interactive Music Hierarchy\Default Work Unit\core_music_switch_master\between_wave\loop\linking between wave drums 1		361120
@@ -378,7 +386,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	939950839	UI hover SEQ v1_06	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\UI hover SEQ v1_CA6CA4DA.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_UiMenu\Ui_Menu\OnHover\UI hover SEQ v1_06		3064
 	942552018	results - low chaos v1	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\results - low chaos v1_D8A0D580.wem		\Interactive Music Hierarchy\Default Work Unit\results\results_low_chaos\results_low chaos\results - low chaos v1		1459587
 	947099287	LinkStartedLC V1_04	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\LinkStartedLC V1_1BBEBEE4.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Abilities\Possession\PossessionAimStart\LinkStartedLC\LinkStartedLC V1_04		50277
-	949197084	Sword Recovery Hit Nothing V1_02	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\Sword Recovery Hit Nothing V1_DF5483E7.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Abilities\SwordRecoverHitNothing\Sword Recovery Hit Nothing V1_02		14859
+	949197084	Sword Recovery Hit Nothing V1_02	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\Sword Recovery Hit Nothing V1_33A491B6.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Abilities\SwordRecoverHitNothing\Sword Recovery Hit Nothing V1_02		14859
 	953102820	Fire	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\Fire_E64C0CB3.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Ai Behavior\EnemyProjectile\EnemyProjectile\EnemyProjectileFire\Fire		19640
 	968957107	hub v1	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\hub v1_D8A0D580.wem		\Interactive Music Hierarchy\Default Work Unit\hub\hub v1\hub v1		1838033
 	973311698	Flyby	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\Flyby_D12676E8.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Ai Behavior\EnemyProjectile\EnemyProjectileFlyby\Flyby		24756

@@ -61,8 +61,11 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	253666666	LevelVerb			\Default Work Unit\Master Audio Bus\StereoBus\LevelVerb	
+	2968176541	DistantLevelVerb			\Default Work Unit\Master Audio Bus\StereoBus\DistantLevelVerb	
 
 Effect plug-ins	ID	Name	Type				Notes
+	196835669	New_Delay	Wwise Delay			
+	700579160	Level_Verb (Custom)	Wwise RoomVerb			
 	2224135639	Level_Verb	Wwise RoomVerb			
 	3626272192	HIGH_FREQUENCY_CUT_FILTER	Wwise Parametric EQ			
 

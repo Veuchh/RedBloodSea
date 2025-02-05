@@ -10,12 +10,30 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{DAA7AE37-A6B1-4A4E-A432-BA5C6D382F83}",
+    "Hash": "{17E91869-2EC1-B55F-7A99-75796963819A}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
     "Plugins": {
+     "Custom": [
+      {
+       "Id": "700579160",
+       "Name": "Level_Verb (Custom)",
+       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\StereoBus\\DistantLevelVerb\\[Effect Slot [1]: (RoomVerb)]\\Level_Verb (Custom)",
+       "GUID": "{02317F71-4C7A-43EA-A123-9EAAEF803011}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ],
      "ShareSets": [
+      {
+       "Id": "196835669",
+       "Name": "New_Delay",
+       "ObjectPath": "\\Effects\\Default Work Unit\\New_Delay",
+       "GUID": "{6ACEEE1D-3975-4B86-B069-429155FF7B9F}",
+       "LibName": "Wwise Delay",
+       "LibId": "6946819"
+      },
       {
        "Id": "2224135639",
        "Name": "Level_Verb",
@@ -128,6 +146,24 @@
         }
        ]
       }
+     },
+     {
+      "Id": "2968176541",
+      "Name": "DistantLevelVerb",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\StereoBus\\DistantLevelVerb",
+      "GUID": "{4BD473B1-9D7E-4658-B0FE-11591FBEC77E}",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "700579160"
+        }
+       ],
+       "ShareSets": [
+        {
+         "Id": "196835669"
+        }
+       ]
+      }
      }
     ],
     "GameParameters": [
@@ -148,6 +184,12 @@
       "Name": "rtpc_amb_bus",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\Settings\\BUS\\rtpc_amb_bus",
       "GUID": "{A29E33E7-090C-4F92-B2A4-CF339B2E10FC}"
+     },
+     {
+      "Id": "328674765",
+      "Name": "rtpc_enemy_stunned",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_enemy_stunned",
+      "GUID": "{9F1682C7-5950-4A17-9A5B-1AFD2226616F}"
      },
      {
       "Id": "600133661",
@@ -172,6 +214,12 @@
       "Name": "rtpc_tapestop",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_tapestop",
       "GUID": "{34AB8051-BDEC-4FCF-A5A6-D129BA29D38F}"
+     },
+     {
+      "Id": "1003354755",
+      "Name": "rtpc_dash_volumefatigue",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_dash_volumefatigue",
+      "GUID": "{4F31ADED-304B-4D56-9826-0239D7A73C99}"
      },
      {
       "Id": "1010956302",
@@ -250,6 +298,12 @@
       "Name": "rtpc_sfx_bus",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\Settings\\BUS\\rtpc_sfx_bus",
       "GUID": "{1A0CC5AF-DF3D-4C7B-9E41-61A8E28F74EB}"
+     },
+     {
+      "Id": "3100189233",
+      "Name": "rtpc_thrust_volumefatigue",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_thrust_volumefatigue",
+      "GUID": "{D1E2699C-7775-4081-B719-C34807CE526C}"
      },
      {
       "Id": "3304859005",
@@ -700,6 +754,6 @@
     ]
    }
   ],
-  "FileHash": "{D9778DCE-CAB0-7A53-1773-4FC9E2560615}"
+  "FileHash": "{ED66415A-58AB-A146-C7A9-EBCDB4FB4BCF}"
  }
 }

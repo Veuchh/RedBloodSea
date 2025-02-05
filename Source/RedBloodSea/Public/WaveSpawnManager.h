@@ -96,6 +96,11 @@ public:
 	}
 
 private:
+	UPROPERTY(VisibleAnywhere,BlueprintReadOnly,meta=(AllowPrivateAccess = "true"))
+	FDateTime StartTime;
+	UPROPERTY(VisibleAnywhere,BlueprintReadOnly,meta=(AllowPrivateAccess = "true"))
+	FDateTime EndTime;
+	
 	UPROPERTY(EditAnywhere,BlueprintReadWrite,meta=(AllowPrivateAccess = "true",ClampMin=1),EditFixedSize,Category="WavesParams")
 	int SpawnPerTick = 1;
 	UPROPERTY(EditAnywhere,BlueprintReadWrite,meta=(AllowPrivateAccess = "true",ClampMin=1),EditFixedSize,Category="WavesParams")
@@ -110,6 +115,8 @@ private:
 	TArray<FWave> Waves;
 	UPROPERTY(EditAnywhere,BlueprintReadOnly,meta=(AllowPrivateAccess = "true"),EditFixedSize,Category="Waves")
 	int CurrentWave;
+	UPROPERTY(VisibleAnywhere,BlueprintReadOnly,meta=(AllowPrivateAccess = "true"),EditFixedSize,Category="Waves")
+	bool bWaveInProgress = false;
 
 	FTimerHandle CurrentWaveTimer;
 
@@ -182,6 +189,8 @@ public:
 	FWaveEnd OnWaveFail;
 	UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="SpawnerEvents")
 	FWaveEnd OnWaveSuccess;
+	UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="SpawnerEvents")
+	FWaveEnd OnWaveReset;
 	DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FUpdateObjective,const FWave&, Wave);
 	UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="SpawnerEvents")
 	FUpdateObjective OnUpdateObjective;

@@ -3,7 +3,6 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "UDataSubsystem.h"
 #include "Weakpoint.h"
 #include "WeakpointData.h"
 #include "Components/ActorComponent.h"
@@ -33,7 +32,7 @@ public:
 
 private:
 	AActor* Owner;
-	TObjectPtr<UUDataSubsystem> CountSubSys;
+//	TObjectPtr<UUDataSubsystem> CountSubSys;
 	TObjectPtr<USkeletalMeshComponent> Skeleton;
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Weakpoints Handler", EditFixedSize, meta = (AllowPrivateAccess = "true"))
 	TArray<TObjectPtr<UMaterialInstanceDynamic>> MaterialInstances;

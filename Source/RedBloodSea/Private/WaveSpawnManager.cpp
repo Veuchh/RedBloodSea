@@ -259,7 +259,7 @@ void AWaveSpawnManager::ClearAliveDwellers(bool RemovePlayerDweller)
 		if(IsValid(Dweller) && (RemovePlayerDweller || Dweller != PlayerDweller))
 		{
 			RemoveDweller(Dweller,false);
-			Dweller->Destroy();
+			Dweller->Remove();
 		}
 	}
 

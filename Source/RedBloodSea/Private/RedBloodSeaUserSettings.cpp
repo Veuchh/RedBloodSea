@@ -5,18 +5,34 @@
 
 URedBloodSeaUserSettings::URedBloodSeaUserSettings(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
 {
-	Fullscreen = true;
-	Resolution = EScreenResolution::Option1;
-	Quality = 0;
-	Brightness = 2.2f;
-	Contrast = 1.0f;
-	HorizontalSensitivity = 1.0f;
-	VerticalSensitivity = 1.0f;
-	MotionBlur = 1.0f;
-	FieldOfView = 70.0f;
-	Screenshake = true;
-	ZoomEffect = true;
-	Reticle = true;
+	SetAccessibilitySettingsToDefaultValue();
+	SetAudioSettingsToDefaultValue();
+	SetGraphicsSettingsToDefaultValue();
+	SetCameraSettingsToDefaultValue();
+}
+
+URedBloodSeaUserSettings* URedBloodSeaUserSettings::GetRedBloodSeaUserSettings()
+{
+	return Cast<URedBloodSeaUserSettings>(URedBloodSeaUserSettings::GetGameUserSettings());
+}
+
+void URedBloodSeaUserSettings::SetAccessibilitySettingsToDefaultValue()
+{	
+	AimAssistStrength = 1.0f;
+	RapierPosition = 0;
+	GodMode = false;
+	RespawnMode = 0;
+	GameSpeed = 1.f;
+	Haptics = true;
+	HighContrastMode = false;
+	UseCustomBloodColor = false;
+	BloodColorRed = 74.0f;
+	BloodColorGreen = 3.0f;
+	BloodColorBlue = 6.0f;
+}
+
+void URedBloodSeaUserSettings::SetAudioSettingsToDefaultValue()
+{
 	MasterVolume = 80.0f;
 	Music = 50.0f;
 	SoundEffects = 80.0f;
@@ -24,21 +40,25 @@ URedBloodSeaUserSettings::URedBloodSeaUserSettings(const FObjectInitializer& Obj
 	FrequencyFilterActivated = false;
 	FrequencyFilterTargetFrequency = 5000.0f;
 	MonoMode = false;
-	GameSpeed = 100.0f;
-	Haptics = true;
-	HighContrastMode = false;
-	BloodColorRed = 255.0f;
-	BloodColorGreen = 0.0f;
-	BloodColorBlue = 100.0f;
-	RespawnMode = 0;
-	RapierPosition = 0;
-	GodMode = false;
-	AimAssistStrength = 1.0f;
 }
 
-URedBloodSeaUserSettings* URedBloodSeaUserSettings::GetRedBloodSeaUserSettings()
+void URedBloodSeaUserSettings::SetGraphicsSettingsToDefaultValue()
 {
-	return Cast<URedBloodSeaUserSettings>(URedBloodSeaUserSettings::GetGameUserSettings());
+	Fullscreen = true;
+	Resolution = EScreenResolution::Option1;
+	Quality = 0;
+	Brightness = 1.0f;
+	Contrast = 1.0f;
+	Reticle = true;
+}
+
+void URedBloodSeaUserSettings::SetCameraSettingsToDefaultValue()
+{
+	CameraSensitivity = 1.0f;
+	MotionBlur = 1.0f;
+	FieldOfView = 105.0f;
+	Screenshake = true;
+	ZoomEffect = true;
 }
 
 bool URedBloodSeaUserSettings::GetDefaultFullscreen()

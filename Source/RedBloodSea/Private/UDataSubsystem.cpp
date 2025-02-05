@@ -4,11 +4,7 @@
 #include "UDataSubsystem.h"
 
 #include <string>
-#include <ThirdParty/ShaderConductor/ShaderConductor/External/DirectXShaderCompiler/include/dxc/DXIL/DxilConstants.h>
 
-#include "DSP/BufferDiagnostics.h"
-#include "HLSLTree/HLSLTreeTypes.h"
-#include "Serialization/BulkDataRegistry.h"
 
 void UUDataSubsystem::Initialize(FSubsystemCollectionBase& Collection)
 {
@@ -61,6 +57,7 @@ void UUDataSubsystem::ResetLogs()
 		Counters[Val] = 0;
 	}
 	Logs.Empty();
+	Objectives.Empty();
 }
 
 bool UUDataSubsystem::ExportLogs(FString FolderLocation, FString FileName)
@@ -110,6 +107,24 @@ void UUDataSubsystem::ResetAll()
 	KillCount = 0;
 
 	ResetLogs();
+}
+
+void UUDataSubsystem::StoreObjectiveCompletion(const TArray<FWave>& Waves)
+{
+	for (auto Wave : Waves)
+	{
+		Objectives.Add( FObjective {
+			.Type =				Wave.Type,
+			.bTimeLimit =		Wave.bTimeLimit,
+			.Duration =			Wave.Duration,
+			.DwellerToRemove =	Wave.Type == EWaveType::CLEAR_ALL? Wave.DwellerProfiles.Num() : Wave.DwellerToRemove,
+			.DwellerKilled =	Wave.DwellerKilled,
+			.DwellerLinked =	Wave.DwellerLinked,
+			.bWaveCleared =		Wave.bWaveCleared,
+			.StartTime =		Wave.StartTime,
+			.EndTime =			Wave.EndTime
+		});
+	}
 }
 
 FString UUDataSubsystem::GetActionName(const EActionType Type)

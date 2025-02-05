@@ -3,8 +3,39 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "WaveSpawnManager.h"
 #include "LevelInstance/LevelInstanceSubsystem.h"
 #include "UDataSubsystem.generated.h"
+
+
+USTRUCT(Blueprintable)
+struct FObjective
+{
+	GENERATED_USTRUCT_BODY()
+
+	UPROPERTY(EditAnywhere,BlueprintReadWrite)
+	EWaveType Type;
+	UPROPERTY(EditAnywhere,BlueprintReadWrite)
+	bool bTimeLimit;
+	UPROPERTY(EditAnywhere,BlueprintReadWrite)
+	float Duration;
+
+	UPROPERTY(VisibleAnywhere,BlueprintReadOnly)
+	int DwellerToRemove;
+	UPROPERTY(VisibleAnywhere,BlueprintReadOnly)
+	int DwellerKilled;
+	UPROPERTY(VisibleAnywhere,BlueprintReadOnly)
+	int DwellerLinked;
+	
+	UPROPERTY(VisibleAnywhere,BlueprintReadOnly)
+	bool bWaveCleared = false;
+	
+	UPROPERTY(VisibleAnywhere,BlueprintReadOnly)
+	FDateTime StartTime;
+	UPROPERTY(VisibleAnywhere,BlueprintReadOnly)
+	FDateTime EndTime;
+	
+}; UMETA(DisplayName="Wave")
 
 
 UENUM(BlueprintType)
@@ -30,7 +61,7 @@ enum class EActionType: uint8 {
 ENUM_RANGE_BY_COUNT(EActionType, EActionType::MAX)
 
 
-USTRUCT()
+USTRUCT(Blueprintable)
 struct FActionLog
 {
 	GENERATED_BODY()
@@ -38,17 +69,25 @@ struct FActionLog
 	EActionType Type;
 	FVector Position;
 };
-/**
- * 
- */
+
+
+
 UCLASS()
 class REDBLOODSEA_API UUDataSubsystem : public UGameInstanceSubsystem
 {
 	GENERATED_BODY()
 public:
 	//DataLogs Variables
+	UPROPERTY(VisibleAnywhere,BlueprintReadOnly)
 	FDateTime LogStart;
+	UPROPERTY(VisibleAnywhere,BlueprintReadOnly)
 	TArray<FActionLog> Logs;
+	UPROPERTY(VisibleAnywhere,BlueprintReadOnly)
+	TArray<FObjective> Objectives;
+	UPROPERTY(VisibleAnywhere,BlueprintReadWrite,meta=(AllowPrivateAccess = "true"))
+	FDateTime StartTime;
+	UPROPERTY(VisibleAnywhere,BlueprintReadWrite,meta=(AllowPrivateAccess = "true"))
+	FDateTime EndTime;
 
 
 	
@@ -104,6 +143,10 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void ResetAll();
+
+
+	UFUNCTION(BlueprintCallable)
+	void StoreObjectiveCompletion(const TArray<FWave>& Waves);
 
 private:
 	FString GetActionName(const EActionType Type);

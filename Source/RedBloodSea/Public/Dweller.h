@@ -39,6 +39,8 @@ private:
 	float PeripheralVisionAngle;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess = "true"),Category="Combat")
 	int EnemyDamage;
+
+
 protected:
 	// Called when the game starts or when spawned
 	//void OnConstruction(const FTransform &Transform) override;
@@ -51,4 +53,10 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	UFUNCTION()
+	void Remove();
+	
+	DECLARE_DYNAMIC_MULTICAST_DELEGATE(FRemove);
+	UPROPERTY(BlueprintAssignable,BlueprintCallable)
+	FRemove OnRemove;
 };

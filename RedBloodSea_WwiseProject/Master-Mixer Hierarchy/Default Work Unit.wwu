@@ -355,11 +355,7 @@
 												<CustomStateList>
 													<CustomState>
 														<StateRef Name="dead" ID="{348DE88E-BEE6-49C0-AB27-105646664E5D}"/>
-														<CustomState Name="" ID="{3BDCD02F-5898-4D4B-B295-C059D08D22A4}" ShortID="745588423">
-															<PropertyList>
-																<Property Name="BusVolume" Type="Real64" Value="-108"/>
-															</PropertyList>
-														</CustomState>
+														<CustomState Name="" ID="{3BDCD02F-5898-4D4B-B295-C059D08D22A4}" ShortID="745588423"/>
 													</CustomState>
 													<CustomState>
 														<StateRef Name="alive" ID="{807D8C35-2D07-4BB8-962F-C1AC99DA4FDC}"/>
@@ -392,11 +388,7 @@
 												<CustomStateList>
 													<CustomState>
 														<StateRef Name="dead" ID="{348DE88E-BEE6-49C0-AB27-105646664E5D}"/>
-														<CustomState Name="" ID="{16D13A46-3030-43D0-9091-6E159C6E3039}" ShortID="848201173">
-															<PropertyList>
-																<Property Name="BusVolume" Type="Real64" Value="-108"/>
-															</PropertyList>
-														</CustomState>
+														<CustomState Name="" ID="{16D13A46-3030-43D0-9091-6E159C6E3039}" ShortID="848201173"/>
 													</CustomState>
 													<CustomState>
 														<StateRef Name="alive" ID="{807D8C35-2D07-4BB8-962F-C1AC99DA4FDC}"/>
@@ -468,11 +460,7 @@
 												<CustomStateList>
 													<CustomState>
 														<StateRef Name="dead" ID="{348DE88E-BEE6-49C0-AB27-105646664E5D}"/>
-														<CustomState Name="" ID="{396768D3-0985-43C0-8843-DAC79F57A56A}" ShortID="130850458">
-															<PropertyList>
-																<Property Name="BusVolume" Type="Real64" Value="-108"/>
-															</PropertyList>
-														</CustomState>
+														<CustomState Name="" ID="{396768D3-0985-43C0-8843-DAC79F57A56A}" ShortID="130850458"/>
 													</CustomState>
 													<CustomState>
 														<StateRef Name="alive" ID="{807D8C35-2D07-4BB8-962F-C1AC99DA4FDC}"/>
@@ -535,9 +523,7 @@
 										<ObjectList Name="Effects">
 											<Reference>
 												<Local>
-													<EffectSlot Name="" ID="{EFBC9C77-CC1D-4E58-811E-C53D56E29F63}" ShortID="187498963">
-														<ReferenceList/>
-													</EffectSlot>
+													<EffectSlot Name="" ID="{EFBC9C77-CC1D-4E58-811E-C53D56E29F63}" ShortID="187498963"/>
 												</Local>
 											</Reference>
 										</ObjectList>
@@ -589,6 +575,47 @@
 														<ReferenceList>
 															<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
 																<ObjectRef Name="Level_Verb" ID="{C10E6266-7F54-414E-B6C1-16F6802E7ADB}" WorkUnitID="{4640899B-4071-49AD-BD7F-E96787417DC9}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</AuxBus>
+								<AuxBus Name="DistantLevelVerb" ID="{4BD473B1-9D7E-4658-B0FE-11591FBEC77E}">
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{E06AB6D5-2BE3-4A39-BB7A-7E67FE49509E}" ShortID="336425669">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
+																<ObjectRef Name="New_Delay" ID="{6ACEEE1D-3975-4B86-B069-429155FF7B9F}" WorkUnitID="{4640899B-4071-49AD-BD7F-E96787417DC9}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{6F55B60A-0C17-45EF-A4DB-C30828EDFF15}" ShortID="923639005">
+														<ReferenceList>
+															<Reference Name="Effect">
+																<Custom CreatedFrom="{C10E6266-7F54-414E-B6C1-16F6802E7ADB}">
+																	<Effect Name="Level_Verb (Custom)" ID="{02317F71-4C7A-43EA-A123-9EAAEF803011}" ShortID="700579160" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																		<PropertyList>
+																			<Property Name="DecayTime" Type="Real32" Value="3.3"/>
+																			<Property Name="Density" Type="Real32" Value="26"/>
+																			<Property Name="ERLevel" Type="Real32" Value="-14"/>
+																			<Property Name="ERPattern" Type="int32" Value="15"/>
+																			<Property Name="HFDamping" Type="Real32" Value="7.55"/>
+																			<Property Name="Quality" Type="int32" Value="10"/>
+																			<Property Name="ReverbLevel" Type="Real32" Value="-34"/>
+																			<Property Name="RoomSize" Type="Real32" Value="100"/>
+																		</PropertyList>
+																	</Effect>
+																</Custom>
 															</Reference>
 														</ReferenceList>
 													</EffectSlot>

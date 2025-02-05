@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{DAA7AE37-A6B1-4A4E-A432-BA5C6D382F83}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{17E91869-2EC1-B55F-7A99-75796963819A}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
+				<Custom>
+					<Plugin Id="700579160" Name="Level_Verb (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus\DistantLevelVerb\[Effect Slot [1]: (RoomVerb)]\Level_Verb (Custom)" GUID="{02317F71-4C7A-43EA-A123-9EAAEF803011}" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</Custom>
 				<ShareSets>
+					<Plugin Id="196835669" Name="New_Delay" ObjectPath="\Effects\Default Work Unit\New_Delay" GUID="{6ACEEE1D-3975-4B86-B069-429155FF7B9F}" LibName="Wwise Delay" LibId="6946819"/>
 					<Plugin Id="2224135639" Name="Level_Verb" ObjectPath="\Effects\Default Work Unit\Level_Verb" GUID="{C10E6266-7F54-414E-B6C1-16F6802E7ADB}" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="3626272192" Name="HIGH_FREQUENCY_CUT_FILTER" ObjectPath="\Effects\Default Work Unit\HIGH_FREQUENCY_CUT_FILTER" GUID="{10C5B825-780E-4846-B96A-6B4E3FA7DC4C}" LibName="Wwise Parametric EQ" LibId="6881283"/>
 				</ShareSets>
@@ -40,15 +44,27 @@
 						</ShareSets>
 					</PluginRefs>
 				</AuxBus>
+				<AuxBus Id="2968176541" Name="DistantLevelVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus\DistantLevelVerb" GUID="{4BD473B1-9D7E-4658-B0FE-11591FBEC77E}">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="700579160"/>
+						</Custom>
+						<ShareSets>
+							<PluginRef Id="196835669"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
 			</AuxBusses>
 			<GameParameters>
 				<GameParameter Id="82424989" Name="rtpc_player_life" ObjectPath="\Game Parameters\Default Work Unit\rtpc_player_life" GUID="{1CC6F0C7-6126-4057-9B70-3C89F38C5F50}"/>
 				<GameParameter Id="88991926" Name="rtpc_master_bus" ObjectPath="\Game Parameters\Default Work Unit\Settings\BUS\rtpc_master_bus" GUID="{94154412-EE63-4EDD-B582-B922CD738ED6}"/>
 				<GameParameter Id="115866790" Name="rtpc_amb_bus" ObjectPath="\Game Parameters\Default Work Unit\Settings\BUS\rtpc_amb_bus" GUID="{A29E33E7-090C-4F92-B2A4-CF339B2E10FC}"/>
+				<GameParameter Id="328674765" Name="rtpc_enemy_stunned" ObjectPath="\Game Parameters\Default Work Unit\rtpc_enemy_stunned" GUID="{9F1682C7-5950-4A17-9A5B-1AFD2226616F}"/>
 				<GameParameter Id="600133661" Name="rtpc_high_freq_filter" ObjectPath="\Game Parameters\Default Work Unit\rtpc_high_freq_filter" GUID="{63F62A41-A536-4987-9F56-EDAB260398B7}"/>
 				<GameParameter Id="765516766" Name="rtpc_player_airspeed" ObjectPath="\Game Parameters\Default Work Unit\rtpc_player_airspeed" GUID="{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}"/>
 				<GameParameter Id="848976592" Name="rtpc_mainmenumusicpitch" ObjectPath="\Game Parameters\Default Work Unit\rtpc_mainmenumusicpitch" GUID="{ED4A7616-4338-46E2-9ED1-5758709ACDDE}"/>
 				<GameParameter Id="876333639" Name="rtpc_tapestop" ObjectPath="\Game Parameters\Default Work Unit\rtpc_tapestop" GUID="{34AB8051-BDEC-4FCF-A5A6-D129BA29D38F}"/>
+				<GameParameter Id="1003354755" Name="rtpc_dash_volumefatigue" ObjectPath="\Game Parameters\Default Work Unit\rtpc_dash_volumefatigue" GUID="{4F31ADED-304B-4D56-9826-0239D7A73C99}"/>
 				<GameParameter Id="1010956302" Name="rtpc_builtin_distance" ObjectPath="\Game Parameters\Default Work Unit\rtpc_builtin_distance" GUID="{51E739EC-97B4-4E4C-A4B4-45C5A6AEF050}"/>
 				<GameParameter Id="1410332996" Name="rtpc_settings_slider" ObjectPath="\Game Parameters\Default Work Unit\rtpc_settings_slider" GUID="{CF91B134-4D3D-4381-A066-5A720C4CB494}"/>
 				<GameParameter Id="2332098030" Name="rtpc_enemy_bus" ObjectPath="\Game Parameters\Default Work Unit\Settings\BUS\rtpc_enemy_bus" GUID="{7B1FB034-3E8E-48F8-B914-CB5786C31FF9}"/>
@@ -62,6 +78,7 @@
 				<GameParameter Id="2969259856" Name="meter_sfx" ObjectPath="\Game Parameters\Default Work Unit\meter_sfx" GUID="{612878B7-9133-405F-BC49-C2FDA83F7E32}"/>
 				<GameParameter Id="3014524554" Name="rtpc_IsPlayerDead" ObjectPath="\Game Parameters\Default Work Unit\rtpc_IsPlayerDead" GUID="{93082E49-E80A-4A47-AC4C-2D7F096EDF12}"/>
 				<GameParameter Id="3067876527" Name="rtpc_sfx_bus" ObjectPath="\Game Parameters\Default Work Unit\Settings\BUS\rtpc_sfx_bus" GUID="{1A0CC5AF-DF3D-4C7B-9E41-61A8E28F74EB}"/>
+				<GameParameter Id="3100189233" Name="rtpc_thrust_volumefatigue" ObjectPath="\Game Parameters\Default Work Unit\rtpc_thrust_volumefatigue" GUID="{D1E2699C-7775-4081-B719-C34807CE526C}"/>
 				<GameParameter Id="3304859005" Name="rtpc_chaos_global" ObjectPath="\Game Parameters\Default Work Unit\rtpc_chaos_global" GUID="{912B7FBA-E859-424B-9664-D9B8B51FC1BA}"/>
 				<GameParameter Id="3361666196" Name="rtpc_chaos_enemy" ObjectPath="\Game Parameters\Default Work Unit\rtpc_chaos_enemy" GUID="{8D8709D7-5017-47F2-988D-4EE3A088300B}"/>
 				<GameParameter Id="3432596327" Name="rtpc_music_bus" ObjectPath="\Game Parameters\Default Work Unit\Settings\BUS\rtpc_music_bus" GUID="{C084FC73-68C8-499E-96AC-E4DBE2F01DED}"/>
@@ -186,5 +203,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{1F9D5588-2A72-9507-C45D-9A2EB248E950}</FileHash>
+	<FileHash>{E2EA7707-21CB-DBE5-FDA0-5739377C8C9E}</FileHash>
 </SoundBanksInfo>

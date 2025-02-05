@@ -87,6 +87,11 @@ int UWeakpointsManager::GetMaxHealthPoint()
 	return MaxHealthPoint;
 }
 
+void UWeakpointsManager::KillDweller()
+{
+	OnDeath.Broadcast(Owner);
+}
+
 void UWeakpointsManager::CreateWeakPoints()
 {
 	if (!IsValid(WeakpointData))

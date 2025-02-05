@@ -68,9 +68,14 @@ public:
 	void SetMaterials(const TArray<TObjectPtr<UMaterialInstanceDynamic>>& newMaterialInstances);
 	
 	// GAMEPLAY FUNCTIONS
+	UFUNCTION(BlueprintCallable)
 	bool CheckIfDead();
+	UFUNCTION(BlueprintCallable)
 	int GetHealthPoint();
+	UFUNCTION(BlueprintCallable)
 	int GetMaxHealthPoint();
+	UFUNCTION(BlueprintCallable)
+	void KillDweller();
 
 	// EVENTS
 	DECLARE_DYNAMIC_MULTICAST_DELEGATE(FWeakpointReveal);

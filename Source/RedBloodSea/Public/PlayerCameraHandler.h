@@ -3,11 +3,11 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "RedBloodSeaUserSettings.h"
 #include "Camera/CameraComponent.h"
 #include "Components/ActorComponent.h"
 #include "Weakpoint.h"
 #include "PlayerCameraHandler.generated.h"
-
 
 UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
 class REDBLOODSEA_API UPlayerCameraHandler : public UActorComponent
@@ -21,6 +21,7 @@ public:
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
+	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 
 public:
 	// Called every frame
@@ -34,6 +35,10 @@ private:
 	void CameraRoll();
 	void CameraFOV();
 	void AimAssist(float deltaTime);
+
+	UFUNCTION()
+	void UpdateCameraSettings();
+
 	AWeakpoint* GetAimAssistTarget();
 
 	APlayerController* playerController;
@@ -48,10 +53,6 @@ private:
 	/*How fast the camera will roll to the left or right when moving to the side*/
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Camera")
 	float cameraRollSpeed;
-
-	/*The default FOV*/
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Camera")
-	float defaultFOV = 105;
 
 	/*The target FOV when the player is dashing*/
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "Camera")
@@ -84,5 +85,7 @@ private:
 	bool isCameraAttachedToPlayer = false;
 
 	float ToggleCameraAttachToPlayer;
+	float sensitivityMultiplier = 1.f;
 	float usedLerpSpeed;
+	float defaultFOV = 105;
 };

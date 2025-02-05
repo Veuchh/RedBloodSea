@@ -7,6 +7,8 @@
 #include "ScreenResolutionEnum.h"
 #include "RedBloodSeaUserSettings.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnUpdateCameraSettings);
+
 UENUM(BlueprintType)
 namespace EGraphicsQuality
 {
@@ -40,7 +42,7 @@ class REDBLOODSEA_API URedBloodSeaUserSettings : public UGameUserSettings
 	
 	UPROPERTY(Config, BlueprintReadWrite)
 	bool Fullscreen;
-
+	
 	UFUNCTION(BlueprintCallable)
 	bool GetDefaultFullscreen();
 
@@ -146,6 +148,9 @@ class REDBLOODSEA_API URedBloodSeaUserSettings : public UGameUserSettings
 	UPROPERTY(Config, BlueprintReadWrite)
 	float AimAssistStrength;
 
-	UFUNCTION(BlueprintCallable, Category = Settings)
-	void SetGraphicsSettingsToDefaults();
+	UFUNCTION(BlueprintCallable)
+	void UpdateCameraSettings();
+	
+	UPROPERTY(BlueprintAssignable)
+	FOnUpdateCameraSettings OnUpdateCameraSettings;
 };

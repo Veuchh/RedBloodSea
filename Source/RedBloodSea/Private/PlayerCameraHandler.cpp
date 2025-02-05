@@ -4,9 +4,12 @@
 #include "PlayerCameraHandler.h"
 
 #include "PlayerData.h"
+#include "RedBloodSeaUserSettings.h"
 #include "Camera/CameraComponent.h"
 #include "GameFramework/Character.h"
 #include "WeakpointsManager.h"
+#include "DynamicMesh/DynamicMesh3.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values for this component's properties
 UPlayerCameraHandler::UPlayerCameraHandler()
@@ -24,7 +27,12 @@ void UPlayerCameraHandler::BeginPlay()
 {
 	Super::BeginPlay();
 
-	// ...
+}
+
+void UPlayerCameraHandler::EndPlay(const EEndPlayReason::Type EndPlayReason)
+{
+	Super::EndPlay(EndPlayReason);
+	URedBloodSeaUserSettings::GetRedBloodSeaUserSettings()->OnUpdateCameraSettings.RemoveDynamic(this, &UPlayerCameraHandler::UpdateCameraSettings);
 }
 
 
@@ -55,6 +63,10 @@ void UPlayerCameraHandler::SetupPlayerCameraComponent(ACharacter* PlayerCharacte
 	{
 		playerController = playerCharacter->GetLocalViewingPlayerController();
 	}
+	
+	UpdateCameraSettings();
+	URedBloodSeaUserSettings::GetRedBloodSeaUserSettings();
+	URedBloodSeaUserSettings::GetRedBloodSeaUserSettings()->OnUpdateCameraSettings.AddDynamic(this, &UPlayerCameraHandler::UpdateCameraSettings);
 }
 
 void UPlayerCameraHandler::OnLookInput(const FVector2D newLookInput)
@@ -62,8 +74,8 @@ void UPlayerCameraHandler::OnLookInput(const FVector2D newLookInput)
 	if (PlayerData::CanRotateCamera() && playerCharacter->Controller != nullptr)
 	{
 		// add yaw and pitch input to controller
-		playerCharacter->AddControllerYawInput(newLookInput.X);
-		playerCharacter->AddControllerPitchInput(newLookInput.Y);
+		playerCharacter->AddControllerYawInput(newLookInput.X * sensitivityMultiplier);
+		playerCharacter->AddControllerPitchInput(newLookInput.Y * sensitivityMultiplier);
 	}
 }
 
@@ -98,9 +110,9 @@ void UPlayerCameraHandler::CameraFOV()
 {
 	//FOV
 	float targetFOV = PlayerData::CurrentPossessState == PlayerPossessState::ZoomingCamera
-		                  ? possessFOV
+		                  ? possessFOV + defaultFOV
 		                  : PlayerData::IsDashing
-		                  ? dashFOV
+		                  ? dashFOV + defaultFOV
 		                  : defaultFOV;
 
 	// Get the current controller roll input
@@ -148,6 +160,12 @@ void UPlayerCameraHandler::AimAssist(float deltaTime)
 			playerCharacter->AddControllerPitchInput(screenPosition.Y * aimAssistStrength * deltaTime);
 		}
 	}
+}
+
+void UPlayerCameraHandler::UpdateCameraSettings()
+{
+	defaultFOV = URedBloodSeaUserSettings::GetRedBloodSeaUserSettings()->FieldOfView;
+	sensitivityMultiplier = URedBloodSeaUserSettings::GetRedBloodSeaUserSettings()->CameraSensitivity;
 }
 
 //This returns nullptr if no suitable weakpoint is found

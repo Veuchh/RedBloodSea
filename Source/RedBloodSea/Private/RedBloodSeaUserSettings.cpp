@@ -115,21 +115,7 @@ float URedBloodSeaUserSettings::GetDefaultContrast()
 	return 50.0f;
 }
 
-void URedBloodSeaUserSettings::SetGraphicsSettingsToDefaults()
+void URedBloodSeaUserSettings::UpdateCameraSettings()
 {
-	Fullscreen = GetDefaultFullscreen();
-	Resolution = GetDefaultRBSResolution();
-	Quality = GetDefaultQuality();
-	Brightness = GetDefaultBrightness();
-	Contrast = GetDefaultContrast();
-
-
-	SetFullscreen(Fullscreen);
-	SetRBSResolution(Resolution);
-
-	//Quality Setting Missing !!!
-
-	//Brightness Setting Missing !!!
-
-	//Contrast Setting Missing !!!
+	OnUpdateCameraSettings.Broadcast();
 }

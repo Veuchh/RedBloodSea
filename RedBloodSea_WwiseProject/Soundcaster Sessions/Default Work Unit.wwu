@@ -81,7 +81,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="rtpc_chaos_global" ID="{912B7FBA-E859-424B-9664-D9B8B51FC1BA}"/>
-							<Value>0.5</Value>
+							<Value>0.98</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="rtpc_settings_slider" ID="{CF91B134-4D3D-4381-A066-5A720C4CB494}"/>
@@ -101,7 +101,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="rtpc_chaos_no_interpolation" ID="{32A00591-7D0F-46D4-86CC-E57C780551F1}"/>
-							<Value>0.5</Value>
+							<Value>0.516163935197827</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="rtpc_mainmenumusicpitch" ID="{ED4A7616-4338-46E2-9ED1-5758709ACDDE}"/>
@@ -109,7 +109,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="rtpc_player_airspeed" ID="{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}"/>
-							<Value>0</Value>
+							<Value>0.453770491803279</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="rtpc_player_walkspeed" ID="{6437691A-43C2-473B-A671-C59F1A9E957B}"/>
@@ -176,12 +176,12 @@
 						<CurrentStateRef Name="None" ID="{F55C3BA2-B06E-4139-88C5-13C67AEA9EF2}"/>
 						<CurrentStateRef Name="alive" ID="{807D8C35-2D07-4BB8-962F-C1AC99DA4FDC}"/>
 						<CurrentStateRef Name="None" ID="{E50472C8-63C0-46CA-8249-305F3BF374E9}"/>
-						<CurrentStateRef Name="None" ID="{5874B239-37B2-4C50-9175-951DEAE60EF8}"/>
+						<CurrentStateRef Name="aiming" ID="{4001CF9D-6974-45C4-A4E1-ADC83295A9E1}"/>
 						<CurrentStateRef Name="onground" ID="{5ADF1174-9E07-490C-82F9-C5039AEC4132}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="stone" ID="{F3CD2C36-B817-4A27-A1BC-96CFB220BA79}"/>
-						<CurrentSwitchRef Name="hc" ID="{83AFF7FC-72F4-49E3-B9D0-180763DC4B81}"/>
+						<CurrentSwitchRef Name="lc" ID="{F6B472FD-C557-43E9-8F52-E8758202397B}"/>
 						<CurrentSwitchRef Name="high_chaos" ID="{B785744B-290E-494F-9AB9-D67CF93D6C32}"/>
 						<CurrentSwitchRef Name="combat_wave_index_1" ID="{89F6AF0C-EEC7-47B3-B013-F708FF217ADC}"/>
 						<CurrentSwitchRef Name="stone" ID="{2C6048E5-583B-4043-92D1-BB6A8329AE1C}"/>

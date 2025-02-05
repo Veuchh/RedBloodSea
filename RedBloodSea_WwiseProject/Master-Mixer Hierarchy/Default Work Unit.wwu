@@ -24,6 +24,29 @@
 										<Property Name="Color" Type="int16" Value="17"/>
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 									</PropertyList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="state_aim" ID="{B36EB626-1B96-4D45-9487-0F8FDC6A68DD}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="notaiming" ID="{AD4DA154-B560-453D-8C38-7A73B45B33AF}"/>
+												<CustomState Name="" ID="{63F15592-9981-498E-8634-389689C6AD6F}" ShortID="813521493"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="aiming" ID="{4001CF9D-6974-45C4-A4E1-ADC83295A9E1}"/>
+												<CustomState Name="" ID="{3716D6DA-8935-4225-B7B0-CD31B611EF94}" ShortID="1029631704">
+													<PropertyList>
+														<Property Name="BusVolume" Type="Real64" Value="3"/>
+														<Property Name="Lowpass" Type="int16" Value="42"/>
+														<Property Name="Pitch" Type="int32" Value="-1670"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
 									<ObjectLists>
 										<ObjectList Name="RTPC">
 											<Reference>

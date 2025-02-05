@@ -428,6 +428,13 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{148D0721-02DE-4B18-BAA7-8BDFB35DB6CB}" ShortID="855732475">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RBS_SFX_PossessionAimStartTail" ID="{1BA1CC1F-A2C9-4FD6-8E5F-E38AE11EF1C5}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 								<Action Name="" ID="{4A77145B-F977-4B62-BE3B-CC7FB6FCBA19}" ShortID="483740245">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="22"/>
@@ -457,13 +464,26 @@
 								<Action Name="" ID="{B11919A1-9600-415A-85D5-98D27D5D3201}" ShortID="799865963">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="Delay" Type="Real64" Value="1"/>
+										<Property Name="Delay" Type="Real64" Value="0.2"/>
 										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
 										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="PossessionAimStart" ID="{94067F68-0458-4D2F-9928-00C17C267C8A}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{C8FC706E-1EA3-4762-A37A-88D104768B6C}" ShortID="933299729">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Delay" Type="Real64" Value="0.2"/>
+										<Property Name="FadeTime" Type="Real64" Value="1.1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RBS_SFX_PossessionAimStartTail" ID="{1BA1CC1F-A2C9-4FD6-8E5F-E38AE11EF1C5}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -485,6 +505,28 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="LinkRay" ID="{054EA2E3-BDBD-4391-9440-C2C79AD09FB7}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_SwordRecover" ID="{9F08EC40-0681-41B4-B765-2B212EB7A8BF}">
+							<ChildrenList>
+								<Action Name="" ID="{95FF779E-5021-4486-A801-716ACCBD3C4A}" ShortID="375844272">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SwordRecover" ID="{0BE8C148-68F5-48CD-9D57-619D4D2C6DF1}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_SwordRecoverHitNothing" ID="{A19F9F28-FC21-46E9-975A-50AA2E2BD672}">
+							<ChildrenList>
+								<Action Name="" ID="{309C854D-998F-46D0-93A5-294999025E5C}" ShortID="699984044">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SwordRecoverHitNothing" ID="{11C6BC8E-DB3B-4808-8887-E3E6363DFB84}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -576,7 +618,7 @@
 								<Action Name="" ID="{BBFBE863-609F-40A9-A0F5-4D2A09CC1EC9}" ShortID="756532953">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="IdleFPS" ID="{7B8EF29C-E877-4E44-8264-9F879804B34C}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											<ObjectRef Name="IdleHC v1" ID="{495FE2E1-88EA-4229-BD70-F7B0849FA364}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -1078,6 +1120,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_DeathMenu_Transition" ID="{CA3D410D-4E96-4217-AFA6-48AB3C8FA624}">
+							<ChildrenList>
+								<Action Name="" ID="{93792E3E-1E9D-4C64-95B4-D6A98DDF95B9}" ShortID="326957550">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PauseDeathTransition" ID="{3A225949-621B-4C9D-AF06-146EFC7A00D1}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Cinematics" ID="{3AD8F8EB-D465-4424-AEE7-3FD15ECAA51F}" ShortID="789215796">
@@ -1507,6 +1560,39 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Event Name="Play_BasaltGate_Close" ID="{B0E60573-43B1-44EC-8B6D-74BE266FDCB9}">
+					<ChildrenList>
+						<Action Name="" ID="{682C623A-ABF7-4157-95D4-C205D00FF855}" ShortID="1020930303">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BasaltGate close v1" ID="{79AEBB70-EA25-43B5-ACEE-CC3889F5CBE7}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_BasaltGate_Idle" ID="{DD648981-8216-4BAF-BE24-7091F5CC0728}">
+					<ChildrenList>
+						<Action Name="" ID="{DDF9F986-D4EB-452C-846A-D57B9A59617A}" ShortID="100768064">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BasaltGate idle v1" ID="{57BE5F14-D440-4DD1-A284-7304FC7F2ACB}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_BasaltGate_Open" ID="{41F731B2-57F0-4FF6-B785-74B93865EDAC}">
+					<ChildrenList>
+						<Action Name="" ID="{D75935F3-5D52-4346-AABE-C470BE3EA4BD}" ShortID="90658205">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BasaltGate open v1" ID="{68A44275-41E7-4D70-8D6C-5B6F8EEB8543}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -743,9 +743,15 @@
 						</BlendContainer>
 						<BlendContainer Name="Thrust" ID="{258A3DC9-66EE-4B7F-9161-5FA6B0663D0B}" ShortID="553127290">
 							<PropertyList>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
 										<Value>4</Value>
+									</ValueList>
+								</Property>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>2</Value>
 									</ValueList>
 								</Property>
 								<Property Name="Pitch" Type="int32">
@@ -756,6 +762,11 @@
 									</ModifierList>
 								</Property>
 								<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -779,6 +790,11 @@
 													<Modifier Name="" ID="{F78DA885-96C0-4A81-8764-859058465C4C}"/>
 												</ModifierInfo>
 											</ModifierList>
+										</Property>
+										<Property Name="Priority" Type="int16">
+											<ValueList>
+												<Value>100</Value>
+											</ValueList>
 										</Property>
 									</PropertyList>
 									<ReferenceList>
@@ -1065,14 +1081,14 @@
 											<CrossfadingInfo>
 												<LeftEdgePos>0</LeftEdgePos>
 												<LeftFadingMode>Automatic</LeftFadingMode>
-												<RightEdgePos>0.575870767494357</RightEdgePos>
+												<RightEdgePos>0.54144322546073</RightEdgePos>
 												<RightFadingMode>Automatic</RightFadingMode>
 											</CrossfadingInfo>
 										</BlendTrackAssoc>
 										<BlendTrackAssoc>
 											<ItemRef Name="ThrustHC" ID="{4AF9D815-0B2B-4766-BED2-30232AE3BB76}"/>
 											<CrossfadingInfo>
-												<LeftEdgePos>0.467970090293454</LeftEdgePos>
+												<LeftEdgePos>0.538671271089884</LeftEdgePos>
 												<LeftFadingMode>Automatic</LeftFadingMode>
 												<RightEdgePos>1</RightEdgePos>
 												<RightFadingMode>Automatic</RightFadingMode>
@@ -2879,133 +2895,6 @@
 												<ActiveSource Name="RBS_SFX_PossessionAimStartBody" ID="{F2544A28-C7AB-4312-A782-5FC692C9333F}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="RBS_SFX_PossessionAimStartTail" ID="{1BA1CC1F-A2C9-4FD6-8E5F-E38AE11EF1C5}" ShortID="129269020">
-											<PropertyList>
-												<Property Name="MakeUpGain" Type="Real64">
-													<ValueList>
-														<Value>3</Value>
-													</ValueList>
-												</Property>
-												<Property Name="Pitch" Type="int32">
-													<ModifierList>
-														<ModifierInfo>
-															<Modifier Name="" ID="{CC91CD07-D10B-48CB-A7FC-83E2B02644DD}">
-																<PropertyList>
-																	<Property Name="Enabled" Type="bool" Value="True"/>
-																	<Property Name="Max" Type="Real64" Value="200"/>
-																	<Property Name="Min" Type="Real64" Value="-200"/>
-																</PropertyList>
-															</Modifier>
-														</ModifierInfo>
-													</ModifierList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="RBS_SFX_PossessionAimStartTail" ID="{ED41136D-E530-461D-B235-D1668F06F7F2}">
-													<Language>SFX</Language>
-													<AudioFile>RBS_SFX_PossessionAimStartTail.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="851341206"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ObjectLists>
-												<ObjectList Name="RTPC">
-													<Reference>
-														<Local>
-															<RTPC Name="" ID="{341391AF-7277-43F1-B4FB-974D3292F669}" ShortID="290569736">
-																<PropertyList>
-																	<Property Name="PropertyName" Type="string" Value="Volume"/>
-																</PropertyList>
-																<ReferenceList>
-																	<Reference Name="ControlInput">
-																		<ObjectRef Name="rtpc_player_airspeed" ID="{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
-																	</Reference>
-																	<Reference Name="Curve">
-																		<Custom>
-																			<Curve Name="" ID="{6D9DB5D1-17C7-484C-BFFB-32D701969D6D}">
-																				<PropertyList>
-																					<Property Name="Flags" Type="int32" Value="3"/>
-																				</PropertyList>
-																				<PointList>
-																					<Point>
-																						<XPos>0</XPos>
-																						<YPos>0</YPos>
-																						<Flags>5</Flags>
-																					</Point>
-																					<Point>
-																						<XPos>0.27246</XPos>
-																						<YPos>-5.38804</YPos>
-																						<Flags>0</Flags>
-																					</Point>
-																					<Point>
-																						<XPos>1</XPos>
-																						<YPos>-8.44851</YPos>
-																						<Flags>37</Flags>
-																					</Point>
-																				</PointList>
-																			</Curve>
-																		</Custom>
-																	</Reference>
-																</ReferenceList>
-															</RTPC>
-														</Local>
-													</Reference>
-													<Reference>
-														<Local>
-															<RTPC Name="" ID="{2EF1BB71-3A19-4FDB-932C-4712C77C55F6}" ShortID="150028548">
-																<PropertyList>
-																	<Property Name="PropertyName" Type="string" Value="Volume"/>
-																</PropertyList>
-																<ReferenceList>
-																	<Reference Name="ControlInput">
-																		<ObjectRef Name="rtpc_chaos_global" ID="{912B7FBA-E859-424B-9664-D9B8B51FC1BA}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
-																	</Reference>
-																	<Reference Name="Curve">
-																		<Custom>
-																			<Curve Name="" ID="{2F97A4F3-73F3-463F-98B0-6B08F7A2C7DC}">
-																				<PropertyList>
-																					<Property Name="Flags" Type="int32" Value="3"/>
-																				</PropertyList>
-																				<PointList>
-																					<Point>
-																						<XPos>0</XPos>
-																						<YPos>-6</YPos>
-																						<Flags>5</Flags>
-																						<SegmentShape>SCurve</SegmentShape>
-																					</Point>
-																					<Point>
-																						<XPos>0.5</XPos>
-																						<YPos>0</YPos>
-																						<Flags>0</Flags>
-																					</Point>
-																					<Point>
-																						<XPos>1</XPos>
-																						<YPos>0</YPos>
-																						<Flags>37</Flags>
-																					</Point>
-																				</PointList>
-																			</Curve>
-																		</Custom>
-																	</Reference>
-																</ReferenceList>
-															</RTPC>
-														</Local>
-													</Reference>
-												</ObjectList>
-											</ObjectLists>
-											<ActiveSourceList>
-												<ActiveSource Name="RBS_SFX_PossessionAimStartTail" ID="{ED41136D-E530-461D-B235-D1668F06F7F2}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
 										<Sound Name="LinkTrail LC" ID="{717B4036-C692-4C05-85C0-56C6A9B85445}" ShortID="660143748">
 											<PropertyList>
 												<Property Name="MakeUpGain" Type="Real64">
@@ -3119,7 +3008,7 @@
 												<ActiveSource Name="LinkTrail LC v1" ID="{FCBB914A-63C1-4C00-89EB-D7D04E9E0452}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<RandomSequenceContainer Name="LinkStarted" ID="{094A9B6A-A4BF-459F-B8BD-56EEC2524F6D}" ShortID="244388345">
+										<RandomSequenceContainer Name="LinkStartedLC" ID="{094A9B6A-A4BF-459F-B8BD-56EEC2524F6D}" ShortID="244388345">
 											<PropertyList>
 												<Property Name="MakeUpGain" Type="Real64">
 													<ValueList>
@@ -3618,8 +3507,375 @@
 										</ObjectList>
 									</ObjectLists>
 								</RandomSequenceContainer>
+								<Sound Name="RBS_SFX_PossessionAimStartTail" ID="{1BA1CC1F-A2C9-4FD6-8E5F-E38AE11EF1C5}" ShortID="129269020">
+									<PropertyList>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>3</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{CC91CD07-D10B-48CB-A7FC-83E2B02644DD}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="200"/>
+															<Property Name="Min" Type="Real64" Value="-200"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerAbilities" ID="{23D327A8-D57F-4DDE-8DF2-8200B9DA4037}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RBS_SFX_PossessionAimStartTail" ID="{ED41136D-E530-461D-B235-D1668F06F7F2}">
+											<Language>SFX</Language>
+											<AudioFile>RBS_SFX_PossessionAimStartTail.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="851341206"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{341391AF-7277-43F1-B4FB-974D3292F669}" ShortID="290569736">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="rtpc_player_airspeed" ID="{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{6D9DB5D1-17C7-484C-BFFB-32D701969D6D}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>0.27246</XPos>
+																				<YPos>-5.38804</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>1</XPos>
+																				<YPos>-8.44851</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{2EF1BB71-3A19-4FDB-932C-4712C77C55F6}" ShortID="150028548">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="rtpc_chaos_global" ID="{912B7FBA-E859-424B-9664-D9B8B51FC1BA}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{2F97A4F3-73F3-463F-98B0-6B08F7A2C7DC}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-6</YPos>
+																				<Flags>5</Flags>
+																				<SegmentShape>SCurve</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>0.5</XPos>
+																				<YPos>0</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>1</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+									<ActiveSourceList>
+										<ActiveSource Name="RBS_SFX_PossessionAimStartTail" ID="{ED41136D-E530-461D-B235-D1668F06F7F2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 						</Folder>
+						<RandomSequenceContainer Name="SwordRecover" ID="{0BE8C148-68F5-48CD-9D57-619D4D2C6DF1}" ShortID="348618357">
+							<PropertyList>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="PlayerAbilities" ID="{23D327A8-D57F-4DDE-8DF2-8200B9DA4037}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Sword Recover v1" ID="{89531CB5-FDAC-4CF0-9710-5B193F13EB0A}" ShortID="498659871">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Sword Recover v1" ID="{CD0B4211-4461-457A-A2AF-BC419718DAC7}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0250879385964912"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.179199561403509"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.354815131578947"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.37983662280702"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Sword Recover v1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="656053836"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Sword Recover v1" ID="{CD0B4211-4461-457A-A2AF-BC419718DAC7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Sword Recover v1_01" ID="{765F2AC6-56B6-42A1-933D-A066DDD2F950}" ShortID="817035516">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Sword Recover v1" ID="{6A4BE33C-5174-46CF-9243-809181BD5D02}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0179199561403507"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.179199561403509"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.93177127192983"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.82060109649123"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Sword Recover v1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="645665989"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Sword Recover v1" ID="{6A4BE33C-5174-46CF-9243-809181BD5D02}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Sword Recover v1_02" ID="{375E32A7-6564-4D5C-A248-FD6AEF88C733}" ShortID="688786236">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Sword Recover v1" ID="{A55B4EB3-ABA4-442B-882D-0DCB49AC40EB}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0322559210526316"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.179199561403509"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="4.44414912280702"/>
+												<Property Name="TrimEnd" Type="Real64" Value="5.2039552631579"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Sword Recover v1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="599383923"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Sword Recover v1" ID="{A55B4EB3-ABA4-442B-882D-0DCB49AC40EB}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Playlist">
+									<Reference>
+										<ObjectRef Name="Sword Recover v1" ID="{89531CB5-FDAC-4CF0-9710-5B193F13EB0A}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="Sword Recover v1_01" ID="{765F2AC6-56B6-42A1-933D-A066DDD2F950}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="Sword Recover v1_02" ID="{375E32A7-6564-4D5C-A248-FD6AEF88C733}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="SwordRecoverHitNothing" ID="{11C6BC8E-DB3B-4808-8887-E3E6363DFB84}" ShortID="92653249">
+							<PropertyList>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="PlayerAbilities" ID="{23D327A8-D57F-4DDE-8DF2-8200B9DA4037}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Sword Recovery Hit Nothing V1" ID="{DB25F0B3-3E72-4796-A260-DF79F3E5E093}" ShortID="88075045">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Sword Recovery Hit Nothing V1" ID="{0B4E0D8D-9CCB-4F18-A0EC-C53531FE3751}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0321189083820663"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.314765302144249"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.31476530214425"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.32329902534113"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Sword Recovery Hit Nothing V1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="2101879"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Sword Recovery Hit Nothing V1" ID="{0B4E0D8D-9CCB-4F18-A0EC-C53531FE3751}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Sword Recovery Hit Nothing V1_01" ID="{021E65AE-8DB6-4A15-BF2C-441711F5E799}" ShortID="665373028">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Sword Recovery Hit Nothing V1" ID="{00D6ADA0-EAE0-4B38-857C-041F90BBA229}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0417545808966862"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.314765302144249"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.85326101364522"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.70441208576998"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Sword Recovery Hit Nothing V1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="184313695"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Sword Recovery Hit Nothing V1" ID="{00D6ADA0-EAE0-4B38-857C-041F90BBA229}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Sword Recovery Hit Nothing V1_02" ID="{0A1B87EE-DD5B-4206-A5E9-FF702CD4021E}" ShortID="825996145">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Sword Recovery Hit Nothing V1" ID="{CC0AAA86-84CF-4D03-B640-3C5189394BFE}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0417545808966862"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.314765302144249"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="4.35853586744639"/>
+												<Property Name="TrimEnd" Type="Real64" Value="5.16150857699805"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Sword Recovery Hit Nothing V1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="949197084"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Sword Recovery Hit Nothing V1" ID="{CC0AAA86-84CF-4D03-B640-3C5189394BFE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Playlist">
+									<Reference>
+										<ObjectRef Name="Sword Recovery Hit Nothing V1" ID="{DB25F0B3-3E72-4796-A260-DF79F3E5E093}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="Sword Recovery Hit Nothing V1_01" ID="{021E65AE-8DB6-4A15-BF2C-441711F5E799}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="Sword Recovery Hit Nothing V1_02" ID="{0A1B87EE-DD5B-4206-A5E9-FF702CD4021E}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="DeprecatedActors" ID="{DBF1142B-0192-401E-84D7-D7AC0744EE10}" ShortID="312629728">
@@ -6185,7 +6441,7 @@
 							<PropertyList>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>9</Value>
+										<Value>11</Value>
 									</ValueList>
 								</Property>
 								<Property Name="Pitch" Type="int32">
@@ -6207,6 +6463,11 @@
 							<ChildrenList>
 								<BlendContainer Name="Weakpoint Reveal Blend" ID="{47955738-FD50-4C39-871F-C7294B233815}" ShortID="334592356">
 									<PropertyList>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>
@@ -8181,11 +8442,16 @@
 						<RandomSequenceContainer Name="EnemyStun" ID="{86CEB44C-5451-4ACC-B813-CF386F9953A3}" ShortID="248069023">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>13</Value>
+									</ValueList>
+								</Property>
 								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>-7</Value>
+										<Value>-10</Value>
 									</ValueList>
 								</Property>
 								<Property Name="MaxSoundPerInstance" Type="int16">
@@ -11962,6 +12228,108 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
+						<Sound Name="BasaltGate close v1" ID="{79AEBB70-EA25-43B5-ACEE-CC3889F5CBE7}" ShortID="94122216">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="BasaltGate" ID="{C74B7801-3B72-4088-9817-1E152F1CC44A}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="BasaltGate close v1" ID="{20B2F721-A22B-4154-A764-F2E8DA949CAD}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.240178335222978"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0814739229024943"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>BasaltGate close v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="177033337"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="BasaltGate close v1" ID="{20B2F721-A22B-4154-A764-F2E8DA949CAD}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="BasaltGate idle v1" ID="{57BE5F14-D440-4DD1-A284-7304FC7F2ACB}" ShortID="831188566">
+							<PropertyList>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>9</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="BasaltGateIdle" ID="{3861B61A-9237-4C5B-AB90-BE459DB2D436}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="BasaltGate idle v1" ID="{D02495EF-3068-4042-AACC-22AC90AE7469}">
+									<Language>SFX</Language>
+									<AudioFile>BasaltGate idle v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="435137282"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="BasaltGate idle v1" ID="{D02495EF-3068-4042-AACC-22AC90AE7469}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="BasaltGate open v1" ID="{68A44275-41E7-4D70-8D6C-5B6F8EEB8543}" ShortID="164568101">
+							<PropertyList>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="BasaltGate" ID="{C74B7801-3B72-4088-9817-1E152F1CC44A}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="BasaltGate open v1" ID="{5EE12374-60EB-4332-B81F-13F4EA783478}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0364537037037037"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>BasaltGate open v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="224215526"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="BasaltGate open v1" ID="{5EE12374-60EB-4332-B81F-13F4EA783478}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="RBS_SFX_Player Movement" ID="{D5815511-72CE-461F-B505-EE52DD697857}" ShortID="142732680">
@@ -13689,64 +14057,6 @@
 									</BlendTrackAssocList>
 								</BlendTrack>
 							</BlendTrackList>
-						</BlendContainer>
-						<BlendContainer Name="IdleFPS" ID="{7B8EF29C-E877-4E44-8264-9F879804B34C}" ShortID="613645124">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="PlayerBus" ID="{EBF9A5C4-2EDC-44FD-B726-7EE704405AC2}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<BlendContainer Name="IdleFPSChaosBlend" ID="{4ADF487F-3B86-4B47-8485-F4A5AFF0B2A4}" ShortID="219373041">
-									<PropertyList>
-										<Property Name="Inclusion" Type="bool">
-											<ValueList>
-												<Value>False</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
-										</Reference>
-									</ReferenceList>
-								</BlendContainer>
-								<Sound Name="IdleFPSGeneric" ID="{AA23FAC4-3688-4ADA-91A2-5402F2521D69}" ShortID="574044764">
-									<PropertyList>
-										<Property Name="Inclusion" Type="bool">
-											<ValueList>
-												<Value>False</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="RBS_SFX_Player_IdleFPSGeneric ph" ID="{FB5AE4C2-1F4B-43BE-A15E-BD0788CD23A5}">
-											<Language>SFX</Language>
-											<AudioFile>RBS_SFX_Player_IdleFPSGeneric ph.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="121367497"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="RBS_SFX_Player_IdleFPSGeneric ph" ID="{FB5AE4C2-1F4B-43BE-A15E-BD0788CD23A5}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-							</ChildrenList>
 						</BlendContainer>
 						<ActorMixer Name="Dash" ID="{D1D26992-9A2D-45AC-9115-3F50F3A45C34}" ShortID="802143944">
 							<ReferenceList>
@@ -28914,6 +29224,134 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
+						<Sound Name="IdleHC v1" ID="{495FE2E1-88EA-4229-BD70-F7B0849FA364}" ShortID="831370476">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-7</Value>
+									</ValueList>
+								</Property>
+								<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="PlayerBus" ID="{EBF9A5C4-2EDC-44FD-B726-7EE704405AC2}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="IdleHC v1" ID="{8F495F22-4F89-4C36-9185-2BF2FA26C370}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="0.278486038011696"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.278486038011696"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>IdleHC v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="510906830"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{D3D6CB6B-8D2D-49CF-846F-95C8B70AEBC5}">
+									<PropertyList>
+										<Property Name="PanX" Type="Real64" Value="-27.7027027027027"/>
+										<Property Name="PanY" Type="Real64" Value="-0.724637681159441"/>
+									</PropertyList>
+								</Panner>
+							</PositioningInfo>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{3C002A1B-5C03-497A-B92B-1307DF2AC2B3}" ShortID="431124270">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="rtpc_player_airspeed" ID="{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{DB144121-490E-4D33-A1A4-A705CDCBC028}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>0.22229</XPos>
+																		<YPos>-7.97921</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>-9.91741</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{F6F5AF9D-090A-4221-84D1-0B73FEBA1FA4}" ShortID="604294047">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="rtpc_chaos_global" ID="{912B7FBA-E859-424B-9664-D9B8B51FC1BA}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{AC12A94A-CFC5-45DF-BBC6-0B607D3DD35D}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>0.50098</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+							<ActiveSourceList>
+								<ActiveSource Name="IdleHC v1" ID="{8F495F22-4F89-4C36-9185-2BF2FA26C370}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

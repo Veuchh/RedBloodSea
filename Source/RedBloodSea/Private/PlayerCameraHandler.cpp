@@ -26,13 +26,16 @@ UPlayerCameraHandler::UPlayerCameraHandler()
 void UPlayerCameraHandler::BeginPlay()
 {
 	Super::BeginPlay();
-
 }
 
 void UPlayerCameraHandler::EndPlay(const EEndPlayReason::Type EndPlayReason)
 {
 	Super::EndPlay(EndPlayReason);
-	URedBloodSeaUserSettings::GetRedBloodSeaUserSettings()->OnUpdateCameraSettings.RemoveDynamic(this, &UPlayerCameraHandler::UpdateCameraSettings);
+	URedBloodSeaUserSettings::GetRedBloodSeaUserSettings()->OnUpdateCameraSettings.RemoveDynamic(
+		this, &UPlayerCameraHandler::UpdateCameraSettings);
+	
+	URedBloodSeaUserSettings::GetRedBloodSeaUserSettings()->OnUpdateAccessSettings.RemoveDynamic(
+		this, &UPlayerCameraHandler::UpdateAccessSettings);
 }
 
 
@@ -63,10 +66,14 @@ void UPlayerCameraHandler::SetupPlayerCameraComponent(ACharacter* PlayerCharacte
 	{
 		playerController = playerCharacter->GetLocalViewingPlayerController();
 	}
-	
+
 	UpdateCameraSettings();
-	URedBloodSeaUserSettings::GetRedBloodSeaUserSettings();
-	URedBloodSeaUserSettings::GetRedBloodSeaUserSettings()->OnUpdateCameraSettings.AddDynamic(this, &UPlayerCameraHandler::UpdateCameraSettings);
+	URedBloodSeaUserSettings::GetRedBloodSeaUserSettings()->OnUpdateCameraSettings.AddDynamic(
+	this, &UPlayerCameraHandler::UpdateCameraSettings);
+
+	UpdateAccessSettings();
+	URedBloodSeaUserSettings::GetRedBloodSeaUserSettings()->OnUpdateAccessSettings.AddDynamic(
+		this, &UPlayerCameraHandler::UpdateAccessSettings);
 }
 
 void UPlayerCameraHandler::OnLookInput(const FVector2D newLookInput)
@@ -122,8 +129,8 @@ void UPlayerCameraHandler::CameraFOV()
 	float lerpAlpha = FMath::Clamp((PlayerData::CurrentPossessState == PlayerPossessState::ZoomingCamera
 		                                ? possessFovChangeSpeed
 		                                : dashFovChangeSpeed) * GetWorld()->GetDeltaSeconds(),
-		                           0.0f,
-		                           1.0f);
+	                               0.0f,
+	                               1.0f);
 
 	// Interpolate between the current roll and the adjusted target roll
 	float newFOV = FMath::Lerp(currentFOV,
@@ -168,6 +175,11 @@ void UPlayerCameraHandler::UpdateCameraSettings()
 	sensitivityMultiplier = URedBloodSeaUserSettings::GetRedBloodSeaUserSettings()->CameraSensitivity;
 }
 
+void UPlayerCameraHandler::UpdateAccessSettings()
+{
+	aimAssistMultiplier = URedBloodSeaUserSettings::GetRedBloodSeaUserSettings()->AimAssistStrength;
+}
+
 //This returns nullptr if no suitable weakpoint is found
 AWeakpoint* UPlayerCameraHandler::GetAimAssistTarget()
 {
@@ -189,8 +201,8 @@ AWeakpoint* UPlayerCameraHandler::GetAimAssistTarget()
 				screenPosition = screenPosition / ViewportSize;
 				float distanceToCenter = (screenPosition - (FVector2d::One() / 2)).Length();
 
-				if (distanceToCenter < aimAssistMaxDistanceFromScreenCenter && distanceToCenter <
-					bestDistanceFromScreenCenter)
+				if (distanceToCenter < aimAssistMaxDistanceFromScreenCenter * aimAssistMultiplier
+					&& distanceToCenter < bestDistanceFromScreenCenter)
 				{
 					bestWeakpoint = Weakpoint;
 					bestDistanceFromScreenCenter = distanceToCenter;

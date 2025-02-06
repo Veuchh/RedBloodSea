@@ -40,7 +40,7 @@
 												<StateRef Name="aiming" ID="{4001CF9D-6974-45C4-A4E1-ADC83295A9E1}"/>
 												<CustomState Name="" ID="{3716D6DA-8935-4225-B7B0-CD31B611EF94}" ShortID="1029631704">
 													<PropertyList>
-														<Property Name="BusVolume" Type="Real64" Value="3"/>
+														<Property Name="BusVolume" Type="Real64" Value="-9"/>
 														<Property Name="Lowpass" Type="int16" Value="42"/>
 														<Property Name="Pitch" Type="int32" Value="-1670"/>
 													</PropertyList>
@@ -259,7 +259,7 @@
 																		<PointList>
 																			<Point>
 																				<XPos>-48</XPos>
-																				<YPos>-0</YPos>
+																				<YPos>0</YPos>
 																				<Flags>5</Flags>
 																				<SegmentShape>Log1</SegmentShape>
 																			</Point>
@@ -301,7 +301,7 @@
 																		<PointList>
 																			<Point>
 																				<XPos>-48</XPos>
-																				<YPos>-0</YPos>
+																				<YPos>0</YPos>
 																				<Flags>5</Flags>
 																				<SegmentShape>Log1</SegmentShape>
 																			</Point>
@@ -332,6 +332,29 @@
 										<Property Name="Color" Type="int16" Value="1"/>
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 									</PropertyList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="state_aim" ID="{B36EB626-1B96-4D45-9487-0F8FDC6A68DD}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="notaiming" ID="{AD4DA154-B560-453D-8C38-7A73B45B33AF}"/>
+												<CustomState Name="" ID="{82B33E9D-55C7-4EBF-B41F-8981150895CA}" ShortID="422216675"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="aiming" ID="{4001CF9D-6974-45C4-A4E1-ADC83295A9E1}"/>
+												<CustomState Name="" ID="{C73F0C2B-EA83-4C62-96A5-ED1C27E7ABDA}" ShortID="826930095">
+													<PropertyList>
+														<Property Name="Highpass" Type="int16" Value="12"/>
+														<Property Name="Lowpass" Type="int16" Value="18"/>
+														<Property Name="Volume" Type="Real64" Value="-8"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
 									<ObjectLists>
 										<ObjectList Name="RTPC">
 											<Reference>
@@ -458,7 +481,7 @@
 																		<PointList>
 																			<Point>
 																				<XPos>-48</XPos>
-																				<YPos>-0</YPos>
+																				<YPos>0</YPos>
 																				<Flags>5</Flags>
 																				<SegmentShape>Log1</SegmentShape>
 																			</Point>
@@ -500,7 +523,7 @@
 																		<PointList>
 																			<Point>
 																				<XPos>-48</XPos>
-																				<YPos>-0</YPos>
+																				<YPos>0</YPos>
 																				<Flags>5</Flags>
 																				<SegmentShape>Log1</SegmentShape>
 																			</Point>
@@ -621,7 +644,7 @@
 																				<PointList>
 																					<Point>
 																						<XPos>-48</XPos>
-																						<YPos>-0</YPos>
+																						<YPos>0</YPos>
 																						<Flags>5</Flags>
 																						<SegmentShape>Log1</SegmentShape>
 																					</Point>
@@ -663,7 +686,7 @@
 																				<PointList>
 																					<Point>
 																						<XPos>-48</XPos>
-																						<YPos>-0</YPos>
+																						<YPos>0</YPos>
 																						<Flags>5</Flags>
 																						<SegmentShape>Log1</SegmentShape>
 																					</Point>
@@ -832,7 +855,7 @@
 																				<PointList>
 																					<Point>
 																						<XPos>-48</XPos>
-																						<YPos>-0</YPos>
+																						<YPos>0</YPos>
 																						<Flags>5</Flags>
 																						<SegmentShape>Log1</SegmentShape>
 																					</Point>
@@ -874,7 +897,7 @@
 																				<PointList>
 																					<Point>
 																						<XPos>-48</XPos>
-																						<YPos>-0</YPos>
+																						<YPos>0</YPos>
 																						<Flags>5</Flags>
 																						<SegmentShape>Log1</SegmentShape>
 																					</Point>
@@ -993,7 +1016,7 @@
 																				<PointList>
 																					<Point>
 																						<XPos>-48</XPos>
-																						<YPos>-0</YPos>
+																						<YPos>0</YPos>
 																						<Flags>5</Flags>
 																						<SegmentShape>Log1</SegmentShape>
 																					</Point>
@@ -1075,7 +1098,7 @@
 																				<PointList>
 																					<Point>
 																						<XPos>-48</XPos>
-																						<YPos>-0</YPos>
+																						<YPos>0</YPos>
 																						<Flags>5</Flags>
 																						<SegmentShape>Log1</SegmentShape>
 																					</Point>

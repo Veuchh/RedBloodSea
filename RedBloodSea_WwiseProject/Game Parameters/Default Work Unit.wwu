@@ -172,6 +172,14 @@
 					<PropertyList>
 						<Property Name="InitialValue" Type="Real64" Value="1"/>
 						<Property Name="Min" Type="Real64" Value="1"/>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="68"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="67"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="rtpc_idle_pan_left_right" ID="{64A95D7C-A689-43D3-8468-0FE53462F747}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
 					</PropertyList>
 				</GameParameter>
 			</ChildrenList>

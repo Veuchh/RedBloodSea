@@ -3511,7 +3511,7 @@
 									<PropertyList>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>3</Value>
+												<Value>6</Value>
 											</ValueList>
 										</Property>
 										<Property Name="Pitch" Type="int32">
@@ -4549,6 +4549,7 @@
 													</ValueList>
 												</Property>
 												<Property Name="OverridePositioning" Type="bool" Value="True"/>
+												<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 												<Property Name="Pitch" Type="int32">
 													<ValueList>
 														<Value>10</Value>
@@ -4567,11 +4568,17 @@
 												</Property>
 											</PropertyList>
 											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="ProjectileBreak" ID="{F14A3998-25C5-4EBD-B99E-34E339694B2A}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
+												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
 												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="EnemyBus" ID="{BCC1ECC0-BA5A-45C2-A555-9454DB046120}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="DistantLevelVerb" ID="{4BD473B1-9D7E-4658-B0FE-11591FBEC77E}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -4614,7 +4621,19 @@
 										<RandomSequenceContainer Name="EnemyProjectileCast" ID="{4A9A06BA-BB7D-4433-A266-4FDE7867C156}" ShortID="130723254">
 											<PropertyList>
 												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
 												<Property Name="OverridePositioning" Type="bool" Value="True"/>
+												<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 												<Property Name="Pitch" Type="int32">
 													<ModifierList>
 														<ModifierInfo>
@@ -4627,13 +4646,24 @@
 														</ModifierInfo>
 													</ModifierList>
 												</Property>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="ProjectileCastFire" ID="{A161C10D-A082-4A97-824B-1F04FB2C2DAF}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
+												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
 												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="DistantLevelVerb" ID="{4BD473B1-9D7E-4658-B0FE-11591FBEC77E}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -4676,7 +4706,14 @@
 														</ModifierInfo>
 													</ModifierList>
 												</Property>
+												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
 												<Property Name="OverridePositioning" Type="bool" Value="True"/>
+												<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 												<Property Name="Pitch" Type="int32">
 													<ModifierList>
 														<ModifierInfo>
@@ -4690,13 +4727,24 @@
 														</ModifierInfo>
 													</ModifierList>
 												</Property>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="ProjectileCastFire" ID="{A161C10D-A082-4A97-824B-1F04FB2C2DAF}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
+												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
 												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="DistantLevelVerb" ID="{4BD473B1-9D7E-4658-B0FE-11591FBEC77E}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -4741,10 +4789,11 @@
 												</Property>
 												<Property Name="MakeUpGain" Type="Real64">
 													<ValueList>
-														<Value>-5</Value>
+														<Value>-3</Value>
 													</ValueList>
 												</Property>
 												<Property Name="OverridePositioning" Type="bool" Value="True"/>
+												<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 												<Property Name="Pitch" Type="int32">
 													<ValueList>
 														<Value>770</Value>
@@ -4763,19 +4812,25 @@
 												</Property>
 											</PropertyList>
 											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="EnemyProjectileBeam" ID="{06C8ECEB-9348-45C7-85E8-B4C0F9567B0B}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
+												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
 												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
 												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="DistantLevelVerb" ID="{4BD473B1-9D7E-4658-B0FE-11591FBEC77E}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Beam" ID="{B8C42A80-0386-47C7-8F21-8B4C64F7FE35}">
 													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="3.92028756168113"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="3.17525496276027"/>
 														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimEnd" Type="Real64" Value="3.92028756168113"/>
+														<Property Name="TrimEnd" Type="Real64" Value="3.17525496276027"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Beam.wav</AudioFile>
@@ -4822,6 +4877,9 @@
 												</Property>
 											</PropertyList>
 											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="ProjectileBreak" ID="{F14A3998-25C5-4EBD-B99E-34E339694B2A}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
+												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
 												</Reference>
@@ -6040,7 +6098,7 @@
 										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>4</Value>
+												<Value>2</Value>
 											</ValueList>
 										</Property>
 										<Property Name="Pitch" Type="int32">
@@ -6063,11 +6121,17 @@
 										</Property>
 									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ProjectileFlyby" ID="{84FF9C88-E97C-48E0-8939-542460565523}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="DistantLevelVerb" ID="{4BD473B1-9D7E-4658-B0FE-11591FBEC77E}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -7303,9 +7367,15 @@
 												</ModifierInfo>
 											</ModifierList>
 										</Property>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
 												<Value>-8</Value>
+											</ValueList>
+										</Property>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>2</Value>
 											</ValueList>
 										</Property>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
@@ -7322,6 +7392,11 @@
 													</Modifier>
 												</ModifierInfo>
 											</ModifierList>
+										</Property>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
 										</Property>
 									</PropertyList>
 									<ReferenceList>
@@ -7466,9 +7541,15 @@
 												</ModifierInfo>
 											</ModifierList>
 										</Property>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
 												<Value>11</Value>
+											</ValueList>
+										</Property>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>2</Value>
 											</ValueList>
 										</Property>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
@@ -7487,6 +7568,11 @@
 											</ModifierList>
 										</Property>
 										<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
@@ -10456,6 +10542,11 @@
 												<Value>14</Value>
 											</ValueList>
 										</Property>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
 										<Property Name="OverrideEffect" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
@@ -10499,7 +10590,7 @@
 														</Property>
 														<Property Name="MakeUpGain" Type="Real64">
 															<ValueList>
-																<Value>-5</Value>
+																<Value>-6</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -10656,6 +10747,121 @@
 																	</RTPC>
 																</Local>
 															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{8EEB3403-3BC6-4F7E-9DB8-1F82D94D2C32}" ShortID="69516055">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Pitch"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_ambiance_arena_attenuation" ID="{317D7F34-0FD2-4141-8088-6B66E709DE20}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{71CBD6BD-DD3A-48F4-B25F-4CDBAB39CAD7}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="65537"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>-269</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>60.74805</XPos>
+																								<YPos>-230</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>100</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{682218AD-CFF6-4F3B-8AA4-0403FE989ABC}" ShortID="36727569">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_ambiance_arena_attenuation" ID="{317D7F34-0FD2-4141-8088-6B66E709DE20}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{02855C72-D249-4B9C-8393-A0642F615D36}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="65537"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>18</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>100</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{B48BF2C0-97BB-4FC2-95FA-4076562719E4}" ShortID="489977307">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Volume"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_ambiance_arena_attenuation" ID="{317D7F34-0FD2-4141-8088-6B66E709DE20}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{68890DDF-2842-4BA1-89B0-10CAC4553E90}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>-3.78406</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>72.39892</XPos>
+																								<YPos>-3.93373</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>100</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
 														</ObjectList>
 													</ObjectLists>
 													<ActiveSourceList>
@@ -10724,6 +10930,126 @@
 																							</Point>
 																							<Point>
 																								<XPos>1</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{0F345724-E176-4855-AFCA-56EE0083DFF8}" ShortID="701027879">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Pitch"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_ambiance_arena_attenuation" ID="{317D7F34-0FD2-4141-8088-6B66E709DE20}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{DBAC4E93-45CA-43E6-9951-C7D5FDCF9235}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="65537"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>-269</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>71.76953</XPos>
+																								<YPos>-419</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>100</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{81D92C2E-D2AF-4A41-BBB3-95520AEE442D}" ShortID="1007335163">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_ambiance_arena_attenuation" ID="{317D7F34-0FD2-4141-8088-6B66E709DE20}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{2DCED1E7-C06F-47E6-A2EE-0976F4A43FD1}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="65537"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>12</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>72.15625</XPos>
+																								<YPos>12</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>100</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{311421C7-FFD5-49FC-B1F0-81AC220BDEC3}" ShortID="358461055">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Volume"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_ambiance_arena_attenuation" ID="{317D7F34-0FD2-4141-8088-6B66E709DE20}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{36B47DF6-947F-4DBB-820A-41B85E291DBC}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>-5.07322</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>71.21256</XPos>
+																								<YPos>-4.93493</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>100</XPos>
 																								<YPos>0</YPos>
 																								<Flags>37</Flags>
 																							</Point>
@@ -10922,6 +11248,11 @@
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
 																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ValueList>
+																<Value>2</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -11186,6 +11517,46 @@
 																	</RTPC>
 																</Local>
 															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{3E49BBD2-9A12-4F49-94E0-04059DAA529D}" ShortID="815001031">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Volume"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_ambiance_arena_attenuation" ID="{317D7F34-0FD2-4141-8088-6B66E709DE20}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{1C23B9ED-6ACB-407F-8172-7C8B38DB6024}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>-5.82417</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>71.57295</XPos>
+																								<YPos>-5.73475</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>100</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
 														</ObjectList>
 													</ObjectLists>
 													<ActiveSourceList>
@@ -11250,32 +11621,32 @@
 																		<PointList>
 																			<Point>
 																				<XPos>0</XPos>
-																				<YPos>-6.37936</YPos>
+																				<YPos>-6.07864</YPos>
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>0.27726</XPos>
-																				<YPos>-1.18139</YPos>
+																				<XPos>0.30913</XPos>
+																				<YPos>-3.92796</YPos>
 																				<Flags>0</Flags>
 																			</Point>
 																			<Point>
 																				<XPos>0.3587</XPos>
-																				<YPos>1.35976</YPos>
+																				<YPos>-1.27757</YPos>
 																				<Flags>0</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>0.61683</XPos>
-																				<YPos>3.10521</YPos>
+																				<XPos>0.61484</XPos>
+																				<YPos>0.78576</YPos>
 																				<Flags>0</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>0.77749</XPos>
-																				<YPos>4.67449</YPos>
+																				<XPos>0.79343</XPos>
+																				<YPos>2.08456</YPos>
 																				<Flags>0</Flags>
 																			</Point>
 																			<Point>
 																				<XPos>1</XPos>
-																				<YPos>1.77654</YPos>
+																				<YPos>3.13884</YPos>
 																				<Flags>37</Flags>
 																			</Point>
 																		</PointList>
@@ -11340,27 +11711,12 @@
 																		<PointList>
 																			<Point>
 																				<XPos>1</XPos>
-																				<YPos>-3.03936</YPos>
+																				<YPos>-1.4568</YPos>
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>31.92606</XPos>
-																				<YPos>-3.10813</YPos>
-																				<Flags>0</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>37.1719038817006</XPos>
-																				<YPos>-2.13949987786961</YPos>
-																				<Flags>0</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>77.9449</XPos>
-																				<YPos>-2.19445</YPos>
-																				<Flags>0</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>88.92753</XPos>
-																				<YPos>0</YPos>
+																				<XPos>68.09197</XPos>
+																				<YPos>-1.58749</YPos>
 																				<Flags>0</Flags>
 																			</Point>
 																			<Point>
@@ -11395,67 +11751,17 @@
 																		<PointList>
 																			<Point>
 																				<XPos>1</XPos>
-																				<YPos>33</YPos>
+																				<YPos>17</YPos>
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>23.06736</XPos>
-																				<YPos>27</YPos>
-																				<Flags>0</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>61.00218</XPos>
-																				<YPos>23</YPos>
+																				<XPos>69.31664</XPos>
+																				<YPos>16</YPos>
 																				<Flags>0</Flags>
 																			</Point>
 																			<Point>
 																				<XPos>100</XPos>
 																				<YPos>0</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</Custom>
-															</Reference>
-														</ReferenceList>
-													</RTPC>
-												</Local>
-											</Reference>
-											<Reference>
-												<Local>
-													<RTPC Name="" ID="{56C93BF2-E709-4EB3-9B6A-CBA9E104888D}" ShortID="590824757">
-														<PropertyList>
-															<Property Name="PropertyName" Type="string" Value="Pitch"/>
-														</PropertyList>
-														<ReferenceList>
-															<Reference Name="ControlInput">
-																<ObjectRef Name="rtpc_ambiance_arena_attenuation" ID="{317D7F34-0FD2-4141-8088-6B66E709DE20}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
-															</Reference>
-															<Reference Name="Curve">
-																<Custom>
-																	<Curve Name="" ID="{13D17641-8C4A-44EC-B5EE-010BAE1A2A8F}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="65537"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>1</XPos>
-																				<YPos>-490</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>74.7359</XPos>
-																				<YPos>-292</YPos>
-																				<Flags>0</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>87.07418</XPos>
-																				<YPos>26</YPos>
-																				<Flags>0</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>100</XPos>
-																				<YPos>46</YPos>
 																				<Flags>37</Flags>
 																			</Point>
 																		</PointList>
@@ -11538,7 +11844,7 @@
 								</Property>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>1</Value>
+										<Value>3</Value>
 									</ValueList>
 								</Property>
 								<Property Name="Pitch" Type="int32">
@@ -11559,7 +11865,7 @@
 									<Custom CreatedFrom="{52BA5153-2B72-4E50-BC0C-AC4B43C34755}">
 										<Attenuation Name="Thunder (Custom)" ID="{0230FFFE-3BC1-4974-88C3-E228C3F37F93}" ShortID="466351523">
 											<PropertyList>
-												<Property Name="RadiusMax" Type="Real64" Value="5000"/>
+												<Property Name="RadiusMax" Type="Real64" Value="6000"/>
 											</PropertyList>
 											<CurveUsageInfoList>
 												<VolumeDryUsage>
@@ -11576,19 +11882,19 @@
 																	<SegmentShape>Log2</SegmentShape>
 																</Point>
 																<Point>
-																	<XPos>1846.69811</XPos>
+																	<XPos>2216.037732</XPos>
 																	<YPos>-6.25057</YPos>
 																	<Flags>0</Flags>
 																	<SegmentShape>Exp2</SegmentShape>
 																</Point>
 																<Point>
-																	<XPos>4167.45283</XPos>
+																	<XPos>5000.943396</XPos>
 																	<YPos>-13.70757</YPos>
 																	<Flags>0</Flags>
 																	<SegmentShape>Log2</SegmentShape>
 																</Point>
 																<Point>
-																	<XPos>5000</XPos>
+																	<XPos>6000</XPos>
 																	<YPos>-15.96926</YPos>
 																	<Flags>37</Flags>
 																</Point>
@@ -11612,12 +11918,12 @@
 																	<Flags>5</Flags>
 																</Point>
 																<Point>
-																	<XPos>4961.53846153846</XPos>
+																	<XPos>5953.84615384615</XPos>
 																	<YPos>-42.2788670461367</YPos>
 																	<Flags>0</Flags>
 																</Point>
 																<Point>
-																	<XPos>5000</XPos>
+																	<XPos>6000</XPos>
 																	<YPos>-200</YPos>
 																	<Flags>37</Flags>
 																</Point>
@@ -11638,12 +11944,12 @@
 																	<Flags>5</Flags>
 																</Point>
 																<Point>
-																	<XPos>3772.63551666667</XPos>
+																	<XPos>4527.16262</XPos>
 																	<YPos>5</YPos>
 																	<Flags>0</Flags>
 																</Point>
 																<Point>
-																	<XPos>5000</XPos>
+																	<XPos>6000</XPos>
 																	<YPos>6</YPos>
 																	<Flags>37</Flags>
 																</Point>
@@ -11665,7 +11971,7 @@
 																	<SegmentShape>Exp1</SegmentShape>
 																</Point>
 																<Point>
-																	<XPos>5000</XPos>
+																	<XPos>6000</XPos>
 																	<YPos>24</YPos>
 																	<Flags>37</Flags>
 																</Point>
@@ -11687,13 +11993,13 @@
 																	<SegmentShape>Log2</SegmentShape>
 																</Point>
 																<Point>
-																	<XPos>1827.92044</XPos>
+																	<XPos>1540.82645</XPos>
 																	<YPos>0</YPos>
 																	<Flags>0</Flags>
 																	<SegmentShape>Exp2</SegmentShape>
 																</Point>
 																<Point>
-																	<XPos>5000</XPos>
+																	<XPos>6000</XPos>
 																	<YPos>0</YPos>
 																	<Flags>37</Flags>
 																</Point>
@@ -29584,13 +29890,24 @@
 						</RandomSequenceContainer>
 						<Sound Name="IdleHC v1" ID="{495FE2E1-88EA-4229-BD70-F7B0849FA364}" ShortID="831370476">
 							<PropertyList>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>-7</Value>
+										<Value>-14</Value>
+									</ValueList>
+								</Property>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
 									</ValueList>
 								</Property>
 								<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -29620,8 +29937,69 @@
 										<Property Name="PanX" Type="Real64" Value="-27.7027027027027"/>
 										<Property Name="PanY" Type="Real64" Value="-0.724637681159441"/>
 									</PropertyList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{CA175A9F-32B6-4870-87ED-EA81321CD724}" ShortID="268297340">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="PanX"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="rtpc_idle_pan_left_right" ID="{64A95D7C-A689-43D3-8468-0FE53462F747}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{C47ED891-029A-4ECD-B33C-DE442962B13A}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="1"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-2.66667</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>75.96423</XPos>
+																				<YPos>0</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>88</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
 								</Panner>
 							</PositioningInfo>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="state_aim" ID="{B36EB626-1B96-4D45-9487-0F8FDC6A68DD}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="notaiming" ID="{AD4DA154-B560-453D-8C38-7A73B45B33AF}"/>
+										<CustomState Name="" ID="{BC553AB9-C77B-45D6-93F6-A9DFB44368CB}" ShortID="340646076"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="aiming" ID="{4001CF9D-6974-45C4-A4E1-ADC83295A9E1}"/>
+										<CustomState Name="" ID="{5C39FD3D-B527-431B-B344-CF77DEAC6340}" ShortID="270023103"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 							<ObjectLists>
 								<ObjectList Name="RTPC">
 									<Reference>
@@ -29647,13 +30025,13 @@
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>0.22229</XPos>
-																		<YPos>-7.97921</YPos>
+																		<XPos>0.42186</XPos>
+																		<YPos>-2.82198</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>1</XPos>
-																		<YPos>-9.91741</YPos>
+																		<YPos>-17.9967</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -29693,7 +30071,7 @@
 																	</Point>
 																	<Point>
 																		<XPos>1</XPos>
-																		<YPos>0</YPos>
+																		<YPos>-3.73428</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>

@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{D5C8444E-684C-635B-B4BE-66422331020B}",
+    "Hash": "{D89EF070-A460-9AA9-B23C-B43FB430DC57}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -396,6 +396,12 @@
       "Name": "rtpc_chaos_player",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_chaos_player",
       "GUID": "{BFE4D672-50A0-4F84-B21E-4DC11EBCCF9B}"
+     },
+     {
+      "Id": "3748487956",
+      "Name": "rtpc_idle_pan_left_right",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_idle_pan_left_right",
+      "GUID": "{64A95D7C-A689-43D3-8468-0FE53462F747}"
      },
      {
       "Id": "4219763636",
@@ -816,6 +822,6 @@
     ]
    }
   ],
-  "FileHash": "{312943FA-229E-9E90-A3EA-1080181F38EA}"
+  "FileHash": "{0971D540-11FC-43E6-EFC5-B01C1278F7E8}"
  }
 }

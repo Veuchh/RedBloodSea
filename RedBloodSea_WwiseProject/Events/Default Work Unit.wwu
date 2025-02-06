@@ -479,6 +479,19 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{33DBC07A-DD45-45C1-B015-009E6B3EB66E}" ShortID="667429418">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="rtpc_idle_pan_left_right" ID="{64A95D7C-A689-43D3-8468-0FE53462F747}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Play_PossessionAimStop" ID="{965ECC7B-F6E5-40CB-935F-61ACA3EF8ED1}">
@@ -528,6 +541,18 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="notaiming" ID="{AD4DA154-B560-453D-8C38-7A73B45B33AF}" WorkUnitID="{C595D72B-1CEC-44D9-8102-4C94A354BC93}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{800861B2-18D0-4AB1-A8E9-79CD26BA6DEF}" ShortID="933242889">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="rtpc_idle_pan_left_right" ID="{64A95D7C-A689-43D3-8468-0FE53462F747}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -706,6 +731,17 @@
 						</Event>
 						<Event Name="Play_IdleFPS" ID="{AEB85C59-534C-4B60-9C60-04A94B157434}">
 							<ChildrenList>
+								<Action Name="" ID="{0C14AD6A-6F75-4688-993C-87F2C25E75A1}" ShortID="588640409">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="rtpc_idle_pan_left_right" ID="{64A95D7C-A689-43D3-8468-0FE53462F747}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 								<Action Name="" ID="{BBFBE863-609F-40A9-A0F5-4D2A09CC1EC9}" ShortID="756532953">
 									<ReferenceList>
 										<Reference Name="Target">
@@ -1277,6 +1313,10 @@
 									</ReferenceList>
 								</Action>
 								<Action Name="" ID="{C6236FEF-8ACE-465F-8B12-1CCB79D525AE}" ShortID="360287557">
+									<PropertyList>
+										<Property Name="FadeInCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="core_music_switch_master_V2" ID="{E261D608-54C9-4777-B384-E38D57727997}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>

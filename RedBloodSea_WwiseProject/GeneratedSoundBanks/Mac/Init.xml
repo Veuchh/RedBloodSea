@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{D5C8444E-684C-635B-B4BE-66422331020B}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{D89EF070-A460-9AA9-B23C-B43FB430DC57}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -107,6 +107,7 @@
 				<GameParameter Id="3361666196" Name="rtpc_chaos_enemy" ObjectPath="\Game Parameters\Default Work Unit\rtpc_chaos_enemy" GUID="{8D8709D7-5017-47F2-988D-4EE3A088300B}"/>
 				<GameParameter Id="3432596327" Name="rtpc_music_bus" ObjectPath="\Game Parameters\Default Work Unit\Settings\BUS\rtpc_music_bus" GUID="{C084FC73-68C8-499E-96AC-E4DBE2F01DED}"/>
 				<GameParameter Id="3681822039" Name="rtpc_chaos_player" ObjectPath="\Game Parameters\Default Work Unit\rtpc_chaos_player" GUID="{BFE4D672-50A0-4F84-B21E-4DC11EBCCF9B}"/>
+				<GameParameter Id="3748487956" Name="rtpc_idle_pan_left_right" ObjectPath="\Game Parameters\Default Work Unit\rtpc_idle_pan_left_right" GUID="{64A95D7C-A689-43D3-8468-0FE53462F747}"/>
 				<GameParameter Id="4219763636" Name="rtpc_lowhppulse_meter" ObjectPath="\Game Parameters\Default Work Unit\rtpc_lowhppulse_meter" GUID="{1BBA0A4A-0586-4101-979A-262C33FC36C7}"/>
 			</GameParameters>
 			<StateGroups>
@@ -226,5 +227,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{162AB10E-1919-4CE5-436D-6364852E2E03}</FileHash>
+	<FileHash>{A4CFB47A-2757-EE49-DF08-F41AA0772F7B}</FileHash>
 </SoundBanksInfo>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="2890283282" Type="User" GUID="{1D2A39F0-30EC-4374-B60C-7E5FD97B8C24}" Language="SFX" Hash="{7959E631-CD57-655A-39EA-11D136A44137}">
+		<SoundBank Id="2890283282" Type="User" GUID="{1D2A39F0-30EC-4374-B60C-7E5FD97B8C24}" Language="SFX" Hash="{88B5A98E-40D7-6827-1FB9-65182610A7F1}">
 			<ObjectPath>\SoundBanks\Default Work Unit\RBS_MAIN_SoundBank</ObjectPath>
 			<ShortName>RBS_MAIN_SoundBank</ShortName>
 			<Path>RBS_MAIN_SoundBank.bnk</Path>
@@ -210,6 +210,10 @@
 				<File Id="84152481" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_BasicThrustGeneric 03.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_BasicThrustGeneric 03_6F6702FD.wem</CachePath>
+				</File>
+				<File Id="86674457" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>transition segment hc COMBAT.wav</ShortName>
+					<CachePath>SFX/transition segment hc COMBAT_D8A0D580.wem</CachePath>
 				</File>
 				<File Id="87270009" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS GrassWalk 02L.wav</ShortName>
@@ -495,6 +499,10 @@
 					<Path>Media/246781445.wem</Path>
 					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteWalk 04L_EDCD4836.wem</CachePath>
 				</File>
+				<File Id="247684341" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>transition segment hc GENERALIST2.wav</ShortName>
+					<CachePath>SFX/transition segment hc GENERALIST2_D8A0D580.wem</CachePath>
+				</File>
 				<File Id="248248045" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_PlayerFS SkidConcrete 04.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_PlayerFS SkidConcrete 04_EDCD4836.wem</CachePath>
@@ -634,6 +642,10 @@
 					<ShortName>Soundly Voice Designer, Abbi 1.wav</ShortName>
 					<CachePath>SFX/Soundly Voice Designer, Abbi 1_EDCD4836.wem</CachePath>
 				</File>
+				<File Id="323316517" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>transition segment LC 4 Halfspeed.wav</ShortName>
+					<CachePath>SFX/transition segment LC 4 Halfspeed_D8A0D580.wem</CachePath>
+				</File>
 				<File Id="324569295" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>EnnemyAttack swing-004.wav</ShortName>
 					<CachePath>SFX/EnnemyAttack swing-004_EDCD4836.wem</CachePath>
@@ -759,6 +771,10 @@
 					<Path>Media/391075114.wem</Path>
 					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteWalk 02L_EDCD4836.wem</CachePath>
 				</File>
+				<File Id="398660150" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>transition segment 2 LC.wav</ShortName>
+					<CachePath>SFX/transition segment 2 LC_D8A0D580.wem</CachePath>
+				</File>
 				<File Id="401499778" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS DirtRun 07R.wav</ShortName>
 					<Path>Media/401499778.wem</Path>
@@ -773,6 +789,10 @@
 					<ShortName>RBS_SFX_PlayerFS ConcreteGrittyRun 01L.wav</ShortName>
 					<Path>Media/404358743.wem</Path>
 					<CachePath>SFX/RBS_SFX_PlayerFS ConcreteGrittyRun 01L_EDCD4836.wem</CachePath>
+				</File>
+				<File Id="406981888" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>transition segment 1 LC.wav</ShortName>
+					<CachePath>SFX/transition segment 1 LC_D8A0D580.wem</CachePath>
 				</File>
 				<File Id="408695205" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>DashLC v2.wav</ShortName>
@@ -1080,6 +1100,10 @@
 					<ShortName>RBS_SFX_HitOnWeakpoint 03.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_HitOnWeakpoint 03_A76DCDE1.wem</CachePath>
 				</File>
+				<File Id="579390907" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>transition segment HC Intro.wav</ShortName>
+					<CachePath>SFX/transition segment HC Intro_D8A0D580.wem</CachePath>
+				</File>
 				<File Id="580089659" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>LinkStartedLC V1.wav</ShortName>
 					<CachePath>SFX/LinkStartedLC V1_5C57EA0C.wem</CachePath>
@@ -1309,7 +1333,7 @@
 				</File>
 				<File Id="704646388" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Beam.wav</ShortName>
-					<CachePath>SFX/Beam_CB5D5444.wem</CachePath>
+					<CachePath>SFX/Beam_00F58EE8.wem</CachePath>
 				</File>
 				<File Id="710212975" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_PossessionSuccessful 03.wav</ShortName>
@@ -1895,6 +1919,10 @@
 					<ShortName>UI ending cards v1.wav</ShortName>
 					<CachePath>SFX/UI ending cards v1_95317C06.wem</CachePath>
 				</File>
+				<File Id="985170916" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>transition segment hc BETWEEN WAVE half speed.wav</ShortName>
+					<CachePath>SFX/transition segment hc BETWEEN WAVE half speed_D8A0D580.wem</CachePath>
+				</File>
 				<File Id="987297418" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_IdleStateFleeing.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_IdleStateFleeing_EDCD4836.wem</CachePath>
@@ -2021,6 +2049,10 @@
 					<ShortName>UI dropdown select click v1.wav</ShortName>
 					<CachePath>SFX/UI dropdown select click v1_F7D6734C.wem</CachePath>
 				</File>
+				<File Id="1040879410" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>transition segment hc BETWEEN WAVE.wav</ShortName>
+					<CachePath>SFX/transition segment hc BETWEEN WAVE_D8A0D580.wem</CachePath>
+				</File>
 				<File Id="1044172823" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RBS_SFX_BasicSlashGeneric 08.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_BasicSlashGeneric 08_21EF4810.wem</CachePath>
@@ -2066,6 +2098,10 @@
 					<ShortName>RBS_SFX_BasicThrustGeneric 01.wav</ShortName>
 					<CachePath>SFX/RBS_SFX_BasicThrustGeneric 01_DAD90D91.wem</CachePath>
 				</File>
+				<File Id="1064082012" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>transition segment LC Intro.wav</ShortName>
+					<CachePath>SFX/transition segment LC Intro_D8A0D580.wem</CachePath>
+				</File>
 				<File Id="1071012065" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RBS_SFX_PlayerFS DirtRun 06R.wav</ShortName>
 					<Path>Media/1071012065.wem</Path>
@@ -2082,6 +2118,7 @@
 					<Plugin Id="802114085" Name="Hubverb" ObjectPath="\Effects\Default Work Unit\Hubverb" GUID="{4A0F1C05-AD06-4084-AE53-E98F5F89EBFC}" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="1763592331" Name="New_Meter" ObjectPath="\Effects\Default Work Unit\New_Meter" GUID="{27AB241B-FEEA-4A05-84C0-CADF27BC2C1D}" LibName="Wwise Meter" LibId="8454147"/>
 					<Plugin Id="1990128658" Name="Room_Medium" ObjectPath="\Effects\Factory Effects\RoomVerb\Rooms\Room_Medium" GUID="{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="2465479620" Name="GainMinFive" ObjectPath="\Effects\Default Work Unit\GainMinFive" GUID="{8B857896-6E57-4577-AFF9-731030C64A07}" LibName="Wwise Gain" LibId="9109507"/>
 					<Plugin Id="2849147824" Name="Medium" ObjectPath="\Effects\Factory Effects\RoomVerb\Cathedrals\Medium" GUID="{AEB3F175-958B-45F2-A4C2-3FBD4F456568}" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="3377506079" Name="gamepaused_echo" ObjectPath="\Effects\Default Work Unit\gamepaused_echo" GUID="{BEA08A9F-B5FC-4CD3-9B57-79CB7169C12B}" LibName="Wwise Delay" LibId="6946819"/>
 				</ShareSets>
@@ -2305,32 +2342,47 @@
 						<AuxBusRef Id="253666666" Name="LevelVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus\LevelVerb" GUID="{4A93D61F-1EC6-4468-809B-AE533F8EC173}"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="3990636594" Name="Play_EnemyProjectileBeam" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyProjectileBeam" GUID="{FE351B22-CEDB-42DC-A8D7-D2B4A61DEBC2}" DurationType="OneShot" DurationMin="2.2386456" DurationMax="2.8205168">
+				<Event Id="3990636594" Name="Play_EnemyProjectileBeam" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyProjectileBeam" GUID="{FE351B22-CEDB-42DC-A8D7-D2B4A61DEBC2}" MaxAttenuation="1500" DurationType="OneShot" DurationMin="1.8132013" DurationMax="2.2844906">
 					<MediaRefs>
 						<MediaRef Id="704646388"/>
 					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="2968176541" Name="DistantLevelVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus\DistantLevelVerb" GUID="{4BD473B1-9D7E-4658-B0FE-11591FBEC77E}"/>
+					</AuxBusRefs>
 				</Event>
-				<Event Id="4012547228" Name="Play_EnemyProjectileBreak" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyProjectileBreak" GUID="{6EEDA18E-B07A-4998-B8CD-01CC1C25ADB5}" DurationType="OneShot" DurationMin="1.532304" DurationMax="1.9305822">
+				<Event Id="4012547228" Name="Play_EnemyProjectileBreak" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyProjectileBreak" GUID="{6EEDA18E-B07A-4998-B8CD-01CC1C25ADB5}" MaxAttenuation="1000" DurationType="OneShot" DurationMin="1.532304" DurationMax="1.9305822">
 					<MediaRefs>
 						<MediaRef Id="813693602"/>
 					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="2968176541" Name="DistantLevelVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus\DistantLevelVerb" GUID="{4BD473B1-9D7E-4658-B0FE-11591FBEC77E}"/>
+					</AuxBusRefs>
 				</Event>
-				<Event Id="2475708390" Name="Play_EnemyProjectileCast" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyProjectileCast" GUID="{83E9AC1D-8C91-49FA-A01A-365107871AAC}" DurationType="OneShot" DurationMin="1.5120656" DurationMax="1.6972363">
+				<Event Id="2475708390" Name="Play_EnemyProjectileCast" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyProjectileCast" GUID="{83E9AC1D-8C91-49FA-A01A-365107871AAC}" MaxAttenuation="2500" DurationType="OneShot" DurationMin="1.5120656" DurationMax="1.6972363">
 					<MediaRefs>
 						<MediaRef Id="190568369"/>
 					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="2968176541" Name="DistantLevelVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus\DistantLevelVerb" GUID="{4BD473B1-9D7E-4658-B0FE-11591FBEC77E}"/>
+					</AuxBusRefs>
 				</Event>
-				<Event Id="3015606455" Name="Play_EnemyProjectileFire" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyProjectileFire" GUID="{C953855A-9CA6-48E1-8869-F6A38CCD7945}" DurationType="OneShot" DurationMin="1.261047" DurationMax="1.4569541">
+				<Event Id="3015606455" Name="Play_EnemyProjectileFire" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyProjectileFire" GUID="{C953855A-9CA6-48E1-8869-F6A38CCD7945}" MaxAttenuation="2500" DurationType="OneShot" DurationMin="1.261047" DurationMax="1.4569541">
 					<MediaRefs>
 						<MediaRef Id="953102820"/>
 					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="2968176541" Name="DistantLevelVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus\DistantLevelVerb" GUID="{4BD473B1-9D7E-4658-B0FE-11591FBEC77E}"/>
+					</AuxBusRefs>
 				</Event>
-				<Event Id="1196584277" Name="Play_EnemyProjectileFlyby" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyProjectileFlyby" GUID="{4B060C13-B121-4F9D-929D-ECAB732B6779}" DurationType="OneShot" DurationMin="1.3844577" DurationMax="2.466823">
+				<Event Id="1196584277" Name="Play_EnemyProjectileFlyby" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyProjectileFlyby" GUID="{4B060C13-B121-4F9D-929D-ECAB732B6779}" MaxAttenuation="800" DurationType="OneShot" DurationMin="1.3844577" DurationMax="2.466823">
 					<MediaRefs>
 						<MediaRef Id="973311698"/>
 					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="2968176541" Name="DistantLevelVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus\DistantLevelVerb" GUID="{4BD473B1-9D7E-4658-B0FE-11591FBEC77E}"/>
+					</AuxBusRefs>
 				</Event>
-				<Event Id="3428801225" Name="Play_EnemyProjectileHitEnviro" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyProjectileHitEnviro" GUID="{69D3EB20-2FA0-4067-834A-B617223CB932}" DurationType="OneShot" DurationMin="0.78902125" DurationMax="1.0250002">
+				<Event Id="3428801225" Name="Play_EnemyProjectileHitEnviro" ObjectPath="\Events\Default Work Unit\Ai Behavior\Play_EnemyProjectileHitEnviro" GUID="{69D3EB20-2FA0-4067-834A-B617223CB932}" MaxAttenuation="1000" DurationType="OneShot" DurationMin="0.78902125" DurationMax="1.0250002">
 					<MediaRefs>
 						<MediaRef Id="54054381"/>
 						<MediaRef Id="99219889"/>
@@ -2667,9 +2719,34 @@
 					</MediaRefs>
 				</Event>
 				<Event Id="1596777122" Name="Play_MusCore" ObjectPath="\Events\Default Work Unit\Adaptative Music\Play_MusCore" GUID="{602D3395-88F5-43D6-9CE1-0EB64BAD5F08}" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="86674457"/>
+						<MediaRef Id="247684341"/>
+						<MediaRef Id="398660150"/>
+						<MediaRef Id="406981888"/>
+						<MediaRef Id="579390907"/>
+						<MediaRef Id="985170916"/>
+						<MediaRef Id="1040879410"/>
+						<MediaRef Id="1064082012"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2465479620"/>
+						</ShareSets>
+					</PluginRefs>
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="226573501" Id="2764240573" GUID="{6725F899-132D-4978-8B75-001417C3E736}"/>
+							<MediaRefs>
+								<MediaRef Id="398660150"/>
+								<MediaRef Id="985170916"/>
+								<MediaRef Id="1040879410"/>
+							</MediaRefs>
+							<PluginRefs>
+								<ShareSets>
+									<PluginRef Id="2465479620"/>
+								</ShareSets>
+							</PluginRefs>
 							<Children>
 								<SwitchContainer>
 									<SwitchValue GroupType="Switch" GroupId="3204630533" Id="1879783290" GUID="{89F6AF0C-EEC7-47B3-B013-F708FF217ADC}"/>
@@ -2712,21 +2789,36 @@
 								<MediaRef Id="18022526"/>
 								<MediaRef Id="18444585"/>
 								<MediaRef Id="19395854"/>
+								<MediaRef Id="398660150"/>
 								<MediaRef Id="606565850"/>
 								<MediaRef Id="797503936"/>
 								<MediaRef Id="822012776"/>
+								<MediaRef Id="985170916"/>
+								<MediaRef Id="1040879410"/>
 							</MediaRefs>
+							<PluginRefs>
+								<ShareSets>
+									<PluginRef Id="2465479620"/>
+								</ShareSets>
+							</PluginRefs>
 						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="226573501" Id="598085321" GUID="{0DD26233-048F-41A1-A6C7-12E5CAC1F7D1}"/>
 							<MediaRefs>
 								<MediaRef Id="216742222"/>
+								<MediaRef Id="323316517"/>
 								<MediaRef Id="710823852"/>
 								<MediaRef Id="720617851"/>
 								<MediaRef Id="755688688"/>
 								<MediaRef Id="785965490"/>
+								<MediaRef Id="985170916"/>
 								<MediaRef Id="1021372686"/>
 							</MediaRefs>
+							<PluginRefs>
+								<ShareSets>
+									<PluginRef Id="2465479620"/>
+								</ShareSets>
+							</PluginRefs>
 						</SwitchContainer>
 					</SwitchContainers>
 					<ActionSetSwitch>
@@ -2818,7 +2910,7 @@
 						<MediaRef Id="329598648"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2059179699" Name="Play_PlaceholderAMB" ObjectPath="\Events\Default Work Unit\World Environments\Play_PlaceholderAMB" GUID="{5A95298C-BFC4-4769-BF79-0077A315CC42}" MaxAttenuation="5000" DurationType="Infinite">
+				<Event Id="2059179699" Name="Play_PlaceholderAMB" ObjectPath="\Events\Default Work Unit\World Environments\Play_PlaceholderAMB" GUID="{5A95298C-BFC4-4769-BF79-0077A315CC42}" MaxAttenuation="6000" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="63143609"/>
 						<MediaRef Id="65762548"/>
@@ -3314,6 +3406,7 @@
 				<GameParameter Id="2737403824" Name="rtpc_positioning_leftright" ObjectPath="\Game Parameters\Default Work Unit\rtpc_positioning_leftright" GUID="{C0867B0F-00CC-44F1-95F4-1370870636CA}"/>
 				<GameParameter Id="3100189233" Name="rtpc_thrust_volumefatigue" ObjectPath="\Game Parameters\Default Work Unit\rtpc_thrust_volumefatigue" GUID="{D1E2699C-7775-4081-B719-C34807CE526C}"/>
 				<GameParameter Id="3304859005" Name="rtpc_chaos_global" ObjectPath="\Game Parameters\Default Work Unit\rtpc_chaos_global" GUID="{912B7FBA-E859-424B-9664-D9B8B51FC1BA}"/>
+				<GameParameter Id="3748487956" Name="rtpc_idle_pan_left_right" ObjectPath="\Game Parameters\Default Work Unit\rtpc_idle_pan_left_right" GUID="{64A95D7C-A689-43D3-8468-0FE53462F747}"/>
 			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="459395562" Name="state_aim" ObjectPath="\States\Default Work Unit\state_aim" GUID="{B36EB626-1B96-4D45-9487-0F8FDC6A68DD}">
@@ -3401,5 +3494,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{AEB2FF68-D6D9-12F8-A823-D2FCFD290928}</FileHash>
+	<FileHash>{4CEF73F2-193B-500D-886B-213FFDA7ADEA}</FileHash>
 </SoundBanksInfo>

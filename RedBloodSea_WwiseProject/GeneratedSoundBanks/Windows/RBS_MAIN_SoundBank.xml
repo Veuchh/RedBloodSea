@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="2890283282" Type="User" GUID="{1D2A39F0-30EC-4374-B60C-7E5FD97B8C24}" Language="SFX" Hash="{E05A7C90-F0F5-12F3-009C-B9E100651105}">
+		<SoundBank Id="2890283282" Type="User" GUID="{1D2A39F0-30EC-4374-B60C-7E5FD97B8C24}" Language="SFX" Hash="{58CB4015-7ED6-C7FC-28ED-39BB264E370B}">
 			<ObjectPath>\SoundBanks\Default Work Unit\RBS_MAIN_SoundBank</ObjectPath>
 			<ShortName>RBS_MAIN_SoundBank</ShortName>
 			<Path>RBS_MAIN_SoundBank.bnk</Path>
@@ -2082,11 +2082,38 @@
 					<Plugin Id="802114085" Name="Hubverb" ObjectPath="\Effects\Default Work Unit\Hubverb" GUID="{4A0F1C05-AD06-4084-AE53-E98F5F89EBFC}" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="1763592331" Name="New_Meter" ObjectPath="\Effects\Default Work Unit\New_Meter" GUID="{27AB241B-FEEA-4A05-84C0-CADF27BC2C1D}" LibName="Wwise Meter" LibId="8454147"/>
 					<Plugin Id="1990128658" Name="Room_Medium" ObjectPath="\Effects\Factory Effects\RoomVerb\Rooms\Room_Medium" GUID="{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="2207374258" Name="MUTEDDD" ObjectPath="\Effects\Default Work Unit\MUTEDDD" GUID="{6E7E15D9-D881-4188-BE6A-B3FC66A4B237}" LibName="Wwise Gain" LibId="9109507"/>
 					<Plugin Id="2849147824" Name="Medium" ObjectPath="\Effects\Factory Effects\RoomVerb\Cathedrals\Medium" GUID="{AEB3F175-958B-45F2-A4C2-3FBD4F456568}" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="3377506079" Name="gamepaused_echo" ObjectPath="\Effects\Default Work Unit\gamepaused_echo" GUID="{BEA08A9F-B5FC-4CD3-9B57-79CB7169C12B}" LibName="Wwise Delay" LibId="6946819"/>
 				</ShareSets>
 			</Plugins>
 			<Events>
+				<Event Id="4054539668" Name="Mus_SetStatusBetweenWave" ObjectPath="\Events\Default Work Unit\Adaptative Music\Mus_SetStatusBetweenWave" GUID="{9D2DC23C-B988-449A-A913-3CDEBA3EC6D4}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry GroupId="226573501" Id="598085321" Name="between_wave" ObjectPath="\Switches\Default Work Unit\switch_combat_status\between_wave" GUID="{0DD26233-048F-41A1-A6C7-12E5CAC1F7D1}"/>
+					</ActionSetSwitch>
+				</Event>
+				<Event Id="3206262897" Name="Mus_SetStatusCombat" ObjectPath="\Events\Default Work Unit\Adaptative Music\Mus_SetStatusCombat" GUID="{788E3C13-EE1B-4068-9892-47E1960DF432}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry GroupId="226573501" Id="2764240573" Name="combat" ObjectPath="\Switches\Default Work Unit\switch_combat_status\combat" GUID="{6725F899-132D-4978-8B75-001417C3E736}"/>
+					</ActionSetSwitch>
+				</Event>
+				<Event Id="18971717" Name="Mus_SetStatusIntro" ObjectPath="\Events\Default Work Unit\Adaptative Music\Mus_SetStatusIntro" GUID="{BC782983-2C7F-4CFF-A69B-2EAA2777C369}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3278112617" Name="Mus_SetWave1" ObjectPath="\Events\Default Work Unit\Adaptative Music\Mus_SetWave1" GUID="{60B9B26F-683B-4C59-87B5-68435A1F6B05}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry GroupId="3204630533" Id="1879783290" Name="combat_wave_index_1" ObjectPath="\Switches\Default Work Unit\switch_combat_wave_index\combat_wave_index_1" GUID="{89F6AF0C-EEC7-47B3-B013-F708FF217ADC}"/>
+					</ActionSetSwitch>
+				</Event>
+				<Event Id="3278112618" Name="Mus_SetWave2" ObjectPath="\Events\Default Work Unit\Adaptative Music\Mus_SetWave2" GUID="{0E286E75-B244-414B-B467-19645786EBF2}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry GroupId="3204630533" Id="1879783289" Name="combat_wave_index_2" ObjectPath="\Switches\Default Work Unit\switch_combat_wave_index\combat_wave_index_2" GUID="{40EB69D3-D5A0-490D-AC13-B1DD99123A8C}"/>
+					</ActionSetSwitch>
+				</Event>
+				<Event Id="3278112619" Name="Mus_SetWave3" ObjectPath="\Events\Default Work Unit\Adaptative Music\Mus_SetWave3" GUID="{762A65BC-5AAB-47A7-B53A-9A52C2E9D79C}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry GroupId="3204630533" Id="1879783288" Name="combat_wave_index_3" ObjectPath="\Switches\Default Work Unit\switch_combat_wave_index\combat_wave_index_3" GUID="{66F509B1-916E-4601-96AF-0BE1E7F0F51E}"/>
+					</ActionSetSwitch>
+				</Event>
 				<Event Id="442966300" Name="Pause_MusCore" ObjectPath="\Events\Default Work Unit\Adaptative Music\Pause_MusCore" GUID="{A22E48FC-7D13-4807-8C72-799D2693C61B}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2980929675" Name="Pause_MusPaused" ObjectPath="\Events\Default Work Unit\Adaptative Music\Pause_MusPaused" GUID="{1B49BBFC-2152-46F9-A487-235414F48B78}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="626512180" Name="Play_AmbVSArena" ObjectPath="\Events\Default Work Unit\World Environments\Play_AmbVSArena" GUID="{5C124C78-CC34-46F4-9C11-1C65E3B16568}" DurationType="Infinite">
@@ -2180,6 +2207,8 @@
 						<MediaRef Id="1052144053"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3274110942" Name="Play_Dash_Left" ObjectPath="\Events\Default Work Unit\Player Abilities\Play_Dash_Left" GUID="{EB038680-EF51-40DE-B119-C775C35A318C}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="896388861" Name="Play_Dash_Right" ObjectPath="\Events\Default Work Unit\Player Abilities\Play_Dash_Right" GUID="{4A1D371C-B9FF-41BE-B5C7-DC8BCD9A66ED}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1674740283" Name="Play_DashInterrupt" ObjectPath="\Events\Default Work Unit\Player\Play_DashInterrupt" GUID="{22B0C28B-0244-46E3-AA87-F1EEDA24088F}" DurationType="OneShot" DurationMin="1.0962292" DurationMax="1.1123959">
 					<MediaRefs>
 						<MediaRef Id="820405027"/>
@@ -2653,6 +2682,11 @@
 										<MediaRef Id="797503936"/>
 										<MediaRef Id="822012776"/>
 									</MediaRefs>
+									<PluginRefs>
+										<ShareSets>
+											<PluginRef Id="2207374258"/>
+										</ShareSets>
+									</PluginRefs>
 								</SwitchContainer>
 								<SwitchContainer>
 									<SwitchValue GroupType="Switch" GroupId="3204630533" Id="1879783289" GUID="{40EB69D3-D5A0-490D-AC13-B1DD99123A8C}"/>
@@ -2664,6 +2698,11 @@
 										<MediaRef Id="797503936"/>
 										<MediaRef Id="822012776"/>
 									</MediaRefs>
+									<PluginRefs>
+										<ShareSets>
+											<PluginRef Id="2207374258"/>
+										</ShareSets>
+									</PluginRefs>
 								</SwitchContainer>
 								<SwitchContainer>
 									<SwitchValue GroupType="Switch" GroupId="3204630533" Id="1879783288" GUID="{66F509B1-916E-4601-96AF-0BE1E7F0F51E}"/>
@@ -2675,28 +2714,11 @@
 										<MediaRef Id="797503936"/>
 										<MediaRef Id="822012776"/>
 									</MediaRefs>
-								</SwitchContainer>
-								<SwitchContainer>
-									<SwitchValue GroupType="Switch" GroupId="3204630533" Id="1879783295" GUID="{F2E75342-E07C-442C-ACA8-064A4CF110F8}"/>
-									<MediaRefs>
-										<MediaRef Id="18022526"/>
-										<MediaRef Id="18444585"/>
-										<MediaRef Id="19395854"/>
-										<MediaRef Id="606565850"/>
-										<MediaRef Id="797503936"/>
-										<MediaRef Id="822012776"/>
-									</MediaRefs>
-								</SwitchContainer>
-								<SwitchContainer>
-									<SwitchValue GroupType="Switch" GroupId="3204630533" Id="1879783294" GUID="{9D73A899-2271-49EC-9A38-0E97454C25EA}"/>
-									<MediaRefs>
-										<MediaRef Id="18022526"/>
-										<MediaRef Id="18444585"/>
-										<MediaRef Id="19395854"/>
-										<MediaRef Id="606565850"/>
-										<MediaRef Id="797503936"/>
-										<MediaRef Id="822012776"/>
-									</MediaRefs>
+									<PluginRefs>
+										<ShareSets>
+											<PluginRef Id="2207374258"/>
+										</ShareSets>
+									</PluginRefs>
 								</SwitchContainer>
 							</Children>
 						</SwitchContainer>
@@ -2710,6 +2732,11 @@
 								<MediaRef Id="797503936"/>
 								<MediaRef Id="822012776"/>
 							</MediaRefs>
+							<PluginRefs>
+								<ShareSets>
+									<PluginRef Id="2207374258"/>
+								</ShareSets>
+							</PluginRefs>
 						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="226573501" Id="598085321" GUID="{0DD26233-048F-41A1-A6C7-12E5CAC1F7D1}"/>
@@ -2721,6 +2748,11 @@
 								<MediaRef Id="785965490"/>
 								<MediaRef Id="1021372686"/>
 							</MediaRefs>
+							<PluginRefs>
+								<ShareSets>
+									<PluginRef Id="2207374258"/>
+								</ShareSets>
+							</PluginRefs>
 						</SwitchContainer>
 					</SwitchContainers>
 					<ActionSetSwitch>
@@ -3376,8 +3408,6 @@
 						<Switch Id="1879783288" Name="combat_wave_index_3" ObjectPath="\Switches\Default Work Unit\switch_combat_wave_index\combat_wave_index_3" GUID="{66F509B1-916E-4601-96AF-0BE1E7F0F51E}"/>
 						<Switch Id="1879783289" Name="combat_wave_index_2" ObjectPath="\Switches\Default Work Unit\switch_combat_wave_index\combat_wave_index_2" GUID="{40EB69D3-D5A0-490D-AC13-B1DD99123A8C}"/>
 						<Switch Id="1879783290" Name="combat_wave_index_1" ObjectPath="\Switches\Default Work Unit\switch_combat_wave_index\combat_wave_index_1" GUID="{89F6AF0C-EEC7-47B3-B013-F708FF217ADC}"/>
-						<Switch Id="1879783294" Name="combat_wave_index_5" ObjectPath="\Switches\Default Work Unit\switch_combat_wave_index\combat_wave_index_5" GUID="{9D73A899-2271-49EC-9A38-0E97454C25EA}"/>
-						<Switch Id="1879783295" Name="combat_wave_index_4" ObjectPath="\Switches\Default Work Unit\switch_combat_wave_index\combat_wave_index_4" GUID="{F2E75342-E07C-442C-ACA8-064A4CF110F8}"/>
 					</Switches>
 				</SwitchGroup>
 				<SwitchGroup Id="3898853262" Name="switch_pause_music" ObjectPath="\Switches\Default Work Unit\switch_pause_music" GUID="{A26C9464-58C4-4C7C-A3B1-A18AE110F6C9}">
@@ -3397,5 +3427,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{1DC27F3C-E3A8-BCB1-0CB7-F3D77EFB29C9}</FileHash>
+	<FileHash>{A68E418B-F799-8231-69D6-5104EE3BF48B}</FileHash>
 </SoundBanksInfo>

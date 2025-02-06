@@ -207,8 +207,6 @@
 						<Switch Id="1879783288" Name="combat_wave_index_3" ObjectPath="\Switches\Default Work Unit\switch_combat_wave_index\combat_wave_index_3" GUID="{66F509B1-916E-4601-96AF-0BE1E7F0F51E}"/>
 						<Switch Id="1879783289" Name="combat_wave_index_2" ObjectPath="\Switches\Default Work Unit\switch_combat_wave_index\combat_wave_index_2" GUID="{40EB69D3-D5A0-490D-AC13-B1DD99123A8C}"/>
 						<Switch Id="1879783290" Name="combat_wave_index_1" ObjectPath="\Switches\Default Work Unit\switch_combat_wave_index\combat_wave_index_1" GUID="{89F6AF0C-EEC7-47B3-B013-F708FF217ADC}"/>
-						<Switch Id="1879783294" Name="combat_wave_index_5" ObjectPath="\Switches\Default Work Unit\switch_combat_wave_index\combat_wave_index_5" GUID="{9D73A899-2271-49EC-9A38-0E97454C25EA}"/>
-						<Switch Id="1879783295" Name="combat_wave_index_4" ObjectPath="\Switches\Default Work Unit\switch_combat_wave_index\combat_wave_index_4" GUID="{F2E75342-E07C-442C-ACA8-064A4CF110F8}"/>
 					</Switches>
 				</SwitchGroup>
 				<SwitchGroup Id="3898853262" Name="switch_pause_music" ObjectPath="\Switches\Default Work Unit\switch_pause_music" GUID="{A26C9464-58C4-4C7C-A3B1-A18AE110F6C9}">
@@ -228,5 +226,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{B8A476CE-A632-2D83-C7D3-7C3ADE8CB223}</FileHash>
+	<FileHash>{162AB10E-1919-4CE5-436D-6364852E2E03}</FileHash>
 </SoundBanksInfo>

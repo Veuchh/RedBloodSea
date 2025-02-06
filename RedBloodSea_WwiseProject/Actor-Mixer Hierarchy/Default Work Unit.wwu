@@ -7259,6 +7259,7 @@
 						</ActorMixer>
 						<BlendContainer Name="EnemyAttack" ID="{06F5EE1A-EBB1-4097-93CB-D4F58ADD250B}" ShortID="1054370195">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="InitialDelay" Type="Real64">
 									<ValueList>
 										<Value>0.5</Value>
@@ -7276,6 +7277,9 @@
 								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Ennemy_Attack" ID="{73256B86-DB37-41A2-AAF9-98803A3D8630}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
 								</Reference>
@@ -15463,12 +15467,12 @@
 																				<PointList>
 																					<Point>
 																						<XPos>0</XPos>
-																						<YPos>-50.25641</YPos>
+																						<YPos>-102.53899</YPos>
 																						<Flags>5</Flags>
 																					</Point>
 																					<Point>
 																						<XPos>1</XPos>
-																						<YPos>91.28205</YPos>
+																						<YPos>98.37955</YPos>
 																						<Flags>37</Flags>
 																					</Point>
 																				</PointList>

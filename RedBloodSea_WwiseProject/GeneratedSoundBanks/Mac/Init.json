@@ -764,18 +764,6 @@
         "Name": "combat_wave_index_1",
         "ObjectPath": "\\Switches\\Default Work Unit\\switch_combat_wave_index\\combat_wave_index_1",
         "GUID": "{89F6AF0C-EEC7-47B3-B013-F708FF217ADC}"
-       },
-       {
-        "Id": "1879783294",
-        "Name": "combat_wave_index_5",
-        "ObjectPath": "\\Switches\\Default Work Unit\\switch_combat_wave_index\\combat_wave_index_5",
-        "GUID": "{9D73A899-2271-49EC-9A38-0E97454C25EA}"
-       },
-       {
-        "Id": "1879783295",
-        "Name": "combat_wave_index_4",
-        "ObjectPath": "\\Switches\\Default Work Unit\\switch_combat_wave_index\\combat_wave_index_4",
-        "GUID": "{F2E75342-E07C-442C-ACA8-064A4CF110F8}"
        }
       ]
      },
@@ -828,6 +816,6 @@
     ]
    }
   ],
-  "FileHash": "{AC2A37ED-D5AB-1BBB-CD6A-A4F7857120D4}"
+  "FileHash": "{312943FA-229E-9E90-A3EA-1080181F38EA}"
  }
 }

@@ -395,10 +395,44 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{70C52318-01FE-4B8C-B1BD-7FF526A136CC}" ShortID="825909072">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="39"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="rtpc_thrust_volumefatigue" ID="{D1E2699C-7775-4081-B719-C34807CE526C}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{88E51F4A-8A48-4018-8685-7FE9E22A20F3}" ShortID="131375874">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="39"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="rtpc_dash_volumefatigue" ID="{4F31ADED-304B-4D56-9826-0239D7A73C99}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Play_PlayerDeath" ID="{CD3CCEF3-241D-4F69-8512-A342342148B8}">
 							<ChildrenList>
+								<Action Name="" ID="{D7150E09-1AC0-499D-B9AB-F444E1AD8578}" ShortID="1027824681">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LowHPPulse" ID="{2E9B3D88-CD9D-4441-A115-9E464EF3B4A9}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 								<Action Name="" ID="{3E8AF2E9-BBFA-4B10-9AF6-8F36CAD73D09}" ShortID="149037528">
 									<ReferenceList>
 										<Reference Name="Target">
@@ -527,6 +561,63 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="SwordRecoverHitNothing" ID="{11C6BC8E-DB3B-4808-8887-E3E6363DFB84}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Dash_Right" ID="{4A1D371C-B9FF-41BE-B5C7-DC8BCD9A66ED}">
+							<ChildrenList>
+								<Action Name="" ID="{9047C483-C262-4A16-B159-BD12CD2FC9A2}" ShortID="799450825">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="rtpc_dash_leftright" ID="{7894A474-E5D3-4187-925F-19042540CC04}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{A9B41460-3426-4356-91AD-A5A91197B7E8}" ShortID="995730401">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Delay" Type="Real64" Value="0.5"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="rtpc_dash_leftright" ID="{7894A474-E5D3-4187-925F-19042540CC04}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Dash_Left" ID="{EB038680-EF51-40DE-B119-C775C35A318C}">
+							<ChildrenList>
+								<Action Name="" ID="{6929B481-11E3-4C11-8EE2-709A3F9859CD}" ShortID="390274570">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="rtpc_dash_leftright" ID="{7894A474-E5D3-4187-925F-19042540CC04}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{2943522C-B41E-45E0-A11C-0805725F9055}" ShortID="632284198">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Delay" Type="Real64" Value="0.5"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="rtpc_dash_leftright" ID="{7894A474-E5D3-4187-925F-19042540CC04}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -1188,7 +1279,7 @@
 								<Action Name="" ID="{C6236FEF-8ACE-465F-8B12-1CCB79D525AE}" ShortID="360287557">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="core_music_switch_master" ID="{5C0FEB36-8DA2-4E6C-8ED3-134A1E78AB32}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
+											<ObjectRef Name="core_music_switch_master_V2" ID="{E261D608-54C9-4777-B384-E38D57727997}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -1203,7 +1294,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="core_music_switch_master" ID="{5C0FEB36-8DA2-4E6C-8ED3-134A1E78AB32}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
+											<ObjectRef Name="core_music_switch_master_V2" ID="{E261D608-54C9-4777-B384-E38D57727997}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -1220,7 +1311,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="core_music_switch_master" ID="{5C0FEB36-8DA2-4E6C-8ED3-134A1E78AB32}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
+											<ObjectRef Name="core_music_switch_master_V2" ID="{E261D608-54C9-4777-B384-E38D57727997}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -1276,7 +1367,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="core_music_switch_master" ID="{5C0FEB36-8DA2-4E6C-8ED3-134A1E78AB32}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
+											<ObjectRef Name="core_music_switch_master_V2" ID="{E261D608-54C9-4777-B384-E38D57727997}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -1343,7 +1434,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="core_music_switch_master" ID="{5C0FEB36-8DA2-4E6C-8ED3-134A1E78AB32}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
+											<ObjectRef Name="core_music_switch_master_V2" ID="{E261D608-54C9-4777-B384-E38D57727997}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -1519,6 +1610,77 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="death" ID="{EB292F76-B8A2-4020-881C-871A1F2ED981}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Mus_SetWave1" ID="{60B9B26F-683B-4C59-87B5-68435A1F6B05}">
+							<ChildrenList>
+								<Action Name="" ID="{0FB20399-5E58-4357-AA55-0906675C3B66}" ShortID="537531458">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="23"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="combat_wave_index_1" ID="{89F6AF0C-EEC7-47B3-B013-F708FF217ADC}" WorkUnitID="{CAC3CED8-5AC9-4C4E-8486-D3A059718422}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Mus_SetWave2" ID="{0E286E75-B244-414B-B467-19645786EBF2}">
+							<ChildrenList>
+								<Action Name="" ID="{857A13A9-69EE-4E70-8189-BDB6CD97CDD2}" ShortID="550555899">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="23"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="combat_wave_index_2" ID="{40EB69D3-D5A0-490D-AC13-B1DD99123A8C}" WorkUnitID="{CAC3CED8-5AC9-4C4E-8486-D3A059718422}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Mus_SetWave3" ID="{762A65BC-5AAB-47A7-B53A-9A52C2E9D79C}">
+							<ChildrenList>
+								<Action Name="" ID="{80C41F7C-6A62-4779-9F61-23D614B8D6F3}" ShortID="54423590">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="23"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="combat_wave_index_3" ID="{66F509B1-916E-4601-96AF-0BE1E7F0F51E}" WorkUnitID="{CAC3CED8-5AC9-4C4E-8486-D3A059718422}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Mus_SetStatusBetweenWave" ID="{9D2DC23C-B988-449A-A913-3CDEBA3EC6D4}">
+							<ChildrenList>
+								<Action Name="" ID="{D54D1D85-191A-47F0-AC93-F4304F8ACD9C}" ShortID="379854115">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="23"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="between_wave" ID="{0DD26233-048F-41A1-A6C7-12E5CAC1F7D1}" WorkUnitID="{CAC3CED8-5AC9-4C4E-8486-D3A059718422}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Mus_SetStatusIntro" ID="{BC782983-2C7F-4CFF-A69B-2EAA2777C369}"/>
+						<Event Name="Mus_SetStatusCombat" ID="{788E3C13-EE1B-4068-9892-47E1960DF432}">
+							<ChildrenList>
+								<Action Name="" ID="{858A5346-7FD8-4E9A-A529-91BA78160419}" ShortID="653053830">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="23"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="combat" ID="{6725F899-132D-4978-8B75-001417C3E736}" WorkUnitID="{CAC3CED8-5AC9-4C4E-8486-D3A059718422}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

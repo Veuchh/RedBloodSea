@@ -152,6 +152,12 @@
 					</PropertyList>
 				</Effect>
 				<Effect Name="lowhp_echo" ID="{8C0EAB1B-0FB2-4200-9F5B-A245CB341C46}" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3"/>
+				<Effect Name="fix_4" ID="{8DD85B47-E477-4720-BD4E-90BFCD64CE41}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+					<PropertyList>
+						<Property Name="FrequencyBand2" Type="Real32" Value="181"/>
+						<Property Name="GainBand2" Type="Real32" Value="-2"/>
+					</PropertyList>
+				</Effect>
 			</ChildrenList>
 		</WorkUnit>
 	</Effects>

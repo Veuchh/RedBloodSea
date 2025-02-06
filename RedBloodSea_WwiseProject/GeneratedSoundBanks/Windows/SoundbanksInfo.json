@@ -18,7 +18,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{5D547313-6674-5344-805B-271FFC6A7A3C}",
+    "Hash": "{77512298-F42D-56F6-46C0-12456347FCF2}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -29,6 +29,22 @@
        "Name": "Level_Verb (Custom)",
        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\StereoBus\\DistantLevelVerb\\[Effect Slot [1]: (RoomVerb)]\\Level_Verb (Custom)",
        "GUID": "{02317F71-4C7A-43EA-A123-9EAAEF803011}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      },
+      {
+       "Id": "937966394",
+       "Name": "lowhp_echo (Custom)",
+       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\StereoBus\\LowHP_Verb\\[Effect Slot [0]: (Delay)]\\lowhp_echo (Custom)",
+       "GUID": "{8AA378E9-108B-442F-9223-908C6BA6934B}",
+       "LibName": "Wwise Delay",
+       "LibId": "6946819"
+      },
+      {
+       "Id": "976335331",
+       "Name": "Plate_Large (Custom)",
+       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\StereoBus\\LowHP_Verb\\[Effect Slot [1]: (RoomVerb)]\\Plate_Large (Custom)",
+       "GUID": "{738287CD-BC29-4044-8CE2-9D4A70A9E46A}",
        "LibName": "Wwise RoomVerb",
        "LibId": "7733251"
       }
@@ -89,13 +105,35 @@
       "Id": "466672200",
       "Name": "PlayerAbilities",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\StereoBus\\SFX\\PlayerAbilities",
-      "GUID": "{23D327A8-D57F-4DDE-8DF2-8200B9DA4037}"
+      "GUID": "{23D327A8-D57F-4DDE-8DF2-8200B9DA4037}",
+      "AuxBusRefs": [
+       {
+        "Id": "158015895",
+        "Name": "LowHP_Verb",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\StereoBus\\LowHP_Verb",
+        "GUID": "{0DF16582-4E75-42E1-A88A-BE71844CFF61}"
+       }
+      ]
      },
      {
       "Id": "661188923",
       "Name": "EnemyBus",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\StereoBus\\SFX\\EnemyBus",
-      "GUID": "{BCC1ECC0-BA5A-45C2-A555-9454DB046120}"
+      "GUID": "{BCC1ECC0-BA5A-45C2-A555-9454DB046120}",
+      "AuxBusRefs": [
+       {
+        "Id": "158015895",
+        "Name": "LowHP_Verb",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\StereoBus\\LowHP_Verb",
+        "GUID": "{0DF16582-4E75-42E1-A88A-BE71844CFF61}"
+       }
+      ]
+     },
+     {
+      "Id": "1372881427",
+      "Name": "UiBus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\StereoBus\\UiBus",
+      "GUID": "{2CE1566D-92AD-4C86-A97B-02E069A97F77}"
      },
      {
       "Id": "1991350473",
@@ -132,7 +170,15 @@
       "Id": "3966895392",
       "Name": "PlayerBus",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\StereoBus\\SFX\\PlayerBus",
-      "GUID": "{EBF9A5C4-2EDC-44FD-B726-7EE704405AC2}"
+      "GUID": "{EBF9A5C4-2EDC-44FD-B726-7EE704405AC2}",
+      "AuxBusRefs": [
+       {
+        "Id": "158015895",
+        "Name": "LowHP_Verb",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\StereoBus\\LowHP_Verb",
+        "GUID": "{0DF16582-4E75-42E1-A88A-BE71844CFF61}"
+       }
+      ]
      },
      {
       "Id": "4150757691",
@@ -142,6 +188,22 @@
      }
     ],
     "AuxBusses": [
+     {
+      "Id": "158015895",
+      "Name": "LowHP_Verb",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\StereoBus\\LowHP_Verb",
+      "GUID": "{0DF16582-4E75-42E1-A88A-BE71844CFF61}",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "937966394"
+        },
+        {
+         "Id": "976335331"
+        }
+       ]
+      }
+     },
      {
       "Id": "253666666",
       "Name": "LevelVerb",
@@ -242,6 +304,12 @@
       "GUID": "{CF91B134-4D3D-4381-A066-5A720C4CB494}"
      },
      {
+      "Id": "1580544546",
+      "Name": "rtpc_ambiance_arena_attenuation",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_ambiance_arena_attenuation",
+      "GUID": "{317D7F34-0FD2-4141-8088-6B66E709DE20}"
+     },
+     {
       "Id": "2332098030",
       "Name": "rtpc_enemy_bus",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\Settings\\BUS\\rtpc_enemy_bus",
@@ -336,6 +404,12 @@
       "Name": "rtpc_chaos_player",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_chaos_player",
       "GUID": "{BFE4D672-50A0-4F84-B21E-4DC11EBCCF9B}"
+     },
+     {
+      "Id": "4219763636",
+      "Name": "rtpc_lowhppulse_meter",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_lowhppulse_meter",
+      "GUID": "{1BBA0A4A-0586-4101-979A-262C33FC36C7}"
      }
     ],
     "StateGroups": [
@@ -698,18 +772,6 @@
         "Name": "combat_wave_index_1",
         "ObjectPath": "\\Switches\\Default Work Unit\\switch_combat_wave_index\\combat_wave_index_1",
         "GUID": "{89F6AF0C-EEC7-47B3-B013-F708FF217ADC}"
-       },
-       {
-        "Id": "1879783294",
-        "Name": "combat_wave_index_5",
-        "ObjectPath": "\\Switches\\Default Work Unit\\switch_combat_wave_index\\combat_wave_index_5",
-        "GUID": "{9D73A899-2271-49EC-9A38-0E97454C25EA}"
-       },
-       {
-        "Id": "1879783295",
-        "Name": "combat_wave_index_4",
-        "ObjectPath": "\\Switches\\Default Work Unit\\switch_combat_wave_index\\combat_wave_index_4",
-        "GUID": "{F2E75342-E07C-442C-ACA8-064A4CF110F8}"
        }
       ]
      },
@@ -766,7 +828,7 @@
     "Type": "User",
     "GUID": "{1D2A39F0-30EC-4374-B60C-7E5FD97B8C24}",
     "Language": "SFX",
-    "Hash": "{DB404D74-A313-279C-D673-76AFA0B9A6E5}",
+    "Hash": "{58CB4015-7ED6-C7FC-28ED-39BB264E370B}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\RBS_MAIN_SoundBank",
     "ShortName": "RBS_MAIN_SoundBank",
     "Path": "RBS_MAIN_SoundBank.bnk",
@@ -794,7 +856,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Sword Recovery Hit Nothing V1.wav",
-      "CachePath": "SFX/Sword Recovery Hit Nothing V1_B45E3139.wem"
+      "CachePath": "SFX/Sword Recovery Hit Nothing V1_C250C2A8.wem"
      },
      {
       "Id": "3780620",
@@ -1513,7 +1575,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Sword Recovery Hit Nothing V1.wav",
-      "CachePath": "SFX/Sword Recovery Hit Nothing V1_D509015D.wem"
+      "CachePath": "SFX/Sword Recovery Hit Nothing V1_CB78CCC7.wem"
      },
      {
       "Id": "184794636",
@@ -2556,7 +2618,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "IdleHC v1.wav",
-      "CachePath": "SFX/IdleHC v1_2E07B864.wem"
+      "CachePath": "SFX/IdleHC v1_C07D1AA0.wem"
      },
      {
       "Id": "511303387",
@@ -2902,7 +2964,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Sword Recover v1.wav",
-      "CachePath": "SFX/Sword Recover v1_60CAC09C.wem"
+      "CachePath": "SFX/Sword Recover v1_431805B5.wem"
      },
      {
       "Id": "602677290",
@@ -3054,7 +3116,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Sword Recover v1.wav",
-      "CachePath": "SFX/Sword Recover v1_5BF643E1.wem"
+      "CachePath": "SFX/Sword Recover v1_6369C6A0.wem"
      },
      {
       "Id": "648384302",
@@ -3103,7 +3165,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Sword Recover v1.wav",
-      "CachePath": "SFX/Sword Recover v1_0C051717.wem"
+      "CachePath": "SFX/Sword Recover v1_C5122E72.wem"
      },
      {
       "Id": "663610515",
@@ -3417,6 +3479,14 @@
       "ShortName": "RBS_SFX_PlayerFS RandLayerMetal 05.wav",
       "Path": "Media/748172393.wem",
       "CachePath": "SFX/RBS_SFX_PlayerFS RandLayerMetal 05_EDCD4836.wem"
+     },
+     {
+      "Id": "748335089",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "LowHPPulse.wav",
+      "CachePath": "SFX/LowHPPulse_D8A0D580.wem"
      },
      {
       "Id": "749015965",
@@ -4219,7 +4289,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Sword Recovery Hit Nothing V1.wav",
-      "CachePath": "SFX/Sword Recovery Hit Nothing V1_DF5483E7.wem"
+      "CachePath": "SFX/Sword Recovery Hit Nothing V1_33A491B6.wem"
      },
      {
       "Id": "953102820",
@@ -4702,6 +4772,22 @@
        "LibId": "6881283"
       },
       {
+       "Id": "802114085",
+       "Name": "Hubverb",
+       "ObjectPath": "\\Effects\\Default Work Unit\\Hubverb",
+       "GUID": "{4A0F1C05-AD06-4084-AE53-E98F5F89EBFC}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      },
+      {
+       "Id": "1763592331",
+       "Name": "New_Meter",
+       "ObjectPath": "\\Effects\\Default Work Unit\\New_Meter",
+       "GUID": "{27AB241B-FEEA-4A05-84C0-CADF27BC2C1D}",
+       "LibName": "Wwise Meter",
+       "LibId": "8454147"
+      },
+      {
        "Id": "1990128658",
        "Name": "Room_Medium",
        "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
@@ -4710,16 +4796,137 @@
        "LibId": "7733251"
       },
       {
+       "Id": "2207374258",
+       "Name": "MUTEDDD",
+       "ObjectPath": "\\Effects\\Default Work Unit\\MUTEDDD",
+       "GUID": "{6E7E15D9-D881-4188-BE6A-B3FC66A4B237}",
+       "LibName": "Wwise Gain",
+       "LibId": "9109507"
+      },
+      {
        "Id": "2849147824",
        "Name": "Medium",
        "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Cathedrals\\Medium",
        "GUID": "{AEB3F175-958B-45F2-A4C2-3FBD4F456568}",
        "LibName": "Wwise RoomVerb",
        "LibId": "7733251"
+      },
+      {
+       "Id": "3377506079",
+       "Name": "gamepaused_echo",
+       "ObjectPath": "\\Effects\\Default Work Unit\\gamepaused_echo",
+       "GUID": "{BEA08A9F-B5FC-4CD3-9B57-79CB7169C12B}",
+       "LibName": "Wwise Delay",
+       "LibId": "6946819"
       }
      ]
     },
     "Events": [
+     {
+      "Id": "4054539668",
+      "Name": "Mus_SetStatusBetweenWave",
+      "ObjectPath": "\\Events\\Default Work Unit\\Adaptative Music\\Mus_SetStatusBetweenWave",
+      "GUID": "{9D2DC23C-B988-449A-A913-3CDEBA3EC6D4}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionSetSwitch": [
+       {
+        "GroupId": "226573501",
+        "Id": "598085321",
+        "Name": "between_wave",
+        "ObjectPath": "\\Switches\\Default Work Unit\\switch_combat_status\\between_wave",
+        "GUID": "{0DD26233-048F-41A1-A6C7-12E5CAC1F7D1}"
+       }
+      ]
+     },
+     {
+      "Id": "3206262897",
+      "Name": "Mus_SetStatusCombat",
+      "ObjectPath": "\\Events\\Default Work Unit\\Adaptative Music\\Mus_SetStatusCombat",
+      "GUID": "{788E3C13-EE1B-4068-9892-47E1960DF432}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionSetSwitch": [
+       {
+        "GroupId": "226573501",
+        "Id": "2764240573",
+        "Name": "combat",
+        "ObjectPath": "\\Switches\\Default Work Unit\\switch_combat_status\\combat",
+        "GUID": "{6725F899-132D-4978-8B75-001417C3E736}"
+       }
+      ]
+     },
+     {
+      "Id": "18971717",
+      "Name": "Mus_SetStatusIntro",
+      "ObjectPath": "\\Events\\Default Work Unit\\Adaptative Music\\Mus_SetStatusIntro",
+      "GUID": "{BC782983-2C7F-4CFF-A69B-2EAA2777C369}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "3278112617",
+      "Name": "Mus_SetWave1",
+      "ObjectPath": "\\Events\\Default Work Unit\\Adaptative Music\\Mus_SetWave1",
+      "GUID": "{60B9B26F-683B-4C59-87B5-68435A1F6B05}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionSetSwitch": [
+       {
+        "GroupId": "3204630533",
+        "Id": "1879783290",
+        "Name": "combat_wave_index_1",
+        "ObjectPath": "\\Switches\\Default Work Unit\\switch_combat_wave_index\\combat_wave_index_1",
+        "GUID": "{89F6AF0C-EEC7-47B3-B013-F708FF217ADC}"
+       }
+      ]
+     },
+     {
+      "Id": "3278112618",
+      "Name": "Mus_SetWave2",
+      "ObjectPath": "\\Events\\Default Work Unit\\Adaptative Music\\Mus_SetWave2",
+      "GUID": "{0E286E75-B244-414B-B467-19645786EBF2}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionSetSwitch": [
+       {
+        "GroupId": "3204630533",
+        "Id": "1879783289",
+        "Name": "combat_wave_index_2",
+        "ObjectPath": "\\Switches\\Default Work Unit\\switch_combat_wave_index\\combat_wave_index_2",
+        "GUID": "{40EB69D3-D5A0-490D-AC13-B1DD99123A8C}"
+       }
+      ]
+     },
+     {
+      "Id": "3278112619",
+      "Name": "Mus_SetWave3",
+      "ObjectPath": "\\Events\\Default Work Unit\\Adaptative Music\\Mus_SetWave3",
+      "GUID": "{762A65BC-5AAB-47A7-B53A-9A52C2E9D79C}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionSetSwitch": [
+       {
+        "GroupId": "3204630533",
+        "Id": "1879783288",
+        "Name": "combat_wave_index_3",
+        "ObjectPath": "\\Switches\\Default Work Unit\\switch_combat_wave_index\\combat_wave_index_3",
+        "GUID": "{66F509B1-916E-4601-96AF-0BE1E7F0F51E}"
+       }
+      ]
+     },
      {
       "Id": "442966300",
       "Name": "Pause_MusCore",
@@ -4773,9 +4980,8 @@
      {
       "Id": "974669297",
       "Name": "Play_BasaltGate_Close",
-      "ObjectPath": "\\Events\\Default Work Unit\\Play_BasaltGate_Close",
+      "ObjectPath": "\\Events\\Default Work Unit\\World Environments\\Play_BasaltGate_Close",
       "GUID": "{B0E60573-43B1-44EC-8B6D-74BE266FDCB9}",
-      "MaxAttenuation": "5000",
       "DurationType": "OneShot",
       "DurationMin": "2.1641512",
       "DurationMax": "2.1641512",
@@ -4788,9 +4994,8 @@
      {
       "Id": "329153985",
       "Name": "Play_BasaltGate_Idle",
-      "ObjectPath": "\\Events\\Default Work Unit\\Play_BasaltGate_Idle",
+      "ObjectPath": "\\Events\\Default Work Unit\\World Environments\\Play_BasaltGate_Idle",
       "GUID": "{DD648981-8216-4BAF-BE24-7091F5CC0728}",
-      "MaxAttenuation": "2000",
       "DurationType": "OneShot",
       "DurationMin": "7.925083",
       "DurationMax": "7.925083",
@@ -4803,9 +5008,8 @@
      {
       "Id": "1165316467",
       "Name": "Play_BasaltGate_Open",
-      "ObjectPath": "\\Events\\Default Work Unit\\Play_BasaltGate_Open",
+      "ObjectPath": "\\Events\\Default Work Unit\\World Environments\\Play_BasaltGate_Open",
       "GUID": "{41F731B2-57F0-4FF6-B785-74B93865EDAC}",
-      "MaxAttenuation": "5000",
       "DurationType": "OneShot",
       "DurationMin": "3.1115",
       "DurationMax": "3.1115",
@@ -5005,6 +5209,26 @@
         "Id": "1052144053"
        }
       ]
+     },
+     {
+      "Id": "3274110942",
+      "Name": "Play_Dash_Left",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player Abilities\\Play_Dash_Left",
+      "GUID": "{EB038680-EF51-40DE-B119-C775C35A318C}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "896388861",
+      "Name": "Play_Dash_Right",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player Abilities\\Play_Dash_Right",
+      "GUID": "{4A1D371C-B9FF-41BE-B5C7-DC8BCD9A66ED}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
      },
      {
       "Id": "1674740283",
@@ -5572,7 +5796,14 @@
        {
         "Id": "985104756"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "3377506079"
+        }
+       ]
+      }
      },
      {
       "Id": "1055240968",
@@ -6202,6 +6433,25 @@
       ]
      },
      {
+      "Id": "3920278039",
+      "Name": "Play_LowHPPulse",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_LowHPPulse",
+      "GUID": "{7511B8E9-D279-4A4F-A0E2-E6F26AF77C80}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "748335089"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1763592331"
+        }
+       ]
+      }
+     },
+     {
       "Id": "3553731426",
       "Name": "Play_MainMenuStartGame",
       "ObjectPath": "\\Events\\Default Work Unit\\UI Menu\\Play_MainMenuStartGame",
@@ -6256,7 +6506,14 @@
            {
             "Id": "822012776"
            }
-          ]
+          ],
+          "PluginRefs": {
+           "ShareSets": [
+            {
+             "Id": "2207374258"
+            }
+           ]
+          }
          },
          {
           "SwitchValue": {
@@ -6284,7 +6541,14 @@
            {
             "Id": "822012776"
            }
-          ]
+          ],
+          "PluginRefs": {
+           "ShareSets": [
+            {
+             "Id": "2207374258"
+            }
+           ]
+          }
          },
          {
           "SwitchValue": {
@@ -6312,63 +6576,14 @@
            {
             "Id": "822012776"
            }
-          ]
-         },
-         {
-          "SwitchValue": {
-           "GroupType": "Switch",
-           "GroupId": "3204630533",
-           "Id": "1879783295",
-           "GUID": "{F2E75342-E07C-442C-ACA8-064A4CF110F8}"
-          },
-          "MediaRefs": [
-           {
-            "Id": "18022526"
-           },
-           {
-            "Id": "18444585"
-           },
-           {
-            "Id": "19395854"
-           },
-           {
-            "Id": "606565850"
-           },
-           {
-            "Id": "797503936"
-           },
-           {
-            "Id": "822012776"
-           }
-          ]
-         },
-         {
-          "SwitchValue": {
-           "GroupType": "Switch",
-           "GroupId": "3204630533",
-           "Id": "1879783294",
-           "GUID": "{9D73A899-2271-49EC-9A38-0E97454C25EA}"
-          },
-          "MediaRefs": [
-           {
-            "Id": "18022526"
-           },
-           {
-            "Id": "18444585"
-           },
-           {
-            "Id": "19395854"
-           },
-           {
-            "Id": "606565850"
-           },
-           {
-            "Id": "797503936"
-           },
-           {
-            "Id": "822012776"
-           }
-          ]
+          ],
+          "PluginRefs": {
+           "ShareSets": [
+            {
+             "Id": "2207374258"
+            }
+           ]
+          }
          }
         ]
        },
@@ -6398,7 +6613,14 @@
          {
           "Id": "822012776"
          }
-        ]
+        ],
+        "PluginRefs": {
+         "ShareSets": [
+          {
+           "Id": "2207374258"
+          }
+         ]
+        }
        },
        {
         "SwitchValue": {
@@ -6426,7 +6648,14 @@
          {
           "Id": "1021372686"
          }
-        ]
+        ],
+        "PluginRefs": {
+         "ShareSets": [
+          {
+           "Id": "2207374258"
+          }
+         ]
+        }
        }
       ],
       "ActionSetSwitch": [
@@ -6438,6 +6667,25 @@
         "GUID": "{B604615E-D874-4E59-8E26-ED5FBA8218BD}"
        }
       ]
+     },
+     {
+      "Id": "4071224167",
+      "Name": "Play_MusDeath",
+      "ObjectPath": "\\Events\\Default Work Unit\\Adaptative Music\\Play_MusDeath",
+      "GUID": "{AF39F9C6-5A5C-4AA9-ACD3-EF47727AB727}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "968957107"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "802114085"
+        }
+       ]
+      }
      },
      {
       "Id": "3935853100",
@@ -7994,6 +8242,16 @@
       "DurationMax": "0"
      },
      {
+      "Id": "3806876465",
+      "Name": "Stop_LowHPPulse",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Stop_LowHPPulse",
+      "GUID": "{7FCEA7E6-5FF5-48C9-A09F-17104E065EB7}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
       "Id": "2177974148",
       "Name": "Stop_MusCore",
       "ObjectPath": "\\Events\\Default Work Unit\\Adaptative Music\\Stop_MusCore",
@@ -8044,6 +8302,12 @@
       "Name": "rtpc_settings_slider",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_settings_slider",
       "GUID": "{CF91B134-4D3D-4381-A066-5A720C4CB494}"
+     },
+     {
+      "Id": "1580544546",
+      "Name": "rtpc_ambiance_arena_attenuation",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_ambiance_arena_attenuation",
+      "GUID": "{317D7F34-0FD2-4141-8088-6B66E709DE20}"
      },
      {
       "Id": "2548911666",
@@ -8337,18 +8601,6 @@
         "Name": "combat_wave_index_1",
         "ObjectPath": "\\Switches\\Default Work Unit\\switch_combat_wave_index\\combat_wave_index_1",
         "GUID": "{89F6AF0C-EEC7-47B3-B013-F708FF217ADC}"
-       },
-       {
-        "Id": "1879783294",
-        "Name": "combat_wave_index_5",
-        "ObjectPath": "\\Switches\\Default Work Unit\\switch_combat_wave_index\\combat_wave_index_5",
-        "GUID": "{9D73A899-2271-49EC-9A38-0E97454C25EA}"
-       },
-       {
-        "Id": "1879783295",
-        "Name": "combat_wave_index_4",
-        "ObjectPath": "\\Switches\\Default Work Unit\\switch_combat_wave_index\\combat_wave_index_4",
-        "GUID": "{F2E75342-E07C-442C-ACA8-064A4CF110F8}"
        }
       ]
      },
@@ -8401,6 +8653,6 @@
     ]
    }
   ],
-  "FileHash": "{35FBC157-C731-83EA-6976-1FF279F699A3}"
+  "FileHash": "{9AC2C8A9-5324-7603-DA61-549DFD60C8B3}"
  }
 }

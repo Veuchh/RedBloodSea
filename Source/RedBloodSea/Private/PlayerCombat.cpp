@@ -4,6 +4,7 @@
 #include "PlayerCombat.h"
 
 #include "Dweller.h"
+#include "RedBloodSeaUserSettings.h"
 #include "WaveSpawnManager.h"
 #include "Kismet/GameplayStatics.h"
 
@@ -15,6 +16,15 @@ UPlayerCombat::UPlayerCombat()
 	PrimaryComponentTick.bCanEverTick = true;
 
 	// ...
+}
+
+void UPlayerCombat::EndPlay(const EEndPlayReason::Type EndPlayReason)
+{
+
+	URedBloodSeaUserSettings::GetRedBloodSeaUserSettings()->OnUpdateAccessSettings.RemoveDynamic(
+		this, &UPlayerCombat::UpdateAccessSettings);
+	
+	Super::EndPlay(EndPlayReason);
 }
 
 // Called when the game starts
@@ -300,6 +310,11 @@ void UPlayerCombat::ToggleAttackCollider(BufferableAttack attack, bool isToggled
 	}
 }
 
+void UPlayerCombat::UpdateAccessSettings()
+{
+	PlayerData::IsGodModeEnabled = URedBloodSeaUserSettings::GetRedBloodSeaUserSettings()->GodMode;
+}
+
 void UPlayerCombat::TryAddAttackToBuffer(BufferableAttack attackToAdd)
 {
 	if (!PlayerData::CanAddAttackToBuffer(attackToAdd)
@@ -330,7 +345,7 @@ void UPlayerCombat::OnThrustInput()
 
 void UPlayerCombat::OnGodModeToggle()
 {
-	PlayerData::IsGodModeEnabled = !PlayerData::IsGodModeEnabled;
+	//PlayerData::IsGodModeEnabled = !PlayerData::IsGodModeEnabled;
 }
 
 void UPlayerCombat::DamagePlayer(int damageAmount, AActor* damageSource)
@@ -366,4 +381,8 @@ void UPlayerCombat::DamagePlayer(int damageAmount, AActor* damageSource)
 void UPlayerCombat::SetupPlayerCombatComponent(UCameraComponent* CameraComponent)
 {
 	camera = CameraComponent;
+	
+	UpdateAccessSettings();
+	URedBloodSeaUserSettings::GetRedBloodSeaUserSettings()->OnUpdateAccessSettings.AddDynamic(
+		this, &UPlayerCombat::UpdateAccessSettings);
 }

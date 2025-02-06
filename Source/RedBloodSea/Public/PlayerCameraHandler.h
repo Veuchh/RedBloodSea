@@ -39,6 +39,9 @@ private:
 	UFUNCTION()
 	void UpdateCameraSettings();
 
+	UFUNCTION()
+	void UpdateAccessSettings();
+
 	AWeakpoint* GetAimAssistTarget();
 
 	APlayerController* playerController;
@@ -87,5 +90,6 @@ private:
 	float ToggleCameraAttachToPlayer;
 	float sensitivityMultiplier = 1.f;
 	float usedLerpSpeed;
+	float aimAssistMultiplier = 1.f;
 	float defaultFOV = 105;
 };

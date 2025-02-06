@@ -69,15 +69,6 @@ class REDBLOODSEA_API URedBloodSeaUserSettings : public UGameUserSettings
 	UPROPERTY(Config, BlueprintReadWrite)
 	float Brightness = 1.0f;
 
-	UFUNCTION(BlueprintCallable)
-	float GetDefaultBrightness();
-
-	UPROPERTY(Config, BlueprintReadWrite)
-	float Contrast;
-
-	UFUNCTION(BlueprintCallable)
-	float GetDefaultContrast();
-
 	UPROPERTY(Config, BlueprintReadWrite)
 	float CameraSensitivity = 1;
 

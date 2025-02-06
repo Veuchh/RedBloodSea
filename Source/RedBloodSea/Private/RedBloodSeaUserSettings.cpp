@@ -48,7 +48,6 @@ void URedBloodSeaUserSettings::SetGraphicsSettingsToDefaultValue()
 	Resolution = EScreenResolution::Option1;
 	Quality = 0;
 	Brightness = 1.0f;
-	Contrast = 1.0f;
 	Reticle = true;
 }
 
@@ -103,16 +102,6 @@ void URedBloodSeaUserSettings::SetRBSResolution(EScreenResolution value)
 int URedBloodSeaUserSettings::GetDefaultQuality()
 {
 	return 0;
-}
-
-float URedBloodSeaUserSettings::GetDefaultBrightness()
-{
-	return 50.0f;
-}
-
-float URedBloodSeaUserSettings::GetDefaultContrast()
-{
-	return 50.0f;
 }
 
 void URedBloodSeaUserSettings::UpdateCameraSettings()

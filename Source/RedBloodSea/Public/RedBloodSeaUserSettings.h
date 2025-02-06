@@ -8,6 +8,7 @@
 #include "RedBloodSeaUserSettings.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnUpdateCameraSettings);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnUpdateAccessSettings);
 
 UENUM(BlueprintType)
 namespace EGraphicsQuality
@@ -77,13 +78,13 @@ class REDBLOODSEA_API URedBloodSeaUserSettings : public UGameUserSettings
 	float GetDefaultContrast();
 
 	UPROPERTY(Config, BlueprintReadWrite)
-	float CameraSensitivity;
+	float CameraSensitivity = 1;
 
 	UPROPERTY(Config, BlueprintReadWrite)
 	float MotionBlur;
 
 	UPROPERTY(Config, BlueprintReadWrite)
-	float FieldOfView;
+	float FieldOfView = 105;
 
 	UPROPERTY(Config, BlueprintReadWrite)
 	bool Screenshake;
@@ -150,7 +151,12 @@ class REDBLOODSEA_API URedBloodSeaUserSettings : public UGameUserSettings
 
 	UFUNCTION(BlueprintCallable)
 	void UpdateCameraSettings();
+
+	UFUNCTION(BlueprintCallable)
+	void UpdateAccessSettings();
 	
 	UPROPERTY(BlueprintAssignable)
 	FOnUpdateCameraSettings OnUpdateCameraSettings;
+	UPROPERTY(BlueprintAssignable)
+	FOnUpdateAccessSettings OnUpdateAccessSettings;
 };

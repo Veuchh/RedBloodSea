@@ -119,3 +119,8 @@ void URedBloodSeaUserSettings::UpdateCameraSettings()
 {
 	OnUpdateCameraSettings.Broadcast();
 }
+
+void URedBloodSeaUserSettings::UpdateAccessSettings()
+{
+	OnUpdateAccessSettings.Broadcast();
+}

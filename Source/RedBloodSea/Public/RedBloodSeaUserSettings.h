@@ -9,6 +9,7 @@
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnUpdateCameraSettings);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnUpdateAccessSettings);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnUpdateGraphicsSettings);
 
 UENUM(BlueprintType)
 namespace EGraphicsQuality
@@ -154,9 +155,14 @@ class REDBLOODSEA_API URedBloodSeaUserSettings : public UGameUserSettings
 
 	UFUNCTION(BlueprintCallable)
 	void UpdateAccessSettings();
+
+	UFUNCTION(BlueprintCallable)
+	void UpdateGraphicsSettings();
 	
 	UPROPERTY(BlueprintAssignable)
 	FOnUpdateCameraSettings OnUpdateCameraSettings;
 	UPROPERTY(BlueprintAssignable)
 	FOnUpdateAccessSettings OnUpdateAccessSettings;
+	UPROPERTY(BlueprintAssignable)
+	FOnUpdateGraphicsSettings OnUpdateGraphicsSettings;
 };

@@ -124,3 +124,8 @@ void URedBloodSeaUserSettings::UpdateAccessSettings()
 {
 	OnUpdateAccessSettings.Broadcast();
 }
+
+void URedBloodSeaUserSettings::UpdateGraphicsSettings()
+{
+	OnUpdateGraphicsSettings.Broadcast();
+}

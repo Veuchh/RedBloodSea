@@ -352,8 +352,9 @@ void UPlayerCombat::DamagePlayer(int damageAmount, AActor* damageSource)
 {
 	if (PlayerData::IsGodModeEnabled
 		|| PlayerData::LastHitTime + recoveryTimeDuration >= UGameplayStatics::GetRealTimeSeconds(GetWorld())
-		||PlayerData::CurrentPossessState == PlayerPossessState::ZoomingCamera
-		||PlayerData::CurrentPossessState == PlayerPossessState::PossessRecovery)
+		|| PlayerData::CurrentPossessState == PlayerPossessState::ZoomingCamera
+		|| PlayerData::CurrentPossessState == PlayerPossessState::PossessRecovery
+		|| PlayerData::CurrentHPAmount <= 0)
 	{
 		return;
 	}

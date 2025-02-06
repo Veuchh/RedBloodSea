@@ -39,11 +39,17 @@ public:
 	// Sets default values for this component's properties
 	UPlayerCombat();
 
+protected:
+	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
+	
 private:
 	void TryAddAttackToBuffer(BufferableAttack attackToAdd);
 	void TryConsumeAttackBuffer();
 	void OngoingAttackLogic();
 	void ToggleAttackCollider(BufferableAttack attack, bool isToggled);
+
+	UFUNCTION()
+	void UpdateAccessSettings();
 
 	bool wasWeakpointHitThisAttack = false;
 	bool isAimingWeakpoint = false;

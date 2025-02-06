@@ -18,6 +18,10 @@
 							<Position X="0" Y="2"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Play_LowHPPulse" ID="{7511B8E9-D279-4A4F-A0E2-E6F26AF77C80}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}"/>
+							<Position X="0" Y="3"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Play_Dash" ID="{CF6A631F-F642-4424-8ABD-EE3D53B63430}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}"/>
 							<Position X="1" Y="0"/>
 						</Module>
@@ -76,12 +80,20 @@
 							<Value>50</Value>
 						</RTPCValue>
 						<RTPCValue>
+							<GameParameterRef Name="rtpc_lowhppulse_meter" ID="{1BBA0A4A-0586-4101-979A-262C33FC36C7}"/>
+							<Value>-48</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="rtpc_ambiance_arena_attenuation" ID="{317D7F34-0FD2-4141-8088-6B66E709DE20}"/>
+							<Value>1</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="rtpc_dash_leftright" ID="{7894A474-E5D3-4187-925F-19042540CC04}"/>
 							<Value>0.5</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="rtpc_chaos_global" ID="{912B7FBA-E859-424B-9664-D9B8B51FC1BA}"/>
-							<Value>0.5</Value>
+							<Value>1</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="rtpc_settings_slider" ID="{CF91B134-4D3D-4381-A066-5A720C4CB494}"/>
@@ -181,13 +193,13 @@
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="stone" ID="{F3CD2C36-B817-4A27-A1BC-96CFB220BA79}"/>
-						<CurrentSwitchRef Name="hc" ID="{83AFF7FC-72F4-49E3-B9D0-180763DC4B81}"/>
+						<CurrentSwitchRef Name="lc" ID="{F6B472FD-C557-43E9-8F52-E8758202397B}"/>
 						<CurrentSwitchRef Name="high_chaos" ID="{B785744B-290E-494F-9AB9-D67CF93D6C32}"/>
 						<CurrentSwitchRef Name="combat_wave_index_1" ID="{89F6AF0C-EEC7-47B3-B013-F708FF217ADC}"/>
 						<CurrentSwitchRef Name="stone" ID="{2C6048E5-583B-4043-92D1-BB6A8329AE1C}"/>
-						<CurrentSwitchRef Name="pause_high_chaos" ID="{810D37BC-B114-4941-922B-2D544C1072DB}"/>
+						<CurrentSwitchRef Name="pause_low_chaos" ID="{C4E1EB21-98A8-4D5E-BEC8-D86DE3924ECA}"/>
 						<CurrentSwitchRef Name="stone" ID="{8CD2D766-702D-4B5B-8D64-02CD0D130005}"/>
-						<CurrentSwitchRef Name="between_wave" ID="{0DD26233-048F-41A1-A6C7-12E5CAC1F7D1}"/>
+						<CurrentSwitchRef Name="combat" ID="{6725F899-132D-4978-8B75-001417C3E736}"/>
 						<CurrentSwitchRef Name="link0" ID="{21730554-9A26-480E-BF82-5403DD91DA7F}"/>
 						<CurrentSwitchRef Name="afraid" ID="{6B7928E2-235B-4F7D-91C3-339543D1FE93}"/>
 					</CurrentSwitchList>

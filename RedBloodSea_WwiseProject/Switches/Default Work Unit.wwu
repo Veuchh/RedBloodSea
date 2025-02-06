@@ -51,8 +51,6 @@
 						<Switch Name="combat_wave_index_1" ID="{89F6AF0C-EEC7-47B3-B013-F708FF217ADC}"/>
 						<Switch Name="combat_wave_index_2" ID="{40EB69D3-D5A0-490D-AC13-B1DD99123A8C}"/>
 						<Switch Name="combat_wave_index_3" ID="{66F509B1-916E-4601-96AF-0BE1E7F0F51E}"/>
-						<Switch Name="combat_wave_index_4" ID="{F2E75342-E07C-442C-ACA8-064A4CF110F8}"/>
-						<Switch Name="combat_wave_index_5" ID="{9D73A899-2271-49EC-9A38-0E97454C25EA}"/>
 					</ChildrenList>
 				</SwitchGroup>
 				<SwitchGroup Name="switch_results_music" ID="{F9C3A9D3-A6F7-4890-B2FF-F8C4BF3D2B6B}">

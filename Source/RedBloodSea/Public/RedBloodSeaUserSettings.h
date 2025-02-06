@@ -7,6 +7,10 @@
 #include "ScreenResolutionEnum.h"
 #include "RedBloodSeaUserSettings.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnUpdateCameraSettings);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnUpdateAccessSettings);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnUpdateGraphicsSettings);
+
 UENUM(BlueprintType)
 namespace EGraphicsQuality
 {
@@ -40,7 +44,7 @@ class REDBLOODSEA_API URedBloodSeaUserSettings : public UGameUserSettings
 	
 	UPROPERTY(Config, BlueprintReadWrite)
 	bool Fullscreen;
-
+	
 	UFUNCTION(BlueprintCallable)
 	bool GetDefaultFullscreen();
 
@@ -63,28 +67,19 @@ class REDBLOODSEA_API URedBloodSeaUserSettings : public UGameUserSettings
 	int GetDefaultQuality();
 
 	UPROPERTY(Config, BlueprintReadWrite)
-	float Brightness;
-
-	UFUNCTION(BlueprintCallable)
-	float GetDefaultBrightness();
+	float Brightness = 1.0f;
 
 	UPROPERTY(Config, BlueprintReadWrite)
-	float Contrast;
-
-	UFUNCTION(BlueprintCallable)
-	float GetDefaultContrast();
-
-	UPROPERTY(Config, BlueprintReadWrite)
-	float CameraSensitivity;
+	float CameraSensitivity = 1;
 
 	UPROPERTY(Config, BlueprintReadWrite)
 	float MotionBlur;
 
 	UPROPERTY(Config, BlueprintReadWrite)
-	float FieldOfView;
+	float FieldOfView = 105;
 
 	UPROPERTY(Config, BlueprintReadWrite)
-	bool Screenshake;
+	bool Screenshake = true;
 
 	UPROPERTY(Config, BlueprintReadWrite)
 	bool ZoomEffect;
@@ -144,8 +139,21 @@ class REDBLOODSEA_API URedBloodSeaUserSettings : public UGameUserSettings
 	bool GodMode;
 
 	UPROPERTY(Config, BlueprintReadWrite)
-	float AimAssistStrength;
+	float AimAssistStrength = 1.0f;
 
-	UFUNCTION(BlueprintCallable, Category = Settings)
-	void SetGraphicsSettingsToDefaults();
+	UFUNCTION(BlueprintCallable)
+	void UpdateCameraSettings();
+
+	UFUNCTION(BlueprintCallable)
+	void UpdateAccessSettings();
+
+	UFUNCTION(BlueprintCallable)
+	void UpdateGraphicsSettings();
+	
+	UPROPERTY(BlueprintAssignable)
+	FOnUpdateCameraSettings OnUpdateCameraSettings;
+	UPROPERTY(BlueprintAssignable)
+	FOnUpdateAccessSettings OnUpdateAccessSettings;
+	UPROPERTY(BlueprintAssignable)
+	FOnUpdateGraphicsSettings OnUpdateGraphicsSettings;
 };

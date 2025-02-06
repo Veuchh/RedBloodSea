@@ -48,7 +48,6 @@ void URedBloodSeaUserSettings::SetGraphicsSettingsToDefaultValue()
 	Resolution = EScreenResolution::Option1;
 	Quality = 0;
 	Brightness = 1.0f;
-	Contrast = 1.0f;
 	Reticle = true;
 }
 
@@ -105,31 +104,17 @@ int URedBloodSeaUserSettings::GetDefaultQuality()
 	return 0;
 }
 
-float URedBloodSeaUserSettings::GetDefaultBrightness()
+void URedBloodSeaUserSettings::UpdateCameraSettings()
 {
-	return 50.0f;
+	OnUpdateCameraSettings.Broadcast();
 }
 
-float URedBloodSeaUserSettings::GetDefaultContrast()
+void URedBloodSeaUserSettings::UpdateAccessSettings()
 {
-	return 50.0f;
+	OnUpdateAccessSettings.Broadcast();
 }
 
-void URedBloodSeaUserSettings::SetGraphicsSettingsToDefaults()
+void URedBloodSeaUserSettings::UpdateGraphicsSettings()
 {
-	Fullscreen = GetDefaultFullscreen();
-	Resolution = GetDefaultRBSResolution();
-	Quality = GetDefaultQuality();
-	Brightness = GetDefaultBrightness();
-	Contrast = GetDefaultContrast();
-
-
-	SetFullscreen(Fullscreen);
-	SetRBSResolution(Resolution);
-
-	//Quality Setting Missing !!!
-
-	//Brightness Setting Missing !!!
-
-	//Contrast Setting Missing !!!
+	OnUpdateGraphicsSettings.Broadcast();
 }

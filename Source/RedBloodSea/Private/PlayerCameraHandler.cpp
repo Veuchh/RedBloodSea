@@ -4,9 +4,12 @@
 #include "PlayerCameraHandler.h"
 
 #include "PlayerData.h"
+#include "RedBloodSeaUserSettings.h"
 #include "Camera/CameraComponent.h"
 #include "GameFramework/Character.h"
 #include "WeakpointsManager.h"
+#include "DynamicMesh/DynamicMesh3.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values for this component's properties
 UPlayerCameraHandler::UPlayerCameraHandler()
@@ -23,8 +26,16 @@ UPlayerCameraHandler::UPlayerCameraHandler()
 void UPlayerCameraHandler::BeginPlay()
 {
 	Super::BeginPlay();
+}
 
-	// ...
+void UPlayerCameraHandler::EndPlay(const EEndPlayReason::Type EndPlayReason)
+{
+	Super::EndPlay(EndPlayReason);
+	URedBloodSeaUserSettings::GetRedBloodSeaUserSettings()->OnUpdateCameraSettings.RemoveDynamic(
+		this, &UPlayerCameraHandler::UpdateCameraSettings);
+	
+	URedBloodSeaUserSettings::GetRedBloodSeaUserSettings()->OnUpdateAccessSettings.RemoveDynamic(
+		this, &UPlayerCameraHandler::UpdateAccessSettings);
 }
 
 
@@ -55,6 +66,14 @@ void UPlayerCameraHandler::SetupPlayerCameraComponent(ACharacter* PlayerCharacte
 	{
 		playerController = playerCharacter->GetLocalViewingPlayerController();
 	}
+
+	UpdateCameraSettings();
+	URedBloodSeaUserSettings::GetRedBloodSeaUserSettings()->OnUpdateCameraSettings.AddDynamic(
+	this, &UPlayerCameraHandler::UpdateCameraSettings);
+
+	UpdateAccessSettings();
+	URedBloodSeaUserSettings::GetRedBloodSeaUserSettings()->OnUpdateAccessSettings.AddDynamic(
+		this, &UPlayerCameraHandler::UpdateAccessSettings);
 }
 
 void UPlayerCameraHandler::OnLookInput(const FVector2D newLookInput)
@@ -62,8 +81,8 @@ void UPlayerCameraHandler::OnLookInput(const FVector2D newLookInput)
 	if (PlayerData::CanRotateCamera() && playerCharacter->Controller != nullptr)
 	{
 		// add yaw and pitch input to controller
-		playerCharacter->AddControllerYawInput(newLookInput.X);
-		playerCharacter->AddControllerPitchInput(newLookInput.Y);
+		playerCharacter->AddControllerYawInput(newLookInput.X * sensitivityMultiplier);
+		playerCharacter->AddControllerPitchInput(newLookInput.Y * sensitivityMultiplier);
 	}
 }
 
@@ -98,9 +117,9 @@ void UPlayerCameraHandler::CameraFOV()
 {
 	//FOV
 	float targetFOV = PlayerData::CurrentPossessState == PlayerPossessState::ZoomingCamera
-		                  ? possessFOV
+		                  ? possessFOV + defaultFOV
 		                  : PlayerData::IsDashing
-		                  ? dashFOV
+		                  ? dashFOV + defaultFOV
 		                  : defaultFOV;
 
 	// Get the current controller roll input
@@ -110,8 +129,8 @@ void UPlayerCameraHandler::CameraFOV()
 	float lerpAlpha = FMath::Clamp((PlayerData::CurrentPossessState == PlayerPossessState::ZoomingCamera
 		                                ? possessFovChangeSpeed
 		                                : dashFovChangeSpeed) * GetWorld()->GetDeltaSeconds(),
-		                           0.0f,
-		                           1.0f);
+	                               0.0f,
+	                               1.0f);
 
 	// Interpolate between the current roll and the adjusted target roll
 	float newFOV = FMath::Lerp(currentFOV,
@@ -150,6 +169,17 @@ void UPlayerCameraHandler::AimAssist(float deltaTime)
 	}
 }
 
+void UPlayerCameraHandler::UpdateCameraSettings()
+{
+	defaultFOV = URedBloodSeaUserSettings::GetRedBloodSeaUserSettings()->FieldOfView;
+	sensitivityMultiplier = URedBloodSeaUserSettings::GetRedBloodSeaUserSettings()->CameraSensitivity;
+}
+
+void UPlayerCameraHandler::UpdateAccessSettings()
+{
+	aimAssistMultiplier = URedBloodSeaUserSettings::GetRedBloodSeaUserSettings()->AimAssistStrength;
+}
+
 //This returns nullptr if no suitable weakpoint is found
 AWeakpoint* UPlayerCameraHandler::GetAimAssistTarget()
 {
@@ -171,8 +201,8 @@ AWeakpoint* UPlayerCameraHandler::GetAimAssistTarget()
 				screenPosition = screenPosition / ViewportSize;
 				float distanceToCenter = (screenPosition - (FVector2d::One() / 2)).Length();
 
-				if (distanceToCenter < aimAssistMaxDistanceFromScreenCenter && distanceToCenter <
-					bestDistanceFromScreenCenter)
+				if (distanceToCenter < aimAssistMaxDistanceFromScreenCenter * aimAssistMultiplier
+					&& distanceToCenter < bestDistanceFromScreenCenter)
 				{
 					bestWeakpoint = Weakpoint;
 					bestDistanceFromScreenCenter = distanceToCenter;

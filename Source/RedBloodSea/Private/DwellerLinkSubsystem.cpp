@@ -3,6 +3,8 @@
 
 #include "DwellerLinkSubsystem.h"
 
+#include "PlayerData.h"
+
 void UDwellerLinkSubsystem::Initialize(FSubsystemCollectionBase& Collection)
 {
 	GEngine->AddOnScreenDebugMessage(-1, 5, FColor::Red, "DwellerLinkSubsystem::Initialize");
@@ -17,10 +19,13 @@ void UDwellerLinkSubsystem::Deinitialize()
 
 void UDwellerLinkSubsystem::ResetLink()
 {
-	if(!dwellersInLink.IsEmpty())
-		UPossessTarget* currentlyPossessedDweller = dwellersInLink[dwellersInLink.Num() - 1];
+	// if(!dwellersInLink.IsEmpty())
+	// 	UPossessTarget* currentlyPossessedDweller = dwellersInLink[dwellersInLink.Num() - 1];
 	dwellersInLink.Empty();
-
+	if(PlayerData::CurrentPossessTarget)
+	{
+		dwellersInLink.Add(PlayerData::CurrentPossessTarget);
+	}
 	for (int i = instantiatedLinksVFX.Num() - 1; i >= 0; i--)
 	{
 		instantiatedLinksVFX[i]->Destroy();

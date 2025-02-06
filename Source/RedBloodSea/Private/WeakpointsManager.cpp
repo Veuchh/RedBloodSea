@@ -200,6 +200,12 @@ void UWeakpointsManager::HideWeakpoints()
 	// if(GEngine)
 	// 	GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Yellow, TEXT("Hiding Weakpoints"));
 	int index = 0;
+
+	if(GetWorld()->GetTimerManager().IsTimerActive(WeakpointsVisibilityWindowTimer))
+	{
+		GetWorld()->GetTimerManager().ClearTimer(WeakpointsVisibilityWindowTimer);
+	}
+	
 	for (auto weakpoint : Weakpoints)
 	{
 		index++;

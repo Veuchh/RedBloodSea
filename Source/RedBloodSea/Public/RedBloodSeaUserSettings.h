@@ -67,7 +67,7 @@ class REDBLOODSEA_API URedBloodSeaUserSettings : public UGameUserSettings
 	int GetDefaultQuality();
 
 	UPROPERTY(Config, BlueprintReadWrite)
-	float Brightness;
+	float Brightness = 1.0f;
 
 	UFUNCTION(BlueprintCallable)
 	float GetDefaultBrightness();
@@ -88,7 +88,7 @@ class REDBLOODSEA_API URedBloodSeaUserSettings : public UGameUserSettings
 	float FieldOfView = 105;
 
 	UPROPERTY(Config, BlueprintReadWrite)
-	bool Screenshake;
+	bool Screenshake = true;
 
 	UPROPERTY(Config, BlueprintReadWrite)
 	bool ZoomEffect;
@@ -148,7 +148,7 @@ class REDBLOODSEA_API URedBloodSeaUserSettings : public UGameUserSettings
 	bool GodMode;
 
 	UPROPERTY(Config, BlueprintReadWrite)
-	float AimAssistStrength;
+	float AimAssistStrength = 1.0f;
 
 	UFUNCTION(BlueprintCallable)
 	void UpdateCameraSettings();

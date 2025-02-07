@@ -149,6 +149,7 @@ public:
 	void SpawnDweller(FTransform Transform, FDwellerProfile Type);
 	void ClearAliveDwellers(bool RemovePlayerDweller = true);
 	bool CheckObjectives();
+	void ToggleGate(AActor* GateActor,bool State);
 
 	UFUNCTION()
 	void OnDwellerDeath(AActor* DwellerActor);
@@ -194,5 +195,8 @@ public:
 	DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FUpdateObjective,const FWave&, Wave);
 	UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="SpawnerEvents")
 	FUpdateObjective OnUpdateObjective;
+	DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FToggleGate,const AActor*, GateActor,bool,State);
+	UPROPERTY(BlueprintAssignable,BlueprintCallable,Category="SpawnerEvents")
+	FToggleGate OnToggleGate;
 	
 };

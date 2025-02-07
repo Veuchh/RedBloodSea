@@ -75,9 +75,7 @@ void AWaveSpawnManager::WavePrepare()
 	{
 		if(IsValid(Gate.Key))
 		{
-			Gate.Key->SetActorHiddenInGame(!Gate.Value);
-
-			Gate.Key->SetActorEnableCollision(Gate.Value);
+			ToggleGate(Gate.Key,Gate.Value);
 		}
 	}
 }
@@ -111,9 +109,7 @@ void AWaveSpawnManager::WaveStart()
 	{
 		if(IsValid(Gate.Key))
 		{
-			Gate.Key->SetActorHiddenInGame(!Gate.Value);
-
-			Gate.Key->SetActorEnableCollision(Gate.Value);
+			ToggleGate(Gate.Key,Gate.Value);
 		}
 	}
 
@@ -193,9 +189,7 @@ void AWaveSpawnManager::WaveReset()
 		{
 			if(IsValid(Gate.Key))
 			{
-				Gate.Key->SetActorHiddenInGame(!false);
-
-				Gate.Key->SetActorEnableCollision(false);
+				ToggleGate(Gate.Key,false);
 			}
 		}
 
@@ -203,9 +197,7 @@ void AWaveSpawnManager::WaveReset()
 		{
 			if(IsValid(Gate.Key))
 			{
-				Gate.Key->SetActorHiddenInGame(!false);
-
-				Gate.Key->SetActorEnableCollision(false);
+				ToggleGate(Gate.Key,false);
 			}
 		}
 	}
@@ -285,6 +277,12 @@ bool AWaveSpawnManager::CheckObjectives()
 	}
 	return false;
 }
+
+void AWaveSpawnManager::ToggleGate(AActor* GateActor, bool State)
+{
+	OnToggleGate.Broadcast(GateActor,State);
+}
+
 
 void AWaveSpawnManager::OnDwellerDeath(AActor* DwellerActor)
 {

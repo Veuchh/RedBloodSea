@@ -38,16 +38,16 @@ void UUDataSubsystem::StopLogs()
 	FTimespan SessionLength = CurrentTime - LogStart;
 	FString FolderPath = FString(*FPaths::ProjectDir());
 	FString FileName = LogStart.ToFormattedString(TEXT("%Y_%m_%d_%H_%M_%S"))+GetWorld()->GetMapName();
-	if(ExportLogs(FolderPath,FileName))
-	{
-		if(GEngine)
-			 	GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Yellow, TEXT("Success export Data"));
-	}
-	else
-	{
-		if(GEngine)
-			GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Yellow, TEXT("Failed export Data"));
-	}
+	// if(ExportLogs(FolderPath,FileName))
+	// {
+	// 	if(GEngine)
+	// 		 	GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Yellow, TEXT("Success export Data"));
+	// }
+	// else
+	// {
+	// 	if(GEngine)
+	// 		GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Yellow, TEXT("Failed export Data"));
+	// }
 }
 
 void UUDataSubsystem::ResetLogs()

@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{1D2A39F0-30EC-4374-B60C-7E5FD97B8C24}",
     "Language": "SFX",
-    "Hash": "{88B5A98E-40D7-6827-1FB9-65182610A7F1}",
+    "Hash": "{A29E593C-61AE-4E37-F98E-AEB19053D136}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\RBS_MAIN_SoundBank",
     "ShortName": "RBS_MAIN_SoundBank",
     "Path": "RBS_MAIN_SoundBank.bnk",
@@ -74,6 +74,22 @@
       "ShortName": "RBS_SFX_PlayerFS ConcreteWalk 10R.wav",
       "Path": "Media/13172389.wem",
       "CachePath": "SFX/RBS_SFX_PlayerFS ConcreteWalk 10R_EDCD4836.wem"
+     },
+     {
+      "Id": "14106342",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ObjectiveProgressSEQ v1.wav",
+      "CachePath": "SFX/ObjectiveProgressSEQ v1_117C318B.wem"
+     },
+     {
+      "Id": "17110589",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ObjectiveProgressSEQ v1.wav",
+      "CachePath": "SFX/ObjectiveProgressSEQ v1_E3C28716.wem"
      },
      {
       "Id": "18022526",
@@ -202,6 +218,14 @@
       "ShortName": "RBS_SFX_PlayerFS ConcreteWalk 07L.wav",
       "Path": "Media/50335836.wem",
       "CachePath": "SFX/RBS_SFX_PlayerFS ConcreteWalk 07L_EDCD4836.wem"
+     },
+     {
+      "Id": "50548203",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Checkpoint Pass v1.wav",
+      "CachePath": "SFX/Checkpoint Pass v1_A0D6F236.wem"
      },
      {
       "Id": "50557433",
@@ -479,6 +503,14 @@
       "CachePath": "SFX/RBS_SFX_PlayerFS DirtRun 04L_96F68479.wem"
      },
      {
+      "Id": "97998439",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ObjectiveProgressSEQ v1.wav",
+      "CachePath": "SFX/ObjectiveProgressSEQ v1_D2ACC92C.wem"
+     },
+     {
       "Id": "99219889",
       "Language": "SFX",
       "Streaming": "true",
@@ -513,6 +545,22 @@
       "ShortName": "RBS_SFX_PlayerFS ConcreteRun 05L.wav",
       "Path": "Media/100938197.wem",
       "CachePath": "SFX/RBS_SFX_PlayerFS ConcreteRun 05L_EDCD4836.wem"
+     },
+     {
+      "Id": "101693951",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "CrosshairLinkL3 v1.wav",
+      "CachePath": "SFX/CrosshairLinkL3 v1_6FF25A75.wem"
+     },
+     {
+      "Id": "104456470",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "CrosshairLinkL3 v1.wav",
+      "CachePath": "SFX/CrosshairLinkL3 v1_FE0CCE90.wem"
      },
      {
       "Id": "106894985",
@@ -861,6 +909,14 @@
       "CachePath": "SFX/RBS_SFX_PlayerFS GravelRun 01L_EDCD4836.wem"
      },
      {
+      "Id": "210536426",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "CrosshairLinkL2 v1.wav",
+      "CachePath": "SFX/CrosshairLinkL2 v1_07AFC00A.wem"
+     },
+     {
       "Id": "214956916",
       "Language": "SFX",
       "Streaming": "true",
@@ -1103,6 +1159,14 @@
       "Location": "Memory",
       "ShortName": "reveal spam layer-glued.wav",
       "CachePath": "SFX/reveal spam layer-glued_501A1AD2.wem"
+     },
+     {
+      "Id": "307436053",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "NewObjectives v1.wav",
+      "CachePath": "SFX/NewObjectives v1_8F919756.wem"
      },
      {
       "Id": "308564017",
@@ -1697,6 +1761,14 @@
       "CachePath": "SFX/RBS_SFX_PlayerFS RandLayerCloth 06_EDCD4836.wem"
      },
      {
+      "Id": "463260331",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ObjectiveProgressSEQ v1.wav",
+      "CachePath": "SFX/ObjectiveProgressSEQ v1_E4F902EC.wem"
+     },
+     {
       "Id": "464843651",
       "Language": "SFX",
       "Streaming": "false",
@@ -1771,6 +1843,14 @@
       "ShortName": "RBS_SFX_PlayerFS FootLiftGravel 08.wav",
       "Path": "Media/483160427.wem",
       "CachePath": "SFX/RBS_SFX_PlayerFS FootLiftGravel 08_EDCD4836.wem"
+     },
+     {
+      "Id": "483255116",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "CrosshairLinkL1 v1.wav",
+      "CachePath": "SFX/CrosshairLinkL1 v1_3A1680BA.wem"
      },
      {
       "Id": "485809865",
@@ -1960,6 +2040,14 @@
       "CachePath": "SFX/RBS_SFX_PlayerFS GravelRun 08R_EDCD4836.wem"
      },
      {
+      "Id": "538907444",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "CrosshairLinkL2 v1.wav",
+      "CachePath": "SFX/CrosshairLinkL2 v1_2572D86B.wem"
+     },
+     {
       "Id": "540627400",
       "Language": "SFX",
       "Streaming": "true",
@@ -2117,6 +2205,14 @@
       "Location": "Memory",
       "ShortName": "RBS_SFX_LandingSurface1HighVel 01.wav",
       "CachePath": "SFX/RBS_SFX_LandingSurface1HighVel 01_EDCD4836.wem"
+     },
+     {
+      "Id": "583490465",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "CrosshairKillL2 v1.wav",
+      "CachePath": "SFX/CrosshairKillL2 v1_6E235E75.wem"
      },
      {
       "Id": "586752923",
@@ -2349,6 +2445,14 @@
       "CachePath": "SFX/Sword Recover v1_6369C6A0.wem"
      },
      {
+      "Id": "645989971",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "CrosshairKillL1 v1.wav",
+      "CachePath": "SFX/CrosshairKillL1 v1_F9B7466A.wem"
+     },
+     {
       "Id": "648384302",
       "Language": "SFX",
       "Streaming": "false",
@@ -2530,7 +2634,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Beam.wav",
-      "CachePath": "SFX/Beam_00F58EE8.wem"
+      "CachePath": "SFX/Beam_1825D4B0.wem"
      },
      {
       "Id": "710212975",
@@ -2666,6 +2770,14 @@
       "ShortName": "RBS_SFX_PlayerFS ConcreteRun 06L.wav",
       "Path": "Media/733952893.wem",
       "CachePath": "SFX/RBS_SFX_PlayerFS ConcreteRun 06L_EDCD4836.wem"
+     },
+     {
+      "Id": "734191103",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ObjectiveProgressSEQ v1.wav",
+      "CachePath": "SFX/ObjectiveProgressSEQ v1_E92F6EC9.wem"
      },
      {
       "Id": "742187357",
@@ -3161,6 +3273,14 @@
       "CachePath": "SFX/RBS_SFX_BasicSlashGeneric 04_2AA7F500.wem"
      },
      {
+      "Id": "875372502",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ObjectiveProgressSEQ v1.wav",
+      "CachePath": "SFX/ObjectiveProgressSEQ v1_A8FED405.wem"
+     },
+     {
       "Id": "877801742",
       "Language": "SFX",
       "Streaming": "false",
@@ -3236,6 +3356,14 @@
       "CachePath": "SFX/RBS_SFX_LandingSurface1LowVel 02_EDCD4836.wem"
      },
      {
+      "Id": "893848309",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "CrosshairKillL3 v1.wav",
+      "CachePath": "SFX/CrosshairKillL3 v1_E09B399C.wem"
+     },
+     {
       "Id": "896280138",
       "Language": "SFX",
       "Streaming": "false",
@@ -3304,6 +3432,14 @@
       "ShortName": "RBS_SFX_PlayerFS ConcreteRun 01L.wav",
       "Path": "Media/907609657.wem",
       "CachePath": "SFX/RBS_SFX_PlayerFS ConcreteRun 01L_EDCD4836.wem"
+     },
+     {
+      "Id": "908347439",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "NewObjectives v1.wav",
+      "CachePath": "SFX/NewObjectives v1_DAD65F9F.wem"
      },
      {
       "Id": "909626541",
@@ -3506,6 +3642,14 @@
       "CachePath": "SFX/RBS_SFX_PlayerFS RandLayerCloth 03_EDCD4836.wem"
      },
      {
+      "Id": "946743475",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "CrosshairLinkL1 v1.wav",
+      "CachePath": "SFX/CrosshairLinkL1 v1_09EEE7AE.wem"
+     },
+     {
       "Id": "947099287",
       "Language": "SFX",
       "Streaming": "false",
@@ -3625,6 +3769,14 @@
       "CachePath": "SFX/RBS_SFX_PlayerFS DirtRun 03L_EDCD4836.wem"
      },
      {
+      "Id": "983648324",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Checkpoint Loop v1.wav",
+      "CachePath": "SFX/Checkpoint Loop v1_D8A0D580.wem"
+     },
+     {
       "Id": "983662464",
       "Language": "SFX",
       "Streaming": "false",
@@ -3733,6 +3885,14 @@
       "Location": "Memory",
       "ShortName": "RBS_SFX_LandingLowVelocity 04.wav",
       "CachePath": "SFX/RBS_SFX_LandingLowVelocity 04_EDCD4836.wem"
+     },
+     {
+      "Id": "999525564",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ObjectiveProgressSEQ v1.wav",
+      "CachePath": "SFX/ObjectiveProgressSEQ v1_9216D07F.wem"
      },
      {
       "Id": "1002316465",
@@ -3988,6 +4148,14 @@
       "CachePath": "SFX/transition segment LC Intro_D8A0D580.wem"
      },
      {
+      "Id": "1070151447",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ObjectiveProgressSEQ v1.wav",
+      "CachePath": "SFX/ObjectiveProgressSEQ v1_7057E51C.wem"
+     },
+     {
       "Id": "1071012065",
       "Language": "SFX",
       "Streaming": "true",
@@ -4133,6 +4301,15 @@
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0",
+      "ActionSetState": [
+       {
+        "GroupId": "4041781304",
+        "Id": "1517750921",
+        "Name": "w1",
+        "ObjectPath": "\\States\\Default Work Unit\\state_waveindex\\w1",
+        "GUID": "{1324BD3A-98E2-41EC-B5DB-7F395F03F913}"
+       }
+      ],
       "ActionSetSwitch": [
        {
         "GroupId": "3204630533",
@@ -4152,6 +4329,15 @@
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0",
+      "ActionSetState": [
+       {
+        "GroupId": "4041781304",
+        "Id": "1517750921",
+        "Name": "w1",
+        "ObjectPath": "\\States\\Default Work Unit\\state_waveindex\\w1",
+        "GUID": "{1324BD3A-98E2-41EC-B5DB-7F395F03F913}"
+       }
+      ],
       "ActionSetSwitch": [
        {
         "GroupId": "3204630533",
@@ -4171,6 +4357,15 @@
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0",
+      "ActionSetState": [
+       {
+        "GroupId": "4041781304",
+        "Id": "1517750921",
+        "Name": "w1",
+        "ObjectPath": "\\States\\Default Work Unit\\state_waveindex\\w1",
+        "GUID": "{1324BD3A-98E2-41EC-B5DB-7F395F03F913}"
+       }
+      ],
       "ActionSetSwitch": [
        {
         "GroupId": "3204630533",
@@ -4370,6 +4565,83 @@
        },
        {
         "Id": "1061678860"
+       }
+      ]
+     },
+     {
+      "Id": "1871481675",
+      "Name": "Play_CheckpointCrossed",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_CheckpointCrossed",
+      "GUID": "{6DCA03B4-383F-4A8A-BFD8-67C23ECF157F}",
+      "MaxAttenuation": "2500",
+      "DurationType": "OneShot",
+      "DurationMin": "4.633733",
+      "DurationMax": "4.633733",
+      "MediaRefs": [
+       {
+        "Id": "50548203"
+       }
+      ]
+     },
+     {
+      "Id": "3735980818",
+      "Name": "Play_CheckpointLoop",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_CheckpointLoop",
+      "GUID": "{7D24E9C8-3326-4183-B4F7-1659E53104CD}",
+      "MaxAttenuation": "2500",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "983648324"
+       }
+      ]
+     },
+     {
+      "Id": "1080648518",
+      "Name": "Play_CrosshairKill",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_CrosshairKill",
+      "GUID": "{B1013123-98B4-4F9C-90B0-AE146A3ADDC6}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.29386264",
+      "DurationMax": "0.38024372",
+      "MediaRefs": [
+       {
+        "Id": "583490465"
+       },
+       {
+        "Id": "645989971"
+       },
+       {
+        "Id": "893848309"
+       }
+      ]
+     },
+     {
+      "Id": "444568226",
+      "Name": "Play_CrosshairLink",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_CrosshairLink",
+      "GUID": "{09B4022D-8DF9-4281-BA4A-A53A74D55AA4}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.19311137",
+      "DurationMax": "0.4922654",
+      "MediaRefs": [
+       {
+        "Id": "101693951"
+       },
+       {
+        "Id": "104456470"
+       },
+       {
+        "Id": "210536426"
+       },
+       {
+        "Id": "483255116"
+       },
+       {
+        "Id": "538907444"
+       },
+       {
+        "Id": "946743475"
        }
       ]
      },
@@ -5812,24 +6084,6 @@
          "Id": "2764240573",
          "GUID": "{6725F899-132D-4978-8B75-001417C3E736}"
         },
-        "MediaRefs": [
-         {
-          "Id": "398660150"
-         },
-         {
-          "Id": "985170916"
-         },
-         {
-          "Id": "1040879410"
-         }
-        ],
-        "PluginRefs": {
-         "ShareSets": [
-          {
-           "Id": "2465479620"
-          }
-         ]
-        },
         "Children": [
          {
           "SwitchValue": {
@@ -6149,6 +6403,69 @@
           "Id": "712907423"
          }
         ]
+       }
+      ]
+     },
+     {
+      "Id": "76459072",
+      "Name": "Play_ObjectiveDoX",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_ObjectiveDoX",
+      "GUID": "{5A196830-D945-4170-8E78-B07C99E51764}",
+      "DurationType": "OneShot",
+      "DurationMin": "4.543139",
+      "DurationMax": "4.543139",
+      "MediaRefs": [
+       {
+        "Id": "908347439"
+       }
+      ]
+     },
+     {
+      "Id": "3810245384",
+      "Name": "Play_ObjectiveExplore",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_ObjectiveExplore",
+      "GUID": "{A8925B4D-160E-45B6-AD8B-F9E0DA9C82F5}",
+      "DurationType": "OneShot",
+      "DurationMin": "3.546891",
+      "DurationMax": "3.546891",
+      "MediaRefs": [
+       {
+        "Id": "307436053"
+       }
+      ]
+     },
+     {
+      "Id": "3343591590",
+      "Name": "Play_ObjectiveProgress",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_ObjectiveProgress",
+      "GUID": "{D74404F9-898D-4755-AF34-25C421EA0E7B}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.38006085",
+      "DurationMax": "0.8596733",
+      "MediaRefs": [
+       {
+        "Id": "14106342"
+       },
+       {
+        "Id": "17110589"
+       },
+       {
+        "Id": "97998439"
+       },
+       {
+        "Id": "463260331"
+       },
+       {
+        "Id": "734191103"
+       },
+       {
+        "Id": "875372502"
+       },
+       {
+        "Id": "999525564"
+       },
+       {
+        "Id": "1070151447"
        }
       ]
      },
@@ -7419,6 +7736,15 @@
       ]
      },
      {
+      "Id": "2570070698",
+      "Name": "Play_TimerSeq",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_TimerSeq",
+      "GUID": "{688DE30A-4A9D-4A75-AE3C-1896A144315F}",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
       "Id": "3575519807",
       "Name": "Play_WeakpointReveal",
       "ObjectPath": "\\Events\\Default Work Unit\\Ai Behavior\\Play_WeakpointReveal",
@@ -7619,6 +7945,12 @@
     ],
     "GameParameters": [
      {
+      "Id": "285824163",
+      "Name": "checkpoint_muted",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\checkpoint_muted",
+      "GUID": "{DA3752D6-74EA-48C9-95A1-46E1EA1F2BC2}"
+     },
+     {
       "Id": "328674765",
       "Name": "rtpc_enemy_stunned",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_enemy_stunned",
@@ -7641,6 +7973,12 @@
       "Name": "rtpc_dash_volumefatigue",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_dash_volumefatigue",
       "GUID": "{4F31ADED-304B-4D56-9826-0239D7A73C99}"
+     },
+     {
+      "Id": "1184756145",
+      "Name": "rtpc_builtin_azimuth_angle",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_builtin_azimuth_angle",
+      "GUID": "{9C016406-4E34-4C58-AB4E-877204F3F982}"
      },
      {
       "Id": "1410332996",
@@ -7701,6 +8039,12 @@
       "Name": "rtpc_idle_pan_left_right",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_idle_pan_left_right",
       "GUID": "{64A95D7C-A689-43D3-8468-0FE53462F747}"
+     },
+     {
+      "Id": "4183863732",
+      "Name": "rtpc_builtin_elevation",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_builtin_elevation",
+      "GUID": "{CC6FB8B5-24CC-4814-BC40-7E3A07524CBE}"
      }
     ],
     "StateGroups": [
@@ -7727,6 +8071,38 @@
         "Name": "notaiming",
         "ObjectPath": "\\States\\Default Work Unit\\state_aim\\notaiming",
         "GUID": "{AD4DA154-B560-453D-8C38-7A73B45B33AF}"
+       }
+      ]
+     },
+     {
+      "Id": "4041781304",
+      "Name": "state_waveindex",
+      "ObjectPath": "\\States\\Default Work Unit\\state_waveindex",
+      "GUID": "{FDA92FED-921B-43CB-B4DD-55F67E4B4A0A}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\state_waveindex\\None",
+        "GUID": "{627FB185-9B60-4745-8435-F75E72427B48}"
+       },
+       {
+        "Id": "1517750921",
+        "Name": "w1",
+        "ObjectPath": "\\States\\Default Work Unit\\state_waveindex\\w1",
+        "GUID": "{1324BD3A-98E2-41EC-B5DB-7F395F03F913}"
+       },
+       {
+        "Id": "1517750922",
+        "Name": "w2",
+        "ObjectPath": "\\States\\Default Work Unit\\state_waveindex\\w2",
+        "GUID": "{3AC9FBFC-23AD-49DF-9438-7E3E2089CDFA}"
+       },
+       {
+        "Id": "1517750923",
+        "Name": "w3",
+        "ObjectPath": "\\States\\Default Work Unit\\state_waveindex\\w3",
+        "GUID": "{79C37F27-D760-4C32-A0E1-F820E947362E}"
        }
       ]
      },
@@ -8004,6 +8380,6 @@
     ]
    }
   ],
-  "FileHash": "{275AC0DF-C0D8-F4FD-22DF-A8D6EFFF444E}"
+  "FileHash": "{86D77883-6BCA-BA12-F137-38798CBE73E3}"
  }
 }

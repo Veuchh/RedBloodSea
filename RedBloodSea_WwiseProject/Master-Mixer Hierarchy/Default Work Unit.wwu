@@ -1351,6 +1351,32 @@
 									</PropertyList>
 								</Bus>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{B5FB9CCC-E6AA-4B23-AFD5-8422B34CC66A}" ShortID="910729202">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Gain" CompanyID="0" PluginID="139" PluginType="3">
+														<ObjectRef Name="Master_Gain" ID="{ED941059-6687-41F9-A573-3847899A4A49}" WorkUnitID="{4640899B-4071-49AD-BD7F-E96787417DC9}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{340FB6ED-20CA-4EF5-9386-8CC0B8DAE5D6}" ShortID="274432982">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
+														<ObjectRef Name="New_Peak_Limiter" ID="{3DB5306F-93F5-4CF6-9A74-126F4E5E3A90}" WorkUnitID="{4640899B-4071-49AD-BD7F-E96787417DC9}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
 						</Bus>
 					</ChildrenList>
 					<ObjectLists>

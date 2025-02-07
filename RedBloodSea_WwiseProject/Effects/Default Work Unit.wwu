@@ -164,6 +164,47 @@
 						<Property Name="LFEGain" Type="Real32" Value="-5"/>
 					</PropertyList>
 				</Effect>
+				<Effect Name="VISCERA_MASTERING_SUITE" ID="{A18CD98C-CF7F-4576-A9AD-E503E7C4D93F}" PluginName="Mastering Suite" CompanyID="0" PluginID="186" PluginType="3">
+					<PropertyList>
+						<Property Name="compressorBand1Knee" Type="Real32" Value="6.53"/>
+						<Property Name="compressorBand1MakeupGain" Type="Real32" Value="-0.2571429"/>
+						<Property Name="compressorBand1Ratio" Type="Real32" Value="2"/>
+						<Property Name="compressorBand1Threshold" Type="Real32" Value="-23.4"/>
+						<Property Name="compressorBand4Knee" Type="Real32" Value="4.95"/>
+						<Property Name="compressorBand4Ratio" Type="Real32" Value="2"/>
+						<Property Name="compressorBand4Threshold" Type="Real32" Value="-8.8"/>
+						<Property Name="limiterAttack" Type="Real32" Value="0.01"/>
+						<Property Name="limiterLinkChannels" Type="bool" Value="False"/>
+						<Property Name="limiterRelease" Type="Real32" Value="0.03"/>
+						<Property Name="limiterThreshold" Type="Real32" Value="-2"/>
+						<Property Name="moduleEnableCompressor" Type="bool" Value="False"/>
+						<Property Name="moduleEnableMasterVolume" Type="bool" Value="False"/>
+						<Property Name="moduleEnableParamEQ" Type="bool" Value="False"/>
+						<Property Name="paramBand1Enabled" Type="bool" Value="False"/>
+						<Property Name="paramBand1Frequency" Type="Real32" Value="144.4051"/>
+					</PropertyList>
+					<PluginData/>
+				</Effect>
+				<Effect Name="Master_Gain" ID="{ED941059-6687-41F9-A573-3847899A4A49}" PluginName="Wwise Gain" CompanyID="0" PluginID="139" PluginType="3">
+					<PropertyList>
+						<Property Name="FullBandGain" Type="Real32" Value="5"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="New_Peak_Limiter" ID="{3DB5306F-93F5-4CF6-9A74-126F4E5E3A90}" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
+					<PropertyList>
+						<Property Name="LookAhead" Type="Real32" Value="0.001"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="checkpoint_meter" ID="{DCF394B8-485B-466E-9821-42B50591321D}" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+					<PropertyList>
+						<Property Name="AttackTime" Type="Real32" Value="0.15"/>
+						<Property Name="Hold" Type="Real32" Value="0.5"/>
+						<Property Name="ReleaseTime" Type="Real32" Value="0.15"/>
+					</PropertyList>
+					<PluginData>
+	<GameParameter Name="meter_checkpoint" ID="{653E5BF9-7F0A-4641-BEAD-1B077C9E090B}"/>
+</PluginData>
+				</Effect>
 			</ChildrenList>
 		</WorkUnit>
 	</Effects>

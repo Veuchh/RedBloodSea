@@ -18,6 +18,13 @@
     "StaticLib": "AkDelayFX"
    },
    {
+    "LibName": "Wwise Peak Limiter",
+    "LibId": "7208963",
+    "Type": "Effect",
+    "DLL": "AkPeakLimiter",
+    "StaticLib": "AkPeakLimiterFX"
+   },
+   {
     "LibName": "Wwise RoomVerb",
     "LibId": "7733251",
     "Type": "Effect",
@@ -56,6 +63,6 @@
     "Type": "AudioDevice"
    }
   ],
-  "FileHash": "{FB4C1883-5396-795B-1EC8-603F382A84B1}"
+  "FileHash": "{6FF3C60C-8280-C764-BF8E-095E4B6C1B17}"
  }
 }

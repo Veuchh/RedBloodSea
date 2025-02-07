@@ -182,6 +182,34 @@
 						<Property Name="InitialValue" Type="Real64" Value="0"/>
 					</PropertyList>
 				</GameParameter>
+				<GameParameter Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}">
+					<PropertyList>
+						<Property Name="BindToBuiltInParam" Type="int16" Value="2"/>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="180"/>
+						<Property Name="Min" Type="Real64" Value="-180"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="rtpc_builtin_elevation" ID="{CC6FB8B5-24CC-4814-BC40-7E3A07524CBE}">
+					<PropertyList>
+						<Property Name="BindToBuiltInParam" Type="int16" Value="3"/>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="90"/>
+						<Property Name="Min" Type="Real64" Value="-90"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="checkpoint_muted" ID="{DA3752D6-74EA-48C9-95A1-46E1EA1F2BC2}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="meter_checkpoint" ID="{653E5BF9-7F0A-4641-BEAD-1B077C9E090B}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="-48"/>
+						<Property Name="Max" Type="Real64" Value="0"/>
+						<Property Name="Min" Type="Real64" Value="-48"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

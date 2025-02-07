@@ -16,6 +16,7 @@ State Group	ID	Name			Wwise Object Path	Notes
 	1203368309	state_game			\Default Work Unit\state_game	
 	2837885159	state_death			\Default Work Unit\state_death	
 	4016824040	state_player			\Default Work Unit\state_player	
+	4041781304	state_waveindex			\Default Work Unit\state_waveindex	
 	4122948419	state_combat			\Default Work Unit\state_combat	
 
 State	ID	Name	State Group			Notes
@@ -32,6 +33,10 @@ State	ID	Name	State Group			Notes
 	223416773	offground	state_player			
 	748895195	None	state_player			
 	1200033591	onground	state_player			
+	748895195	None	state_waveindex			
+	1517750921	w1	state_waveindex			
+	1517750922	w2	state_waveindex			
+	1517750923	w3	state_waveindex			
 	748895195	None	state_combat			
 	1125500713	intro	state_combat			
 	2373432776	betweenwave	state_combat			
@@ -71,7 +76,9 @@ Effect plug-ins	ID	Name	Type				Notes
 	700579160	Level_Verb (Custom)	Wwise RoomVerb			
 	937966394	lowhp_echo (Custom)	Wwise Delay			
 	976335331	Plate_Large (Custom)	Wwise RoomVerb			
+	1473984667	Master_Gain	Wwise Gain			
 	2224135639	Level_Verb	Wwise RoomVerb			
+	2675251108	New_Peak_Limiter	Wwise Peak Limiter			
 	3626272192	HIGH_FREQUENCY_CUT_FILTER	Wwise Parametric EQ			
 
 Audio Devices	ID	Name	Type				Notes

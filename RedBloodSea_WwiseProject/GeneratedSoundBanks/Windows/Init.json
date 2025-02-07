@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{57053845-D4FC-6E5D-8028-B7BD9AD14A00}",
+    "Hash": "{69F6CA8A-A9E5-DB58-F8B5-2423DAFF69E3}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -51,12 +51,28 @@
        "LibId": "6946819"
       },
       {
+       "Id": "1473984667",
+       "Name": "Master_Gain",
+       "ObjectPath": "\\Effects\\Default Work Unit\\Master_Gain",
+       "GUID": "{ED941059-6687-41F9-A573-3847899A4A49}",
+       "LibName": "Wwise Gain",
+       "LibId": "9109507"
+      },
+      {
        "Id": "2224135639",
        "Name": "Level_Verb",
        "ObjectPath": "\\Effects\\Default Work Unit\\Level_Verb",
        "GUID": "{C10E6266-7F54-414E-B6C1-16F6802E7ADB}",
        "LibName": "Wwise RoomVerb",
        "LibId": "7733251"
+      },
+      {
+       "Id": "2675251108",
+       "Name": "New_Peak_Limiter",
+       "ObjectPath": "\\Effects\\Default Work Unit\\New_Peak_Limiter",
+       "GUID": "{3DB5306F-93F5-4CF6-9A74-126F4E5E3A90}",
+       "LibName": "Wwise Peak Limiter",
+       "LibId": "7208963"
       },
       {
        "Id": "3626272192",
@@ -131,7 +147,17 @@
       "Id": "1991350473",
       "Name": "StereoBus",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\StereoBus",
-      "GUID": "{01DB4D2A-3A6E-4B6E-AD86-A91E1CD57BEB}"
+      "GUID": "{01DB4D2A-3A6E-4B6E-AD86-A91E1CD57BEB}",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1473984667"
+        },
+        {
+         "Id": "2675251108"
+        }
+       ]
+      }
      },
      {
       "Id": "2886307548",
@@ -248,6 +274,12 @@
       "GUID": "{A29E33E7-090C-4F92-B2A4-CF339B2E10FC}"
      },
      {
+      "Id": "285824163",
+      "Name": "checkpoint_muted",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\checkpoint_muted",
+      "GUID": "{DA3752D6-74EA-48C9-95A1-46E1EA1F2BC2}"
+     },
+     {
       "Id": "328674765",
       "Name": "rtpc_enemy_stunned",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_enemy_stunned",
@@ -290,6 +322,12 @@
       "GUID": "{51E739EC-97B4-4E4C-A4B4-45C5A6AEF050}"
      },
      {
+      "Id": "1184756145",
+      "Name": "rtpc_builtin_azimuth_angle",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_builtin_azimuth_angle",
+      "GUID": "{9C016406-4E34-4C58-AB4E-877204F3F982}"
+     },
+     {
       "Id": "1410332996",
       "Name": "rtpc_settings_slider",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_settings_slider",
@@ -300,6 +338,12 @@
       "Name": "rtpc_ambiance_arena_attenuation",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_ambiance_arena_attenuation",
       "GUID": "{317D7F34-0FD2-4141-8088-6B66E709DE20}"
+     },
+     {
+      "Id": "2071505889",
+      "Name": "meter_checkpoint",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\meter_checkpoint",
+      "GUID": "{653E5BF9-7F0A-4641-BEAD-1B077C9E090B}"
      },
      {
       "Id": "2332098030",
@@ -402,6 +446,12 @@
       "Name": "rtpc_idle_pan_left_right",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_idle_pan_left_right",
       "GUID": "{64A95D7C-A689-43D3-8468-0FE53462F747}"
+     },
+     {
+      "Id": "4183863732",
+      "Name": "rtpc_builtin_elevation",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_builtin_elevation",
+      "GUID": "{CC6FB8B5-24CC-4814-BC40-7E3A07524CBE}"
      },
      {
       "Id": "4219763636",
@@ -518,6 +568,38 @@
         "Name": "onground",
         "ObjectPath": "\\States\\Default Work Unit\\state_player\\onground",
         "GUID": "{5ADF1174-9E07-490C-82F9-C5039AEC4132}"
+       }
+      ]
+     },
+     {
+      "Id": "4041781304",
+      "Name": "state_waveindex",
+      "ObjectPath": "\\States\\Default Work Unit\\state_waveindex",
+      "GUID": "{FDA92FED-921B-43CB-B4DD-55F67E4B4A0A}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\state_waveindex\\None",
+        "GUID": "{627FB185-9B60-4745-8435-F75E72427B48}"
+       },
+       {
+        "Id": "1517750921",
+        "Name": "w1",
+        "ObjectPath": "\\States\\Default Work Unit\\state_waveindex\\w1",
+        "GUID": "{1324BD3A-98E2-41EC-B5DB-7F395F03F913}"
+       },
+       {
+        "Id": "1517750922",
+        "Name": "w2",
+        "ObjectPath": "\\States\\Default Work Unit\\state_waveindex\\w2",
+        "GUID": "{3AC9FBFC-23AD-49DF-9438-7E3E2089CDFA}"
+       },
+       {
+        "Id": "1517750923",
+        "Name": "w3",
+        "ObjectPath": "\\States\\Default Work Unit\\state_waveindex\\w3",
+        "GUID": "{79C37F27-D760-4C32-A0E1-F820E947362E}"
        }
       ]
      },
@@ -822,6 +904,6 @@
     ]
    }
   ],
-  "FileHash": "{F52FA4EE-BC92-98CC-7170-05AD24F01A8B}"
+  "FileHash": "{18BC5758-ADDF-7D86-AD41-5BD904096BFF}"
  }
 }

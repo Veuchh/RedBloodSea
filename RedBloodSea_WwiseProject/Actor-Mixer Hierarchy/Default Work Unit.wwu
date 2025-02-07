@@ -4617,6 +4617,130 @@
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{308D7FCD-7BD2-441E-8020-43457F8BD56D}" ShortID="101661950">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Volume"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{7F147FFC-4525-4FD7-B18B-62C91814D5CB}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="3"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>-180</XPos>
+																						<YPos>-4.5088</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>-0.16529</XPos>
+																						<YPos>-0.102550000000008</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>180</XPos>
+																						<YPos>-3.28341</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{094ECA37-BB91-4B86-BAAB-FC437EE36640}" ShortID="492152439">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{E6E8AC8B-7FC3-470E-A8C0-AB68A436426A}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="65537"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>-180</XPos>
+																						<YPos>25</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>-0</XPos>
+																						<YPos>0</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>180</XPos>
+																						<YPos>25</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{45095F5F-DA82-4FC7-BCDB-5B7851926D4C}" ShortID="993355609">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="UserAuxSendVolume0"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{1D9673A1-FFE4-41C1-916F-5723E29C1FBD}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="3"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>-180</XPos>
+																						<YPos>3.20442</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>0</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>180</XPos>
+																						<YPos>4.42981</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="EnemyProjectileCast" ID="{4A9A06BA-BB7D-4433-A266-4FDE7867C156}" ShortID="130723254">
 											<PropertyList>
@@ -4695,6 +4819,130 @@
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{B61462C9-93BE-4F96-A737-1E934638E0EA}" ShortID="893897682">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Volume"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{25514D3A-F317-40DF-88B8-E768CCB7AB2D}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="3"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>-180</XPos>
+																						<YPos>-6.5396</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>-0.16529</XPos>
+																						<YPos>-0.102550000000008</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>180</XPos>
+																						<YPos>-5.31421</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{64C31AF1-B463-4F42-8031-82FD7E048363}" ShortID="498487986">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{C40D5AFD-F63D-44D5-99C6-61278FAE23C7}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="65537"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>-180</XPos>
+																						<YPos>42</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>-0</XPos>
+																						<YPos>0</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>180</XPos>
+																						<YPos>42</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{99EE8B87-AEE8-47B5-968A-292A84755658}" ShortID="985529664">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="UserAuxSendVolume0"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{8BD0B506-599F-4D6F-AA85-1C1544104B85}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="3"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>-180</XPos>
+																						<YPos>3.20442</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>0</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>180</XPos>
+																						<YPos>4.42981000000003</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="EnemyProjectileFire" ID="{B89BF0AC-ADB4-48D8-82C1-472295208C84}" ShortID="304139560">
 											<PropertyList>
@@ -4776,6 +5024,130 @@
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{87AE2F50-B006-4F25-9ED7-35C602E9A4ED}" ShortID="1018420933">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Volume"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{E4ADB5BB-BE3A-439F-99EC-6E0928558AED}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="3"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>-180</XPos>
+																						<YPos>-4.50880000000001</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>-0.16529</XPos>
+																						<YPos>-0.102550000000008</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>180</XPos>
+																						<YPos>-3.28341</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{C9FC62DE-3369-4B49-9F29-569386F9B02E}" ShortID="980347712">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{616A79F2-201F-4D17-A945-513C5CE45444}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="65537"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>-180</XPos>
+																						<YPos>25</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>-0</XPos>
+																						<YPos>0</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>180</XPos>
+																						<YPos>25</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{9344419D-427B-4E13-913E-2D4F3BE427B1}" ShortID="763456539">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="UserAuxSendVolume0"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{803DD54A-D3DB-4B7A-9A98-28DE80D3C726}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="3"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>-180</XPos>
+																						<YPos>3.20442</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>0</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>180</XPos>
+																						<YPos>4.42981000000003</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
 										</RandomSequenceContainer>
 										<Sound Name="EnemyProjectileBeam" ID="{7F8EEE5E-9EBB-45E5-969E-33AF90805FED}" ShortID="553826041">
 											<PropertyList>
@@ -4839,6 +5211,130 @@
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{F4F96F54-1A2A-4F66-A9CE-22B5A4DE20E9}" ShortID="962912015">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Volume"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{E3F5CBC7-73E3-481C-AE1A-0EE90B428FD9}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="3"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>-180</XPos>
+																						<YPos>-4.50880000000001</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>-0.16529</XPos>
+																						<YPos>-0.102550000000008</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>180</XPos>
+																						<YPos>-3.28341</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{26325BAC-3F85-406D-AE4A-7AAE11A206FE}" ShortID="805934508">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{F19CC934-EA35-4E34-AB1B-288F6E52596D}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="65537"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>-180</XPos>
+																						<YPos>25</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>-0</XPos>
+																						<YPos>0</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>180</XPos>
+																						<YPos>25</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{E32FDC0B-5CAF-4E6A-8C55-2C41B1B6109B}" ShortID="475133061">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="UserAuxSendVolume0"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{84BB0B76-B343-49EC-9172-F1C2DC45A463}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="3"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>-180</XPos>
+																						<YPos>3.20442</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>0</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>180</XPos>
+																						<YPos>4.42981000000003</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
 											<ActiveSourceList>
 												<ActiveSource Name="Beam" ID="{B8C42A80-0386-47C7-8F21-8B4C64F7FE35}" Platform="Linked"/>
 											</ActiveSourceList>
@@ -6056,6 +6552,90 @@
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{01A8003B-6719-486E-A042-41B3281CE8B3}" ShortID="70853978">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Volume"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{08761C1A-0B8A-4102-A32B-49D5F6261DF9}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="3"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>-180</XPos>
+																						<YPos>-4.50880000000001</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>-0.16529</XPos>
+																						<YPos>-0.102550000000008</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>180</XPos>
+																						<YPos>-3.28341</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{4526FC71-BA0B-41CF-A554-CFD7A6AEA929}" ShortID="469389237">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{9B2A1B8D-EADF-4F03-9E72-B0452E32C28A}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="65537"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>-180</XPos>
+																						<YPos>25</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>-0</XPos>
+																						<YPos>0</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>180</XPos>
+																						<YPos>25</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
 										</BlendContainer>
 										<Sound Name="player hit projectile projectile" ID="{74DDFDB6-A542-4DBE-A4F1-9D1DA41E27E0}" ShortID="402554640">
 											<PropertyList>
@@ -7525,6 +8105,130 @@
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{E29A88D7-5B2F-4FFA-93A1-8C3E55DBA06E}" ShortID="445487898">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{39D6BA8B-AABA-4742-A194-04FD7C9535CF}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>-180</XPos>
+																				<YPos>-4.50880000000001</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>-0.16529</XPos>
+																				<YPos>-0.102550000000008</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>180</XPos>
+																				<YPos>-3.28341</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{DEF93FA8-4B79-4218-902A-72A8CCA5BB25}" ShortID="1069360310">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{C3A5DFA7-4D15-4323-9E32-B4308021A5CA}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="65537"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>-180</XPos>
+																				<YPos>25</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>-0</XPos>
+																				<YPos>0</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>180</XPos>
+																				<YPos>25</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{918A60A3-D1AC-4C35-980B-5BD1D5DF7569}" ShortID="526733792">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="UserAuxSendVolume0"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{D9417011-3644-49F9-9B77-8238A3B11766}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>-180</XPos>
+																				<YPos>3.20442</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>180</XPos>
+																				<YPos>4.42981000000003</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="EnemyAttackSwing" ID="{541216C3-9BDB-4D2C-B671-4C582C2C6C2B}" ShortID="507516549">
 									<PropertyList>
@@ -7708,6 +8412,130 @@
 											</PropertyList>
 										</Panner>
 									</PositioningInfo>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{D883E4A3-2A8E-4B51-BCED-CC3FBEAEC1E3}" ShortID="152322497">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{207692C7-EAF2-4F45-A306-CC0F7F41D37F}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>-180</XPos>
+																				<YPos>-4.50880000000001</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>-0.16529</XPos>
+																				<YPos>-0.102550000000008</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>180</XPos>
+																				<YPos>-3.28341</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{E1890452-0ACE-4F15-8F25-E7BF64C62831}" ShortID="804468187">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{8BA8B316-399C-4B9F-AAEA-C6428A6BFA13}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="65537"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>-180</XPos>
+																				<YPos>25</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>-0</XPos>
+																				<YPos>0</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>180</XPos>
+																				<YPos>25</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{B0204EC0-E24C-4302-8539-2BC3403EFF0C}" ShortID="215005836">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="UserAuxSendVolume0"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{DF777F15-72C8-4DFB-8225-015271B0A7FF}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>-180</XPos>
+																				<YPos>3.20442</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>180</XPos>
+																				<YPos>4.42981000000003</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
 								</RandomSequenceContainer>
 							</ChildrenList>
 							<ObjectLists>
@@ -8539,6 +9367,90 @@
 									</ChildrenList>
 								</RandomSequenceContainer>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{28085701-20F0-4F2E-8583-CE496F8862AB}" ShortID="938646708">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="UserAuxSendVolume0"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{C0C5F359-838B-4966-932E-F5E78762201A}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>-180</XPos>
+																		<YPos>3.20442</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>180</XPos>
+																		<YPos>4.42981000000003</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{B793C00C-6F7F-4281-88E3-5437050DDAF2}" ShortID="870044666">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{C8904E32-92E5-4D1F-9F51-694F5BB7898C}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>-180</XPos>
+																		<YPos>-4.50880000000001</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>-0.16529</XPos>
+																		<YPos>-0.102550000000008</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>180</XPos>
+																		<YPos>-3.28341</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
 						</BlendContainer>
 						<RandomSequenceContainer Name="EnemyStun" ID="{86CEB44C-5451-4ACC-B813-CF386F9953A3}" ShortID="248069023">
 							<PropertyList>
@@ -10373,6 +11285,1059 @@
 										</ObjectList>
 									</ObjectLists>
 								</RandomSequenceContainer>
+								<ActorMixer Name="Crosshairs" ID="{D1AFE6BE-01F5-4DB3-89A5-728ACDD2F13B}" ShortID="700345204">
+									<PropertyList>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<BlendContainer Name="CrosshairLink" ID="{EC3DA5E5-F551-40EC-A1A3-46119EE5650C}" ShortID="854941968">
+											<PropertyList>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{B2DF5D95-1E7A-49B5-B1B8-4362C9760287}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="2"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{AA5E30BB-887C-463D-BD1E-44C0448FE411}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="50"/>
+																	<Property Name="Min" Type="Real64" Value="-50"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="L1link" ID="{96704B17-E181-41EA-B6A2-199F761913AC}" ShortID="10472165">
+													<PropertyList>
+														<Property Name="InitialDelay" Type="Real64">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{47FED78F-61F1-4533-A0A7-7EA2F7206EDD}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="0.01"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{751A6CE8-154E-4EF8-BEF9-94F2FC937117}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="2"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{0BBE8ADD-771C-423C-97FD-44094D74A473}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="150"/>
+																			<Property Name="Min" Type="Real64" Value="-150"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="CrosshairLinkL1 v1" ID="{2E967AAB-46DF-4B22-B5A1-CF13B0493075}" ShortID="678775637">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="CrosshairLinkL1 v1" ID="{4E589C3A-570B-4D8D-8C1E-893493C59289}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.00322559799382716"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.0290303819444445"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.043223013117284"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.449003240740741"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>CrosshairLinkL1 v1.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="946743475"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="CrosshairLinkL1 v1" ID="{4E589C3A-570B-4D8D-8C1E-893493C59289}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="CrosshairLinkL1 v1_01" ID="{96262CBB-FC57-4B9E-A7C7-2884060151FF}" ShortID="897335494">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="CrosshairLinkL1 v1" ID="{C0551514-B935-4894-96C9-4A04A3B3DB9F}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.00322559799382716"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.0290303819444445"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.479323861882716"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.695438927469136"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>CrosshairLinkL1 v1.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="483255116"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="CrosshairLinkL1 v1" ID="{C0551514-B935-4894-96C9-4A04A3B3DB9F}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="L2link" ID="{B14793EF-ABD4-4832-8363-5F2E7B4EF239}" ShortID="831834424">
+													<PropertyList>
+														<Property Name="InitialDelay" Type="Real64">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{C87C2689-48D0-496F-913E-80D51EC77800}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="0.01"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{3B40A1AC-7A5D-40F0-850C-217631B43BA6}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="1"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{1F3FC2B8-5489-43CD-B11D-B14EC7AAF679}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="150"/>
+																			<Property Name="Min" Type="Real64" Value="-150"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="CrosshairLinkL2 v1" ID="{0B2A4230-80F3-4AB1-A7F7-AD6D718430AE}" ShortID="243264875">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="CrosshairLinkL2 v1" ID="{21402A0D-CDFD-48BC-A04F-22E54BEA5454}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.00258047839506173"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.0264499035493827"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.0496742091049383"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.479323861882716"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>CrosshairLinkL2 v1.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="210536426"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="CrosshairLinkL2 v1" ID="{21402A0D-CDFD-48BC-A04F-22E54BEA5454}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="CrosshairLinkL2 v1_01" ID="{36874794-E805-488E-8B54-83DC8C953C25}" ShortID="869026274">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="CrosshairLinkL2 v1" ID="{23B927CA-6D23-4E28-8895-EFB8816C8278}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.00258047839506173"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.0264499035493827"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.479968981481481"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>CrosshairLinkL2 v1.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="538907444"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="CrosshairLinkL2 v1" ID="{23B927CA-6D23-4E28-8895-EFB8816C8278}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="L3link" ID="{387638FE-BEDF-4EEF-87F9-681383A2FEE3}" ShortID="451135071">
+													<PropertyList>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{35C0479C-6CEB-4EF0-9F82-24B3FDE80438}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="1"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{947D776E-1BA6-45BD-AE1F-95DF4B43C453}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="150"/>
+																			<Property Name="Min" Type="Real64" Value="-150"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="CrosshairLinkL3 v1" ID="{CF1C9973-9765-42A8-AECD-046FBB458A64}" ShortID="546376707">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="CrosshairLinkL3 v1" ID="{ADE88F32-4240-4AC5-82CE-B5B4B9B5AAF4}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.00322559799382716"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.0129023919753087"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.0516095679012346"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.483194579475308"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>CrosshairLinkL3 v1.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="101693951"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="CrosshairLinkL3 v1" ID="{ADE88F32-4240-4AC5-82CE-B5B4B9B5AAF4}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="CrosshairLinkL3 v1_01" ID="{A127D045-F0EB-43AF-9E5F-85DEBB596507}" ShortID="267957990">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="CrosshairLinkL3 v1" ID="{7FC2F25A-5B08-4526-84A4-02E3236639A9}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.00322559799382716"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.0129023919753087"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.482549459876543"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.679956057098765"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>CrosshairLinkL3 v1.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="104456470"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="CrosshairLinkL3 v1" ID="{7FC2F25A-5B08-4526-84A4-02E3236639A9}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+										</BlendContainer>
+										<BlendContainer Name="CrosshairKill" ID="{E0D9BDAE-76E0-43EF-B83B-E53D05CC3B1E}" ShortID="220431169">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16">
+													<ValueList>
+														<Value>17</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>-4</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{C0341166-D22A-41A8-B750-1E65CF6C1569}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="2"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{1E696504-91CB-4C5A-BE47-989957D3C3E2}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="100"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{1896DEB9-15DA-40DA-9E34-49562813FD81}">
+																<PropertyList>
+																	<Property Name="Max" Type="Real64" Value="2"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="L1kill" ID="{406B1245-94C4-4E5F-901C-2314D63B285B}" ShortID="157511670">
+													<PropertyList>
+														<Property Name="InitialDelay" Type="Real64">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{F09C2A41-2AD7-4309-A0B9-994F305EF136}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="0.01"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ValueList>
+																<Value>-2</Value>
+															</ValueList>
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{F6CDF792-A086-4C18-B1C0-72D0DA5813C6}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="2"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{59EDF3CC-A76D-4DA6-AC13-2963A0897A87}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="150"/>
+																			<Property Name="Min" Type="Real64" Value="-150"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="CrosshairKillL1 v1" ID="{AD31F85F-3831-46FD-9BCF-EBE25115D551}" ShortID="276150489">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="CrosshairKillL1 v1" ID="{A3164970-6C0C-4A55-A7EB-C1A718A9B831}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.000815162037037034"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.00122274305555559"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.109231712962963"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.188302430555556"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>CrosshairKillL1 v1.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="645989971"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="CrosshairKillL1 v1" ID="{A3164970-6C0C-4A55-A7EB-C1A718A9B831}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="L2kill" ID="{0920F510-C16F-46E9-91E3-EC183E0F712E}" ShortID="422632879">
+													<PropertyList>
+														<Property Name="InitialDelay" Type="Real64">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{E295FF7B-1011-4F5B-8B08-4BB7BA827E38}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="0.01"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ValueList>
+																<Value>-3</Value>
+															</ValueList>
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{30FEA8FE-A434-4C7F-9621-42298B3B14BA}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="1"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{934BF21B-54EA-401A-A8FD-21842E78C278}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="150"/>
+																			<Property Name="Min" Type="Real64" Value="-150"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="CrosshairKillL2 v1" ID="{2DBA41B9-1CFB-47DD-B327-F1BCFD8E7ACB}" ShortID="118505886">
+															<PropertyList>
+																<Property Name="Pitch" Type="int32">
+																	<ModifierList>
+																		<ModifierInfo>
+																			<Modifier Name="" ID="{9472B10E-BBF3-4D1B-B1D3-F0D613CEE271}"/>
+																		</ModifierInfo>
+																	</ModifierList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="CrosshairKillL2 v1" ID="{62A673E2-7074-4F3B-968E-8211A6EC1D09}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.00203790509259259"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.280008159722222"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.0533931134259259"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.392908101851852"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>CrosshairKillL2 v1.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="583490465"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="CrosshairKillL2 v1" ID="{62A673E2-7074-4F3B-968E-8211A6EC1D09}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="L3kill" ID="{2D1088F4-6C9F-469F-BDCF-E290DDD9AB60}" ShortID="684051948">
+													<PropertyList>
+														<Property Name="InitialDelay" Type="Real64">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{B0732A36-5562-458C-9F03-F76230083FBB}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="0.01"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{58970DD3-CAF5-4DDE-BE96-E2978B44AB55}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="1"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{404E34D6-1275-494C-BA30-37AE81340DA6}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="150"/>
+																			<Property Name="Min" Type="Real64" Value="-150"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="CrosshairKillL3 v1" ID="{99BD29B2-5574-43FA-A9DD-CFF77F66F67B}" ShortID="118797594">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="CrosshairKillL3 v1" ID="{4DC9C17E-7B35-42B9-A556-55ADE76967ED}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.00163032407407408"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.159771759259259"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.0452414930555555"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.260444270833333"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>CrosshairKillL3 v1.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="893848309"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="CrosshairKillL3 v1" ID="{4DC9C17E-7B35-42B9-A556-55ADE76967ED}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+										</BlendContainer>
+									</ChildrenList>
+								</ActorMixer>
+								<RandomSequenceContainer Name="TimerSeq" ID="{118E457B-041F-4840-A4CA-35839BA2B0E0}" ShortID="315419092">
+									<PropertyList>
+										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="ObjectiveProgress" ID="{51A1490B-2186-439B-98FB-026B3100A1EA}" ShortID="162462828">
+									<PropertyList>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+										<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="ObjectiveProgressSEQ v1" ID="{3F2EF60C-DB75-4C75-AB94-EC9946FBF51D}" ShortID="667108372">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ObjectiveProgressSEQ v1" ID="{BF9446F5-AAE3-4BC2-BAC3-421042175454}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0247039391342374"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0635244149166104"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0908749917978239"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.950548286975058"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>ObjectiveProgressSEQ v1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="97998439"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ObjectiveProgressSEQ v1" ID="{BF9446F5-AAE3-4BC2-BAC3-421042175454}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ObjectiveProgressSEQ v1_01" ID="{BC6EDBEC-03ED-4041-9E00-DA465614ADD2}" ShortID="505168222">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ObjectiveProgressSEQ v1" ID="{969C7C46-BB15-46BF-80B1-EF8817DFEF9F}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0247039391342374"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0635244149166104"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="1.26716617006659"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.67445905815585"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>ObjectiveProgressSEQ v1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="463260331"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ObjectiveProgressSEQ v1" ID="{969C7C46-BB15-46BF-80B1-EF8817DFEF9F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ObjectiveProgressSEQ v1_02" ID="{70D2B1EA-7FC2-4980-A8BA-8841CB19B435}" ShortID="31532821">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ObjectiveProgressSEQ v1" ID="{D4CE8CA9-F158-4C27-8CF8-184BCBED2647}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00428746051090085"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0635244149166104"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="2.7721818013529"/>
+														<Property Name="TrimEnd" Type="Real64" Value="3.18943584599252"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>ObjectiveProgressSEQ v1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1070151447"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ObjectiveProgressSEQ v1" ID="{D4CE8CA9-F158-4C27-8CF8-184BCBED2647}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ObjectiveProgressSEQ v1_03" ID="{5064F5A4-69FE-4123-B32B-2502DCC91F5F}" ShortID="505705548">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ObjectiveProgressSEQ v1" ID="{3CC2A781-9A57-4196-B336-862A86649E08}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0144626767107461"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0635244149166104"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="4.06342710687428"/>
+														<Property Name="TrimEnd" Type="Real64" Value="4.4434879679061"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>ObjectiveProgressSEQ v1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="734191103"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ObjectiveProgressSEQ v1" ID="{3CC2A781-9A57-4196-B336-862A86649E08}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ObjectiveProgressSEQ v1_04" ID="{F75794C1-B5FA-4F48-A9CD-95A3F278A1EA}" ShortID="827340166">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ObjectiveProgressSEQ v1" ID="{548B2624-72A0-4B5E-94F2-4F7097FA8A86}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00554476051505937"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0635244149166104"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="5.62980609504674"/>
+														<Property Name="TrimEnd" Type="Real64" Value="6.09554076428169"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>ObjectiveProgressSEQ v1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="14106342"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ObjectiveProgressSEQ v1" ID="{548B2624-72A0-4B5E-94F2-4F7097FA8A86}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ObjectiveProgressSEQ v1_05" ID="{25A3FD57-31D1-4FE8-885B-049C2933DDB0}" ShortID="1045149471">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ObjectiveProgressSEQ v1" ID="{78234B1E-E72B-4E31-91E2-0606AB3A394F}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00554476051505937"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0635244149166104"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="7.1473555594791"/>
+														<Property Name="TrimEnd" Type="Real64" Value="7.56226608720779"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>ObjectiveProgressSEQ v1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="999525564"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ObjectiveProgressSEQ v1" ID="{78234B1E-E72B-4E31-91E2-0606AB3A394F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ObjectiveProgressSEQ v1_06" ID="{53758331-0818-49FD-9128-49175E601E50}" ShortID="46388876">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ObjectiveProgressSEQ v1" ID="{00CCAC9A-D10A-447D-A03B-F1B2E57E47C0}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00160348849681036"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0635244149166104"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="8.57682009735954"/>
+														<Property Name="TrimEnd" Type="Real64" Value="9.03301057491119"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>ObjectiveProgressSEQ v1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="875372502"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ObjectiveProgressSEQ v1" ID="{00CCAC9A-D10A-447D-A03B-F1B2E57E47C0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ObjectiveProgressSEQ v1_07" ID="{388B853D-6251-4CA9-BA93-985949D736CC}" ShortID="760830955">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ObjectiveProgressSEQ v1" ID="{5D8EC414-AF48-4AA5-87BB-84B800A8EC39}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00160348849681036"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0635244149166104"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="9.26514709094632"/>
+														<Property Name="TrimEnd" Type="Real64" Value="9.82222529338307"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>ObjectiveProgressSEQ v1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="17110589"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ObjectiveProgressSEQ v1" ID="{5D8EC414-AF48-4AA5-87BB-84B800A8EC39}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<PositioningInfo>
+										<Panner Name="" ID="{B972A14E-98F4-4B14-BFF7-270E881018D8}">
+											<PropertyList>
+												<Property Name="PanX" Type="Real64" Value="41.1693057247259"/>
+												<Property Name="PanY" Type="Real64" Value="-3.33066907387547E-16"/>
+											</PropertyList>
+										</Panner>
+									</PositioningInfo>
+									<ObjectLists>
+										<ObjectList Name="Playlist">
+											<Reference>
+												<ObjectRef Name="ObjectiveProgressSEQ v1" ID="{3F2EF60C-DB75-4C75-AB94-EC9946FBF51D}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="ObjectiveProgressSEQ v1_01" ID="{BC6EDBEC-03ED-4041-9E00-DA465614ADD2}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="ObjectiveProgressSEQ v1_02" ID="{70D2B1EA-7FC2-4980-A8BA-8841CB19B435}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="ObjectiveProgressSEQ v1_03" ID="{5064F5A4-69FE-4123-B32B-2502DCC91F5F}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="ObjectiveProgressSEQ v1_04" ID="{F75794C1-B5FA-4F48-A9CD-95A3F278A1EA}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="ObjectiveProgressSEQ v1_05" ID="{25A3FD57-31D1-4FE8-885B-049C2933DDB0}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="ObjectiveProgressSEQ v1_06" ID="{53758331-0818-49FD-9128-49175E601E50}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="ObjectiveProgressSEQ v1_07" ID="{388B853D-6251-4CA9-BA93-985949D736CC}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+								<ActorMixer Name="Objectives" ID="{C33B7CD5-9583-4206-ADB2-55BF9220D4E6}" ShortID="728298456">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="ObjectiveDoX" ID="{EAC561F7-D292-401D-BE3C-81C2805762BA}" ShortID="660765360">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="UiBus" ID="{2CE1566D-92AD-4C86-A97B-02E069A97F77}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="NewObjectives v1" ID="{BEE19142-550D-44A8-B546-F12245B2908B}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0662541087962963"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="1.05060086805556"/>
+														<Property Name="LoopBegin" Type="Real64" Value="0.690935706018518"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.672005960648148"/>
+														<Property Name="TrimEnd" Type="Real64" Value="5.21514484953704"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>NewObjectives v1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="908347439"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="NewObjectives v1" ID="{BEE19142-550D-44A8-B546-F12245B2908B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ObjectiveExplore" ID="{C6DCB91E-FB6E-42BE-A2CA-2622CDBB0E9C}" ShortID="519731195">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="UiBus" ID="{2CE1566D-92AD-4C86-A97B-02E069A97F77}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="NewObjectives v1" ID="{754A4C34-4952-49FA-8E0D-07B7465D0655}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0269328148913814"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.738260069444445"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="6.0410251117551"/>
+														<Property Name="TrimEnd" Type="Real64" Value="9.58791603009259"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>NewObjectives v1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="307436053"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="NewObjectives v1" ID="{754A4C34-4952-49FA-8E0D-07B7465D0655}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</ActorMixer>
 							</ChildrenList>
 						</ActorMixer>
 					</ChildrenList>
@@ -12503,6 +14468,166 @@
 											</RTPC>
 										</Local>
 									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{31D65980-2663-486B-942B-B92AB8B316F4}" ShortID="172080913">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{0C5AEE54-C480-496D-8FD9-EE1C58C30BF6}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>-180</XPos>
+																		<YPos>-3.53116</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>-0.16529</XPos>
+																		<YPos>-0.102550000000008</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>180</XPos>
+																		<YPos>-2.30577</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{9160CEA6-AC0A-413F-BEF9-6F2414252B09}" ShortID="111517733">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{CC1322AE-CE21-40A8-9CF2-D14E20A9CDC5}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>-180</XPos>
+																		<YPos>25</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>-0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>180</XPos>
+																		<YPos>25</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{2E12F7D4-381A-40E9-84D4-876571C4FA18}" ShortID="467723671">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="rtpc_builtin_elevation" ID="{CC6FB8B5-24CC-4814-BC40-7E3A07524CBE}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{38E2D319-8272-4ADB-B27C-3198A4570CDD}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>-90</XPos>
+																		<YPos>50</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>-0.494505494505503</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>90</XPos>
+																		<YPos>50</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{9D5AD9DC-5CAF-4BF0-879B-1A23C0AA7B25}" ShortID="589587990">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="rtpc_builtin_elevation" ID="{CC6FB8B5-24CC-4814-BC40-7E3A07524CBE}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{44014B1F-028F-457A-A788-2063BB1DE41D}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>-90</XPos>
+																		<YPos>-12.10675</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>-0.0826449999999994</XPos>
+																		<YPos>-0.102550000000008</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>90</XPos>
+																		<YPos>-10.88136</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
 								</ObjectList>
 							</ObjectLists>
 						</RandomSequenceContainer>
@@ -12930,7 +15055,7 @@
 							<PropertyList>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>9</Value>
+										<Value>13</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -12951,6 +15076,130 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{FD46C919-B99E-408C-979D-1DF02073F5E1}" ShortID="706842627">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{236A40F7-1276-40DB-8BC6-39938465A584}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>-180</XPos>
+																		<YPos>-3.53116</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>-0.16529</XPos>
+																		<YPos>-0.102550000000008</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>180</XPos>
+																		<YPos>-2.30577</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{CC5E5BFA-36F6-47FB-9ABB-4EEE572559F5}" ShortID="150544755">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{79384543-9989-4E20-BCC2-D3B2203DFDFA}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>-180</XPos>
+																		<YPos>25</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>-0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>180</XPos>
+																		<YPos>25</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{67995753-1564-4A16-8CC2-3C716B90AEAB}" ShortID="559996349">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Highpass"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{1B82CDC7-0B6E-45E7-9560-96F3C598219E}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>-180</XPos>
+																		<YPos>25</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>-0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>180</XPos>
+																		<YPos>25</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="BasaltGate idle v1" ID="{D02495EF-3068-4042-AACC-22AC90AE7469}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -12987,6 +15236,280 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="BasaltGate open v1" ID="{5EE12374-60EB-4332-B81F-13F4EA783478}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="CheckpointCrossed" ID="{94647F2B-542A-43C2-97E5-91EC2597CA86}" ShortID="1066392879">
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Checkpoint" ID="{119028DF-EDD7-41E1-B21C-A206E7037EEC}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Checkpoint Pass v1" ID="{3CB4C807-A010-440F-B25D-D2DA4B8E4092}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.00526560570987655"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="4.21248456790124"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="1.05312114197531"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Checkpoint Pass v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="50548203"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Checkpoint Pass v1" ID="{3CB4C807-A010-440F-B25D-D2DA4B8E4092}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="CheckpointLoop" ID="{808312DE-B744-40E3-8E66-1DBAF843D9EE}" ShortID="815808717">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Checkpoint" ID="{119028DF-EDD7-41E1-B21C-A206E7037EEC}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Checkpoint Loop v1" ID="{02BFE69E-C233-43AA-BD76-6CFAAEAAC063}">
+									<Language>SFX</Language>
+									<AudioFile>Checkpoint Loop v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="983648324"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{1B6F5D64-6FA0-46B6-8BA5-2C255B22C207}" ShortID="28608974">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{B4C8F2C5-67FB-412A-9C75-055547CE5386}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>-180</XPos>
+																		<YPos>-12.10675</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>-0.16529</XPos>
+																		<YPos>-0.10255</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>180</XPos>
+																		<YPos>-10.88136</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{754B2DB5-6BAB-4A7D-B236-31B41243AFA4}" ShortID="727567508">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{24C75543-7979-47FC-A138-24FF2D01F7D4}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>-180</XPos>
+																		<YPos>50</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>-0.989010989011007</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>180</XPos>
+																		<YPos>50</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{4D107397-728C-4ECC-B4A7-4D801CC01ADE}" ShortID="304666813">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="rtpc_builtin_elevation" ID="{CC6FB8B5-24CC-4814-BC40-7E3A07524CBE}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{F78CE358-6C78-4C45-B998-0D657D5C9911}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>-90</XPos>
+																		<YPos>50</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>-0.494505494505503</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>90</XPos>
+																		<YPos>50</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{745988CC-13A1-4472-984C-CAA180A316A8}" ShortID="1041751293">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="rtpc_builtin_elevation" ID="{CC6FB8B5-24CC-4814-BC40-7E3A07524CBE}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{CC44DDBA-807C-49AD-ACAB-6D117C0363D5}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>-90</XPos>
+																		<YPos>-12.10675</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>-0.0826449999999994</XPos>
+																		<YPos>-0.102550000000008</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>90</XPos>
+																		<YPos>-10.88136</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{1DFED543-6D78-4343-B671-CA37B8CDD072}" ShortID="121144674">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="checkpoint_muted" ID="{DA3752D6-74EA-48C9-95A1-46E1EA1F2BC2}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{375E89E9-20E2-46A5-80AD-0EE499925842}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>95</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>95.001</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+							<ActiveSourceList>
+								<ActiveSource Name="Checkpoint Loop v1" ID="{02BFE69E-C233-43AA-BD76-6CFAAEAAC063}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

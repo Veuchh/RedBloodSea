@@ -52,6 +52,14 @@
 						<State Name="dead" ID="{348DE88E-BEE6-49C0-AB27-105646664E5D}"/>
 					</ChildrenList>
 				</StateGroup>
+				<StateGroup Name="state_waveindex" ID="{FDA92FED-921B-43CB-B4DD-55F67E4B4A0A}">
+					<ChildrenList>
+						<State Name="None" ID="{627FB185-9B60-4745-8435-F75E72427B48}"/>
+						<State Name="w1" ID="{1324BD3A-98E2-41EC-B5DB-7F395F03F913}"/>
+						<State Name="w2" ID="{3AC9FBFC-23AD-49DF-9438-7E3E2089CDFA}"/>
+						<State Name="w3" ID="{79C37F27-D760-4C32-A0E1-F820E947362E}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

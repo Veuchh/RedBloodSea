@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{57053845-D4FC-6E5D-8028-B7BD9AD14A00}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{69F6CA8A-A9E5-DB58-F8B5-2423DAFF69E3}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -13,7 +13,9 @@
 				</Custom>
 				<ShareSets>
 					<Plugin Id="196835669" Name="New_Delay" ObjectPath="\Effects\Default Work Unit\New_Delay" GUID="{6ACEEE1D-3975-4B86-B069-429155FF7B9F}" LibName="Wwise Delay" LibId="6946819"/>
+					<Plugin Id="1473984667" Name="Master_Gain" ObjectPath="\Effects\Default Work Unit\Master_Gain" GUID="{ED941059-6687-41F9-A573-3847899A4A49}" LibName="Wwise Gain" LibId="9109507"/>
 					<Plugin Id="2224135639" Name="Level_Verb" ObjectPath="\Effects\Default Work Unit\Level_Verb" GUID="{C10E6266-7F54-414E-B6C1-16F6802E7ADB}" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="2675251108" Name="New_Peak_Limiter" ObjectPath="\Effects\Default Work Unit\New_Peak_Limiter" GUID="{3DB5306F-93F5-4CF6-9A74-126F4E5E3A90}" LibName="Wwise Peak Limiter" LibId="7208963"/>
 					<Plugin Id="3626272192" Name="HIGH_FREQUENCY_CUT_FILTER" ObjectPath="\Effects\Default Work Unit\HIGH_FREQUENCY_CUT_FILTER" GUID="{10C5B825-780E-4846-B96A-6B4E3FA7DC4C}" LibName="Wwise Parametric EQ" LibId="6881283"/>
 				</ShareSets>
 				<AudioDevices>
@@ -34,7 +36,14 @@
 					</AuxBusRefs>
 				</Bus>
 				<Bus Id="1372881427" Name="UiBus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus\UiBus" GUID="{2CE1566D-92AD-4C86-A97B-02E069A97F77}"/>
-				<Bus Id="1991350473" Name="StereoBus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus" GUID="{01DB4D2A-3A6E-4B6E-AD86-A91E1CD57BEB}"/>
+				<Bus Id="1991350473" Name="StereoBus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus" GUID="{01DB4D2A-3A6E-4B6E-AD86-A91E1CD57BEB}">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1473984667"/>
+							<PluginRef Id="2675251108"/>
+						</ShareSets>
+					</PluginRefs>
+				</Bus>
 				<Bus Id="2886307548" Name="MusicBus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus\MusicBus" GUID="{312533C2-F58C-4573-B394-B4A60FA6903B}"/>
 				<Bus Id="2894416467" Name="AmbBus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus\AmbBus" GUID="{F6B3D58E-CD74-4442-9F92-CEC55E4B6060}"/>
 				<Bus Id="3803692087" Name="Master Audio Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus" GUID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
@@ -82,6 +91,7 @@
 				<GameParameter Id="82424989" Name="rtpc_player_life" ObjectPath="\Game Parameters\Default Work Unit\rtpc_player_life" GUID="{1CC6F0C7-6126-4057-9B70-3C89F38C5F50}"/>
 				<GameParameter Id="88991926" Name="rtpc_master_bus" ObjectPath="\Game Parameters\Default Work Unit\Settings\BUS\rtpc_master_bus" GUID="{94154412-EE63-4EDD-B582-B922CD738ED6}"/>
 				<GameParameter Id="115866790" Name="rtpc_amb_bus" ObjectPath="\Game Parameters\Default Work Unit\Settings\BUS\rtpc_amb_bus" GUID="{A29E33E7-090C-4F92-B2A4-CF339B2E10FC}"/>
+				<GameParameter Id="285824163" Name="checkpoint_muted" ObjectPath="\Game Parameters\Default Work Unit\checkpoint_muted" GUID="{DA3752D6-74EA-48C9-95A1-46E1EA1F2BC2}"/>
 				<GameParameter Id="328674765" Name="rtpc_enemy_stunned" ObjectPath="\Game Parameters\Default Work Unit\rtpc_enemy_stunned" GUID="{9F1682C7-5950-4A17-9A5B-1AFD2226616F}"/>
 				<GameParameter Id="600133661" Name="rtpc_high_freq_filter" ObjectPath="\Game Parameters\Default Work Unit\rtpc_high_freq_filter" GUID="{63F62A41-A536-4987-9F56-EDAB260398B7}"/>
 				<GameParameter Id="765516766" Name="rtpc_player_airspeed" ObjectPath="\Game Parameters\Default Work Unit\rtpc_player_airspeed" GUID="{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}"/>
@@ -89,8 +99,10 @@
 				<GameParameter Id="876333639" Name="rtpc_tapestop" ObjectPath="\Game Parameters\Default Work Unit\rtpc_tapestop" GUID="{34AB8051-BDEC-4FCF-A5A6-D129BA29D38F}"/>
 				<GameParameter Id="1003354755" Name="rtpc_dash_volumefatigue" ObjectPath="\Game Parameters\Default Work Unit\rtpc_dash_volumefatigue" GUID="{4F31ADED-304B-4D56-9826-0239D7A73C99}"/>
 				<GameParameter Id="1010956302" Name="rtpc_builtin_distance" ObjectPath="\Game Parameters\Default Work Unit\rtpc_builtin_distance" GUID="{51E739EC-97B4-4E4C-A4B4-45C5A6AEF050}"/>
+				<GameParameter Id="1184756145" Name="rtpc_builtin_azimuth_angle" ObjectPath="\Game Parameters\Default Work Unit\rtpc_builtin_azimuth_angle" GUID="{9C016406-4E34-4C58-AB4E-877204F3F982}"/>
 				<GameParameter Id="1410332996" Name="rtpc_settings_slider" ObjectPath="\Game Parameters\Default Work Unit\rtpc_settings_slider" GUID="{CF91B134-4D3D-4381-A066-5A720C4CB494}"/>
 				<GameParameter Id="1580544546" Name="rtpc_ambiance_arena_attenuation" ObjectPath="\Game Parameters\Default Work Unit\rtpc_ambiance_arena_attenuation" GUID="{317D7F34-0FD2-4141-8088-6B66E709DE20}"/>
+				<GameParameter Id="2071505889" Name="meter_checkpoint" ObjectPath="\Game Parameters\Default Work Unit\meter_checkpoint" GUID="{653E5BF9-7F0A-4641-BEAD-1B077C9E090B}"/>
 				<GameParameter Id="2332098030" Name="rtpc_enemy_bus" ObjectPath="\Game Parameters\Default Work Unit\Settings\BUS\rtpc_enemy_bus" GUID="{7B1FB034-3E8E-48F8-B914-CB5786C31FF9}"/>
 				<GameParameter Id="2400834421" Name="rtpc_dominant_hand" ObjectPath="\Game Parameters\Default Work Unit\Settings\rtpc_dominant_hand" GUID="{54C0314F-1459-460E-B6E6-1CDAA6EDBE01}"/>
 				<GameParameter Id="2548911666" Name="rtpc_chaos_no_interpolation" ObjectPath="\Game Parameters\Default Work Unit\rtpc_chaos_no_interpolation" GUID="{32A00591-7D0F-46D4-86CC-E57C780551F1}"/>
@@ -108,6 +120,7 @@
 				<GameParameter Id="3432596327" Name="rtpc_music_bus" ObjectPath="\Game Parameters\Default Work Unit\Settings\BUS\rtpc_music_bus" GUID="{C084FC73-68C8-499E-96AC-E4DBE2F01DED}"/>
 				<GameParameter Id="3681822039" Name="rtpc_chaos_player" ObjectPath="\Game Parameters\Default Work Unit\rtpc_chaos_player" GUID="{BFE4D672-50A0-4F84-B21E-4DC11EBCCF9B}"/>
 				<GameParameter Id="3748487956" Name="rtpc_idle_pan_left_right" ObjectPath="\Game Parameters\Default Work Unit\rtpc_idle_pan_left_right" GUID="{64A95D7C-A689-43D3-8468-0FE53462F747}"/>
+				<GameParameter Id="4183863732" Name="rtpc_builtin_elevation" ObjectPath="\Game Parameters\Default Work Unit\rtpc_builtin_elevation" GUID="{CC6FB8B5-24CC-4814-BC40-7E3A07524CBE}"/>
 				<GameParameter Id="4219763636" Name="rtpc_lowhppulse_meter" ObjectPath="\Game Parameters\Default Work Unit\rtpc_lowhppulse_meter" GUID="{1BBA0A4A-0586-4101-979A-262C33FC36C7}"/>
 			</GameParameters>
 			<StateGroups>
@@ -138,6 +151,14 @@
 						<State Id="223416773" Name="offground" ObjectPath="\States\Default Work Unit\state_player\offground" GUID="{5BCDD2B7-0B9E-40FF-98EB-D2BA0BD6A7EB}"/>
 						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\state_player\None" GUID="{295C2E06-7201-4536-9163-407EA6F5757E}"/>
 						<State Id="1200033591" Name="onground" ObjectPath="\States\Default Work Unit\state_player\onground" GUID="{5ADF1174-9E07-490C-82F9-C5039AEC4132}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="4041781304" Name="state_waveindex" ObjectPath="\States\Default Work Unit\state_waveindex" GUID="{FDA92FED-921B-43CB-B4DD-55F67E4B4A0A}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\state_waveindex\None" GUID="{627FB185-9B60-4745-8435-F75E72427B48}"/>
+						<State Id="1517750921" Name="w1" ObjectPath="\States\Default Work Unit\state_waveindex\w1" GUID="{1324BD3A-98E2-41EC-B5DB-7F395F03F913}"/>
+						<State Id="1517750922" Name="w2" ObjectPath="\States\Default Work Unit\state_waveindex\w2" GUID="{3AC9FBFC-23AD-49DF-9438-7E3E2089CDFA}"/>
+						<State Id="1517750923" Name="w3" ObjectPath="\States\Default Work Unit\state_waveindex\w3" GUID="{79C37F27-D760-4C32-A0E1-F820E947362E}"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="4122948419" Name="state_combat" ObjectPath="\States\Default Work Unit\state_combat" GUID="{E2ED0219-9E42-4468-B342-0147362BCCBB}">
@@ -227,5 +248,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{4F6609A2-73A3-8BF0-7D9F-ABBD3A55DDF6}</FileHash>
+	<FileHash>{B43E950A-FDB0-2599-252B-4FCB7904F05A}</FileHash>
 </SoundBanksInfo>

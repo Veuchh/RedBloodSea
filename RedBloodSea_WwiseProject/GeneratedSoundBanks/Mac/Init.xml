@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{189D30F5-64A3-328E-CC40-32B4C9A7D5D7}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{AA2EE10F-B6CB-7A39-7732-598D8C132FCC}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -99,10 +99,11 @@
 				<GameParameter Id="876333639" Name="rtpc_tapestop" ObjectPath="\Game Parameters\Default Work Unit\rtpc_tapestop" GUID="{34AB8051-BDEC-4FCF-A5A6-D129BA29D38F}"/>
 				<GameParameter Id="1003354755" Name="rtpc_dash_volumefatigue" ObjectPath="\Game Parameters\Default Work Unit\rtpc_dash_volumefatigue" GUID="{4F31ADED-304B-4D56-9826-0239D7A73C99}"/>
 				<GameParameter Id="1010956302" Name="rtpc_builtin_distance" ObjectPath="\Game Parameters\Default Work Unit\rtpc_builtin_distance" GUID="{51E739EC-97B4-4E4C-A4B4-45C5A6AEF050}"/>
+				<GameParameter Id="1052815830" Name="rtpc_meter_sfx" ObjectPath="\Game Parameters\Default Work Unit\Meter\rtpc_meter_sfx" GUID="{612878B7-9133-405F-BC49-C2FDA83F7E32}"/>
 				<GameParameter Id="1184756145" Name="rtpc_builtin_azimuth_angle" ObjectPath="\Game Parameters\Default Work Unit\rtpc_builtin_azimuth_angle" GUID="{9C016406-4E34-4C58-AB4E-877204F3F982}"/>
 				<GameParameter Id="1410332996" Name="rtpc_settings_slider" ObjectPath="\Game Parameters\Default Work Unit\rtpc_settings_slider" GUID="{CF91B134-4D3D-4381-A066-5A720C4CB494}"/>
 				<GameParameter Id="1580544546" Name="rtpc_ambiance_arena_attenuation" ObjectPath="\Game Parameters\Default Work Unit\rtpc_ambiance_arena_attenuation" GUID="{317D7F34-0FD2-4141-8088-6B66E709DE20}"/>
-				<GameParameter Id="2071505889" Name="meter_checkpoint" ObjectPath="\Game Parameters\Default Work Unit\meter_checkpoint" GUID="{653E5BF9-7F0A-4641-BEAD-1B077C9E090B}"/>
+				<GameParameter Id="2011548031" Name="rtpc_meter_ui" ObjectPath="\Game Parameters\Default Work Unit\Meter\rtpc_meter_ui" GUID="{F059CDA2-AB62-466D-83AE-3422AC208500}"/>
 				<GameParameter Id="2332098030" Name="rtpc_enemy_bus" ObjectPath="\Game Parameters\Default Work Unit\Settings\BUS\rtpc_enemy_bus" GUID="{7B1FB034-3E8E-48F8-B914-CB5786C31FF9}"/>
 				<GameParameter Id="2400834421" Name="rtpc_dominant_hand" ObjectPath="\Game Parameters\Default Work Unit\Settings\rtpc_dominant_hand" GUID="{54C0314F-1459-460E-B6E6-1CDAA6EDBE01}"/>
 				<GameParameter Id="2548911666" Name="rtpc_chaos_no_interpolation" ObjectPath="\Game Parameters\Default Work Unit\rtpc_chaos_no_interpolation" GUID="{32A00591-7D0F-46D4-86CC-E57C780551F1}"/>
@@ -111,7 +112,6 @@
 				<GameParameter Id="2696648837" Name="rtpc_dash_leftright" ObjectPath="\Game Parameters\Default Work Unit\rtpc_dash_leftright" GUID="{7894A474-E5D3-4187-925F-19042540CC04}"/>
 				<GameParameter Id="2737403824" Name="rtpc_positioning_leftright" ObjectPath="\Game Parameters\Default Work Unit\rtpc_positioning_leftright" GUID="{C0867B0F-00CC-44F1-95F4-1370870636CA}"/>
 				<GameParameter Id="2860606227" Name="rtpc_highfreqfilter_off_on" ObjectPath="\Game Parameters\Default Work Unit\rtpc_highfreqfilter_off_on" GUID="{9D67A80A-4B5B-4616-A716-FC5EFCF47D77}"/>
-				<GameParameter Id="2969259856" Name="meter_sfx" ObjectPath="\Game Parameters\Default Work Unit\meter_sfx" GUID="{612878B7-9133-405F-BC49-C2FDA83F7E32}"/>
 				<GameParameter Id="3014524554" Name="rtpc_IsPlayerDead" ObjectPath="\Game Parameters\Default Work Unit\rtpc_IsPlayerDead" GUID="{93082E49-E80A-4A47-AC4C-2D7F096EDF12}"/>
 				<GameParameter Id="3067876527" Name="rtpc_sfx_bus" ObjectPath="\Game Parameters\Default Work Unit\Settings\BUS\rtpc_sfx_bus" GUID="{1A0CC5AF-DF3D-4C7B-9E41-61A8E28F74EB}"/>
 				<GameParameter Id="3100189233" Name="rtpc_thrust_volumefatigue" ObjectPath="\Game Parameters\Default Work Unit\rtpc_thrust_volumefatigue" GUID="{D1E2699C-7775-4081-B719-C34807CE526C}"/>
@@ -121,7 +121,8 @@
 				<GameParameter Id="3681822039" Name="rtpc_chaos_player" ObjectPath="\Game Parameters\Default Work Unit\rtpc_chaos_player" GUID="{BFE4D672-50A0-4F84-B21E-4DC11EBCCF9B}"/>
 				<GameParameter Id="3748487956" Name="rtpc_idle_pan_left_right" ObjectPath="\Game Parameters\Default Work Unit\rtpc_idle_pan_left_right" GUID="{64A95D7C-A689-43D3-8468-0FE53462F747}"/>
 				<GameParameter Id="4183863732" Name="rtpc_builtin_elevation" ObjectPath="\Game Parameters\Default Work Unit\rtpc_builtin_elevation" GUID="{CC6FB8B5-24CC-4814-BC40-7E3A07524CBE}"/>
-				<GameParameter Id="4219763636" Name="rtpc_lowhppulse_meter" ObjectPath="\Game Parameters\Default Work Unit\rtpc_lowhppulse_meter" GUID="{1BBA0A4A-0586-4101-979A-262C33FC36C7}"/>
+				<GameParameter Id="4219763636" Name="rtpc_lowhppulse_meter" ObjectPath="\Game Parameters\Default Work Unit\Meter\rtpc_lowhppulse_meter" GUID="{1BBA0A4A-0586-4101-979A-262C33FC36C7}"/>
+				<GameParameter Id="4255136647" Name="rtpc_meter_checkpoint" ObjectPath="\Game Parameters\Default Work Unit\Meter\rtpc_meter_checkpoint" GUID="{653E5BF9-7F0A-4641-BEAD-1B077C9E090B}"/>
 			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="459395562" Name="state_aim" ObjectPath="\States\Default Work Unit\state_aim" GUID="{B36EB626-1B96-4D45-9487-0F8FDC6A68DD}">
@@ -248,5 +249,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F848F9DC-99ED-8F3F-7568-FF8A0C1B275A}</FileHash>
+	<FileHash>{EED13E7E-43F2-A602-841C-AC570AC4074C}</FileHash>
 </SoundBanksInfo>

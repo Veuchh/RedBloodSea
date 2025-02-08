@@ -18,7 +18,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{69F6CA8A-A9E5-DB58-F8B5-2423DAFF69E3}",
+    "Hash": "{F6F8D464-E7F5-2047-DB13-7D381BE3B224}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -330,6 +330,12 @@
       "GUID": "{51E739EC-97B4-4E4C-A4B4-45C5A6AEF050}"
      },
      {
+      "Id": "1052815830",
+      "Name": "rtpc_meter_sfx",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Meter\\rtpc_meter_sfx",
+      "GUID": "{612878B7-9133-405F-BC49-C2FDA83F7E32}"
+     },
+     {
       "Id": "1184756145",
       "Name": "rtpc_builtin_azimuth_angle",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_builtin_azimuth_angle",
@@ -348,10 +354,10 @@
       "GUID": "{317D7F34-0FD2-4141-8088-6B66E709DE20}"
      },
      {
-      "Id": "2071505889",
-      "Name": "meter_checkpoint",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\meter_checkpoint",
-      "GUID": "{653E5BF9-7F0A-4641-BEAD-1B077C9E090B}"
+      "Id": "2011548031",
+      "Name": "rtpc_meter_ui",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Meter\\rtpc_meter_ui",
+      "GUID": "{F059CDA2-AB62-466D-83AE-3422AC208500}"
      },
      {
       "Id": "2332098030",
@@ -400,12 +406,6 @@
       "Name": "rtpc_highfreqfilter_off_on",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_highfreqfilter_off_on",
       "GUID": "{9D67A80A-4B5B-4616-A716-FC5EFCF47D77}"
-     },
-     {
-      "Id": "2969259856",
-      "Name": "meter_sfx",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\meter_sfx",
-      "GUID": "{612878B7-9133-405F-BC49-C2FDA83F7E32}"
      },
      {
       "Id": "3014524554",
@@ -464,8 +464,14 @@
      {
       "Id": "4219763636",
       "Name": "rtpc_lowhppulse_meter",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_lowhppulse_meter",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Meter\\rtpc_lowhppulse_meter",
       "GUID": "{1BBA0A4A-0586-4101-979A-262C33FC36C7}"
+     },
+     {
+      "Id": "4255136647",
+      "Name": "rtpc_meter_checkpoint",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Meter\\rtpc_meter_checkpoint",
+      "GUID": "{653E5BF9-7F0A-4641-BEAD-1B077C9E090B}"
      }
     ],
     "StateGroups": [
@@ -916,7 +922,7 @@
     "Type": "User",
     "GUID": "{1D2A39F0-30EC-4374-B60C-7E5FD97B8C24}",
     "Language": "SFX",
-    "Hash": "{A29E593C-61AE-4E37-F98E-AEB19053D136}",
+    "Hash": "{A32E8305-FA0F-91CA-CA0E-7C5713526C67}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\RBS_MAIN_SoundBank",
     "ShortName": "RBS_MAIN_SoundBank",
     "Path": "RBS_MAIN_SoundBank.bnk",
@@ -1545,6 +1551,14 @@
       "CachePath": "SFX/Amb LC CONTINUOUS TONAL v1 v1_D8A0D580.wem"
      },
      {
+      "Id": "120305620",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "UI Timer SEQ v1.wav",
+      "CachePath": "SFX/UI Timer SEQ v1_CA1F93DA.wem"
+     },
+     {
       "Id": "125901720",
       "Language": "SFX",
       "Streaming": "true",
@@ -1579,6 +1593,14 @@
       "ShortName": "RBS_SFX_PlayerFS GrassWalk 14R.wav",
       "Path": "Media/141235594.wem",
       "CachePath": "SFX/RBS_SFX_PlayerFS GrassWalk 14R_EDCD4836.wem"
+     },
+     {
+      "Id": "141461397",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "UI Timer SEQ v1.wav",
+      "CachePath": "SFX/UI Timer SEQ v1_1D6F6EC9.wem"
      },
      {
       "Id": "148524242",
@@ -1629,6 +1651,14 @@
       "Location": "Memory",
       "ShortName": "RBS_SFX_IdleStateAgressive.wav",
       "CachePath": "SFX/RBS_SFX_IdleStateAgressive_EDCD4836.wem"
+     },
+     {
+      "Id": "161587382",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "UI Timer SEQ v1.wav",
+      "CachePath": "SFX/UI Timer SEQ v1_E1469DFE.wem"
      },
      {
       "Id": "161631131",
@@ -2043,6 +2073,14 @@
       "CachePath": "SFX/RBS_SFX_DashGeneric 06_058751D6.wem"
      },
      {
+      "Id": "295148062",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "UI Timer SEQ v1.wav",
+      "CachePath": "SFX/UI Timer SEQ v1_60498BC3.wem"
+     },
+     {
       "Id": "295667460",
       "Language": "SFX",
       "Streaming": "false",
@@ -2324,6 +2362,14 @@
       "CachePath": "SFX/RBS_SFX_PlayerFS GravelRun 09R_EDCD4836.wem"
      },
      {
+      "Id": "357809716",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "UI Timer SEQ v1.wav",
+      "CachePath": "SFX/UI Timer SEQ v1_B022EA49.wem"
+     },
+     {
       "Id": "358111705",
       "Language": "SFX",
       "Streaming": "false",
@@ -2563,7 +2609,15 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "BasaltGate idle v1.wav",
-      "CachePath": "SFX/BasaltGate idle v1_EDCD4836.wem"
+      "CachePath": "SFX/BasaltGate idle v1_D8A0D580.wem"
+     },
+     {
+      "Id": "440220977",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "UI Timer SEQ v1.wav",
+      "CachePath": "SFX/UI Timer SEQ v1_68FC4710.wem"
      },
      {
       "Id": "444028624",
@@ -3012,6 +3066,14 @@
       "CachePath": "SFX/RBS_SFX_PlayerFS SkidConcrete 01_EDCD4836.wem"
      },
      {
+      "Id": "557661348",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "UI Timer SEQ v1.wav",
+      "CachePath": "SFX/UI Timer SEQ v1_628E3B49.wem"
+     },
+     {
       "Id": "559503601",
       "Language": "SFX",
       "Streaming": "true",
@@ -3315,6 +3377,14 @@
       "ShortName": "RBS_SFX_PlayerFS RandLayerMetal 03.wav",
       "Path": "Media/637407711.wem",
       "CachePath": "SFX/RBS_SFX_PlayerFS RandLayerMetal 03_EDCD4836.wem"
+     },
+     {
+      "Id": "637619383",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "UI Timer SEQ v1.wav",
+      "CachePath": "SFX/UI Timer SEQ v1_DE7B8D0E.wem"
      },
      {
       "Id": "637981581",
@@ -3751,6 +3821,14 @@
       "Location": "Memory",
       "ShortName": "RBS_SFX_SlashHitGeneric 02.wav",
       "CachePath": "SFX/RBS_SFX_SlashHitGeneric 02_B0E56DBB.wem"
+     },
+     {
+      "Id": "752022002",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "UI Timer SEQ v1.wav",
+      "CachePath": "SFX/UI Timer SEQ v1_B9B5319F.wem"
      },
      {
       "Id": "755688688",
@@ -4345,7 +4423,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "NewObjectives v1.wav",
-      "CachePath": "SFX/NewObjectives v1_DAD65F9F.wem"
+      "CachePath": "SFX/NewObjectives v1_4F42D3B3.wem"
      },
      {
       "Id": "909626541",
@@ -4715,6 +4793,14 @@
       "CachePath": "SFX/RBS_SFX_IdleStateFleeing_EDCD4836.wem"
      },
      {
+      "Id": "989964154",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "UI Timer SEQ v1.wav",
+      "CachePath": "SFX/UI Timer SEQ v1_8A61B30C.wem"
+     },
+     {
       "Id": "990288326",
       "Language": "SFX",
       "Streaming": "true",
@@ -4929,6 +5015,14 @@
       "CachePath": "SFX/amb HC CONTINUOUS EARTHQUAKE v1_D8A0D580.wem"
      },
      {
+      "Id": "1032671048",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "UI Timer SEQ v1.wav",
+      "CachePath": "SFX/UI Timer SEQ v1_2DADCCB2.wem"
+     },
+     {
       "Id": "1036319810",
       "Language": "SFX",
       "Streaming": "false",
@@ -5100,6 +5194,14 @@
        "LibId": "6881283"
       },
       {
+       "Id": "485565482",
+       "Name": "LowHPVerb",
+       "ObjectPath": "\\Effects\\Default Work Unit\\LowHPVerb",
+       "GUID": "{90093482-EA31-4A5B-A30B-483A19EC8012}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      },
+      {
        "Id": "802114085",
        "Name": "Hubverb",
        "ObjectPath": "\\Effects\\Default Work Unit\\Hubverb",
@@ -5116,12 +5218,28 @@
        "LibId": "8454147"
       },
       {
+       "Id": "1871679725",
+       "Name": "Meter_UI",
+       "ObjectPath": "\\Effects\\Default Work Unit\\Meter_UI",
+       "GUID": "{5F72FEAD-42C3-4457-AACE-5923476DC846}",
+       "LibName": "Wwise Meter",
+       "LibId": "8454147"
+      },
+      {
        "Id": "1990128658",
        "Name": "Room_Medium",
        "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
        "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
        "LibName": "Wwise RoomVerb",
        "LibId": "7733251"
+      },
+      {
+       "Id": "2068822744",
+       "Name": "thrust_eq",
+       "ObjectPath": "\\Effects\\Default Work Unit\\thrust_eq",
+       "GUID": "{060A2B3C-D651-4766-83A1-496F76583E3E}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
       },
       {
        "Id": "2465479620",
@@ -5138,14 +5256,6 @@
        "GUID": "{AEB3F175-958B-45F2-A4C2-3FBD4F456568}",
        "LibName": "Wwise RoomVerb",
        "LibId": "7733251"
-      },
-      {
-       "Id": "3377506079",
-       "Name": "gamepaused_echo",
-       "ObjectPath": "\\Effects\\Default Work Unit\\gamepaused_echo",
-       "GUID": "{BEA08A9F-B5FC-4CD3-9B57-79CB7169C12B}",
-       "LibName": "Wwise Delay",
-       "LibId": "6946819"
       }
      ]
     },
@@ -5155,10 +5265,30 @@
       "Name": "Mus_SetStatusBetweenWave",
       "ObjectPath": "\\Events\\Default Work Unit\\Adaptative Music\\Mus_SetStatusBetweenWave",
       "GUID": "{9D2DC23C-B988-449A-A913-3CDEBA3EC6D4}",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0",
+      "DurationMin": "3.546891",
+      "DurationMax": "3.546891",
+      "MediaRefs": [
+       {
+        "Id": "307436053"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1871679725"
+        }
+       ]
+      },
+      "ActionSetState": [
+       {
+        "GroupId": "4122948419",
+        "Id": "2373432776",
+        "Name": "betweenwave",
+        "ObjectPath": "\\States\\Default Work Unit\\state_combat\\betweenwave",
+        "GUID": "{FF2C5CA1-53C4-423E-AF83-8785851A7F1B}"
+       }
+      ],
       "ActionSetSwitch": [
        {
         "GroupId": "226573501",
@@ -5178,6 +5308,15 @@
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0",
+      "ActionSetState": [
+       {
+        "GroupId": "4122948419",
+        "Id": "2764240573",
+        "Name": "combat",
+        "ObjectPath": "\\States\\Default Work Unit\\state_combat\\combat",
+        "GUID": "{76879D96-6B91-483E-85DC-B7B10E438F7F}"
+       }
+      ],
       "ActionSetSwitch": [
        {
         "GroupId": "226573501",
@@ -5196,17 +5335,37 @@
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
       "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMax": "0",
+      "ActionSetState": [
+       {
+        "GroupId": "4122948419",
+        "Id": "1125500713",
+        "Name": "intro",
+        "ObjectPath": "\\States\\Default Work Unit\\state_combat\\intro",
+        "GUID": "{AAB602C5-F1F4-4844-B273-85D5A38E9869}"
+       }
+      ]
      },
      {
       "Id": "3278112617",
       "Name": "Mus_SetWave1",
       "ObjectPath": "\\Events\\Default Work Unit\\Adaptative Music\\Mus_SetWave1",
       "GUID": "{60B9B26F-683B-4C59-87B5-68435A1F6B05}",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0",
+      "DurationMin": "4.638941",
+      "DurationMax": "4.638941",
+      "MediaRefs": [
+       {
+        "Id": "908347439"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1871679725"
+        }
+       ]
+      },
       "ActionSetState": [
        {
         "GroupId": "4041781304",
@@ -5231,10 +5390,21 @@
       "Name": "Mus_SetWave2",
       "ObjectPath": "\\Events\\Default Work Unit\\Adaptative Music\\Mus_SetWave2",
       "GUID": "{0E286E75-B244-414B-B467-19645786EBF2}",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0",
+      "DurationMin": "4.638941",
+      "DurationMax": "4.638941",
+      "MediaRefs": [
+       {
+        "Id": "908347439"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1871679725"
+        }
+       ]
+      },
       "ActionSetState": [
        {
         "GroupId": "4041781304",
@@ -5259,10 +5429,21 @@
       "Name": "Mus_SetWave3",
       "ObjectPath": "\\Events\\Default Work Unit\\Adaptative Music\\Mus_SetWave3",
       "GUID": "{762A65BC-5AAB-47A7-B53A-9A52C2E9D79C}",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0",
+      "DurationMin": "4.638941",
+      "DurationMax": "4.638941",
+      "MediaRefs": [
+       {
+        "Id": "908347439"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1871679725"
+        }
+       ]
+      },
       "ActionSetState": [
        {
         "GroupId": "4041781304",
@@ -5337,6 +5518,7 @@
       "Name": "Play_BasaltGate_Close",
       "ObjectPath": "\\Events\\Default Work Unit\\World Environments\\Play_BasaltGate_Close",
       "GUID": "{B0E60573-43B1-44EC-8B6D-74BE266FDCB9}",
+      "MaxAttenuation": "1500",
       "DurationType": "OneShot",
       "DurationMin": "2.1641512",
       "DurationMax": "2.1641512",
@@ -5344,16 +5526,22 @@
        {
         "Id": "177033337"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "485565482"
+        }
+       ]
+      }
      },
      {
       "Id": "329153985",
       "Name": "Play_BasaltGate_Idle",
       "ObjectPath": "\\Events\\Default Work Unit\\World Environments\\Play_BasaltGate_Idle",
       "GUID": "{DD648981-8216-4BAF-BE24-7091F5CC0728}",
-      "DurationType": "OneShot",
-      "DurationMin": "7.925083",
-      "DurationMax": "7.925083",
+      "MaxAttenuation": "2000",
+      "DurationType": "Infinite",
       "MediaRefs": [
        {
         "Id": "435137282"
@@ -5365,6 +5553,7 @@
       "Name": "Play_BasaltGate_Open",
       "ObjectPath": "\\Events\\Default Work Unit\\World Environments\\Play_BasaltGate_Open",
       "GUID": "{41F731B2-57F0-4FF6-B785-74B93865EDAC}",
+      "MaxAttenuation": "1500",
       "DurationType": "OneShot",
       "DurationMin": "3.1115",
       "DurationMax": "3.1115",
@@ -5372,7 +5561,14 @@
        {
         "Id": "224215526"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "485565482"
+        }
+       ]
+      }
      },
      {
       "Id": "2538869711",
@@ -5472,14 +5668,21 @@
        {
         "Id": "1061678860"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "2068822744"
+        }
+       ]
+      }
      },
      {
       "Id": "1871481675",
       "Name": "Play_CheckpointCrossed",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_CheckpointCrossed",
       "GUID": "{6DCA03B4-383F-4A8A-BFD8-67C23ECF157F}",
-      "MaxAttenuation": "2500",
+      "MaxAttenuation": "2000",
       "DurationType": "OneShot",
       "DurationMin": "4.633733",
       "DurationMax": "4.633733",
@@ -5494,7 +5697,7 @@
       "Name": "Play_CheckpointLoop",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_CheckpointLoop",
       "GUID": "{7D24E9C8-3326-4183-B4F7-1659E53104CD}",
-      "MaxAttenuation": "2500",
+      "MaxAttenuation": "2000",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -5520,7 +5723,14 @@
        {
         "Id": "893848309"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1871679725"
+        }
+       ]
+      }
      },
      {
       "Id": "444568226",
@@ -5528,8 +5738,8 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Play_CrosshairLink",
       "GUID": "{09B4022D-8DF9-4281-BA4A-A53A74D55AA4}",
       "DurationType": "OneShot",
-      "DurationMin": "0.19311137",
-      "DurationMax": "0.4922654",
+      "DurationMin": "0.22701168",
+      "DurationMax": "0.5769261",
       "MediaRefs": [
        {
         "Id": "101693951"
@@ -5549,7 +5759,14 @@
        {
         "Id": "946743475"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1871679725"
+        }
+       ]
+      }
      },
      {
       "Id": "1423098094",
@@ -5691,7 +5908,14 @@
        {
         "Id": "797804231"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1871679725"
+        }
+       ]
+      }
      },
      {
       "Id": "620116029",
@@ -5708,7 +5932,14 @@
        {
         "Id": "1040154978"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1871679725"
+        }
+       ]
+      }
      },
      {
       "Id": "1436212620",
@@ -5722,7 +5953,14 @@
        {
         "Id": "770724338"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1871679725"
+        }
+       ]
+      }
      },
      {
       "Id": "2582605112",
@@ -5971,7 +6209,7 @@
       "Name": "Play_EnemyProjectileBreak",
       "ObjectPath": "\\Events\\Default Work Unit\\Ai Behavior\\Play_EnemyProjectileBreak",
       "GUID": "{6EEDA18E-B07A-4998-B8CD-01CC1C25ADB5}",
-      "MaxAttenuation": "1000",
+      "MaxAttenuation": "650",
       "DurationType": "OneShot",
       "DurationMin": "1.532304",
       "DurationMax": "1.9305822",
@@ -6063,7 +6301,7 @@
       "Name": "Play_EnemyProjectileHitEnviro",
       "ObjectPath": "\\Events\\Default Work Unit\\Ai Behavior\\Play_EnemyProjectileHitEnviro",
       "GUID": "{69D3EB20-2FA0-4067-834A-B617223CB932}",
-      "MaxAttenuation": "1000",
+      "MaxAttenuation": "650",
       "DurationType": "OneShot",
       "DurationMin": "0.78902125",
       "DurationMax": "1.0250002",
@@ -6278,7 +6516,7 @@
       "PluginRefs": {
        "ShareSets": [
         {
-         "Id": "3377506079"
+         "Id": "1871679725"
         }
        ]
       }
@@ -6640,7 +6878,14 @@
        {
         "Id": "54403930"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1871679725"
+        }
+       ]
+      }
      },
      {
       "Id": "149592781",
@@ -6941,7 +7186,14 @@
        {
         "Id": "308564017"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1871679725"
+        }
+       ]
+      }
      },
      {
       "Id": "1596777122",
@@ -7318,13 +7570,20 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Play_ObjectiveDoX",
       "GUID": "{5A196830-D945-4170-8E78-B07C99E51764}",
       "DurationType": "OneShot",
-      "DurationMin": "4.543139",
-      "DurationMax": "4.543139",
+      "DurationMin": "4.638941",
+      "DurationMax": "4.638941",
       "MediaRefs": [
        {
         "Id": "908347439"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1871679725"
+        }
+       ]
+      }
      },
      {
       "Id": "3810245384",
@@ -7338,7 +7597,14 @@
        {
         "Id": "307436053"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1871679725"
+        }
+       ]
+      }
      },
      {
       "Id": "3343591590",
@@ -7373,7 +7639,14 @@
        {
         "Id": "1070151447"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1871679725"
+        }
+       ]
+      }
      },
      {
       "Id": "915393464",
@@ -7387,7 +7660,14 @@
        {
         "Id": "767752142"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1871679725"
+        }
+       ]
+      }
      },
      {
       "Id": "2196757205",
@@ -7419,7 +7699,14 @@
        {
         "Id": "939950839"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1871679725"
+        }
+       ]
+      }
      },
      {
       "Id": "1520799909",
@@ -7433,7 +7720,14 @@
        {
         "Id": "329598648"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1871679725"
+        }
+       ]
+      }
      },
      {
       "Id": "2059179699",
@@ -8292,10 +8586,11 @@
       "Name": "Play_PlayerRespawn",
       "ObjectPath": "\\Events\\Default Work Unit\\Player Abilities\\Play_PlayerRespawn",
       "GUID": "{7869A732-3A1F-4314-B872-8E58B1D9ABAC}",
-      "DurationType": "OneShot",
-      "DurationMin": "5.4250894",
-      "DurationMax": "5.4250894",
+      "DurationType": "Infinite",
       "MediaRefs": [
+       {
+        "Id": "510906830"
+       },
        {
         "Id": "880866166"
        }
@@ -8425,7 +8720,14 @@
          {
           "Id": "311620096"
          }
-        ]
+        ],
+        "PluginRefs": {
+         "ShareSets": [
+          {
+           "Id": "1871679725"
+          }
+         ]
+        }
        },
        {
         "SwitchValue": {
@@ -8439,7 +8741,14 @@
          {
           "Id": "55809004"
          }
-        ]
+        ],
+        "PluginRefs": {
+         "ShareSets": [
+          {
+           "Id": "1871679725"
+          }
+         ]
+        }
        }
       ]
      },
@@ -8549,7 +8858,14 @@
        {
         "Id": "927100978"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1871679725"
+        }
+       ]
+      }
      },
      {
       "Id": "1534840043",
@@ -8647,8 +8963,50 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Play_TimerSeq",
       "GUID": "{688DE30A-4A9D-4A75-AE3C-1896A144315F}",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "0.8194106",
+      "DurationMax": "1.0573624",
+      "MediaRefs": [
+       {
+        "Id": "120305620"
+       },
+       {
+        "Id": "141461397"
+       },
+       {
+        "Id": "161587382"
+       },
+       {
+        "Id": "295148062"
+       },
+       {
+        "Id": "357809716"
+       },
+       {
+        "Id": "440220977"
+       },
+       {
+        "Id": "557661348"
+       },
+       {
+        "Id": "637619383"
+       },
+       {
+        "Id": "752022002"
+       },
+       {
+        "Id": "989964154"
+       },
+       {
+        "Id": "1032671048"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1871679725"
+        }
+       ]
+      }
      },
      {
       "Id": "3575519807",
@@ -8813,6 +9171,26 @@
       "Name": "Stop_Amb",
       "ObjectPath": "\\Events\\Default Work Unit\\World Environments\\Stop_Amb",
       "GUID": "{EAB0E7E3-53C1-4F85-BD60-86AE3DF8252E}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "3987504179",
+      "Name": "Stop_BasaltGate_Idle",
+      "ObjectPath": "\\Events\\Default Work Unit\\World Environments\\Stop_BasaltGate_Idle",
+      "GUID": "{49780CB7-891E-4DFF-A964-1F9035E1231E}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "2371960287",
+      "Name": "Stop_IdleFPS",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Stop_IdleFPS",
+      "GUID": "{6887657A-6E70-45F2-B1B7-3CC566AFB8C4}",
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
       "DurationMin": "0",
@@ -9286,6 +9664,6 @@
     ]
    }
   ],
-  "FileHash": "{36BF11CE-D126-4141-FF03-BB3F90AB0287}"
+  "FileHash": "{B0908226-FA7B-9738-2EB8-EA31048730BA}"
  }
 }

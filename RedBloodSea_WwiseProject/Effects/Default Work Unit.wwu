@@ -138,15 +138,20 @@
 				</Effect>
 				<Effect Name="LowHPVerb" ID="{90093482-EA31-4A5B-A30B-483A19EC8012}" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
 					<PropertyList>
-						<Property Name="DecayTime" Type="Real32" Value="10"/>
+						<Property Name="DecayTime" Type="Real32" Value="8"/>
 						<Property Name="Density" Type="Real32" Value="100"/>
 						<Property Name="Diffusion" Type="Real32" Value="96"/>
+						<Property Name="DryLevel" Type="Real32" Value="-0.3"/>
 						<Property Name="ERLevel" Type="Real32" Value="-9"/>
 						<Property Name="ERPattern" Type="int32" Value="11"/>
 						<Property Name="EnableEarlyReflections" Type="bool" Value="False"/>
-						<Property Name="HFDamping" Type="Real32" Value="8.65"/>
+						<Property Name="EnableToneControls" Type="bool" Value="True"/>
+						<Property Name="Filter3Freq" Type="Real32" Value="410"/>
+						<Property Name="Filter3Gain" Type="Real32" Value="-11"/>
+						<Property Name="HFDamping" Type="Real32" Value="10"/>
 						<Property Name="PreDelay" Type="Real32" Value="0"/>
-						<Property Name="ReverbLevel" Type="Real32" Value="-3"/>
+						<Property Name="Quality" Type="int32" Value="16"/>
+						<Property Name="ReverbLevel" Type="Real32" Value="-21"/>
 						<Property Name="RoomShape" Type="Real32" Value="29"/>
 						<Property Name="RoomSize" Type="Real32" Value="32"/>
 					</PropertyList>
@@ -202,7 +207,24 @@
 						<Property Name="ReleaseTime" Type="Real32" Value="0.15"/>
 					</PropertyList>
 					<PluginData>
-	<GameParameter Name="meter_checkpoint" ID="{653E5BF9-7F0A-4641-BEAD-1B077C9E090B}"/>
+	<GameParameter Name="rtpc_meter_checkpoint" ID="{653E5BF9-7F0A-4641-BEAD-1B077C9E090B}"/>
+</PluginData>
+				</Effect>
+				<Effect Name="thrust_eq" ID="{060A2B3C-D651-4766-83A1-496F76583E3E}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+					<PropertyList>
+						<Property Name="FrequencyBand3" Type="Real32" Value="9650"/>
+						<Property Name="GainBand3" Type="Real32" Value="-5"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="Meter_UI" ID="{5F72FEAD-42C3-4457-AACE-5923476DC846}" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+					<PropertyList>
+						<Property Name="AttackTime" Type="Real32" Value="0.01"/>
+						<Property Name="Hold" Type="Real32" Value="0.1"/>
+						<Property Name="Max" Type="Real32" Value="-15"/>
+						<Property Name="ReleaseTime" Type="Real32" Value="0.25"/>
+					</PropertyList>
+					<PluginData>
+	<GameParameter Name="rtpc_meter_ui" ID="{F059CDA2-AB62-466D-83AE-3422AC208500}"/>
 </PluginData>
 				</Effect>
 			</ChildrenList>

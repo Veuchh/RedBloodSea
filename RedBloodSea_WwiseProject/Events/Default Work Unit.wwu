@@ -395,6 +395,17 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{EA993E35-5F04-4144-A2FF-FA390884FE75}" ShortID="905417339">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="IdleHC v1" ID="{495FE2E1-88EA-4229-BD70-F7B0849FA364}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 								<Action Name="" ID="{70C52318-01FE-4B8C-B1BD-7FF526A136CC}" ShortID="825909072">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="39"/>
@@ -417,6 +428,42 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{02CFFE54-9582-46E4-8B32-5C4B1474455E}" ShortID="1056769501">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BasaltGate close v1" ID="{79AEBB70-EA25-43B5-ACEE-CC3889F5CBE7}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{6E04D3F7-BEF4-4D24-8ADC-556C293508F8}" ShortID="31596212">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BasaltGate idle v1" ID="{57BE5F14-D440-4DD1-A284-7304FC7F2ACB}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{39971458-6836-4A67-B36E-C254859E1335}" ShortID="57279762">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BasaltGate open v1" ID="{68A44275-41E7-4D70-8D6C-5B6F8EEB8543}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Play_PlayerDeath" ID="{CD3CCEF3-241D-4F69-8512-A342342148B8}">
@@ -433,10 +480,58 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{8D35BB22-3FEF-4836-8468-A480D3936DD3}" ShortID="492255737">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="IdleHC v1" ID="{495FE2E1-88EA-4229-BD70-F7B0849FA364}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 								<Action Name="" ID="{3E8AF2E9-BBFA-4B10-9AF6-8F36CAD73D09}" ShortID="149037528">
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="PlayerDeath" ID="{9C0EF89E-A0B2-4E53-BCA1-64AF94CF9AC2}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{2F946C1F-2E8C-40EE-A1AA-089F78F690EA}" ShortID="446618554">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BasaltGate close v1" ID="{79AEBB70-EA25-43B5-ACEE-CC3889F5CBE7}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{9AE71AD6-79C4-4696-B260-BA6275A6B56D}" ShortID="972100463">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BasaltGate idle v1" ID="{57BE5F14-D440-4DD1-A284-7304FC7F2ACB}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{CC060616-41BE-45E2-93E8-922014B4AB09}" ShortID="399443512">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BasaltGate open v1" ID="{68A44275-41E7-4D70-8D6C-5B6F8EEB8543}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -829,6 +924,21 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="LowHPPulse" ID="{2E9B3D88-CD9D-4441-A115-9E464EF3B4A9}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_IdleFPS" ID="{6887657A-6E70-45F2-B1B7-3CC566AFB8C4}">
+							<ChildrenList>
+								<Action Name="" ID="{1E274A22-CD50-44B8-9275-BB5F048CB30F}" ShortID="285242014">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="IdleHC v1" ID="{495FE2E1-88EA-4229-BD70-F7B0849FA364}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -1664,6 +1774,18 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{F7582168-32E9-494D-AC1D-6116950D2937}" ShortID="932646401">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="checkpoint_muted" ID="{DA3752D6-74EA-48C9-95A1-46E1EA1F2BC2}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Mus_SetWave1" ID="{60B9B26F-683B-4C59-87B5-68435A1F6B05}">
@@ -1685,6 +1807,25 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="w1" ID="{1324BD3A-98E2-41EC-B5DB-7F395F03F913}" WorkUnitID="{C595D72B-1CEC-44D9-8102-4C94A354BC93}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{F3624EC9-2316-43B1-B532-ADC6D9D81A8B}" ShortID="149100238">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="checkpoint_muted" ID="{DA3752D6-74EA-48C9-95A1-46E1EA1F2BC2}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{4E3C3BCD-55B4-4A63-BF70-6BA6543777E7}" ShortID="757522339">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ObjectiveDoX" ID="{EAC561F7-D292-401D-BE3C-81C2805762BA}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -1712,6 +1853,13 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{11165361-024B-459F-8FBB-3BAC9C4B9EB1}" ShortID="515846070">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ObjectiveDoX" ID="{EAC561F7-D292-401D-BE3C-81C2805762BA}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Mus_SetWave3" ID="{762A65BC-5AAB-47A7-B53A-9A52C2E9D79C}">
@@ -1736,6 +1884,25 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{5802C3CA-EEF4-4B4F-99BA-2ACD99509C29}" ShortID="241068579">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="checkpoint_muted" ID="{DA3752D6-74EA-48C9-95A1-46E1EA1F2BC2}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{A6005764-6FEE-4050-A907-9EF384640DD0}" ShortID="99171973">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ObjectiveDoX" ID="{EAC561F7-D292-401D-BE3C-81C2805762BA}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Mus_SetStatusBetweenWave" ID="{9D2DC23C-B988-449A-A913-3CDEBA3EC6D4}">
@@ -1750,9 +1917,62 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{6E03125E-46F2-4C0D-A6D2-B0688C0F1769}" ShortID="471001077">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ObjectiveExplore" ID="{C6DCB91E-FB6E-42BE-A2CA-2622CDBB0E9C}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{40EE66AB-3DDB-471F-9CA0-18084C67574B}" ShortID="1059598996">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="betweenwave" ID="{FF2C5CA1-53C4-423E-AF83-8785851A7F1B}" WorkUnitID="{C595D72B-1CEC-44D9-8102-4C94A354BC93}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{05E2801D-EDA6-487F-90F9-DB953FC89B8F}" ShortID="1003290607">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="42"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="TimerSeq" ID="{118E457B-041F-4840-A4CA-35839BA2B0E0}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Mus_SetStatusIntro" ID="{BC782983-2C7F-4CFF-A69B-2EAA2777C369}"/>
+						<Event Name="Mus_SetStatusIntro" ID="{BC782983-2C7F-4CFF-A69B-2EAA2777C369}">
+							<ChildrenList>
+								<Action Name="" ID="{0B8BC170-7482-4481-BCD4-0C7A091D7CC3}" ShortID="355990168">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="checkpoint_muted" ID="{DA3752D6-74EA-48C9-95A1-46E1EA1F2BC2}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{03374C2D-472C-4E3B-BF62-2DFF933CC717}" ShortID="99439640">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="intro" ID="{AAB602C5-F1F4-4844-B273-85D5A38E9869}" WorkUnitID="{C595D72B-1CEC-44D9-8102-4C94A354BC93}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Mus_SetStatusCombat" ID="{788E3C13-EE1B-4068-9892-47E1960DF432}">
 							<ChildrenList>
 								<Action Name="" ID="{858A5346-7FD8-4E9A-A529-91BA78160419}" ShortID="653053830">
@@ -1773,6 +1993,16 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="checkpoint_muted" ID="{DA3752D6-74EA-48C9-95A1-46E1EA1F2BC2}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{C03C5D2A-E1AE-4F84-831F-3F28BE879991}" ShortID="368697760">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="combat" ID="{76879D96-6B91-483E-85DC-B7B10E438F7F}" WorkUnitID="{C595D72B-1CEC-44D9-8102-4C94A354BC93}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -1905,6 +2135,20 @@
 						<Event Name="Play_BasaltGate_Idle" ID="{DD648981-8216-4BAF-BE24-7091F5CC0728}">
 							<ChildrenList>
 								<Action Name="" ID="{DDF9F986-D4EB-452C-846A-D57B9A59617A}" ShortID="100768064">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BasaltGate idle v1" ID="{57BE5F14-D440-4DD1-A284-7304FC7F2ACB}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_BasaltGate_Idle" ID="{49780CB7-891E-4DFF-A964-1F9035E1231E}">
+							<ChildrenList>
+								<Action Name="" ID="{66C48B04-183D-4EB6-829F-2E97499FB51E}" ShortID="58899408">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="BasaltGate idle v1" ID="{57BE5F14-D440-4DD1-A284-7304FC7F2ACB}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>

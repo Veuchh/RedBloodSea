@@ -47,12 +47,13 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	115866790	rtpc_amb_bus			\Default Work Unit\Settings\BUS\rtpc_amb_bus	
 	600133661	rtpc_high_freq_filter			\Default Work Unit\rtpc_high_freq_filter	
 	876333639	rtpc_tapestop			\Default Work Unit\rtpc_tapestop	
+	1052815830	rtpc_meter_sfx			\Default Work Unit\Meter\rtpc_meter_sfx	
+	2011548031	rtpc_meter_ui			\Default Work Unit\Meter\rtpc_meter_ui	
 	2860606227	rtpc_highfreqfilter_off_on			\Default Work Unit\rtpc_highfreqfilter_off_on	
-	2969259856	meter_sfx			\Default Work Unit\meter_sfx	
 	3014524554	rtpc_IsPlayerDead			\Default Work Unit\rtpc_IsPlayerDead	
 	3067876527	rtpc_sfx_bus			\Default Work Unit\Settings\BUS\rtpc_sfx_bus	
 	3432596327	rtpc_music_bus			\Default Work Unit\Settings\BUS\rtpc_music_bus	
-	4219763636	rtpc_lowhppulse_meter			\Default Work Unit\rtpc_lowhppulse_meter	
+	4219763636	rtpc_lowhppulse_meter			\Default Work Unit\Meter\rtpc_lowhppulse_meter	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	393239870	SFX			\Default Work Unit\Master Audio Bus\StereoBus\SFX	

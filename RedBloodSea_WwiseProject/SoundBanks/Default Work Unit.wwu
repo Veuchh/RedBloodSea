@@ -47,6 +47,7 @@
 						<ObjectRef Name="Play_ResultsScreenConfirm" ID="{E9A8C5A1-C93F-4582-B340-D7C1FC70EBAF}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_ObjectiveExplore" ID="{A8925B4D-160E-45B6-AD8B-F9E0DA9C82F5}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_LinkRay3" ID="{79F68C39-B8F8-45EC-B7C7-C45750FAAF87}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_IdleFPS" ID="{6887657A-6E70-45F2-B1B7-3CC566AFB8C4}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_HitOnWeakpoint" ID="{C43D29F5-8E69-4666-A4F1-2883794CDC5B}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_DashInterrupt" ID="{22B0C28B-0244-46E3-AA87-F1EEDA24088F}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_SwordRecoverHitNothing" ID="{A19F9F28-FC21-46E9-975A-50AA2E2BD672}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
@@ -91,6 +92,7 @@
 						<ObjectRef Name="SetCombatInWave" ID="{4DA437B0-D0CF-4D6F-84B6-3F134FD7EA1C}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Test_Event_Asset" ID="{5D47BB90-E33B-4DEB-82CF-4027A0799326}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_MusHub" ID="{90C8B7F9-266C-4DF5-BEC5-1D17E4A5FC1A}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_BasaltGate_Idle" ID="{49780CB7-891E-4DFF-A964-1F9035E1231E}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_MusCore" ID="{CD1985D2-1712-4E4A-B3E0-7D89ADB7F580}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="SetCombatBetweenWave" ID="{F53F7ABE-2C88-4E70-A4DA-3F410D056ED9}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_OnHover" ID="{FDD740D1-0984-4EA1-9FC5-4D17473BFC69}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>

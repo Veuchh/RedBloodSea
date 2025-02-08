@@ -10,6 +10,13 @@
 					</PropertyList>
 					<ChildrenList>
 						<BlendContainer Name="Slash" ID="{CE1103A0-9B1B-40FD-BDCC-6F5990D34E46}" ShortID="556880037">
+							<PropertyList>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
@@ -746,7 +753,7 @@
 								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>6</Value>
+										<Value>4</Value>
 									</ValueList>
 								</Property>
 								<Property Name="MaxSoundPerInstance" Type="int16">
@@ -779,11 +786,6 @@
 							<ChildrenList>
 								<RandomSequenceContainer Name="ThrustHC" ID="{4AF9D815-0B2B-4766-BED2-30232AE3BB76}" ShortID="857178447">
 									<PropertyList>
-										<Property Name="MakeUpGain" Type="Real64">
-											<ValueList>
-												<Value>5</Value>
-											</ValueList>
-										</Property>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>
@@ -1014,6 +1016,19 @@
 								</Panner>
 							</PositioningInfo>
 							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{D54F2111-47FD-4BFD-A269-B8A85DB58469}" ShortID="212276964">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+														<ObjectRef Name="thrust_eq" ID="{060A2B3C-D651-4766-83A1-496F76583E3E}" WorkUnitID="{4640899B-4071-49AD-BD7F-E96787417DC9}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
 								<ObjectList Name="RTPC">
 									<Reference>
 										<Local>
@@ -4545,7 +4560,7 @@
 												</Property>
 												<Property Name="MakeUpGain" Type="Real64">
 													<ValueList>
-														<Value>-1</Value>
+														<Value>-4</Value>
 													</ValueList>
 												</Property>
 												<Property Name="OverridePositioning" Type="bool" Value="True"/>
@@ -4638,7 +4653,7 @@
 																				<PointList>
 																					<Point>
 																						<XPos>-180</XPos>
-																						<YPos>-4.5088</YPos>
+																						<YPos>-10.40487</YPos>
 																						<Flags>5</Flags>
 																					</Point>
 																					<Point>
@@ -4648,7 +4663,7 @@
 																					</Point>
 																					<Point>
 																						<XPos>180</XPos>
-																						<YPos>-3.28341</YPos>
+																						<YPos>-9.17948</YPos>
 																						<Flags>37</Flags>
 																					</Point>
 																				</PointList>
@@ -4682,7 +4697,7 @@
 																						<Flags>5</Flags>
 																					</Point>
 																					<Point>
-																						<XPos>-0</XPos>
+																						<XPos>0</XPos>
 																						<YPos>0</YPos>
 																						<Flags>0</Flags>
 																					</Point>
@@ -4884,7 +4899,7 @@
 																						<Flags>5</Flags>
 																					</Point>
 																					<Point>
-																						<XPos>-0</XPos>
+																						<XPos>0</XPos>
 																						<YPos>0</YPos>
 																						<Flags>0</Flags>
 																					</Point>
@@ -5089,7 +5104,7 @@
 																						<Flags>5</Flags>
 																					</Point>
 																					<Point>
-																						<XPos>-0</XPos>
+																						<XPos>0</XPos>
 																						<YPos>0</YPos>
 																						<Flags>0</Flags>
 																					</Point>
@@ -5276,7 +5291,7 @@
 																						<Flags>5</Flags>
 																					</Point>
 																					<Point>
-																						<XPos>-0</XPos>
+																						<XPos>0</XPos>
 																						<YPos>0</YPos>
 																						<Flags>0</Flags>
 																					</Point>
@@ -6617,7 +6632,7 @@
 																						<Flags>5</Flags>
 																					</Point>
 																					<Point>
-																						<XPos>-0</XPos>
+																						<XPos>0</XPos>
 																						<YPos>0</YPos>
 																						<Flags>0</Flags>
 																					</Point>
@@ -7096,7 +7111,7 @@
 							<PropertyList>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>11</Value>
+										<Value>6</Value>
 									</ValueList>
 								</Property>
 								<Property Name="Pitch" Type="int32">
@@ -8170,7 +8185,7 @@
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>-0</XPos>
+																				<XPos>0</XPos>
 																				<YPos>0</YPos>
 																				<Flags>0</Flags>
 																			</Point>
@@ -8477,7 +8492,7 @@
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>-0</XPos>
+																				<XPos>0</XPos>
 																				<YPos>0</YPos>
 																				<Flags>0</Flags>
 																			</Point>
@@ -11154,7 +11169,6 @@
 												<Value>3</Value>
 											</ValueList>
 										</Property>
-										<Property Name="OverrideEffect" Type="bool" Value="True"/>
 										<Property Name="UseMaxSoundPerInstance" Type="bool">
 											<ValueList>
 												<Value>True</Value>
@@ -11289,7 +11303,7 @@
 									<PropertyList>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>4</Value>
+												<Value>-3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -11304,6 +11318,7 @@
 									<ChildrenList>
 										<BlendContainer Name="CrosshairLink" ID="{EC3DA5E5-F551-40EC-A1A3-46119EE5650C}" ShortID="854941968">
 											<PropertyList>
+												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 												<Property Name="MakeUpGain" Type="Real64">
 													<ModifierList>
 														<ModifierInfo>
@@ -11316,7 +11331,16 @@
 														</ModifierInfo>
 													</ModifierList>
 												</Property>
+												<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-280</Value>
+													</ValueList>
 													<ModifierList>
 														<ModifierInfo>
 															<Modifier Name="" ID="{AA5E30BB-887C-463D-BD1E-44C0448FE411}">
@@ -11328,6 +11352,11 @@
 															</Modifier>
 														</ModifierInfo>
 													</ModifierList>
+												</Property>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
 												</Property>
 											</PropertyList>
 											<ReferenceList>
@@ -11662,6 +11691,7 @@
 														<Value>17</Value>
 													</ValueList>
 												</Property>
+												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 												<Property Name="MakeUpGain" Type="Real64">
 													<ValueList>
 														<Value>-4</Value>
@@ -11677,6 +11707,12 @@
 														</ModifierInfo>
 													</ModifierList>
 												</Property>
+												<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Pitch" Type="int32">
 													<ModifierList>
 														<ModifierInfo>
@@ -11688,6 +11724,11 @@
 															</Modifier>
 														</ModifierInfo>
 													</ModifierList>
+												</Property>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
 												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ModifierList>
@@ -11971,6 +12012,11 @@
 								</ActorMixer>
 								<RandomSequenceContainer Name="TimerSeq" ID="{118E457B-041F-4840-A4CA-35839BA2B0E0}" ShortID="315419092">
 									<PropertyList>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
 										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
 									</PropertyList>
 									<ReferenceList>
@@ -11981,6 +12027,429 @@
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="UI Timer SEQ v1" ID="{6667C54C-A36D-49B4-AC3B-0FCE6C4305FF}" ShortID="116714410">
+											<PropertyList>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>250</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="UI Timer SEQ v1" ID="{3C1C4C47-1BD8-482F-92DD-5E72FB160BEF}">
+													<Comment> </Comment>
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0368847376788553"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.233603338632751"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.725399841017488"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.67210810810811"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>UI Timer SEQ v1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="295148062"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="UI Timer SEQ v1" ID="{3C1C4C47-1BD8-482F-92DD-5E72FB160BEF}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="UI Timer SEQ v1_01" ID="{88E41AF7-8233-4050-8184-8D63C2DE83CF}" ShortID="455315088">
+											<PropertyList>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>-1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="UI Timer SEQ v1" ID="{2EE8210F-690E-4B15-AA88-DF21F664B418}">
+													<Comment> </Comment>
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0614745627980922"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.239750794912559"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="1.70899284578696"/>
+														<Property Name="TrimEnd" Type="Real64" Value="2.70488076311605"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>UI Timer SEQ v1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="752022002"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="UI Timer SEQ v1" ID="{2EE8210F-690E-4B15-AA88-DF21F664B418}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="UI Timer SEQ v1_02" ID="{398DC4B1-5216-4BF1-B94D-9A655ABA470B}" ShortID="31732622">
+											<PropertyList>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>-1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="UI Timer SEQ v1" ID="{71A3640E-EF8B-4FFB-BEE5-155625A700A5}">
+													<Comment> </Comment>
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0410100222538818"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.239750794912559"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="2.74572900745684"/>
+														<Property Name="TrimEnd" Type="Real64" Value="3.71306359300477"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>UI Timer SEQ v1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="357809716"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="UI Timer SEQ v1" ID="{71A3640E-EF8B-4FFB-BEE5-155625A700A5}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="UI Timer SEQ v1_03" ID="{973F1609-2A9B-484B-B733-F59C8144DFA1}" ShortID="427349915">
+											<PropertyList>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>-1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="UI Timer SEQ v1" ID="{2287E31A-13F8-4C2F-BD1F-956894D593EC}">
+													<Comment> </Comment>
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0410100222538818"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.239750794912559"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="3.7231745559465"/>
+														<Property Name="TrimEnd" Type="Real64" Value="4.70676756071598"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>UI Timer SEQ v1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="120305620"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="UI Timer SEQ v1" ID="{2287E31A-13F8-4C2F-BD1F-956894D593EC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="UI Timer SEQ v1_04" ID="{372D8A89-407A-40B5-BAC1-D30B17D3B772}" ShortID="906497116">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="UI Timer SEQ v1" ID="{C07AAB5E-D1DE-419D-86BE-1153D1496A6F}">
+													<Comment> </Comment>
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0410100222538818"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.239750794912559"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="4.68832519187655"/>
+														<Property Name="TrimEnd" Type="Real64" Value="5.62273854640755"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>UI Timer SEQ v1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1032671048"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="UI Timer SEQ v1" ID="{C07AAB5E-D1DE-419D-86BE-1153D1496A6F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="UI Timer SEQ v1_05" ID="{CE13971F-6B5E-4BD0-9763-C8A20486BED8}" ShortID="778084447">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="UI Timer SEQ v1" ID="{FEBE540A-40D1-44BF-ACC5-F5576052F520}">
+													<Comment> </Comment>
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0410100222538818"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.239750794912559"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="5.68421310920565"/>
+														<Property Name="TrimEnd" Type="Real64" Value="6.67395357025493"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>UI Timer SEQ v1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="989964154"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="UI Timer SEQ v1" ID="{FEBE540A-40D1-44BF-ACC5-F5576052F520}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="UI Timer SEQ v1_06" ID="{87B3ED69-925F-4F1D-B315-86D45DEF5A1E}" ShortID="224067921">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="UI Timer SEQ v1" ID="{5C284214-FA22-47E6-A973-E272BE0F10F7}">
+													<Comment> </Comment>
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0410100222538818"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.239750794912559"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="6.66780611397512"/>
+														<Property Name="TrimEnd" Type="Real64" Value="7.72516859410231"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>UI Timer SEQ v1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="557661348"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="UI Timer SEQ v1" ID="{5C284214-FA22-47E6-A973-E272BE0F10F7}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="UI Timer SEQ v1_07" ID="{1A4B8F54-FF4C-4BB0-BB5B-15404A4DCE39}" ShortID="683627170">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="UI Timer SEQ v1" ID="{0FF63675-4818-4E4D-9926-CDB93A98C19B}">
+													<Comment> </Comment>
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0410100222538818"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.239750794912559"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="7.71287368154268"/>
+														<Property Name="TrimEnd" Type="Real64" Value="8.71490905515158"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>UI Timer SEQ v1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="440220977"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="UI Timer SEQ v1" ID="{0FF63675-4818-4E4D-9926-CDB93A98C19B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="UI Timer SEQ v1_08" ID="{7F692A2F-8F20-46A0-8DEE-9E1FCE71C471}" ShortID="809221589">
+											<PropertyList>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="UI Timer SEQ v1" ID="{B1EA5617-3236-47E4-832D-7C64B66EC372}">
+													<Comment> </Comment>
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0410100222538818"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.239750794912559"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="8.67802431747273"/>
+														<Property Name="TrimEnd" Type="Real64" Value="9.66776477852201"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>UI Timer SEQ v1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="141461397"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="UI Timer SEQ v1" ID="{B1EA5617-3236-47E4-832D-7C64B66EC372}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="UI Timer SEQ v1_09" ID="{2DA79BB3-E4CB-4D4A-99F0-1690A558340B}" ShortID="178395684">
+											<PropertyList>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="UI Timer SEQ v1" ID="{0C269B4F-8C15-4C6C-B7E1-8DDABDFD58CA}">
+													<Comment> </Comment>
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0410100222538818"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.239750794912559"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="9.64932240968258"/>
+														<Property Name="TrimEnd" Type="Real64" Value="10.6759476084107"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>UI Timer SEQ v1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="161587382"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="UI Timer SEQ v1" ID="{0C269B4F-8C15-4C6C-B7E1-8DDABDFD58CA}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="UI Timer SEQ v1_10" ID="{69F21733-A915-449D-8E9A-91C4DEB7CCE4}" ShortID="319397146">
+											<PropertyList>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="UI Timer SEQ v1" ID="{05B43FB0-AE23-49B4-84CD-F10DC7B10B21}">
+													<Comment> </Comment>
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0410100222538818"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.239750794912559"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="10.6943899772502"/>
+														<Property Name="TrimEnd" Type="Real64" Value="11.5242965750244"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>UI Timer SEQ v1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="637619383"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="UI Timer SEQ v1" ID="{05B43FB0-AE23-49B4-84CD-F10DC7B10B21}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Playlist">
+											<Reference>
+												<ObjectRef Name="UI Timer SEQ v1" ID="{6667C54C-A36D-49B4-AC3B-0FCE6C4305FF}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="UI Timer SEQ v1_01" ID="{88E41AF7-8233-4050-8184-8D63C2DE83CF}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="UI Timer SEQ v1_02" ID="{398DC4B1-5216-4BF1-B94D-9A655ABA470B}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="UI Timer SEQ v1_03" ID="{973F1609-2A9B-484B-B733-F59C8144DFA1}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="UI Timer SEQ v1_04" ID="{372D8A89-407A-40B5-BAC1-D30B17D3B772}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="UI Timer SEQ v1_05" ID="{CE13971F-6B5E-4BD0-9763-C8A20486BED8}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="UI Timer SEQ v1_06" ID="{87B3ED69-925F-4F1D-B315-86D45DEF5A1E}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="UI Timer SEQ v1_07" ID="{1A4B8F54-FF4C-4BB0-BB5B-15404A4DCE39}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="UI Timer SEQ v1_08" ID="{7F692A2F-8F20-46A0-8DEE-9E1FCE71C471}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="UI Timer SEQ v1_09" ID="{2DA79BB3-E4CB-4D4A-99F0-1690A558340B}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="UI Timer SEQ v1_10" ID="{69F21733-A915-449D-8E9A-91C4DEB7CCE4}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="ObjectiveProgress" ID="{51A1490B-2186-439B-98FB-026B3100A1EA}" ShortID="162462828">
 									<PropertyList>
@@ -12291,9 +12760,8 @@
 													<PropertyList>
 														<Property Name="FadeInDuration" Type="Real64" Value="0.0662541087962963"/>
 														<Property Name="FadeOutDuration" Type="Real64" Value="1.05060086805556"/>
-														<Property Name="LoopBegin" Type="Real64" Value="0.690935706018518"/>
 														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="0.672005960648148"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.576204062803724"/>
 														<Property Name="TrimEnd" Type="Real64" Value="5.21514484953704"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -12308,6 +12776,18 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="ObjectiveExplore" ID="{C6DCB91E-FB6E-42BE-A2CA-2622CDBB0E9C}" ShortID="519731195">
+											<PropertyList>
+												<Property Name="Lowpass" Type="int16">
+													<ValueList>
+														<Value>10</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
@@ -12318,6 +12798,7 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="NewObjectives v1" ID="{754A4C34-4952-49FA-8E0D-07B7465D0655}">
+													<Comment> </Comment>
 													<PropertyList>
 														<Property Name="FadeInDuration" Type="Real64" Value="0.0269328148913814"/>
 														<Property Name="FadeOutDuration" Type="Real64" Value="0.738260069444445"/>
@@ -12339,6 +12820,21 @@
 									</ChildrenList>
 								</ActorMixer>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{9C5BBA43-15EA-4E97-9E37-102DFF35DB18}" ShortID="620260310">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+														<ObjectRef Name="Meter_UI" ID="{5F72FEAD-42C3-4457-AACE-5923476DC846}" WorkUnitID="{4640899B-4071-49AD-BD7F-E96787417DC9}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
 						</ActorMixer>
 					</ChildrenList>
 				</Folder>
@@ -13686,7 +14182,7 @@
 																			</Point>
 																			<Point>
 																				<XPos>100</XPos>
-																				<YPos>0</YPos>
+																				<YPos>4.09056</YPos>
 																				<Flags>37</Flags>
 																			</Point>
 																		</PointList>
@@ -14407,12 +14903,12 @@
 																	</Point>
 																	<Point>
 																		<XPos>88.92753</XPos>
-																		<YPos>0</YPos>
+																		<YPos>4.3699</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>100</XPos>
-																		<YPos>0</YPos>
+																		<YPos>4.3699</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -14531,7 +15027,7 @@
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>-0</XPos>
+																		<XPos>0</XPos>
 																		<YPos>0</YPos>
 																		<Flags>0</Flags>
 																	</Point>
@@ -15024,8 +15520,16 @@
 						<Sound Name="BasaltGate close v1" ID="{79AEBB70-EA25-43B5-ACEE-CC3889F5CBE7}" ShortID="94122216">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="BasaltGateToggle" ID="{43ED8A96-20F2-432A-8107-A918568A3D23}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
 								</Reference>
@@ -15047,40 +15551,64 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="BasaltGate close v1" ID="{20B2F721-A22B-4154-A764-F2E8DA949CAD}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="BasaltGate idle v1" ID="{57BE5F14-D440-4DD1-A284-7304FC7F2ACB}" ShortID="831188566">
-							<PropertyList>
-								<Property Name="MakeUpGain" Type="Real64">
-									<ValueList>
-										<Value>13</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="BasaltGate idle v1" ID="{D02495EF-3068-4042-AACC-22AC90AE7469}">
-									<Language>SFX</Language>
-									<AudioFile>BasaltGate idle v1.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="435137282"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
 							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{39B92F5D-95EB-49CC-8EEA-C1B5CFB01C6B}" ShortID="587549225">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+														<ObjectRef Name="LowHPVerb" ID="{90093482-EA31-4A5B-A30B-483A19EC8012}" WorkUnitID="{4640899B-4071-49AD-BD7F-E96787417DC9}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
 								<ObjectList Name="RTPC">
 									<Reference>
 										<Local>
-											<RTPC Name="" ID="{FD46C919-B99E-408C-979D-1DF02073F5E1}" ShortID="706842627">
+											<RTPC Name="" ID="{31F98082-D8EA-488A-A887-3EEEDA64954D}" ShortID="326942348">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{BA79EF48-B741-4EC3-A6D9-581BEBF3A7AD}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>-180</XPos>
+																		<YPos>25</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>180</XPos>
+																		<YPos>25</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{74413392-ECE9-4BBA-B9BD-0E4AB29E7D61}" ShortID="947828414">
 												<PropertyList>
 													<Property Name="PropertyName" Type="string" Value="Volume"/>
 												</PropertyList>
@@ -15090,7 +15618,7 @@
 													</Reference>
 													<Reference Name="Curve">
 														<Custom>
-															<Curve Name="" ID="{236A40F7-1276-40DB-8BC6-39938465A584}">
+															<Curve Name="" ID="{C5DEDA98-669C-4FC3-B578-98C3B69E91B2}">
 																<PropertyList>
 																	<Property Name="Flags" Type="int32" Value="3"/>
 																</PropertyList>
@@ -15118,101 +15646,89 @@
 											</RTPC>
 										</Local>
 									</Reference>
-									<Reference>
-										<Local>
-											<RTPC Name="" ID="{CC5E5BFA-36F6-47FB-9ABB-4EEE572559F5}" ShortID="150544755">
-												<PropertyList>
-													<Property Name="PropertyName" Type="string" Value="Lowpass"/>
-												</PropertyList>
-												<ReferenceList>
-													<Reference Name="ControlInput">
-														<ObjectRef Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
-													</Reference>
-													<Reference Name="Curve">
-														<Custom>
-															<Curve Name="" ID="{79384543-9989-4E20-BCC2-D3B2203DFDFA}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="65537"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>-180</XPos>
-																		<YPos>25</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>-0</XPos>
-																		<YPos>0</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>180</XPos>
-																		<YPos>25</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</Custom>
-													</Reference>
-												</ReferenceList>
-											</RTPC>
-										</Local>
-									</Reference>
-									<Reference>
-										<Local>
-											<RTPC Name="" ID="{67995753-1564-4A16-8CC2-3C716B90AEAB}" ShortID="559996349">
-												<PropertyList>
-													<Property Name="PropertyName" Type="string" Value="Highpass"/>
-												</PropertyList>
-												<ReferenceList>
-													<Reference Name="ControlInput">
-														<ObjectRef Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
-													</Reference>
-													<Reference Name="Curve">
-														<Custom>
-															<Curve Name="" ID="{1B82CDC7-0B6E-45E7-9560-96F3C598219E}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="65537"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>-180</XPos>
-																		<YPos>25</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>-0</XPos>
-																		<YPos>0</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>180</XPos>
-																		<YPos>25</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</Custom>
-													</Reference>
-												</ReferenceList>
-											</RTPC>
-										</Local>
-									</Reference>
 								</ObjectList>
 							</ObjectLists>
+							<ActiveSourceList>
+								<ActiveSource Name="BasaltGate close v1" ID="{20B2F721-A22B-4154-A764-F2E8DA949CAD}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="BasaltGate idle v1" ID="{57BE5F14-D440-4DD1-A284-7304FC7F2ACB}" ShortID="831188566">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>20</Value>
+									</ValueList>
+								</Property>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>22</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="BasaltGateIdle" ID="{80E785E9-062D-4A5D-9777-9BF2A6087F97}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="BasaltGate idle v1" ID="{D02495EF-3068-4042-AACC-22AC90AE7469}">
+									<Language>SFX</Language>
+									<AudioFile>BasaltGate idle v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="435137282"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="state_combat" ID="{E2ED0219-9E42-4468-B342-0147362BCCBB}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="betweenwave" ID="{FF2C5CA1-53C4-423E-AF83-8785851A7F1B}"/>
+										<CustomState Name="" ID="{67644851-A5FB-4A7A-903F-59A2F8109B73}" ShortID="140065897"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="combat" ID="{76879D96-6B91-483E-85DC-B7B10E438F7F}"/>
+										<CustomState Name="" ID="{BA204AB6-FE6E-4E64-805A-143B5D1A2BED}" ShortID="989834503">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-108"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="intro" ID="{AAB602C5-F1F4-4844-B273-85D5A38E9869}"/>
+										<CustomState Name="" ID="{61DF3500-299B-4FAA-B222-B89000513799}" ShortID="850236099"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 							<ActiveSourceList>
 								<ActiveSource Name="BasaltGate idle v1" ID="{D02495EF-3068-4042-AACC-22AC90AE7469}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="BasaltGate open v1" ID="{68A44275-41E7-4D70-8D6C-5B6F8EEB8543}" ShortID="164568101">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>3</Value>
+										<Value>4</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="BasaltGateToggle" ID="{43ED8A96-20F2-432A-8107-A918568A3D23}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
 								</Reference>
@@ -15234,6 +15750,103 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{5FA210E3-BB31-4A93-A4EA-92012BC42CD4}" ShortID="952765811">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+														<ObjectRef Name="LowHPVerb" ID="{90093482-EA31-4A5B-A30B-483A19EC8012}" WorkUnitID="{4640899B-4071-49AD-BD7F-E96787417DC9}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{A9423C41-13C3-478D-819B-A896AE3EAF56}" ShortID="617328428">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{DEFA1302-1EAB-427A-9864-7763D9AE2197}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>-180</XPos>
+																		<YPos>9</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>180</XPos>
+																		<YPos>9</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{D7E50B2C-1F3F-4494-81CE-DDDA905AA8B0}" ShortID="868123004">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{C50831DD-271A-4EF2-9C23-5DB117BF5933}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>-180</XPos>
+																		<YPos>-2.50893</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>-0.16529</XPos>
+																		<YPos>-0.102550000000008</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>180</XPos>
+																		<YPos>-2.11641</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="BasaltGate open v1" ID="{5EE12374-60EB-4332-B81F-13F4EA783478}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -15320,7 +15933,7 @@
 																<PointList>
 																	<Point>
 																		<XPos>-180</XPos>
-																		<YPos>-12.10675</YPos>
+																		<YPos>-6.75901</YPos>
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
@@ -15330,7 +15943,7 @@
 																	</Point>
 																	<Point>
 																		<XPos>180</XPos>
-																		<YPos>-10.88136</YPos>
+																		<YPos>-5.53362</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -15360,7 +15973,7 @@
 																<PointList>
 																	<Point>
 																		<XPos>-180</XPos>
-																		<YPos>50</YPos>
+																		<YPos>23</YPos>
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
@@ -15370,7 +15983,7 @@
 																	</Point>
 																	<Point>
 																		<XPos>180</XPos>
-																		<YPos>50</YPos>
+																		<YPos>23</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -15400,7 +16013,7 @@
 																<PointList>
 																	<Point>
 																		<XPos>-90</XPos>
-																		<YPos>50</YPos>
+																		<YPos>29</YPos>
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
@@ -15410,7 +16023,7 @@
 																	</Point>
 																	<Point>
 																		<XPos>90</XPos>
-																		<YPos>50</YPos>
+																		<YPos>29</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -15440,7 +16053,7 @@
 																<PointList>
 																	<Point>
 																		<XPos>-90</XPos>
-																		<YPos>-12.10675</YPos>
+																		<YPos>-4.39856</YPos>
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
@@ -15450,7 +16063,7 @@
 																	</Point>
 																	<Point>
 																		<XPos>90</XPos>
-																		<YPos>-10.88136</YPos>
+																		<YPos>-3.17317</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -15480,7 +16093,7 @@
 																<PointList>
 																	<Point>
 																		<XPos>0</XPos>
-																		<YPos>-0</YPos>
+																		<YPos>0</YPos>
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>

@@ -30,8 +30,15 @@
 											<StateGroupInfo>
 												<StateGroupRef Name="state_aim" ID="{B36EB626-1B96-4D45-9487-0F8FDC6A68DD}"/>
 											</StateGroupInfo>
+											<StateGroupInfo>
+												<StateGroupRef Name="state_combat" ID="{E2ED0219-9E42-4468-B342-0147362BCCBB}"/>
+											</StateGroupInfo>
 										</StateGroupList>
 										<CustomStateList>
+											<CustomState>
+												<StateRef Name="betweenwave" ID="{FF2C5CA1-53C4-423E-AF83-8785851A7F1B}"/>
+												<CustomState Name="" ID="{A821E51D-FB53-498A-BCBD-69C3CFAE51DF}" ShortID="1030362483"/>
+											</CustomState>
 											<CustomState>
 												<StateRef Name="notaiming" ID="{AD4DA154-B560-453D-8C38-7A73B45B33AF}"/>
 												<CustomState Name="" ID="{63F15592-9981-498E-8634-389689C6AD6F}" ShortID="813521493"/>
@@ -45,6 +52,18 @@
 														<Property Name="Pitch" Type="int32" Value="-1670"/>
 													</PropertyList>
 												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="combat" ID="{76879D96-6B91-483E-85DC-B7B10E438F7F}"/>
+												<CustomState Name="" ID="{5194FAF7-52FD-46A9-9913-96FAC3269FBA}" ShortID="358101328">
+													<PropertyList>
+														<Property Name="BusVolume" Type="Real64" Value="-4"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="intro" ID="{AAB602C5-F1F4-4844-B273-85D5A38E9869}"/>
+												<CustomState Name="" ID="{754735E0-78FA-4B4D-ACA9-9321570945C7}" ShortID="643148125"/>
 											</CustomState>
 										</CustomStateList>
 									</StateInfo>
@@ -93,7 +112,7 @@
 														</PropertyList>
 														<ReferenceList>
 															<Reference Name="ControlInput">
-																<ObjectRef Name="meter_sfx" ID="{612878B7-9133-405F-BC49-C2FDA83F7E32}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																<ObjectRef Name="rtpc_meter_sfx" ID="{612878B7-9133-405F-BC49-C2FDA83F7E32}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
 															</Reference>
 															<Reference Name="Curve">
 																<Custom>
@@ -400,7 +419,7 @@
 														</PropertyList>
 														<ReferenceList>
 															<Reference Name="ControlInput">
-																<ObjectRef Name="meter_sfx" ID="{612878B7-9133-405F-BC49-C2FDA83F7E32}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																<ObjectRef Name="rtpc_meter_sfx" ID="{612878B7-9133-405F-BC49-C2FDA83F7E32}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
 															</Reference>
 															<Reference Name="Curve">
 																<Custom>
@@ -536,6 +555,54 @@
 																			<Point>
 																				<XPos>-42</XPos>
 																				<YPos>27</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{6B252D72-1A44-40DE-8A5B-477187CE100D}" ShortID="844621490">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="rtpc_meter_ui" ID="{F059CDA2-AB62-466D-83AE-3422AC208500}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{E29A6BA9-5791-4EB0-94AD-C671C4E9B097}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>-48</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																				<SegmentShape>Log1</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>-40.15827</XPos>
+																				<YPos>-3.66398000000001</YPos>
+																				<Flags>0</Flags>
+																				<SegmentShape>Exp1</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>-23.91574</XPos>
+																				<YPos>-3.92589000000001</YPos>
+																				<Flags>0</Flags>
+																				<SegmentShape>Log1</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>-15</XPos>
+																				<YPos>-6.97343000000001</YPos>
 																				<Flags>37</Flags>
 																			</Point>
 																		</PointList>
@@ -1159,6 +1226,54 @@
 																			<Point>
 																				<XPos>1</XPos>
 																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{137A8F9F-5208-443B-AB4C-585490DA35FA}" ShortID="957991691">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="rtpc_meter_ui" ID="{F059CDA2-AB62-466D-83AE-3422AC208500}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{1D645D3A-BCCB-40CA-9A97-C8D23BB187F2}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>-48</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																				<SegmentShape>Log1</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>-40.15827</XPos>
+																				<YPos>-3.66398</YPos>
+																				<Flags>0</Flags>
+																				<SegmentShape>Exp1</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>-23.91574</XPos>
+																				<YPos>-3.92589</YPos>
+																				<Flags>0</Flags>
+																				<SegmentShape>Log1</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>-15</XPos>
+																				<YPos>-6.97343</YPos>
 																				<Flags>37</Flags>
 																			</Point>
 																		</PointList>

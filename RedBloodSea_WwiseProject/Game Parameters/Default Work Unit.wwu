@@ -132,13 +132,6 @@
 						<Property Name="Max" Type="Real64" Value="1000"/>
 					</PropertyList>
 				</GameParameter>
-				<GameParameter Name="meter_sfx" ID="{612878B7-9133-405F-BC49-C2FDA83F7E32}">
-					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="-48"/>
-						<Property Name="Max" Type="Real64" Value="0"/>
-						<Property Name="Min" Type="Real64" Value="-48"/>
-					</PropertyList>
-				</GameParameter>
 				<GameParameter Name="rtpc_chaos_no_interpolation" ID="{32A00591-7D0F-46D4-86CC-E57C780551F1}">
 					<PropertyList>
 						<Property Name="InitialValue" Type="Real64" Value="0.5"/>
@@ -159,13 +152,6 @@
 				<GameParameter Name="rtpc_enemy_stunned" ID="{9F1682C7-5950-4A17-9A5B-1AFD2226616F}">
 					<PropertyList>
 						<Property Name="InitialValue" Type="Real64" Value="0"/>
-					</PropertyList>
-				</GameParameter>
-				<GameParameter Name="rtpc_lowhppulse_meter" ID="{1BBA0A4A-0586-4101-979A-262C33FC36C7}">
-					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="-48"/>
-						<Property Name="Max" Type="Real64" Value="-42"/>
-						<Property Name="Min" Type="Real64" Value="-48"/>
 					</PropertyList>
 				</GameParameter>
 				<GameParameter Name="rtpc_ambiance_arena_attenuation" ID="{317D7F34-0FD2-4141-8088-6B66E709DE20}">
@@ -203,13 +189,38 @@
 						<Property Name="InitialValue" Type="Real64" Value="100"/>
 					</PropertyList>
 				</GameParameter>
-				<GameParameter Name="meter_checkpoint" ID="{653E5BF9-7F0A-4641-BEAD-1B077C9E090B}">
-					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="-48"/>
-						<Property Name="Max" Type="Real64" Value="0"/>
-						<Property Name="Min" Type="Real64" Value="-48"/>
-					</PropertyList>
-				</GameParameter>
+				<Folder Name="Meter" ID="{5A289CEA-7336-40AE-A509-04601D7F854A}" ShortID="570987869">
+					<ChildrenList>
+						<GameParameter Name="rtpc_meter_sfx" ID="{612878B7-9133-405F-BC49-C2FDA83F7E32}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="-48"/>
+								<Property Name="Max" Type="Real64" Value="0"/>
+								<Property Name="Min" Type="Real64" Value="-48"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="rtpc_meter_checkpoint" ID="{653E5BF9-7F0A-4641-BEAD-1B077C9E090B}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="-48"/>
+								<Property Name="Max" Type="Real64" Value="0"/>
+								<Property Name="Min" Type="Real64" Value="-48"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="rtpc_lowhppulse_meter" ID="{1BBA0A4A-0586-4101-979A-262C33FC36C7}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="-48"/>
+								<Property Name="Max" Type="Real64" Value="-42"/>
+								<Property Name="Min" Type="Real64" Value="-48"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="rtpc_meter_ui" ID="{F059CDA2-AB62-466D-83AE-3422AC208500}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="-48"/>
+								<Property Name="Max" Type="Real64" Value="-15"/>
+								<Property Name="Min" Type="Real64" Value="-48"/>
+							</PropertyList>
+						</GameParameter>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

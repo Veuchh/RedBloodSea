@@ -34,7 +34,7 @@
 						<Property Name="InitialValue" Type="Real64" Value="0"/>
 						<Property Name="Max" Type="Real64" Value="1"/>
 						<Property Name="RTPCRamping" Type="int16" Value="1"/>
-						<Property Name="SlewRateDown" Type="Real64" Value="33"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="9"/>
 						<Property Name="SlewRateUp" Type="Real64" Value="81"/>
 					</PropertyList>
 				</GameParameter>
@@ -186,7 +186,7 @@
 				</GameParameter>
 				<GameParameter Name="checkpoint_muted" ID="{DA3752D6-74EA-48C9-95A1-46E1EA1F2BC2}">
 					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="100"/>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
 					</PropertyList>
 				</GameParameter>
 				<Folder Name="Meter" ID="{5A289CEA-7336-40AE-A509-04601D7F854A}" ShortID="570987869">
@@ -221,6 +221,51 @@
 						</GameParameter>
 					</ChildrenList>
 				</Folder>
+				<GameParameter Name="rtpc_ambiance_arena_attenuation_2" ID="{EA8AF461-B766-4DD2-8631-7F55AAE8747C}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="1"/>
+						<Property Name="Min" Type="Real64" Value="1"/>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="68"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="67"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="rtpc_ambiance_arena_attenuation_3" ID="{E1DD84DA-D82C-4C17-8BDA-C010D5167BC5}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="1"/>
+						<Property Name="Min" Type="Real64" Value="1"/>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="68"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="67"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="rtpc_ambiance_arena_attenuation_4" ID="{FB6A7247-9003-4512-90F8-01E3B6CFFDD4}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="1"/>
+						<Property Name="Min" Type="Real64" Value="1"/>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="68"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="67"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="rtpc_ambiance_arena_attenuation_5" ID="{E2C325AA-3B9D-4104-84D4-2D6A0699603E}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="1"/>
+						<Property Name="Min" Type="Real64" Value="1"/>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="68"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="67"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="rtpc_ambiance_arena_attenuation_6" ID="{5549EE49-FB6F-43EB-B17E-9C1D3C01F8A6}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="1"/>
+						<Property Name="Min" Type="Real64" Value="1"/>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="68"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="67"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

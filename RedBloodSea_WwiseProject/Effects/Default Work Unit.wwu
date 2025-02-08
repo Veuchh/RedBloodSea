@@ -129,8 +129,8 @@
 				<Effect Name="New_Meter" ID="{27AB241B-FEEA-4A05-84C0-CADF27BC2C1D}" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
 					<PropertyList>
 						<Property Name="AttackTime" Type="Real32" Value="1.45"/>
-						<Property Name="Max" Type="Real32" Value="-42"/>
-						<Property Name="ReleaseTime" Type="Real32" Value="1"/>
+						<Property Name="Max" Type="Real32" Value="-24.9"/>
+						<Property Name="ReleaseTime" Type="Real32" Value="3.4"/>
 					</PropertyList>
 					<PluginData>
 	<GameParameter Name="rtpc_lowhppulse_meter" ID="{1BBA0A4A-0586-4101-979A-262C33FC36C7}"/>
@@ -192,7 +192,7 @@
 				</Effect>
 				<Effect Name="Master_Gain" ID="{ED941059-6687-41F9-A573-3847899A4A49}" PluginName="Wwise Gain" CompanyID="0" PluginID="139" PluginType="3">
 					<PropertyList>
-						<Property Name="FullBandGain" Type="Real32" Value="5"/>
+						<Property Name="FullBandGain" Type="Real32" Value="12"/>
 					</PropertyList>
 				</Effect>
 				<Effect Name="New_Peak_Limiter" ID="{3DB5306F-93F5-4CF6-9A74-126F4E5E3A90}" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
@@ -202,9 +202,8 @@
 				</Effect>
 				<Effect Name="checkpoint_meter" ID="{DCF394B8-485B-466E-9821-42B50591321D}" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
 					<PropertyList>
-						<Property Name="AttackTime" Type="Real32" Value="0.15"/>
-						<Property Name="Hold" Type="Real32" Value="0.5"/>
-						<Property Name="ReleaseTime" Type="Real32" Value="0.15"/>
+						<Property Name="AttackTime" Type="Real32" Value="1.04"/>
+						<Property Name="ReleaseTime" Type="Real32" Value="1.37"/>
 					</PropertyList>
 					<PluginData>
 	<GameParameter Name="rtpc_meter_checkpoint" ID="{653E5BF9-7F0A-4641-BEAD-1B077C9E090B}"/>
@@ -226,6 +225,61 @@
 					<PluginData>
 	<GameParameter Name="rtpc_meter_ui" ID="{F059CDA2-AB62-466D-83AE-3422AC208500}"/>
 </PluginData>
+				</Effect>
+				<Effect Name="lowhppulsebassboost" ID="{46F6B7B9-916E-40B1-A682-306CA2858127}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+					<PropertyList>
+						<Property Name="FrequencyBand1" Type="Real32" Value="689"/>
+						<Property Name="GainBand1" Type="Real32" Value="2.5"/>
+					</PropertyList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{20C0C515-BB16-4696-B308-187C07B8271F}" ShortID="862321773">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="GainBand1"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="rtpc_lowhppulse_meter" ID="{1BBA0A4A-0586-4101-979A-262C33FC36C7}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{08EA1A7F-703F-4011-9353-C17452F1BD35}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>-48</XPos>
+																<YPos>0</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>-42</XPos>
+																<YPos>3.77825</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+				</Effect>
+				<Effect Name="Master_Limiter_Viscera" ID="{CE884158-E5B8-4DF5-8D23-0B8BE55C9EF2}" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
+					<PropertyList>
+						<Property Name="LookAhead" Type="Real32" Value="0.002"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="New_Delay_01" ID="{063BC37F-118E-427E-A74A-E0E2B31DF39D}" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
+					<PropertyList>
+						<Property Name="DelayTime" Type="Real32" Value="0.2"/>
+					</PropertyList>
 				</Effect>
 			</ChildrenList>
 		</WorkUnit>

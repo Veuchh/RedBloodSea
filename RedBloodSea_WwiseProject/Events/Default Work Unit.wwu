@@ -910,6 +910,20 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{76A20B07-098D-47FF-89F3-D2211E23A93D}" ShortID="63902072">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Delay" Type="Real64" Value="1"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="4"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LowHPPulse" ID="{2E9B3D88-CD9D-4441-A115-9E464EF3B4A9}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Stop_LowHPPulse" ID="{7FCEA7E6-5FF5-48C9-A09F-17104E065EB7}">
@@ -1222,6 +1236,17 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="EnemyStun" ID="{86CEB44C-5451-4ACC-B813-CF386F9953A3}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_EnemyVaporise" ID="{E397CB23-F58E-4276-8750-951455A9A75E}">
+							<ChildrenList>
+								<Action Name="" ID="{7A63FF0A-D547-4813-82E9-71211BF1675B}" ShortID="989346948">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="EnemyVaporise" ID="{F625AFF1-EBBE-4C4D-AD13-D157C6D37C71}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -2042,7 +2067,7 @@
 								<Action Name="" ID="{FE42AE93-6040-404A-97FA-80642AAC78B4}" ShortID="53453071">
 									<PropertyList>
 										<Property Name="FadeInCurve" Type="int16" Value="5"/>
-										<Property Name="FadeTime" Type="Real64" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="8.5"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">

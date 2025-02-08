@@ -491,7 +491,7 @@
 				</Attenuation>
 				<Attenuation Name="Flower" ID="{0DC8020B-ACE4-4F06-B5E0-212E3017CEF5}" ShortID="189873925">
 					<PropertyList>
-						<Property Name="RadiusMax" Type="Real64" Value="1500"/>
+						<Property Name="RadiusMax" Type="Real64" Value="2000"/>
 					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
@@ -508,7 +508,7 @@
 											<SegmentShape>Exp1</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>1500</XPos>
+											<XPos>2000</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -529,7 +529,7 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>1500</XPos>
+											<XPos>2000</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -538,7 +538,7 @@
 							</CurveUsageInfo>
 						</VolumeWetGameUsage>
 						<VolumeWetUserUsage>
-							<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+							<CurveUsageInfo Platform="Linked" CurveToUse="None">
 								<Curve Name="VolumeWetUser" ID="{0EE48E89-5B69-41C0-99CF-525022617714}">
 									<PropertyList>
 										<Property Name="Flags" Type="int32" Value="3"/>
@@ -551,8 +551,8 @@
 											<SegmentShape>Exp1</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>1500</XPos>
-											<YPos>-7.38291</YPos>
+											<XPos>2000</XPos>
+											<YPos>-11.15614</YPos>
 											<Flags>37</Flags>
 										</Point>
 									</PointList>
@@ -572,7 +572,7 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>1500</XPos>
+											<XPos>2000</XPos>
 											<YPos>16</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -593,17 +593,17 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>851.0028675</XPos>
+											<XPos>1134.67049</XPos>
 											<YPos>0</YPos>
 											<Flags>0</Flags>
 										</Point>
 										<Point>
-											<XPos>1210.95989</XPos>
+											<XPos>1614.61318666667</XPos>
 											<YPos>0</YPos>
 											<Flags>0</Flags>
 										</Point>
 										<Point>
-											<XPos>1500</XPos>
+											<XPos>2000</XPos>
 											<YPos>32</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -624,12 +624,12 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>863.896845</XPos>
-											<YPos>0</YPos>
+											<XPos>552.27145</XPos>
+											<YPos>-0</YPos>
 											<Flags>0</Flags>
 										</Point>
 										<Point>
-											<XPos>1500</XPos>
+											<XPos>2000</XPos>
 											<YPos>0</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -2420,7 +2420,7 @@
 										</Point>
 										<Point>
 											<XPos>557.306593333333</XPos>
-											<YPos>-0</YPos>
+											<YPos>0</YPos>
 											<Flags>0</Flags>
 										</Point>
 										<Point>

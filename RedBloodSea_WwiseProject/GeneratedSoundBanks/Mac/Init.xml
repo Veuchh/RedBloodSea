@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{AA2EE10F-B6CB-7A39-7732-598D8C132FCC}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{5A2E45C3-640E-AB1F-0D74-919B73BB3541}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -13,9 +13,12 @@
 				</Custom>
 				<ShareSets>
 					<Plugin Id="196835669" Name="New_Delay" ObjectPath="\Effects\Default Work Unit\New_Delay" GUID="{6ACEEE1D-3975-4B86-B069-429155FF7B9F}" LibName="Wwise Delay" LibId="6946819"/>
+					<Plugin Id="596353733" Name="checkpoint_meter" ObjectPath="\Effects\Default Work Unit\checkpoint_meter" GUID="{DCF394B8-485B-466E-9821-42B50591321D}" LibName="Wwise Meter" LibId="8454147"/>
 					<Plugin Id="1473984667" Name="Master_Gain" ObjectPath="\Effects\Default Work Unit\Master_Gain" GUID="{ED941059-6687-41F9-A573-3847899A4A49}" LibName="Wwise Gain" LibId="9109507"/>
+					<Plugin Id="1763592331" Name="New_Meter" ObjectPath="\Effects\Default Work Unit\New_Meter" GUID="{27AB241B-FEEA-4A05-84C0-CADF27BC2C1D}" LibName="Wwise Meter" LibId="8454147"/>
 					<Plugin Id="2224135639" Name="Level_Verb" ObjectPath="\Effects\Default Work Unit\Level_Verb" GUID="{C10E6266-7F54-414E-B6C1-16F6802E7ADB}" LibName="Wwise RoomVerb" LibId="7733251"/>
-					<Plugin Id="2675251108" Name="New_Peak_Limiter" ObjectPath="\Effects\Default Work Unit\New_Peak_Limiter" GUID="{3DB5306F-93F5-4CF6-9A74-126F4E5E3A90}" LibName="Wwise Peak Limiter" LibId="7208963"/>
+					<Plugin Id="3121849510" Name="Master_Limiter_Viscera" ObjectPath="\Effects\Default Work Unit\Master_Limiter_Viscera" GUID="{CE884158-E5B8-4DF5-8D23-0B8BE55C9EF2}" LibName="Wwise Peak Limiter" LibId="7208963"/>
+					<Plugin Id="3393016170" Name="lowhppulsebassboost" ObjectPath="\Effects\Default Work Unit\lowhppulsebassboost" GUID="{46F6B7B9-916E-40B1-A682-306CA2858127}" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="3626272192" Name="HIGH_FREQUENCY_CUT_FILTER" ObjectPath="\Effects\Default Work Unit\HIGH_FREQUENCY_CUT_FILTER" GUID="{10C5B825-780E-4846-B96A-6B4E3FA7DC4C}" LibName="Wwise Parametric EQ" LibId="6881283"/>
 				</ShareSets>
 				<AudioDevices>
@@ -30,21 +33,41 @@
 						<AuxBusRef Id="158015895" Name="LowHP_Verb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus\LowHP_Verb" GUID="{0DF16582-4E75-42E1-A88A-BE71844CFF61}"/>
 					</AuxBusRefs>
 				</Bus>
+				<Bus Id="624013381" Name="LowHP" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus\LowHP" GUID="{8BF23BAA-37C6-4671-9E51-3A8213FF8F15}">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1763592331"/>
+						</ShareSets>
+					</PluginRefs>
+				</Bus>
 				<Bus Id="661188923" Name="EnemyBus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus\SFX\EnemyBus" GUID="{BCC1ECC0-BA5A-45C2-A555-9454DB046120}">
 					<AuxBusRefs>
 						<AuxBusRef Id="158015895" Name="LowHP_Verb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus\LowHP_Verb" GUID="{0DF16582-4E75-42E1-A88A-BE71844CFF61}"/>
 					</AuxBusRefs>
 				</Bus>
 				<Bus Id="1372881427" Name="UiBus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus\UiBus" GUID="{2CE1566D-92AD-4C86-A97B-02E069A97F77}"/>
+				<Bus Id="1749492587" Name="CheckpointBus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus\CheckpointBus" GUID="{68623E43-C5E9-4489-A195-CBB7F871EA5D}">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="596353733"/>
+						</ShareSets>
+					</PluginRefs>
+				</Bus>
 				<Bus Id="1991350473" Name="StereoBus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus" GUID="{01DB4D2A-3A6E-4B6E-AD86-A91E1CD57BEB}">
 					<PluginRefs>
 						<ShareSets>
 							<PluginRef Id="1473984667"/>
-							<PluginRef Id="2675251108"/>
+							<PluginRef Id="3121849510"/>
 						</ShareSets>
 					</PluginRefs>
 				</Bus>
-				<Bus Id="2886307548" Name="MusicBus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus\MusicBus" GUID="{312533C2-F58C-4573-B394-B4A60FA6903B}"/>
+				<Bus Id="2886307548" Name="MusicBus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus\MusicBus" GUID="{312533C2-F58C-4573-B394-B4A60FA6903B}">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="3393016170"/>
+						</ShareSets>
+					</PluginRefs>
+				</Bus>
 				<Bus Id="2894416467" Name="AmbBus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus\AmbBus" GUID="{F6B3D58E-CD74-4442-9F92-CEC55E4B6060}"/>
 				<Bus Id="3803692087" Name="Master Audio Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus" GUID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
 					<PluginRefs>
@@ -58,6 +81,7 @@
 						<AuxBusRef Id="158015895" Name="LowHP_Verb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus\LowHP_Verb" GUID="{0DF16582-4E75-42E1-A88A-BE71844CFF61}"/>
 					</AuxBusRefs>
 				</Bus>
+				<Bus Id="3999620925" Name="LocalWorldEnviro" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus\LocalWorldEnviro" GUID="{A4AD30AF-92F2-40D4-922B-E13F9A0CE957}"/>
 				<Bus Id="4150757691" Name="PlayerFPS" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\StereoBus\SFX\PlayerBus\PlayerFPS" GUID="{7C1D7130-1612-4266-9222-83F5777F8F6A}"/>
 			</Busses>
 			<AuxBusses>
@@ -115,6 +139,11 @@
 				<GameParameter Id="3014524554" Name="rtpc_IsPlayerDead" ObjectPath="\Game Parameters\Default Work Unit\rtpc_IsPlayerDead" GUID="{93082E49-E80A-4A47-AC4C-2D7F096EDF12}"/>
 				<GameParameter Id="3067876527" Name="rtpc_sfx_bus" ObjectPath="\Game Parameters\Default Work Unit\Settings\BUS\rtpc_sfx_bus" GUID="{1A0CC5AF-DF3D-4C7B-9E41-61A8E28F74EB}"/>
 				<GameParameter Id="3100189233" Name="rtpc_thrust_volumefatigue" ObjectPath="\Game Parameters\Default Work Unit\rtpc_thrust_volumefatigue" GUID="{D1E2699C-7775-4081-B719-C34807CE526C}"/>
+				<GameParameter Id="3237627560" Name="rtpc_ambiance_arena_attenuation_3" ObjectPath="\Game Parameters\Default Work Unit\rtpc_ambiance_arena_attenuation_3" GUID="{E1DD84DA-D82C-4C17-8BDA-C010D5167BC5}"/>
+				<GameParameter Id="3237627561" Name="rtpc_ambiance_arena_attenuation_2" ObjectPath="\Game Parameters\Default Work Unit\rtpc_ambiance_arena_attenuation_2" GUID="{EA8AF461-B766-4DD2-8631-7F55AAE8747C}"/>
+				<GameParameter Id="3237627565" Name="rtpc_ambiance_arena_attenuation_6" ObjectPath="\Game Parameters\Default Work Unit\rtpc_ambiance_arena_attenuation_6" GUID="{5549EE49-FB6F-43EB-B17E-9C1D3C01F8A6}"/>
+				<GameParameter Id="3237627566" Name="rtpc_ambiance_arena_attenuation_5" ObjectPath="\Game Parameters\Default Work Unit\rtpc_ambiance_arena_attenuation_5" GUID="{E2C325AA-3B9D-4104-84D4-2D6A0699603E}"/>
+				<GameParameter Id="3237627567" Name="rtpc_ambiance_arena_attenuation_4" ObjectPath="\Game Parameters\Default Work Unit\rtpc_ambiance_arena_attenuation_4" GUID="{FB6A7247-9003-4512-90F8-01E3B6CFFDD4}"/>
 				<GameParameter Id="3304859005" Name="rtpc_chaos_global" ObjectPath="\Game Parameters\Default Work Unit\rtpc_chaos_global" GUID="{912B7FBA-E859-424B-9664-D9B8B51FC1BA}"/>
 				<GameParameter Id="3361666196" Name="rtpc_chaos_enemy" ObjectPath="\Game Parameters\Default Work Unit\rtpc_chaos_enemy" GUID="{8D8709D7-5017-47F2-988D-4EE3A088300B}"/>
 				<GameParameter Id="3432596327" Name="rtpc_music_bus" ObjectPath="\Game Parameters\Default Work Unit\Settings\BUS\rtpc_music_bus" GUID="{C084FC73-68C8-499E-96AC-E4DBE2F01DED}"/>
@@ -249,5 +278,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{EED13E7E-43F2-A602-841C-AC570AC4074C}</FileHash>
+	<FileHash>{03FB575C-A7EA-3BCE-A7F9-A3B2ECBA0FCA}</FileHash>
 </SoundBanksInfo>

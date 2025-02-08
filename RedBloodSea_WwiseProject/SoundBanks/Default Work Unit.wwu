@@ -23,6 +23,7 @@
 						<ObjectRef Name="Play_MusResults" ID="{94377A01-2A74-41E4-9FD0-F00C26A9984A}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_DeathMenu_Transition" ID="{CA3D410D-4E96-4217-AFA6-48AB3C8FA624}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Enemy_FS" ID="{16FC151E-619A-422F-A0CE-05F48DD7D971}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_EnemyVaporise" ID="{E397CB23-F58E-4276-8750-951455A9A75E}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_CrosshairLink" ID="{09B4022D-8DF9-4281-BA4A-A53A74D55AA4}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_EnemyDeath" ID="{CFA6D1F8-F109-42AC-8776-30618640504C}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_EnemyProjectileBeam" ID="{FE351B22-CEDB-42DC-A8D7-D2B4A61DEBC2}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>

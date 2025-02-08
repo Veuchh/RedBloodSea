@@ -10,13 +10,6 @@
 					</PropertyList>
 					<ChildrenList>
 						<BlendContainer Name="Slash" ID="{CE1103A0-9B1B-40FD-BDCC-6F5990D34E46}" ShortID="556880037">
-							<PropertyList>
-								<Property Name="MakeUpGain" Type="Real64">
-									<ValueList>
-										<Value>-2</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
@@ -753,7 +746,7 @@
 								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>4</Value>
+										<Value>6</Value>
 									</ValueList>
 								</Property>
 								<Property Name="MaxSoundPerInstance" Type="int16">
@@ -2506,7 +2499,7 @@
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>-4</Value>
+										<Value>-1</Value>
 									</ValueList>
 								</Property>
 								<Property Name="Pitch" Type="int32">
@@ -2693,7 +2686,7 @@
 								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>-5</Value>
+										<Value>-3</Value>
 									</ValueList>
 								</Property>
 								<Property Name="MaxSoundPerInstance" Type="int16">
@@ -4535,7 +4528,7 @@
 									<PropertyList>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>-8</Value>
+												<Value>-5</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -4560,7 +4553,7 @@
 												</Property>
 												<Property Name="MakeUpGain" Type="Real64">
 													<ValueList>
-														<Value>-4</Value>
+														<Value>-7</Value>
 													</ValueList>
 												</Property>
 												<Property Name="OverridePositioning" Type="bool" Value="True"/>
@@ -4763,7 +4756,7 @@
 												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 												<Property Name="MakeUpGain" Type="Real64">
 													<ValueList>
-														<Value>3</Value>
+														<Value>5</Value>
 													</ValueList>
 												</Property>
 												<Property Name="MaxSoundPerInstance" Type="int16">
@@ -4970,6 +4963,11 @@
 													</ModifierList>
 												</Property>
 												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>-4</Value>
+													</ValueList>
+												</Property>
 												<Property Name="MaxSoundPerInstance" Type="int16">
 													<ValueList>
 														<Value>1</Value>
@@ -5366,7 +5364,7 @@
 												</Property>
 												<Property Name="MakeUpGain" Type="Real64">
 													<ValueList>
-														<Value>2</Value>
+														<Value>1</Value>
 													</ValueList>
 												</Property>
 												<Property Name="OverridePositioning" Type="bool" Value="True"/>
@@ -6693,7 +6691,7 @@
 										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>2</Value>
+												<Value>4</Value>
 											</ValueList>
 										</Property>
 										<Property Name="Pitch" Type="int32">
@@ -7111,7 +7109,7 @@
 							<PropertyList>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>6</Value>
+										<Value>9</Value>
 									</ValueList>
 								</Property>
 								<Property Name="Pitch" Type="int32">
@@ -7551,6 +7549,11 @@
 											</ModifierList>
 										</Property>
 										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
 										<Property Name="MaxSoundPerInstance" Type="int16">
 											<ValueList>
 												<Value>7</Value>
@@ -8612,11 +8615,6 @@
 									</ValueList>
 								</Property>
 								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
-								<Property Name="MakeUpGain" Type="Real64">
-									<ValueList>
-										<Value>-5</Value>
-									</ValueList>
-								</Property>
 								<Property Name="MaxSoundPerInstance" Type="int16">
 									<ValueList>
 										<Value>3</Value>
@@ -9479,7 +9477,7 @@
 								<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>-14</Value>
+										<Value>-12</Value>
 									</ValueList>
 								</Property>
 								<Property Name="MaxSoundPerInstance" Type="int16">
@@ -9630,6 +9628,174 @@
 									</Reference>
 									<Reference>
 										<ObjectRef Name="EnemyStun v2_02" ID="{961E794C-5053-4AF1-88DE-2982AB4DB2EA}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="EnemyVaporise" ID="{F625AFF1-EBBE-4C4D-AD13-D157C6D37C71}" ShortID="445278491">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="InitialDelay" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{EE6946F6-1090-4E4F-A7A3-2DBC75669E74}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>31</Value>
+									</ValueList>
+								</Property>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>20</Value>
+									</ValueList>
+								</Property>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-400</Value>
+									</ValueList>
+								</Property>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Flower" ID="{0DC8020B-ACE4-4F06-B5E0-212E3017CEF5}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="EnemyBus" ID="{BCC1ECC0-BA5A-45C2-A555-9454DB046120}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="dweller killed" ID="{9FAA4F74-5B12-4DD7-9DEE-EA0D33677229}" ShortID="749017272">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="dweller killed" ID="{A4950334-405E-4208-84BC-8FC68EBB89C4}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.545419212375237"/>
+												<Property Name="FadeInShape" Type="int16" Value="8"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.576443737582001"/>
+												<Property Name="FadeOutShape" Type="int16" Value="1"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.940140349480897"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.13590153687423"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>dweller killed.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="66522405"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="dweller killed" ID="{A4950334-405E-4208-84BC-8FC68EBB89C4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="dweller killed_01" ID="{EE3EDBCE-BF55-4FEC-AB0C-728987BFB99F}" ShortID="1058244341">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="dweller killed" ID="{F3A28BA5-8A7F-496C-8AE0-D97691523BB7}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.690720643021912"/>
+												<Property Name="FadeInShape" Type="int16" Value="8"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.520715510895171"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="2.91795191543234"/>
+												<Property Name="TrimEnd" Type="Real64" Value="4.18230738368669"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>dweller killed.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="697943661"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="dweller killed" ID="{F3A28BA5-8A7F-496C-8AE0-D97691523BB7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="dweller killed_02" ID="{9C892E70-60AC-4BCF-A813-27CEA7364DBF}" ShortID="577636700">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="dweller killed" ID="{28D90E46-3D56-4973-8053-31395AC46526}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.317675243897747"/>
+												<Property Name="FadeInShape" Type="int16" Value="8"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.274776698015126"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="4.809656516385"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>dweller killed.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="603727941"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="dweller killed" ID="{28D90E46-3D56-4973-8053-31395AC46526}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{9402B4DF-7473-48FF-A28D-CEC6A55C6F05}" ShortID="69217070">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
+														<ObjectRef Name="New_Delay_01" ID="{063BC37F-118E-427E-A74A-E0E2B31DF39D}" WorkUnitID="{4640899B-4071-49AD-BD7F-E96787417DC9}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
+								<ObjectList Name="Playlist">
+									<Reference>
+										<ObjectRef Name="dweller killed" ID="{9FAA4F74-5B12-4DD7-9DEE-EA0D33677229}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="dweller killed_01" ID="{EE3EDBCE-BF55-4FEC-AB0C-728987BFB99F}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="dweller killed_02" ID="{9C892E70-60AC-4BCF-A813-27CEA7364DBF}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
 									</Reference>
 								</ObjectList>
 							</ObjectLists>
@@ -10955,6 +11121,18 @@
 									</GroupingInfo>
 								</SwitchContainer>
 								<Sound Name="LevelTransition" ID="{70A1D236-2ABE-4DF6-8B38-4C8FD4AA9409}" ShortID="142664952">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>0.15</Value>
+											</ValueList>
+										</Property>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
@@ -11129,6 +11307,18 @@
 									</ObjectLists>
 								</RandomSequenceContainer>
 								<Sound Name="PauseDeathTransition" ID="{3A225949-621B-4C9D-AF06-146EFC7A00D1}" ShortID="303309478">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
@@ -12051,7 +12241,6 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="UI Timer SEQ v1" ID="{3C1C4C47-1BD8-482F-92DD-5E72FB160BEF}">
-													<Comment> </Comment>
 													<PropertyList>
 														<Property Name="FadeInDuration" Type="Real64" Value="0.0368847376788553"/>
 														<Property Name="FadeOutDuration" Type="Real64" Value="0.233603338632751"/>
@@ -12088,7 +12277,6 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="UI Timer SEQ v1" ID="{2EE8210F-690E-4B15-AA88-DF21F664B418}">
-													<Comment> </Comment>
 													<PropertyList>
 														<Property Name="FadeInDuration" Type="Real64" Value="0.0614745627980922"/>
 														<Property Name="FadeOutDuration" Type="Real64" Value="0.239750794912559"/>
@@ -12125,7 +12313,6 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="UI Timer SEQ v1" ID="{71A3640E-EF8B-4FFB-BEE5-155625A700A5}">
-													<Comment> </Comment>
 													<PropertyList>
 														<Property Name="FadeInDuration" Type="Real64" Value="0.0410100222538818"/>
 														<Property Name="FadeOutDuration" Type="Real64" Value="0.239750794912559"/>
@@ -12162,7 +12349,6 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="UI Timer SEQ v1" ID="{2287E31A-13F8-4C2F-BD1F-956894D593EC}">
-													<Comment> </Comment>
 													<PropertyList>
 														<Property Name="FadeInDuration" Type="Real64" Value="0.0410100222538818"/>
 														<Property Name="FadeOutDuration" Type="Real64" Value="0.239750794912559"/>
@@ -12192,7 +12378,6 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="UI Timer SEQ v1" ID="{C07AAB5E-D1DE-419D-86BE-1153D1496A6F}">
-													<Comment> </Comment>
 													<PropertyList>
 														<Property Name="FadeInDuration" Type="Real64" Value="0.0410100222538818"/>
 														<Property Name="FadeOutDuration" Type="Real64" Value="0.239750794912559"/>
@@ -12222,7 +12407,6 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="UI Timer SEQ v1" ID="{FEBE540A-40D1-44BF-ACC5-F5576052F520}">
-													<Comment> </Comment>
 													<PropertyList>
 														<Property Name="FadeInDuration" Type="Real64" Value="0.0410100222538818"/>
 														<Property Name="FadeOutDuration" Type="Real64" Value="0.239750794912559"/>
@@ -12252,7 +12436,6 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="UI Timer SEQ v1" ID="{5C284214-FA22-47E6-A973-E272BE0F10F7}">
-													<Comment> </Comment>
 													<PropertyList>
 														<Property Name="FadeInDuration" Type="Real64" Value="0.0410100222538818"/>
 														<Property Name="FadeOutDuration" Type="Real64" Value="0.239750794912559"/>
@@ -12282,7 +12465,6 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="UI Timer SEQ v1" ID="{0FF63675-4818-4E4D-9926-CDB93A98C19B}">
-													<Comment> </Comment>
 													<PropertyList>
 														<Property Name="FadeInDuration" Type="Real64" Value="0.0410100222538818"/>
 														<Property Name="FadeOutDuration" Type="Real64" Value="0.239750794912559"/>
@@ -12319,7 +12501,6 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="UI Timer SEQ v1" ID="{B1EA5617-3236-47E4-832D-7C64B66EC372}">
-													<Comment> </Comment>
 													<PropertyList>
 														<Property Name="FadeInDuration" Type="Real64" Value="0.0410100222538818"/>
 														<Property Name="FadeOutDuration" Type="Real64" Value="0.239750794912559"/>
@@ -12356,7 +12537,6 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="UI Timer SEQ v1" ID="{0C269B4F-8C15-4C6C-B7E1-8DDABDFD58CA}">
-													<Comment> </Comment>
 													<PropertyList>
 														<Property Name="FadeInDuration" Type="Real64" Value="0.0410100222538818"/>
 														<Property Name="FadeOutDuration" Type="Real64" Value="0.239750794912559"/>
@@ -12393,7 +12573,6 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="UI Timer SEQ v1" ID="{05B43FB0-AE23-49B4-84CD-F10DC7B10B21}">
-													<Comment> </Comment>
 													<PropertyList>
 														<Property Name="FadeInDuration" Type="Real64" Value="0.0410100222538818"/>
 														<Property Name="FadeOutDuration" Type="Real64" Value="0.239750794912559"/>
@@ -12737,6 +12916,13 @@
 									</ObjectLists>
 								</RandomSequenceContainer>
 								<ActorMixer Name="Objectives" ID="{C33B7CD5-9583-4206-ADB2-55BF9220D4E6}" ShortID="728298456">
+									<PropertyList>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
@@ -12798,7 +12984,6 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="NewObjectives v1" ID="{754A4C34-4952-49FA-8E0D-07B7465D0655}">
-													<Comment> </Comment>
 													<PropertyList>
 														<Property Name="FadeInDuration" Type="Real64" Value="0.0269328148913814"/>
 														<Property Name="FadeOutDuration" Type="Real64" Value="0.738260069444445"/>
@@ -12979,6 +13164,11 @@
 						<BlendContainer Name="AmbMaster" ID="{B07995C9-2EA2-436D-9D7D-843D8CD906CE}" ShortID="380389888">
 							<PropertyList>
 								<Property Name="BlendBehavior" Type="int16" Value="1"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-1</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -13001,11 +13191,6 @@
 										<Property Name="Highpass" Type="int16">
 											<ValueList>
 												<Value>14</Value>
-											</ValueList>
-										</Property>
-										<Property Name="MakeUpGain" Type="Real64">
-											<ValueList>
-												<Value>5</Value>
 											</ValueList>
 										</Property>
 										<Property Name="OverrideEffect" Type="bool" Value="True"/>
@@ -13051,7 +13236,7 @@
 														</Property>
 														<Property Name="MakeUpGain" Type="Real64">
 															<ValueList>
-																<Value>-6</Value>
+																<Value>-3</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -13130,7 +13315,7 @@
 														</Property>
 														<Property Name="MakeUpGain" Type="Real64">
 															<ValueList>
-																<Value>11</Value>
+																<Value>8</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -13309,6 +13494,466 @@
 																								<XPos>72.39892</XPos>
 																								<YPos>-3.93373</YPos>
 																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>100</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{03D54DD6-1DB8-4939-8990-A0C0D4142312}" ShortID="642110928">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Pitch"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_ambiance_arena_attenuation_2" ID="{EA8AF461-B766-4DD2-8631-7F55AAE8747C}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{55FA691E-4D13-4131-B661-D78360729DA2}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="65537"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>-269</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>60.74805</XPos>
+																								<YPos>-230</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>100</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{D7240016-085C-40C3-9B61-C1DE63A0613A}" ShortID="801103625">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Volume"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_ambiance_arena_attenuation_2" ID="{EA8AF461-B766-4DD2-8631-7F55AAE8747C}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{38CF7A66-E755-499D-BA8A-D93363F4A76F}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>-3.78406000000001</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>72.39892</XPos>
+																								<YPos>-3.93373</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>100</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{488A423A-F3DB-494A-B4CA-D152C61C2904}" ShortID="307460171">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_ambiance_arena_attenuation_3" ID="{E1DD84DA-D82C-4C17-8BDA-C010D5167BC5}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{49F7BAA8-9AF4-4A6F-AFED-9D4CE3014515}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="65537"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>18</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>100</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{5647B96A-5379-4A80-AE85-2EB84389863E}" ShortID="665381276">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Pitch"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_ambiance_arena_attenuation_3" ID="{E1DD84DA-D82C-4C17-8BDA-C010D5167BC5}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{6030C473-9214-41D7-891C-09F208EAC904}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="65537"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>-269</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>60.74805</XPos>
+																								<YPos>-230</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>100</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{9219156B-C615-4DF7-BE03-1EFD48F0AC04}" ShortID="275013383">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Volume"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_ambiance_arena_attenuation_3" ID="{E1DD84DA-D82C-4C17-8BDA-C010D5167BC5}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{A9316792-E4D6-4168-8972-D37F246FEE07}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>-3.78406000000001</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>72.39892</XPos>
+																								<YPos>-3.93373</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>100</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{2B777259-468E-44ED-B664-6D7454E6D3E6}" ShortID="518905413">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_ambiance_arena_attenuation_4" ID="{FB6A7247-9003-4512-90F8-01E3B6CFFDD4}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{90826A90-6661-4B93-B422-2B7C767B63D9}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="65537"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>18</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>100</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{AF2FCAF6-CA18-4535-85E2-834BB9B1A048}" ShortID="350544055">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Pitch"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_ambiance_arena_attenuation_4" ID="{FB6A7247-9003-4512-90F8-01E3B6CFFDD4}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{D0BF7771-A4FF-4870-83A5-8D29BCFDC425}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="65537"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>-269</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>60.74805</XPos>
+																								<YPos>-230</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>100</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{5D0ECED8-B95A-4BFC-8210-B1B465B3CEEA}" ShortID="477154283">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Volume"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_ambiance_arena_attenuation_4" ID="{FB6A7247-9003-4512-90F8-01E3B6CFFDD4}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{B69395A6-6352-46AD-8F0B-B8405143078B}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>-3.78406000000001</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>72.39892</XPos>
+																								<YPos>-3.93373</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>100</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{2479EF51-F1EE-4F63-AEBD-C65707FEB875}" ShortID="433707179">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_ambiance_arena_attenuation_5" ID="{E2C325AA-3B9D-4104-84D4-2D6A0699603E}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{8F9A299A-C40D-40D3-925C-B5F7C55052FB}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="65537"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>18</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>100</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{47318AF7-3D9A-4981-903B-849F6E1919D6}" ShortID="599357479">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Pitch"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_ambiance_arena_attenuation_5" ID="{E2C325AA-3B9D-4104-84D4-2D6A0699603E}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{B83AFA6F-09E6-4853-9E04-8F340F1254D2}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="65537"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>-269</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>60.74805</XPos>
+																								<YPos>-230</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>100</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{8025D0BF-A0EC-4F3A-A752-36AD1AD22A18}" ShortID="857872495">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Volume"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_ambiance_arena_attenuation_5" ID="{E2C325AA-3B9D-4104-84D4-2D6A0699603E}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{C858B946-F819-4EC0-9AFC-8446B53DBD78}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>-3.78406000000001</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>72.39892</XPos>
+																								<YPos>-3.93373</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>100</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{90D83D6F-E992-4654-AC0C-F57B38013CB2}" ShortID="160585628">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_ambiance_arena_attenuation_2" ID="{EA8AF461-B766-4DD2-8631-7F55AAE8747C}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{D1A75966-30CD-4C8C-96B9-0A49351D54F3}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="65537"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>18</YPos>
+																								<Flags>5</Flags>
 																							</Point>
 																							<Point>
 																								<XPos>100</XPos>
@@ -13522,6 +14167,486 @@
 																	</RTPC>
 																</Local>
 															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{C96CD1F2-81B3-4DAD-B8E3-E454915D4B3F}" ShortID="301106147">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_ambiance_arena_attenuation_2" ID="{EA8AF461-B766-4DD2-8631-7F55AAE8747C}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{EF943F7A-6A1C-4E05-BB0A-62653E87D166}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="65537"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>12</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>72.15625</XPos>
+																								<YPos>12</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>100</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{84BF665A-D2F7-4DD3-985F-B040522BF160}" ShortID="866895897">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Volume"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_ambiance_arena_attenuation_2" ID="{EA8AF461-B766-4DD2-8631-7F55AAE8747C}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{F3A86621-7A43-4259-9936-B23035C32B8D}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>-5.07321999999999</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>71.21256</XPos>
+																								<YPos>-4.93493000000001</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>100</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{5F824FD8-88FC-43C8-90BD-3F42E991A109}" ShortID="947509784">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Pitch"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_ambiance_arena_attenuation_2" ID="{EA8AF461-B766-4DD2-8631-7F55AAE8747C}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{9DD8C495-87F6-4EB6-8696-23E9485BB412}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="65537"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>-269</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>71.76953</XPos>
+																								<YPos>-419</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>100</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{25FD299C-D72D-4760-8BC0-E753DC2CF163}" ShortID="940711984">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_ambiance_arena_attenuation_3" ID="{E1DD84DA-D82C-4C17-8BDA-C010D5167BC5}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{8170818A-3D4C-4619-846C-FC293FC45E73}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="65537"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>12</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>72.15625</XPos>
+																								<YPos>12</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>100</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{2373A4CD-9AB4-4D11-8FFA-BEC34E17A374}" ShortID="131063598">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Volume"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_ambiance_arena_attenuation_3" ID="{E1DD84DA-D82C-4C17-8BDA-C010D5167BC5}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{FECF4852-9BDC-4F6A-B42B-DC1492ACB6CA}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>-5.07321999999999</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>71.21256</XPos>
+																								<YPos>-4.93493000000001</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>100</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{445C31C9-F444-4C9A-AA7D-821CBEC7DECE}" ShortID="707758110">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Pitch"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_ambiance_arena_attenuation_3" ID="{E1DD84DA-D82C-4C17-8BDA-C010D5167BC5}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{B25F25F2-1815-4E55-BED6-61558DF1F27C}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="65537"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>-269</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>71.76953</XPos>
+																								<YPos>-419</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>100</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{CD9D92ED-9065-47BF-B409-9BB8AA8859DC}" ShortID="779694566">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_ambiance_arena_attenuation_4" ID="{FB6A7247-9003-4512-90F8-01E3B6CFFDD4}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{4CC99221-D0EC-4137-A7C2-5E3E603C5676}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="65537"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>12</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>72.15625</XPos>
+																								<YPos>12</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>100</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{26C9E900-34A9-4382-A2E4-C49B4DB6AEC3}" ShortID="949713406">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Volume"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_ambiance_arena_attenuation_4" ID="{FB6A7247-9003-4512-90F8-01E3B6CFFDD4}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{B3EFCC59-32ED-420E-ACA0-EE538908A666}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>-5.07321999999999</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>71.21256</XPos>
+																								<YPos>-4.93493000000001</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>100</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{62AADE36-F1E7-48F1-96C8-2278906D532E}" ShortID="108410446">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Pitch"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_ambiance_arena_attenuation_4" ID="{FB6A7247-9003-4512-90F8-01E3B6CFFDD4}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{BC875AA5-C49E-44BD-B06B-BD652E7BC7DE}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="65537"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>-269</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>71.76953</XPos>
+																								<YPos>-419</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>100</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{4B3D8083-A58B-404C-B55D-524C47F17EA6}" ShortID="567874201">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_ambiance_arena_attenuation_5" ID="{E2C325AA-3B9D-4104-84D4-2D6A0699603E}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{99D9C251-0E24-4786-ADA9-91D3CBF47A71}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="65537"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>12</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>72.15625</XPos>
+																								<YPos>12</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>100</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{4889314A-FB5A-4891-8472-11461613E325}" ShortID="519482042">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Volume"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_ambiance_arena_attenuation_5" ID="{E2C325AA-3B9D-4104-84D4-2D6A0699603E}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{681C6146-D2E5-4C42-BBC2-A23DC62FB940}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>-5.07321999999999</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>71.21256</XPos>
+																								<YPos>-4.93493000000001</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>100</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{648B7C19-A45C-4512-AAFB-97F327BFFFD9}" ShortID="652583224">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Pitch"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_ambiance_arena_attenuation_5" ID="{E2C325AA-3B9D-4104-84D4-2D6A0699603E}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{6512E21F-3614-4847-97D0-949F29DDA61D}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="65537"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>-269</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>71.76953</XPos>
+																								<YPos>-419</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>100</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
 														</ObjectList>
 													</ObjectLists>
 													<ActiveSourceList>
@@ -13634,7 +14759,7 @@
 														</Property>
 														<Property Name="MakeUpGain" Type="Real64">
 															<ValueList>
-																<Value>3</Value>
+																<Value>4</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -13713,7 +14838,7 @@
 														</Property>
 														<Property Name="MakeUpGain" Type="Real64">
 															<ValueList>
-																<Value>2</Value>
+																<Value>3</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -13893,9 +15018,10 @@
 												</Sound>
 												<Sound Name="continuous wind lc v2-glued" ID="{B499A5D9-2676-49F8-BDCC-17C5A43B2DD9}" ShortID="709653138">
 													<PropertyList>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 														<Property Name="MakeUpGain" Type="Real64">
 															<ValueList>
-																<Value>8</Value>
+																<Value>6</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -14003,6 +15129,166 @@
 																							<Point>
 																								<XPos>71.57295</XPos>
 																								<YPos>-5.73475</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>100</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{7CD0956E-E3DB-478C-8BB4-DE7ED85B16F4}" ShortID="37916818">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Volume"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_ambiance_arena_attenuation_2" ID="{EA8AF461-B766-4DD2-8631-7F55AAE8747C}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{14FC6420-3343-42B1-A61F-19FE5BC0827A}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>-5.82417000000001</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>71.57295</XPos>
+																								<YPos>-5.73474999999999</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>100</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{1FD326EE-BC42-4FD8-B775-EECE378E9893}" ShortID="639318045">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Volume"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_ambiance_arena_attenuation_3" ID="{E1DD84DA-D82C-4C17-8BDA-C010D5167BC5}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{019B6073-E826-4C9C-A788-5DB0ED5AD918}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>-5.82417000000001</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>71.57295</XPos>
+																								<YPos>-5.73474999999999</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>100</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{B1D2FA10-BF16-45C8-96CB-91A4E9BC7595}" ShortID="262191544">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Volume"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_ambiance_arena_attenuation_4" ID="{FB6A7247-9003-4512-90F8-01E3B6CFFDD4}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{193092F9-0A99-45FF-AB42-BA760C3FD4AF}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>-5.82417000000001</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>71.57295</XPos>
+																								<YPos>-5.73474999999999</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>100</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{CAB3CA5D-7C35-46CA-9271-6DDEDE98F24A}" ShortID="326190340">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Volume"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_ambiance_arena_attenuation_5" ID="{E2C325AA-3B9D-4104-84D4-2D6A0699603E}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{A304AF03-F5AD-4C73-B73A-CBF34F00746E}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>-5.82417000000001</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>71.57295</XPos>
+																								<YPos>-5.73474999999999</YPos>
 																								<Flags>0</Flags>
 																							</Point>
 																							<Point>
@@ -14172,17 +15458,17 @@
 																		<PointList>
 																			<Point>
 																				<XPos>1</XPos>
-																				<YPos>-1.4568</YPos>
+																				<YPos>-0.85699</YPos>
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>68.09197</XPos>
-																				<YPos>-1.58749</YPos>
+																				<XPos>60.55289</XPos>
+																				<YPos>-0.91553</YPos>
 																				<Flags>0</Flags>
 																			</Point>
 																			<Point>
 																				<XPos>100</XPos>
-																				<YPos>4.09056</YPos>
+																				<YPos>2.66155</YPos>
 																				<Flags>37</Flags>
 																			</Point>
 																		</PointList>
@@ -14212,12 +15498,417 @@
 																		<PointList>
 																			<Point>
 																				<XPos>1</XPos>
-																				<YPos>17</YPos>
+																				<YPos>16</YPos>
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
 																				<XPos>69.31664</XPos>
+																				<YPos>15</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{3A5CEF51-7455-4591-A7D7-4DDFEA4FC9A5}" ShortID="515357962">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="rtpc_ambiance_arena_attenuation_2" ID="{EA8AF461-B766-4DD2-8631-7F55AAE8747C}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{78305508-76AB-4BBF-A83B-3A2E0D926D02}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>1</XPos>
+																				<YPos>-0.85699</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>60.55289</XPos>
+																				<YPos>-0.91553</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>2.66155</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{5EB58991-D155-4F23-ADAE-0613DF558559}" ShortID="724448120">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="rtpc_ambiance_arena_attenuation_3" ID="{E1DD84DA-D82C-4C17-8BDA-C010D5167BC5}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{76BA2B9F-5B36-4446-A5FC-0709DE750D32}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="65537"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>1</XPos>
 																				<YPos>16</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>69.31664</XPos>
+																				<YPos>15</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{3DDAC863-EF12-42CE-BB96-CB5EFCCF855A}" ShortID="372994885">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="rtpc_ambiance_arena_attenuation_3" ID="{E1DD84DA-D82C-4C17-8BDA-C010D5167BC5}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{6E497DE1-668A-4718-9099-768ECA7F85B7}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>1</XPos>
+																				<YPos>-0.85699</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>60.55289</XPos>
+																				<YPos>-0.91553</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>2.66155</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{4B44D0AE-08A4-472D-915D-395849B7EAB3}" ShortID="122793498">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="rtpc_ambiance_arena_attenuation_4" ID="{FB6A7247-9003-4512-90F8-01E3B6CFFDD4}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{5856E4AC-EE64-4CBC-AB68-18D5BEF9E8C5}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="65537"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>1</XPos>
+																				<YPos>16</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>69.31664</XPos>
+																				<YPos>15</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{554F88DD-A73B-4F2E-9BF2-1103031FE73D}" ShortID="1017234513">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="rtpc_ambiance_arena_attenuation_4" ID="{FB6A7247-9003-4512-90F8-01E3B6CFFDD4}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{C2A7E09F-B90D-41C4-B898-31838A0D5FE2}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>1</XPos>
+																				<YPos>-0.85699</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>60.55289</XPos>
+																				<YPos>-0.91553</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>2.66155</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{93C3CDC3-13DE-4185-9E06-0CE07DCDDECE}" ShortID="986980395">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="rtpc_ambiance_arena_attenuation_5" ID="{E2C325AA-3B9D-4104-84D4-2D6A0699603E}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{806DA76D-6426-4D23-83E5-4E54D7295142}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="65537"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>1</XPos>
+																				<YPos>16</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>69.31664</XPos>
+																				<YPos>15</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{8DF83915-2FD8-43B0-83B4-62CBBB0F483E}" ShortID="1059760120">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="rtpc_ambiance_arena_attenuation_5" ID="{E2C325AA-3B9D-4104-84D4-2D6A0699603E}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{AC1E7A0E-1D73-4DE7-AD4B-6D87B438C3CE}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>1</XPos>
+																				<YPos>-0.85699</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>60.55289</XPos>
+																				<YPos>-0.91553</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>2.66155</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{5DF7DC2F-1371-4D60-A922-B34AD666CEBD}" ShortID="609608821">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="rtpc_ambiance_arena_attenuation_2" ID="{EA8AF461-B766-4DD2-8631-7F55AAE8747C}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{C5038C2A-48B4-45DD-ADD1-8043853EDBE8}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="65537"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>1</XPos>
+																				<YPos>16</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>69.31664</XPos>
+																				<YPos>15</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{BED1B617-4294-4BCD-8201-01A9DF70435C}" ShortID="511604855">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="rtpc_ambiance_arena_attenuation_6" ID="{5549EE49-FB6F-43EB-B17E-9C1D3C01F8A6}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{89487599-071F-44F3-A680-E0AF12BAE90F}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>1</XPos>
+																				<YPos>-2.31672</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>92.16333</XPos>
+																				<YPos>-2.14878</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>96.9587</XPos>
+																				<YPos>-1.13871</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{77DCCFE2-A5C7-462F-8F46-7F5522AB38CA}" ShortID="744121837">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="rtpc_ambiance_arena_attenuation_6" ID="{5549EE49-FB6F-43EB-B17E-9C1D3C01F8A6}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{71A3908C-074B-4EDB-9EAC-1F7C777CE5A0}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="65537"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>1</XPos>
+																				<YPos>10</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>90.2475</XPos>
+																				<YPos>15</YPos>
 																				<Flags>0</Flags>
 																			</Point>
 																			<Point>
@@ -14302,10 +15993,20 @@
 									<ValueList>
 										<Value>5</Value>
 									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{EF290096-6777-4F3A-807C-ABE5839EC6D7}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="5"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
 								</Property>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>3</Value>
+										<Value>-5</Value>
 									</ValueList>
 								</Property>
 								<Property Name="Pitch" Type="int32">
@@ -14326,7 +16027,7 @@
 									<Custom CreatedFrom="{52BA5153-2B72-4E50-BC0C-AC4B43C34755}">
 										<Attenuation Name="Thunder (Custom)" ID="{0230FFFE-3BC1-4974-88C3-E228C3F37F93}" ShortID="466351523">
 											<PropertyList>
-												<Property Name="RadiusMax" Type="Real64" Value="6000"/>
+												<Property Name="RadiusMax" Type="Real64" Value="4000"/>
 											</PropertyList>
 											<CurveUsageInfoList>
 												<VolumeDryUsage>
@@ -14338,24 +16039,24 @@
 															<PointList>
 																<Point>
 																	<XPos>0</XPos>
-																	<YPos>0</YPos>
+																	<YPos>-2.97576</YPos>
 																	<Flags>5</Flags>
 																	<SegmentShape>Log2</SegmentShape>
 																</Point>
 																<Point>
-																	<XPos>2216.037732</XPos>
-																	<YPos>-6.25057</YPos>
+																	<XPos>1460.16651333333</XPos>
+																	<YPos>-8.94263</YPos>
 																	<Flags>0</Flags>
 																	<SegmentShape>Exp2</SegmentShape>
 																</Point>
 																<Point>
-																	<XPos>5000.943396</XPos>
+																	<XPos>3333.962264</XPos>
 																	<YPos>-13.70757</YPos>
 																	<Flags>0</Flags>
 																	<SegmentShape>Log2</SegmentShape>
 																</Point>
 																<Point>
-																	<XPos>6000</XPos>
+																	<XPos>4000</XPos>
 																	<YPos>-15.96926</YPos>
 																	<Flags>37</Flags>
 																</Point>
@@ -14379,12 +16080,12 @@
 																	<Flags>5</Flags>
 																</Point>
 																<Point>
-																	<XPos>5953.84615384615</XPos>
+																	<XPos>3969.23076923077</XPos>
 																	<YPos>-42.2788670461367</YPos>
 																	<Flags>0</Flags>
 																</Point>
 																<Point>
-																	<XPos>6000</XPos>
+																	<XPos>4000</XPos>
 																	<YPos>-200</YPos>
 																	<Flags>37</Flags>
 																</Point>
@@ -14405,12 +16106,12 @@
 																	<Flags>5</Flags>
 																</Point>
 																<Point>
-																	<XPos>4527.16262</XPos>
+																	<XPos>3018.10841333333</XPos>
 																	<YPos>5</YPos>
 																	<Flags>0</Flags>
 																</Point>
 																<Point>
-																	<XPos>6000</XPos>
+																	<XPos>4000</XPos>
 																	<YPos>6</YPos>
 																	<Flags>37</Flags>
 																</Point>
@@ -14432,8 +16133,14 @@
 																	<SegmentShape>Exp1</SegmentShape>
 																</Point>
 																<Point>
-																	<XPos>6000</XPos>
-																	<YPos>24</YPos>
+																	<XPos>1742.12034666667</XPos>
+																	<YPos>20</YPos>
+																	<Flags>0</Flags>
+																	<SegmentShape>Log1</SegmentShape>
+																</Point>
+																<Point>
+																	<XPos>4000</XPos>
+																	<YPos>23</YPos>
 																	<Flags>37</Flags>
 																</Point>
 															</PointList>
@@ -14454,13 +16161,13 @@
 																	<SegmentShape>Log2</SegmentShape>
 																</Point>
 																<Point>
-																	<XPos>1540.82645</XPos>
+																	<XPos>2081.65889333333</XPos>
 																	<YPos>0</YPos>
 																	<Flags>0</Flags>
 																	<SegmentShape>Exp2</SegmentShape>
 																</Point>
 																<Point>
-																	<XPos>6000</XPos>
+																	<XPos>4000</XPos>
 																	<YPos>0</YPos>
 																	<Flags>37</Flags>
 																</Point>
@@ -15124,6 +16831,486 @@
 											</RTPC>
 										</Local>
 									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{E3180F48-1657-4C67-876F-E3B62513E37E}" ShortID="118392724">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="rtpc_ambiance_arena_attenuation_2" ID="{EA8AF461-B766-4DD2-8631-7F55AAE8747C}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{127AE94E-8973-48EC-B70D-1201DCDEC2CD}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>-2.84123</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>77.9449</XPos>
+																		<YPos>-2.56594000000001</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>88.92753</XPos>
+																		<YPos>4.36990000000003</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>4.36990000000003</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{549C0439-6DCA-4E16-9D8E-7B434D5B84B7}" ShortID="412713401">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Pitch"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="rtpc_ambiance_arena_attenuation_2" ID="{EA8AF461-B766-4DD2-8631-7F55AAE8747C}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{5221459B-370F-42C6-9667-E9FD22C9D2F3}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>-490</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>74.7359</XPos>
+																		<YPos>-292</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>87.07418</XPos>
+																		<YPos>26</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>46</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{EC2DCC6E-13B7-4F1F-8353-145AE07F9AF4}" ShortID="411605704">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="rtpc_ambiance_arena_attenuation_3" ID="{E1DD84DA-D82C-4C17-8BDA-C010D5167BC5}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{3BF346C2-50AC-4299-A5D7-C4462937C989}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>-2.84123</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>77.9449</XPos>
+																		<YPos>-2.56594000000001</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>88.92753</XPos>
+																		<YPos>4.36990000000003</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>4.36990000000003</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{66874753-A5DD-41E8-BFFE-939F48696EAD}" ShortID="178048799">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Pitch"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="rtpc_ambiance_arena_attenuation_3" ID="{E1DD84DA-D82C-4C17-8BDA-C010D5167BC5}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{580153CE-4189-4664-A301-D46950AAB3B6}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>-490</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>74.7359</XPos>
+																		<YPos>-292</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>87.07418</XPos>
+																		<YPos>26</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>46</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{50728898-08F2-4D1B-BA03-ADA00CB05ED1}" ShortID="338471284">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="rtpc_ambiance_arena_attenuation_4" ID="{FB6A7247-9003-4512-90F8-01E3B6CFFDD4}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{D080694F-5411-420E-A177-CBF648AE4BAE}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>-2.84123</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>77.9449</XPos>
+																		<YPos>-2.56594000000001</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>88.92753</XPos>
+																		<YPos>4.36990000000003</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>4.36990000000003</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{28F53F25-C186-4BA7-AE3F-935287C63531}" ShortID="826086305">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Pitch"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="rtpc_ambiance_arena_attenuation_4" ID="{FB6A7247-9003-4512-90F8-01E3B6CFFDD4}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{E8A333A6-D228-4C82-A59F-C9838F984FA9}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>-490</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>74.7359</XPos>
+																		<YPos>-292</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>87.07418</XPos>
+																		<YPos>26</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>46</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{2885FCC1-4563-437C-8597-859A3CC6CAC0}" ShortID="942867507">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="rtpc_ambiance_arena_attenuation_5" ID="{E2C325AA-3B9D-4104-84D4-2D6A0699603E}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{482B1EF2-C9ED-413D-A115-3521915EDAB7}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>-2.84123</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>77.9449</XPos>
+																		<YPos>-2.56594000000001</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>88.92753</XPos>
+																		<YPos>4.36990000000003</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>4.36990000000003</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{DA4E24B7-D4E6-4886-9D4D-CE54632D85B6}" ShortID="71361163">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Pitch"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="rtpc_ambiance_arena_attenuation_5" ID="{E2C325AA-3B9D-4104-84D4-2D6A0699603E}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{80B96439-8C8A-42B3-AD2C-D05E50059D1D}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>-490</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>74.7359</XPos>
+																		<YPos>-292</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>87.07418</XPos>
+																		<YPos>26</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>46</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{09612A5B-C6DD-4A6B-A966-107486573324}" ShortID="859519502">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="rtpc_chaos_global" ID="{912B7FBA-E859-424B-9664-D9B8B51FC1BA}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{F1BC85E6-8065-400B-9A67-C99402BB2027}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-5.36817</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>0.499035865792518</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{060F91B3-39E8-4E56-9EDF-07862A3F8D71}" ShortID="349496051">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Highpass"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="rtpc_chaos_global" ID="{912B7FBA-E859-424B-9664-D9B8B51FC1BA}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{CE2A40F2-FF79-4E4D-A7B9-AACA18BA0FF6}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>17</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>0.499035865792518</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{F1EB577E-98E8-4AD0-AD93-1583A85DA074}" ShortID="908117374">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="rtpc_chaos_global" ID="{912B7FBA-E859-424B-9664-D9B8B51FC1BA}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{D29B2BA9-0618-422C-ABE7-056CD88305EF}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>16</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>0.49942</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
 								</ObjectList>
 							</ObjectLists>
 						</RandomSequenceContainer>
@@ -15520,11 +17707,13 @@
 						<Sound Name="BasaltGate close v1" ID="{79AEBB70-EA25-43B5-ACEE-CC3889F5CBE7}" ShortID="94122216">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="Color" Type="int16" Value="18"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
 										<Value>2</Value>
 									</ValueList>
 								</Property>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -15534,7 +17723,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+									<ObjectRef Name="LocalWorldEnviro" ID="{A4AD30AF-92F2-40D4-922B-E13F9A0CE957}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -15655,6 +17844,7 @@
 						<Sound Name="BasaltGate idle v1" ID="{57BE5F14-D440-4DD1-A284-7304FC7F2ACB}" ShortID="831188566">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="Color" Type="int16" Value="18"/>
 								<Property Name="Highpass" Type="int16">
 									<ValueList>
 										<Value>20</Value>
@@ -15666,6 +17856,7 @@
 										<Value>22</Value>
 									</ValueList>
 								</Property>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -15675,7 +17866,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+									<ObjectRef Name="LocalWorldEnviro" ID="{A4AD30AF-92F2-40D4-922B-E13F9A0CE957}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -15719,11 +17910,13 @@
 						<Sound Name="BasaltGate open v1" ID="{68A44275-41E7-4D70-8D6C-5B6F8EEB8543}" ShortID="164568101">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="Color" Type="int16" Value="18"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>4</Value>
+										<Value>3</Value>
 									</ValueList>
 								</Property>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -15733,7 +17926,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+									<ObjectRef Name="LocalWorldEnviro" ID="{A4AD30AF-92F2-40D4-922B-E13F9A0CE957}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -15852,6 +18045,15 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="CheckpointCrossed" ID="{94647F2B-542A-43C2-97E5-91EC2597CA86}" ShortID="1066392879">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="18"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
 									<ObjectRef Name="Checkpoint" ID="{119028DF-EDD7-41E1-B21C-A206E7037EEC}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
@@ -15860,7 +18062,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+									<ObjectRef Name="LocalWorldEnviro" ID="{A4AD30AF-92F2-40D4-922B-E13F9A0CE957}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -15885,12 +18087,14 @@
 						<Sound Name="CheckpointLoop" ID="{808312DE-B744-40E3-8E66-1DBAF843D9EE}" ShortID="815808717">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="Color" Type="int16" Value="18"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>12</Value>
+										<Value>19</Value>
 									</ValueList>
 								</Property>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -15900,7 +18104,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+									<ObjectRef Name="CheckpointBus" ID="{68623E43-C5E9-4489-A195-CBB7F871EA5D}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -17865,6 +20069,11 @@
 							<ChildrenList>
 								<BlendContainer Name="Dash" ID="{98D36608-3301-4600-8537-15FF80140E2C}" ShortID="289222118">
 									<PropertyList>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
@@ -19112,7 +21321,7 @@
 														</Property>
 														<Property Name="MakeUpGain" Type="Real64">
 															<ValueList>
-																<Value>-2</Value>
+																<Value>1</Value>
 															</ValueList>
 															<ModifierList>
 																<ModifierInfo>
@@ -28236,7 +30445,7 @@
 											<PropertyList>
 												<Property Name="MakeUpGain" Type="Real64">
 													<ValueList>
-														<Value>-10</Value>
+														<Value>-6</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -28372,541 +30581,6 @@
 														<ActiveSource Name="Soundseed Grain" ID="{A850B7EE-DDC5-4121-B336-FA1BDC67E159}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<BlendContainer Name="AIR WIND" ID="{821E7523-8245-4D9B-BBA5-65D6AD8BF3D4}" ShortID="251170835">
-													<PropertyList>
-														<Property Name="MakeUpGain" Type="Real64">
-															<ValueList>
-																<Value>-25</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<Sound Name="AIR WINDL" ID="{02DBBEBD-D108-4D2D-BE4D-07BF78288799}" ShortID="836284963">
-															<PropertyList>
-																<Property Name="Highpass" Type="int16">
-																	<ValueList>
-																		<Value>17</Value>
-																	</ValueList>
-																</Property>
-																<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-																<Property Name="IsStreamingEnabled" Type="bool">
-																	<ValueList>
-																		<Value>True</Value>
-																	</ValueList>
-																</Property>
-															</PropertyList>
-															<ReferenceList>
-																<Reference Name="Conversion">
-																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
-																</Reference>
-																<Reference Name="OutputBus">
-																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
-																</Reference>
-															</ReferenceList>
-															<ChildrenList>
-																<SourcePlugin Name="Soundseed Air Wind" ID="{E771676E-844A-4AEA-B54B-14CF9C780260}" ShortID="255961296" PluginName="SoundSeed Air Wind" CompanyID="0" PluginID="119">
-																	<PropertyList>
-																		<Property Name="AverageVelocity" Type="Real32" Value="-840"/>
-																		<Property Name="Duration" Type="Real64" Value="60"/>
-																		<Property Name="FrequencyScale" Type="Real32" Value="-1.1"/>
-																		<Property Name="Gustiness" Type="Real32" Value="0.28"/>
-																		<Property Name="PlaybackRate" Type="Real32" Value="2.2"/>
-																		<Property Name="Variability" Type="Real32" Value="0.26"/>
-																		<Property Name="VariabilityRandom" Type="Real32" Value="0.47"/>
-																	</PropertyList>
-																	<ObjectLists>
-																		<ObjectList Name="RTPC">
-																			<Reference>
-																				<Local>
-																					<RTPC Name="" ID="{289709C0-BE9B-495C-A1C2-93C6CD59BADF}" ShortID="923343998">
-																						<PropertyList>
-																							<Property Name="PropertyName" Type="string" Value="Gustiness"/>
-																						</PropertyList>
-																						<ReferenceList>
-																							<Reference Name="ControlInput">
-																								<ObjectRef Name="rtpc_player_airspeed" ID="{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
-																							</Reference>
-																							<Reference Name="Curve">
-																								<Custom>
-																									<Curve Name="" ID="{538DF211-2E2E-4ADC-A827-A8243A68A948}">
-																										<PropertyList>
-																											<Property Name="Flags" Type="int32" Value="1"/>
-																										</PropertyList>
-																										<PointList>
-																											<Point>
-																												<XPos>0</XPos>
-																												<YPos>0.07364</YPos>
-																												<Flags>5</Flags>
-																											</Point>
-																											<Point>
-																												<XPos>0.63533</XPos>
-																												<YPos>0.29583</YPos>
-																												<Flags>0</Flags>
-																											</Point>
-																											<Point>
-																												<XPos>0.89329</XPos>
-																												<YPos>0.45137</YPos>
-																												<Flags>0</Flags>
-																											</Point>
-																											<Point>
-																												<XPos>1</XPos>
-																												<YPos>0.57235</YPos>
-																												<Flags>37</Flags>
-																											</Point>
-																										</PointList>
-																									</Curve>
-																								</Custom>
-																							</Reference>
-																						</ReferenceList>
-																					</RTPC>
-																				</Local>
-																			</Reference>
-																			<Reference>
-																				<Local>
-																					<RTPC Name="" ID="{4A66FF4F-04EE-41CC-B339-5CB176A938AB}" ShortID="656735223">
-																						<PropertyList>
-																							<Property Name="PropertyName" Type="string" Value="FrequencyScale"/>
-																						</PropertyList>
-																						<ReferenceList>
-																							<Reference Name="ControlInput">
-																								<ObjectRef Name="rtpc_player_airspeed" ID="{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
-																							</Reference>
-																							<Reference Name="Curve">
-																								<Custom>
-																									<Curve Name="" ID="{7CBAF407-8C47-4D90-A0ED-CACA52C736DD}">
-																										<PropertyList>
-																											<Property Name="Flags" Type="int32" Value="1"/>
-																										</PropertyList>
-																										<PointList>
-																											<Point>
-																												<XPos>0</XPos>
-																												<YPos>-2.7907</YPos>
-																												<Flags>5</Flags>
-																											</Point>
-																											<Point>
-																												<XPos>0.81625</XPos>
-																												<YPos>-1.10594</YPos>
-																												<Flags>0</Flags>
-																											</Point>
-																											<Point>
-																												<XPos>0.905300353356891</XPos>
-																												<YPos>-0.569970760318261</YPos>
-																												<Flags>0</Flags>
-																											</Point>
-																											<Point>
-																												<XPos>1</XPos>
-																												<YPos>-0.62016</YPos>
-																												<Flags>37</Flags>
-																											</Point>
-																										</PointList>
-																									</Curve>
-																								</Custom>
-																							</Reference>
-																						</ReferenceList>
-																					</RTPC>
-																				</Local>
-																			</Reference>
-																			<Reference>
-																				<Local>
-																					<RTPC Name="" ID="{C504ADD1-EB3C-4E6C-9AF7-FADF3C6D858B}" ShortID="535749238">
-																						<PropertyList>
-																							<Property Name="PropertyName" Type="string" Value="AverageVelocity"/>
-																						</PropertyList>
-																						<ReferenceList>
-																							<Reference Name="ControlInput">
-																								<ObjectRef Name="rtpc_player_airspeed" ID="{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
-																							</Reference>
-																							<Reference Name="Curve">
-																								<Custom>
-																									<Curve Name="" ID="{CB88839E-3A7A-4FC3-A44E-275D45C47D73}">
-																										<PropertyList>
-																											<Property Name="Flags" Type="int32" Value="1"/>
-																										</PropertyList>
-																										<PointList>
-																											<Point>
-																												<XPos>0</XPos>
-																												<YPos>37.2093</YPos>
-																												<Flags>5</Flags>
-																											</Point>
-																											<Point>
-																												<XPos>0.762857142857143</XPos>
-																												<YPos>576.531563571429</YPos>
-																												<Flags>0</Flags>
-																											</Point>
-																											<Point>
-																												<XPos>0.895714285714286</XPos>
-																												<YPos>962.304928799483</YPos>
-																												<Flags>0</Flags>
-																											</Point>
-																											<Point>
-																												<XPos>1</XPos>
-																												<YPos>905.42635</YPos>
-																												<Flags>37</Flags>
-																											</Point>
-																										</PointList>
-																									</Curve>
-																								</Custom>
-																							</Reference>
-																						</ReferenceList>
-																					</RTPC>
-																				</Local>
-																			</Reference>
-																			<Reference>
-																				<Local>
-																					<RTPC Name="" ID="{75197887-6F20-4A82-A67F-9B1A24400649}" ShortID="754288626">
-																						<PropertyList>
-																							<Property Name="PropertyName" Type="string" Value="Variability"/>
-																						</PropertyList>
-																						<ReferenceList>
-																							<Reference Name="ControlInput">
-																								<ObjectRef Name="rtpc_player_airspeed" ID="{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
-																							</Reference>
-																							<Reference Name="Curve">
-																								<Custom>
-																									<Curve Name="" ID="{0BE459A1-F2D0-4732-A12D-FC29AD59D6E6}">
-																										<PropertyList>
-																											<Property Name="Flags" Type="int32" Value="1"/>
-																										</PropertyList>
-																										<PointList>
-																											<Point>
-																												<XPos>0</XPos>
-																												<YPos>0.25</YPos>
-																												<Flags>5</Flags>
-																											</Point>
-																											<Point>
-																												<XPos>0.621201413427562</XPos>
-																												<YPos>0.25</YPos>
-																												<Flags>0</Flags>
-																											</Point>
-																											<Point>
-																												<XPos>0.867137809187279</XPos>
-																												<YPos>0.389245447761194</YPos>
-																												<Flags>0</Flags>
-																											</Point>
-																											<Point>
-																												<XPos>1</XPos>
-																												<YPos>0.50065</YPos>
-																												<Flags>37</Flags>
-																											</Point>
-																										</PointList>
-																									</Curve>
-																								</Custom>
-																							</Reference>
-																						</ReferenceList>
-																					</RTPC>
-																				</Local>
-																			</Reference>
-																		</ObjectList>
-																	</ObjectLists>
-																	<Language>SFX</Language>
-																	<PluginData/>
-																	<PluginInnerObjectList>
-																		<List Name="Deflectors">
-																			<PluginInnerObject Name="" ID="{6B89EDD4-ED2A-438C-A4C2-D3D2B7DAEF11}" PluginName="Deflector" CompanyID="0" PluginID="121">
-																				<PropertyList>
-																					<Property Name="Frequency" Type="Real32" Value="220"/>
-																					<Property Name="PanX" Type="Real64" Value="-50"/>
-																					<Property Name="QFactor" Type="Real32" Value="2.5"/>
-																				</PropertyList>
-																			</PluginInnerObject>
-																		</List>
-																	</PluginInnerObjectList>
-																</SourcePlugin>
-															</ChildrenList>
-															<ActiveSourceList>
-																<ActiveSource Name="Soundseed Air Wind" ID="{E771676E-844A-4AEA-B54B-14CF9C780260}" Platform="Linked"/>
-															</ActiveSourceList>
-														</Sound>
-														<Sound Name="AIR WINDR" ID="{4CFEF83E-0C68-45E0-A213-46E842C984B3}" ShortID="35385286">
-															<PropertyList>
-																<Property Name="Highpass" Type="int16">
-																	<ValueList>
-																		<Value>17</Value>
-																	</ValueList>
-																</Property>
-																<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-																<Property Name="IsStreamingEnabled" Type="bool">
-																	<ValueList>
-																		<Value>True</Value>
-																	</ValueList>
-																</Property>
-															</PropertyList>
-															<ReferenceList>
-																<Reference Name="Conversion">
-																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
-																</Reference>
-																<Reference Name="OutputBus">
-																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
-																</Reference>
-															</ReferenceList>
-															<ChildrenList>
-																<SourcePlugin Name="Soundseed Air Wind" ID="{DECB2267-B8FB-404E-8B91-BC6BFB1EADA6}" ShortID="750533697" PluginName="SoundSeed Air Wind" CompanyID="0" PluginID="119">
-																	<PropertyList>
-																		<Property Name="AverageVelocity" Type="Real32" Value="-840"/>
-																		<Property Name="Duration" Type="Real64" Value="60"/>
-																		<Property Name="FrequencyScale" Type="Real32" Value="-1.1"/>
-																		<Property Name="Gustiness" Type="Real32" Value="0.28"/>
-																		<Property Name="PlaybackRate" Type="Real32" Value="2.2"/>
-																		<Property Name="Variability" Type="Real32" Value="0.26"/>
-																		<Property Name="VariabilityRandom" Type="Real32" Value="0.4"/>
-																	</PropertyList>
-																	<ObjectLists>
-																		<ObjectList Name="RTPC">
-																			<Reference>
-																				<Local>
-																					<RTPC Name="" ID="{76BBC60F-EC4C-429B-9AF5-F031D5010E39}" ShortID="550703625">
-																						<PropertyList>
-																							<Property Name="PropertyName" Type="string" Value="FrequencyScale"/>
-																						</PropertyList>
-																						<ReferenceList>
-																							<Reference Name="ControlInput">
-																								<ObjectRef Name="rtpc_player_airspeed" ID="{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
-																							</Reference>
-																							<Reference Name="Curve">
-																								<Custom>
-																									<Curve Name="" ID="{1A032750-CFA4-4578-B268-700B04FCE25C}">
-																										<PropertyList>
-																											<Property Name="Flags" Type="int32" Value="1"/>
-																										</PropertyList>
-																										<PointList>
-																											<Point>
-																												<XPos>0</XPos>
-																												<YPos>-2.7907</YPos>
-																												<Flags>5</Flags>
-																											</Point>
-																											<Point>
-																												<XPos>0.81625</XPos>
-																												<YPos>-1.10594</YPos>
-																												<Flags>0</Flags>
-																											</Point>
-																											<Point>
-																												<XPos>0.905300353356891</XPos>
-																												<YPos>-0.569970760318261</YPos>
-																												<Flags>0</Flags>
-																											</Point>
-																											<Point>
-																												<XPos>1</XPos>
-																												<YPos>-0.62016</YPos>
-																												<Flags>37</Flags>
-																											</Point>
-																										</PointList>
-																									</Curve>
-																								</Custom>
-																							</Reference>
-																						</ReferenceList>
-																					</RTPC>
-																				</Local>
-																			</Reference>
-																			<Reference>
-																				<Local>
-																					<RTPC Name="" ID="{14DBBC71-A491-4406-BF1E-58BEF2F9CAC0}" ShortID="269584296">
-																						<PropertyList>
-																							<Property Name="PropertyName" Type="string" Value="AverageVelocity"/>
-																						</PropertyList>
-																						<ReferenceList>
-																							<Reference Name="ControlInput">
-																								<ObjectRef Name="rtpc_player_airspeed" ID="{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
-																							</Reference>
-																							<Reference Name="Curve">
-																								<Custom>
-																									<Curve Name="" ID="{E710977B-C07C-4005-BE33-1CE1BCDE5B66}">
-																										<PropertyList>
-																											<Property Name="Flags" Type="int32" Value="1"/>
-																										</PropertyList>
-																										<PointList>
-																											<Point>
-																												<XPos>0</XPos>
-																												<YPos>37.2093</YPos>
-																												<Flags>5</Flags>
-																											</Point>
-																											<Point>
-																												<XPos>0.762857142857143</XPos>
-																												<YPos>576.531563571429</YPos>
-																												<Flags>0</Flags>
-																											</Point>
-																											<Point>
-																												<XPos>0.895714285714286</XPos>
-																												<YPos>962.304928799484</YPos>
-																												<Flags>0</Flags>
-																											</Point>
-																											<Point>
-																												<XPos>1</XPos>
-																												<YPos>905.42635</YPos>
-																												<Flags>37</Flags>
-																											</Point>
-																										</PointList>
-																									</Curve>
-																								</Custom>
-																							</Reference>
-																						</ReferenceList>
-																					</RTPC>
-																				</Local>
-																			</Reference>
-																			<Reference>
-																				<Local>
-																					<RTPC Name="" ID="{D0369194-25B1-487B-8C0C-9FBC9C64EC44}" ShortID="560406097">
-																						<PropertyList>
-																							<Property Name="PropertyName" Type="string" Value="Gustiness"/>
-																						</PropertyList>
-																						<ReferenceList>
-																							<Reference Name="ControlInput">
-																								<ObjectRef Name="rtpc_player_airspeed" ID="{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
-																							</Reference>
-																							<Reference Name="Curve">
-																								<Custom>
-																									<Curve Name="" ID="{AD6158E5-3C94-4B2C-BA43-2686CBB6AFF6}">
-																										<PropertyList>
-																											<Property Name="Flags" Type="int32" Value="1"/>
-																										</PropertyList>
-																										<PointList>
-																											<Point>
-																												<XPos>0</XPos>
-																												<YPos>0.07364</YPos>
-																												<Flags>5</Flags>
-																											</Point>
-																											<Point>
-																												<XPos>0.63533</XPos>
-																												<YPos>0.29583</YPos>
-																												<Flags>0</Flags>
-																											</Point>
-																											<Point>
-																												<XPos>0.89329</XPos>
-																												<YPos>0.45137</YPos>
-																												<Flags>0</Flags>
-																											</Point>
-																											<Point>
-																												<XPos>1</XPos>
-																												<YPos>0.57235</YPos>
-																												<Flags>37</Flags>
-																											</Point>
-																										</PointList>
-																									</Curve>
-																								</Custom>
-																							</Reference>
-																						</ReferenceList>
-																					</RTPC>
-																				</Local>
-																			</Reference>
-																			<Reference>
-																				<Local>
-																					<RTPC Name="" ID="{9A9B2102-7B3F-4BDE-B926-B6F162206054}" ShortID="533334254">
-																						<PropertyList>
-																							<Property Name="PropertyName" Type="string" Value="Variability"/>
-																						</PropertyList>
-																						<ReferenceList>
-																							<Reference Name="ControlInput">
-																								<ObjectRef Name="rtpc_player_airspeed" ID="{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
-																							</Reference>
-																							<Reference Name="Curve">
-																								<Custom>
-																									<Curve Name="" ID="{52A7EED9-1870-4D75-9210-CE80EC831E8F}">
-																										<PropertyList>
-																											<Property Name="Flags" Type="int32" Value="1"/>
-																										</PropertyList>
-																										<PointList>
-																											<Point>
-																												<XPos>0</XPos>
-																												<YPos>0.25</YPos>
-																												<Flags>5</Flags>
-																											</Point>
-																											<Point>
-																												<XPos>0.621201413427562</XPos>
-																												<YPos>0.25</YPos>
-																												<Flags>0</Flags>
-																											</Point>
-																											<Point>
-																												<XPos>0.867137809187279</XPos>
-																												<YPos>0.389245447761194</YPos>
-																												<Flags>0</Flags>
-																											</Point>
-																											<Point>
-																												<XPos>1</XPos>
-																												<YPos>0.50065</YPos>
-																												<Flags>37</Flags>
-																											</Point>
-																										</PointList>
-																									</Curve>
-																								</Custom>
-																							</Reference>
-																						</ReferenceList>
-																					</RTPC>
-																				</Local>
-																			</Reference>
-																		</ObjectList>
-																	</ObjectLists>
-																	<Language>SFX</Language>
-																	<PluginData/>
-																	<PluginInnerObjectList>
-																		<List Name="Deflectors">
-																			<PluginInnerObject Name="" ID="{0453B741-1D86-442E-9A71-468CA701B647}" PluginName="Deflector" CompanyID="0" PluginID="121">
-																				<PropertyList>
-																					<Property Name="Frequency" Type="Real32" Value="220"/>
-																					<Property Name="PanX" Type="Real64" Value="50"/>
-																					<Property Name="QFactor" Type="Real32" Value="2.5"/>
-																				</PropertyList>
-																			</PluginInnerObject>
-																		</List>
-																	</PluginInnerObjectList>
-																</SourcePlugin>
-															</ChildrenList>
-															<ActiveSourceList>
-																<ActiveSource Name="Soundseed Air Wind" ID="{DECB2267-B8FB-404E-8B91-BC6BFB1EADA6}" Platform="Linked"/>
-															</ActiveSourceList>
-														</Sound>
-													</ChildrenList>
-													<ObjectLists>
-														<ObjectList Name="RTPC">
-															<Reference>
-																<Local>
-																	<RTPC Name="" ID="{5A823A15-A436-49BD-B1C7-55CB0B2723AB}" ShortID="167884565">
-																		<PropertyList>
-																			<Property Name="PropertyName" Type="string" Value="Volume"/>
-																		</PropertyList>
-																		<ReferenceList>
-																			<Reference Name="ControlInput">
-																				<ObjectRef Name="rtpc_player_airspeed" ID="{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
-																			</Reference>
-																			<Reference Name="Curve">
-																				<Custom>
-																					<Curve Name="" ID="{DA357ADD-FA20-4C5F-9236-F38EA3EFFD4D}">
-																						<PropertyList>
-																							<Property Name="Flags" Type="int32" Value="3"/>
-																						</PropertyList>
-																						<PointList>
-																							<Point>
-																								<XPos>0</XPos>
-																								<YPos>-200</YPos>
-																								<Flags>5</Flags>
-																							</Point>
-																							<Point>
-																								<XPos>0.26737</XPos>
-																								<YPos>-200</YPos>
-																								<Flags>0</Flags>
-																							</Point>
-																							<Point>
-																								<XPos>1</XPos>
-																								<YPos>0</YPos>
-																								<Flags>37</Flags>
-																							</Point>
-																						</PointList>
-																					</Curve>
-																				</Custom>
-																			</Reference>
-																		</ReferenceList>
-																	</RTPC>
-																</Local>
-															</Reference>
-														</ObjectList>
-													</ObjectLists>
-												</BlendContainer>
 											</ChildrenList>
 										</BlendContainer>
 									</ChildrenList>
@@ -31438,7 +33112,7 @@
 							<PropertyList>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>2</Value>
+										<Value>1</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -31460,7 +33134,7 @@
 										</Property>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>-10</Value>
+												<Value>-5</Value>
 											</ValueList>
 										</Property>
 										<Property Name="Pitch" Type="int32">
@@ -33231,10 +34905,21 @@
 										<Value>15</Value>
 									</ValueList>
 								</Property>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
 										<Value>8</Value>
+									</ValueList>
+								</Property>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -33243,7 +34928,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="SFX" ID="{39250B52-8C88-4C54-B7D3-2C12760A0A9F}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+									<ObjectRef Name="LowHP" ID="{8BF23BAA-37C6-4671-9E51-3A8213FF8F15}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -33260,6 +34945,9 @@
 									<Reference>
 										<Local>
 											<EffectSlot Name="" ID="{CD5903D7-AF86-4132-B7E9-6335C3241B6C}" ShortID="632249282">
+												<PropertyList>
+													<Property Name="Bypass" Type="bool" Value="True"/>
+												</PropertyList>
 												<ReferenceList>
 													<Reference Name="Effect" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
 														<ObjectRef Name="New_Meter" ID="{27AB241B-FEEA-4A05-84C0-CADF27BC2C1D}" WorkUnitID="{4640899B-4071-49AD-BD7F-E96787417DC9}"/>
@@ -33274,6 +34962,546 @@
 								<ActiveSource Name="LowHPPulse" ID="{861CB94B-6ED7-41DC-AC04-77EAA2DD5E2F}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<BlendContainer Name="AIR WIND" ID="{821E7523-8245-4D9B-BBA5-65D6AD8BF3D4}" ShortID="251170835">
+							<PropertyList>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-21</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="PlayerBus" ID="{EBF9A5C4-2EDC-44FD-B726-7EE704405AC2}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="AIR WINDL" ID="{02DBBEBD-D108-4D2D-BE4D-07BF78288799}" ShortID="836284963">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>17</Value>
+											</ValueList>
+										</Property>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="IsStreamingEnabled" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<SourcePlugin Name="Soundseed Air Wind" ID="{E771676E-844A-4AEA-B54B-14CF9C780260}" ShortID="255961296" PluginName="SoundSeed Air Wind" CompanyID="0" PluginID="119">
+											<PropertyList>
+												<Property Name="AverageVelocity" Type="Real32" Value="-840"/>
+												<Property Name="Duration" Type="Real64" Value="60"/>
+												<Property Name="FrequencyScale" Type="Real32" Value="-1.1"/>
+												<Property Name="Gustiness" Type="Real32" Value="0.28"/>
+												<Property Name="PlaybackRate" Type="Real32" Value="2.2"/>
+												<Property Name="Variability" Type="Real32" Value="0.26"/>
+												<Property Name="VariabilityRandom" Type="Real32" Value="0.47"/>
+											</PropertyList>
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{289709C0-BE9B-495C-A1C2-93C6CD59BADF}" ShortID="923343998">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Gustiness"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="rtpc_player_airspeed" ID="{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{538DF211-2E2E-4ADC-A827-A8243A68A948}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="1"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>0.07364</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>0.63533</XPos>
+																						<YPos>0.29583</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>0.89329</XPos>
+																						<YPos>0.45137</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>1</XPos>
+																						<YPos>0.57235</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{4A66FF4F-04EE-41CC-B339-5CB176A938AB}" ShortID="656735223">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="FrequencyScale"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="rtpc_player_airspeed" ID="{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{7CBAF407-8C47-4D90-A0ED-CACA52C736DD}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="1"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>-2.7907</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>0.81625</XPos>
+																						<YPos>-1.10594</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>0.905300353356891</XPos>
+																						<YPos>-0.569970760318261</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>1</XPos>
+																						<YPos>-0.62016</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{C504ADD1-EB3C-4E6C-9AF7-FADF3C6D858B}" ShortID="535749238">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="AverageVelocity"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="rtpc_player_airspeed" ID="{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{CB88839E-3A7A-4FC3-A44E-275D45C47D73}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="1"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>37.2093</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>0.762857142857143</XPos>
+																						<YPos>576.531563571429</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>0.895714285714286</XPos>
+																						<YPos>962.304928799483</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>0.964662875710804</XPos>
+																						<YPos>924.699607341111</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>1</XPos>
+																						<YPos>1156.58914</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{75197887-6F20-4A82-A67F-9B1A24400649}" ShortID="754288626">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Variability"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="rtpc_player_airspeed" ID="{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{0BE459A1-F2D0-4732-A12D-FC29AD59D6E6}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="1"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>0.25</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>0.621201413427562</XPos>
+																						<YPos>0.25</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>0.867137809187279</XPos>
+																						<YPos>0.389245447761194</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>1</XPos>
+																						<YPos>0.50065</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+											<Language>SFX</Language>
+											<PluginData/>
+											<PluginInnerObjectList>
+												<List Name="Deflectors">
+													<PluginInnerObject Name="" ID="{6B89EDD4-ED2A-438C-A4C2-D3D2B7DAEF11}" PluginName="Deflector" CompanyID="0" PluginID="121">
+														<PropertyList>
+															<Property Name="Frequency" Type="Real32" Value="220"/>
+															<Property Name="PanX" Type="Real64" Value="-50"/>
+															<Property Name="QFactor" Type="Real32" Value="2.5"/>
+														</PropertyList>
+													</PluginInnerObject>
+												</List>
+											</PluginInnerObjectList>
+										</SourcePlugin>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Soundseed Air Wind" ID="{E771676E-844A-4AEA-B54B-14CF9C780260}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="AIR WINDR" ID="{4CFEF83E-0C68-45E0-A213-46E842C984B3}" ShortID="35385286">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>17</Value>
+											</ValueList>
+										</Property>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="IsStreamingEnabled" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<SourcePlugin Name="Soundseed Air Wind" ID="{DECB2267-B8FB-404E-8B91-BC6BFB1EADA6}" ShortID="750533697" PluginName="SoundSeed Air Wind" CompanyID="0" PluginID="119">
+											<PropertyList>
+												<Property Name="AverageVelocity" Type="Real32" Value="-840"/>
+												<Property Name="Duration" Type="Real64" Value="60"/>
+												<Property Name="FrequencyScale" Type="Real32" Value="-1.1"/>
+												<Property Name="Gustiness" Type="Real32" Value="0.28"/>
+												<Property Name="PlaybackRate" Type="Real32" Value="2.2"/>
+												<Property Name="Variability" Type="Real32" Value="0.26"/>
+												<Property Name="VariabilityRandom" Type="Real32" Value="0.4"/>
+											</PropertyList>
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{76BBC60F-EC4C-429B-9AF5-F031D5010E39}" ShortID="550703625">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="FrequencyScale"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="rtpc_player_airspeed" ID="{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{1A032750-CFA4-4578-B268-700B04FCE25C}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="1"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>-2.7907</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>0.81625</XPos>
+																						<YPos>-1.10594</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>0.905300353356891</XPos>
+																						<YPos>-0.569970760318261</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>1</XPos>
+																						<YPos>-0.62016</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{14DBBC71-A491-4406-BF1E-58BEF2F9CAC0}" ShortID="269584296">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="AverageVelocity"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="rtpc_player_airspeed" ID="{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{E710977B-C07C-4005-BE33-1CE1BCDE5B66}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="1"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>37.2093</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>0.762857142857143</XPos>
+																						<YPos>576.531563571429</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>0.895714285714286</XPos>
+																						<YPos>962.304928799484</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>1</XPos>
+																						<YPos>1212.38635</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{D0369194-25B1-487B-8C0C-9FBC9C64EC44}" ShortID="560406097">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Gustiness"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="rtpc_player_airspeed" ID="{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{AD6158E5-3C94-4B2C-BA43-2686CBB6AFF6}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="1"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>0.07364</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>0.63533</XPos>
+																						<YPos>0.29583</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>0.89329</XPos>
+																						<YPos>0.45137</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>1</XPos>
+																						<YPos>0.57235</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{9A9B2102-7B3F-4BDE-B926-B6F162206054}" ShortID="533334254">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Variability"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="rtpc_player_airspeed" ID="{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{52A7EED9-1870-4D75-9210-CE80EC831E8F}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="1"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>0.25</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>0.621201413427562</XPos>
+																						<YPos>0.25</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>0.867137809187279</XPos>
+																						<YPos>0.389245447761194</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>1</XPos>
+																						<YPos>0.50065</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+											<Language>SFX</Language>
+											<PluginData/>
+											<PluginInnerObjectList>
+												<List Name="Deflectors">
+													<PluginInnerObject Name="" ID="{0453B741-1D86-442E-9A71-468CA701B647}" PluginName="Deflector" CompanyID="0" PluginID="121">
+														<PropertyList>
+															<Property Name="Frequency" Type="Real32" Value="220"/>
+															<Property Name="PanX" Type="Real64" Value="50"/>
+															<Property Name="QFactor" Type="Real32" Value="2.5"/>
+														</PropertyList>
+													</PluginInnerObject>
+												</List>
+											</PluginInnerObjectList>
+										</SourcePlugin>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Soundseed Air Wind" ID="{DECB2267-B8FB-404E-8B91-BC6BFB1EADA6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{5A823A15-A436-49BD-B1C7-55CB0B2723AB}" ShortID="167884565">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="rtpc_player_airspeed" ID="{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{DA357ADD-FA20-4C5F-9236-F38EA3EFFD4D}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>0.001</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</BlendContainer>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

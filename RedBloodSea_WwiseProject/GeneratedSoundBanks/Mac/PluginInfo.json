@@ -32,13 +32,6 @@
     "StaticLib": "AkRoomVerbFX"
    },
    {
-    "LibName": "SoundSeed Air Wind",
-    "LibId": "7798786",
-    "Type": "Source",
-    "DLL": "AkSoundSeedAir",
-    "StaticLib": "AkSoundSeedWindSource"
-   },
-   {
     "LibName": "Wwise Meter",
     "LibId": "8454147",
     "Type": "Effect",
@@ -63,6 +56,6 @@
     "Type": "AudioDevice"
    }
   ],
-  "FileHash": "{F8CBA8E6-56CD-529E-E3AB-2D03D0BDB6F5}"
+  "FileHash": "{32A538F5-E44B-8BD3-F33C-5B257ABD28AF}"
  }
 }

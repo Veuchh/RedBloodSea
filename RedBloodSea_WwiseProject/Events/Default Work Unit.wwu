@@ -38,72 +38,6 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Play_LinkRay3" ID="{79F68C39-B8F8-45EC-B7C7-C45750FAAF87}">
-							<ChildrenList>
-								<Action Name="" ID="{07E49AE5-F831-4CBA-9698-A91DCBB45DC0}" ShortID="1067700093">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="LinkRay3" ID="{3966589A-F7D5-4173-9E93-2F773A0FA453}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_LinkRay4" ID="{194B4F2E-1322-4BD9-8C6C-D107F77E1425}">
-							<ChildrenList>
-								<Action Name="" ID="{C51CA190-8D9B-43F4-A418-D41140D21ECA}" ShortID="691654240">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="LinkRay4" ID="{7921B8CB-8711-4BC6-8A20-717235D1F683}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_LinkRay1" ID="{295D72FD-50B8-40D0-88D1-20F79D3BC243}">
-							<ChildrenList>
-								<Action Name="" ID="{218C3A0D-D748-41A6-8C9E-3EA938E74551}" ShortID="578945523">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="LinkRay1" ID="{559A57A1-FD67-4571-8239-75DC121880F4}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_LinkRay5" ID="{61474507-C6B4-44B4-86A9-D8D2B1AF9328}">
-							<ChildrenList>
-								<Action Name="" ID="{798D0169-6401-43B9-A87B-33A0751E9A5D}" ShortID="41416734">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="LinkRay5" ID="{7E1BAAB9-12EF-44AC-A237-957B6532840A}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_LinkRay2" ID="{D153C254-2365-4339-A7A8-6EFAA363D385}">
-							<ChildrenList>
-								<Action Name="" ID="{E9FF9585-DB7A-41F5-B63B-F5666538F55F}" ShortID="415729851">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="LinkRay2" ID="{38D81513-3C02-47A3-BCD7-6313E544341A}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_LinkRay0" ID="{45EA5D2F-C0C5-49BF-9CCF-B944FF1C3EF8}">
-							<ChildrenList>
-								<Action Name="" ID="{04CAF57D-3CAF-4177-B500-A584D7ECEFDB}" ShortID="58878411">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="LinkRay0" ID="{3FE73E25-8AB1-4716-92E9-A06A498955D0}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
 						<Folder Name="Debug" ID="{0BF700AA-E031-41EC-A16C-C9A99869680E}" ShortID="625466911">
 							<ChildrenList>
 								<Event Name="SetCombatIntro" ID="{4E73F01D-32E8-4F9D-9415-05C34B86B3ED}">
@@ -180,6 +114,17 @@
 								</Event>
 							</ChildrenList>
 						</Folder>
+						<Event Name="Play_Stop_All" ID="{CC23CEC6-8B4C-431B-988A-17DBF6A943EC}">
+							<ChildrenList>
+								<Action Name="" ID="{20FA1439-D118-4F19-A702-B6B371EFD434}" ShortID="260198546">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="3"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Player Abilities" ID="{8AAB312F-D214-4545-908C-627168FFCE02}" ShortID="816975323">
@@ -653,17 +598,6 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="play_LinkSwitch" ID="{B00FF81C-6645-4077-A6AA-107DEB6604EC}">
-							<ChildrenList>
-								<Action Name="" ID="{9C367120-8405-4433-9B0F-E3BA1CF6518B}" ShortID="895173416">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="LinkRay" ID="{054EA2E3-BDBD-4391-9440-C2C79AD09FB7}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
 						<Event Name="Play_SwordRecover" ID="{9F08EC40-0681-41B4-B765-2B212EB7A8BF}">
 							<ChildrenList>
 								<Action Name="" ID="{95FF779E-5021-4486-A801-716ACCBD3C4A}" ShortID="375844272">
@@ -738,6 +672,17 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="rtpc_dash_leftright" ID="{7894A474-E5D3-4187-925F-19042540CC04}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_LinkSeq" ID="{59D75F1C-F5BC-4CA8-BFF1-0F1289B4DB5C}">
+							<ChildrenList>
+								<Action Name="" ID="{6C96ECC0-ADEC-47C4-B035-3DC061D103B0}" ShortID="474465984">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LinkSEQ" ID="{F5CEF6AC-8F53-4DC8-8D84-FDF48ADD9BFC}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -1173,6 +1118,17 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{967D9D80-A9C1-4FE5-93BB-FB2BD044E3CE}" ShortID="634818653">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="42"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LinkSEQ" ID="{F5CEF6AC-8F53-4DC8-8D84-FDF48ADD9BFC}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Reset_EnemyFreedSEQ" ID="{E63533DE-0823-47D1-BEC9-A2C25FB28428}">
@@ -1374,6 +1330,17 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{ACB60F6F-1C48-4711-8D10-53F4472B8DB3}" ShortID="673306187">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LinkSEQ" ID="{F5CEF6AC-8F53-4DC8-8D84-FDF48ADD9BFC}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Play_ResultsScreenConfirm" ID="{E9A8C5A1-C93F-4582-B340-D7C1FC70EBAF}">
@@ -1419,6 +1386,50 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{ED677E6D-D473-4AE1-A983-F87657093DF3}" ShortID="340687589">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="7"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LinkSEQ" ID="{F5CEF6AC-8F53-4DC8-8D84-FDF48ADD9BFC}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{797AEC20-25FE-4CA6-B731-CECD6B6C0984}" ShortID="196214897">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="7"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="IdleHC v1" ID="{495FE2E1-88EA-4229-BD70-F7B0849FA364}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{39F4E1DD-E632-4982-B272-EAB3F369BBB1}" ShortID="730781804">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="7"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BasaltGate idle v1" ID="{57BE5F14-D440-4DD1-A284-7304FC7F2ACB}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{1B467CF9-BD28-4F22-BEAD-D13B34B06830}" ShortID="938572229">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="7"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="CheckpointLoop" ID="{808312DE-B744-40E3-8E66-1DBAF843D9EE}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Play_DeathMenu_Transition" ID="{CA3D410D-4E96-4217-AFA6-48AB3C8FA624}">
@@ -1427,6 +1438,129 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="PauseDeathTransition" ID="{3A225949-621B-4C9D-AF06-146EFC7A00D1}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_CrosshairKill" ID="{B1013123-98B4-4F9C-90B0-AE146A3ADDC6}">
+							<ChildrenList>
+								<Action Name="" ID="{687F9C03-76DD-4D2E-A0BE-F387831DEF7C}" ShortID="75006643">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="CrosshairKill" ID="{E0D9BDAE-76E0-43EF-B83B-E53D05CC3B1E}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_TimerSeq" ID="{688DE30A-4A9D-4A75-AE3C-1896A144315F}">
+							<ChildrenList>
+								<Action Name="" ID="{F3269C3E-12CD-486C-AA65-57B32AFFD528}" ShortID="739658816">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="TimerSeq" ID="{118E457B-041F-4840-A4CA-35839BA2B0E0}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_ObjectiveDoX" ID="{5A196830-D945-4170-8E78-B07C99E51764}">
+							<ChildrenList>
+								<Action Name="" ID="{AC4E6A1B-F739-4C16-88B4-C74C5E453259}" ShortID="731666438">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ObjectiveDoX" ID="{EAC561F7-D292-401D-BE3C-81C2805762BA}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_ObjectiveExplore" ID="{A8925B4D-160E-45B6-AD8B-F9E0DA9C82F5}">
+							<ChildrenList>
+								<Action Name="" ID="{ED51D0AB-E509-449C-A04B-5CD973F32E14}" ShortID="702620079">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ObjectiveExplore" ID="{C6DCB91E-FB6E-42BE-A2CA-2622CDBB0E9C}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{DACCCC71-3905-47F4-9172-BAAD50D05780}" ShortID="870412266">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="42"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="TimerSeq" ID="{118E457B-041F-4840-A4CA-35839BA2B0E0}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{22527C21-7D1E-4478-9991-F1696ACAFB46}" ShortID="869476339">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="42"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ObjectiveProgress" ID="{51A1490B-2186-439B-98FB-026B3100A1EA}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_CrosshairLink" ID="{09B4022D-8DF9-4281-BA4A-A53A74D55AA4}">
+							<ChildrenList>
+								<Action Name="" ID="{C05C7E26-F8E2-49CA-AAF2-EA348C844312}" ShortID="58697170">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="CrosshairLink" ID="{EC3DA5E5-F551-40EC-A1A3-46119EE5650C}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_CheckpointCrossed" ID="{6DCA03B4-383F-4A8A-BFD8-67C23ECF157F}">
+							<ChildrenList>
+								<Action Name="" ID="{8528B2E2-FA7F-48AB-87C6-99BE5B269FF9}" ShortID="577335443">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="CheckpointCrossed" ID="{94647F2B-542A-43C2-97E5-91EC2597CA86}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{6D974FAD-BEC5-4F14-88D3-B05105576523}" ShortID="712788840">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="CheckpointLoop" ID="{808312DE-B744-40E3-8E66-1DBAF843D9EE}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_ObjectiveProgress" ID="{D74404F9-898D-4755-AF34-25C421EA0E7B}">
+							<ChildrenList>
+								<Action Name="" ID="{DB4AC968-EEC9-4D15-99DA-70EE96128CC7}" ShortID="893465941">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ObjectiveProgress" ID="{51A1490B-2186-439B-98FB-026B3100A1EA}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_CheckpointLoop" ID="{7D24E9C8-3326-4183-B4F7-1659E53104CD}">
+							<ChildrenList>
+								<Action Name="" ID="{C5D85191-A702-4E4B-B3E9-A9EC44D94B07}" ShortID="558066828">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="CheckpointLoop" ID="{808312DE-B744-40E3-8E66-1DBAF843D9EE}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -1461,11 +1595,21 @@
 								<Action Name="" ID="{C6236FEF-8ACE-465F-8B12-1CCB79D525AE}" ShortID="360287557">
 									<PropertyList>
 										<Property Name="FadeInCurve" Type="int16" Value="5"/>
-										<Property Name="FadeTime" Type="Real64" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="9"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="core_music_switch_master_V2" ID="{E261D608-54C9-4777-B384-E38D57727997}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{28E298B3-42A2-4050-9140-A0529A4E1EAD}" ShortID="120365854">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="intro" ID="{AAB602C5-F1F4-4844-B273-85D5A38E9869}" WorkUnitID="{C595D72B-1CEC-44D9-8102-4C94A354BC93}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -1596,6 +1740,50 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{DED268B2-F1C0-41D7-93ED-CD723337EEA7}" ShortID="180427968">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="9"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LinkSEQ" ID="{F5CEF6AC-8F53-4DC8-8D84-FDF48ADD9BFC}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{2DCC407B-4FBC-4238-837B-989A9B32C6C0}" ShortID="438256019">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="9"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="IdleHC v1" ID="{495FE2E1-88EA-4229-BD70-F7B0849FA364}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D3EFFE8C-BA18-42C4-A27B-6BBE219D5377}" ShortID="453650756">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="9"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="CheckpointLoop" ID="{808312DE-B744-40E3-8E66-1DBAF843D9EE}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{47917625-9995-4ED5-A7DE-35EF64965F2A}" ShortID="640883499">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="9"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BasaltGate idle v1" ID="{57BE5F14-D440-4DD1-A284-7304FC7F2ACB}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Play_MusMainMenu" ID="{9F2230B7-BD5B-44B5-9ABC-D129CF0503E6}">
@@ -1675,6 +1863,19 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{637C6F9B-D9B9-4007-BC36-0196DFD7905B}" ShortID="930380612">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="game paused" ID="{CE2D95E7-E3CC-44C3-BBFB-3568B6C48495}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Play_MusHub" ID="{90C8B7F9-266C-4DF5-BEC5-1D17E4A5FC1A}">
@@ -1697,6 +1898,7 @@
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
 										<Property Name="FadeTime" Type="Real64" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -1706,7 +1908,8 @@
 								</Action>
 								<Action Name="" ID="{97D0B26D-0617-4ED2-A600-7D38B1646E92}" ShortID="718772638">
 									<PropertyList>
-										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+										<Property Name="FadeInCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="3.5"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -1718,6 +1921,7 @@
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
 										<Property Name="FadeTime" Type="Real64" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -1729,6 +1933,7 @@
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
 										<Property Name="FadeTime" Type="Real64" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -2133,6 +2338,28 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{01DF3419-8C9D-45A8-A0F4-3BFCFAA9DCB5}" ShortID="1023389541">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BasaltGate idle v1" ID="{57BE5F14-D440-4DD1-A284-7304FC7F2ACB}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{CCBDEACD-4022-4FF1-896F-323DE8178CF8}" ShortID="233586889">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="CheckpointCrossed" ID="{94647F2B-542A-43C2-97E5-91EC2597CA86}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Play_BasaltGate_Close" ID="{B0E60573-43B1-44EC-8B6D-74BE266FDCB9}">
@@ -2184,124 +2411,23 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
-				<Event Name="Play_CrosshairKill" ID="{B1013123-98B4-4F9C-90B0-AE146A3ADDC6}">
+				<Event Name="Play_PersonaGiven" ID="{66136D32-7EB1-46BE-A52B-5A8B780ED193}">
 					<ChildrenList>
-						<Action Name="" ID="{687F9C03-76DD-4D2E-A0BE-F387831DEF7C}" ShortID="75006643">
+						<Action Name="" ID="{2DB331CF-5F99-483B-B8D6-577CC70C01B9}" ShortID="112206998">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="CrosshairKill" ID="{E0D9BDAE-76E0-43EF-B83B-E53D05CC3B1E}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+									<ObjectRef Name="PersonaGiven" ID="{2D9C62B1-8EFD-4132-BE48-72B8CC99DA99}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_CrosshairLink" ID="{09B4022D-8DF9-4281-BA4A-A53A74D55AA4}">
+				<Event Name="Play_PersonaGivenSelect" ID="{2C0699EC-0D82-43BD-87D3-E0696246B6D3}">
 					<ChildrenList>
-						<Action Name="" ID="{C05C7E26-F8E2-49CA-AAF2-EA348C844312}" ShortID="58697170">
+						<Action Name="" ID="{07E400EF-0640-44EA-9F08-F6ECEA8EFD4D}" ShortID="863682958">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="CrosshairLink" ID="{EC3DA5E5-F551-40EC-A1A3-46119EE5650C}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_CheckpointCrossed" ID="{6DCA03B4-383F-4A8A-BFD8-67C23ECF157F}">
-					<ChildrenList>
-						<Action Name="" ID="{8528B2E2-FA7F-48AB-87C6-99BE5B269FF9}" ShortID="577335443">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="CheckpointCrossed" ID="{94647F2B-542A-43C2-97E5-91EC2597CA86}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{6D974FAD-BEC5-4F14-88D3-B05105576523}" ShortID="712788840">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-								<Property Name="FadeOutCurve" Type="int16" Value="5"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
-								<Property Name="Scope" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="CheckpointLoop" ID="{808312DE-B744-40E3-8E66-1DBAF843D9EE}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_CheckpointLoop" ID="{7D24E9C8-3326-4183-B4F7-1659E53104CD}">
-					<ChildrenList>
-						<Action Name="" ID="{C5D85191-A702-4E4B-B3E9-A9EC44D94B07}" ShortID="558066828">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="CheckpointLoop" ID="{808312DE-B744-40E3-8E66-1DBAF843D9EE}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_TimerSeq" ID="{688DE30A-4A9D-4A75-AE3C-1896A144315F}">
-					<ChildrenList>
-						<Action Name="" ID="{F3269C3E-12CD-486C-AA65-57B32AFFD528}" ShortID="739658816">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="TimerSeq" ID="{118E457B-041F-4840-A4CA-35839BA2B0E0}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_ObjectiveExplore" ID="{A8925B4D-160E-45B6-AD8B-F9E0DA9C82F5}">
-					<ChildrenList>
-						<Action Name="" ID="{ED51D0AB-E509-449C-A04B-5CD973F32E14}" ShortID="702620079">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ObjectiveExplore" ID="{C6DCB91E-FB6E-42BE-A2CA-2622CDBB0E9C}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{DACCCC71-3905-47F4-9172-BAAD50D05780}" ShortID="870412266">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="42"/>
-								<Property Name="Scope" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="TimerSeq" ID="{118E457B-041F-4840-A4CA-35839BA2B0E0}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{22527C21-7D1E-4478-9991-F1696ACAFB46}" ShortID="869476339">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="42"/>
-								<Property Name="Scope" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ObjectiveProgress" ID="{51A1490B-2186-439B-98FB-026B3100A1EA}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_ObjectiveDoX" ID="{5A196830-D945-4170-8E78-B07C99E51764}">
-					<ChildrenList>
-						<Action Name="" ID="{AC4E6A1B-F739-4C16-88B4-C74C5E453259}" ShortID="731666438">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ObjectiveDoX" ID="{EAC561F7-D292-401D-BE3C-81C2805762BA}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_ObjectiveProgress" ID="{D74404F9-898D-4755-AF34-25C421EA0E7B}">
-					<ChildrenList>
-						<Action Name="" ID="{DB4AC968-EEC9-4D15-99DA-70EE96128CC7}" ShortID="893465941">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ObjectiveProgress" ID="{51A1490B-2186-439B-98FB-026B3100A1EA}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+									<ObjectRef Name="PersonaGivenSelect" ID="{04D444E0-6F5F-42A8-A614-5969159B464A}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

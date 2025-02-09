@@ -1708,9 +1708,20 @@
 						</Sound>
 						<Folder Name="LinkRay" ID="{332F5A95-EFB0-4543-8646-04D80B749EDE}" ShortID="444667391">
 							<ChildrenList>
-								<SwitchContainer Name="LinkRay" ID="{054EA2E3-BDBD-4391-9440-C2C79AD09FB7}" ShortID="128748408">
+								<RandomSequenceContainer Name="LinkSEQ" ID="{F5CEF6AC-8F53-4DC8-8D84-FDF48ADD9BFC}" ShortID="290028751">
 									<PropertyList>
 										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>17</Value>
+											</ValueList>
+										</Property>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>-23</Value>
+											</ValueList>
+										</Property>
+										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
@@ -1719,779 +1730,342 @@
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
 										</Reference>
-										<Reference Name="DefaultSwitchOrState">
-											<ObjectRef Name="link0" ID="{21730554-9A26-480E-BF82-5403DD91DA7F}" WorkUnitID="{CAC3CED8-5AC9-4C4E-8486-D3A059718422}"/>
-										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="PlayerAbilities" ID="{23D327A8-D57F-4DDE-8DF2-8200B9DA4037}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
 										</Reference>
-										<Reference Name="SwitchGroupOrStateGroup">
-											<ObjectRef Name="switch_link_index" ID="{CA6F1763-1C63-4DC9-A2BA-5E916F6F1EC2}" WorkUnitID="{CAC3CED8-5AC9-4C4E-8486-D3A059718422}"/>
-										</Reference>
 										<Reference Name="UserAuxSend0">
-											<ObjectRef Name="LevelVerb" ID="{4A93D61F-1EC6-4468-809B-AE533F8EC173}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+											<ObjectRef Name="DistantLevelVerb" ID="{4BD473B1-9D7E-4658-B0FE-11591FBEC77E}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<BlendContainer Name="LinkRay0" ID="{3FE73E25-8AB1-4716-92E9-A06A498955D0}" ShortID="917161067">
+										<Sound Name="Link 1 V2" ID="{C5B3CA47-FC0D-4556-A71D-426FA7721DF5}" ShortID="252838306">
 											<PropertyList>
-												<Property Name="3DSpatialization" Type="int16" Value="1"/>
-												<Property Name="BlendBehavior" Type="int16" Value="1"/>
-												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+												<Property Name="Highpass" Type="int16">
+													<ValueList>
+														<Value>24</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
-												<Reference Name="Attenuation">
-													<ObjectRef Name="LinkRay" ID="{2A7FEDB0-F68F-4BC8-8BCF-B53903130027}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
-												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="PlayerAbilities" ID="{23D327A8-D57F-4DDE-8DF2-8200B9DA4037}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
-												</Reference>
-												<Reference Name="UserAuxSend0">
-													<ObjectRef Name="LevelVerb" ID="{4A93D61F-1EC6-4468-809B-AE533F8EC173}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<Sound Name="RBS_SFX_LinkRay_LowChaos 01" ID="{CFD7C0C8-DA8C-490E-BD59-E0D5CBA11964}" ShortID="960665465">
-													<PropertyList>
-														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="RBS_SFX_LinkRay_LowChaos 01" ID="{FC11B1A3-FDB4-4FAC-AA1F-5D9026C5A7B0}">
-															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.00067143434156075"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.0020722743941981"/>
-																<Property Name="LoopBegin" Type="Real64" Value="1.42909422727154"/>
-																<Property Name="LoopEnd" Type="Real64" Value="36.9712535315985"/>
-																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimBegin" Type="Real64" Value="1.41849571516641"/>
-																<Property Name="TrimEnd" Type="Real64" Value="36.9836108894465"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>RBS_SFX_LinkRay_LowChaos 01.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="679143028"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="RBS_SFX_LinkRay_LowChaos 01" ID="{FC11B1A3-FDB4-4FAC-AA1F-5D9026C5A7B0}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="RBS_SFX_LinkRay_HighChaos 01" ID="{94D39758-7C49-4DC1-B4A5-A2F1FA7729BA}" ShortID="903558084">
-													<PropertyList>
-														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="RBS_SFX_LinkRay_HighChaos 01" ID="{8E115012-2F5C-439A-BC00-66D0D4ABFE45}">
-															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.6"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.3"/>
-																<Property Name="LoopBegin" Type="Real64" Value="1.58515070289878"/>
-																<Property Name="LoopEnd" Type="Real64" Value="41.1959361876877"/>
-																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimBegin" Type="Real64" Value="1.33252598676959"/>
-																<Property Name="TrimEnd" Type="Real64" Value="41.4348431007958"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>RBS_SFX_LinkRay_HighChaos 01.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="92944635"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="RBS_SFX_LinkRay_HighChaos 01" ID="{8E115012-2F5C-439A-BC00-66D0D4ABFE45}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
+												<AudioFileSource Name="Link 1 V2" ID="{93B98FC1-9741-4DAD-97E9-8D335688273D}">
+													<Language>SFX</Language>
+													<AudioFile>Link 1 V2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="78759511"/>
+													</MediaIDList>
+												</AudioFileSource>
 											</ChildrenList>
-											<BlendTrackList>
-												<BlendTrack Name="New Blend Track" ID="{279FE780-E1E3-4388-BF81-E714A4277A3D}" ShortID="153245133">
-													<PropertyList>
-														<Property Name="EnableCrossFading" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="LayerCrossFadeControlInput">
-															<ObjectRef Name="rtpc_chaos_global" ID="{912B7FBA-E859-424B-9664-D9B8B51FC1BA}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
-														</Reference>
-													</ReferenceList>
-													<BlendTrackAssocList>
-														<BlendTrackAssoc>
-															<ItemRef Name="RBS_SFX_LinkRay_LowChaos 01" ID="{CFD7C0C8-DA8C-490E-BD59-E0D5CBA11964}"/>
-															<CrossfadingInfo>
-																<LeftEdgePos>0</LeftEdgePos>
-																<LeftFadingMode>Automatic</LeftFadingMode>
-																<RightEdgePos>0.9995</RightEdgePos>
-																<RightFadingMode>Automatic</RightFadingMode>
-															</CrossfadingInfo>
-														</BlendTrackAssoc>
-														<BlendTrackAssoc>
-															<ItemRef Name="RBS_SFX_LinkRay_HighChaos 01" ID="{94D39758-7C49-4DC1-B4A5-A2F1FA7729BA}"/>
-															<CrossfadingInfo>
-																<LeftEdgePos>0.0005</LeftEdgePos>
-																<LeftFadingMode>Automatic</LeftFadingMode>
-																<RightEdgePos>1</RightEdgePos>
-																<RightFadingMode>Automatic</RightFadingMode>
-															</CrossfadingInfo>
-														</BlendTrackAssoc>
-													</BlendTrackAssocList>
-												</BlendTrack>
-											</BlendTrackList>
-										</BlendContainer>
-										<BlendContainer Name="LinkRay1" ID="{559A57A1-FD67-4571-8239-75DC121880F4}" ShortID="877844929">
+											<ActiveSourceList>
+												<ActiveSource Name="Link 1 V2" ID="{93B98FC1-9741-4DAD-97E9-8D335688273D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Link 2 V2" ID="{8681E77D-E405-468D-ADF4-523552F78EBB}" ShortID="1021414119">
 											<PropertyList>
-												<Property Name="3DSpatialization" Type="int16" Value="2"/>
-												<Property Name="BlendBehavior" Type="int16" Value="1"/>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 											</PropertyList>
 											<ReferenceList>
-												<Reference Name="Attenuation">
-													<ObjectRef Name="LinkRay" ID="{2A7FEDB0-F68F-4BC8-8BCF-B53903130027}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
-												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="PlayerAbilities" ID="{23D327A8-D57F-4DDE-8DF2-8200B9DA4037}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<Sound Name="RBS_SFX_LinkRay_HighChaos 02" ID="{3F02D730-4663-4671-B211-4F4F8935C27D}" ShortID="981271055">
-													<PropertyList>
-														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="RBS_SFX_LinkRay_HighChaos 02" ID="{F8B227E5-7D83-4BB0-90F0-B755EE522451}">
-															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.102494638043545"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.000831266041657841"/>
-																<Property Name="LoopBegin" Type="Real64" Value="0.276859764363177"/>
-																<Property Name="LoopEnd" Type="Real64" Value="42.340914665235"/>
-																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimEnd" Type="Real64" Value="42.3576484120735"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>RBS_SFX_LinkRay_HighChaos 02.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="733526565"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="RBS_SFX_LinkRay_HighChaos 02" ID="{F8B227E5-7D83-4BB0-90F0-B755EE522451}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="RBS_SFX_LinkRay_LowChaos 02" ID="{7B402C95-369C-4251-97B3-DC72AF29669C}" ShortID="542936370">
-													<PropertyList>
-														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="RBS_SFX_LinkRay_LowChaos 02" ID="{936CD5A0-1718-4115-8606-C8DB077B19EB}">
-															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.37990780839895"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.377428574450533"/>
-																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimBegin" Type="Real64" Value="0.276296587926509"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>RBS_SFX_LinkRay_LowChaos 02.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="181696342"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="RBS_SFX_LinkRay_LowChaos 02" ID="{936CD5A0-1718-4115-8606-C8DB077B19EB}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
+												<AudioFileSource Name="Link 2 V2" ID="{D049A3E5-CAE4-4803-AD21-F2CD0CFEAB11}">
+													<Language>SFX</Language>
+													<AudioFile>Link 2 V2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="670715095"/>
+													</MediaIDList>
+												</AudioFileSource>
 											</ChildrenList>
-											<BlendTrackList>
-												<BlendTrack Name="New Blend Track" ID="{2E37256B-AC7F-42C7-B51D-A2E8F8052101}" ShortID="886172178">
-													<PropertyList>
-														<Property Name="EnableCrossFading" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="LayerCrossFadeControlInput">
-															<ObjectRef Name="rtpc_chaos_global" ID="{912B7FBA-E859-424B-9664-D9B8B51FC1BA}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
-														</Reference>
-													</ReferenceList>
-													<BlendTrackAssocList>
-														<BlendTrackAssoc>
-															<ItemRef Name="RBS_SFX_LinkRay_LowChaos 02" ID="{7B402C95-369C-4251-97B3-DC72AF29669C}"/>
-															<CrossfadingInfo>
-																<LeftEdgePos>0</LeftEdgePos>
-																<LeftFadingMode>Automatic</LeftFadingMode>
-																<RightEdgePos>0.9995</RightEdgePos>
-																<RightFadingMode>Automatic</RightFadingMode>
-															</CrossfadingInfo>
-														</BlendTrackAssoc>
-														<BlendTrackAssoc>
-															<ItemRef Name="RBS_SFX_LinkRay_HighChaos 02" ID="{3F02D730-4663-4671-B211-4F4F8935C27D}"/>
-															<CrossfadingInfo>
-																<LeftEdgePos>0.0005</LeftEdgePos>
-																<LeftFadingMode>Automatic</LeftFadingMode>
-																<RightEdgePos>1</RightEdgePos>
-																<RightFadingMode>Automatic</RightFadingMode>
-															</CrossfadingInfo>
-														</BlendTrackAssoc>
-													</BlendTrackAssocList>
-												</BlendTrack>
-											</BlendTrackList>
-										</BlendContainer>
-										<BlendContainer Name="LinkRay2" ID="{38D81513-3C02-47A3-BCD7-6313E544341A}" ShortID="4514060">
+											<ActiveSourceList>
+												<ActiveSource Name="Link 2 V2" ID="{D049A3E5-CAE4-4803-AD21-F2CD0CFEAB11}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Link 3 V2" ID="{7B596C8B-4830-4E89-B7AD-1894759C10EF}" ShortID="897630059">
 											<PropertyList>
-												<Property Name="3DSpatialization" Type="int16" Value="1"/>
-												<Property Name="BlendBehavior" Type="int16" Value="1"/>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>-4</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
-												<Reference Name="Attenuation">
-													<ObjectRef Name="LinkRay" ID="{2A7FEDB0-F68F-4BC8-8BCF-B53903130027}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
-												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="PlayerAbilities" ID="{23D327A8-D57F-4DDE-8DF2-8200B9DA4037}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<Sound Name="RBS_SFX_LinkRay_HighChaos 03" ID="{00E8F19D-885F-40BC-A1E6-F52E45D1A044}" ShortID="753866510">
-													<PropertyList>
-														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="RBS_SFX_LinkRay_HighChaos 03" ID="{55890849-DF4D-48CE-87C6-15FC979174A7}">
-															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.0869651474308865"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.190988508530339"/>
-																<Property Name="LoopBegin" Type="Real64" Value="0.0931769436759498"/>
-																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimBegin" Type="Real64" Value="0.0136659517391393"/>
-																<Property Name="TrimEnd" Type="Real64" Value="43.043077267057"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>RBS_SFX_LinkRay_HighChaos 03.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="106894985"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="RBS_SFX_LinkRay_HighChaos 03" ID="{55890849-DF4D-48CE-87C6-15FC979174A7}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="RBS_SFX_LinkRay_LowChaos 03" ID="{FC0B3D4C-C0DE-453A-8304-DBC57C0F2B2B}" ShortID="738190941">
-													<PropertyList>
-														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="RBS_SFX_LinkRay_LowChaos 03" ID="{92D8586C-400B-4A46-84B5-7917439D1C6D}">
-															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.483519028871391"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.753536148890483"/>
-																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimEnd" Type="Real64" Value="28.8855523741351"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>RBS_SFX_LinkRay_LowChaos 03.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="897258307"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="RBS_SFX_LinkRay_LowChaos 03" ID="{92D8586C-400B-4A46-84B5-7917439D1C6D}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
+												<AudioFileSource Name="Link 3 V2" ID="{9DED0C87-232F-45AA-A150-3883169B7AED}">
+													<Language>SFX</Language>
+													<AudioFile>Link 3 V2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="522177794"/>
+													</MediaIDList>
+												</AudioFileSource>
 											</ChildrenList>
-											<BlendTrackList>
-												<BlendTrack Name="New Blend Track" ID="{C428BC9C-0FCA-455B-A724-C6979B4CCBEA}" ShortID="691680964">
-													<PropertyList>
-														<Property Name="EnableCrossFading" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="LayerCrossFadeControlInput">
-															<ObjectRef Name="rtpc_chaos_global" ID="{912B7FBA-E859-424B-9664-D9B8B51FC1BA}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
-														</Reference>
-													</ReferenceList>
-													<BlendTrackAssocList>
-														<BlendTrackAssoc>
-															<ItemRef Name="RBS_SFX_LinkRay_LowChaos 03" ID="{FC0B3D4C-C0DE-453A-8304-DBC57C0F2B2B}"/>
-															<CrossfadingInfo>
-																<LeftEdgePos>0</LeftEdgePos>
-																<LeftFadingMode>Automatic</LeftFadingMode>
-																<RightEdgePos>0.9995</RightEdgePos>
-																<RightFadingMode>Automatic</RightFadingMode>
-															</CrossfadingInfo>
-														</BlendTrackAssoc>
-														<BlendTrackAssoc>
-															<ItemRef Name="RBS_SFX_LinkRay_HighChaos 03" ID="{00E8F19D-885F-40BC-A1E6-F52E45D1A044}"/>
-															<CrossfadingInfo>
-																<LeftEdgePos>0.0005</LeftEdgePos>
-																<LeftFadingMode>Automatic</LeftFadingMode>
-																<RightEdgePos>1</RightEdgePos>
-																<RightFadingMode>Automatic</RightFadingMode>
-															</CrossfadingInfo>
-														</BlendTrackAssoc>
-													</BlendTrackAssocList>
-												</BlendTrack>
-											</BlendTrackList>
-										</BlendContainer>
-										<BlendContainer Name="LinkRay3" ID="{3966589A-F7D5-4173-9E93-2F773A0FA453}" ShortID="876343545">
+											<ActiveSourceList>
+												<ActiveSource Name="Link 3 V2" ID="{9DED0C87-232F-45AA-A150-3883169B7AED}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Link 4 V2" ID="{F47D25DC-36A6-4946-8E77-CCD4EB357F0A}" ShortID="804491813">
 											<PropertyList>
-												<Property Name="3DSpatialization" Type="int16" Value="1"/>
-												<Property Name="BlendBehavior" Type="int16" Value="1"/>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>-5</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
-												<Reference Name="Attenuation">
-													<ObjectRef Name="LinkRay" ID="{2A7FEDB0-F68F-4BC8-8BCF-B53903130027}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
-												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="PlayerAbilities" ID="{23D327A8-D57F-4DDE-8DF2-8200B9DA4037}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<Sound Name="RBS_SFX_LinkRay_HighChaos 04" ID="{00AA8B7C-2D94-448E-9394-5663B6464CD3}" ShortID="161356907">
-													<PropertyList>
-														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="RBS_SFX_LinkRay_HighChaos 04" ID="{C4669D93-98DE-4970-BC02-6DA40AD2BF87}">
-															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.00906268902673964"/>
-																<Property Name="LoopBegin" Type="Real64" Value="0.0156355792044958"/>
-																<Property Name="LoopEnd" Type="Real64" Value="43.3248924023616"/>
-																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>RBS_SFX_LinkRay_HighChaos 04.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="678096996"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="RBS_SFX_LinkRay_HighChaos 04" ID="{C4669D93-98DE-4970-BC02-6DA40AD2BF87}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="RBS_SFX_LinkRay_LowChaos 04" ID="{BD583196-CB81-40AF-AE7C-E0910FD8F98A}" ShortID="413029492">
-													<PropertyList>
-														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="RBS_SFX_LinkRay_LowChaos 04" ID="{9F5A4DB0-DA70-4429-B7F5-01079D074531}">
-															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.37990780839895"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.444978417821524"/>
-																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimEnd" Type="Real64" Value="42.0265473598196"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>RBS_SFX_LinkRay_LowChaos 04.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="562041628"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="RBS_SFX_LinkRay_LowChaos 04" ID="{9F5A4DB0-DA70-4429-B7F5-01079D074531}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
+												<AudioFileSource Name="Link 4 V2" ID="{DDD84241-D80C-409B-9196-AD18B708B1A6}">
+													<Language>SFX</Language>
+													<AudioFile>Link 4 V2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="674855569"/>
+													</MediaIDList>
+												</AudioFileSource>
 											</ChildrenList>
-											<BlendTrackList>
-												<BlendTrack Name="New Blend Track" ID="{81F66A83-67F0-4125-946F-4BFF170032A4}" ShortID="797064461">
-													<PropertyList>
-														<Property Name="EnableCrossFading" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="LayerCrossFadeControlInput">
-															<ObjectRef Name="rtpc_chaos_global" ID="{912B7FBA-E859-424B-9664-D9B8B51FC1BA}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
-														</Reference>
-													</ReferenceList>
-													<BlendTrackAssocList>
-														<BlendTrackAssoc>
-															<ItemRef Name="RBS_SFX_LinkRay_LowChaos 04" ID="{BD583196-CB81-40AF-AE7C-E0910FD8F98A}"/>
-															<CrossfadingInfo>
-																<LeftEdgePos>0</LeftEdgePos>
-																<LeftFadingMode>Automatic</LeftFadingMode>
-																<RightEdgePos>0.9995</RightEdgePos>
-																<RightFadingMode>Automatic</RightFadingMode>
-															</CrossfadingInfo>
-														</BlendTrackAssoc>
-														<BlendTrackAssoc>
-															<ItemRef Name="RBS_SFX_LinkRay_HighChaos 04" ID="{00AA8B7C-2D94-448E-9394-5663B6464CD3}"/>
-															<CrossfadingInfo>
-																<LeftEdgePos>0.0005</LeftEdgePos>
-																<LeftFadingMode>Automatic</LeftFadingMode>
-																<RightEdgePos>1</RightEdgePos>
-																<RightFadingMode>Automatic</RightFadingMode>
-															</CrossfadingInfo>
-														</BlendTrackAssoc>
-													</BlendTrackAssocList>
-												</BlendTrack>
-											</BlendTrackList>
-										</BlendContainer>
-										<BlendContainer Name="LinkRay4" ID="{7921B8CB-8711-4BC6-8A20-717235D1F683}" ShortID="912791334">
+											<ActiveSourceList>
+												<ActiveSource Name="Link 4 V2" ID="{DDD84241-D80C-409B-9196-AD18B708B1A6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Link 5 V2" ID="{9E710217-D57A-4D0A-88F2-D4EA7A272038}" ShortID="389788316">
 											<PropertyList>
-												<Property Name="3DSpatialization" Type="int16" Value="1"/>
-												<Property Name="BlendBehavior" Type="int16" Value="1"/>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>-14</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
-												<Reference Name="Attenuation">
-													<ObjectRef Name="LinkRay" ID="{2A7FEDB0-F68F-4BC8-8BCF-B53903130027}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
-												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="PlayerAbilities" ID="{23D327A8-D57F-4DDE-8DF2-8200B9DA4037}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<Sound Name="RBS_SFX_LinkRay_HighChaos 05" ID="{F231ABC2-2884-4E12-8FD5-E716A5FA9FB2}" ShortID="314421671">
-													<PropertyList>
-														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="RBS_SFX_LinkRay_HighChaos 05" ID="{20AF54E9-4D29-40C6-BCCE-0967D8671591}">
-															<PropertyList>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.345370734908137"/>
-																<Property Name="LoopBegin" Type="Real64" Value="2.48014489814149"/>
-																<Property Name="LoopEnd" Type="Real64" Value="41.0412227040848"/>
-																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimBegin" Type="Real64" Value="1.04577869789837"/>
-																<Property Name="TrimEnd" Type="Real64" Value="42.066155511811"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>RBS_SFX_LinkRay_HighChaos 05.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="655081"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="RBS_SFX_LinkRay_HighChaos 05" ID="{20AF54E9-4D29-40C6-BCCE-0967D8671591}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="RBS_SFX_LinkRay_LowChaos 05" ID="{025DAC99-3238-46B5-87F4-325B417CED23}" ShortID="200795363">
-													<PropertyList>
-														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="RBS_SFX_LinkRay_LowChaos 05" ID="{62E3A1C6-E36A-478B-A66F-DC6A8F9C86CA}">
-															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.193375595681431"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.305922662252293"/>
-																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimBegin" Type="Real64" Value="0.734214389405512"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>RBS_SFX_LinkRay_LowChaos 05.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="1036319810"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="RBS_SFX_LinkRay_LowChaos 05" ID="{62E3A1C6-E36A-478B-A66F-DC6A8F9C86CA}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
+												<AudioFileSource Name="Link 5 V2" ID="{72BE5FBE-764B-444E-8045-ABF10685B12C}">
+													<Language>SFX</Language>
+													<AudioFile>Link 5 V2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="996392526"/>
+													</MediaIDList>
+												</AudioFileSource>
 											</ChildrenList>
-											<BlendTrackList>
-												<BlendTrack Name="New Blend Track" ID="{6644DADF-14A0-4E16-BB69-8CE4DDD036B0}" ShortID="119503592">
-													<PropertyList>
-														<Property Name="EnableCrossFading" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="LayerCrossFadeControlInput">
-															<ObjectRef Name="rtpc_chaos_global" ID="{912B7FBA-E859-424B-9664-D9B8B51FC1BA}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
-														</Reference>
-													</ReferenceList>
-													<BlendTrackAssocList>
-														<BlendTrackAssoc>
-															<ItemRef Name="RBS_SFX_LinkRay_LowChaos 05" ID="{025DAC99-3238-46B5-87F4-325B417CED23}"/>
-															<CrossfadingInfo>
-																<LeftEdgePos>0</LeftEdgePos>
-																<LeftFadingMode>Automatic</LeftFadingMode>
-																<RightEdgePos>0.9995</RightEdgePos>
-																<RightFadingMode>Automatic</RightFadingMode>
-															</CrossfadingInfo>
-														</BlendTrackAssoc>
-														<BlendTrackAssoc>
-															<ItemRef Name="RBS_SFX_LinkRay_HighChaos 05" ID="{F231ABC2-2884-4E12-8FD5-E716A5FA9FB2}"/>
-															<CrossfadingInfo>
-																<LeftEdgePos>0.0005</LeftEdgePos>
-																<LeftFadingMode>Automatic</LeftFadingMode>
-																<RightEdgePos>1</RightEdgePos>
-																<RightFadingMode>Automatic</RightFadingMode>
-															</CrossfadingInfo>
-														</BlendTrackAssoc>
-													</BlendTrackAssocList>
-												</BlendTrack>
-											</BlendTrackList>
-										</BlendContainer>
-										<BlendContainer Name="LinkRay5" ID="{7E1BAAB9-12EF-44AC-A237-957B6532840A}" ShortID="465232762">
-											<PropertyList>
-												<Property Name="3DSpatialization" Type="int16" Value="1"/>
-												<Property Name="BlendBehavior" Type="int16" Value="1"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Attenuation">
-													<ObjectRef Name="LinkRay" ID="{2A7FEDB0-F68F-4BC8-8BCF-B53903130027}" WorkUnitID="{A758D6A2-4B36-44AC-ADBD-77004009BE31}"/>
-												</Reference>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="PlayerAbilities" ID="{23D327A8-D57F-4DDE-8DF2-8200B9DA4037}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="RBS_SFX_LinkRay_HighChaos 06" ID="{9E792937-7D2B-4596-B66A-BF431F68E31F}" ShortID="115968325">
-													<PropertyList>
-														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="RBS_SFX_LinkRay_HighChaos 06" ID="{1992182A-9469-42F6-9FED-DDC92B877118}">
-															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.0701741387113852"/>
-																<Property Name="LoopBegin" Type="Real64" Value="4.95522741454317"/>
-																<Property Name="LoopEnd" Type="Real64" Value="41.3579475587404"/>
-																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimBegin" Type="Real64" Value="4.76395128177687"/>
-																<Property Name="TrimEnd" Type="Real64" Value="41.3590797330873"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>RBS_SFX_LinkRay_HighChaos 06.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="311192433"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="RBS_SFX_LinkRay_HighChaos 06" ID="{1992182A-9469-42F6-9FED-DDC92B877118}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="RBS_SFX_LinkRay_LowChaos 06" ID="{0D30F1F2-6330-4109-924F-F2D5FDF9A214}" ShortID="894196137">
-													<PropertyList>
-														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="RBS_SFX_LinkRay_LowChaos 06" ID="{933F1508-1F3B-4D12-A99D-1F45F229BE28}">
-															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.00438480043014877"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.00015414909100997"/>
-																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimBegin" Type="Real64" Value="4.25255429411064"/>
-																<Property Name="TrimEnd" Type="Real64" Value="39.828040225666"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>RBS_SFX_LinkRay_LowChaos 06.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="932067387"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="RBS_SFX_LinkRay_LowChaos 06" ID="{933F1508-1F3B-4D12-A99D-1F45F229BE28}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
-											<BlendTrackList>
-												<BlendTrack Name="New Blend Track" ID="{53CB6F06-8F96-457E-8248-20A29B2AE9DC}" ShortID="522377643">
-													<PropertyList>
-														<Property Name="EnableCrossFading" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="LayerCrossFadeControlInput">
-															<ObjectRef Name="rtpc_chaos_global" ID="{912B7FBA-E859-424B-9664-D9B8B51FC1BA}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
-														</Reference>
-													</ReferenceList>
-													<BlendTrackAssocList>
-														<BlendTrackAssoc>
-															<ItemRef Name="RBS_SFX_LinkRay_LowChaos 06" ID="{0D30F1F2-6330-4109-924F-F2D5FDF9A214}"/>
-															<CrossfadingInfo>
-																<LeftEdgePos>0</LeftEdgePos>
-																<LeftFadingMode>Automatic</LeftFadingMode>
-																<RightEdgePos>0.9995</RightEdgePos>
-																<RightFadingMode>Automatic</RightFadingMode>
-															</CrossfadingInfo>
-														</BlendTrackAssoc>
-														<BlendTrackAssoc>
-															<ItemRef Name="RBS_SFX_LinkRay_HighChaos 06" ID="{9E792937-7D2B-4596-B66A-BF431F68E31F}"/>
-															<CrossfadingInfo>
-																<LeftEdgePos>0.0005</LeftEdgePos>
-																<LeftFadingMode>Automatic</LeftFadingMode>
-																<RightEdgePos>1</RightEdgePos>
-																<RightFadingMode>Automatic</RightFadingMode>
-															</CrossfadingInfo>
-														</BlendTrackAssoc>
-													</BlendTrackAssocList>
-												</BlendTrack>
-											</BlendTrackList>
-										</BlendContainer>
+											<ActiveSourceList>
+												<ActiveSource Name="Link 5 V2" ID="{72BE5FBE-764B-444E-8045-ABF10685B12C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
-									<GroupingInfo>
-										<GroupingBehaviorList>
-											<GroupingBehavior>
-												<ItemRef Name="LinkRay2" ID="{38D81513-3C02-47A3-BCD7-6313E544341A}"/>
-											</GroupingBehavior>
-											<GroupingBehavior>
-												<ItemRef Name="LinkRay0" ID="{3FE73E25-8AB1-4716-92E9-A06A498955D0}"/>
-											</GroupingBehavior>
-											<GroupingBehavior>
-												<ItemRef Name="LinkRay3" ID="{3966589A-F7D5-4173-9E93-2F773A0FA453}"/>
-											</GroupingBehavior>
-											<GroupingBehavior>
-												<ItemRef Name="LinkRay1" ID="{559A57A1-FD67-4571-8239-75DC121880F4}"/>
-											</GroupingBehavior>
-											<GroupingBehavior>
-												<ItemRef Name="LinkRay5" ID="{7E1BAAB9-12EF-44AC-A237-957B6532840A}"/>
-											</GroupingBehavior>
-											<GroupingBehavior>
-												<ItemRef Name="LinkRay4" ID="{7921B8CB-8711-4BC6-8A20-717235D1F683}"/>
-											</GroupingBehavior>
-										</GroupingBehaviorList>
-										<GroupingList>
-											<Grouping>
-												<SwitchRef Name="link5" ID="{42700C4E-265F-46C6-84CA-AC6DCD37F297}"/>
-												<ItemList>
-													<ItemRef Name="LinkRay5" ID="{7E1BAAB9-12EF-44AC-A237-957B6532840A}"/>
-												</ItemList>
-											</Grouping>
-											<Grouping>
-												<SwitchRef Name="link0" ID="{21730554-9A26-480E-BF82-5403DD91DA7F}"/>
-												<ItemList>
-													<ItemRef Name="LinkRay0" ID="{3FE73E25-8AB1-4716-92E9-A06A498955D0}"/>
-												</ItemList>
-											</Grouping>
-											<Grouping>
-												<SwitchRef Name="link3" ID="{D4A4F266-2E92-4285-85C9-31EDF0B60ED6}"/>
-												<ItemList>
-													<ItemRef Name="LinkRay3" ID="{3966589A-F7D5-4173-9E93-2F773A0FA453}"/>
-												</ItemList>
-											</Grouping>
-											<Grouping>
-												<SwitchRef Name="link1" ID="{67175D70-7201-4E06-AD2B-B4AFE78D5A34}"/>
-												<ItemList>
-													<ItemRef Name="LinkRay1" ID="{559A57A1-FD67-4571-8239-75DC121880F4}"/>
-												</ItemList>
-											</Grouping>
-											<Grouping>
-												<SwitchRef Name="link4" ID="{204B5880-D638-43C3-8757-F3CF4D414429}"/>
-												<ItemList>
-													<ItemRef Name="LinkRay4" ID="{7921B8CB-8711-4BC6-8A20-717235D1F683}"/>
-												</ItemList>
-											</Grouping>
-											<Grouping>
-												<SwitchRef Name="link2" ID="{C5B26C9B-9695-4352-8EC1-A35560EB5AD0}"/>
-												<ItemList>
-													<ItemRef Name="LinkRay2" ID="{38D81513-3C02-47A3-BCD7-6313E544341A}"/>
-												</ItemList>
-											</Grouping>
-										</GroupingList>
-									</GroupingInfo>
-								</SwitchContainer>
+									<ObjectLists>
+										<ObjectList Name="Playlist">
+											<Reference>
+												<ObjectRef Name="Link 1 V2" ID="{C5B3CA47-FC0D-4556-A71D-426FA7721DF5}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="Link 2 V2" ID="{8681E77D-E405-468D-ADF4-523552F78EBB}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="Link 3 V2" ID="{7B596C8B-4830-4E89-B7AD-1894759C10EF}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="Link 4 V2" ID="{F47D25DC-36A6-4946-8E77-CCD4EB357F0A}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="Link 5 V2" ID="{9E710217-D57A-4D0A-88F2-D4EA7A272038}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+											</Reference>
+										</ObjectList>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{9BD5D55C-8D01-4237-8EF7-E7CA3A57A2CF}" ShortID="1012131158">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{730B44D8-0E7E-4F22-AC5F-4F1D4CEC1884}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="65537"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>-180</XPos>
+																				<YPos>25</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>180</XPos>
+																				<YPos>25</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{548F587E-4EC2-4C18-A8D6-E0D08AE4CA81}" ShortID="91075587">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{43946CE5-789D-4AB1-A761-D940EC731E9D}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>-180</XPos>
+																				<YPos>-2.64676</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>-0.16529</XPos>
+																				<YPos>-0.102550000000008</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>180</XPos>
+																				<YPos>-1.42137</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{DF6D0274-5481-459A-879F-31DEE037E70B}" ShortID="826139621">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Highpass"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="rtpc_builtin_azimuth_angle" ID="{9C016406-4E34-4C58-AB4E-877204F3F982}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{744FF103-1A4A-4A04-9007-4DA54B5373A4}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="65537"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>-180</XPos>
+																				<YPos>17</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>180</XPos>
+																				<YPos>17</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{ED906E6A-F64F-43CB-A061-CD58B0280EAD}" ShortID="118939101">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="rtpc_player_airspeed" ID="{0D4E015C-50A2-46F1-AE85-231CD51FEDA5}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{FD99A311-554A-4662-A160-847CEB3C79FD}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>1</XPos>
+																				<YPos>-3.19402</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
 							</ChildrenList>
 						</Folder>
 						<RandomSequenceContainer Name="HitOnWeakpoint" ID="{D0FAD662-7CBC-47E6-94BD-7F3F63AE4861}" ShortID="149616721">
@@ -6771,7 +6345,7 @@
 								</Property>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>6</Value>
+										<Value>4</Value>
 									</ValueList>
 								</Property>
 								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
@@ -9964,7 +9538,7 @@
 										</Property>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>-9</Value>
+												<Value>-16</Value>
 											</ValueList>
 										</Property>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
@@ -10348,9 +9922,19 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="OnSelect" ID="{72A263BA-A309-43A4-A159-2A217160CD33}" ShortID="495509851">
 									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>14</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>18</Value>
+											</ValueList>
+										</Property>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>-5</Value>
+												<Value>-10</Value>
 											</ValueList>
 										</Property>
 										<Property Name="Pitch" Type="int32">
@@ -10492,9 +10076,14 @@
 												<Value>22</Value>
 											</ValueList>
 										</Property>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>21</Value>
+											</ValueList>
+										</Property>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>-1</Value>
+												<Value>-7</Value>
 											</ValueList>
 										</Property>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
@@ -10894,7 +10483,7 @@
 									<PropertyList>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>-9</Value>
+												<Value>-14</Value>
 											</ValueList>
 										</Property>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
@@ -11164,9 +10753,14 @@
 								<RandomSequenceContainer Name="EndingCards (new persona" ID="{AA2F0BEE-A297-43E4-A86B-A22DCAFBE495}" ShortID="202809344">
 									<PropertyList>
 										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>9</Value>
+											</ValueList>
+										</Property>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>-7</Value>
+												<Value>-15</Value>
 											</ValueList>
 										</Property>
 										<Property Name="MaxSoundPerInstance" Type="int16">
@@ -11220,13 +10814,6 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="UI ending cards v1_01" ID="{B65D2C2A-C67A-4D83-949D-EFC3D2F53987}" ShortID="1339943">
-											<PropertyList>
-												<Property Name="Inclusion" Type="bool">
-													<ValueList>
-														<Value>False</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
@@ -11256,13 +10843,6 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="UI ending cards v1_02" ID="{989D5B16-0A00-47B2-982C-BB33B6EBF701}" ShortID="1016293966">
-											<PropertyList>
-												<Property Name="Inclusion" Type="bool">
-													<ValueList>
-														<Value>False</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
@@ -13004,6 +12584,1085 @@
 										</Sound>
 									</ChildrenList>
 								</ActorMixer>
+								<BlendContainer Name="PersonaGiven" ID="{2D9C62B1-8EFD-4132-BE48-72B8CC99DA99}" ShortID="288603332">
+									<PropertyList>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="EndingCards (new persona" ID="{03EFE6E0-8DC7-4662-B92A-E4DE90581321}" ShortID="31204516">
+											<PropertyList>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>0.6</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>-17</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
+												<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="UI ending cards v1" ID="{3C9C6B4E-4055-45C0-9CF5-00382C11E17F}" ShortID="672600692">
+													<PropertyList>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ValueList>
+																<Value>2</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{39250B52-8C88-4C54-B7D3-2C12760A0A9F}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="UI ending cards v1" ID="{7C80E328-E6B8-41F9-A38E-654D8FDFEA0B}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.00329254705286508"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.620821310432948"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.822987339797965"/>
+																<Property Name="TrimEnd" Type="Real64" Value="1.99236085752992"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>UI ending cards v1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="770724338"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="UI ending cards v1" ID="{7C80E328-E6B8-41F9-A38E-654D8FDFEA0B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="UI ending cards v1_01" ID="{E2B4232B-27DD-46E1-A23B-23B45209E7AF}" ShortID="614866253">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{39250B52-8C88-4C54-B7D3-2C12760A0A9F}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="UI ending cards v1" ID="{E24DFCC6-202F-4742-B35A-DF340B447E9C}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.00474283778572948"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.620821310432948"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="2.02670227009314"/>
+																<Property Name="TrimEnd" Type="Real64" Value="4.24431134668236"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>UI ending cards v1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="985104756"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="UI ending cards v1" ID="{E24DFCC6-202F-4742-B35A-DF340B447E9C}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="UI ending cards v1_02" ID="{351F245D-BE97-4676-A5CE-5F94759F6FE8}" ShortID="738948829">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{39250B52-8C88-4C54-B7D3-2C12760A0A9F}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="UI ending cards v1" ID="{885F9579-6E9B-4459-9957-4C51AEBB058B}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.00272071960574394"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.620821310432948"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="4.32729267650325"/>
+																<Property Name="TrimEnd" Type="Real64" Value="6.32700544758539"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>UI ending cards v1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="295667460"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="UI ending cards v1" ID="{885F9579-6E9B-4459-9957-4C51AEBB058B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Playlist">
+													<Reference>
+														<ObjectRef Name="UI ending cards v1" ID="{3C9C6B4E-4055-45C0-9CF5-00382C11E17F}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+													</Reference>
+													<Reference>
+														<ObjectRef Name="UI ending cards v1_01" ID="{E2B4232B-27DD-46E1-A23B-23B45209E7AF}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+													</Reference>
+													<Reference>
+														<ObjectRef Name="UI ending cards v1_02" ID="{351F245D-BE97-4676-A5CE-5F94759F6FE8}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</RandomSequenceContainer>
+										<Sound Name="EnemyStun v2" ID="{6D995219-D55E-4BCF-B1CD-AE9783B5B7F6}" ShortID="1031966421">
+											<PropertyList>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>-26</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EnemyStun v2" ID="{7399912C-7EA0-4C44-9C3A-9E201A034BCE}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00279305885019374"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.9348156445258"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.103389704639345"/>
+														<Property Name="TrimEnd" Type="Real64" Value="5.24490164870992"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>EnemyStun v2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="536343566"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="EnemyStun v2" ID="{7399912C-7EA0-4C44-9C3A-9E201A034BCE}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<BlendContainer Name="Stinger" ID="{610F5D05-1B47-4A38-A146-28C789F708A8}" ShortID="465218280">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="transition segment hc BETWEEN WAVE half speed" ID="{13544567-68FA-40DC-8C37-5DCB6042B993}" ShortID="935831689">
+													<PropertyList>
+														<Property Name="Highpass" Type="int16">
+															<ValueList>
+																<Value>12</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Lowpass" Type="int16">
+															<ValueList>
+																<Value>22</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="transition segment hc BETWEEN WAVE half speed" ID="{0FF029BE-C7AA-42B3-9A72-2665ABFEB938}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>transition segment hc BETWEEN WAVE half speed.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="998202919"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{84C9CCF1-4517-4493-A71F-B002392B7393}" ShortID="802977067">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Volume"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_chaos_no_interpolation" ID="{32A00591-7D0F-46D4-86CC-E57C780551F1}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{B84438EC-92DA-4FCD-922C-C17BC780AE4B}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>-200</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>0.5</XPos>
+																								<YPos>-200</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+													<ActiveSourceList>
+														<ActiveSource Name="transition segment hc BETWEEN WAVE half speed" ID="{0FF029BE-C7AA-42B3-9A72-2665ABFEB938}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="transition segment hc COMBAT" ID="{7541B6C0-292C-4884-8614-0471B94AC2DA}" ShortID="130672426">
+													<PropertyList>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ValueList>
+																<Value>-40</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="transition segment hc COMBAT" ID="{A3201B8A-061B-48B1-AA19-64528FC4D614}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>transition segment hc COMBAT.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="778296094"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{7D021670-3799-4BC4-BEBE-ADBB6347CCAF}" ShortID="731315675">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Volume"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_chaos_no_interpolation" ID="{32A00591-7D0F-46D4-86CC-E57C780551F1}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{37546887-1865-4B68-9D57-336F616C5365}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>-200</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>0.5</XPos>
+																								<YPos>-200</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+													<ActiveSourceList>
+														<ActiveSource Name="transition segment hc COMBAT" ID="{A3201B8A-061B-48B1-AA19-64528FC4D614}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="transition segment 1 LC" ID="{DF147F39-44BE-4BF9-A63F-0F2E82332C55}" ShortID="519418729">
+													<PropertyList>
+														<Property Name="InitialDelay" Type="Real64">
+															<ValueList>
+																<Value>0.25</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ValueList>
+																<Value>-36</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="transition segment 1 LC" ID="{C60F7498-9B56-4BAD-B3ED-4E7EC8ABAEB2}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.490111807504831"/>
+																<Property Name="FadeInShape" Type="int16" Value="8"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0308340153386865"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>transition segment 1 LC.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="374391427"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{7CDD0534-CCB5-44C1-BB64-03C3AEE5008B}" ShortID="602847304">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Volume"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_chaos_no_interpolation" ID="{32A00591-7D0F-46D4-86CC-E57C780551F1}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{1F268094-84CE-4D9E-86FA-04A67E8A8CF4}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>-0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>0.49842</XPos>
+																								<YPos>-42.26215</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>-200</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+													<ActiveSourceList>
+														<ActiveSource Name="transition segment 1 LC" ID="{C60F7498-9B56-4BAD-B3ED-4E7EC8ABAEB2}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="transition segment LC 4 Halfspeed" ID="{A7C31C12-F947-4126-9E57-746978C32344}" ShortID="217243093">
+													<PropertyList>
+														<Property Name="InitialDelay" Type="Real64">
+															<ValueList>
+																<Value>0.25</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ValueList>
+																<Value>-14</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="transition segment LC 4 Halfspeed" ID="{95296877-EF14-4A4E-A881-7EC83F67C575}">
+															<Language>SFX</Language>
+															<AudioFile>transition segment LC 4 Halfspeed.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="376308958"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{1A197BEC-7C40-4CCF-B0D6-9CC89BD83CC7}" ShortID="772734534">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Volume"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="rtpc_chaos_no_interpolation" ID="{32A00591-7D0F-46D4-86CC-E57C780551F1}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{41A7BCAA-4653-479F-B5F3-2F8DE8FDB271}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>-0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>0.49842</XPos>
+																								<YPos>-42.26215</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>-200</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+													<ActiveSourceList>
+														<ActiveSource Name="transition segment LC 4 Halfspeed" ID="{95296877-EF14-4A4E-A881-7EC83F67C575}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+										<Sound Name="dweller killed" ID="{20C17D63-8C2C-4EC1-93AE-1FBEC77ECCC8}" ShortID="957682340">
+											<PropertyList>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>0.33</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="dweller killed" ID="{698FCBA7-D1FD-4F84-ACB7-BB2812FFE0E1}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.545419212375237"/>
+														<Property Name="FadeInShape" Type="int16" Value="8"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.576443737582001"/>
+														<Property Name="FadeOutShape" Type="int16" Value="1"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.940140349480897"/>
+														<Property Name="TrimEnd" Type="Real64" Value="2.13590153687423"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>dweller killed.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="66522405"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="dweller killed" ID="{698FCBA7-D1FD-4F84-ACB7-BB2812FFE0E1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</BlendContainer>
+								<BlendContainer Name="PersonaGivenSelect" ID="{04D444E0-6F5F-42A8-A614-5969159B464A}" ShortID="519136367">
+									<PropertyList>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="SlashLC" ID="{56A080A0-1785-4557-9B47-8696D9F1BE1A}" ShortID="333749637">
+											<PropertyList>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>-25</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="UiBus" ID="{2CE1566D-92AD-4C86-A97B-02E069A97F77}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Slash LC v2" ID="{FAC82720-424D-4480-A443-CBDDAA0E76D3}" ShortID="987643631">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Slash LC v2" ID="{D5D018AE-A30A-404A-9591-8370383D269D}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.312158597365611"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.579185831256675"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.462596475614098"/>
+																<Property Name="TrimEnd" Type="Real64" Value="2.46718120327519"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Slash LC v2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="775199076"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Slash LC v2" ID="{D5D018AE-A30A-404A-9591-8370383D269D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Slash LC v2_01" ID="{4C6FB275-FDC2-46A2-B0DB-DC3A1F78FAE4}" ShortID="670979356">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Slash LC v2" ID="{69C3DCF2-C1AB-4F0C-9D1D-74FB605AF1D2}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.312158597365611"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.579185831256675"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="2.60257529369883"/>
+																<Property Name="TrimEnd" Type="Real64" Value="4.40030793876825"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Slash LC v2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="561143510"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Slash LC v2" ID="{69C3DCF2-C1AB-4F0C-9D1D-74FB605AF1D2}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Slash LC v2_02" ID="{89FA4AD0-97FF-487D-AC8B-68D5D4E44881}" ShortID="997231895">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Slash LC v2" ID="{8D65C40E-2480-48FC-B805-9CB783371505}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.312158597365611"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.579185831256675"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="4.56578960484158"/>
+																<Property Name="TrimEnd" Type="Real64" Value="6.52900391598434"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Slash LC v2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="896280138"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Slash LC v2" ID="{8D65C40E-2480-48FC-B805-9CB783371505}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Slash LC v2_03" ID="{FA827465-2C5F-4B06-9A5D-CAD51F7D397E}" ShortID="813529333">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Slash LC v2" ID="{ED2C1729-E2D9-476D-B7FB-7DCC4B76D7C1}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.312158597365611"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.579185831256675"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="6.64935421858313"/>
+																<Property Name="TrimEnd" Type="Real64" Value="8.153733001068"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Slash LC v2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="164443112"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Slash LC v2" ID="{ED2C1729-E2D9-476D-B7FB-7DCC4B76D7C1}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Slash LC v2_04" ID="{2A1779F1-B412-4C5B-B426-202C5C42B656}" ShortID="626377643">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Slash LC v2" ID="{F0D3B27C-887D-487B-B8EB-A18EEA60A10A}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.312158597365611"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.579185831256675"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="8.37562887148452"/>
+																<Property Name="TrimEnd" Type="Real64" Value="9.66563367746529"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Slash LC v2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1055553329"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Slash LC v2" ID="{F0D3B27C-887D-487B-B8EB-A18EEA60A10A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{5FC4D40F-8D63-45C2-A6A6-96FE611CD0AD}" ShortID="547355106">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Volume"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="rtpc_chaos_no_interpolation" ID="{32A00591-7D0F-46D4-86CC-E57C780551F1}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{50B888DC-8533-4866-BD7F-4DA24FAF2710}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="3"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>0</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>0.5</XPos>
+																						<YPos>-200</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>1</XPos>
+																						<YPos>-200</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="SlashHC" ID="{382E88F7-AC4F-44B0-AB76-D5F7DD57CC8E}" ShortID="176379625">
+											<PropertyList>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>-9</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="UiBus" ID="{2CE1566D-92AD-4C86-A97B-02E069A97F77}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="SlashHC v1" ID="{A4F093E2-C9C0-4D9A-BA78-CD5CBEE7E37C}" ShortID="735689555">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SlashHC v1" ID="{D44FBC40-7A17-4F8B-8460-1C70BBD39C5A}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0410337813651674"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.514669256133558"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0835873324105261"/>
+																<Property Name="TrimEnd" Type="Real64" Value="1.79322503090514"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>SlashHC v1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="312134411"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SlashHC v1" ID="{D44FBC40-7A17-4F8B-8460-1C70BBD39C5A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SlashHC v1_01" ID="{6FE2E019-5684-486C-AD46-390A940F5692}" ShortID="502288875">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SlashHC v1" ID="{76D57D6B-BEDD-440A-93B2-E513D1F9EFC7}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.141372828796422"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.514669256133558"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="2.60384425408004"/>
+																<Property Name="TrimEnd" Type="Real64" Value="4.6775603061853"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>SlashHC v1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="12273993"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SlashHC v1" ID="{76D57D6B-BEDD-440A-93B2-E513D1F9EFC7}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SlashHC v1_02" ID="{50B91393-EBB6-43FD-B11E-0ED8CAB89F0B}" ShortID="583109294">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SlashHC v1" ID="{314C385C-B65C-4CA0-BB5B-49FA6E559AA9}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.141372828796422"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.514669256133558"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="4.83157486699093"/>
+																<Property Name="TrimEnd" Type="Real64" Value="6.67262685019966"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>SlashHC v1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="77706173"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SlashHC v1" ID="{314C385C-B65C-4CA0-BB5B-49FA6E559AA9}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SlashHC v1_03" ID="{30479405-1D98-4423-B39B-DEDD8826AF0E}" ShortID="92786204">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SlashHC v1" ID="{9EE6152C-EDB4-42E6-84D2-961221D08F33}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.141372828796422"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.514669256133558"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="7.00159225158806"/>
+																<Property Name="TrimEnd" Type="Real64" Value="9.29857873847544"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>SlashHC v1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="609513538"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SlashHC v1" ID="{9EE6152C-EDB4-42E6-84D2-961221D08F33}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SlashHC v1_04" ID="{0B3773EB-A1C8-4F50-B8CC-6C6B1D95431C}" ShortID="252573794">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SlashHC v1" ID="{6A9421DB-3AD5-4ECA-A237-209F9B13B702}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.141372828796422"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.514669256133558"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="7.00159225158806"/>
+																<Property Name="TrimEnd" Type="Real64" Value="9.29857873847544"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>SlashHC v1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="609513538"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SlashHC v1" ID="{6A9421DB-3AD5-4ECA-A237-209F9B13B702}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SlashHC v1_05" ID="{8EFD9F6B-9B2C-48CE-A292-2C752D018429}" ShortID="986703286">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SlashHC v1" ID="{A3156D99-AB05-4631-A463-629BC92DFC83}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.141372828796422"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.514669256133558"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="9.88148234444435"/>
+																<Property Name="TrimEnd" Type="Real64" Value="11.5897939025315"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>SlashHC v1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="602677290"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SlashHC v1" ID="{A3156D99-AB05-4631-A463-629BC92DFC83}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SlashHC v1_06" ID="{1D56C31B-DB70-4F2A-A7AF-A6A177F9BA8A}" ShortID="374739565">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SlashHC v1" ID="{9DF2D8BF-DFA3-448B-BB51-3F7E11515FD5}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.141372828796422"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.514669256133558"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="11.7917902016296"/>
+																<Property Name="TrimEnd" Type="Real64" Value="13.5231870510422"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>SlashHC v1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="449273102"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SlashHC v1" ID="{9DF2D8BF-DFA3-448B-BB51-3F7E11515FD5}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{63A13BE7-DC4B-49AA-BDBD-84EE22A98189}" ShortID="457695598">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Volume"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="rtpc_chaos_no_interpolation" ID="{32A00591-7D0F-46D4-86CC-E57C780551F1}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{17964AB1-A73C-4C71-8760-E0336A0B3D9A}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="3"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>-200</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>0.5</XPos>
+																						<YPos>-200</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>1</XPos>
+																						<YPos>0</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</RandomSequenceContainer>
+									</ChildrenList>
+								</BlendContainer>
 							</ChildrenList>
 							<ObjectLists>
 								<ObjectList Name="Effects">

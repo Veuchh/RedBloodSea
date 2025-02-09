@@ -18,7 +18,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{5A2E45C3-640E-AB1F-0D74-919B73BB3541}",
+    "Hash": "{54C9A318-2FA6-B750-CE47-AFD0E0749983}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -1015,7 +1015,7 @@
     "Type": "User",
     "GUID": "{1D2A39F0-30EC-4374-B60C-7E5FD97B8C24}",
     "Language": "SFX",
-    "Hash": "{F45B0AA5-4789-61DD-CA18-980B0005414E}",
+    "Hash": "{A0F7C5A1-F89E-C940-A719-C9B0ADEC8962}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\RBS_MAIN_SoundBank",
     "ShortName": "RBS_MAIN_SoundBank",
     "Path": "RBS_MAIN_SoundBank.bnk",
@@ -1028,14 +1028,6 @@
       "ShortName": "RBS_SFX_PlayerFS ConcreteGrittyRun 08R.wav",
       "Path": "Media/571399.wem",
       "CachePath": "SFX/RBS_SFX_PlayerFS ConcreteGrittyRun 08R_EDCD4836.wem"
-     },
-     {
-      "Id": "655081",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "RBS_SFX_LinkRay_HighChaos 05.wav",
-      "CachePath": "SFX/RBS_SFX_LinkRay_HighChaos 05_00E1F1C3.wem"
      },
      {
       "Id": "2101879",
@@ -1358,7 +1350,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "dweller killed.wav",
-      "CachePath": "SFX/dweller killed_BDD0928A.wem"
+      "CachePath": "SFX/dweller killed_35AA0B0C.wem"
      },
      {
       "Id": "69501670",
@@ -1403,6 +1395,14 @@
       "CachePath": "SFX/SlashHC v1_8A77D516.wem"
      },
      {
+      "Id": "78759511",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Link 1 V2.wav",
+      "CachePath": "SFX/Link 1 V2_D8A0D580.wem"
+     },
+     {
       "Id": "80670988",
       "Language": "SFX",
       "Streaming": "true",
@@ -1438,6 +1438,14 @@
       "CachePath": "SFX/RBS_SFX_BasicThrustGeneric 03_6F6702FD.wem"
      },
      {
+      "Id": "86674457",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "transition segment hc COMBAT.wav",
+      "CachePath": "SFX/transition segment hc COMBAT_D8A0D580.wem"
+     },
+     {
       "Id": "87270009",
       "Language": "SFX",
       "Streaming": "true",
@@ -1454,14 +1462,6 @@
       "ShortName": "RBS_SFX_PlayerFS GrassRun 12R.wav",
       "Path": "Media/90980313.wem",
       "CachePath": "SFX/RBS_SFX_PlayerFS GrassRun 12R_EDCD4836.wem"
-     },
-     {
-      "Id": "92944635",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "RBS_SFX_LinkRay_HighChaos 01.wav",
-      "CachePath": "SFX/RBS_SFX_LinkRay_HighChaos 01_B1752F9C.wem"
      },
      {
       "Id": "93186479",
@@ -1566,14 +1566,6 @@
       "Location": "Memory",
       "ShortName": "CrosshairLinkL3 v1.wav",
       "CachePath": "SFX/CrosshairLinkL3 v1_FE0CCE90.wem"
-     },
-     {
-      "Id": "106894985",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "RBS_SFX_LinkRay_HighChaos 03.wav",
-      "CachePath": "SFX/RBS_SFX_LinkRay_HighChaos 03_F1781553.wem"
      },
      {
       "Id": "107126723",
@@ -1819,14 +1811,6 @@
       "Location": "Memory",
       "ShortName": "BasaltGate close v1.wav",
       "CachePath": "SFX/BasaltGate close v1_3A62DC35.wem"
-     },
-     {
-      "Id": "181696342",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "RBS_SFX_LinkRay_LowChaos 02.wav",
-      "CachePath": "SFX/RBS_SFX_LinkRay_LowChaos 02_E55AB2F4.wem"
      },
      {
       "Id": "182081802",
@@ -2223,14 +2207,6 @@
       "CachePath": "SFX/RBS_SFX_FsSurface1 SurfacePebbleL3 05_EDCD4836.wem"
      },
      {
-      "Id": "311192433",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "RBS_SFX_LinkRay_HighChaos 06.wav",
-      "CachePath": "SFX/RBS_SFX_LinkRay_HighChaos 06_5ADFCF7F.wem"
-     },
-     {
       "Id": "311620096",
       "Language": "SFX",
       "Streaming": "false",
@@ -2516,6 +2492,14 @@
       "CachePath": "SFX/RBS_SFX_PlayerFS GrassRun 09R_EDCD4836.wem"
      },
      {
+      "Id": "374391427",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "transition segment 1 LC.wav",
+      "CachePath": "SFX/transition segment 1 LC_2649F2E3.wem"
+     },
+     {
       "Id": "376033256",
       "Language": "SFX",
       "Streaming": "true",
@@ -2523,6 +2507,14 @@
       "ShortName": "RBS_SFX_PlayerFS DirtRun 05L.wav",
       "Path": "Media/376033256.wem",
       "CachePath": "SFX/RBS_SFX_PlayerFS DirtRun 05L_96F68479.wem"
+     },
+     {
+      "Id": "376308958",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "transition segment LC 4 Halfspeed.wav",
+      "CachePath": "SFX/transition segment LC 4 Halfspeed_EDCD4836.wem"
      },
      {
       "Id": "387661737",
@@ -3010,6 +3002,14 @@
       "CachePath": "SFX/RBS_SFX_FsSurface1 SurfacePebbleL2 02_EDCD4836.wem"
      },
      {
+      "Id": "522177794",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Link 3 V2.wav",
+      "CachePath": "SFX/Link 3 V2_D8A0D580.wem"
+     },
+     {
       "Id": "523218377",
       "Language": "SFX",
       "Streaming": "false",
@@ -3182,14 +3182,6 @@
       "Location": "Memory",
       "ShortName": "Slash LC v2.wav",
       "CachePath": "SFX/Slash LC v2_CFB1B92A.wem"
-     },
-     {
-      "Id": "562041628",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "RBS_SFX_LinkRay_LowChaos 04.wav",
-      "CachePath": "SFX/RBS_SFX_LinkRay_LowChaos 04_AB8C575C.wem"
      },
      {
       "Id": "565440753",
@@ -3367,7 +3359,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "dweller killed.wav",
-      "CachePath": "SFX/dweller killed_C2B36FEE.wem"
+      "CachePath": "SFX/dweller killed_8417A284.wem"
      },
      {
       "Id": "606565850",
@@ -3614,6 +3606,14 @@
       "CachePath": "SFX/WeakpointReveal V2 - stem-glued_E26A36FB.wem"
      },
      {
+      "Id": "670715095",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Link 2 V2.wav",
+      "CachePath": "SFX/Link 2 V2_D8A0D580.wem"
+     },
+     {
       "Id": "671097419",
       "Language": "SFX",
       "Streaming": "true",
@@ -3640,20 +3640,12 @@
       "CachePath": "SFX/01 RBS_SFX_PlayerFS ConcreteGrittyWalk 01L_EDCD4836.wem"
      },
      {
-      "Id": "678096996",
+      "Id": "674855569",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "RBS_SFX_LinkRay_HighChaos 04.wav",
-      "CachePath": "SFX/RBS_SFX_LinkRay_HighChaos 04_B836D979.wem"
-     },
-     {
-      "Id": "679143028",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "RBS_SFX_LinkRay_LowChaos 01.wav",
-      "CachePath": "SFX/RBS_SFX_LinkRay_LowChaos 01_1F0A8C38.wem"
+      "ShortName": "Link 4 V2.wav",
+      "CachePath": "SFX/Link 4 V2_D8A0D580.wem"
      },
      {
       "Id": "679745917",
@@ -3703,7 +3695,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "dweller killed.wav",
-      "CachePath": "SFX/dweller killed_0260A7CA.wem"
+      "CachePath": "SFX/dweller killed_D471C373.wem"
      },
      {
       "Id": "700689431",
@@ -3838,14 +3830,6 @@
       "Location": "Memory",
       "ShortName": "LinkStartedLC V1.wav",
       "CachePath": "SFX/LinkStartedLC V1_476A4A2D.wem"
-     },
-     {
-      "Id": "733526565",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "RBS_SFX_LinkRay_HighChaos 02.wav",
-      "CachePath": "SFX/RBS_SFX_LinkRay_HighChaos 02_0D66FF35.wem"
      },
      {
       "Id": "733952893",
@@ -4036,6 +4020,14 @@
       "Location": "Memory",
       "ShortName": "DashHC v1.wav",
       "CachePath": "SFX/DashHC v1_C894414D.wem"
+     },
+     {
+      "Id": "778296094",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "transition segment hc COMBAT.wav",
+      "CachePath": "SFX/transition segment hc COMBAT_EDCD4836.wem"
      },
      {
       "Id": "779505053",
@@ -4465,14 +4457,6 @@
       "CachePath": "SFX/Slash LC v2_28C51E7C.wem"
      },
      {
-      "Id": "897258307",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "RBS_SFX_LinkRay_LowChaos 03.wav",
-      "CachePath": "SFX/RBS_SFX_LinkRay_LowChaos 03_4464FF3D.wem"
-     },
-     {
       "Id": "898556984",
       "Language": "SFX",
       "Streaming": "true",
@@ -4631,14 +4615,6 @@
       "ShortName": "RBS_SFX_PlayerFS FootLiftConcrete 02.wav",
       "Path": "Media/929733156.wem",
       "CachePath": "SFX/RBS_SFX_PlayerFS FootLiftConcrete 02_EDCD4836.wem"
-     },
-     {
-      "Id": "932067387",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "RBS_SFX_LinkRay_LowChaos 06.wav",
-      "CachePath": "SFX/RBS_SFX_LinkRay_LowChaos 06_DF565D97.wem"
      },
      {
       "Id": "932447090",
@@ -4980,6 +4956,22 @@
       "CachePath": "SFX/08 RBS_SFX_PlayerFS ConcreteGrittyWalk 08R_EDCD4836.wem"
      },
      {
+      "Id": "996392526",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Link 5 V2.wav",
+      "CachePath": "SFX/Link 5 V2_D8A0D580.wem"
+     },
+     {
+      "Id": "998202919",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "transition segment hc BETWEEN WAVE half speed.wav",
+      "CachePath": "SFX/transition segment hc BETWEEN WAVE half speed_EDCD4836.wem"
+     },
+     {
       "Id": "998821165",
       "Language": "SFX",
       "Streaming": "false",
@@ -5130,14 +5122,6 @@
       "Location": "Memory",
       "ShortName": "UI Timer SEQ v1.wav",
       "CachePath": "SFX/UI Timer SEQ v1_78A93BBB.wem"
-     },
-     {
-      "Id": "1036319810",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "RBS_SFX_LinkRay_LowChaos 05.wav",
-      "CachePath": "SFX/RBS_SFX_LinkRay_LowChaos 05_A555D5DD.wem"
      },
      {
       "Id": "1037647236",
@@ -5779,7 +5763,7 @@
      {
       "Id": "1871481675",
       "Name": "Play_CheckpointCrossed",
-      "ObjectPath": "\\Events\\Default Work Unit\\Play_CheckpointCrossed",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI Menu\\Play_CheckpointCrossed",
       "GUID": "{6DCA03B4-383F-4A8A-BFD8-67C23ECF157F}",
       "MaxAttenuation": "2000",
       "DurationType": "OneShot",
@@ -5794,7 +5778,7 @@
      {
       "Id": "3735980818",
       "Name": "Play_CheckpointLoop",
-      "ObjectPath": "\\Events\\Default Work Unit\\Play_CheckpointLoop",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI Menu\\Play_CheckpointLoop",
       "GUID": "{7D24E9C8-3326-4183-B4F7-1659E53104CD}",
       "MaxAttenuation": "2000",
       "DurationType": "Infinite",
@@ -5807,7 +5791,7 @@
      {
       "Id": "1080648518",
       "Name": "Play_CrosshairKill",
-      "ObjectPath": "\\Events\\Default Work Unit\\Play_CrosshairKill",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI Menu\\Play_CrosshairKill",
       "GUID": "{B1013123-98B4-4F9C-90B0-AE146A3ADDC6}",
       "DurationType": "OneShot",
       "DurationMin": "0.29386264",
@@ -5834,7 +5818,7 @@
      {
       "Id": "444568226",
       "Name": "Play_CrosshairLink",
-      "ObjectPath": "\\Events\\Default Work Unit\\Play_CrosshairLink",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI Menu\\Play_CrosshairLink",
       "GUID": "{09B4022D-8DF9-4281-BA4A-A53A74D55AA4}",
       "DurationType": "OneShot",
       "DurationMin": "0.22701168",
@@ -6047,10 +6031,16 @@
       "GUID": "{CE039E54-25DF-4AB7-98FB-0DFAEC1F79C4}",
       "DurationType": "OneShot",
       "DurationMin": "1.1693735",
-      "DurationMax": "1.1693735",
+      "DurationMax": "2.2176092",
       "MediaRefs": [
        {
+        "Id": "295667460"
+       },
+       {
         "Id": "770724338"
+       },
+       {
+        "Id": "985104756"
        }
       ],
       "PluginRefs": {
@@ -7024,261 +7014,35 @@
       "DurationMax": "0"
      },
      {
-      "Id": "315265106",
-      "Name": "Play_LinkRay0",
-      "ObjectPath": "\\Events\\Default Work Unit\\Z_DeprecatedEvents\\Play_LinkRay0",
-      "GUID": "{45EA5D2F-C0C5-49BF-9CCF-B944FF1C3EF8}",
-      "MaxAttenuation": "126",
+      "Id": "1421442839",
+      "Name": "Play_LinkSeq",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player Abilities\\Play_LinkSeq",
+      "GUID": "{59D75F1C-F5BC-4CA8-BFF1-0F1289B4DB5C}",
+      "MaxAttenuation": "750",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
-        "Id": "92944635"
+        "Id": "78759511"
        },
        {
-        "Id": "679143028"
+        "Id": "522177794"
+       },
+       {
+        "Id": "670715095"
+       },
+       {
+        "Id": "674855569"
+       },
+       {
+        "Id": "996392526"
        }
       ],
       "AuxBusRefs": [
        {
-        "Id": "253666666",
-        "Name": "LevelVerb",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\StereoBus\\LevelVerb",
-        "GUID": "{4A93D61F-1EC6-4468-809B-AE533F8EC173}"
-       }
-      ]
-     },
-     {
-      "Id": "315265107",
-      "Name": "Play_LinkRay1",
-      "ObjectPath": "\\Events\\Default Work Unit\\Z_DeprecatedEvents\\Play_LinkRay1",
-      "GUID": "{295D72FD-50B8-40D0-88D1-20F79D3BC243}",
-      "MaxAttenuation": "126",
-      "DurationType": "Infinite",
-      "MediaRefs": [
-       {
-        "Id": "181696342"
-       },
-       {
-        "Id": "733526565"
-       }
-      ],
-      "AuxBusRefs": [
-       {
-        "Id": "253666666",
-        "Name": "LevelVerb",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\StereoBus\\LevelVerb",
-        "GUID": "{4A93D61F-1EC6-4468-809B-AE533F8EC173}"
-       }
-      ]
-     },
-     {
-      "Id": "315265104",
-      "Name": "Play_LinkRay2",
-      "ObjectPath": "\\Events\\Default Work Unit\\Z_DeprecatedEvents\\Play_LinkRay2",
-      "GUID": "{D153C254-2365-4339-A7A8-6EFAA363D385}",
-      "MaxAttenuation": "126",
-      "DurationType": "Infinite",
-      "MediaRefs": [
-       {
-        "Id": "106894985"
-       },
-       {
-        "Id": "897258307"
-       }
-      ],
-      "AuxBusRefs": [
-       {
-        "Id": "253666666",
-        "Name": "LevelVerb",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\StereoBus\\LevelVerb",
-        "GUID": "{4A93D61F-1EC6-4468-809B-AE533F8EC173}"
-       }
-      ]
-     },
-     {
-      "Id": "315265105",
-      "Name": "Play_LinkRay3",
-      "ObjectPath": "\\Events\\Default Work Unit\\Z_DeprecatedEvents\\Play_LinkRay3",
-      "GUID": "{79F68C39-B8F8-45EC-B7C7-C45750FAAF87}",
-      "MaxAttenuation": "126",
-      "DurationType": "Infinite",
-      "MediaRefs": [
-       {
-        "Id": "562041628"
-       },
-       {
-        "Id": "678096996"
-       }
-      ],
-      "AuxBusRefs": [
-       {
-        "Id": "253666666",
-        "Name": "LevelVerb",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\StereoBus\\LevelVerb",
-        "GUID": "{4A93D61F-1EC6-4468-809B-AE533F8EC173}"
-       }
-      ]
-     },
-     {
-      "Id": "315265110",
-      "Name": "Play_LinkRay4",
-      "ObjectPath": "\\Events\\Default Work Unit\\Z_DeprecatedEvents\\Play_LinkRay4",
-      "GUID": "{194B4F2E-1322-4BD9-8C6C-D107F77E1425}",
-      "MaxAttenuation": "126",
-      "DurationType": "Infinite",
-      "MediaRefs": [
-       {
-        "Id": "655081"
-       },
-       {
-        "Id": "1036319810"
-       }
-      ],
-      "AuxBusRefs": [
-       {
-        "Id": "253666666",
-        "Name": "LevelVerb",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\StereoBus\\LevelVerb",
-        "GUID": "{4A93D61F-1EC6-4468-809B-AE533F8EC173}"
-       }
-      ]
-     },
-     {
-      "Id": "315265111",
-      "Name": "Play_LinkRay5",
-      "ObjectPath": "\\Events\\Default Work Unit\\Z_DeprecatedEvents\\Play_LinkRay5",
-      "GUID": "{61474507-C6B4-44B4-86A9-D8D2B1AF9328}",
-      "MaxAttenuation": "126",
-      "DurationType": "Infinite",
-      "MediaRefs": [
-       {
-        "Id": "311192433"
-       },
-       {
-        "Id": "932067387"
-       }
-      ],
-      "AuxBusRefs": [
-       {
-        "Id": "253666666",
-        "Name": "LevelVerb",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\StereoBus\\LevelVerb",
-        "GUID": "{4A93D61F-1EC6-4468-809B-AE533F8EC173}"
-       }
-      ]
-     },
-     {
-      "Id": "3399977426",
-      "Name": "play_LinkSwitch",
-      "ObjectPath": "\\Events\\Default Work Unit\\Player Abilities\\play_LinkSwitch",
-      "GUID": "{B00FF81C-6645-4077-A6AA-107DEB6604EC}",
-      "MaxAttenuation": "126",
-      "DurationType": "Infinite",
-      "AuxBusRefs": [
-       {
-        "Id": "253666666",
-        "Name": "LevelVerb",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\StereoBus\\LevelVerb",
-        "GUID": "{4A93D61F-1EC6-4468-809B-AE533F8EC173}"
-       }
-      ],
-      "SwitchContainers": [
-       {
-        "SwitchValue": {
-         "GroupType": "Switch",
-         "GroupId": "1592216945",
-         "Id": "1819160134",
-         "GUID": "{42700C4E-265F-46C6-84CA-AC6DCD37F297}"
-        },
-        "MediaRefs": [
-         {
-          "Id": "311192433"
-         },
-         {
-          "Id": "932067387"
-         }
-        ]
-       },
-       {
-        "SwitchValue": {
-         "GroupType": "Switch",
-         "GroupId": "1592216945",
-         "Id": "1819160131",
-         "GUID": "{21730554-9A26-480E-BF82-5403DD91DA7F}",
-         "Default": "true"
-        },
-        "MediaRefs": [
-         {
-          "Id": "92944635"
-         },
-         {
-          "Id": "679143028"
-         }
-        ]
-       },
-       {
-        "SwitchValue": {
-         "GroupType": "Switch",
-         "GroupId": "1592216945",
-         "Id": "1819160128",
-         "GUID": "{D4A4F266-2E92-4285-85C9-31EDF0B60ED6}"
-        },
-        "MediaRefs": [
-         {
-          "Id": "562041628"
-         },
-         {
-          "Id": "678096996"
-         }
-        ]
-       },
-       {
-        "SwitchValue": {
-         "GroupType": "Switch",
-         "GroupId": "1592216945",
-         "Id": "1819160130",
-         "GUID": "{67175D70-7201-4E06-AD2B-B4AFE78D5A34}"
-        },
-        "MediaRefs": [
-         {
-          "Id": "181696342"
-         },
-         {
-          "Id": "733526565"
-         }
-        ]
-       },
-       {
-        "SwitchValue": {
-         "GroupType": "Switch",
-         "GroupId": "1592216945",
-         "Id": "1819160135",
-         "GUID": "{204B5880-D638-43C3-8757-F3CF4D414429}"
-        },
-        "MediaRefs": [
-         {
-          "Id": "655081"
-         },
-         {
-          "Id": "1036319810"
-         }
-        ]
-       },
-       {
-        "SwitchValue": {
-         "GroupType": "Switch",
-         "GroupId": "1592216945",
-         "Id": "1819160129",
-         "GUID": "{C5B26C9B-9695-4352-8EC1-A35560EB5AD0}"
-        },
-        "MediaRefs": [
-         {
-          "Id": "106894985"
-         },
-         {
-          "Id": "897258307"
-         }
-        ]
+        "Id": "2968176541",
+        "Name": "DistantLevelVerb",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\StereoBus\\DistantLevelVerb",
+        "GUID": "{4BD473B1-9D7E-4658-B0FE-11591FBEC77E}"
        }
       ]
      },
@@ -7329,6 +7093,9 @@
       "GUID": "{602D3395-88F5-43D6-9CE1-0EB64BAD5F08}",
       "DurationType": "Infinite",
       "MediaRefs": [
+       {
+        "Id": "86674457"
+       },
        {
         "Id": "247684341"
        },
@@ -7539,6 +7306,15 @@
         }
        }
       ],
+      "ActionSetState": [
+       {
+        "GroupId": "4122948419",
+        "Id": "1125500713",
+        "Name": "intro",
+        "ObjectPath": "\\States\\Default Work Unit\\state_combat\\intro",
+        "GUID": "{AAB602C5-F1F4-4844-B273-85D5A38E9869}"
+       }
+      ],
       "ActionSetSwitch": [
        {
         "GroupId": "226573501",
@@ -7691,7 +7467,7 @@
      {
       "Id": "76459072",
       "Name": "Play_ObjectiveDoX",
-      "ObjectPath": "\\Events\\Default Work Unit\\Play_ObjectiveDoX",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI Menu\\Play_ObjectiveDoX",
       "GUID": "{5A196830-D945-4170-8E78-B07C99E51764}",
       "DurationType": "OneShot",
       "DurationMin": "4.638941",
@@ -7712,7 +7488,7 @@
      {
       "Id": "3810245384",
       "Name": "Play_ObjectiveExplore",
-      "ObjectPath": "\\Events\\Default Work Unit\\Play_ObjectiveExplore",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI Menu\\Play_ObjectiveExplore",
       "GUID": "{A8925B4D-160E-45B6-AD8B-F9E0DA9C82F5}",
       "DurationType": "OneShot",
       "DurationMin": "3.546891",
@@ -7733,7 +7509,7 @@
      {
       "Id": "3343591590",
       "Name": "Play_ObjectiveProgress",
-      "ObjectPath": "\\Events\\Default Work Unit\\Play_ObjectiveProgress",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI Menu\\Play_ObjectiveProgress",
       "GUID": "{D74404F9-898D-4755-AF34-25C421EA0E7B}",
       "DurationType": "OneShot",
       "DurationMin": "0.38006085",
@@ -7843,6 +7619,96 @@
       "MediaRefs": [
        {
         "Id": "329598648"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1871679725"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "2110719393",
+      "Name": "Play_PersonaGiven",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_PersonaGiven",
+      "GUID": "{66136D32-7EB1-46BE-A52B-5A8B780ED193}",
+      "DurationType": "OneShot",
+      "DurationMin": "10.624",
+      "DurationMax": "10.624",
+      "MediaRefs": [
+       {
+        "Id": "66522405"
+       },
+       {
+        "Id": "374391427"
+       },
+       {
+        "Id": "376308958"
+       },
+       {
+        "Id": "536343566"
+       },
+       {
+        "Id": "770724338"
+       },
+       {
+        "Id": "778296094"
+       },
+       {
+        "Id": "998202919"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1871679725"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "2790574065",
+      "Name": "Play_PersonaGivenSelect",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_PersonaGivenSelect",
+      "GUID": "{2C0699EC-0D82-43BD-87D3-E0696246B6D3}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.7083116",
+      "DurationMax": "2.2969866",
+      "MediaRefs": [
+       {
+        "Id": "12273993"
+       },
+       {
+        "Id": "77706173"
+       },
+       {
+        "Id": "164443112"
+       },
+       {
+        "Id": "312134411"
+       },
+       {
+        "Id": "449273102"
+       },
+       {
+        "Id": "561143510"
+       },
+       {
+        "Id": "602677290"
+       },
+       {
+        "Id": "609513538"
+       },
+       {
+        "Id": "775199076"
+       },
+       {
+        "Id": "896280138"
+       },
+       {
+        "Id": "1055553329"
        }
       ],
       "PluginRefs": {
@@ -9076,7 +8942,7 @@
      {
       "Id": "2570070698",
       "Name": "Play_TimerSeq",
-      "ObjectPath": "\\Events\\Default Work Unit\\Play_TimerSeq",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI Menu\\Play_TimerSeq",
       "GUID": "{688DE30A-4A9D-4A75-AE3C-1896A144315F}",
       "DurationType": "OneShot",
       "DurationMin": "0.8194106",
@@ -9658,50 +9524,6 @@
       ]
      },
      {
-      "Id": "1592216945",
-      "Name": "switch_link_index",
-      "ObjectPath": "\\Switches\\Default Work Unit\\switch_link_index",
-      "GUID": "{CA6F1763-1C63-4DC9-A2BA-5E916F6F1EC2}",
-      "Switches": [
-       {
-        "Id": "1819160128",
-        "Name": "link3",
-        "ObjectPath": "\\Switches\\Default Work Unit\\switch_link_index\\link3",
-        "GUID": "{D4A4F266-2E92-4285-85C9-31EDF0B60ED6}"
-       },
-       {
-        "Id": "1819160129",
-        "Name": "link2",
-        "ObjectPath": "\\Switches\\Default Work Unit\\switch_link_index\\link2",
-        "GUID": "{C5B26C9B-9695-4352-8EC1-A35560EB5AD0}"
-       },
-       {
-        "Id": "1819160130",
-        "Name": "link1",
-        "ObjectPath": "\\Switches\\Default Work Unit\\switch_link_index\\link1",
-        "GUID": "{67175D70-7201-4E06-AD2B-B4AFE78D5A34}"
-       },
-       {
-        "Id": "1819160131",
-        "Name": "link0",
-        "ObjectPath": "\\Switches\\Default Work Unit\\switch_link_index\\link0",
-        "GUID": "{21730554-9A26-480E-BF82-5403DD91DA7F}"
-       },
-       {
-        "Id": "1819160134",
-        "Name": "link5",
-        "ObjectPath": "\\Switches\\Default Work Unit\\switch_link_index\\link5",
-        "GUID": "{42700C4E-265F-46C6-84CA-AC6DCD37F297}"
-       },
-       {
-        "Id": "1819160135",
-        "Name": "link4",
-        "ObjectPath": "\\Switches\\Default Work Unit\\switch_link_index\\link4",
-        "GUID": "{204B5880-D638-43C3-8757-F3CF4D414429}"
-       }
-      ]
-     },
-     {
       "Id": "1991914396",
       "Name": "switch_attack_material",
       "ObjectPath": "\\Switches\\Default Work Unit\\switch_attack_material",
@@ -9816,6 +9638,6 @@
     ]
    }
   ],
-  "FileHash": "{A69149CD-8A00-6B70-745A-56DC2F12B2DE}"
+  "FileHash": "{E25C5D23-D445-F005-A877-1F82A865EAAA}"
  }
 }

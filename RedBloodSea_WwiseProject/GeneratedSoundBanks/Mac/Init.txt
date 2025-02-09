@@ -49,6 +49,7 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	876333639	rtpc_tapestop			\Default Work Unit\rtpc_tapestop	
 	1052815830	rtpc_meter_sfx			\Default Work Unit\Meter\rtpc_meter_sfx	
 	2011548031	rtpc_meter_ui			\Default Work Unit\Meter\rtpc_meter_ui	
+	2548911666	rtpc_chaos_no_interpolation			\Default Work Unit\rtpc_chaos_no_interpolation	
 	2860606227	rtpc_highfreqfilter_off_on			\Default Work Unit\rtpc_highfreqfilter_off_on	
 	3014524554	rtpc_IsPlayerDead			\Default Work Unit\rtpc_IsPlayerDead	
 	3067876527	rtpc_sfx_bus			\Default Work Unit\Settings\BUS\rtpc_sfx_bus	

@@ -70,7 +70,7 @@ int UDwellerLinkSubsystem::AddDwellerToLink(UPossessTarget* dweller)
 	{
 		if (instantiatedLinksVFX.Num() >= 1)
 		{
-			instantiatedLinksVFX[instantiatedLinksVFX.Num() - 1]->SetTarget2(dwellersInLink[dwellersInLink.Num() - 1]->GetOwner());
+zd			instantiatedLinksVFX[instantiatedLinksVFX.Num() - 1]->SetTarget2(dwellersInLink[dwellersInLink.Num() - 1]->GetOwner());
 		}
 
 		FVector Location = FVector::Zero();

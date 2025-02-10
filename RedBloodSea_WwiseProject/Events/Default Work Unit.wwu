@@ -688,6 +688,28 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_PersonaGivenSelect" ID="{2C0699EC-0D82-43BD-87D3-E0696246B6D3}">
+							<ChildrenList>
+								<Action Name="" ID="{07E400EF-0640-44EA-9F08-F6ECEA8EFD4D}" ShortID="863682958">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PersonaGivenSelect" ID="{04D444E0-6F5F-42A8-A614-5969159B464A}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_PersonaGiven" ID="{66136D32-7EB1-46BE-A52B-5A8B780ED193}">
+							<ChildrenList>
+								<Action Name="" ID="{2DB331CF-5F99-483B-B8D6-577CC70C01B9}" ShortID="112206998">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PersonaGiven" ID="{2D9C62B1-8EFD-4132-BE48-72B8CC99DA99}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Player" ID="{C75F1194-F23F-4C92-A2EC-38E950674C15}" ShortID="309497221">
@@ -1566,6 +1588,34 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_onboarding_timermuted_1" ID="{8A072D12-2C22-4E9D-A633-DFAC1AC42A1A}">
+							<ChildrenList>
+								<Action Name="" ID="{13508179-2D82-4F2E-90AF-1A5A897F0B32}" ShortID="965579237">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="yes" ID="{1F051100-7A39-4046-8084-E03EF2EF2731}" WorkUnitID="{C595D72B-1CEC-44D9-8102-4C94A354BC93}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_onboarding_timermuted_0" ID="{60AE9D81-C4C4-407A-AA15-025EF5F6C361}">
+							<ChildrenList>
+								<Action Name="" ID="{70C3D6E8-D9DB-4D3B-A374-78FC81741C40}" ShortID="79928734">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="no" ID="{398A39EC-21CF-489C-8CCF-13E1BDB2A958}" WorkUnitID="{C595D72B-1CEC-44D9-8102-4C94A354BC93}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Cinematics" ID="{3AD8F8EB-D465-4424-AEE7-3FD15ECAA51F}" ShortID="789215796">
@@ -2411,28 +2461,6 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
-				<Event Name="Play_PersonaGiven" ID="{66136D32-7EB1-46BE-A52B-5A8B780ED193}">
-					<ChildrenList>
-						<Action Name="" ID="{2DB331CF-5F99-483B-B8D6-577CC70C01B9}" ShortID="112206998">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="PersonaGiven" ID="{2D9C62B1-8EFD-4132-BE48-72B8CC99DA99}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_PersonaGivenSelect" ID="{2C0699EC-0D82-43BD-87D3-E0696246B6D3}">
-					<ChildrenList>
-						<Action Name="" ID="{07E400EF-0640-44EA-9F08-F6ECEA8EFD4D}" ShortID="863682958">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="PersonaGivenSelect" ID="{04D444E0-6F5F-42A8-A614-5969159B464A}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

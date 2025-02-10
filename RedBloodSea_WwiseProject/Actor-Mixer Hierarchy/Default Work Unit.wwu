@@ -2850,6 +2850,11 @@
 								</BlendContainer>
 								<RandomSequenceContainer Name="PossessionSuccessful" ID="{1D52C8CB-6AD6-43FF-BB86-495E45326F86}" ShortID="796217775">
 									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>8</Value>
+											</ValueList>
+										</Property>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
 												<Value>3</Value>
@@ -2970,28 +2975,6 @@
 													</ChildrenList>
 													<ActiveSourceList>
 														<ActiveSource Name="RBS_SFX_PossessionSuccessful 03" ID="{5736276C-4C0C-4F7F-AB61-CA725A7B8FF1}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="RBS_SFX_PossessionSuccessful 04" ID="{DCAC55F5-D19E-4662-9F36-2D1DC61BB011}" ShortID="902668072">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="RBS_SFX_PossessionSuccessful 04" ID="{508D9332-6164-4ABC-BCB9-1815FDAC1DD3}">
-															<Language>SFX</Language>
-															<AudioFile>RBS_SFX_PossessionSuccessful 04.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="779505053"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="RBS_SFX_PossessionSuccessful 04" ID="{508D9332-6164-4ABC-BCB9-1815FDAC1DD3}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="RBS_SFX_PossessionSuccessful 05" ID="{BE2B7FA3-1323-42F4-8686-B4DB186D3744}" ShortID="9571981">
@@ -10021,9 +10004,9 @@
 								</RandomSequenceContainer>
 								<Sound Name="MainMenuStartGame" ID="{AD4E2257-2D49-42F9-9FB4-8A5B8A6A6FE2}" ShortID="841460557">
 									<PropertyList>
-										<Property Name="MakeUpGain" Type="Real64">
+										<Property Name="Highpass" Type="int16">
 											<ValueList>
-												<Value>3</Value>
+												<Value>13</Value>
 											</ValueList>
 										</Property>
 										<Property Name="Pitch" Type="int32">
@@ -12172,6 +12155,27 @@
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="state_onboarding" ID="{490A89DA-195B-41DE-BBF0-D437ADE6EE91}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="yes" ID="{1F051100-7A39-4046-8084-E03EF2EF2731}"/>
+												<CustomState Name="" ID="{DAE590D7-1062-4B47-AA71-76483C117970}" ShortID="165686135">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="no" ID="{398A39EC-21CF-489C-8CCF-13E1BDB2A958}"/>
+												<CustomState Name="" ID="{7D86388C-64E8-48AA-A3EA-9FB9DBB6B2DC}" ShortID="491305579"/>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
 									<ObjectLists>
 										<ObjectList Name="Playlist">
 											<Reference>
@@ -13018,7 +13022,7 @@
 																						<PointList>
 																							<Point>
 																								<XPos>0</XPos>
-																								<YPos>-0</YPos>
+																								<YPos>0</YPos>
 																								<Flags>5</Flags>
 																							</Point>
 																							<Point>
@@ -13096,7 +13100,7 @@
 																						<PointList>
 																							<Point>
 																								<XPos>0</XPos>
-																								<YPos>-0</YPos>
+																								<YPos>0</YPos>
 																								<Flags>5</Flags>
 																							</Point>
 																							<Point>
@@ -16665,7 +16669,7 @@
 								</Property>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>-5</Value>
+										<Value>-6</Value>
 									</ValueList>
 								</Property>
 								<Property Name="Pitch" Type="int32">

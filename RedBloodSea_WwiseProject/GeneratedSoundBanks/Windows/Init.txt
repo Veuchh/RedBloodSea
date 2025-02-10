@@ -15,6 +15,7 @@ State Group	ID	Name			Wwise Object Path	Notes
 	459395562	state_aim			\Default Work Unit\state_aim	
 	1203368309	state_game			\Default Work Unit\state_game	
 	2837885159	state_death			\Default Work Unit\state_death	
+	3020124512	state_onboarding			\Default Work Unit\state_onboarding	
 	4016824040	state_player			\Default Work Unit\state_player	
 	4041781304	state_waveindex			\Default Work Unit\state_waveindex	
 	4122948419	state_combat			\Default Work Unit\state_combat	
@@ -30,6 +31,9 @@ State	ID	Name	State Group			Notes
 	655265632	alive	state_death			
 	748895195	None	state_death			
 	2044049779	dead	state_death			
+	748895195	None	state_onboarding			
+	979470758	yes	state_onboarding			
+	1668749452	no	state_onboarding			
 	223416773	offground	state_player			
 	748895195	None	state_player			
 	1200033591	onground	state_player			

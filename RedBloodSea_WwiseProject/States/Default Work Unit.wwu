@@ -60,6 +60,13 @@
 						<State Name="w3" ID="{79C37F27-D760-4C32-A0E1-F820E947362E}"/>
 					</ChildrenList>
 				</StateGroup>
+				<StateGroup Name="state_onboarding" ID="{490A89DA-195B-41DE-BBF0-D437ADE6EE91}">
+					<ChildrenList>
+						<State Name="None" ID="{2AE39823-67FE-4393-B383-66157FD2DE3F}"/>
+						<State Name="yes" ID="{1F051100-7A39-4046-8084-E03EF2EF2731}"/>
+						<State Name="no" ID="{398A39EC-21CF-489C-8CCF-13E1BDB2A958}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

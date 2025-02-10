@@ -242,8 +242,13 @@
 									<PointList>
 										<Point>
 											<XPos>0</XPos>
-											<YPos>0</YPos>
+											<YPos>-5.16078</YPos>
 											<Flags>5</Flags>
+										</Point>
+										<Point>
+											<XPos>179.5071</XPos>
+											<YPos>-1.91396</YPos>
+											<Flags>0</Flags>
 										</Point>
 										<Point>
 											<XPos>495.42206</XPos>

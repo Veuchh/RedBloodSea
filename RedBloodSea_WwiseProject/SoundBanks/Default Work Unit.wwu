@@ -9,6 +9,7 @@
 						<ObjectRef Name="Play_Enemy_Stun" ID="{4CBE4516-6E61-401B-AE0C-7E1DD3D1646C}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_EnemyProjectileHitEnviro" ID="{69D3EB20-2FA0-4067-834A-B617223CB932}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Mus_SetStatusCombat" ID="{788E3C13-EE1B-4068-9892-47E1960DF432}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_onboarding_timermuted_0" ID="{60AE9D81-C4C4-407A-AA15-025EF5F6C361}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_PossessionAimStop" ID="{965ECC7B-F6E5-40CB-935F-61ACA3EF8ED1}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Dash_Left" ID="{EB038680-EF51-40DE-B119-C775C35A318C}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_BasicSlash" ID="{52DD29CE-EBFC-412E-A292-D4803063CBE4}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
@@ -26,6 +27,7 @@
 						<ObjectRef Name="Play_EnemyDeath" ID="{CFA6D1F8-F109-42AC-8776-30618640504C}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_EnemyProjectileBeam" ID="{FE351B22-CEDB-42DC-A8D7-D2B4A61DEBC2}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_PlayerRespawn" ID="{7869A732-3A1F-4314-B872-8E58B1D9ABAC}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Stop_All" ID="{CC23CEC6-8B4C-431B-988A-17DBF6A943EC}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_SlashHitEnviro" ID="{6E8732AD-CC17-4320-B490-71E811880A65}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Jump" ID="{E9BD2A7D-A3FC-4367-900D-1C172D1086AE}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_MusPaused" ID="{AB68BF19-CB88-43B4-9DDC-E7CFA75DC02F}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
@@ -92,6 +94,7 @@
 						<ObjectRef Name="Stop_BasaltGate_Idle" ID="{49780CB7-891E-4DFF-A964-1F9035E1231E}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_MusCore" ID="{CD1985D2-1712-4E4A-B3E0-7D89ADB7F580}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="SetCombatBetweenWave" ID="{F53F7ABE-2C88-4E70-A4DA-3F410D056ED9}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_onboarding_timermuted_1" ID="{8A072D12-2C22-4E9D-A633-DFAC1AC42A1A}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_OnHover" ID="{FDD740D1-0984-4EA1-9FC5-4D17473BFC69}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Test_Slash" ID="{12124D21-963C-4F2B-AAB5-30919FF2DEE0}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_EnemyFreed" ID="{9BF54B9A-9795-4F59-B5B7-382DCECDEDA0}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>

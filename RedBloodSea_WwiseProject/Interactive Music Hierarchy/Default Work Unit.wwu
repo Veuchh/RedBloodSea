@@ -9,9 +9,15 @@
 			<ChildrenList>
 				<MusicPlaylistContainer Name="MusicTest" ID="{23DA8AA8-3798-4037-86AC-6AA3C3A5CE34}" ShortID="498853604">
 					<PropertyList>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 						<Property Name="MakeUpGain" Type="Real64">
 							<ValueList>
 								<Value>-20</Value>
+							</ValueList>
+						</Property>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -12594,11 +12600,6 @@
 								<Value>1</Value>
 							</ValueList>
 						</Property>
-						<Property Name="UseMaxSoundPerInstance" Type="bool">
-							<ValueList>
-								<Value>True</Value>
-							</ValueList>
-						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -12906,9 +12907,10 @@
 				</MusicPlaylistContainer>
 				<MusicPlaylistContainer Name="hub" ID="{4DFDDD50-2F7C-4B35-9CE7-DCB54EFBAA5A}" ShortID="588430347">
 					<PropertyList>
-						<Property Name="MakeUpGain" Type="Real64">
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
 							<ValueList>
-								<Value>-6</Value>
+								<Value>1</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -12963,7 +12965,7 @@
 								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>-17</Value>
+										<Value>-27</Value>
 									</ValueList>
 								</Property>
 								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
@@ -13124,9 +13126,15 @@
 				</MusicPlaylistContainer>
 				<MusicSwitchContainer Name="results" ID="{B8071DE9-7CE2-4CAD-BB81-E4351BDCBE5B}" ShortID="294216988">
 					<PropertyList>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 						<Property Name="MakeUpGain" Type="Real64">
 							<ValueList>
 								<Value>-17</Value>
+							</ValueList>
+						</Property>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
 							</ValueList>
 						</Property>
 						<Property Name="Volume" Type="Real64">
@@ -13488,9 +13496,15 @@
 				</MusicSwitchContainer>
 				<MusicSwitchContainer Name="game paused" ID="{CE2D95E7-E3CC-44C3-BBFB-3568B6C48495}" ShortID="17158670">
 					<PropertyList>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 						<Property Name="MakeUpGain" Type="Real64">
 							<ValueList>
 								<Value>-25</Value>
+							</ValueList>
+						</Property>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
 							</ValueList>
 						</Property>
 						<Property Name="Tempo" Type="Real64" Value="143"/>
@@ -14026,9 +14040,15 @@
 				</MusicSwitchContainer>
 				<MusicPlaylistContainer Name="death" ID="{EB292F76-B8A2-4020-881C-871A1F2ED981}" ShortID="960300763">
 					<PropertyList>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 						<Property Name="MakeUpGain" Type="Real64">
 							<ValueList>
 								<Value>-8</Value>
+							</ValueList>
+						</Property>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
 							</ValueList>
 						</Property>
 						<Property Name="PlaybackSpeed" Type="Real64">
@@ -14274,9 +14294,15 @@
 								<Value>10</Value>
 							</ValueList>
 						</Property>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 						<Property Name="MakeUpGain" Type="Real64">
 							<ValueList>
 								<Value>-15</Value>
+							</ValueList>
+						</Property>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
 							</ValueList>
 						</Property>
 						<Property Name="Tempo" Type="Real64" Value="143"/>
@@ -16402,7 +16428,7 @@
 																											</Point>
 																											<Point>
 																												<XPos>83.89577</XPos>
-																												<YPos>-0</YPos>
+																												<YPos>0</YPos>
 																												<Flags>0</Flags>
 																											</Point>
 																											<Point>
@@ -18947,7 +18973,7 @@
 																											</Point>
 																											<Point>
 																												<XPos>82.95803</XPos>
-																												<YPos>-0</YPos>
+																												<YPos>0</YPos>
 																												<Flags>0</Flags>
 																											</Point>
 																											<Point>
@@ -20874,7 +20900,7 @@
 																											</Point>
 																											<Point>
 																												<XPos>109.68212</XPos>
-																												<YPos>-0</YPos>
+																												<YPos>0</YPos>
 																												<Flags>0</Flags>
 																											</Point>
 																											<Point>
@@ -20889,7 +20915,7 @@
 																											</Point>
 																											<Point>
 																												<XPos>109.93314</XPos>
-																												<YPos>-0</YPos>
+																												<YPos>0</YPos>
 																												<Flags>0</Flags>
 																											</Point>
 																											<Point>
@@ -36055,9 +36081,15 @@
 						<MusicSegment Name="transition segment between wave to combat" ID="{20EEFED0-3554-4F27-AF3C-895FE55C9F09}" ShortID="701888048">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="9125.88243006993"/>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
 										<Value>-16</Value>
+									</ValueList>
+								</Property>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
 									</ValueList>
 								</Property>
 								<Property Name="Tempo" Type="Real64" Value="143"/>
@@ -36454,12 +36486,23 @@
 										<Value>15</Value>
 									</ValueList>
 								</Property>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
 										<Value>-19</Value>
 									</ValueList>
 								</Property>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Tempo" Type="Real64" Value="143"/>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -37027,9 +37070,15 @@
 						<MusicSegment Name="transition segment Intro LC" ID="{82E9551D-A97A-42E0-9149-C73013E4CC1B}" ShortID="369870275">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="7274.66666666667"/>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
 										<Value>-18</Value>
+									</ValueList>
+								</Property>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
 									</ValueList>
 								</Property>
 								<Property Name="Tempo" Type="Real64" Value="143"/>
@@ -37758,9 +37807,15 @@
 						<MusicSegment Name="transition segment LC 4" ID="{BF4D7487-8449-48F6-81C9-7C37E01306CC}" ShortID="923400099">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="9125.88243006993"/>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
 										<Value>-23</Value>
+									</ValueList>
+								</Property>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
 									</ValueList>
 								</Property>
 								<Property Name="Tempo" Type="Real64" Value="143"/>
@@ -37901,9 +37956,15 @@
 						<MusicSegment Name="transition segment LC 4 Halfspeed" ID="{5116CE99-7C22-4AD8-A201-346CC519EDF4}" ShortID="412349547">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="10624"/>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
 										<Value>-7</Value>
+									</ValueList>
+								</Property>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
 									</ValueList>
 								</Property>
 								<Property Name="Tempo" Type="Real64" Value="143"/>

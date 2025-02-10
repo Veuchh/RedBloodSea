@@ -22,7 +22,7 @@ void UDwellerLinkSubsystem::ResetLink()
 	// if(!dwellersInLink.IsEmpty())
 	// 	UPossessTarget* currentlyPossessedDweller = dwellersInLink[dwellersInLink.Num() - 1];
 	dwellersInLink.Empty();
-	if(PlayerData::CurrentPossessTarget)
+	if (PlayerData::CurrentPossessTarget)
 	{
 		dwellersInLink.Add(PlayerData::CurrentPossessTarget);
 	}
@@ -43,24 +43,24 @@ int UDwellerLinkSubsystem::AddDwellerToLink(UPossessTarget* dweller)
 		//This is the case where we possess the last possessed ennemy
 		// if (dwellersInLink.Num() <= 1 || dwellersInLink[dwellersInLink.Num() - 2] != dweller)
 		// {
-			//GEngine->AddOnScreenDebugMessage(-1, 5, FColor::Red, "Should initiate link");
+		//GEngine->AddOnScreenDebugMessage(-1, 5, FColor::Red, "Should initiate link");
 
-			//Linking all dwellers
-			int index = dwellersInLink.IndexOfByKey(dweller);
-			if(dwellersInLink.Num() > index+1 && dwellersInLink.Num() - index > 2)
+		//Linking all dwellers
+		int index = dwellersInLink.IndexOfByKey(dweller);
+		if (dwellersInLink.Num() > index + 1 && dwellersInLink.Num() - index > 2)
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 5, FColor::Red, "Should initiate link");
+			for (int i = index + 1; i < dwellersInLink.Num(); i++)
 			{
-				GEngine->AddOnScreenDebugMessage(-1, 5, FColor::Red, "Should initiate link");
-				for (int i = index+1; i < dwellersInLink.Num(); i++)
+				//Except the one we are currently possessing
+				if (dwellersInLink[i] == dweller)
 				{
-					//Except the one we are currently possessing
-					if (dwellersInLink[i] == dweller)
-					{
-						break;
-					}
-					linkedEnemies++;
-					dwellersInLink[i]->Link();
+					break;
 				}
+				linkedEnemies++;
+				dwellersInLink[i]->Link();
 			}
+		}
 		// }
 
 		ResetLink();
@@ -70,21 +70,26 @@ int UDwellerLinkSubsystem::AddDwellerToLink(UPossessTarget* dweller)
 	{
 		if (instantiatedLinksVFX.Num() >= 1)
 		{
-			instantiatedLinksVFX[instantiatedLinksVFX.Num() - 1]->SetTarget2(dwellersInLink[dwellersInLink.Num() - 1]->GetOwner());
+			instantiatedLinksVFX[instantiatedLinksVFX.Num() - 1]->SetTarget2(
+				dwellersInLink[dwellersInLink.Num() - 1]->GetOwner());
 		}
 
 		FVector Location = FVector::Zero();
 		FRotator Rotation = FRotator::ZeroRotator;
 		FActorSpawnParameters SpawnInfo;
-		ALinkSplineVFX* newLink = GetWorld()->SpawnActor<ALinkSplineVFX>(splineLinkVFXReference, Location, Rotation, SpawnInfo);
+		ALinkSplineVFX* newLink = GetWorld()->SpawnActor<ALinkSplineVFX>(
+			splineLinkVFXReference, Location, Rotation, SpawnInfo);
 		newLink->SetTarget1(dwellersInLink[dwellersInLink.Num() - 1]->GetOwner());
 		newLink->SetTarget2(playerActor);
 
 		instantiatedLinksVFX.Add(newLink);
 	}
 
-	GEngine->AddOnScreenDebugMessage(-1, 5, FColor::Red, "Adding dweller to link list");
-	dwellersInLink.Add(dweller);
+	if (linkedEnemies == 0)
+	{
+		dwellersInLink.Add(dweller);
+	}
+	
 	return linkedEnemies;
 }
 

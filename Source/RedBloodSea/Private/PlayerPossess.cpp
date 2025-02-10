@@ -196,7 +196,7 @@ void UPlayerPossess::TickComponent(float DeltaTime, ELevelTick TickType, FActorC
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-	DebugState();
+	//DebugState();
 
 	AimModeToggling();
 

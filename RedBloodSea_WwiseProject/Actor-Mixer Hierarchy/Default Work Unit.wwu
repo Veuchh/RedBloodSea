@@ -13667,6 +13667,62 @@
 										</RandomSequenceContainer>
 									</ChildrenList>
 								</BlendContainer>
+								<Sound Name="OnItemHover" ID="{C4E93B80-C1A8-4C4F-92E8-CA97C7867D9F}" ShortID="605882057">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>21</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>56</Value>
+											</ValueList>
+										</Property>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-880</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{634A2A0D-30C8-455A-9B69-37A5E3122A45}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED12E335-CD62-4BB5-88E7-A891EE5FE284}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{62B968A3-C8CD-4F91-903F-2FD10385465A}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI slider v1" ID="{22BDF057-AB27-4640-8348-FE64D3B27C61}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="3.72509601618207E-05"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.00787592976975242"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0866233678725523"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.123992608286252"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>UI slider v1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="927100978"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="UI slider v1" ID="{22BDF057-AB27-4640-8348-FE64D3B27C61}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 							<ObjectLists>
 								<ObjectList Name="Effects">

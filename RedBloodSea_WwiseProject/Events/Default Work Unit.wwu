@@ -1616,6 +1616,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_OnItemHover" ID="{E9A5DBC5-A8ED-4D62-AEFD-6629EAD6569F}">
+							<ChildrenList>
+								<Action Name="" ID="{90B65916-83F0-42A7-80F9-43CB4C2690F2}" ShortID="160535994">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="OnItemHover" ID="{C4E93B80-C1A8-4C4F-92E8-CA97C7867D9F}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Cinematics" ID="{3AD8F8EB-D465-4424-AEE7-3FD15ECAA51F}" ShortID="789215796">

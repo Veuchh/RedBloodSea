@@ -88,6 +88,7 @@
 						<ObjectRef Name="Play_EnemySwitchInit" ID="{1F648AFD-D275-4CC8-A8FF-DF4301325368}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_GamePaused" ID="{EC660AF3-3298-4CDA-8704-746289A88FA8}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Mus_SetStatusIntro" ID="{BC782983-2C7F-4CFF-A69B-2EAA2777C369}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_OnItemHover" ID="{E9A5DBC5-A8ED-4D62-AEFD-6629EAD6569F}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="SetCombatInWave" ID="{4DA437B0-D0CF-4D6F-84B6-3F134FD7EA1C}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Test_Event_Asset" ID="{5D47BB90-E33B-4DEB-82CF-4027A0799326}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_MusHub" ID="{90C8B7F9-266C-4DF5-BEC5-1D17E4A5FC1A}" WorkUnitID="{D17BB086-90BE-44B1-B8BC-5BD87E28043B}" Origin="Manual" Filter="7"/>

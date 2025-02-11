@@ -293,7 +293,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2890283282" Type="User" GUID="{1D2A39F0-30EC-4374-B60C-7E5FD97B8C24}" Language="SFX" Hash="{7FC425A5-DF24-DB98-161A-F0D5E32CC237}">
+		<SoundBank Id="2890283282" Type="User" GUID="{1D2A39F0-30EC-4374-B60C-7E5FD97B8C24}" Language="SFX" Hash="{AD06D18F-5C39-8626-0B60-B8060B311CEE}">
 			<ObjectPath>\SoundBanks\Default Work Unit\RBS_MAIN_SoundBank</ObjectPath>
 			<ShortName>RBS_MAIN_SoundBank</ShortName>
 			<Path>RBS_MAIN_SoundBank.bnk</Path>
@@ -3421,6 +3421,16 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
+				<Event Id="2254157902" Name="Play_OnItemHover" ObjectPath="\Events\Default Work Unit\UI Menu\Play_OnItemHover" GUID="{E9A5DBC5-A8ED-4D62-AEFD-6629EAD6569F}" DurationType="OneShot" DurationMin="0.06212546" DurationMax="0.06212546">
+					<MediaRefs>
+						<MediaRef Id="927100978"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1871679725"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
 				<Event Id="1520799909" Name="Play_OnSelect" ObjectPath="\Events\Default Work Unit\UI Menu\Play_OnSelect" GUID="{379437AE-A3F6-4543-BB0F-FDF98F448D23}" DurationType="OneShot" DurationMin="1.9013078" DurationMax="1.9013078">
 					<MediaRefs>
 						<MediaRef Id="329598648"/>
@@ -4100,5 +4110,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{AF3EEF6D-7C0B-2AF0-EAD5-B8F1115753E0}</FileHash>
+	<FileHash>{B383783D-639E-F9FA-CA33-363E9FBB2E47}</FileHash>
 </SoundBanksInfo>

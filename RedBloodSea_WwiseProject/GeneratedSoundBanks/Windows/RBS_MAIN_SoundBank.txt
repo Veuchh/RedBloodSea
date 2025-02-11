@@ -53,6 +53,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2196757205	Play_OnHover			\Default Work Unit\UI Menu\Play_OnHover	
 	2211787386	Play_Dash			\Default Work Unit\Player\Play_Dash	
 	2242832970	Play_PossessionSuccessful			\Default Work Unit\Player Abilities\Play_PossessionSuccessful	
+	2254157902	Play_OnItemHover			\Default Work Unit\UI Menu\Play_OnItemHover	
 	2316408575	SetCombatIntro			\Default Work Unit\Z_DeprecatedEvents\Debug\SetCombatIntro	
 	2323405115	Play_Landing			\Default Work Unit\Player\Play_Landing	
 	2371960287	Stop_IdleFPS			\Default Work Unit\Player\Stop_IdleFPS	
@@ -433,7 +434,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	893848309	CrosshairKillL3 v1	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\CrosshairKillL3 v1_E09B399C.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_UiMenu\Ui_Menu\Crosshairs\CrosshairKill\L3kill\CrosshairKillL3 v1		2974
 	896280138	Slash LC v2_02	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\Slash LC v2_28C51E7C.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_UiMenu\Ui_Menu\PersonaGivenSelect\SlashLC\Slash LC v2_02		40332
 	908347439	ObjectiveDoX	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\NewObjectives v1_8C5D9CB7.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_UiMenu\Ui_Menu\Objectives\ObjectiveDoX		74068
-	927100978	UI slider v1	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\UI slider v1_F511F97B.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_UiMenu\Ui_Menu\SliderTick\UI slider v1		889
+	927100978	OnItemHover	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\UI slider v1_F511F97B.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_UiMenu\Ui_Menu\OnItemHover		889
 	932913252	RBS_SFX_SlashHitEnviroMat1 03	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\RBS_SFX_SlashHitEnviroMat1 03_7FD4869B.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Player Abilities\SlashHitEnviro\SlashHitEnviroMat\SlashHitStone\RBS_SFX_SlashHitEnviroMat1 03		32924
 	937414046	WeakpointReveal V2 - stem-glued_01	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\WeakpointReveal V2 - stem-glued_3D73B270.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Ai Behavior\WeakpointReveal\Weakpoint Reveal Blend\WeakpointReveal\WeakpointReveal V2 - stem-glued_01		48875
 	939496613	RBS_SFX_TriggerStateAgressive	C:\Users\ELE64f86ef146505\RedBloodSea\RedBloodSea_WwiseProject\.cache\Windows\SFX\RBS_SFX_TriggerStateAgressive_EDCD4836.wem		\Actor-Mixer Hierarchy\Default Work Unit\RBS_SFX_Ai Behavior\EnemySwitchInit\EnemyTriggerState\RBS_SFX_TriggerStateAgressive		7685

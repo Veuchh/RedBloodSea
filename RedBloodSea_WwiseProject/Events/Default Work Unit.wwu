@@ -1867,6 +1867,7 @@
 										<Property Name="ActionType" Type="int16" Value="2"/>
 										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
 										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -1944,6 +1945,84 @@
 						</Event>
 						<Event Name="Play_MusResults" ID="{94377A01-2A74-41E4-9FD0-F00C26A9984A}">
 							<ChildrenList>
+								<Action Name="" ID="{B2CB0397-3906-48D0-A7C4-BAF864946A97}" ShortID="74286894">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="hub" ID="{4DFDDD50-2F7C-4B35-9CE7-DCB54EFBAA5A}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{3F0A3057-B65F-4F47-ACC0-E16D58B90173}" ShortID="795598084">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="core_music_switch_master_V2" ID="{E261D608-54C9-4777-B384-E38D57727997}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{98DCE51F-2F48-4FDA-91E3-B0F1BCE10D41}" ShortID="548128702">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="death" ID="{EB292F76-B8A2-4020-881C-871A1F2ED981}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{583082B9-4339-49C7-8135-442D3A33F9FD}" ShortID="69960633">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="results" ID="{B8071DE9-7CE2-4CAD-BB81-E4351BDCBE5B}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{9C21D4EF-FD50-42CB-B8B6-36252AF9C4CE}" ShortID="817925067">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="game paused" ID="{CE2D95E7-E3CC-44C3-BBFB-3568B6C48495}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{AA948405-2E33-4C7C-82E1-7C90E85BE088}" ShortID="72576676">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MainMenu" ID="{C75D181C-9591-4312-A3E8-77FC5D04CA13}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 								<Action Name="" ID="{8C62E2CC-04DE-4391-A90C-2C059C1AE140}" ShortID="663062492">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
@@ -1988,6 +2067,20 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="VsArenaNotInCombatChaosBlend" ID="{818FA01E-961E-4EE4-9DF7-58F1FE0F8780}" WorkUnitID="{4A9EA73C-37C0-4920-8646-FEB35FF731E4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{A0589F13-9BF0-4606-A8DE-3E1B857D06A8}" ShortID="192462087">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Delay" Type="Real64" Value="1"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MainMenu" ID="{C75D181C-9591-4312-A3E8-77FC5D04CA13}" WorkUnitID="{A14796F8-04E5-4E56-8011-CDBC1077F63A}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -2450,6 +2543,7 @@
 								<Action Name="" ID="{66C48B04-183D-4EB6-829F-2E97499FB51E}" ShortID="58899408">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">

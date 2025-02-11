@@ -1045,12 +1045,12 @@
 									<PointList>
 										<Point>
 											<XPos>0</XPos>
-											<YPos>-3.46826</YPos>
+											<YPos>-4.11537</YPos>
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>304.34783</XPos>
-											<YPos>-2.77976</YPos>
+											<XPos>324.77916</XPos>
+											<YPos>-3.16075</YPos>
 											<Flags>0</Flags>
 										</Point>
 										<Point>
@@ -1206,8 +1206,13 @@
 									<PointList>
 										<Point>
 											<XPos>0</XPos>
-											<YPos>0</YPos>
+											<YPos>-2.23224</YPos>
 											<Flags>5</Flags>
+										</Point>
+										<Point>
+											<XPos>102.72417707151</XPos>
+											<YPos>-1.70561432325732</YPos>
+											<Flags>0</Flags>
 										</Point>
 										<Point>
 											<XPos>422.832893333333</XPos>
@@ -1991,7 +1996,7 @@
 				</Attenuation>
 				<Attenuation Name="ProjectileFlyby" ID="{84FF9C88-E97C-48E0-8939-542460565523}" ShortID="210716316">
 					<PropertyList>
-						<Property Name="RadiusMax" Type="Real64" Value="800"/>
+						<Property Name="RadiusMax" Type="Real64" Value="1000"/>
 					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
@@ -2007,7 +2012,7 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>800</XPos>
+											<XPos>1000</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -2028,7 +2033,7 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>800</XPos>
+											<XPos>1000</XPos>
 											<YPos>-10.88948</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -2049,7 +2054,7 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>800</XPos>
+											<XPos>1000</XPos>
 											<YPos>-11.75317</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -2073,7 +2078,7 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>800</XPos>
+											<XPos>1000</XPos>
 											<YPos>35</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -2127,7 +2132,7 @@
 				</Attenuation>
 				<Attenuation Name="Checkpoint" ID="{119028DF-EDD7-41E1-B21C-A206E7037EEC}" ShortID="147735122">
 					<PropertyList>
-						<Property Name="RadiusMax" Type="Real64" Value="2000"/>
+						<Property Name="RadiusMax" Type="Real64" Value="3000"/>
 					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
@@ -2139,18 +2144,30 @@
 									<PointList>
 										<Point>
 											<XPos>0</XPos>
-											<YPos>0</YPos>
+											<YPos>-1.04528</YPos>
 											<Flags>5</Flags>
-											<SegmentShape>Log3</SegmentShape>
+											<SegmentShape>Log1</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>1060.39076</XPos>
-											<YPos>-19.35631</YPos>
+											<XPos>673.45672</XPos>
+											<YPos>-9.57657</YPos>
 											<Flags>0</Flags>
-											<SegmentShape>Exp3</SegmentShape>
+											<SegmentShape>Exp1</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>2000</XPos>
+											<XPos>1235.09175</XPos>
+											<YPos>-25.12819</YPos>
+											<Flags>0</Flags>
+											<SegmentShape>Exp2</SegmentShape>
+										</Point>
+										<Point>
+											<XPos>2452.98165</XPos>
+											<YPos>-23.9671</YPos>
+											<Flags>0</Flags>
+											<SegmentShape>Log1</SegmentShape>
+										</Point>
+										<Point>
+											<XPos>3000</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -2180,8 +2197,18 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>2000</XPos>
-											<YPos>30</YPos>
+											<XPos>1206.85715</XPos>
+											<YPos>10</YPos>
+											<Flags>0</Flags>
+										</Point>
+										<Point>
+											<XPos>1621.71428</XPos>
+											<YPos>23</YPos>
+											<Flags>0</Flags>
+										</Point>
+										<Point>
+											<XPos>3000</XPos>
+											<YPos>38</YPos>
 											<Flags>37</Flags>
 										</Point>
 									</PointList>
@@ -2201,12 +2228,12 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>577.20588</XPos>
-											<YPos>0</YPos>
+											<XPos>954.19409</XPos>
+											<YPos>-0</YPos>
 											<Flags>0</Flags>
 										</Point>
 										<Point>
-											<XPos>2000</XPos>
+											<XPos>3000</XPos>
 											<YPos>0</YPos>
 											<Flags>37</Flags>
 										</Point>

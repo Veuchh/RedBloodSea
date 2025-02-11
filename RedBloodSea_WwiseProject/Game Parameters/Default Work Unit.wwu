@@ -264,6 +264,15 @@
 						<Property Name="SlewRateUp" Type="Real64" Value="67"/>
 					</PropertyList>
 				</GameParameter>
+				<GameParameter Name="rtpc_checkpointloop_arena_attenuation" ID="{AE3DD999-20FD-4BF9-83FE-649DD72CCB4A}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+						<Property Name="Min" Type="Real64" Value="1"/>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="68"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="67"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

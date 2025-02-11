@@ -167,6 +167,7 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	1184756145	rtpc_builtin_azimuth_angle			\Default Work Unit\rtpc_builtin_azimuth_angle	
 	1410332996	rtpc_settings_slider			\Default Work Unit\rtpc_settings_slider	
 	1580544546	rtpc_ambiance_arena_attenuation			\Default Work Unit\rtpc_ambiance_arena_attenuation	
+	2370607806	rtpc_checkpointloop_arena_attenuation			\Default Work Unit\rtpc_checkpointloop_arena_attenuation	
 	2548911666	rtpc_chaos_no_interpolation			\Default Work Unit\rtpc_chaos_no_interpolation	
 	2570586536	rtpc_landing_force			\Default Work Unit\rtpc_landing_force	
 	2690476865	rtpc_player_walkspeed			\Default Work Unit\rtpc_player_walkspeed	

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{CCDF2DEB-A1AC-3EF0-1BD5-830C888CD3CA}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{0A17C1EF-41FE-D2DA-B9FE-A1F30FA9B6D4}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -129,6 +129,7 @@
 				<GameParameter Id="1580544546" Name="rtpc_ambiance_arena_attenuation" ObjectPath="\Game Parameters\Default Work Unit\rtpc_ambiance_arena_attenuation" GUID="{317D7F34-0FD2-4141-8088-6B66E709DE20}"/>
 				<GameParameter Id="2011548031" Name="rtpc_meter_ui" ObjectPath="\Game Parameters\Default Work Unit\Meter\rtpc_meter_ui" GUID="{F059CDA2-AB62-466D-83AE-3422AC208500}"/>
 				<GameParameter Id="2332098030" Name="rtpc_enemy_bus" ObjectPath="\Game Parameters\Default Work Unit\Settings\BUS\rtpc_enemy_bus" GUID="{7B1FB034-3E8E-48F8-B914-CB5786C31FF9}"/>
+				<GameParameter Id="2370607806" Name="rtpc_checkpointloop_arena_attenuation" ObjectPath="\Game Parameters\Default Work Unit\rtpc_checkpointloop_arena_attenuation" GUID="{AE3DD999-20FD-4BF9-83FE-649DD72CCB4A}"/>
 				<GameParameter Id="2400834421" Name="rtpc_dominant_hand" ObjectPath="\Game Parameters\Default Work Unit\Settings\rtpc_dominant_hand" GUID="{54C0314F-1459-460E-B6E6-1CDAA6EDBE01}"/>
 				<GameParameter Id="2548911666" Name="rtpc_chaos_no_interpolation" ObjectPath="\Game Parameters\Default Work Unit\rtpc_chaos_no_interpolation" GUID="{32A00591-7D0F-46D4-86CC-E57C780551F1}"/>
 				<GameParameter Id="2570586536" Name="rtpc_landing_force" ObjectPath="\Game Parameters\Default Work Unit\rtpc_landing_force" GUID="{07DB1610-4113-4F81-A7B4-0C953E645162}"/>
@@ -285,5 +286,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F8196762-136B-7CB3-2E45-0F6E65FCB23B}</FileHash>
+	<FileHash>{1D1ED91E-10D1-38E1-39FC-F2B03D892DFB}</FileHash>
 </SoundBanksInfo>

@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{1D2A39F0-30EC-4374-B60C-7E5FD97B8C24}",
     "Language": "SFX",
-    "Hash": "{FF1E3BF6-D454-ED0B-9BA3-52F4BC93AC62}",
+    "Hash": "{7FC425A5-DF24-DB98-161A-F0D5E32CC237}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\RBS_MAIN_SoundBank",
     "ShortName": "RBS_MAIN_SoundBank",
     "Path": "RBS_MAIN_SoundBank.bnk",
@@ -4752,7 +4752,7 @@
       "Name": "Play_CheckpointCrossed",
       "ObjectPath": "\\Events\\Default Work Unit\\UI Menu\\Play_CheckpointCrossed",
       "GUID": "{6DCA03B4-383F-4A8A-BFD8-67C23ECF157F}",
-      "MaxAttenuation": "2000",
+      "MaxAttenuation": "3000",
       "DurationType": "OneShot",
       "DurationMin": "4.633733",
       "DurationMax": "4.633733",
@@ -4767,7 +4767,7 @@
       "Name": "Play_CheckpointLoop",
       "ObjectPath": "\\Events\\Default Work Unit\\UI Menu\\Play_CheckpointLoop",
       "GUID": "{7D24E9C8-3326-4183-B4F7-1659E53104CD}",
-      "MaxAttenuation": "2000",
+      "MaxAttenuation": "3000",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -5354,7 +5354,7 @@
       "Name": "Play_EnemyProjectileFlyby",
       "ObjectPath": "\\Events\\Default Work Unit\\Ai Behavior\\Play_EnemyProjectileFlyby",
       "GUID": "{4B060C13-B121-4F9D-929D-ECAB732B6779}",
-      "MaxAttenuation": "800",
+      "MaxAttenuation": "1000",
       "DurationType": "OneShot",
       "DurationMin": "1.3844577",
       "DurationMax": "2.466823",
@@ -8291,6 +8291,12 @@
       "GUID": "{317D7F34-0FD2-4141-8088-6B66E709DE20}"
      },
      {
+      "Id": "2370607806",
+      "Name": "rtpc_checkpointloop_arena_attenuation",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_checkpointloop_arena_attenuation",
+      "GUID": "{AE3DD999-20FD-4BF9-83FE-649DD72CCB4A}"
+     },
+     {
       "Id": "2548911666",
       "Name": "rtpc_chaos_no_interpolation",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_chaos_no_interpolation",
@@ -8696,6 +8702,6 @@
     ]
    }
   ],
-  "FileHash": "{3AAE50E2-D88C-BDB5-08A5-065C098DF1DD}"
+  "FileHash": "{4D6325DD-5F51-3624-5620-A31A50799F31}"
  }
 }

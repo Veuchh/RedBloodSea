@@ -6248,7 +6248,7 @@
 										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>4</Value>
+												<Value>6</Value>
 											</ValueList>
 										</Property>
 										<Property Name="Pitch" Type="int32">
@@ -16121,12 +16121,12 @@
 																		<PointList>
 																			<Point>
 																				<XPos>1</XPos>
-																				<YPos>-0.85699</YPos>
+																				<YPos>-0.10121</YPos>
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>60.55289</XPos>
-																				<YPos>-0.91553</YPos>
+																				<XPos>60.76029</XPos>
+																				<YPos>-0.00035</YPos>
 																				<Flags>0</Flags>
 																			</Point>
 																			<Point>
@@ -16161,12 +16161,12 @@
 																		<PointList>
 																			<Point>
 																				<XPos>1</XPos>
-																				<YPos>16</YPos>
+																				<YPos>23</YPos>
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>69.31664</XPos>
-																				<YPos>15</YPos>
+																				<XPos>69.52404</XPos>
+																				<YPos>25</YPos>
 																				<Flags>0</Flags>
 																			</Point>
 																			<Point>
@@ -18800,17 +18800,27 @@
 																<PointList>
 																	<Point>
 																		<XPos>-180</XPos>
-																		<YPos>-6.75901</YPos>
+																		<YPos>-2.91614</YPos>
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
+																		<XPos>-57.56983</XPos>
+																		<YPos>-2.60152</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
 																		<XPos>-0.16529</XPos>
-																		<YPos>-0.10255</YPos>
+																		<YPos>0.86354</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>56.06145</XPos>
+																		<YPos>-3.40232</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>180</XPos>
-																		<YPos>-5.53362</YPos>
+																		<YPos>-3.74112</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -18840,97 +18850,27 @@
 																<PointList>
 																	<Point>
 																		<XPos>-180</XPos>
-																		<YPos>23</YPos>
+																		<YPos>31</YPos>
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>-0.989010989011007</XPos>
-																		<YPos>0</YPos>
+																		<XPos>-57.56983</XPos>
+																		<YPos>32</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>-0.98901</XPos>
+																		<YPos>8</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>56.81564</XPos>
+																		<YPos>37</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>180</XPos>
-																		<YPos>23</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</Custom>
-													</Reference>
-												</ReferenceList>
-											</RTPC>
-										</Local>
-									</Reference>
-									<Reference>
-										<Local>
-											<RTPC Name="" ID="{4D107397-728C-4ECC-B4A7-4D801CC01ADE}" ShortID="304666813">
-												<PropertyList>
-													<Property Name="PropertyName" Type="string" Value="Lowpass"/>
-												</PropertyList>
-												<ReferenceList>
-													<Reference Name="ControlInput">
-														<ObjectRef Name="rtpc_builtin_elevation" ID="{CC6FB8B5-24CC-4814-BC40-7E3A07524CBE}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
-													</Reference>
-													<Reference Name="Curve">
-														<Custom>
-															<Curve Name="" ID="{F78CE358-6C78-4C45-B998-0D657D5C9911}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="65537"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>-90</XPos>
-																		<YPos>29</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>-0.494505494505503</XPos>
-																		<YPos>0</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>90</XPos>
-																		<YPos>29</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</Custom>
-													</Reference>
-												</ReferenceList>
-											</RTPC>
-										</Local>
-									</Reference>
-									<Reference>
-										<Local>
-											<RTPC Name="" ID="{745988CC-13A1-4472-984C-CAA180A316A8}" ShortID="1041751293">
-												<PropertyList>
-													<Property Name="PropertyName" Type="string" Value="Volume"/>
-												</PropertyList>
-												<ReferenceList>
-													<Reference Name="ControlInput">
-														<ObjectRef Name="rtpc_builtin_elevation" ID="{CC6FB8B5-24CC-4814-BC40-7E3A07524CBE}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
-													</Reference>
-													<Reference Name="Curve">
-														<Custom>
-															<Curve Name="" ID="{CC44DDBA-807C-49AD-ACAB-6D117C0363D5}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="3"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>-90</XPos>
-																		<YPos>-4.39856</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>-0.0826449999999994</XPos>
-																		<YPos>-0.102550000000008</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>90</XPos>
-																		<YPos>-3.17317</YPos>
+																		<YPos>31</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -18976,6 +18916,86 @@
 																	<Point>
 																		<XPos>100</XPos>
 																		<YPos>-200</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{4BECCA55-8086-420E-8AEB-92F72120A9BE}" ShortID="96146077">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="rtpc_checkpointloop_arena_attenuation" ID="{AE3DD999-20FD-4BF9-83FE-649DD72CCB4A}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{94AA9D48-B334-4114-86D0-C46B7C51C20B}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>14</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>94.27089</XPos>
+																		<YPos>17</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{63FA23F2-6940-4F71-9BF1-207D103F75D1}" ShortID="652611078">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="rtpc_checkpointloop_arena_attenuation" ID="{AE3DD999-20FD-4BF9-83FE-649DD72CCB4A}" WorkUnitID="{A151CAFE-4D19-42EC-B75E-C4227A0FD792}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{D8602280-C833-4DC7-917D-8EBB866D8059}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>-1.94956</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>93.84989</XPos>
+																		<YPos>-1.70745</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>

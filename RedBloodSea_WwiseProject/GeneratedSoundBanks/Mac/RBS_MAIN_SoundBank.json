@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{1D2A39F0-30EC-4374-B60C-7E5FD97B8C24}",
     "Language": "SFX",
-    "Hash": "{77A712EB-1D7D-4199-0793-E0F9549A63CA}",
+    "Hash": "{D833F741-AC36-130F-CB5B-2CDF72D463EC}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\RBS_MAIN_SoundBank",
     "ShortName": "RBS_MAIN_SoundBank",
     "Path": "RBS_MAIN_SoundBank.bnk",
@@ -4752,7 +4752,7 @@
       "Name": "Play_CheckpointCrossed",
       "ObjectPath": "\\Events\\Default Work Unit\\UI Menu\\Play_CheckpointCrossed",
       "GUID": "{6DCA03B4-383F-4A8A-BFD8-67C23ECF157F}",
-      "MaxAttenuation": "2000",
+      "MaxAttenuation": "3000",
       "DurationType": "OneShot",
       "DurationMin": "4.633733",
       "DurationMax": "4.633733",
@@ -4767,7 +4767,7 @@
       "Name": "Play_CheckpointLoop",
       "ObjectPath": "\\Events\\Default Work Unit\\UI Menu\\Play_CheckpointLoop",
       "GUID": "{7D24E9C8-3326-4183-B4F7-1659E53104CD}",
-      "MaxAttenuation": "2000",
+      "MaxAttenuation": "3000",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -8291,6 +8291,12 @@
       "GUID": "{317D7F34-0FD2-4141-8088-6B66E709DE20}"
      },
      {
+      "Id": "2370607806",
+      "Name": "rtpc_checkpointloop_arena_attenuation",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_checkpointloop_arena_attenuation",
+      "GUID": "{AE3DD999-20FD-4BF9-83FE-649DD72CCB4A}"
+     },
+     {
       "Id": "2548911666",
       "Name": "rtpc_chaos_no_interpolation",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\rtpc_chaos_no_interpolation",
@@ -8696,6 +8702,6 @@
     ]
    }
   ],
-  "FileHash": "{0CE8FB1B-9E06-07AA-75DF-EBF49CA0CDC2}"
+  "FileHash": "{44375DAD-B602-447F-E700-C1AAE69E94CB}"
  }
 }

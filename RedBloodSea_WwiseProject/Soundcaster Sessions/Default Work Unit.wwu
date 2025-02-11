@@ -282,7 +282,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="rtpc_chaos_global" ID="{912B7FBA-E859-424B-9664-D9B8B51FC1BA}"/>
-							<Value>0.5</Value>
+							<Value>0</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="rtpc_settings_slider" ID="{CF91B134-4D3D-4381-A066-5A720C4CB494}"/>
@@ -369,6 +369,10 @@
 							<Value>0</Value>
 						</RTPCValue>
 						<RTPCValue>
+							<GameParameterRef Name="rtpc_checkpointloop_arena_attenuation" ID="{AE3DD999-20FD-4BF9-83FE-649DD72CCB4A}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="rtpc_ambiance_arena_attenuation_3" ID="{E1DD84DA-D82C-4C17-8BDA-C010D5167BC5}"/>
 							<Value>100</Value>
 						</RTPCValue>
@@ -417,8 +421,8 @@
 						<CurrentStateRef Name="None" ID="{2AE39823-67FE-4393-B383-66157FD2DE3F}"/>
 						<CurrentStateRef Name="w1" ID="{1324BD3A-98E2-41EC-B5DB-7F395F03F913}"/>
 						<CurrentStateRef Name="None" ID="{F55C3BA2-B06E-4139-88C5-13C67AEA9EF2}"/>
-						<CurrentStateRef Name="alive" ID="{807D8C35-2D07-4BB8-962F-C1AC99DA4FDC}"/>
-						<CurrentStateRef Name="combat" ID="{76879D96-6B91-483E-85DC-B7B10E438F7F}"/>
+						<CurrentStateRef Name="dead" ID="{348DE88E-BEE6-49C0-AB27-105646664E5D}"/>
+						<CurrentStateRef Name="intro" ID="{AAB602C5-F1F4-4844-B273-85D5A38E9869}"/>
 						<CurrentStateRef Name="notaiming" ID="{AD4DA154-B560-453D-8C38-7A73B45B33AF}"/>
 						<CurrentStateRef Name="onground" ID="{5ADF1174-9E07-490C-82F9-C5039AEC4132}"/>
 					</CurrentStateList>

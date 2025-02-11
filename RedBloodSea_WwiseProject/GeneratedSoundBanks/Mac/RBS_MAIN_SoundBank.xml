@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="2890283282" Type="User" GUID="{1D2A39F0-30EC-4374-B60C-7E5FD97B8C24}" Language="SFX" Hash="{77A712EB-1D7D-4199-0793-E0F9549A63CA}">
+		<SoundBank Id="2890283282" Type="User" GUID="{1D2A39F0-30EC-4374-B60C-7E5FD97B8C24}" Language="SFX" Hash="{D833F741-AC36-130F-CB5B-2CDF72D463EC}">
 			<ObjectPath>\SoundBanks\Default Work Unit\RBS_MAIN_SoundBank</ObjectPath>
 			<ShortName>RBS_MAIN_SoundBank</ShortName>
 			<Path>RBS_MAIN_SoundBank.bnk</Path>
@@ -2401,12 +2401,12 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="1871481675" Name="Play_CheckpointCrossed" ObjectPath="\Events\Default Work Unit\UI Menu\Play_CheckpointCrossed" GUID="{6DCA03B4-383F-4A8A-BFD8-67C23ECF157F}" MaxAttenuation="2000" DurationType="OneShot" DurationMin="4.633733" DurationMax="4.633733">
+				<Event Id="1871481675" Name="Play_CheckpointCrossed" ObjectPath="\Events\Default Work Unit\UI Menu\Play_CheckpointCrossed" GUID="{6DCA03B4-383F-4A8A-BFD8-67C23ECF157F}" MaxAttenuation="3000" DurationType="OneShot" DurationMin="4.633733" DurationMax="4.633733">
 					<MediaRefs>
 						<MediaRef Id="50548203"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3735980818" Name="Play_CheckpointLoop" ObjectPath="\Events\Default Work Unit\UI Menu\Play_CheckpointLoop" GUID="{7D24E9C8-3326-4183-B4F7-1659E53104CD}" MaxAttenuation="2000" DurationType="Infinite">
+				<Event Id="3735980818" Name="Play_CheckpointLoop" ObjectPath="\Events\Default Work Unit\UI Menu\Play_CheckpointLoop" GUID="{7D24E9C8-3326-4183-B4F7-1659E53104CD}" MaxAttenuation="3000" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="983648324"/>
 					</MediaRefs>
@@ -3700,6 +3700,7 @@
 				<GameParameter Id="1184756145" Name="rtpc_builtin_azimuth_angle" ObjectPath="\Game Parameters\Default Work Unit\rtpc_builtin_azimuth_angle" GUID="{9C016406-4E34-4C58-AB4E-877204F3F982}"/>
 				<GameParameter Id="1410332996" Name="rtpc_settings_slider" ObjectPath="\Game Parameters\Default Work Unit\rtpc_settings_slider" GUID="{CF91B134-4D3D-4381-A066-5A720C4CB494}"/>
 				<GameParameter Id="1580544546" Name="rtpc_ambiance_arena_attenuation" ObjectPath="\Game Parameters\Default Work Unit\rtpc_ambiance_arena_attenuation" GUID="{317D7F34-0FD2-4141-8088-6B66E709DE20}"/>
+				<GameParameter Id="2370607806" Name="rtpc_checkpointloop_arena_attenuation" ObjectPath="\Game Parameters\Default Work Unit\rtpc_checkpointloop_arena_attenuation" GUID="{AE3DD999-20FD-4BF9-83FE-649DD72CCB4A}"/>
 				<GameParameter Id="2548911666" Name="rtpc_chaos_no_interpolation" ObjectPath="\Game Parameters\Default Work Unit\rtpc_chaos_no_interpolation" GUID="{32A00591-7D0F-46D4-86CC-E57C780551F1}"/>
 				<GameParameter Id="2570586536" Name="rtpc_landing_force" ObjectPath="\Game Parameters\Default Work Unit\rtpc_landing_force" GUID="{07DB1610-4113-4F81-A7B4-0C953E645162}"/>
 				<GameParameter Id="2690476865" Name="rtpc_player_walkspeed" ObjectPath="\Game Parameters\Default Work Unit\rtpc_player_walkspeed" GUID="{6437691A-43C2-473B-A671-C59F1A9E957B}"/>
@@ -3807,5 +3808,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{26741FA5-C9D7-94FA-233E-023BAF81B33F}</FileHash>
+	<FileHash>{9B2A80CD-7134-67A8-9677-932B581F63C1}</FileHash>
 </SoundBanksInfo>

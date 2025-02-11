@@ -143,6 +143,8 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void ResetAll();
+	UFUNCTION(BlueprintCallable)
+	void ResetCount();
 
 
 	UFUNCTION(BlueprintCallable)

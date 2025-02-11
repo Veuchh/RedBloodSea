@@ -28,7 +28,8 @@ void UDwellerLinkSubsystem::ResetLink()
 	}
 	for (int i = instantiatedLinksVFX.Num() - 1; i >= 0; i--)
 	{
-		instantiatedLinksVFX[i]->Destroy();
+		if(IsValid(instantiatedLinksVFX[i]))
+			instantiatedLinksVFX[i]->Destroy();
 	}
 	instantiatedLinksVFX.Empty();
 	ALinkSplineVFX::ResetID();

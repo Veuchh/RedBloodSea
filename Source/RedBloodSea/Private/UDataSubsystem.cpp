@@ -103,10 +103,15 @@ void UUDataSubsystem::AddLinked(int Count)
 
 void UUDataSubsystem::ResetAll()
 {
-	LinkedCount = 0;
-	KillCount = 0;
+	ResetCount();
 
 	ResetLogs();
+}
+
+void UUDataSubsystem::ResetCount()
+{
+	LinkedCount = 0;
+	KillCount = 0;
 }
 
 void UUDataSubsystem::StoreObjectiveCompletion(const TArray<FWave>& Waves)

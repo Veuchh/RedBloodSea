@@ -33,10 +33,10 @@ void URedBloodSeaUserSettings::SetAccessibilitySettingsToDefaultValue()
 
 void URedBloodSeaUserSettings::SetAudioSettingsToDefaultValue()
 {
-	MasterVolume = 80.0f;
-	Music = 50.0f;
-	SoundEffects = 80.0f;
-	Ambiences = 40.0f;
+	MasterVolume = 100.0f;
+	Music = 100.0f;
+	SoundEffects = 100.0f;
+	Ambiences = 100.0f;
 	FrequencyFilterActivated = false;
 	FrequencyFilterTargetFrequency = 5000.0f;
 	MonoMode = false;
